@@ -42,7 +42,8 @@ esp32-stm32-debug/
 │   ├── 06_coding_standard.md
 │   ├── 07_misra_deviations.md
 │   ├── 08_third_party_notices.md
-│   └── 09_integration_validation.md
+│   ├── 09_integration_validation.md
+│   └── 10_project_logic.md
 ├── LICENSE
 └── README.md
 ```
@@ -101,6 +102,9 @@ loại khỏi commit. Toàn bộ bộ công cụ vẫn nằm cục bộ dưới 
 
 Xem [Tổng quan dự án](02_document/01_project_overview.md) và
 [Quy trình Git](02_document/03_git_workflow.md).
+
+Kiến trúc, vòng đời phiên và luồng debug/nạp firmware theo từng khối:
+[Logic hoạt động dự án](02_document/10_project_logic.md).
 
 Kế hoạch các giai đoạn, đầu ra và tiêu chí nghiệm thu:
 [Kế hoạch phát triển](02_document/04_development_plan.md).

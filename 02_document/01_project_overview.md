@@ -36,6 +36,9 @@ Giữ các chân debug của dự án mẫu và bổ sung OLED/encoder theo
 backend BMD, SWD/GDB, network, snapshot trạng thái, console, OLED, encoder và menu.
 Xem cây thư mục trong README và [quy chuẩn mã nguồn](06_coding_standard.md).
 
+Luồng khởi động, phối hợp task/component, debug và nạp flash theo từng khối được mô tả trong
+[Logic hoạt động dự án](10_project_logic.md).
+
 ## Các mốc phát triển
 
 Kế hoạch chi tiết và điều kiện nghiệm thu nằm trong
