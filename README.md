@@ -13,7 +13,10 @@ esp32-stm32-debug/
 │   │   ├── idf-tools/      # Compiler, CMake, Ninja, GDB, OpenOCD...
 │   │   ├── python/         # Python runtime cục bộ
 │   │   └── python-env/     # Python environment và các dependency
-│   ├── main/              # Firmware ứng dụng
+│   ├── cmake/             # Quy chuẩn build cho mã dự án
+│   ├── components/
+│   │   └── probe_board/   # Kiểm tra phần cứng N16R8
+│   ├── main/              # Entry point, ghép component và chính sách khởi động
 │   ├── tooling/           # Dependency lock và constraints được quản lý bằng Git
 │   ├── tools/             # Script setup và build
 │   ├── CMakeLists.txt
@@ -25,7 +28,11 @@ esp32-stm32-debug/
 │   ├── 02_build_and_tooling.md
 │   ├── 03_git_workflow.md
 │   ├── 04_development_plan.md
-│   └── 05_hardware_and_local_ui.md
+│   ├── 05_hardware_and_local_ui.md
+│   ├── 06_coding_standard.md
+│   ├── 07_misra_deviations.md
+│   └── 08_third_party_notices.md
+├── LICENSE
 └── README.md
 ```
 
@@ -64,3 +71,14 @@ Kế hoạch các giai đoạn, đầu ra và tiêu chí nghiệm thu:
 
 Pin map và giao diện OLED/encoder:
 [Phần cứng và giao diện tại probe](02_document/05_hardware_and_local_ui.md).
+
+## Quy chuẩn mã nguồn và giấy phép
+
+Mã C tự viết dùng C17, chia component theo trách nhiệm và comment API theo Doxygen.
+Hướng dẫn mục tiêu là MISRA C:2025; hiện có compiler warnings/GCC analyzer và hồ sơ
+ngoại lệ nền tảng, chưa có kết luận tuân thủ MISRA đầy đủ.
+Xem [Quy chuẩn viết mã](02_document/06_coding_standard.md) và
+[Hồ sơ ngoại lệ](02_document/07_misra_deviations.md).
+
+Giấy phép mã gốc dự án: **GPL-3.0-or-later**, theo lựa chọn giữ hướng Black Magic Debug.
+Xem [LICENSE](LICENSE) và [thông báo dependency](02_document/08_third_party_notices.md).

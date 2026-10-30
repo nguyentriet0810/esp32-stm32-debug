@@ -35,6 +35,10 @@ Output và cache nằm trong `01_source/build` và `01_source/.cache`.
 script setup cũng đã chạy thành công trên môi trường hiện có. Chưa kiểm thử quy trình
 khôi phục toàn bộ trên một máy Windows sạch và chưa nạp board thật.
 
+Các file C tự viết hiện được build ở mode C17 với warnings và GCC analyzer qua
+`cmake/project_options.cmake`. Do SDK truyền thêm `-std=gnu23`, C17 được đặt ở source option
+cuối cùng để có hiệu lực. SDK giữ mode upstream; xem [quy chuẩn mã](06_coding_standard.md).
+
 ## Clone và khôi phục trên máy mới
 
 ```powershell

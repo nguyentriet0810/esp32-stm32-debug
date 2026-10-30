@@ -39,6 +39,8 @@ git push -u origin feature/swd-bringup
 ```
 
 Chỉ stage các đường dẫn của thay đổi đang làm. Kiểm tra cả nội dung staged trước khi push.
+Mã C mới tuân theo [quy chuẩn dự án](06_coding_standard.md), có SPDX GPL-3.0-or-later,
+comment API và kết quả build/analyzer. Ngoại lệ mới được ghi trong hồ sơ tương ứng.
 
 ## Đồng bộ submodule
 

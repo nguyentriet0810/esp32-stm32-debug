@@ -32,8 +32,9 @@ Giữ các chân debug của dự án mẫu và bổ sung OLED/encoder theo
 - `02_document`: yêu cầu, quyết định kỹ thuật, hướng dẫn và quy trình làm việc.
 - `README.md`: điểm bắt đầu của dự án.
 
-Các thành phần firmware dùng chung sẽ được tách vào `01_source/components` khi có
-triển khai thực tế. Không tạo các module rỗng chỉ để hoàn thiện sơ đồ thư mục.
+`01_source/components/probe_board` hiện đảm nhiệm kiểm tra phần cứng N16R8.
+`main` chỉ giữ entry point và chính sách khởi động. Các component tiếp theo được tạo
+khi có triển khai thực tế theo [quy chuẩn mã nguồn](06_coding_standard.md).
 
 ## Các mốc phát triển
 
@@ -52,5 +53,7 @@ theo driver và mã chip cụ thể.
 ## Nguồn tham khảo và giấy phép
 
 Project nền hiện chưa sao chép mã firmware của MCUViewer-probe hoặc Black Magic Debug.
-Khi tích hợp, cần giữ thông tin tác giả và tuân thủ giấy phép của từng dependency.
+Mã gốc dự án dùng GPL-3.0-or-later theo quyết định đã xác nhận, giữ hướng tích hợp Black Magic Debug.
+Khi tích hợp, giữ thông tin tác giả và giấy phép của từng dependency.
 ESP-IDF giữ nguyên giấy phép upstream trong submodule.
+Xem [thông báo dependency](08_third_party_notices.md).

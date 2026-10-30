@@ -30,6 +30,7 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | ESP-IDF v6.1, Python, compiler và công cụ cục bộ | Đã có |
 | SDK submodule, lock file và hướng dẫn setup | Đã có |
 | Build firmware nền cho N16R8 | Đã thành công |
+| Component và quy chuẩn C | Có `probe_board`; C17, comment Doxygen, hướng dẫn MISRA C:2025 |
 | Kiểm tra flash/PSRAM/nguồn trên board thật | Chưa thực hiện |
 | Khôi phục project trên một máy Windows sạch | Chưa thực hiện |
 | SWD, Wi-Fi, GDB server, MCUViewer, SWO, USB probe | Chưa triển khai |
@@ -83,6 +84,9 @@ từ dự án tham khảo, giữ thông tin tác giả và giấy phép liên qu
 
 Các module chỉ được tạo khi có triển khai thực tế trong `01_source/components`.
 Dependency upstream đặt trong `01_source/external` hoặc theo cơ chế component đã chọn.
+Component `probe_board` hiện tách khỏi `main`; các component tiếp theo tuân theo
+[quy chuẩn C](06_coding_standard.md) và [hồ sơ ngoại lệ nền tảng](07_misra_deviations.md).
+Mã gốc dự án dùng GPL-3.0-or-later, giữ khả năng tích hợp backend Black Magic Debug.
 
 ## 4. Các giai đoạn và điều kiện hoàn thành
 
@@ -107,6 +111,8 @@ Dependency upstream đặt trong `01_source/external` hoặc theo cơ chế comp
 - Kiểm tra reset/cấp nguồn lại và độ ổn định bộ nhớ khi vận hành bình thường.
 - Kiểm chứng quy trình clone/setup/build trên môi trường Windows sạch.
 - Thiết lập kiểm tra build bằng SDK đã ghim và quy ước review thay đổi trước khi merge.
+- Áp dụng C17/warnings/analyzer cho mã dự án; tiếp tục hoàn thiện checker và guideline coverage
+  trước khi đánh dấu mức tuân thủ MISRA.
 
 **Đầu ra:** log kiểm chứng board, hướng dẫn setup đã thử và cấu hình board có phiên bản.
 **Nghiệm thu:** board khởi động đúng profile, không có reset ngoài dự kiến trong bài thử;
