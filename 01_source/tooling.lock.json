@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "host": "windows-x64",
+  "target": "esp32s3",
+  "esp_idf": {
+    "repository": "https://github.com/espressif/esp-idf.git",
+    "tag": "v6.1",
+    "commit": "fff9895c82d744c7237be8847347bdd1b07c6643",
+    "path": ".tooling/esp-idf-v6.1"
+  },
+  "python": {
+    "reference_version": "3.11.2",
+    "supported_minor": "3.11",
+    "runtime_path": ".tooling/python",
+    "environment_path": ".tooling/python-env",
+    "requirements": "tooling/python-requirements.lock.txt"
+  },
+  "tools": {
+    "manifest": ".tooling/esp-idf-v6.1/tools/tools.json",
+    "installation_path": ".tooling/idf-tools",
+    "reference_versions": {
+      "xtensa-esp-elf": "esp-15.2.0_20251204",
+      "riscv32-esp-elf": "esp-15.2.0_20251204",
+      "esp32ulp-elf": "2.38_20240113",
+      "cmake": "4.0.3",
+      "ninja": "1.12.1",
+      "ccache": "4.12.1",
+      "openocd-esp32": "v0.12.0-esp32-20260703",
+      "xtensa-esp-elf-gdb": "17.1_20260402",
+      "riscv32-esp-elf-gdb": "17.1_20260402",
+      "idf-exe": "1.0.3",
+      "dfu-util": "0.11",
+      "esp-rom-elfs": "20241011",
+      "esp-clangd": "esp-21.1.3_20260408"
+    }
+  }
+}

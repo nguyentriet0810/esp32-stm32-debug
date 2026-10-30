@@ -1,0 +1,29 @@
+# Generated firmware and local build state.
+/01_source/build/
+/01_source/.cache/
+/01_source/sdkconfig
+/01_source/sdkconfig.old
+/01_source/sdkconfig.local
+/01_source/managed_components/
+
+# Keep the SDK as a pinned Git submodule. Installed binaries stay local.
+/01_source/.tooling/*
+!/01_source/.tooling/esp-idf-v6.1/
+
+# Local credentials and editor state.
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Generated artifacts.
+__pycache__/
+*.py[cod]
+*.bin
+*.elf
+*.map
+*.log
+*.tmp
+Thumbs.db
+.DS_Store

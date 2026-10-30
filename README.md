@@ -1,0 +1,56 @@
+# ESP32 STM32 Debug
+
+Công cụ debug STM32 sử dụng **ESP32-S3 N16R8** làm probe.
+Nền tảng phát triển: **ESP-IDF v6.1** trên Windows x64.
+
+## Cấu trúc dự án
+
+```text
+esp32-stm32-debug/
+├── 01_source/
+│   ├── .tooling/
+│   │   ├── esp-idf-v6.1/   # Git submodule, ghim đúng commit v6.1
+│   │   ├── idf-tools/      # Compiler, CMake, Ninja, GDB, OpenOCD...
+│   │   ├── python/         # Python runtime cục bộ
+│   │   └── python-env/     # Python environment và các dependency
+│   ├── main/              # Firmware ứng dụng
+│   ├── tooling/           # Dependency lock và constraints được quản lý bằng Git
+│   ├── tools/             # Script setup và build
+│   ├── CMakeLists.txt
+│   ├── partitions.csv
+│   ├── sdkconfig.defaults
+│   └── tooling.lock.json
+├── 02_document/
+│   ├── 01_project_overview.md
+│   ├── 02_build_and_tooling.md
+│   └── 03_git_workflow.md
+└── README.md
+```
+
+## Build nhanh
+
+Nếu bộ công cụ cục bộ đã được chuẩn bị:
+
+```powershell
+.\01_source\tools\idf.ps1 --version
+.\01_source\tools\idf.ps1 build
+```
+
+Firmware đầu ra: `01_source/build/stm32_wifi_probe.bin`.
+Hướng dẫn cho máy mới: [Build và bộ công cụ](02_document/02_build_and_tooling.md).
+
+## Trạng thái
+
+Hiện là project nền kiểm tra ESP32-S3 N16R8: flash 16 MB, PSRAM Octal 8 MB / 80 MHz,
+CPU 240 MHz, hai lõi. SWD, Wi-Fi, GDB server và trace sẽ được phát triển theo từng mốc.
+Chưa xác nhận runtime trên phần cứng thật.
+
+## Quản lý phiên bản
+
+Repository: [nguyentriet0810/esp32-stm32-debug](https://github.com/nguyentriet0810/esp32-stm32-debug), chế độ **private**.
+Git quản lý firmware, tài liệu, cấu hình mặc định, script và các phiên bản dependency.
+ESP-IDF được quản lý bằng submodule; build, cache và binary toolchain được `.gitignore`
+loại khỏi commit. Toàn bộ bộ công cụ vẫn nằm cục bộ dưới `01_source/.tooling`.
+
+Xem [Tổng quan dự án](02_document/01_project_overview.md) và
+[Quy trình Git](02_document/03_git_workflow.md).
