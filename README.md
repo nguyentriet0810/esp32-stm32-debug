@@ -23,7 +23,8 @@ esp32-stm32-debug/
 ├── 02_document/
 │   ├── 01_project_overview.md
 │   ├── 02_build_and_tooling.md
-│   └── 03_git_workflow.md
+│   ├── 03_git_workflow.md
+│   └── 04_development_plan.md
 └── README.md
 ```
 
@@ -54,3 +55,6 @@ loại khỏi commit. Toàn bộ bộ công cụ vẫn nằm cục bộ dưới 
 
 Xem [Tổng quan dự án](02_document/01_project_overview.md) và
 [Quy trình Git](02_document/03_git_workflow.md).
+
+Kế hoạch các giai đoạn, đầu ra và tiêu chí nghiệm thu:
+[Kế hoạch phát triển](02_document/04_development_plan.md).

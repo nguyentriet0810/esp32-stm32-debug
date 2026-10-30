@@ -29,14 +29,16 @@ triển khai thực tế. Không tạo các module rỗng chỉ để hoàn thi�
 
 ## Các mốc phát triển
 
-1. Project nền: cấu hình N16R8, kiểm tra flash/PSRAM, build bằng ESP-IDF v6.1.
-2. SWD cơ bản: đọc DPIDR và một vùng RAM đã biết của STM32.
-3. Debug: tích hợp Black Magic Debug, GDB server và Wi-Fi.
-4. Thu thập dữ liệu: đọc RAM định kỳ, buffer PSRAM, giao thức NETWORK PROBE.
-5. Mở rộng: SWO và đánh giá CMSIS-DAP qua USB.
+Kế hoạch chi tiết và điều kiện nghiệm thu nằm trong
+[Kế hoạch phát triển](04_development_plan.md), hiện là bản đề xuất để thống nhất.
 
-Mốc 1 đang có firmware; các mốc 2–5 chưa được triển khai. Chưa nạp board để xác nhận
-runtime. Danh sách STM32 hỗ trợ sẽ được kiểm tra theo driver và mã chip cụ thể.
+- MVP v0.1: debug/nạp flash qua GDB và Wi-Fi, kiểm chứng trên các model STM32 đã chọn.
+- Bản v0.2: đọc RAM liên tục và giao thức MCUViewer.
+- Các mốc sau: SWO, USB/CMSIS-DAP và phần cứng mở rộng theo nhu cầu.
+
+Firmware nền đã build thành công; chưa nạp board để xác nhận runtime.
+Các chức năng debug và trace chưa triển khai. Danh sách STM32 hỗ trợ sẽ được kiểm tra
+theo driver và mã chip cụ thể.
 
 ## Nguồn tham khảo và giấy phép
 
