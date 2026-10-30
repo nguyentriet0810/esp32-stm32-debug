@@ -33,6 +33,23 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | Khôi phục project trên một máy Windows sạch | Chưa thực hiện |
 | SWD, Wi-Fi, GDB server, MCUViewer, SWO, USB probe | Chưa triển khai |
 
+### Phần cứng người dùng đang có
+
+Probe là **ESP32-S3 N16R8 dạng DevKit có chân đưa ra sẵn**. Sơ đồ chân sử dụng thực tế
+sẽ được đối chiếu với board trước khi đấu nối.
+
+| Target | Thứ tự đề xuất | Vai trò nghiệm thu |
+|---|---|---|
+| STM32F103 | 1 | Kết nối SWD đầu tiên, đọc RAM, debug và nạp flash nền |
+| STM32F411 | 2 | Target thứ hai của MVP, kiểm tra hỗ trợ khác dòng F1/F4 |
+| STM32H503 | 3 | Mở rộng sau nền F1/F4, đánh giá driver, debug và flash theo model |
+| STM32C562 | 4 | Đánh giá riêng debug port và driver flash trước khi đưa vào ma trận hỗ trợ |
+
+STM32C562 thuộc dòng STM32C5 theo [tài liệu ST](https://www.st.com/en/microcontrollers-microprocessors/stm32c562ce.html).
+Khả năng truy cập SWD và khả năng nạp flash được kiểm tra riêng; không suy ra hỗ trợ C562
+từ driver STM32C0 hoặc từ việc nhận diện được lõi ARM.
+Mã đầy đủ/package của từng chip, probe tham chiếu và dụng cụ đo hiện có sẽ được ghi ở P0.
+
 ## 3. Kiến trúc đề xuất
 
 Luồng chính: **GDB trên PC → TCP/Wi-Fi → dịch vụ probe → Black Magic Debug → SWD → STM32**.
@@ -62,8 +79,9 @@ Dependency upstream đặt trong `01_source/external` hoặc theo cơ chế comp
 
 ### P0 — Chốt yêu cầu và bộ thử nghiệm
 
-- Xác nhận model board S3 N16R8, cổng USB/COM, nguồn và chân có thể sử dụng.
-- Xác nhận các board STM32 đang có để chọn một target đầu tiên, sau đó thêm target thứ hai khác dòng.
+- Đối chiếu pinout DevKit S3 N16R8, cổng USB/COM, nguồn và chân có thể sử dụng.
+- Ghi mã đầy đủ của F103/F411/H503/C562; chọn F103 làm target đầu tiên và F411 làm target thứ hai của MVP.
+- Đánh giá phạm vi driver cho H503 và C562; tách việc bổ sung driver nếu backend được chọn chưa hỗ trợ.
 - Chốt pin map SWDIO/SWCLK/nRST, logic 3.3 V cho nguyên mẫu và cách nối nguồn/GND.
 - Chọn phiên bản Black Magic Debug; quyết định tái sử dụng phần nào của port tham khảo.
 - Chốt hành vi detach, mất TCP, reset và lỗi flash; phân biệt mất kết nối với lệnh chủ động của GDB.
@@ -123,7 +141,7 @@ verify flash đúng, các lỗi có thông báo và đường phục hồi rõ r
 
 ### P5 — Độ ổn định, nhiều dòng STM32 và phát hành MVP v0.1
 
-- Nghiệm thu trên ít nhất hai model thuộc hai dòng STM32 khác nhau, tùy board hiện có.
+- Nghiệm thu MVP trên F103 và F411; sau đó mở rộng kiểm chứng H503 và C562 theo kết quả đánh giá driver.
 - Lập ma trận theo model: nhận diện, attach, RAM, flash, reset, breakpoint và lỗi còn lại.
 - Mở rộng kiểm chứng Cortex-M0/M0+, M3/M4, M7 và M33 theo phần cứng và driver có sẵn;
   lưu ý cache, nhiều lõi, debug port và cấu hình bảo mật theo từng target.
@@ -183,7 +201,7 @@ P7 và P8 chỉ được ưu tiên sau khi có nhu cầu rõ; lỗi SWD/debug c�
 
 ## 6. Công việc kế tiếp ngay sau khi thống nhất kế hoạch
 
-1. Hoàn tất P0: xác nhận board S3, board STM32, probe tham chiếu và dụng cụ đo đang có.
+1. Hoàn tất P0: ghi mã/pinout board S3 và F103/F411, xác nhận probe tham chiếu và dụng cụ đo đang có.
 2. Chốt pin map và các chức năng của MVP; ghi quyết định chọn backend/port.
 3. Thực hiện P1 trên board thật rồi mới triển khai và tăng tốc SWD.
 

@@ -18,6 +18,10 @@ sử dụng Black Magic Debug làm lõi xử lý target ở các mốc tiếp th
 | Giao tiếp target dự kiến | SWD; SWO và nRST bổ sung theo nhu cầu |
 | Host phát triển hiện tại | Windows x64 |
 
+Board probe hiện có là DevKit ESP32-S3 N16R8 có chân đưa ra sẵn.
+Target hiện có: F103, F411, H503 và C562. Kế hoạch đề xuất nghiệm thu nền trên F103/F411,
+sau đó mở rộng H503/C562 sau khi kiểm tra driver và mã chip cụ thể.
+
 ## Phân chia thư mục
 
 - `01_source`: firmware, cấu hình build, script và toàn bộ bộ công cụ cục bộ.
