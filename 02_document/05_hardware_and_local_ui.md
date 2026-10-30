@@ -1,0 +1,149 @@
+# Phần cứng và giao diện điều khiển tại probe
+
+Trạng thái: **thiết kế đề xuất; chưa triển khai driver hoặc kiểm chứng đấu nối**.
+
+## 1. Yêu cầu đã xác nhận
+
+- Probe: ESP32-S3 N16R8 dạng DevKit có chân đưa ra sẵn, ESP-IDF v6.1.
+- Giữ nhóm chân debug của dự án MCUViewer-probe tham khảo.
+- Thêm OLED 0,96 inch, I2C, **SSD1306 128×64** theo xác nhận của người dùng.
+- Thêm một rotary encoder để thao tác menu và điều chỉnh thông số khi cần.
+- Giao tiếp encoder được thiết kế theo A/B và một nút nhấn SW; model EC11/KY-040
+  và đặc tính detent/nút nhấn của linh kiện thực tế còn cần xác nhận.
+
+## 2. Pin map đề xuất
+
+Các số dưới đây là **số GPIO**, không phải số thứ tự chân trên header DevKit.
+Đối chiếu nhãn GPIO và mạch nối của board thực tế trước khi chốt đấu dây.
+
+| Nhóm | Tín hiệu | ESP32-S3 | Ghi chú |
+|---|---|---|---|
+| Debug | SWDIO | GPIO4 | Giữ mặc định dự án mẫu; hai chiều |
+| Debug | SWCLK | GPIO5 | Giữ mặc định dự án mẫu; output |
+| Debug | SWO | GPIO6 | Giữ mặc định dự án mẫu; input, dùng ở giai đoạn trace |
+| Debug | Target nRST | GPIO10 | Giữ mặc định dự án mẫu; open-drain, không phải EN/reset của S3 |
+| OLED | SDA | GPIO8 | Bus I2C riêng cho giao diện |
+| OLED | SCL | GPIO9 | Bus I2C riêng cho giao diện |
+| Encoder | A / CLK | GPIO11 | Input quadrature A |
+| Encoder | B / DT | GPIO12 | Input quadrature B |
+| Encoder | SW | GPIO13 | Input nút nhấn, dự kiến active-low |
+| Tham chiếu | Status LED | GPIO21 | Giữ dự phòng theo LED của dự án mẫu |
+| Tham chiếu | BOOT/setup | GPIO0 | Giữ nút BOOT có sẵn; không dùng cho encoder |
+| Nguồn | OLED VCC | 3V3 | Module phải hỗ trợ nguồn 3,3 V và mức I2C 3,3 V |
+| Nguồn | GND | GND | OLED, encoder, S3 và target dùng chung mốc GND |
+
+GPIO21 là chân LED trên board Waveshare của dự án mẫu. LED tích hợp trên DevKit S3 có
+thể ở chân khác; cần đối chiếu board trước khi cấu hình LED, không suy ra từ dự án mẫu.
+
+Pin map này giữ GPIO19/20 cho USB, GPIO43/44 cho UART0 và không dùng các chân strapping
+cho linh kiện UI mới. GPIO35/36/37 của module R8 dùng cho Octal PSRAM nên không được
+đưa vào nhóm mở rộng. Việc chọn GPIO8/9/11/12/13 dựa trên module và DevKit tham chiếu;
+mạch phụ trên board thực tế vẫn cần được kiểm tra.
+
+## 3. Đấu nối OLED và encoder
+
+### OLED SSD1306
+
+| Nhãn trên module | Nối tới |
+|---|---|
+| VCC | 3V3 |
+| GND | GND |
+| SDA | GPIO8 |
+| SCL | GPIO9 |
+
+Thiết kế ban đầu dùng module I2C bốn chân. Nếu module có thêm RESET hoặc cách cấu hình
+địa chỉ khác, bổ sung vào cấu hình board trước khi triển khai driver.
+Địa chỉ dự kiến là `0x3C`; xác minh bằng I2C probe, cho phép cấu hình `0x3D` khi phần cứng yêu cầu.
+Khởi đầu bus ở 100 kHz, đánh giá 400 kHz sau khi kiểm tra module, dây và pull-up.
+SDA/SCL cần pull-up về 3,3 V; kiểm tra điện trở đã có trên module trước khi bổ sung.
+
+### Rotary encoder
+
+- EC11 rời: A/B nối GPIO11/12, chân common nối GND; hai tiếp điểm nút nhấn nối GPIO13/GND.
+- Module dạng KY-040: CLK/DT/SW nối GPIO11/12/13; GND nối GND và VCC dùng 3,3 V
+  nếu module đó hỗ trợ, để các pull-up của module cũng ở mức 3,3 V.
+- A/B/SW cần pull-up phù hợp. Số cạnh tương ứng một nấc và chiều xoay được cấu hình theo linh kiện.
+- Khử dội A/B và nút nhấn được kiểm tra riêng. Glitch filter của PCNT không thay thế
+  toàn bộ xử lý dội tiếp điểm cơ khí hoặc quy đổi số cạnh thành một nấc menu.
+
+Nguồn nguyên mẫu sẽ được chốt theo DevKit và target thực tế. Không suy ra khả năng cấp
+nguồn cho S3/OLED từ một chân nguồn trên header debug của target.
+
+## 4. Nội dung hiển thị và thao tác
+
+### Các trang MVP
+
+| Trang | Nội dung |
+|---|---|
+| Tổng quan | Trạng thái probe, Wi-Fi/IP, target nhận diện, client đang kết nối |
+| Debug | Target kết nối hay mất, SWD clock thực tế, trạng thái phiên và lỗi gần nhất |
+| Cấu hình | SWD clock mặc định khi rảnh, độ tương phản OLED, thời gian tắt màn hình |
+| Thông tin | Phiên bản firmware/SDK, profile board và ID thiết bị |
+
+Ví dụ bố cục, các giá trị chỉ là minh họa:
+
+```text
+STM32 PROBE
+WiFi: CONNECTED
+IP:   192.168.1.50
+MCU:  STM32F103
+SWD:  400 kHz
+GDB:  IDLE
+```
+
+- Xoay: đổi trang/mục; trong chế độ sửa thì tăng/giảm giá trị theo bước cấu hình.
+- Nhấn ngắn: chọn mục hoặc áp dụng giá trị đang sửa.
+- Nhấn giữ: quay lại/hủy giá trị đang sửa; không gán thao tác reset target vào nút giữ mặc định.
+- Những thông số đang do phiên host sở hữu được hiển thị chỉ đọc hoặc báo BUSY.
+- SWD clock mặc định được điều chỉnh khi probe rảnh; màn hình phân biệt giá trị mặc định
+  với clock thực tế khi host yêu cầu tần số khác.
+
+P1a chỉ hiển thị trạng thái board và kiểm tra thao tác menu. Wi-Fi/IP và trạng thái target
+được nối dữ liệu thật ở P3/P4, không hiển thị giá trị minh họa như trạng thái hoạt động.
+
+### Điều chỉnh thông số của STM32 ở giai đoạn sau
+
+Yêu cầu "điều chỉnh mạch" được chia thành cấu hình probe ở MVP và khả năng điều chỉnh
+tham số target khi có nhu cầu cụ thể ở P6, ví dụ setpoint hoặc hệ số điều khiển.
+Đối với tham số target, cần danh sách biến đã cấu hình: tên, địa chỉ/symbol, kiểu dữ liệu,
+đơn vị, khoảng giá trị, bước thay đổi và quyền đọc/ghi. Encoder gửi yêu cầu qua dịch vụ
+probe, không tự ghi vào địa chỉ RAM bất kỳ. Hành vi áp dụng giá trị và quyền sở hữu giữa
+UI với host được chốt trước khi triển khai chức năng này.
+
+## 5. Thiết kế firmware dự kiến
+
+- `board`: pin map và đặc tính module OLED/encoder, cấu hình qua Kconfig khi triển khai.
+- `local_ui`: trạng thái menu, renderer SSD1306, sự kiện encoder và nút nhấn.
+- OLED dùng I2C master driver và panel SSD1306 sẵn có trong ESP-IDF v6.1, với renderer
+  chữ/menu gọn. Framebuffer monochrome 128×64 cần 1024 byte cho một bản hình.
+- Encoder ưu tiên đánh giá PCNT theo ví dụ rotary encoder của SDK; kết hợp xử lý dội
+  và quy đổi nấc trong task, kiểm tra riêng nút SW.
+- UI chạy task ưu tiên thấp ở core 0; task sở hữu SWD vẫn ở core 1.
+- ISR chỉ ghi nhận sự kiện hoặc thông báo task; không vẽ OLED, ghi NVS hoặc gọi SWD trong ISR.
+- UI nhận snapshot trạng thái và gửi command qua queue; một dịch vụ duy nhất sở hữu target.
+- Cập nhật OLED theo thay đổi, dự kiến tối đa khoảng 5 lần/giây cho màn tổng quan ban đầu;
+  đo và điều chỉnh sau, không giữ khóa chung với thao tác SWD trong thời gian truyền I2C.
+- Lưu cấu hình NVS theo thao tác áp dụng và khi probe rảnh; không ghi flash theo từng nấc xoay.
+- Lỗi hoặc thiếu OLED được báo qua log, timeout/retry có giới hạn; debug vẫn có thể tiếp tục.
+- Khi host đang nạp flash hoặc sở hữu phiên debug, UI chỉ thực hiện các thao tác được dịch vụ cho phép.
+
+## 6. Kế hoạch và nghiệm thu
+
+1. P0: đối chiếu pin map, xác nhận module encoder, nguồn/pull-up và hành vi menu.
+2. P1a: phát hiện OLED, hiển thị thông tin board, đọc encoder/nút và chạy thử menu.
+3. P3/P4: đưa trạng thái Wi-Fi, phiên GDB, target và lỗi thật lên màn hình.
+4. P5: kiểm tra xoay/nhấn và truyền OLED trong lúc debug; đo ảnh hưởng lên SWD và mạng.
+5. P6: đặc tả và đánh giá điều chỉnh tham số STM32 nếu cần.
+
+Tiêu chí P1a: OLED hiển thị đúng, mỗi nấc menu được đếm theo cấu hình, chiều xoay đúng,
+nhấn/nhấn giữ được phân biệt, không lặp nhấn do dội; tháo hoặc lỗi OLED không làm treo probe.
+Thử cấp nguồn lại khi encoder/nút ở các trạng thái khác nhau.
+Sau khi có debug, việc thao tác UI không gây lệnh target ngoài dự kiến hoặc làm mất phiên.
+
+## 7. Tài liệu tham chiếu
+
+- [Pin mặc định MCUViewer-probe](https://github.com/klonyyy/MCUViewer-probe#hardware).
+- [Datasheet ESP32-S3-WROOM-1/1U](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf).
+- [Pin header DevKitC-1 tham chiếu](https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html).
+- [Ví dụ SSD1306 trong ESP-IDF v6.1](https://github.com/espressif/esp-idf/tree/v6.1/examples/peripherals/lcd/i2c_oled).
+- [Ví dụ encoder/PCNT trong ESP-IDF v6.1](https://github.com/espressif/esp-idf/tree/v6.1/examples/peripherals/pcnt/rotary_encoder).

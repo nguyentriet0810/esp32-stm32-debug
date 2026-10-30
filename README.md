@@ -24,7 +24,8 @@ esp32-stm32-debug/
 │   ├── 01_project_overview.md
 │   ├── 02_build_and_tooling.md
 │   ├── 03_git_workflow.md
-│   └── 04_development_plan.md
+│   ├── 04_development_plan.md
+│   └── 05_hardware_and_local_ui.md
 └── README.md
 ```
 
@@ -44,6 +45,8 @@ Hướng dẫn cho máy mới: [Build và bộ công cụ](02_document/02_build_
 
 Hiện là project nền kiểm tra ESP32-S3 N16R8: flash 16 MB, PSRAM Octal 8 MB / 80 MHz,
 CPU 240 MHz, hai lõi. SWD, Wi-Fi, GDB server và trace sẽ được phát triển theo từng mốc.
+Thiết kế bổ sung OLED I2C SSD1306 128×64 và rotary encoder cho giao diện cục bộ;
+driver và menu chưa được triển khai.
 Chưa xác nhận runtime trên phần cứng thật.
 
 ## Quản lý phiên bản
@@ -58,3 +61,6 @@ Xem [Tổng quan dự án](02_document/01_project_overview.md) và
 
 Kế hoạch các giai đoạn, đầu ra và tiêu chí nghiệm thu:
 [Kế hoạch phát triển](02_document/04_development_plan.md).
+
+Pin map và giao diện OLED/encoder:
+[Phần cứng và giao diện tại probe](02_document/05_hardware_and_local_ui.md).

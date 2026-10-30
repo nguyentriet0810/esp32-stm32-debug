@@ -14,6 +14,7 @@ kiểm chứng được trên phần cứng và quản lý đầy đủ bằng G
 - Halt, run, single-step, hardware breakpoint, đọc thanh ghi và đọc/ghi bộ nhớ.
 - Erase/program/verify flash theo driver hỗ trợ đúng model STM32.
 - Quản lý một phiên điều khiển target tại một thời điểm; có timeout và phục hồi phiên.
+- OLED SSD1306 128×64 và rotary encoder để xem trạng thái, thao tác menu và cấu hình probe khi rảnh.
 - Có hướng dẫn sử dụng, cấu hình kết nối GDB và ma trận phần cứng đã kiểm chứng.
 
 Các mốc sau bổ sung đọc RAM liên tục cho MCUViewer, SWO và USB/CMSIS-DAP.
@@ -32,6 +33,7 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | Kiểm tra flash/PSRAM/nguồn trên board thật | Chưa thực hiện |
 | Khôi phục project trên một máy Windows sạch | Chưa thực hiện |
 | SWD, Wi-Fi, GDB server, MCUViewer, SWO, USB probe | Chưa triển khai |
+| OLED SSD1306 128×64 và rotary encoder | Đã bổ sung yêu cầu; chưa triển khai |
 
 ### Phần cứng người dùng đang có
 
@@ -50,6 +52,10 @@ Khả năng truy cập SWD và khả năng nạp flash được kiểm tra riên
 từ driver STM32C0 hoặc từ việc nhận diện được lõi ARM.
 Mã đầy đủ/package của từng chip, probe tham chiếu và dụng cụ đo hiện có sẽ được ghi ở P0.
 
+Giao diện cục bộ gồm OLED 0,96 inch I2C SSD1306 128×64 đã được xác nhận và rotary encoder
+A/B với nút nhấn được đề xuất. Pin map, menu và điều kiện nghiệm thu nằm trong
+[Phần cứng và giao diện tại probe](05_hardware_and_local_ui.md); model encoder còn cần xác nhận.
+
 ## 3. Kiến trúc đề xuất
 
 Luồng chính: **GDB trên PC → TCP/Wi-Fi → dịch vụ probe → Black Magic Debug → SWD → STM32**.
@@ -61,12 +67,15 @@ Luồng chính: **GDB trên PC → TCP/Wi-Fi → dịch vụ probe → Black Mag
 | Debug backend | Tích hợp Black Magic Debug, driver target và thao tác flash |
 | Probe service | Sở hữu SWD, tuần tự hóa yêu cầu, timeout và vòng đời phiên |
 | Network transport | Wi-Fi, TCP, cấu hình mạng và phát hiện mất kết nối |
+| Local UI | OLED, encoder/nút nhấn, xem trạng thái và gửi yêu cầu cấu hình qua dịch vụ probe |
 | Trace/acquisition, giai đoạn sau | Đọc RAM định kỳ, buffer PSRAM, nhận SWO và giao thức MCUViewer |
 | Application | Khởi tạo và ghép các thành phần |
 
 Đề xuất giữ Wi-Fi/network ở core 0 và một task sở hữu SWD ở core 1. Các giao diện host
 không trực tiếp điều khiển SWD đồng thời. Giữ mã cần timing trong bộ nhớ nội phù hợp;
 PSRAM dùng cho buffer lớn sau khi đo yêu cầu bộ nhớ và giới hạn truy cập.
+UI chạy ưu tiên thấp ở core 0, nhận sự kiện qua queue; không gọi SWD trực tiếp hoặc
+truyền OLED trong ISR/task sở hữu SWD.
 
 Black Magic Debug được ghim phiên bản/commit và sử dụng driver sẵn có. Lớp SWD cần tích hợp
 với backend, tránh duy trì hai bản triển khai giao thức SWD độc lập. Nếu tái sử dụng port
@@ -83,6 +92,8 @@ Dependency upstream đặt trong `01_source/external` hoặc theo cơ chế comp
 - Ghi mã đầy đủ của F103/F411/H503/C562; chọn F103 làm target đầu tiên và F411 làm target thứ hai của MVP.
 - Đánh giá phạm vi driver cho H503 và C562; tách việc bổ sung driver nếu backend được chọn chưa hỗ trợ.
 - Chốt pin map SWDIO/SWCLK/nRST, logic 3.3 V cho nguyên mẫu và cách nối nguồn/GND.
+- Giữ chân debug mẫu GPIO4/5/6/10; đề xuất OLED SDA/SCL GPIO8/9, encoder A/B/SW GPIO11/12/13.
+- Xác nhận model encoder, pull-up/nguồn OLED và cách thao tác menu; giữ GPIO21 và GPIO0/BOOT theo chức năng tham chiếu.
 - Chọn phiên bản Black Magic Debug; quyết định tái sử dụng phần nào của port tham khảo.
 - Chốt hành vi detach, mất TCP, reset và lỗi flash; phân biệt mất kết nối với lệnh chủ động của GDB.
 - Chốt danh sách chức năng MVP và cách đánh dấu model đã thử/chưa thử.
@@ -100,6 +111,18 @@ Dependency upstream đặt trong `01_source/external` hoặc theo cơ chế comp
 **Đầu ra:** log kiểm chứng board, hướng dẫn setup đã thử và cấu hình board có phiên bản.
 **Nghiệm thu:** board khởi động đúng profile, không có reset ngoài dự kiến trong bài thử;
 một môi trường sạch build được theo tài liệu. Build hiện có mới hoàn thành phần kiểm tra trên máy phát triển.
+
+### P1a — OLED và rotary encoder
+
+- Đối chiếu pin map thực tế, xác minh địa chỉ I2C và hiển thị thông tin board trên SSD1306.
+- Đọc A/B/nút nhấn, xử lý dội, xác định số cạnh mỗi nấc và chạy menu xoay/chọn/quay lại.
+- Có cấu hình độ tương phản, thời gian tắt màn hình và thông số mặc định ở trạng thái rảnh.
+- Thử thiếu/lỗi OLED, cấp nguồn lại và thao tác encoder nhanh/chậm; mọi chờ I2C có timeout.
+- Tách task UI khỏi SWD và thiết kế giao diện trạng thái/command trước khi ghép vào debug.
+
+**Đầu ra:** giao diện cục bộ hoạt động trên nguyên mẫu, thông tin đấu nối và cấu hình module.
+**Nghiệm thu:** hiển thị đúng, thao tác menu ổn định, phân biệt nhấn ngắn/giữ và lỗi OLED
+không làm treo probe. Trạng thái mạng/target thật sẽ được ghép ở P3/P4.
 
 ### P2 — SWD cơ bản, kiểm chứng cục bộ
 
@@ -122,6 +145,7 @@ Chưa tăng tốc khi kết nối nền còn lỗi.
 - Chỉ một client sở hữu target; client thứ hai nhận trạng thái từ chối/bận rõ ràng.
 - Thử TCP chia nhỏ/gộp dữ liệu, client đóng đột ngột, mất Wi-Fi và kết nối lại.
 - Không đưa thông tin đăng nhập mạng vào mã nguồn hoặc commit.
+- Đưa trạng thái mạng, IP và phiên TCP thật lên OLED qua snapshot trạng thái.
 
 **Đầu ra:** transport và vòng đời phiên được kiểm chứng, cấu hình kết nối từ PC.
 **Nghiệm thu:** mất mạng không làm treo task SWD hoặc tạo phiên cũ chiếm tài nguyên;
@@ -134,6 +158,7 @@ target tuân theo hành vi đã chốt ở P0.
 - Thử erase/program/verify với firmware thử nghiệm của đúng target, rồi reset và chạy lại.
 - Kiểm tra lỗi nạp, mất target giữa thao tác và khả năng phục hồi kết nối.
 - Tạo ví dụ GDB command và cấu hình cho một IDE được chọn để nghiệm thu.
+- Hiển thị target, clock SWD thực tế, phiên debug và lỗi lên OLED; khóa thao tác UI xung đột với host.
 
 **Đầu ra:** probe sử dụng được với GDB trên target đầu tiên, hướng dẫn có thể làm lại.
 **Nghiệm thu:** hoàn thành một chu trình build firmware target → nạp → debug → reset/run;
@@ -147,6 +172,7 @@ verify flash đúng, các lỗi có thông báo và đường phục hồi rõ r
   lưu ý cache, nhiều lõi, debug port và cấu hình bảo mật theo từng target.
 - Đo tốc độ đọc/ghi RAM, nạp flash, độ trễ và mức dùng RAM/CPU; tăng SWD theo từng mức.
 - Chạy phiên dài với số lần kết nối lại xác định trước; theo dõi heap, watchdog và timeout.
+- Đo ảnh hưởng cập nhật OLED và thao tác encoder khi debug; kiểm tra lệnh UI tuân theo quyền sở hữu target.
 - Hoàn thiện tài liệu đấu nối, hướng dẫn, giới hạn hỗ trợ và ghi chú phiên bản.
 
 **Đầu ra:** release MVP v0.1 và ma trận model đã kiểm chứng.
@@ -161,6 +187,8 @@ giới hạn được ghi lại. Model chưa thử không được gắn nhãn �
 - Thử bằng biến có tín hiệu biết trước trong firmware target; phân biệt số đo khi CPU vẫn chạy
   với một snapshot đồng bộ, không giả định mọi biến được đọc cùng thời điểm.
 - Khóa quyền truy cập giữa phiên GDB và phiên acquisition.
+- Nếu cần điều chỉnh thông số STM32 bằng encoder, đặc tả danh sách biến/kiểu/giới hạn/bước
+  và chính sách áp dụng qua probe service trước khi triển khai ghi tham số.
 
 **Đầu ra:** bản v0.2 theo dõi biến và vẽ đồ thị bằng MCUViewer.
 **Nghiệm thu:** đối chiếu đúng dữ liệu thử, có số đo tốc độ/jitter/mất mẫu và phục hồi sau gián đoạn.
@@ -187,7 +215,7 @@ giới hạn được ghi lại. Model chưa thử không được gắn nhãn �
 
 ## 5. Thứ tự triển khai và quản lý công việc
 
-Thứ tự chính: **P0 → P1 → P2 → P3 → P4 → P5 → P6 → P7/P8**.
+Thứ tự chính: **P0 → P1 → P1a → P2 → P3 → P4 → P5 → P6 → P7/P8**.
 P7 và P8 chỉ được ưu tiên sau khi có nhu cầu rõ; lỗi SWD/debug của MVP phải được xử lý trước.
 
 - Mỗi hạng mục có phạm vi, đầu ra, điều kiện nghiệm thu và kết quả kiểm tra.
@@ -202,7 +230,7 @@ P7 và P8 chỉ được ưu tiên sau khi có nhu cầu rõ; lỗi SWD/debug c�
 ## 6. Công việc kế tiếp ngay sau khi thống nhất kế hoạch
 
 1. Hoàn tất P0: ghi mã/pinout board S3 và F103/F411, xác nhận probe tham chiếu và dụng cụ đo đang có.
-2. Chốt pin map và các chức năng của MVP; ghi quyết định chọn backend/port.
-3. Thực hiện P1 trên board thật rồi mới triển khai và tăng tốc SWD.
+2. Chốt pin map debug/OLED/encoder và các chức năng MVP; ghi quyết định chọn backend/port.
+3. Thực hiện P1 và P1a trên board thật rồi triển khai SWD theo tốc độ nền.
 
 Các giai đoạn firmware tiếp theo sẽ được triển khai theo phạm vi và thứ tự đã thống nhất.
