@@ -23,6 +23,7 @@
  * @retval ESP_ERR_NOT_SUPPORTED The chip or core count does not match the profile.
  * @retval ESP_ERR_INVALID_SIZE The physical/configured flash or PSRAM size is incorrect.
  * @retval ESP_ERR_INVALID_STATE PSRAM has not been initialized.
+ * @retval ESP_ERR_INVALID_ARG Pin assignments overlap or use a reserved board pin.
  * @note Flash driver errors are returned unchanged. The function does not abort or reset.
  */
 esp_err_t probe_board_check(void);

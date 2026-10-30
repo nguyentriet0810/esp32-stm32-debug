@@ -1,0 +1,52 @@
+menu "STM32 probe hardware"
+config PROBE_SWDIO_GPIO
+    int "SWDIO GPIO"
+    range 0 31
+    default 4
+config PROBE_SWCLK_GPIO
+    int "SWCLK GPIO"
+    range 0 31
+    default 5
+config PROBE_NRST_GPIO
+    int "Target nRST GPIO (-1 disables)"
+    range -1 31
+    default 10
+config PROBE_SWO_GPIO
+    int "Reserved SWO GPIO"
+    range 0 48
+    default 6
+config PROBE_SWD_DEFAULT_HZ
+    int "Initial SWD frequency (Hz)"
+    range 1000 8000000
+    default 400000
+config PROBE_OLED_ENABLE
+    bool "Enable optional SSD1306 OLED"
+    default y
+config PROBE_OLED_SDA_GPIO
+    int "OLED SDA GPIO"
+    range 0 48
+    default 8
+config PROBE_OLED_SCL_GPIO
+    int "OLED SCL GPIO"
+    range 0 48
+    default 9
+config PROBE_ENCODER_ENABLE
+    bool "Enable optional encoder input"
+    default y
+config PROBE_ENCODER_A_GPIO
+    int "Encoder A GPIO"
+    range 0 48
+    default 11
+config PROBE_ENCODER_B_GPIO
+    int "Encoder B GPIO"
+    range 0 48
+    default 12
+config PROBE_ENCODER_SW_GPIO
+    int "Encoder switch GPIO"
+    range 0 48
+    default 13
+config PROBE_GDB_PORT
+    int "GDB TCP port"
+    range 1024 65535
+    default 2022
+endmenu

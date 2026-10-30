@@ -15,6 +15,12 @@
     "environment_path": ".tooling/python-env",
     "requirements": "tooling/python-requirements.lock.txt"
   },
+  "blackmagic": {
+    "repository": "https://codeberg.org/blackmagic-debug/blackmagic.git",
+    "tag": "v2.1.0",
+    "commit": "449730f8bc6f7a41e3d39e47bc03089b37d4656c",
+    "path": "external/blackmagic"
+  },
   "tools": {
     "manifest": ".tooling/esp-idf-v6.1/tools/tools.json",
     "installation_path": ".tooling/idf-tools",

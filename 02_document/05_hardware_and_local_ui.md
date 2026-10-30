@@ -1,6 +1,6 @@
 # Phần cứng và giao diện điều khiển tại probe
 
-Trạng thái: **thiết kế đề xuất; chưa triển khai driver hoặc kiểm chứng đấu nối**.
+Trạng thái: **đã có driver/menu; chưa có OLED/encoder hoặc STM32 đấu nối để nghiệm thu**.
 
 ## 1. Yêu cầu đã xác nhận
 
@@ -11,7 +11,7 @@ Trạng thái: **thiết kế đề xuất; chưa triển khai driver hoặc ki�
 - Giao tiếp encoder được thiết kế theo A/B và một nút nhấn SW; model EC11/KY-040
   và đặc tính detent/nút nhấn của linh kiện thực tế còn cần xác nhận.
 
-## 2. Pin map đề xuất
+## 2. Pin map mặc định trong firmware
 
 Các số dưới đây là **số GPIO**, không phải số thứ tự chân trên header DevKit.
 Đối chiếu nhãn GPIO và mạch nối của board thực tế trước khi chốt đấu dây.
@@ -62,23 +62,22 @@ SDA/SCL cần pull-up về 3,3 V; kiểm tra điện trở đã có trên module
 - EC11 rời: A/B nối GPIO11/12, chân common nối GND; hai tiếp điểm nút nhấn nối GPIO13/GND.
 - Module dạng KY-040: CLK/DT/SW nối GPIO11/12/13; GND nối GND và VCC dùng 3,3 V
   nếu module đó hỗ trợ, để các pull-up của module cũng ở mức 3,3 V.
-- A/B/SW cần pull-up phù hợp. Số cạnh tương ứng một nấc và chiều xoay được cấu hình theo linh kiện.
-- Khử dội A/B và nút nhấn được kiểm tra riêng. Glitch filter của PCNT không thay thế
-  toàn bộ xử lý dội tiếp điểm cơ khí hoặc quy đổi số cạnh thành một nấc menu.
+- A/B/SW cần pull-up phù hợp. Cần kiểm chứng số cạnh mỗi nấc và chiều xoay theo linh kiện.
+- Firmware hiện polling mỗi 1 ms, decoder full-step: bốn cạnh hợp lệ về AB=3 là một nấc.
+  Loại chuyển hai bit đồng thời và bù bước khi dội ngược. Nút debounce 20 ms, giữ 750 ms.
+  Số cạnh/nấc và chiều xoay cần đối chiếu model encoder thực tế trước khi nghiệm thu.
 
 Nguồn nguyên mẫu sẽ được chốt theo DevKit và target thực tế. Không suy ra khả năng cấp
 nguồn cho S3/OLED từ một chân nguồn trên header debug của target.
 
 ## 4. Nội dung hiển thị và thao tác
 
-### Các trang MVP
+### Menu hiện đã triển khai
 
 | Trang | Nội dung |
 |---|---|
-| Tổng quan | Trạng thái probe, Wi-Fi/IP, target nhận diện, client đang kết nối |
-| Debug | Target kết nối hay mất, SWD clock thực tế, trạng thái phiên và lỗi gần nhất |
-| Cấu hình | SWD clock mặc định khi rảnh, độ tương phản OLED, thời gian tắt màn hình |
-| Thông tin | Phiên bản firmware/SDK, profile board và ID thiết bị |
+| Tổng quan | Wi-Fi/IP, tên target nếu có, clock SWD danh định, trạng thái GDB |
+| Clock | Xoay chọn 100/400 kHz, 1/2/4/8 MHz; nhấn áp dụng khi rảnh; giữ để quay lại |
 
 Ví dụ bố cục, các giá trị chỉ là minh họa:
 
@@ -91,15 +90,15 @@ SWD:  400 kHz
 GDB:  IDLE
 ```
 
-- Xoay: đổi trang/mục; trong chế độ sửa thì tăng/giảm giá trị theo bước cấu hình.
+- Xoay trong trang clock: đổi tần số được chọn.
 - Nhấn ngắn: chọn mục hoặc áp dụng giá trị đang sửa.
 - Nhấn giữ: quay lại/hủy giá trị đang sửa; không gán thao tác reset target vào nút giữ mặc định.
 - Những thông số đang do phiên host sở hữu được hiển thị chỉ đọc hoặc báo BUSY.
-- SWD clock mặc định được điều chỉnh khi probe rảnh; màn hình phân biệt giá trị mặc định
-  với clock thực tế khi host yêu cầu tần số khác.
+- Màn hình phân biệt clock đang áp dụng với giá trị đang chọn. Đây là giá trị danh định
+  trong port, chưa phải tần số đo bằng logic analyzer. Thay đổi chưa lưu NVS.
 
-P1a chỉ hiển thị trạng thái board và kiểm tra thao tác menu. Wi-Fi/IP và trạng thái target
-được nối dữ liệu thật ở P3/P4, không hiển thị giá trị minh họa như trạng thái hoạt động.
+Wi-Fi/IP và trạng thái target lấy từ snapshot thật. Khi chưa có target, hiển thị NONE.
+Trang thông tin, menu contrast, timeout màn hình và lưu cấu hình UI là phần còn lại của P1a.
 
 ### Điều chỉnh thông số của STM32 ở giai đoạn sau
 
@@ -110,22 +109,35 @@ tham số target khi có nhu cầu cụ thể ở P6, ví dụ setpoint hoặc h
 probe, không tự ghi vào địa chỉ RAM bất kỳ. Hành vi áp dụng giá trị và quyền sở hữu giữa
 UI với host được chốt trước khi triển khai chức năng này.
 
-## 5. Thiết kế firmware dự kiến
+## 5. Triển khai firmware hiện tại
 
-- `board`: pin map và đặc tính module OLED/encoder, cấu hình qua Kconfig khi triển khai.
-- `local_ui`: trạng thái menu, renderer SSD1306, sự kiện encoder và nút nhấn.
+- `probe_board`: pin map Kconfig và kiểm tra pin trùng/chân dành riêng của profile N16R8.
+- `probe_local_ui`: trạng thái menu; `probe_oled`: renderer SSD1306; `probe_encoder`: input/decoder.
 - OLED dùng I2C master driver và panel SSD1306 sẵn có trong ESP-IDF v6.1, với renderer
   chữ/menu gọn. Framebuffer monochrome 128×64 cần 1024 byte cho một bản hình.
-- Encoder ưu tiên đánh giá PCNT theo ví dụ rotary encoder của SDK; kết hợp xử lý dội
-  và quy đổi nấc trong task, kiểm tra riêng nút SW.
+- Encoder dùng task polling 1 ms và decoder C độc lập đã có bài thử host, chưa dùng PCNT.
 - UI chạy task ưu tiên thấp ở core 0; task sở hữu SWD vẫn ở core 1.
 - ISR chỉ ghi nhận sự kiện hoặc thông báo task; không vẽ OLED, ghi NVS hoặc gọi SWD trong ISR.
 - UI nhận snapshot trạng thái và gửi command qua queue; một dịch vụ duy nhất sở hữu target.
-- Cập nhật OLED theo thay đổi, dự kiến tối đa khoảng 5 lần/giây cho màn tổng quan ban đầu;
+- Cập nhật OLED giới hạn tối đa 5 lần/giây;
   đo và điều chỉnh sau, không giữ khóa chung với thao tác SWD trong thời gian truyền I2C.
-- Lưu cấu hình NVS theo thao tác áp dụng và khi probe rảnh; không ghi flash theo từng nấc xoay.
+- Wi-Fi lưu NVS khi áp dụng ở trạng thái rảnh. Clock UI/console hiện chỉ lưu RAM.
 - Lỗi hoặc thiếu OLED được báo qua log, timeout/retry có giới hạn; debug vẫn có thể tiếp tục.
 - Khi host đang nạp flash hoặc sở hữu phiên debug, UI chỉ thực hiện các thao tác được dịch vụ cho phép.
+
+### Đấu STM32 cho bài thử đầu tiên
+
+| ESP32-S3 | STM32 |
+|---|---|
+| GPIO4 | SWDIO |
+| GPIO5 | SWCLK |
+| GPIO10 | nRST, nếu dùng |
+| GND | GND |
+
+Nguyên mẫu dùng tín hiệu 3,3 V, chưa có VTref/chuyển mức/bảo vệ hoặc đo điện áp target.
+Target cấp nguồn riêng phù hợp board. Chân 3V3 không phải đường đo VTref trong firmware hiện tại.
+GPIO6 mới được dành cho SWO; chưa có thu trace. Sau đấu nối, `monitor swd_scan` mới có ý nghĩa
+để nhận diện target; chưa công bố hỗ trợ flash một model chỉ từ việc build được driver.
 
 ## 6. Kế hoạch và nghiệm thu
 

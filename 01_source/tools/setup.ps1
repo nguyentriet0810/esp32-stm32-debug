@@ -16,12 +16,16 @@ if (-not (Test-Path -LiteralPath $probePythonBase)) {
     if ($LASTEXITCODE -ge 8) { throw 'Could not copy the Python runtime.' }
 }
 
-& git -C $probeRepositoryRoot submodule update --init --recursive -- '01_source/.tooling/esp-idf-v6.1'
-if ($LASTEXITCODE -ne 0) { throw 'Could not restore the pinned ESP-IDF submodule.' }
+& git -C $probeRepositoryRoot submodule update --init --recursive -- '01_source/.tooling/esp-idf-v6.1' '01_source/external/blackmagic'
+if ($LASTEXITCODE -ne 0) { throw 'Could not restore the pinned SDK/backend submodules.' }
 $probeLock = Get-Content -LiteralPath (Join-Path $probeSourceRoot 'tooling.lock.json') -Raw | ConvertFrom-Json
 $probeSdkCommit = & git -C $probeIdfPath rev-parse HEAD
 if ($LASTEXITCODE -ne 0 -or $probeSdkCommit -ne $probeLock.esp_idf.commit) {
     throw 'ESP-IDF checkout does not match tooling.lock.json.'
+}
+$probeBackendCommit = & git -C (Join-Path $probeSourceRoot $probeLock.blackmagic.path) rev-parse HEAD
+if ($LASTEXITCODE -ne 0 -or $probeBackendCommit -ne $probeLock.blackmagic.commit) {
+    throw 'Black Magic Debug checkout does not match tooling.lock.json.'
 }
 
 Initialize-ProbeEnvironment -ForSetup

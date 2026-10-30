@@ -19,7 +19,7 @@ if(NOT IDF_TARGET STREQUAL "esp32s3")
     message(FATAL_ERROR "This hardware profile requires ESP32-S3.")
 endif()
 
-set(PROJECT_VER "0.1.0")
+set(PROJECT_VER "0.1.0-dev1")
 include("$ENV{IDF_PATH}/tools/cmake/project.cmake")
 idf_build_set_property(MINIMAL_BUILD ON)
 project(stm32_wifi_probe)

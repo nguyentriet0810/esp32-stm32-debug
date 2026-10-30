@@ -19,12 +19,18 @@ phiên bản 3 hoặc phiên bản mới hơn. Repo vẫn có quyền truy cập
 
 ## Backend và dự án tham khảo
 
-- [Black Magic Debug](https://black-magic.org/docs_v1/hacking/hacking/) là backend dự kiến,
-  firmware upstream dùng GPLv3. Chưa đưa mã backend vào repository này.
+- [Black Magic Debug](https://codeberg.org/blackmagic-debug/blackmagic) đã được tích hợp bằng
+  submodule `01_source/external/blackmagic`, v2.1.0, commit
+  `449730f8bc6f7a41e3d39e47bc03089b37d4656c`. Giữ giấy phép/copyright từng file upstream.
+  CMake adapter lựa chọn core GDB/Cortex-M/ADI và nhóm driver STM32, không sửa checkout upstream.
 - [MCUViewer-probe](https://github.com/klonyyy/MCUViewer-probe) là dự án tham khảo,
-  firmware dùng GPL-3.0-or-later. Khi dùng mã port cần giữ thông tin tác giả/giấy phép từng file.
+  firmware dùng GPL-3.0-or-later. Bản tham chiếu develop commit
+  `02755f409634f0874fb087b720d8883ef6f65dd8`.
+  `probe_debug/port/probe_swd.c`, `probe_platform.c` và GDB poll/transport được chuyển đổi
+  từ mã tham khảo, giữ copyright Piotr Wasilewski và Black Sphere khi có nguồn gốc tương ứng.
+  Các shim `probe_bmd/port/platform.h`, `libc_compat.h/.c` giữ thông báo gốc của bản tham chiếu.
 - Một số file có thể có giấy phép riêng, ví dụ header giao thức. Kiểm tra theo file và
   giữ nguyên thông báo tương ứng, không đổi toàn bộ thành SPDX của dự án.
 
 Văn bản `LICENSE` hiện được lấy nguyên bản từ `COPYING` của MCUViewer-probe,
-là văn bản GNU GPLv3. Việc thêm văn bản giấy phép không có nghĩa đã tích hợp firmware của repo mẫu.
+là văn bản GNU GPLv3. Project không đổi giấy phép mã dependency thành giấy phép riêng.

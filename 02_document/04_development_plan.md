@@ -1,7 +1,8 @@
 # Kế hoạch phát triển
 
-Trạng thái: **bản đề xuất để thống nhất trước khi triển khai thêm firmware**.
-Ngày lập: 30/10/2026.
+Trạng thái: **đang triển khai, firmware 0.1.0-dev1 đã chạy trên probe thật**.
+Cập nhật: 30/10/2026. Các tiêu chí bên dưới vẫn là mục tiêu nghiệm thu, không tự coi
+là đã hoàn thành chỉ vì backend đã được tích hợp.
 
 ## 1. Mục tiêu và phạm vi bản đầu
 
@@ -30,11 +31,13 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | ESP-IDF v6.1, Python, compiler và công cụ cục bộ | Đã có |
 | SDK submodule, lock file và hướng dẫn setup | Đã có |
 | Build firmware nền cho N16R8 | Đã thành công |
-| Component và quy chuẩn C | Có `probe_board`; C17, comment Doxygen, hướng dẫn MISRA C:2025 |
-| Kiểm tra flash/PSRAM/nguồn trên board thật | Chưa thực hiện |
+| Component và quy chuẩn C | Đã tách board/backend/debug/network/state/console/OLED/encoder/UI; C17/GNU17, Doxygen, MISRA-oriented |
+| Kiểm tra flash/PSRAM trên board thật | Đã xác nhận 16 MiB/8 MiB trên COM13; chưa đo nguồn/tín hiệu |
 | Khôi phục project trên một máy Windows sạch | Chưa thực hiện |
-| SWD, Wi-Fi, GDB server, MCUViewer, SWO, USB probe | Chưa triển khai |
-| OLED SSD1306 128×64 và rotary encoder | Đã bổ sung yêu cầu; chưa triển khai |
+| Wi-Fi và GDB transport | Đã kết nối TRIET, kiểm tra RSP, checksum, một client và 20 lần reconnect |
+| SWD và Black Magic Debug | Đã tích hợp, scan không có target phục hồi được; chưa thử STM32 thật |
+| MCUViewer, SWO, USB probe | Chưa triển khai |
+| OLED SSD1306 và encoder | Có driver/menu, decoder đã test host; thiếu OLED không dừng probe; chưa có linh kiện |
 
 ### Phần cứng người dùng đang có
 
@@ -56,6 +59,8 @@ Mã đầy đủ/package của từng chip, probe tham chiếu và dụng cụ �
 Giao diện cục bộ gồm OLED 0,96 inch I2C SSD1306 128×64 đã được xác nhận và rotary encoder
 A/B với nút nhấn được đề xuất. Pin map, menu và điều kiện nghiệm thu nằm trong
 [Phần cứng và giao diện tại probe](05_hardware_and_local_ui.md); model encoder còn cần xác nhận.
+Người dùng chưa mua OLED/encoder. Vì chưa có target đấu SWD, ma trận STM32 hiện chưa
+có model nào được đánh dấu đã nghiệm thu.
 
 ## 3. Kiến trúc đề xuất
 
@@ -111,7 +116,7 @@ Mã gốc dự án dùng GPL-3.0-or-later, giữ khả năng tích hợp backend
 - Kiểm tra reset/cấp nguồn lại và độ ổn định bộ nhớ khi vận hành bình thường.
 - Kiểm chứng quy trình clone/setup/build trên môi trường Windows sạch.
 - Thiết lập kiểm tra build bằng SDK đã ghim và quy ước review thay đổi trước khi merge.
-- Áp dụng C17/warnings/analyzer cho mã dự án; tiếp tục hoàn thiện checker và guideline coverage
+- Áp dụng C17/GNU17, warnings/analyzer cho mã dự án; tiếp tục hoàn thiện checker và guideline coverage
   trước khi đánh dấu mức tuân thủ MISRA.
 
 **Đầu ra:** log kiểm chứng board, hướng dẫn setup đã thử và cấu hình board có phiên bản.
@@ -233,10 +238,13 @@ P7 và P8 chỉ được ưu tiên sau khi có nhu cầu rõ; lỗi SWD/debug c�
 - Bài thử tự động tập trung vào codec, state machine, timeout và tình huống lỗi có ý nghĩa;
   việc timing SWD, flash và trace cần xác nhận bằng phần cứng.
 
-## 6. Công việc kế tiếp ngay sau khi thống nhất kế hoạch
+## 6. Công việc kế tiếp
 
-1. Hoàn tất P0: ghi mã/pinout board S3 và F103/F411, xác nhận probe tham chiếu và dụng cụ đo đang có.
-2. Chốt pin map debug/OLED/encoder và các chức năng MVP; ghi quyết định chọn backend/port.
-3. Thực hiện P1 và P1a trên board thật rồi triển khai SWD theo tốc độ nền.
+1. Đấu F103 ở mức 3,3 V với SWDIO4/SWCLK5/GND, nRST10 nếu sử dụng; ghi mã chip đầy đủ.
+2. Nghiệm thu P2/P4: scan/attach, RAM, halt/step/breakpoint rồi flash/verify đúng target.
+3. Khi có OLED/encoder, kiểm chứng hiển thị, số cạnh/nấc và debounce trên linh kiện thật.
+4. Kiểm tra mất Wi-Fi thực sự, lỗi target giữa giao dịch, phiên dài và F411 trước khi phát hành MVP.
 
-Các giai đoạn firmware tiếp theo sẽ được triển khai theo phạm vi và thứ tự đã thống nhất.
+P1 đã kiểm tra bộ nhớ/khởi động; P1a có code nhưng chưa nghiệm thu phần cứng.
+P3 đạt các bài thử trong [báo cáo tích hợp](09_integration_validation.md), còn bài thử mất AP
+và phiên dài. P2/P4 chưa nghiệm thu target, P5–P8 chưa hoàn thành.

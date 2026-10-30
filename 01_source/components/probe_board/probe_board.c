@@ -13,14 +13,59 @@
 #include <inttypes.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 #include "esp_chip_info.h"
 #include "esp_flash.h"
 #include "esp_heap_caps.h"
 #include "esp_log.h"
 #include "esp_psram.h"
+#include "sdkconfig.h"
 
 static const char probe_board_log_tag[] = "probe_board";
+
+/** @brief Reject pin overlap and pins reserved by the N16R8 board profile. */
+static esp_err_t probe_board_check_pins(void)
+{
+    const int pins[] = {
+        CONFIG_PROBE_SWDIO_GPIO,     CONFIG_PROBE_SWCLK_GPIO,     CONFIG_PROBE_NRST_GPIO,
+        CONFIG_PROBE_SWO_GPIO,
+#if CONFIG_PROBE_OLED_ENABLE
+        CONFIG_PROBE_OLED_SDA_GPIO,  CONFIG_PROBE_OLED_SCL_GPIO,
+#endif
+#if CONFIG_PROBE_ENCODER_ENABLE
+        CONFIG_PROBE_ENCODER_A_GPIO, CONFIG_PROBE_ENCODER_B_GPIO, CONFIG_PROBE_ENCODER_SW_GPIO,
+#endif
+    };
+    uint64_t used = UINT64_C(0);
+    esp_err_t result = ESP_OK;
+    for (size_t index = 0U; index < (sizeof(pins) / sizeof(pins[0])); ++index)
+    {
+        const int pin = pins[index];
+        if (pin >= 0)
+        {
+            /* Leave boot straps, SPI memory, USB, UART0 and reference LED untouched. */
+            const bool allowed = ((pin >= 1) && (pin <= 18) && (pin != 3)) ||
+                                 ((pin >= 38) && (pin <= 42)) || (pin == 47) || (pin == 48);
+            if (!allowed)
+            {
+                ESP_LOGE(probe_board_log_tag, "GPIO%d is reserved by the N16R8 profile", pin);
+                result = ESP_ERR_INVALID_ARG;
+            }
+            else
+            {
+                const uint64_t mask = UINT64_C(1) << (unsigned int)pin;
+                if ((used & mask) != UINT64_C(0))
+                {
+                    ESP_LOGE(probe_board_log_tag, "GPIO%d is assigned to multiple functions", pin);
+                    result = ESP_ERR_INVALID_ARG;
+                }
+                used |= mask;
+            }
+        }
+    }
+    return result;
+}
 
 /** @brief Read both flash sizes before comparing them with the board profile. */
 static esp_err_t probe_board_check_flash(void)
@@ -39,10 +84,9 @@ static esp_err_t probe_board_check_flash(void)
     {
         /* SDK-001: ESP-IDF logging macros are confined to task context. */
         ESP_LOGI(probe_board_log_tag,
-                 "Flash: physical %" PRIu32 " bytes, configured %" PRIu32 " bytes",
-                 physical_bytes, configured_bytes);
-        if ((physical_bytes != expected_flash_bytes) ||
-            (configured_bytes != physical_bytes))
+                 "Flash: physical %" PRIu32 " bytes, configured %" PRIu32 " bytes", physical_bytes,
+                 configured_bytes);
+        if ((physical_bytes != expected_flash_bytes) || (configured_bytes != physical_bytes))
         {
             ESP_LOGE(probe_board_log_tag, "Expected 16 MiB physical and configured flash");
             result = ESP_ERR_INVALID_SIZE;
@@ -101,6 +145,11 @@ esp_err_t probe_board_check(void)
     if (result == ESP_OK)
     {
         result = probe_board_check_psram();
+    }
+
+    if (result == ESP_OK)
+    {
+        result = probe_board_check_pins();
     }
 
     if (result == ESP_OK)

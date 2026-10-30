@@ -2,24 +2,30 @@
 
 ## 1. Phạm vi và mức kiểm chứng
 
-- Mã C do dự án viết trong `01_source/main` và `01_source/components` dùng **C17**.
+- Mã logic dùng **C17**. Adapter có header Xtensa/FreeRTOS dùng **GNU17** theo SDK-004;
+  component `probe_bmd` chứa upstream/shim được đánh giá riêng.
 - Mục tiêu hướng dẫn là **MISRA C:2025**; quy trình đối chiếu theo MISRA Compliance:2020.
 - Hiện áp dụng quy tắc dự án, compiler warnings, GCC static analyzer và review mã.
   Chưa có checker MISRA đầy đủ, guideline enforcement plan theo từng rule hoặc kết luận tuân thủ toàn bộ.
 - Doxygen là quy ước comment của dự án, không phải một định dạng comment do MISRA bắt buộc.
 - ESP-IDF và thư viện upstream được đánh giá riêng với mã tự viết; giữ nguyên giấy phép
-  và cấu hình build cần thiết của chúng. ESP-IDF v6.1 mặc định GNU23; C17 được áp dụng riêng cho target dự án.
+  và cấu hình build cần thiết của chúng. ESP-IDF v6.1 mặc định GNU23; dialect dự án áp dụng riêng cho target tự viết.
 
 ## 2. Ranh giới component
 
 ```text
 main/                         # Entry point và chính sách khởi động
 components/
-  probe_board/
-    include/probe_board.h     # API công khai
-    probe_board.c             # Kiểm tra phần cứng N16R8 qua ESP-IDF
-    CMakeLists.txt            # Dependency và cờ compiler của component
-cmake/project_options.cmake   # C17, cảnh báo và GCC analyzer cho mã dự án
+  probe_board/                # Profile N16R8, bộ nhớ và pin
+  probe_bmd/                  # Build adapter/shim cho upstream BMD
+  probe_debug/                # GDB transport và port SWD; một owner core 1
+  probe_network/              # AP/STA và NVS
+  probe_state/                # Snapshot đồng bộ giữa các task
+  probe_console/              # Provision và chẩn đoán UART
+  probe_oled/                 # SSD1306, I2C và renderer
+  probe_encoder/              # Input task và pure decoder
+  probe_local_ui/             # Menu và request cấu hình
+cmake/project_options.cmake   # C17/GNU17, cảnh báo và GCC analyzer
 ```
 
 - `main` ghép các component, chọn hành vi khi khởi động thất bại và khởi chạy dịch vụ.
@@ -27,8 +33,8 @@ cmake/project_options.cmake   # C17, cảnh báo và GCC analyzer cho mã dự �
 - Chỉ public header trong `include`; header nội bộ không được component khác truy cập.
 - Public dependency khai báo `REQUIRES`, dependency chỉ dùng nội bộ khai báo `PRIV_REQUIRES`.
 - Hàm/biến không nằm trong API dùng `static`; tránh dependency vòng và global có thể ghi từ nhiều module.
-- Tạo `local_ui`, SWD port, network và probe service khi triển khai chức năng thực tế;
-  không tạo module rỗng hoặc gom mọi chức năng vào một component tiện ích chung.
+- Public header trong `include`, port nội bộ trong `port`; upstream ở `external/blackmagic`.
+  Không sửa trực tiếp backend để che lỗi tích hợp; giữ adapter riêng để cập nhật có kiểm soát.
 
 ## 3. Quy tắc C của dự án
 
@@ -57,8 +63,8 @@ cmake/project_options.cmake   # C17, cảnh báo và GCC analyzer cho mã dự �
 - Hằng nội bộ có kiểu dùng `static const`, tên nêu ý nghĩa/đơn vị.
 - Indent 4 dấu cách, ngoặc khối Allman, mục tiêu tối đa 100 ký tự/dòng.
 - Include public header của module trước, sau đó thư viện C chuẩn và header dependency.
-- `.editorconfig` và `.clang-format` là cấu hình định dạng. Máy hiện tại chưa có
-  `clang-format`; không coi việc có file cấu hình là đã chạy kiểm tra formatter.
+- `.editorconfig` và `.clang-format` là cấu hình định dạng. `clang-format` 21.1.8
+  nằm trong Python environment cục bộ và dependency lock; đã chạy format/dry-run trên mã dự án.
 - Chỉ format mã dự án; không quét/sửa toàn bộ SDK hoặc dependency upstream.
 
 ## 5. Comment và tài liệu API
@@ -83,7 +89,7 @@ Comment ngoại lệ dùng mã hồ sơ, ví dụ `SDK-001`, để tra lại ph�
   và conversion/sign conversion trong `project_options.cmake`.
 - GCC analyzer bật mặc định cho target mã C dự án qua `PROBE_ENABLE_GCC_ANALYZER`.
   Đây là phân tích tổng quát của compiler, không phải checker MISRA.
-- Kiểm tra `compile_commands.json` để xác nhận mode C17/cờ kiểm tra có hiệu lực sau khi đổi build system.
+- Kiểm tra `compile_commands.json` để xác nhận C17/GNU17 và cờ kiểm tra có hiệu lực sau khi đổi build system.
 - Review API, đường lỗi, tài nguyên, đồng bộ và ngoại lệ mới; thêm bài thử có ý nghĩa cho logic mới.
 - Chạy bài thử phần cứng liên quan trước khi đánh dấu đã nghiệm thu chức năng.
 - Checker MISRA chuyên dụng sẽ được cấu hình theo phiên bản tiêu chuẩn và bản tài liệu được cấp phép

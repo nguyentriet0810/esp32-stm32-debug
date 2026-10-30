@@ -14,6 +14,7 @@
 | Firmware và cấu hình mặc định | Commit trực tiếp |
 | Tài liệu và script | Commit trực tiếp |
 | ESP-IDF | Submodule tại commit cụ thể |
+| Black Magic Debug | Submodule tại commit cụ thể, build adapter nằm trong components/probe_bmd |
 | Phiên bản công cụ và package Python | Lock file, constraints và manifest của SDK |
 | Compiler, GDB, CMake, Ninja, Python và venv | Có cục bộ trong `.tooling`, không push binary |
 | Build, cache, sdkconfig sinh ra, log | `.gitignore` |

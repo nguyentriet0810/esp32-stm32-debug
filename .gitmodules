@@ -1,3 +1,6 @@
 [submodule "esp-idf"]
 	path = 01_source/.tooling/esp-idf-v6.1
 	url = https://github.com/espressif/esp-idf.git
+[submodule "01_source/external/blackmagic"]
+	path = 01_source/external/blackmagic
+	url = https://codeberg.org/blackmagic-debug/blackmagic.git

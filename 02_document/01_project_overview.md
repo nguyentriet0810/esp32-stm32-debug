@@ -4,7 +4,7 @@
 
 Xây dựng probe debug đa dụng cho STM32, có thể debug qua Wi-Fi và mở rộng sang USB.
 Kiến trúc tham khảo: [MCUViewer-probe](https://github.com/klonyyy/MCUViewer-probe),
-sử dụng Black Magic Debug làm lõi xử lý target ở các mốc tiếp theo.
+sử dụng Black Magic Debug v2.1.0 làm lõi xử lý target, đã ghim bằng submodule.
 
 ## Nền tảng đã thống nhất
 
@@ -32,28 +32,29 @@ Giữ các chân debug của dự án mẫu và bổ sung OLED/encoder theo
 - `02_document`: yêu cầu, quyết định kỹ thuật, hướng dẫn và quy trình làm việc.
 - `README.md`: điểm bắt đầu của dự án.
 
-`01_source/components/probe_board` hiện đảm nhiệm kiểm tra phần cứng N16R8.
-`main` chỉ giữ entry point và chính sách khởi động. Các component tiếp theo được tạo
-khi có triển khai thực tế theo [quy chuẩn mã nguồn](06_coding_standard.md).
+`main` giữ entry point và chính sách khởi động. Các component riêng đảm nhiệm board,
+backend BMD, SWD/GDB, network, snapshot trạng thái, console, OLED, encoder và menu.
+Xem cây thư mục trong README và [quy chuẩn mã nguồn](06_coding_standard.md).
 
 ## Các mốc phát triển
 
 Kế hoạch chi tiết và điều kiện nghiệm thu nằm trong
-[Kế hoạch phát triển](04_development_plan.md), hiện là bản đề xuất để thống nhất.
+[Kế hoạch phát triển](04_development_plan.md), cập nhật theo kết quả thực hiện.
 
 - MVP v0.1: debug/nạp flash qua GDB và Wi-Fi, OLED/encoder để xem trạng thái và cấu hình probe,
   kiểm chứng trên các model STM32 đã chọn.
 - Bản v0.2: đọc RAM liên tục và giao thức MCUViewer.
 - Các mốc sau: SWO, USB/CMSIS-DAP và phần cứng mở rộng theo nhu cầu.
 
-Firmware nền đã build thành công; chưa nạp board để xác nhận runtime.
-Các chức năng debug và trace chưa triển khai. Danh sách STM32 hỗ trợ sẽ được kiểm tra
-theo driver và mã chip cụ thể.
+Firmware 0.1.0-dev1 đã chạy trên COM13, kết nối Wi-Fi và phục vụ GDB/TCP.
+SWD/backend đã tích hợp nhưng chưa nghiệm thu trên target STM32 thật.
+OLED/encoder đã có code, chưa có linh kiện để kiểm tra vật lý. Trace và MCUViewer
+acquisition chưa triển khai. [Báo cáo kiểm tra](09_integration_validation.md) ghi rõ phạm vi.
 
 ## Nguồn tham khảo và giấy phép
 
-Project nền hiện chưa sao chép mã firmware của MCUViewer-probe hoặc Black Magic Debug.
 Mã gốc dự án dùng GPL-3.0-or-later theo quyết định đã xác nhận, giữ hướng tích hợp Black Magic Debug.
-Khi tích hợp, giữ thông tin tác giả và giấy phép của từng dependency.
+Port SWD/platform/GDB transport được điều chỉnh từ MCUViewer-probe; giữ thông tin tác giả.
+Black Magic Debug giữ nguyên mã upstream trong submodule.
 ESP-IDF giữ nguyên giấy phép upstream trong submodule.
 Xem [thông báo dependency](08_third_party_notices.md).

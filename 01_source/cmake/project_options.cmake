@@ -6,6 +6,11 @@ include_guard(GLOBAL)
 option(PROBE_ENABLE_GCC_ANALYZER "Run GCC static analysis on project-owned C targets" ON)
 
 function(probe_apply_c_options target_name)
+    set(probe_c_dialect -std=c17)
+    if(ARGC GREATER 1 AND ARGV1 STREQUAL "SDK_ADAPTER")
+        # SDK-004: Xtensa/FreeRTOS public headers use the GNU asm keyword.
+        set(probe_c_dialect -std=gnu17)
+    endif()
     set_target_properties(${target_name} PROPERTIES
         C_STANDARD 17
         C_STANDARD_REQUIRED YES
@@ -17,7 +22,7 @@ function(probe_apply_c_options target_name)
     get_target_property(probe_sources ${target_name} SOURCES)
     foreach(probe_source IN LISTS probe_sources)
         if(probe_source MATCHES "\\.c$")
-            set_property(SOURCE "${probe_source}" APPEND PROPERTY COMPILE_OPTIONS -std=c17)
+            set_property(SOURCE "${probe_source}" APPEND PROPERTY COMPILE_OPTIONS ${probe_c_dialect})
         endif()
     endforeach()
 
