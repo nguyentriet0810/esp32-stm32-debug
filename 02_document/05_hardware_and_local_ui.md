@@ -1,6 +1,6 @@
 # Phần cứng và giao diện điều khiển tại probe
 
-Trạng thái: **đã có driver/menu; chưa có OLED/encoder hoặc STM32 đấu nối để nghiệm thu**.
+Trạng thái: **đã có driver/menu; đã chọn encoder rời theo ảnh, chưa nghiệm thu ngoại vi/target thật**.
 
 ## 1. Yêu cầu đã xác nhận
 
@@ -8,8 +8,9 @@ Trạng thái: **đã có driver/menu; chưa có OLED/encoder hoặc STM32 đấ
 - Giữ nhóm chân debug của dự án MCUViewer-probe tham khảo.
 - Thêm OLED 0,96 inch, I2C, **SSD1306 128×64** theo xác nhận của người dùng.
 - Thêm một rotary encoder để thao tác menu và điều chỉnh thông số khi cần.
-- Giao tiếp encoder được thiết kế theo A/B và một nút nhấn SW; model EC11/KY-040
-  và đặc tính detent/nút nhấn của linh kiện thực tế còn cần xác nhận.
+- Ngày 30/10/2026, người dùng chọn encoder cơ khí rời có nút nhấn theo ảnh đã cung cấp.
+  Hình dáng giống dòng EC11, với nhóm A/B/common và cặp tiếp điểm nút nhấn riêng.
+  Ảnh chưa cho thấy mã linh kiện nên chưa xác nhận hãng, model, pinout hoặc số xung/nấc.
 
 ## 2. Pin map mặc định trong firmware
 
@@ -26,7 +27,7 @@ Các số dưới đây là **số GPIO**, không phải số thứ tự chân t
 | OLED | SCL | GPIO9 | Bus I2C riêng cho giao diện |
 | Encoder | A / CLK | GPIO11 | Input quadrature A |
 | Encoder | B / DT | GPIO12 | Input quadrature B |
-| Encoder | SW | GPIO13 | Input nút nhấn, dự kiến active-low |
+| Encoder | SW | GPIO13 | Input nút nhấn active-low, đầu còn lại của công tắc nối GND |
 | Tham chiếu | Status LED | GPIO21 | Giữ dự phòng theo LED của dự án mẫu |
 | Tham chiếu | BOOT/setup | GPIO0 | Giữ nút BOOT có sẵn; không dùng cho encoder |
 | Nguồn | OLED VCC | 3V3 | Module phải hỗ trợ nguồn 3,3 V và mức I2C 3,3 V |
@@ -57,15 +58,42 @@ Thiết kế ban đầu dùng module I2C bốn chân. Nếu module có thêm RES
 Khởi đầu bus ở 100 kHz, đánh giá 400 kHz sau khi kiểm tra module, dây và pull-up.
 SDA/SCL cần pull-up về 3,3 V; kiểm tra điện trở đã có trên module trước khi bổ sung.
 
-### Rotary encoder
+### Rotary encoder rời đã chọn
 
-- EC11 rời: A/B nối GPIO11/12, chân common nối GND; hai tiếp điểm nút nhấn nối GPIO13/GND.
-- Module dạng KY-040: CLK/DT/SW nối GPIO11/12/13; GND nối GND và VCC dùng 3,3 V
-  nếu module đó hỗ trợ, để các pull-up của module cũng ở mức 3,3 V.
-- A/B/SW cần pull-up phù hợp. Cần kiểm chứng số cạnh mỗi nấc và chiều xoay theo linh kiện.
-- Firmware hiện polling mỗi 1 ms, decoder full-step: bốn cạnh hợp lệ về AB=3 là một nấc.
-  Loại chuyển hai bit đồng thời và bù bước khi dội ngược. Nút debounce 20 ms, giữ 750 ms.
-  Số cạnh/nấc và chiều xoay cần đối chiếu model encoder thực tế trước khi nghiệm thu.
+Đấu theo chức năng chân sau khi xác nhận pinout của linh kiện thực tế:
+
+| Chức năng chân encoder | Nối tới | Vai trò |
+|---|---|---|
+| A | GPIO11 | Pha A quadrature |
+| B | GPIO12 | Pha B quadrature |
+| C / common | GND | Chân chung của hai tiếp điểm xoay |
+| Một chân công tắc nhấn | GPIO13 | SW active-low |
+| Chân công tắc nhấn còn lại | GND | Nhấn sẽ kéo GPIO13 xuống thấp |
+
+Đây là sơ đồ theo chức năng, không phải thứ tự chân trái/phải nhìn từ ảnh. Không gán
+chân giữa là C hoặc xác định A/B chỉ từ góc chụp. Các tai kim loại lớn dùng để cố định
+vỏ không được dùng thay chân common khi chưa kiểm tra thông số linh kiện.
+
+Encoder tiếp điểm rời dùng cách đấu trên không cần chân VCC riêng. A/B/SW được kéo lên
+mức logic 3,3 V qua pull-up. Driver hiện đã bật pull-up nội cho GPIO11/12/13, phù hợp để
+bắt đầu thử trên dây ngắn; lựa chọn pull-up ngoài/lọc RC sẽ theo thông số và phép đo của
+linh kiện thực tế. Không đưa mức 5 V vào GPIO ESP32.
+
+Trước đấu dây, xác định nhóm A/B/C và cặp công tắc theo datasheet hoặc đo thông mạch khi
+linh kiện chưa nối nguồn. Cặp nút nhấn phải đóng khi ấn và mở khi thả. Xác nhận các tiếp
+điểm A–C, B–C thay đổi khi xoay; sau đấu nối kiểm tra chuỗi A/B và chiều xoay bằng log/phép đo.
+Nếu chiều menu ngược, có thể hoán đổi A/B khi đã tắt nguồn.
+
+Driver hiện polling mỗi 1 ms và dùng decoder full-step: bốn cạnh hợp lệ về AB=3 tạo một
+sự kiện menu. Nó loại chuyển hai bit đồng thời và bù bước khi dội ngược; nút debounce
+20 ms, giữ 750 ms. Đây là giả định của driver hiện tại, chưa phải thông số đã xác nhận
+của encoder trong ảnh.
+
+Số nấc cơ khí không nhất thiết bằng số chu kỳ A/B; mức A/B tại vị trí nấc cũng thay đổi
+theo model. Tài liệu EC11 của Alps Alpine nêu rõ khác biệt này. Khi thử cần bảo đảm mỗi
+nấc tạo đúng một bước menu, cả hai chiều. Nếu phải xoay hai nấc mới có một bước, hoặc
+đếm không ổn định tại nấc, cần đối chiếu waveform để điều chỉnh chế độ đếm/vị trí kết thúc
+chu kỳ; không mặc định tăng debounce sẽ giải quyết được. Chưa đổi decoder khi chưa có số đo.
 
 Nguồn nguyên mẫu sẽ được chốt theo DevKit và target thực tế. Không suy ra khả năng cấp
 nguồn cho S3/OLED từ một chân nguồn trên header debug của target.
@@ -159,3 +187,5 @@ Sau khi có debug, việc thao tác UI không gây lệnh target ngoài dự ki�
 - [Pin header DevKitC-1 tham chiếu](https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html).
 - [Ví dụ SSD1306 trong ESP-IDF v6.1](https://github.com/espressif/esp-idf/tree/v6.1/examples/peripherals/lcd/i2c_oled).
 - [Ví dụ encoder/PCNT trong ESP-IDF v6.1](https://github.com/espressif/esp-idf/tree/v6.1/examples/peripherals/pcnt/rotary_encoder).
+- [EC11 của Alps Alpine: ví dụ thông số, tín hiệu và khác biệt tại vị trí nấc](https://tech.alpsalpine.com/e/products/detail/EC11E09244AQ/).
+  Chỉ là tài liệu tham khảo cùng dạng linh kiện; không xác định encoder trong ảnh là model này.

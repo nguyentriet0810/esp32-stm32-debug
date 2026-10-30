@@ -288,12 +288,19 @@ Chức năng OTA cập nhật chính ESP32 chưa triển khai.
 
 ## 9. OLED, encoder và cấu hình cục bộ
 
+Encoder được chọn là dạng cơ khí rời có nút nhấn theo ảnh người dùng cung cấp ngày
+30/10/2026, hình dáng giống EC11. Mã linh kiện và pinout chưa được xác nhận. Cách đấu theo
+chức năng A/B/common và cặp công tắc được ghi trong [tài liệu phần cứng](05_hardware_and_local_ui.md).
+GPIO11/12/13 dùng pull-up nội, common và đầu còn lại của công tắc nối GND.
+
 Encoder được đọc mỗi 1 ms. Decoder nhận chuỗi quadrature A/B, quy đổi bốn cạnh hợp lệ
 trở về AB=3 thành một nấc và loại chuyển hai bit không hợp lệ. Nút nhấn debounce 20 ms;
 giữ 750 ms tạo sự kiện quay lại, không phát thêm click khi thả sau một lần giữ.
 
 Luồng sự kiện: GPIO → input task → queue → UI task → yêu cầu cấu hình dịch vụ debug.
 Các thông số cạnh/nấc và chiều xoay còn cần kiểm tra với linh kiện encoder thực tế.
+Chế độ bốn cạnh về AB=3 hiện tại là giả định của driver, cần điều chỉnh nếu waveform của
+model thực tế khác; chưa thể suy ra một nấc cơ khí tương ứng một sự kiện chỉ từ ảnh.
 
 Menu hiện có trang tổng quan và trang chọn clock 100/400 kHz, 1/2/4/8 MHz. Nhấn để vào
 menu/áp dụng, xoay chọn giá trị, giữ để quay lại. Clock UI/console chưa lưu NVS.

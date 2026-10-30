@@ -37,7 +37,7 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | Wi-Fi và GDB transport | Đã kết nối TRIET, kiểm tra RSP, checksum, một client và 20 lần reconnect |
 | SWD và Black Magic Debug | Đã tích hợp, scan không có target phục hồi được; chưa thử STM32 thật |
 | MCUViewer, SWO, USB probe | Chưa triển khai |
-| OLED SSD1306 và encoder | Có driver/menu, decoder đã test host; thiếu OLED không dừng probe; chưa có linh kiện |
+| OLED SSD1306 và encoder | Có driver/menu, decoder đã test host; thiếu OLED không dừng probe; encoder đã chọn dạng cơ khí rời, chưa nghiệm thu vật lý |
 
 ### Phần cứng người dùng đang có
 
@@ -56,11 +56,12 @@ Khả năng truy cập SWD và khả năng nạp flash được kiểm tra riên
 từ driver STM32C0 hoặc từ việc nhận diện được lõi ARM.
 Mã đầy đủ/package của từng chip, probe tham chiếu và dụng cụ đo hiện có sẽ được ghi ở P0.
 
-Giao diện cục bộ gồm OLED 0,96 inch I2C SSD1306 128×64 đã được xác nhận và rotary encoder
-A/B với nút nhấn được đề xuất. Pin map, menu và điều kiện nghiệm thu nằm trong
-[Phần cứng và giao diện tại probe](05_hardware_and_local_ui.md); model encoder còn cần xác nhận.
-Người dùng chưa mua OLED/encoder. Vì chưa có target đấu SWD, ma trận STM32 hiện chưa
-có model nào được đánh dấu đã nghiệm thu.
+Giao diện cục bộ gồm OLED 0,96 inch I2C SSD1306 128×64 và encoder cơ khí rời có nút nhấn
+theo ảnh người dùng chọn ngày 30/10/2026. Encoder có hình dáng dòng EC11; mã linh kiện,
+pinout và số cạnh/nấc chưa được xác nhận. Pin map, menu và điều kiện nghiệm thu nằm trong
+[Phần cứng và giao diện tại probe](05_hardware_and_local_ui.md).
+OLED/encoder chưa được xác nhận đấu nối để nghiệm thu. Vì chưa có target đấu SWD,
+ma trận STM32 hiện chưa có model nào được đánh dấu đã nghiệm thu.
 
 ## 3. Kiến trúc đề xuất
 

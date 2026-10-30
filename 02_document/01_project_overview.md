@@ -17,7 +17,7 @@ sử dụng Black Magic Debug v2.1.0 làm lõi xử lý target, đã ghim bằng
 | Framework | ESP-IDF v6.1, commit được ghim bằng submodule |
 | Giao tiếp target dự kiến | SWD; SWO và nRST bổ sung theo nhu cầu |
 | Màn hình cục bộ | OLED I2C 0,96 inch, SSD1306 128×64 |
-| Điều khiển cục bộ | Rotary encoder A/B, đề xuất có nút nhấn; model còn cần xác nhận |
+| Điều khiển cục bộ | Encoder cơ khí rời A/B/common và nút nhấn, theo ảnh người dùng chọn; hình dáng EC11, chưa xác nhận mã linh kiện |
 | Host phát triển hiện tại | Windows x64 |
 
 Board probe hiện có là DevKit ESP32-S3 N16R8 có chân đưa ra sẵn.
@@ -51,7 +51,8 @@ Kế hoạch chi tiết và điều kiện nghiệm thu nằm trong
 
 Firmware 0.1.0-dev1 đã chạy trên COM13, kết nối Wi-Fi và phục vụ GDB/TCP.
 SWD/backend đã tích hợp nhưng chưa nghiệm thu trên target STM32 thật.
-OLED/encoder đã có code, chưa có linh kiện để kiểm tra vật lý. Trace và MCUViewer
+OLED/encoder đã có code, chưa kiểm tra với ngoại vi thật. Encoder đã chọn dạng rời theo ảnh.
+Trace và MCUViewer
 acquisition chưa triển khai. [Báo cáo kiểm tra](09_integration_validation.md) ghi rõ phạm vi.
 
 ## Nguồn tham khảo và giấy phép
