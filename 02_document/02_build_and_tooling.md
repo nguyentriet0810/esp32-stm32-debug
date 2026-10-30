@@ -50,7 +50,7 @@ cd esp32-stm32-debug
 .\01_source\tools\idf.ps1 build
 ```
 
-Vì repo private, Git cần được đăng nhập bằng tài khoản được cấp quyền.
+Repo public, có thể clone qua HTTPS mà không cần đăng nhập GitHub.
 `-PythonHome` trỏ tới bộ cài Python 3.11 Windows x64 có `python.exe` và thư viện chuẩn;
 script sao chép runtime vào `.tooling/python`. Bản tham chiếu hiện dùng Python 3.11.2.
 Nếu đã khôi phục `.tooling/python`, có thể bỏ tham số này.

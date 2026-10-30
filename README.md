@@ -94,7 +94,7 @@ kết quả mong đợi. Hướng dẫn đấu nối nằm trong [tài liệu ph
 
 ## Quản lý phiên bản
 
-Repository: [nguyentriet0810/esp32-stm32-debug](https://github.com/nguyentriet0810/esp32-stm32-debug), chế độ **private**.
+Repository: [nguyentriet0810/esp32-stm32-debug](https://github.com/nguyentriet0810/esp32-stm32-debug), chế độ **public**.
 Git quản lý firmware, tài liệu, cấu hình mặc định, script và các phiên bản dependency.
 ESP-IDF được quản lý bằng submodule; build, cache và binary toolchain được `.gitignore`
 loại khỏi commit. Toàn bộ bộ công cụ vẫn nằm cục bộ dưới `01_source/.tooling`.

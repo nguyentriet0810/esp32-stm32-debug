@@ -27,7 +27,7 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | Hạng mục | Trạng thái |
 |---|---|
 | Cấu trúc `01_source`, `02_document`, `README.md` | Đã có |
-| Repo private và `.gitignore` | Đã có |
+| Repo public và `.gitignore` | Đã có |
 | ESP-IDF v6.1, Python, compiler và công cụ cục bộ | Đã có |
 | SDK submodule, lock file và hướng dẫn setup | Đã có |
 | Build firmware nền cho N16R8 | Đã thành công |

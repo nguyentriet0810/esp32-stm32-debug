@@ -5,7 +5,7 @@
 Copyright (C) 2026 Nguyen Hoang Minh Triet.
 Mã nguồn và tài liệu gốc của dự án được cấp phép **GPL-3.0-or-later**.
 Xem văn bản [GNU GPLv3](../LICENSE) và SPDX trên file mã nguồn để biết lựa chọn
-phiên bản 3 hoặc phiên bản mới hơn. Repo vẫn có quyền truy cập private như đã chốt.
+phiên bản 3 hoặc phiên bản mới hơn. Repo được công khai theo lựa chọn của chủ dự án.
 
 ## ESP-IDF và bộ công cụ
 

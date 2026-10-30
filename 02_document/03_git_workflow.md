@@ -3,7 +3,7 @@
 ## Repository
 
 - URL: https://github.com/nguyentriet0810/esp32-stm32-debug
-- Quyền truy cập: private.
+- Quyền truy cập: public.
 - Nhánh chính: `main`.
 - Root Git: thư mục gốc chứa `01_source`, `02_document` và `README.md`.
 
