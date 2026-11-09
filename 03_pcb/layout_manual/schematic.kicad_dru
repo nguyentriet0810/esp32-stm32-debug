@@ -1,0 +1,53 @@
+(version 1)
+# Manual layout, 2 copper layers, 1.6mm total / 35um copper.
+# Matched pad-centre paths include 1.6mm per via; component body gaps excluded.
+# SPI 50.146349mm; SWD 40.518175mm; I2C 25.042165mm; encoder 54.370920mm.
+# USB B6/B7 47.307341mm; USB A6/A7 54.349372mm.
+# USB nominal 0.50mm width / 0.20mm gap, 0.25mm outside GND clearance.
+# The 25mm uncoupled check includes all branch copper in the mirrored USB-C
+# contacts, ESD pin fanouts, and DNP capacitor reservations. Main paired copper
+# was checked independently. Fabricator must confirm actual impedance stackup.
+
+# Prototype routing profile. Rules apply to both copper layers.
+# Default is the project equivalent of the reference Connect class.
+(rule "connect width"
+    (condition "A.hasNetclass('Default')")
+    (constraint track_width (min 0.20mm) (opt 0.40mm) (max 0.80mm)))
+
+(rule "power width"
+    (condition "A.hasNetclass('Power')")
+    (constraint track_width (min 0.40mm) (opt 1.00mm) (max 1.80mm)))
+
+# Size rules apply to routed vias. Footprint pads use the board hole minimum.
+(rule "standard vias"
+    (condition "A.Type == 'Via'")
+    (constraint via_diameter (min 0.80mm) (opt 0.80mm) (max 0.80mm))
+    (constraint hole_size (min 0.40mm) (opt 0.40mm) (max 0.40mm)))
+
+# Later matching rules take priority, so Power vias use this range.
+(rule "power vias"
+    (condition "A.Type == 'Via' && A.hasNetclass('Power')")
+    (constraint via_diameter (min 0.80mm) (opt 1.00mm) (max 1.40mm))
+    (constraint hole_size (min 0.40mm) (opt 0.50mm) (max 0.70mm)))
+
+(rule "differential pairs"
+    (condition "A.inDiffPair('*')")
+    (constraint track_width (min 0.20mm) (opt 0.50mm) (max 0.60mm))
+    (constraint diff_pair_gap (min 0.20mm) (opt 0.20mm) (max 1.60mm))
+    (constraint diff_pair_uncoupled (max 25mm)))
+
+
+
+
+
+
+
+
+
+
+
+
+# Short USB-C mirrored-contact crossover on B.Cu; main pair stays on F.Cu.
+(rule "USB-C mirrored contact crossover"
+ (condition "A.inDiffPair('/USB_N') && A.Layer == 'B.Cu'")
+ (constraint diff_pair_gap (min 0.20mm) (opt 0.20mm) (max 4.50mm)))

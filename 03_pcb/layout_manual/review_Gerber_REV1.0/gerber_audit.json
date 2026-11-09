@@ -1,0 +1,156 @@
+{
+  "schematic-B_Cu.gbr": {
+    "objects_original": 381,
+    "objects_current": 381,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "ef3ceab117efff190c9e9346b1ad5e2ca2c7b899590526c51ca5df6ed6ea4473",
+    "aperture_draw_widths_mm": [
+      0.2,
+      0.25,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ]
+  },
+  "schematic-B_Mask.gbr": {
+    "objects_original": 41,
+    "objects_current": 41,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "266f262540f82ee57bfb4e947557615eb876ee0ba98cd01bd37af2af08574850",
+    "aperture_draw_widths_mm": []
+  },
+  "schematic-B_Paste.gbr": {
+    "objects_original": 0,
+    "objects_current": 0,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "ea99395023acb6401a42e791d57baa4eb562739e007c8ef5ce4d3294f54fb921",
+    "aperture_draw_widths_mm": []
+  },
+  "schematic-B_Silkscreen.gbr": {
+    "objects_original": 548,
+    "objects_current": 548,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "88840a77785d432f0546082db28d2fb573ac811d2c0a09b027ddb736f5cc845d",
+    "aperture_draw_widths_mm": [
+      0.2
+    ]
+  },
+  "schematic-Edge_Cuts.gbr": {
+    "objects_original": 9,
+    "objects_current": 9,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "d174c4f411a0dc7697cd9001d4e04979fe2e8e870d31c3bd3c52f174d3273f23",
+    "aperture_draw_widths_mm": [
+      0.05
+    ]
+  },
+  "schematic-F_Cu.gbr": {
+    "objects_original": 631,
+    "objects_current": 631,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "c1f756cc31c507dcc9993d4edd9767bfc5d9c65a69e923b0b596ea34b3dda81e",
+    "aperture_draw_widths_mm": [
+      0.2,
+      0.25,
+      0.4,
+      0.5,
+      0.6,
+      1.0
+    ]
+  },
+  "schematic-F_Mask.gbr": {
+    "objects_original": 222,
+    "objects_current": 222,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "86a5987861f2c768f1080cb9bf65ffa66c160e61ecccdd57de718de7cc98d921",
+    "aperture_draw_widths_mm": []
+  },
+  "schematic-F_Paste.gbr": {
+    "objects_original": 193,
+    "objects_current": 193,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "8bc3f14d740855527c3fe3dbc07a0d6365fe66d5407a57fc611fc1534fc5ad1f",
+    "aperture_draw_widths_mm": []
+  },
+  "schematic-F_Silkscreen.gbr": {
+    "objects_original": 2887,
+    "objects_current": 2887,
+    "primitives_removed": 0,
+    "primitives_added": 0,
+    "raster_difference_pixels": 0,
+    "original_sha256": "99439d86e5310ce860dc4fd96b22d31014a5387f4c67082dc2f5c7b4cf023d83",
+    "aperture_draw_widths_mm": [
+      0.12,
+      0.15,
+      0.2
+    ]
+  },
+  "drills": {
+    "schematic-NPTH.drl": {
+      "count": 8,
+      "round_holes": 8,
+      "slots": 0,
+      "diameter_counts": {
+        "0.65": 2,
+        "1.0": 2,
+        "3.2": 4
+      },
+      "same_as_current": true,
+      "original_sha256": "3f974b3f4124c92a21cf079550d6120cf40b5074e234d136b43a1fc4f5b43e5c"
+    },
+    "schematic-PTH.drl": {
+      "count": 158,
+      "round_holes": 152,
+      "slots": 6,
+      "diameter_counts": {
+        "0.4": 105,
+        "0.5": 20,
+        "1.0": 22,
+        "1.4": 5,
+        "0.6": 4,
+        "1.5": 2
+      },
+      "same_as_current": true,
+      "original_sha256": "30b9b948cf857186bda28c924832b880a47ca34d25f2d783d3690dbc7a4511b5"
+    }
+  },
+  "origin_mismatch": {
+    "gerber_outline_x_mm": [
+      100,
+      170
+    ],
+    "gerber_outline_y_mm": [
+      -110,
+      -50
+    ],
+    "drill_to_gerber_translation_mm": [
+      100,
+      -110
+    ],
+    "example_npth_drill": [
+      5,
+      5
+    ],
+    "example_matching_gerber": [
+      105,
+      -105
+    ]
+  }
+}

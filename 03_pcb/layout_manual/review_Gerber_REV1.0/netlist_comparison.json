@@ -1,0 +1,17 @@
+{
+  "checked_schematic_pin_connections": 207,
+  "missing_components_by_uuid": [],
+  "net_mismatches": [],
+  "renamed_references": {
+    "J1": "TYPE-C",
+    "J2": "UART",
+    "J3": "OLED",
+    "J4": "SWDIO",
+    "J5": "SD SCHOKET",
+    "J6": "ANTEN",
+    "SW2": "BOOT",
+    "SW3": "RESET",
+    "U1": "ESP32-S3",
+    "U2": "AMS1117"
+  }
+}

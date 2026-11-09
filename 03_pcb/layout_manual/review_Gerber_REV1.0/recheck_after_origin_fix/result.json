@@ -1,0 +1,120 @@
+{
+  "gerber_geometry": {
+    "schematic-B_Cu.gbr": {
+      "objects": 381,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-B_Mask.gbr": {
+      "objects": 41,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-B_Paste.gbr": {
+      "objects": 0,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-B_Silkscreen.gbr": {
+      "objects": 548,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-Edge_Cuts.gbr": {
+      "objects": 9,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-F_Cu.gbr": {
+      "objects": 631,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-F_Mask.gbr": {
+      "objects": 222,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-F_Paste.gbr": {
+      "objects": 193,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    },
+    "schematic-F_Silkscreen.gbr": {
+      "objects": 2887,
+      "same_geometry_as_saved_pcb": true,
+      "extra_primitives": 0,
+      "missing_primitives": 0
+    }
+  },
+  "drill_geometry": {
+    "schematic-NPTH.drl": {
+      "count": 8,
+      "round_holes": 8,
+      "slots": 0,
+      "same_as_saved_pcb": true
+    },
+    "schematic-PTH.drl": {
+      "count": 158,
+      "round_holes": 152,
+      "slots": 6,
+      "same_as_saved_pcb": true
+    }
+  },
+  "pth_alignment": {
+    "schematic-F_Cu": {
+      "checked_pth_positions": 158,
+      "maximum_center_error_mm": 0.0004999999999988347,
+      "mismatches": []
+    },
+    "schematic-B_Cu": {
+      "checked_pth_positions": 158,
+      "maximum_center_error_mm": 0.0004999999999988347,
+      "mismatches": []
+    }
+  },
+  "board_outline_mm": {
+    "x": [
+      0,
+      70
+    ],
+    "y": [
+      0,
+      60
+    ],
+    "size": [
+      70,
+      60
+    ]
+  },
+  "drc_errors": 0,
+  "drc_warning_types": {
+    "lib_footprint_mismatch": 6,
+    "silk_overlap": 2
+  },
+  "unconnected_items": 0,
+  "schematic_parity_warnings": 20,
+  "source_sha256": {
+    "schematic-B_Cu.gbr": "118fd0b0b75d7e7511e03473cdf74d4c3d76e3aca4022705822af99db39cf057",
+    "schematic-B_Mask.gbr": "261288f4b845a29083b2ef27127475311b158282ac9337f710aeb4a74e054534",
+    "schematic-B_Paste.gbr": "019cad86082f02cb89370a8ddfca1964061e3c17c79dbc49ac1951c116bd29ac",
+    "schematic-B_Silkscreen.gbr": "2826a5cb780a7789252e6cf9eb159be451d2aed112ebedf463a7d115150bbc7e",
+    "schematic-Edge_Cuts.gbr": "312cf6a285037320efbbe5086fdf137f819551a1e0d89f09f50c6df5a47f8efa",
+    "schematic-F_Cu.gbr": "51098b4090697566db2709d1ca22e3a1bc65be2b8a170a01434e2043bb71216d",
+    "schematic-F_Mask.gbr": "9f5c91306ce612a30b29f05ec446f05fc29ce53b6453ec6e96608e340f068b52",
+    "schematic-F_Paste.gbr": "bd56e41ca1a2da226362f60804fb912033ebddc58cf922a5871fd9bb4e0c18ba",
+    "schematic-F_Silkscreen.gbr": "592aa7e87f69b55c80d8e1cfd2024581a26b1038ee645485895e766f04c6f7ed",
+    "schematic-job.gbrjob": "16914087e3bb032ba01da4b01ce8caba4e38c54e8602ab28a046945723031d3b",
+    "schematic-NPTH.drl": "a4349c40d827ede16f28aa66d28003fe3430f823b2e5c843bc1032d03be0b68f",
+    "schematic-PTH.drl": "bddcc19b18c220cb3f252ca99ea465b5b39c11b34ac90ea99e11ec2f31475a06"
+  },
+  "source_content_preserved": true
+}

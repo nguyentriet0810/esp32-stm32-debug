@@ -10,12 +10,20 @@
 /01_source/.tooling/*
 !/01_source/.tooling/esp-idf-v6.1/
 
+# Local KiCad tools and their Python environments.
+/03_pcb/.tooling/
+
+# Local KiCad history and user interface state.
+.history/
+*.kicad_prl
+
 # Local credentials and editor state.
 .env
 .env.*
 !.env.example
 .vscode/
 .idea/
+.codex/
 
 # Generated artifacts.
 __pycache__/

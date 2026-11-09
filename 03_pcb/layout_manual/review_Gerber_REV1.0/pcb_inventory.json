@@ -1,0 +1,4504 @@
+{
+  "footprints": [
+    {
+      "reference": "R17",
+      "value": "330R",
+      "path": "/88166111-c05c-4d61-81c6-fef579d3a125",
+      "x": 110.0,
+      "y": 61.0
+    },
+    {
+      "reference": "C2",
+      "value": "22uF / 16V Ta",
+      "path": "/37ff1263-1d62-48c9-9fc2-6ec94d990998",
+      "x": 137.0,
+      "y": 75.0
+    },
+    {
+      "reference": "R5",
+      "value": "22R",
+      "path": "/12081619-cbb6-4262-91a1-b3721081c49c",
+      "x": 121.5,
+      "y": 66.48
+    },
+    {
+      "reference": "R12",
+      "value": "10k",
+      "path": "/865f2510-deef-42b1-b480-2cf3e60403f5",
+      "x": 121.5,
+      "y": 59.0
+    },
+    {
+      "reference": "R33",
+      "value": "0R",
+      "path": "/31bc54b5-c5ad-47f5-a1b2-41e1fbc7e370",
+      "x": 148.0,
+      "y": 83.5
+    },
+    {
+      "reference": "BOOT",
+      "value": "BOOT",
+      "path": "/f23643e1-f7d0-4729-8aa3-879aa44eb9c8",
+      "x": 153.5,
+      "y": 53.5
+    },
+    {
+      "reference": "TYPE-C",
+      "value": "USB-C Native",
+      "path": "/36b5a5ae-f7a2-42f6-868a-75d24d5755e8",
+      "x": 135.0,
+      "y": 106.0
+    },
+    {
+      "reference": "C1",
+      "value": "4.7uF",
+      "path": "/9a8d5c55-c2e4-43cf-b2c9-fd67c22cb268",
+      "x": 126.5,
+      "y": 75.5
+    },
+    {
+      "reference": "R38",
+      "value": "10k",
+      "path": "/6a8caf2c-41b4-4434-b789-9bff6fd3ca68",
+      "x": 143.0,
+      "y": 93.5
+    },
+    {
+      "reference": "R40",
+      "value": "10k",
+      "path": "/bf05f2eb-aaaa-469d-8388-81104107703a",
+      "x": 148.0,
+      "y": 102.75
+    },
+    {
+      "reference": "",
+      "value": "",
+      "path": "",
+      "x": 165.0,
+      "y": 105.0
+    },
+    {
+      "reference": "C10",
+      "value": "100nF",
+      "path": "/5f54485f-35aa-40f0-9324-aca0c965e4dd",
+      "x": 119.0,
+      "y": 90.5
+    },
+    {
+      "reference": "R24",
+      "value": "10k",
+      "path": "/e78129d1-e63a-4e94-9661-688dd1f2ce4a",
+      "x": 115.0,
+      "y": 90.5
+    },
+    {
+      "reference": "D7",
+      "value": "BAT54S",
+      "path": "/4a948177-ab95-4763-b700-354db656a3b4",
+      "x": 115.2,
+      "y": 67.0
+    },
+    {
+      "reference": "C15",
+      "value": "10uF",
+      "path": "/7cf18512-74ac-424d-9dca-5e02a5b2475d",
+      "x": 143.0,
+      "y": 96.25
+    },
+    {
+      "reference": "R14",
+      "value": "4.7k",
+      "path": "/7f8dec98-ece2-4ecf-bfe6-a075dca25e25",
+      "x": 136.8,
+      "y": 89.0
+    },
+    {
+      "reference": "C3",
+      "value": "10uF",
+      "path": "/2c58fbea-b485-4ec7-83bf-d2368f918a27",
+      "x": 121.5625,
+      "y": 54.0
+    },
+    {
+      "reference": "R41",
+      "value": "10k",
+      "path": "/deef7496-363f-49c5-927a-4f6a1cede04d",
+      "x": 148.0,
+      "y": 105.5
+    },
+    {
+      "reference": "R37",
+      "value": "10k",
+      "path": "/7b9742a2-25f6-4970-bfdf-1f4cb301e183",
+      "x": 143.0,
+      "y": 90.75
+    },
+    {
+      "reference": "Q2",
+      "value": "MMBT3904",
+      "path": "/0bf53b72-3b03-40e1-a3c4-e31a543aa62d",
+      "x": 161.0,
+      "y": 71.4375
+    },
+    {
+      "reference": "R26",
+      "value": "1k",
+      "path": "/1f4cfb85-545a-4bbf-9f99-99b6be1545a4",
+      "x": 123.0,
+      "y": 90.5
+    },
+    {
+      "reference": "",
+      "value": "",
+      "path": "",
+      "x": 105.0,
+      "y": 105.0
+    },
+    {
+      "reference": "R15",
+      "value": "4.7k",
+      "path": "/866c7bc4-c187-4503-b234-2150f8523661",
+      "x": 139.2,
+      "y": 89.0
+    },
+    {
+      "reference": "R11",
+      "value": "10k",
+      "path": "/6f6afb3d-dbb9-4abb-a990-35755ba8f2c3",
+      "x": 157.0,
+      "y": 78.0
+    },
+    {
+      "reference": "R2",
+      "value": "5.1k 1%",
+      "path": "/a0723600-be2f-41c5-a8fa-f7af287fc034",
+      "x": 139.0,
+      "y": 97.0
+    },
+    {
+      "reference": "OLED",
+      "value": "SSD1306 I2C",
+      "path": "/e2feaa84-db40-4fab-8c79-5164ff862fcf",
+      "x": 140.08,
+      "y": 84.0
+    },
+    {
+      "reference": "D5",
+      "value": "BAT54S",
+      "path": "/f24b1ba2-04ed-4d6f-bdc2-abd262ec3fa8",
+      "x": 115.2,
+      "y": 59.0
+    },
+    {
+      "reference": "R6",
+      "value": "22R",
+      "path": "/49e602a5-b2dd-496b-87a1-a70e8c1fe324",
+      "x": 121.5,
+      "y": 69.02
+    },
+    {
+      "reference": "R39",
+      "value": "10k",
+      "path": "/a20e0f81-7c28-470a-866b-a3f127013deb",
+      "x": 148.0,
+      "y": 100.0
+    },
+    {
+      "reference": "D8",
+      "value": "BAT54S",
+      "path": "/76bd062d-60a4-4a17-ae59-c0110d76322e",
+      "x": 115.5,
+      "y": 71.0
+    },
+    {
+      "reference": "D14",
+      "value": "SMAJ5.0A",
+      "path": "/fbab04d5-d818-4256-9d8e-6834e39b01d0",
+      "x": 114.0,
+      "y": 79.5
+    },
+    {
+      "reference": "SD SCHOKET",
+      "value": "JXTCONN TF-01A",
+      "path": "/90ac1de4-7b1d-48b8-996f-edfd75990bc5",
+      "x": 165.5,
+      "y": 91.25
+    },
+    {
+      "reference": "D3",
+      "value": "USBLC6-2SC6",
+      "path": "/b1998000-3103-4088-90dd-7d914ce68b8a",
+      "x": 135.5,
+      "y": 96.4
+    },
+    {
+      "reference": "R34",
+      "value": "22R",
+      "path": "/f4949e5d-a1da-4fa7-85ec-5fd441b5e355",
+      "x": 147.0,
+      "y": 65.5
+    },
+    {
+      "reference": "ANTEN",
+      "value": "SMA BWSMA-KWE-Z001",
+      "path": "/fbefdd70-aa73-473b-940a-f21757b5f4c3",
+      "x": 165.5,
+      "y": 64.5
+    },
+    {
+      "reference": "RESET",
+      "value": "RESET",
+      "path": "/dd2d84ff-4f0f-4379-9295-b500c94e2792",
+      "x": 153.5,
+      "y": 59.0
+    },
+    {
+      "reference": "",
+      "value": "",
+      "path": "",
+      "x": 105.0,
+      "y": 55.0
+    },
+    {
+      "reference": "R19",
+      "value": "330R",
+      "path": "/681ba74f-efeb-4d88-aa2a-425d9c859d4b",
+      "x": 110.0,
+      "y": 69.0
+    },
+    {
+      "reference": "C4",
+      "value": "100nF",
+      "path": "/e5d302d9-4886-4398-91b3-b1c1c55ef9be",
+      "x": 121.5625,
+      "y": 51.5
+    },
+    {
+      "reference": "ESP32-S3",
+      "value": "ESP32-S3-WROOM-1-N16R8",
+      "path": "/340a248f-53e5-4de1-8a51-61a2b2de696b",
+      "x": 135.1,
+      "y": 56.5
+    },
+    {
+      "reference": "R25",
+      "value": "10k",
+      "path": "/a848d166-c82f-4a43-93bc-a3d38ebd720f",
+      "x": 120.0,
+      "y": 85.0
+    },
+    {
+      "reference": "R1",
+      "value": "5.1k 1%",
+      "path": "/e8ec85c7-d913-484b-94c0-d37cd63e2e3f",
+      "x": 128.5,
+      "y": 92.0
+    },
+    {
+      "reference": "C9",
+      "value": "1uF",
+      "path": "/6c92aac5-fc93-4b2c-8674-b9c5ab1e22eb",
+      "x": 121.5,
+      "y": 56.5
+    },
+    {
+      "reference": "",
+      "value": "",
+      "path": "",
+      "x": 165.0,
+      "y": 55.0
+    },
+    {
+      "reference": "SW1",
+      "value": "EC11-style encoder",
+      "path": "/e6dce022-3a01-4f81-bb72-082e5e31f728",
+      "x": 111.75,
+      "y": 98.5
+    },
+    {
+      "reference": "C7",
+      "value": "10pF",
+      "path": "/c4b2fff4-cb95-4103-bcb1-9a88b34615a4",
+      "x": 121.5,
+      "y": 63.0
+    },
+    {
+      "reference": "D6",
+      "value": "BAT54S",
+      "path": "/bcf8f256-5fef-44dc-8a2c-ebcd6c0c43d7",
+      "x": 115.2,
+      "y": 63.0
+    },
+    {
+      "reference": "R23",
+      "value": "10k",
+      "path": "/24fb907e-f7ff-4a99-bc3a-26ca83bcb2ef",
+      "x": 111.0,
+      "y": 90.5
+    },
+    {
+      "reference": "D13",
+      "value": "SS34",
+      "path": "/8ed076c0-35d9-4931-8767-b037aff26907",
+      "x": 114.0,
+      "y": 83.5
+    },
+    {
+      "reference": "R18",
+      "value": "330R",
+      "path": "/5b6a38c9-99b6-403c-81d4-596ce209795a",
+      "x": 110.0,
+      "y": 65.0
+    },
+    {
+      "reference": "D1",
+      "value": "SS34",
+      "path": "/a8b6e023-a3de-4d1e-891a-42aec722a6b7",
+      "x": 131.5,
+      "y": 97.0
+    },
+    {
+      "reference": "R10",
+      "value": "10k",
+      "path": "/e78047e4-2942-428d-86f8-932826649518",
+      "x": 160.5,
+      "y": 78.0
+    },
+    {
+      "reference": "D12",
+      "value": "SMAJ5.0A",
+      "path": "/843f95f3-cecb-4993-a652-dbfc4ddb13ed",
+      "x": 107.5,
+      "y": 86.0
+    },
+    {
+      "reference": "C16",
+      "value": "100nF",
+      "path": "/f3278792-d78b-4ebb-8e83-6fcde21e9a81",
+      "x": 149.0,
+      "y": 93.0
+    },
+    {
+      "reference": "Q1",
+      "value": "MMBT3904",
+      "path": "/f8c3b86b-dd46-4f5c-83a0-03a8941510d2",
+      "x": 156.5,
+      "y": 71.4375
+    },
+    {
+      "reference": "C8",
+      "value": "10pF",
+      "path": "/92143ed4-e098-4982-8698-f206ea14ac30",
+      "x": 121.5,
+      "y": 74.6
+    },
+    {
+      "reference": "SWDIO",
+      "value": "",
+      "path": "/764703c1-b02c-4c6f-8517-c056fcd62fa0",
+      "x": 102.5,
+      "y": 72.3
+    },
+    {
+      "reference": "UART",
+      "value": "UART_3V3_TX_RX_GND_DTR_RTS",
+      "path": "/bbbbfe72-ef1e-48e3-b4d9-5f610fa0f18f",
+      "x": 165.225,
+      "y": 73.46
+    },
+    {
+      "reference": "AMS1117",
+      "value": "AMS1117-3.3",
+      "path": "/bbee27dc-1887-4640-b675-75b0cdc68b6f",
+      "x": 131.5,
+      "y": 76.0
+    },
+    {
+      "reference": "R13",
+      "value": "10k",
+      "path": "/48228491-8e1a-4584-815d-bed8be5fad75",
+      "x": 146.5,
+      "y": 71.0
+    },
+    {
+      "reference": "R20",
+      "value": "330R",
+      "path": "/cdff36e6-e16d-4d9c-a499-9b4c133ea000",
+      "x": 110.0,
+      "y": 73.0
+    },
+    {
+      "reference": "Q3",
+      "value": "AO3401A",
+      "path": "/b46062d6-36d7-400e-9b28-704a930ed317",
+      "x": 115.5,
+      "y": 75.0
+    },
+    {
+      "reference": "R36",
+      "value": "10k",
+      "path": "/a58dd5b0-47e3-4fc1-9190-2e86e8aa2741",
+      "x": 143.0,
+      "y": 88.0
+    }
+  ],
+  "pads": [
+    {
+      "reference": "R17",
+      "pad": "1",
+      "net": "/EXT_SWDIO",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 108.45,
+      "y": 61.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R17",
+      "pad": "2",
+      "net": "/SWDIO",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 111.55,
+      "y": 61.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C2",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.515,
+        2.39
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 137.0,
+      "y": 76.6275,
+      "attribute": 1
+    },
+    {
+      "reference": "C2",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.515,
+        2.39
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 137.0,
+      "y": 73.3725,
+      "attribute": 1
+    },
+    {
+      "reference": "R5",
+      "pad": "1",
+      "net": "/USB_N_N",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.95,
+      "y": 66.48,
+      "attribute": 1
+    },
+    {
+      "reference": "R5",
+      "pad": "2",
+      "net": "/ESP_USB_N",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.05,
+      "y": 66.48,
+      "attribute": 1
+    },
+    {
+      "reference": "R12",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.95,
+      "y": 59.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R12",
+      "pad": "2",
+      "net": "/ESP_EN",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.05,
+      "y": 59.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R33",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 146.45,
+      "y": 83.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R33",
+      "pad": "2",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 149.55,
+      "y": 83.5,
+      "attribute": 1
+    },
+    {
+      "reference": "BOOT",
+      "pad": "1",
+      "net": "/ESP_BOOT",
+      "size": [
+        1.25,
+        1.0
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 149.625,
+      "y": 53.5,
+      "attribute": 1
+    },
+    {
+      "reference": "BOOT",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.25,
+        1.0
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 157.375,
+      "y": 53.5,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.65,
+        0.65
+      ],
+      "drill": [
+        0.65,
+        0.65
+      ],
+      "x": 132.11,
+      "y": 103.395,
+      "attribute": 3
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.65,
+        0.65
+      ],
+      "drill": [
+        0.65,
+        0.65
+      ],
+      "x": 137.89,
+      "y": 103.395,
+      "attribute": 3
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A1",
+      "net": "/GND",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.8,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A4",
+      "net": "/VBUS_NATIVE",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 132.6,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A5",
+      "net": "/J1_CC1",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.75,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A6",
+      "net": "/USB_N_P",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 134.75,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A7",
+      "net": "/USB_N_N",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.25,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A8",
+      "net": "unconnected-(J1-SBU1-PadA8)",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 136.25,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A9",
+      "net": "/VBUS_NATIVE",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 137.4,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "A12",
+      "net": "/GND",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 138.2,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B1",
+      "net": "/GND",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 138.2,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B4",
+      "net": "/VBUS_NATIVE",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 137.4,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B5",
+      "net": "/J1_CC2",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 136.75,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B6",
+      "net": "/USB_N_P",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.75,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B7",
+      "net": "/USB_N_N",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 134.25,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B8",
+      "net": "unconnected-(J1-SBU2-PadB8)",
+      "size": [
+        0.3,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.25,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B9",
+      "net": "/VBUS_NATIVE",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 132.6,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "B12",
+      "net": "/GND",
+      "size": [
+        0.6,
+        1.24
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.8,
+      "y": 102.275,
+      "attribute": 1
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.0,
+        2.1
+      ],
+      "drill": [
+        0.6,
+        1.7
+      ],
+      "x": 130.68,
+      "y": 102.875,
+      "attribute": 0
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.0,
+        1.8
+      ],
+      "drill": [
+        0.6,
+        1.4
+      ],
+      "x": 130.68,
+      "y": 107.075,
+      "attribute": 0
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.0,
+        2.1
+      ],
+      "drill": [
+        0.6,
+        1.7
+      ],
+      "x": 139.32,
+      "y": 102.875,
+      "attribute": 0
+    },
+    {
+      "reference": "TYPE-C",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.0,
+        1.8
+      ],
+      "drill": [
+        0.6,
+        1.4
+      ],
+      "x": 139.32,
+      "y": 107.075,
+      "attribute": 0
+    },
+    {
+      "reference": "C1",
+      "pad": "1",
+      "net": "/VBUS_OR",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.5,
+      "y": 77.0625,
+      "attribute": 1
+    },
+    {
+      "reference": "C1",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.5,
+      "y": 73.9375,
+      "attribute": 1
+    },
+    {
+      "reference": "R38",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 141.45,
+      "y": 93.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R38",
+      "pad": "2",
+      "net": "/SD_MOSI",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 144.55,
+      "y": 93.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R40",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 146.45,
+      "y": 102.75,
+      "attribute": 1
+    },
+    {
+      "reference": "R40",
+      "pad": "2",
+      "net": "/SD_DAT1",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 149.55,
+      "y": 102.75,
+      "attribute": 1
+    },
+    {
+      "reference": "",
+      "pad": "",
+      "net": "",
+      "size": [
+        3.2,
+        3.2
+      ],
+      "drill": [
+        3.2,
+        3.2
+      ],
+      "x": 165.0,
+      "y": 105.0,
+      "attribute": 3
+    },
+    {
+      "reference": "C10",
+      "pad": "1",
+      "net": "/ENC_SW",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.0,
+      "y": 88.9375,
+      "attribute": 1
+    },
+    {
+      "reference": "C10",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.0,
+      "y": 92.0625,
+      "attribute": 1
+    },
+    {
+      "reference": "R24",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 115.0,
+      "y": 88.95,
+      "attribute": 1
+    },
+    {
+      "reference": "R24",
+      "pad": "2",
+      "net": "/ENC_B",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 115.0,
+      "y": 92.05,
+      "attribute": 1
+    },
+    {
+      "reference": "D7",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.1375,
+      "y": 67.95,
+      "attribute": 1
+    },
+    {
+      "reference": "D7",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.1375,
+      "y": 66.05,
+      "attribute": 1
+    },
+    {
+      "reference": "D7",
+      "pad": "3",
+      "net": "/SWO",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 114.2625,
+      "y": 67.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C15",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 144.5625,
+      "y": 96.25,
+      "attribute": 1
+    },
+    {
+      "reference": "C15",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 141.4375,
+      "y": 96.25,
+      "attribute": 1
+    },
+    {
+      "reference": "R14",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 136.8,
+      "y": 90.55,
+      "attribute": 1
+    },
+    {
+      "reference": "R14",
+      "pad": "2",
+      "net": "/OLED_SDA",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 136.8,
+      "y": 87.45,
+      "attribute": 1
+    },
+    {
+      "reference": "C3",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 120.0,
+      "y": 54.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C3",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.125,
+      "y": 54.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R41",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 146.45,
+      "y": 105.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R41",
+      "pad": "2",
+      "net": "/SD_DETECT_N",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 149.55,
+      "y": 105.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R37",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 141.45,
+      "y": 90.75,
+      "attribute": 1
+    },
+    {
+      "reference": "R37",
+      "pad": "2",
+      "net": "/SD_CS_N",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 144.55,
+      "y": 90.75,
+      "attribute": 1
+    },
+    {
+      "reference": "Q2",
+      "pad": "1",
+      "net": "Net-(Q2-B)",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 160.05,
+      "y": 72.375,
+      "attribute": 1
+    },
+    {
+      "reference": "Q2",
+      "pad": "2",
+      "net": "/UART_DTR_N",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 161.95,
+      "y": 72.375,
+      "attribute": 1
+    },
+    {
+      "reference": "Q2",
+      "pad": "3",
+      "net": "/ESP_BOOT",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 161.0,
+      "y": 70.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R26",
+      "pad": "1",
+      "net": "/ENC_CONTACT",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.0,
+      "y": 92.05,
+      "attribute": 1
+    },
+    {
+      "reference": "R26",
+      "pad": "2",
+      "net": "/ENC_SW",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.0,
+      "y": 88.95,
+      "attribute": 1
+    },
+    {
+      "reference": "",
+      "pad": "",
+      "net": "",
+      "size": [
+        3.2,
+        3.2
+      ],
+      "drill": [
+        3.2,
+        3.2
+      ],
+      "x": 105.0,
+      "y": 105.0,
+      "attribute": 3
+    },
+    {
+      "reference": "R15",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 139.2,
+      "y": 90.55,
+      "attribute": 1
+    },
+    {
+      "reference": "R15",
+      "pad": "2",
+      "net": "/OLED_SCL",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 139.2,
+      "y": 87.45,
+      "attribute": 1
+    },
+    {
+      "reference": "R11",
+      "pad": "1",
+      "net": "/UART_RTS_N",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 157.0,
+      "y": 79.55,
+      "attribute": 1
+    },
+    {
+      "reference": "R11",
+      "pad": "2",
+      "net": "Net-(Q2-B)",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 157.0,
+      "y": 76.45,
+      "attribute": 1
+    },
+    {
+      "reference": "R2",
+      "pad": "1",
+      "net": "/J1_CC2",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 139.0,
+      "y": 98.55,
+      "attribute": 1
+    },
+    {
+      "reference": "R2",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 139.0,
+      "y": 95.45,
+      "attribute": 1
+    },
+    {
+      "reference": "OLED",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 140.08,
+      "y": 84.0,
+      "attribute": 0
+    },
+    {
+      "reference": "OLED",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 137.54,
+      "y": 84.0,
+      "attribute": 0
+    },
+    {
+      "reference": "OLED",
+      "pad": "3",
+      "net": "/OLED_SCL",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 135.0,
+      "y": 84.0,
+      "attribute": 0
+    },
+    {
+      "reference": "OLED",
+      "pad": "4",
+      "net": "/OLED_SDA",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 132.46,
+      "y": 84.0,
+      "attribute": 0
+    },
+    {
+      "reference": "D5",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.1375,
+      "y": 59.95,
+      "attribute": 1
+    },
+    {
+      "reference": "D5",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.1375,
+      "y": 58.05,
+      "attribute": 1
+    },
+    {
+      "reference": "D5",
+      "pad": "3",
+      "net": "/SWDIO",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 114.2625,
+      "y": 59.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R6",
+      "pad": "1",
+      "net": "/USB_N_P",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.95,
+      "y": 69.02,
+      "attribute": 1
+    },
+    {
+      "reference": "R6",
+      "pad": "2",
+      "net": "/ESP_USB_P",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.05,
+      "y": 69.02,
+      "attribute": 1
+    },
+    {
+      "reference": "R39",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 146.45,
+      "y": 100.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R39",
+      "pad": "2",
+      "net": "/SD_MISO",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 149.55,
+      "y": 100.0,
+      "attribute": 1
+    },
+    {
+      "reference": "D8",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.4375,
+      "y": 71.95,
+      "attribute": 1
+    },
+    {
+      "reference": "D8",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.4375,
+      "y": 70.05,
+      "attribute": 1
+    },
+    {
+      "reference": "D8",
+      "pad": "3",
+      "net": "/TARGET_NRST",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 114.5625,
+      "y": 71.0,
+      "attribute": 1
+    },
+    {
+      "reference": "D14",
+      "pad": "1",
+      "net": "/J4_3V3_IN",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 112.0,
+      "y": 79.5,
+      "attribute": 1
+    },
+    {
+      "reference": "D14",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.0,
+      "y": 79.5,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "",
+      "net": "",
+      "size": [
+        1.0,
+        1.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 165.5,
+      "y": 96.2,
+      "attribute": 3
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "",
+      "net": "",
+      "size": [
+        1.0,
+        1.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 165.5,
+      "y": 88.2,
+      "attribute": 3
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "1",
+      "net": "/SD_DAT2",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 89.0,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "2",
+      "net": "/SD_CS_N",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 90.1,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "3",
+      "net": "/SD_MOSI",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 91.2,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "4",
+      "net": "/SD_3V3",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 92.3,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "5",
+      "net": "/SD_CLK",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 93.4,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "6",
+      "net": "/GND",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 94.5,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "7",
+      "net": "/SD_MISO",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 95.6,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "8",
+      "net": "/SD_DAT1",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 96.7,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "9",
+      "net": "/SD_DETECT_N",
+      "size": [
+        0.7,
+        1.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 154.5,
+      "y": 97.8,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.2,
+        1.5
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 155.5,
+      "y": 99.0,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.2,
+        2.2
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 165.1,
+      "y": 99.0,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.6,
+        1.5
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 155.5,
+      "y": 84.4,
+      "attribute": 1
+    },
+    {
+      "reference": "SD SCHOKET",
+      "pad": "SH",
+      "net": "/GND",
+      "size": [
+        1.2,
+        2.2
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 165.1,
+      "y": 83.5,
+      "attribute": 1
+    },
+    {
+      "reference": "D3",
+      "pad": "1",
+      "net": "/USB_N_N",
+      "size": [
+        1.325,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 134.55,
+      "y": 97.5375,
+      "attribute": 1
+    },
+    {
+      "reference": "D3",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.5,
+      "y": 97.5375,
+      "attribute": 1
+    },
+    {
+      "reference": "D3",
+      "pad": "3",
+      "net": "/USB_N_P",
+      "size": [
+        1.325,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 136.45,
+      "y": 97.5375,
+      "attribute": 1
+    },
+    {
+      "reference": "D3",
+      "pad": "4",
+      "net": "/USB_N_P",
+      "size": [
+        1.325,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 136.45,
+      "y": 95.2625,
+      "attribute": 1
+    },
+    {
+      "reference": "D3",
+      "pad": "5",
+      "net": "/VBUS_OR",
+      "size": [
+        1.325,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.5,
+      "y": 95.2625,
+      "attribute": 1
+    },
+    {
+      "reference": "D3",
+      "pad": "6",
+      "net": "/USB_N_N",
+      "size": [
+        1.325,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 134.55,
+      "y": 95.2625,
+      "attribute": 1
+    },
+    {
+      "reference": "R34",
+      "pad": "1",
+      "net": "/SD_SCK",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 147.0,
+      "y": 63.95,
+      "attribute": 1
+    },
+    {
+      "reference": "R34",
+      "pad": "2",
+      "net": "/SD_CLK",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 147.0,
+      "y": 67.05,
+      "attribute": 1
+    },
+    {
+      "reference": "ANTEN",
+      "pad": "1",
+      "net": "unconnected-(J6-In-Pad1)",
+      "size": [
+        2.3,
+        2.3
+      ],
+      "drill": [
+        1.4,
+        1.4
+      ],
+      "x": 165.5,
+      "y": 64.5,
+      "attribute": 0
+    },
+    {
+      "reference": "ANTEN",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        2.2,
+        2.2
+      ],
+      "drill": [
+        1.4,
+        1.4
+      ],
+      "x": 168.05,
+      "y": 61.95,
+      "attribute": 0
+    },
+    {
+      "reference": "ANTEN",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        2.2,
+        2.2
+      ],
+      "drill": [
+        1.4,
+        1.4
+      ],
+      "x": 162.95,
+      "y": 61.95,
+      "attribute": 0
+    },
+    {
+      "reference": "ANTEN",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        2.2,
+        2.2
+      ],
+      "drill": [
+        1.4,
+        1.4
+      ],
+      "x": 168.05,
+      "y": 67.05,
+      "attribute": 0
+    },
+    {
+      "reference": "ANTEN",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        2.2,
+        2.2
+      ],
+      "drill": [
+        1.4,
+        1.4
+      ],
+      "x": 162.95,
+      "y": 67.05,
+      "attribute": 0
+    },
+    {
+      "reference": "RESET",
+      "pad": "1",
+      "net": "/ESP_EN",
+      "size": [
+        1.25,
+        1.0
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 149.625,
+      "y": 59.0,
+      "attribute": 1
+    },
+    {
+      "reference": "RESET",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.25,
+        1.0
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 157.375,
+      "y": 59.0,
+      "attribute": 1
+    },
+    {
+      "reference": "",
+      "pad": "",
+      "net": "",
+      "size": [
+        3.2,
+        3.2
+      ],
+      "drill": [
+        3.2,
+        3.2
+      ],
+      "x": 105.0,
+      "y": 55.0,
+      "attribute": 3
+    },
+    {
+      "reference": "R19",
+      "pad": "1",
+      "net": "/EXT_SWO",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 108.45,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R19",
+      "pad": "2",
+      "net": "/SWO",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 111.55,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C4",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 120.0,
+      "y": 51.5,
+      "attribute": 1
+    },
+    {
+      "reference": "C4",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.125,
+      "y": 51.5,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 132.2,
+      "y": 57.56,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 132.2,
+      "y": 58.96,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 132.2,
+      "y": 60.36,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.6,
+      "y": 57.56,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.6,
+      "y": 58.96,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.6,
+      "y": 60.36,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.0,
+      "y": 57.56,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.0,
+      "y": 58.96,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "",
+      "net": "",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.0,
+      "y": 60.36,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 51.24,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 52.51,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "3",
+      "net": "/ESP_EN",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 53.78,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "4",
+      "net": "/SWDIO",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 55.05,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "5",
+      "net": "/SWCLK",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 56.32,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "6",
+      "net": "/SWO",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 57.59,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "7",
+      "net": "/TARGET_NRST",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 58.86,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "8",
+      "net": "/ENC_A",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 60.13,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "9",
+      "net": "/ENC_B",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 61.4,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "10",
+      "net": "/ENC_SW",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 62.67,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "11",
+      "net": "unconnected-(U1-IO18-Pad11)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 63.94,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "12",
+      "net": "/OLED_SDA",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 65.21,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "13",
+      "net": "/ESP_USB_N",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 66.48,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "14",
+      "net": "/ESP_USB_P",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.35,
+      "y": 67.75,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "15",
+      "net": "unconnected-(U1-IO3-Pad15)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 128.115,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "16",
+      "net": "unconnected-(U1-IO46-Pad16)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 129.385,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "17",
+      "net": "/OLED_SCL",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 130.655,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "18",
+      "net": "unconnected-(U1-IO10-Pad18)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.925,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "19",
+      "net": "unconnected-(U1-IO11-Pad19)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.195,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "20",
+      "net": "unconnected-(U1-IO12-Pad20)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 134.465,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "21",
+      "net": "unconnected-(U1-IO13-Pad21)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 135.735,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "22",
+      "net": "unconnected-(U1-IO14-Pad22)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 137.005,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "23",
+      "net": "unconnected-(U1-IO21-Pad23)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 138.275,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "24",
+      "net": "unconnected-(U1-IO47-Pad24)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 139.545,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "25",
+      "net": "unconnected-(U1-IO48-Pad25)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 140.815,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "26",
+      "net": "unconnected-(U1-IO45-Pad26)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 142.085,
+      "y": 69.0,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "27",
+      "net": "/ESP_BOOT",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 67.75,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "28",
+      "net": "unconnected-(U1-IO35-Pad28)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 66.48,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "29",
+      "net": "unconnected-(U1-IO36-Pad29)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 65.21,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "30",
+      "net": "unconnected-(U1-IO37-Pad30)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 63.94,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "31",
+      "net": "/SD_CS_N",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 62.67,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "32",
+      "net": "/SD_MOSI",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 61.4,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "33",
+      "net": "/SD_SCK",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 60.13,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "34",
+      "net": "/SD_MISO",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 58.86,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "35",
+      "net": "/SD_DETECT_N",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 57.59,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "36",
+      "net": "/UART_RX_HDR",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 56.32,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "37",
+      "net": "/UART_TX_HDR",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 55.05,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "38",
+      "net": "unconnected-(U1-IO2-Pad38)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 53.78,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "39",
+      "net": "unconnected-(U1-IO1-Pad39)",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 52.51,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "40",
+      "net": "/GND",
+      "size": [
+        1.5,
+        0.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 143.85,
+      "y": 51.24,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 132.2,
+      "y": 58.26,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 132.2,
+      "y": 59.66,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 132.9,
+      "y": 57.56,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 132.9,
+      "y": 58.96,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 132.9,
+      "y": 60.36,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 133.6,
+      "y": 58.26,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        3.9,
+        3.9
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.6,
+      "y": 58.96,
+      "attribute": 1
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 133.6,
+      "y": 59.66,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 134.3,
+      "y": 57.56,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 134.3,
+      "y": 58.96,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 134.3,
+      "y": 60.36,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 135.0,
+      "y": 58.26,
+      "attribute": 0
+    },
+    {
+      "reference": "ESP32-S3",
+      "pad": "41",
+      "net": "/GND",
+      "size": [
+        0.8,
+        0.8
+      ],
+      "drill": [
+        0.4,
+        0.4
+      ],
+      "x": 135.0,
+      "y": 59.66,
+      "attribute": 0
+    },
+    {
+      "reference": "R25",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 118.45,
+      "y": 85.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R25",
+      "pad": "2",
+      "net": "/ENC_SW",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 121.55,
+      "y": 85.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R1",
+      "pad": "1",
+      "net": "/J1_CC1",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 130.05,
+      "y": 92.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R1",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 126.95,
+      "y": 92.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C9",
+      "pad": "1",
+      "net": "/ESP_EN",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.0625,
+      "y": 56.5,
+      "attribute": 1
+    },
+    {
+      "reference": "C9",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.9375,
+      "y": 56.5,
+      "attribute": 1
+    },
+    {
+      "reference": "",
+      "pad": "",
+      "net": "",
+      "size": [
+        3.2,
+        3.2
+      ],
+      "drill": [
+        3.2,
+        3.2
+      ],
+      "x": 165.0,
+      "y": 55.0,
+      "attribute": 3
+    },
+    {
+      "reference": "SW1",
+      "pad": "A",
+      "net": "/ENC_A",
+      "size": [
+        2.0,
+        2.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 111.75,
+      "y": 98.5,
+      "attribute": 0
+    },
+    {
+      "reference": "SW1",
+      "pad": "B",
+      "net": "/ENC_B",
+      "size": [
+        2.0,
+        2.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 111.75,
+      "y": 103.5,
+      "attribute": 0
+    },
+    {
+      "reference": "SW1",
+      "pad": "C",
+      "net": "/GND",
+      "size": [
+        2.0,
+        2.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 111.75,
+      "y": 101.0,
+      "attribute": 0
+    },
+    {
+      "reference": "SW1",
+      "pad": "MP",
+      "net": "/GND",
+      "size": [
+        3.2,
+        2.0
+      ],
+      "drill": [
+        2.8,
+        1.5
+      ],
+      "x": 119.25,
+      "y": 95.4,
+      "attribute": 0
+    },
+    {
+      "reference": "SW1",
+      "pad": "MP",
+      "net": "/GND",
+      "size": [
+        3.2,
+        2.0
+      ],
+      "drill": [
+        2.8,
+        1.5
+      ],
+      "x": 119.25,
+      "y": 106.6,
+      "attribute": 0
+    },
+    {
+      "reference": "SW1",
+      "pad": "S1",
+      "net": "/ENC_CONTACT",
+      "size": [
+        2.0,
+        2.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 126.25,
+      "y": 103.5,
+      "attribute": 0
+    },
+    {
+      "reference": "SW1",
+      "pad": "S2",
+      "net": "/GND",
+      "size": [
+        2.0,
+        2.0
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 126.25,
+      "y": 98.5,
+      "attribute": 0
+    },
+    {
+      "reference": "C7",
+      "pad": "1",
+      "net": "/USB_N_N",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 119.9375,
+      "y": 63.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C7",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 123.0625,
+      "y": 63.0,
+      "attribute": 1
+    },
+    {
+      "reference": "D6",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.1375,
+      "y": 63.95,
+      "attribute": 1
+    },
+    {
+      "reference": "D6",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.1375,
+      "y": 62.05,
+      "attribute": 1
+    },
+    {
+      "reference": "D6",
+      "pad": "3",
+      "net": "/SWCLK",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 114.2625,
+      "y": 63.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R23",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 111.0,
+      "y": 88.95,
+      "attribute": 1
+    },
+    {
+      "reference": "R23",
+      "pad": "2",
+      "net": "/ENC_A",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 111.0,
+      "y": 92.05,
+      "attribute": 1
+    },
+    {
+      "reference": "D13",
+      "pad": "1",
+      "net": "/VBUS_OR",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.0,
+      "y": 83.5,
+      "attribute": 1
+    },
+    {
+      "reference": "D13",
+      "pad": "2",
+      "net": "/J4_5V_IN",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 112.0,
+      "y": 83.5,
+      "attribute": 1
+    },
+    {
+      "reference": "R18",
+      "pad": "1",
+      "net": "/EXT_SWCLK",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 108.45,
+      "y": 65.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R18",
+      "pad": "2",
+      "net": "/SWCLK",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 111.55,
+      "y": 65.0,
+      "attribute": 1
+    },
+    {
+      "reference": "D1",
+      "pad": "1",
+      "net": "/VBUS_OR",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.5,
+      "y": 95.0,
+      "attribute": 1
+    },
+    {
+      "reference": "D1",
+      "pad": "2",
+      "net": "/VBUS_NATIVE",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.5,
+      "y": 99.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R10",
+      "pad": "1",
+      "net": "/UART_DTR_N",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 160.5,
+      "y": 79.55,
+      "attribute": 1
+    },
+    {
+      "reference": "R10",
+      "pad": "2",
+      "net": "Net-(Q1-B)",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 160.5,
+      "y": 76.45,
+      "attribute": 1
+    },
+    {
+      "reference": "D12",
+      "pad": "1",
+      "net": "/J4_5V_IN",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 107.5,
+      "y": 84.0,
+      "attribute": 1
+    },
+    {
+      "reference": "D12",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        2.5,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 107.5,
+      "y": 88.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C16",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 150.5625,
+      "y": 93.0,
+      "attribute": 1
+    },
+    {
+      "reference": "C16",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 147.4375,
+      "y": 93.0,
+      "attribute": 1
+    },
+    {
+      "reference": "Q1",
+      "pad": "1",
+      "net": "Net-(Q1-B)",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 155.55,
+      "y": 72.375,
+      "attribute": 1
+    },
+    {
+      "reference": "Q1",
+      "pad": "2",
+      "net": "/UART_RTS_N",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 157.45,
+      "y": 72.375,
+      "attribute": 1
+    },
+    {
+      "reference": "Q1",
+      "pad": "3",
+      "net": "/ESP_EN",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 156.5,
+      "y": 70.5,
+      "attribute": 1
+    },
+    {
+      "reference": "C8",
+      "pad": "1",
+      "net": "/USB_N_P",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 121.5,
+      "y": 73.0375,
+      "attribute": 1
+    },
+    {
+      "reference": "C8",
+      "pad": "2",
+      "net": "/GND",
+      "size": [
+        1.325,
+        1.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 121.5,
+      "y": 76.1625,
+      "attribute": 1
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 72.3,
+      "attribute": 0
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "2",
+      "net": "/EXT_SWDIO",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 74.84,
+      "attribute": 0
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "3",
+      "net": "/EXT_SWCLK",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 77.38,
+      "attribute": 0
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "4",
+      "net": "/EXT_SWO",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 79.92,
+      "attribute": 0
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "5",
+      "net": "/EXT_NRST",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 82.46,
+      "attribute": 0
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "6",
+      "net": "/J4_3V3_IN",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 85.0,
+      "attribute": 0
+    },
+    {
+      "reference": "SWDIO",
+      "pad": "7",
+      "net": "/J4_5V_IN",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 102.5,
+      "y": 87.54,
+      "attribute": 0
+    },
+    {
+      "reference": "UART",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 165.225,
+      "y": 73.46,
+      "attribute": 0
+    },
+    {
+      "reference": "UART",
+      "pad": "2",
+      "net": "/UART_TX_HDR",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 167.765,
+      "y": 73.46,
+      "attribute": 0
+    },
+    {
+      "reference": "UART",
+      "pad": "3",
+      "net": "/UART_RX_HDR",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 165.225,
+      "y": 76.0,
+      "attribute": 0
+    },
+    {
+      "reference": "UART",
+      "pad": "4",
+      "net": "/GND",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 167.765,
+      "y": 76.0,
+      "attribute": 0
+    },
+    {
+      "reference": "UART",
+      "pad": "5",
+      "net": "/UART_DTR_N",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 165.225,
+      "y": 78.54,
+      "attribute": 0
+    },
+    {
+      "reference": "UART",
+      "pad": "6",
+      "net": "/UART_RTS_N",
+      "size": [
+        1.7,
+        1.7
+      ],
+      "drill": [
+        1.0,
+        1.0
+      ],
+      "x": 167.765,
+      "y": 78.54,
+      "attribute": 0
+    },
+    {
+      "reference": "AMS1117",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        2.0,
+        1.5
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 133.8,
+      "y": 72.85,
+      "attribute": 1
+    },
+    {
+      "reference": "AMS1117",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        2.0,
+        1.5
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.5,
+      "y": 72.85,
+      "attribute": 1
+    },
+    {
+      "reference": "AMS1117",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        2.0,
+        3.8
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 131.5,
+      "y": 79.15,
+      "attribute": 1
+    },
+    {
+      "reference": "AMS1117",
+      "pad": "3",
+      "net": "/VBUS_OR",
+      "size": [
+        2.0,
+        1.5
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 129.2,
+      "y": 72.85,
+      "attribute": 1
+    },
+    {
+      "reference": "R13",
+      "pad": "1",
+      "net": "/+3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 146.5,
+      "y": 72.55,
+      "attribute": 1
+    },
+    {
+      "reference": "R13",
+      "pad": "2",
+      "net": "/ESP_BOOT",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 146.5,
+      "y": 69.45,
+      "attribute": 1
+    },
+    {
+      "reference": "R20",
+      "pad": "1",
+      "net": "/EXT_NRST",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 108.45,
+      "y": 73.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R20",
+      "pad": "2",
+      "net": "/TARGET_NRST",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 111.55,
+      "y": 73.0,
+      "attribute": 1
+    },
+    {
+      "reference": "Q3",
+      "pad": "1",
+      "net": "/GND",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.4375,
+      "y": 75.95,
+      "attribute": 1
+    },
+    {
+      "reference": "Q3",
+      "pad": "2",
+      "net": "/+3V3",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 116.4375,
+      "y": 74.05,
+      "attribute": 1
+    },
+    {
+      "reference": "Q3",
+      "pad": "3",
+      "net": "/J4_3V3_IN",
+      "size": [
+        1.475,
+        0.6
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 114.5625,
+      "y": 75.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R36",
+      "pad": "1",
+      "net": "/SD_3V3",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 141.45,
+      "y": 88.0,
+      "attribute": 1
+    },
+    {
+      "reference": "R36",
+      "pad": "2",
+      "net": "/SD_DAT2",
+      "size": [
+        1.3,
+        1.75
+      ],
+      "drill": [
+        0.0,
+        0.0
+      ],
+      "x": 144.55,
+      "y": 88.0,
+      "attribute": 1
+    }
+  ],
+  "track_width_counts": {
+    "0.4": 302,
+    "0.6": 95,
+    "1.0": 40,
+    "0.25": 17,
+    "0.5": 9,
+    "0.2": 26,
+    "0.8": 9
+  },
+  "via_size_counts": {
+    "(0.8, 0.4)": 93,
+    "(1.0, 0.5)": 20
+  },
+  "min_component_annular_rings": [
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "ESP32-S3",
+      "41"
+    ],
+    [
+      0.2,
+      "SW1",
+      "MP"
+    ],
+    [
+      0.2,
+      "SW1",
+      "MP"
+    ],
+    [
+      0.2,
+      "TYPE-C",
+      "SH"
+    ],
+    [
+      0.2,
+      "TYPE-C",
+      "SH"
+    ],
+    [
+      0.2,
+      "TYPE-C",
+      "SH"
+    ],
+    [
+      0.2,
+      "TYPE-C",
+      "SH"
+    ]
+  ]
+}
