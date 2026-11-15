@@ -1,0 +1,57 @@
+[
+  {
+    "id": 45239,
+    "name": "USBLC6-2SC6 TVS DIODE 5.25V 17V SOT-23-6L",
+    "description": null,
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": "",
+    "slug": "usblc6-2sc6-tvs-diode-5-25v-17v-sot-23-6l",
+    "image_id": 609,
+    "inventory": 489,
+    "rohs": false,
+    "supplier_id": 17,
+    "price": 5040,
+    "category_id": 169,
+    "product_tag_id": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1790393863_ST_USBLC6-2SC6.pdf",
+    "sheetname": "ST USBLC6-2SC6",
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "17V Clamp 5A (8/20µs) Ipp Tvs Diode",
+    "comments_count": 0,
+    "package_quantity": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tag": null,
+    "product_tags": [
+      {
+        "id": 8445,
+        "name": "Chính hãng",
+        "product_tag_id": 7,
+        "background_color": "#f25220",
+        "text_color": "#000000",
+        "color": "#2b00ff"
+      }
+    ],
+    "prices": [
+      {
+        "id": 261875,
+        "product_id": 45239,
+        "quantity": 1,
+        "price": 5040
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

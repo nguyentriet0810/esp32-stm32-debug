@@ -1,0 +1,104 @@
+[
+  {
+    "id": 3592,
+    "name": "Nút Nhấn 3x6mm Cao 2.5mm 2 Chân SMD Đầu Trắng",
+    "description": null,
+    "unit": "Cái",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": null,
+    "slug": "nut-nhan-3x6mm-cao-2-5mm-2-chan-smd-dau-trang",
+    "image_id": 3427,
+    "inventory": 2559,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 570,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "desc_small": "12VDC 0.1A",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 221017,
+        "product_id": 3592,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 221018,
+        "product_id": 3592,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 221019,
+        "product_id": 3592,
+        "quantity": 500,
+        "price": 524
+      },
+      {
+        "id": 221020,
+        "product_id": 3592,
+        "quantity": 3000,
+        "price": 437
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  },
+  {
+    "id": 1976,
+    "name": "Nút Nhấn 3x6mm Cao 5mm 2 Chân SMD Đầu Trắng",
+    "description": "",
+    "unit": "Cái",
+    "slug": "nut-nhan-3x6mm-cao-5mm-2-chan-smd-dau-trang",
+    "image_id": 1916,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 50mA",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "price": 570,
+    "show_package": false,
+    "show_category_extra": false,
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [],
+    "product_tag": null,
+    "package_quantity": null
+  }
+]

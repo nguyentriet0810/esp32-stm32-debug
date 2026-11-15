@@ -1,0 +1,272 @@
+{
+  "checked_at": "2026-11-15T18:19:49.644352+07:00",
+  "supplier": "Thegioiic",
+  "method": "Live HTTP200 public supplier product/search pages; prices, inventories, MOQ extracted from embedded Next.js catalog payload. Dimensions visually checked against linked supplier drawings and native PCB pad geometry. No cart/order or PCB edits.",
+  "price_note": "VND per listed piece/strip; price and stock are a live snapshot and can change. Shipping/taxes not calculated.",
+  "source_pcb_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "exact_code_searches": [
+    {
+      "query": "GT-USB-7010ASV",
+      "url": "https://www.thegioiic.com/tim-kiem?q=GT-USB-7010ASV",
+      "products_found": 0,
+      "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\gtusb.html"
+    },
+    {
+      "query": "PTS636",
+      "url": "https://www.thegioiic.com/tim-kiem?q=PTS636",
+      "products_found": 0,
+      "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\pts636.html"
+    },
+    {
+      "query": "TF-01A",
+      "url": "https://www.thegioiic.com/tim-kiem?q=TF-01A",
+      "products_found": 0,
+      "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\tf01a.html"
+    },
+    {
+      "query": "BWSMA",
+      "url": "https://www.thegioiic.com/tim-kiem?q=BWSMA",
+      "products_found": 0,
+      "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\bwsma.html"
+    },
+    {
+      "query": "EC11",
+      "url": "https://www.thegioiic.com/tim-kiem?q=EC11",
+      "products_found": 4,
+      "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\ec11.html"
+    }
+  ],
+  "items": [
+    {
+      "refs": [
+        "TYPE-C"
+      ],
+      "required_quantity": 1,
+      "optional_dnp": false,
+      "native_mpn": "G-Switch GT-USB-7010ASV",
+      "native_footprint": "USB_C_Receptacle_G-Switch_GT-USB-7010ASV",
+      "exact_part_search_found": false,
+      "purchase_status": "needs_mechanical_confirmation",
+      "candidates": [
+        {
+          "title": "Cổng USB Cái 3.1 Type C 16 Chân Thẳng Dán SMD",
+          "supplier_code": "IC36686",
+          "url": "https://www.thegioiic.com/cong-usb-cai-3-1-type-c-16-chan-thang-dan-smd",
+          "price_vnd": 1710,
+          "inventory_live": 17,
+          "minimum_order_quantity": 1,
+          "multiples": 1,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "not_approved_drop_in",
+          "notes": "Live product is Shouhan TYPE-C 16PIN 2MD(073) per its PDF, not GT-USB-7010ASV. Contact-row concept and guide spacing 5.78mm are similar, but shell-slot/land dimensions must be checked against the already ordered board; 16 pins alone does not establish compatibility. Native guide holes: Ø0.65mm at ±2.89; shell columns ±4.32mm, fore/aft separation4.20mm; native slot drills0.6×1.7 and0.6×1.4mm.",
+          "datasheet_url": "https://file.thegioiic.com/upload/documents/1734591720_TYPE-C-16PIN.pdf",
+          "mechanical_evidence_urls": [
+            "https://file.thegioiic.com/upload/documents/1734591720_TYPE-C-16PIN.pdf"
+          ],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\usb16detail.html"
+        }
+      ]
+    },
+    {
+      "refs": [
+        "BOOT",
+        "RESET"
+      ],
+      "required_quantity": 2,
+      "optional_dnp": false,
+      "native_mpn": "C&K PTS636Sx25SMTRLFS footprint family",
+      "native_footprint": "SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+      "exact_part_search_found": false,
+      "purchase_status": "needs_mechanical_confirmation",
+      "candidates": [
+        {
+          "title": "Nút Nhấn 3x6mm Cao 2.5mm 2 Chân SMD Đầu Trắng",
+          "supplier_code": "IC3592",
+          "url": "https://www.thegioiic.com/nut-nhan-3x6mm-cao-2-5mm-2-chan-smd-dau-trang",
+          "price_vnd": 570,
+          "inventory_live": 2559,
+          "minimum_order_quantity": 10,
+          "multiples": 5,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "not_approved_drop_in",
+          "notes": "OEM top-actuated normally-open two-lead SMD switch, 6×3mm and2.5mm high. Native C&K body6×3.5mm; two native pads7.75mm centre spacing, each1.25×1.0mm. Supplier drawing shows8.0±0.1mm overall lead span and1.3mm lead width; this is a plausible hand-solder candidate, not a proven exact land-pattern match. MOQ10 even though only2 are needed.",
+          "datasheet_url": null,
+          "mechanical_evidence_urls": [
+            "https://file.thegioiic.com/upload/large/53121.jpg"
+          ],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\switchwhitedetail.html"
+        }
+      ]
+    },
+    {
+      "refs": [
+        "SW1"
+      ],
+      "required_quantity": 1,
+      "optional_dnp": false,
+      "native_mpn": "Alps EC11E switched vertical H20 footprint family",
+      "native_footprint": "RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
+      "exact_part_search_found": false,
+      "purchase_status": "candidate_not_approved_for_ordered_pcb",
+      "candidates": [
+        {
+          "title": "EC11 Rotary Encoder 20 Vị Trí, Trục D Dài 20mm",
+          "supplier_code": "IC19056",
+          "url": "https://www.thegioiic.com/ec11-rotary-encoder-20-vi-tri-truc-d-dai-20mm",
+          "price_vnd": 12540,
+          "inventory_live": 903,
+          "minimum_order_quantity": 1,
+          "multiples": 1,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "not_approved_drop_in",
+          "notes": "OEM 5-pin switched EC11, not an identified Alps EC11E MPN. The supplier mounting drawing shows12.5mm tab spacing, while the native PCB mounting-slot centres are11.2mm apart. Native mount slots2.8×1.5mm; A/C/B pitch2.5mm; switch row14.5mm away with5mm switch-pin spacing. Do not buy as a confirmed drop-in based only on EC11/20mm designation.",
+          "datasheet_url": null,
+          "mechanical_evidence_urls": [
+            "https://file.thegioiic.com/upload/large/50639.jpg"
+          ],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\ec11detail.html"
+        }
+      ]
+    },
+    {
+      "refs": [
+        "SD SOCKET"
+      ],
+      "required_quantity": 1,
+      "default_purchase_quantity": 0,
+      "optional_dnp": true,
+      "native_mpn": "JXTCONN TF-01A",
+      "native_footprint": "JXTCONN_TF-01A",
+      "exact_part_search_found": false,
+      "purchase_status": "optional_needs_mechanical_confirmation",
+      "candidates": [
+        {
+          "title": "MiSD-PP-9P-V1 Khay Thẻ Nhớ MicroSD 9 Chân Push-Push",
+          "supplier_code": "IC4602",
+          "url": "https://www.thegioiic.com/misd-pp-9p-v1-khay-the-nho-microsd-9-chan-push-push",
+          "price_vnd": 2508,
+          "inventory_live": 92,
+          "minimum_order_quantity": 1,
+          "multiples": 1,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "not_approved_drop_in",
+          "notes": "9-contact push-push candidate has1.1mm contact pitch and8mm guide spacing, similar to TF-01A, but it is not identified as JXTCONN TF-01A and no complete recommended PCB land pattern is supplied. Supplier body/overall dimensions14.5×16.12×2.45mm versus native TF-01A drawing body14.75×14.5mm, height1.8–2.0mm. Shell-tab positions and card-detect geometry must match; do not substitute merely because both are microSD9-pin. This PCB marks the SD assembly optional/DNP.",
+          "datasheet_url": null,
+          "mechanical_evidence_urls": [
+            "https://file.thegioiic.com/upload/large/4306.jpg"
+          ],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\sd9detail.html"
+        }
+      ]
+    },
+    {
+      "refs": [
+        "ANTEN"
+      ],
+      "required_quantity": 1,
+      "default_purchase_quantity": 0,
+      "optional_dnp": true,
+      "native_mpn": "BAT Wireless BWSMA-KWE-Z001",
+      "native_footprint": "SMA_BAT_Wireless_BWSMA-KWE-Z001",
+      "exact_part_search_found": false,
+      "purchase_status": "do_not_buy_for_rf_function_current_pcb",
+      "candidates": [
+        {
+          "title": "SMA-KWE-14.5 Đầu RF SMA Đực Dài 14.5mm Vuông Góc 90 Độ Hàn PCB",
+          "supplier_code": "IC5095",
+          "url": "https://www.thegioiic.com/sma-kwe-14-5-dau-rf-sma-duc-dai-14-5mm-vuong-goc-90-do-han-pcb",
+          "price_vnd": 11400,
+          "inventory_live": 325,
+          "minimum_order_quantity": 1,
+          "multiples": 1,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "not_approved_drop_in",
+          "notes": "Generic right-angle SMA-KWE-14.5 is not BWSMA-KWE-Z001 and no verified pin-pattern match was established. Native pattern has four ground holes at(±2.55,±2.55)mm around the centre pin, allØ1.4mm drills. ANTEN is DNP/NC in the present design; installing this connector does not create an external-antenna RF connection.",
+          "datasheet_url": null,
+          "mechanical_evidence_urls": [],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\smakwedetail.html"
+        }
+      ]
+    },
+    {
+      "refs": [
+        "OLED",
+        "SWDIO"
+      ],
+      "required_quantity": 2,
+      "mounted_pieces": [
+        {
+          "ref": "OLED",
+          "shape": "1×4",
+          "qty": 1
+        },
+        {
+          "ref": "SWDIO",
+          "shape": "1×7",
+          "qty": 1
+        }
+      ],
+      "purchase_quantity": 1,
+      "purchase_unit": "1×40 breakaway strip",
+      "optional_dnp": false,
+      "native_footprint": [
+        "PinHeader_1x04_P2.54mm_Vertical",
+        "PinHeader_1x07_P2.54mm_Vertical"
+      ],
+      "purchase_status": "standard_pitch_substitute",
+      "candidates": [
+        {
+          "title": "Hàng Rào Đực Đơn 2.54mm 40 Chân 1 Hàng Cao 11.2mm Xuyên Lỗ Chân Đồng Mạ Niken",
+          "supplier_code": "IC22930",
+          "url": "https://www.thegioiic.com/hang-rao-duc-don-2-54mm-40-chan-1-hang-cao-11-2mm-xuyen-lo-chan-dong-ma-niken",
+          "price_vnd": 1596,
+          "inventory_live": 2410,
+          "minimum_order_quantity": 1,
+          "multiples": 1,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "standard_pitch_substitute",
+          "notes": "Straight through-hole1×40 header,2.54mm pitch. Cut one4-pin section and one7-pin section from one strip; native drill1.0mm. Do not use SMD,2.0mm or1.27mm variants. Copper/Ni-plated contacts; supplier rates1A.",
+          "datasheet_url": null,
+          "mechanical_evidence_urls": [],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\header1detail.html"
+        }
+      ]
+    },
+    {
+      "refs": [
+        "UART"
+      ],
+      "required_quantity": 1,
+      "purchase_quantity": 1,
+      "purchase_unit": "2×40 breakaway strip",
+      "optional_dnp": false,
+      "native_footprint": "PinHeader_2x03_P2.54mm_Vertical",
+      "purchase_status": "standard_pitch_substitute",
+      "candidates": [
+        {
+          "title": "Hàng Rào Đực Đôi 2.54mm 80 Chân 2 Hàng Cao 11.2mm Xuyên Lỗ",
+          "supplier_code": "IC14868",
+          "url": "https://www.thegioiic.com/hang-rao-duc-doi-2-54mm-80-chan-2-hang-cao-11-2mm-xuyen-lo",
+          "price_vnd": 1938,
+          "inventory_live": 3120,
+          "minimum_order_quantity": 1,
+          "multiples": 1,
+          "manufacturer_code": null,
+          "supplier_brand": "OEM",
+          "compatibility_status": "standard_pitch_substitute",
+          "notes": "Straight through-hole two-row2×40 header,2.54mm pitch. Cut a2×3 section for UART; native2.54×2.54mm grid and1.0mm drills. Use the two-row part, not two arbitrary strips with a different row spacing.",
+          "datasheet_url": null,
+          "mechanical_evidence_urls": [],
+          "source_html": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\connector_sources\\header2detail.html"
+        }
+      ]
+    }
+  ],
+  "native_geometry_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\native_connectors_geometry.json"
+}

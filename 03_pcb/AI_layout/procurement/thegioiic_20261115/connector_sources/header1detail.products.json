@@ -1,0 +1,53 @@
+[
+  {
+    "id": 22930,
+    "name": "Hàng Rào Đực Đơn 2.54mm 40 Chân 1 Hàng Cao 11.2mm Xuyên Lỗ Chân Đồng Mạ Niken",
+    "description": "",
+    "unit": null,
+    "info": null,
+    "manufacturer_code": null,
+    "slug": "hang-rao-duc-don-2-54mm-40-chan-1-hang-cao-11-2mm-xuyen-lo-chan-dong-ma-niken",
+    "image_id": 43236,
+    "inventory": 2410,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 1596,
+    "category_id": 388,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "1x40 chân, đồng mạ niken",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 31,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 200
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 107620,
+        "product_id": 22930,
+        "quantity": 1,
+        "price": 1596
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

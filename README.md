@@ -21,6 +21,7 @@ esp32-stm32-debug/
 │   │   ├── probe_network/ # AP/STA và cấu hình Wi-Fi trong NVS
 │   │   ├── probe_state/   # Snapshot trạng thái giữa các task
 │   │   ├── probe_console/ # Lệnh chẩn đoán/provision qua UART
+│   │   ├── probe_sd/      # microSD SPI/FAT, mount và đọc/ghi có giới hạn
 │   │   ├── probe_oled/    # SSD1306 I2C và renderer chữ
 │   │   ├── probe_encoder/ # A/B, nút và decoder độc lập
 │   │   └── probe_local_ui/ # Menu, trạng thái và yêu cầu đổi SWD clock
@@ -54,15 +55,18 @@ Nếu bộ công cụ cục bộ đã được chuẩn bị:
 
 ```powershell
 .\01_source\tools\idf.ps1 --version
-.\01_source\tools\idf.ps1 build
+.\01_source\tools\idf.ps1 reconfigure build
 ```
 
 Firmware đầu ra: `01_source/build/stm32_wifi_probe.bin`.
 Hướng dẫn cho máy mới: [Build và bộ công cụ](02_document/02_build_and_tooling.md).
+Firmware hiện dùng pin cố định theo schematic revision C của PCB REV 1.0:
+SWDIO/SWCLK/SWO/nRST = GPIO4/5/6/7, OLED = GPIO8/9, encoder = GPIO15/16/17.
+microSD dùng SPI tại GPIO38–42, mount FAT tại `/sdcard`; thiếu thẻ không dừng probe.
 
 ## Trạng thái
 
-Firmware **0.1.0-dev1** đã được build và nạp lên ESP32-S3 N16R8 ở COM13.
+Firmware **0.1.0-dev1** đã từng được build và nạp lên ESP32-S3 N16R8 DevKit ở COM13.
 Đã kiểm tra flash 16 MB, PSRAM 8 MB, kết nối Wi-Fi TRIET và GDB/TCP trên phần cứng thật.
 Backend Black Magic Debug và SWD port đã tích hợp; thử quét khi chưa có target trả lỗi
 có kiểm soát. OLED/encoder đã có driver và menu, hoạt động thiếu OLED không gây dừng probe.
@@ -78,6 +82,9 @@ Xem [kết quả kiểm tra và giới hạn](02_document/09_integration_validat
 ```
 
 UART console 115200 baud: `help`, `status`, `pins`, `clock 400000`.
+Thẻ SD: `sd`, `sd mount`, `sd ls`, `sd read TEST.TXT`,
+`sd write TEST.TXT|Hello SD`, `sd unmount`. Tên file dạng 8.3 ở thư mục gốc;
+lệnh ghi tạo file mới, không ghi đè. Xem [hướng dẫn microSD](02_document/11_sd_storage.md).
 Cấu hình STA bằng `wifi <SSID>|<password>`; firmware lưu vào NVS và tự kết nối sau reset.
 Không ghi thông tin đăng nhập vào source hoặc file cấu hình Git. Lệnh `ap` hiển thị
 thông tin AP dự phòng trên console khi cần, IP mặc định `192.168.4.1`.

@@ -1,0 +1,84 @@
+[
+  {
+    "id": 7222,
+    "name": "Tụ Gốm 1206 100nF (0.1uF) 50V",
+    "description": null,
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": null,
+    "slug": "tu-gom-1206-100nf-0-1uf-50v",
+    "image_id": 1666,
+    "inventory": 5094,
+    "rohs": true,
+    "supplier_id": 326,
+    "price": 570,
+    "category_id": 146,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": true,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "desc_small": "10%, 1206 (3216 Metric)",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 44,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 4000
+    },
+    "supplier": {
+      "id": 326,
+      "name": "CCTC",
+      "slug": "cctc"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 145563,
+        "product_id": 7222,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 214897,
+        "product_id": 7222,
+        "quantity": 1000,
+        "price": 547
+      },
+      {
+        "id": 214898,
+        "product_id": 7222,
+        "quantity": 2000,
+        "price": 524
+      },
+      {
+        "id": 214899,
+        "product_id": 7222,
+        "quantity": 4000,
+        "price": 455
+      }
+    ],
+    "images": [],
+    "category_extras": [
+      {
+        "id": 6,
+        "name": "Cut Tape",
+        "price": null,
+        "image_id": 57948
+      },
+      {
+        "id": 7,
+        "name": "Reel",
+        "price": 10000,
+        "image_id": 57949
+      }
+    ],
+    "favorites": []
+  }
+]

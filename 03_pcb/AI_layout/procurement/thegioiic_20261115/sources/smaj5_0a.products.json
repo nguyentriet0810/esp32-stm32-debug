@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1316,
+    "name": "SMAJ5.0A",
+    "description": "",
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": "SMAJ5.0A",
+    "slug": "smaj5-0a",
+    "image_id": 30602,
+    "inventory": 7438,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 570,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557455_SMAJ5.0A.pdf",
+    "sheetname": "SMAJ5.0A",
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "desc_small": "DIODE TVS 5.0V 400W UNI 5% SMA",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "product_tags": [
+      {
+        "id": 3935,
+        "name": "China",
+        "product_tag_id": 8,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#007e9e"
+      }
+    ],
+    "prices": [
+      {
+        "id": 179315,
+        "product_id": 1316,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 179318,
+        "product_id": 1316,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 179319,
+        "product_id": 1316,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  },
+  {
+    "id": 1150,
+    "name": "SIM900D GSM GPRS Module",
+    "description": "",
+    "unit": "",
+    "slug": "sim900d-gsm-gprs-module",
+    "image_id": 26220,
+    "inventory": 7,
+    "rohs": true,
+    "supplier_id": 80,
+    "category_id": 210,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Quad-Band 850/900/1800/1900Mhz",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 39000,
+    "show_package": false,
+    "show_category_extra": false,
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 80,
+      "name": "Simcom",
+      "slug": "simcom"
+    },
+    "product_tags": [],
+    "prices": [],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 2164,
+    "name": "GPS L70 Module",
+    "description": "",
+    "unit": "",
+    "slug": "gps-l70-module",
+    "image_id": 2033,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 140,
+    "category_id": 467,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Size: 10.1x9.7x2.5 mm, giao tiếp UART, đóng gói: 18-pin SMD",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 185820,
+    "show_package": false,
+    "show_category_extra": false,
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 140,
+      "name": "Quectel",
+      "slug": "quectel"
+    },
+    "product_tags": [],
+    "prices": [],
+    "product_tag": null,
+    "package_quantity": null
+  }
+]

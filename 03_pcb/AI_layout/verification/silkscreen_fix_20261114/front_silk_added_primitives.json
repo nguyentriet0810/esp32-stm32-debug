@@ -1,0 +1,2072 @@
+[
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        14.750001
+      ],
+      [
+        68.454819,
+        14.892858
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        14.892858
+      ],
+      [
+        68.454819,
+        15.130953
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        15.130953
+      ],
+      [
+        68.4072,
+        15.226191
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        15.226191
+      ],
+      [
+        68.35958,
+        15.27381
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.35958,
+        15.27381
+      ],
+      [
+        68.264342,
+        15.321429
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.264342,
+        15.321429
+      ],
+      [
+        68.169104,
+        15.321429
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.169104,
+        15.321429
+      ],
+      [
+        68.073866,
+        15.27381
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.073866,
+        15.27381
+      ],
+      [
+        68.026247,
+        15.226191
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.026247,
+        15.226191
+      ],
+      [
+        67.978628,
+        15.130953
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.978628,
+        15.130953
+      ],
+      [
+        67.931009,
+        14.940477
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.931009,
+        14.940477
+      ],
+      [
+        67.88339,
+        14.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.88339,
+        14.845239
+      ],
+      [
+        67.835771,
+        14.79762
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.835771,
+        14.79762
+      ],
+      [
+        67.740533,
+        14.750001
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.740533,
+        14.750001
+      ],
+      [
+        67.645295,
+        14.750001
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.645295,
+        14.750001
+      ],
+      [
+        67.550057,
+        14.79762
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.550057,
+        14.79762
+      ],
+      [
+        67.502438,
+        14.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        14.845239
+      ],
+      [
+        67.454819,
+        14.940477
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        14.940477
+      ],
+      [
+        67.454819,
+        15.178572
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        15.178572
+      ],
+      [
+        67.502438,
+        15.321429
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        15.750001
+      ],
+      [
+        67.454819,
+        15.750001
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        15.750001
+      ],
+      [
+        67.454819,
+        15.988096
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        15.988096
+      ],
+      [
+        67.502438,
+        16.130953
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        16.130953
+      ],
+      [
+        67.597676,
+        16.226191
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.597676,
+        16.226191
+      ],
+      [
+        67.692914,
+        16.27381
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.692914,
+        16.27381
+      ],
+      [
+        67.88339,
+        16.321429
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.88339,
+        16.321429
+      ],
+      [
+        68.026247,
+        16.321429
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.026247,
+        16.321429
+      ],
+      [
+        68.216723,
+        16.27381
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.216723,
+        16.27381
+      ],
+      [
+        68.311961,
+        16.226191
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.311961,
+        16.226191
+      ],
+      [
+        68.4072,
+        16.130953
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        16.130953
+      ],
+      [
+        68.454819,
+        15.988096
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        15.988096
+      ],
+      [
+        68.454819,
+        15.750001
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        17.464287
+      ],
+      [
+        68.454819,
+        17.607144
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        17.607144
+      ],
+      [
+        68.454819,
+        17.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        17.845239
+      ],
+      [
+        68.4072,
+        17.940477
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        17.940477
+      ],
+      [
+        68.35958,
+        17.988096
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.35958,
+        17.988096
+      ],
+      [
+        68.264342,
+        18.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.264342,
+        18.035715
+      ],
+      [
+        68.169104,
+        18.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.169104,
+        18.035715
+      ],
+      [
+        68.073866,
+        17.988096
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.073866,
+        17.988096
+      ],
+      [
+        68.026247,
+        17.940477
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.026247,
+        17.940477
+      ],
+      [
+        67.978628,
+        17.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.978628,
+        17.845239
+      ],
+      [
+        67.931009,
+        17.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.931009,
+        17.654763
+      ],
+      [
+        67.88339,
+        17.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.88339,
+        17.559525
+      ],
+      [
+        67.835771,
+        17.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.835771,
+        17.511906
+      ],
+      [
+        67.740533,
+        17.464287
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.740533,
+        17.464287
+      ],
+      [
+        67.645295,
+        17.464287
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.645295,
+        17.464287
+      ],
+      [
+        67.550057,
+        17.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.550057,
+        17.511906
+      ],
+      [
+        67.502438,
+        17.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        17.559525
+      ],
+      [
+        67.454819,
+        17.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        17.654763
+      ],
+      [
+        67.454819,
+        17.892858
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        17.892858
+      ],
+      [
+        67.502438,
+        18.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        18.654763
+      ],
+      [
+        67.454819,
+        18.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        18.845239
+      ],
+      [
+        67.502438,
+        18.940477
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        18.940477
+      ],
+      [
+        67.597676,
+        19.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.597676,
+        19.035715
+      ],
+      [
+        67.788152,
+        19.083334
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.788152,
+        19.083334
+      ],
+      [
+        68.121485,
+        19.083334
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.121485,
+        19.083334
+      ],
+      [
+        68.311961,
+        19.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.311961,
+        19.035715
+      ],
+      [
+        68.4072,
+        18.940477
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        18.940477
+      ],
+      [
+        68.454819,
+        18.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        18.845239
+      ],
+      [
+        68.454819,
+        18.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        18.654763
+      ],
+      [
+        68.4072,
+        18.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        18.559525
+      ],
+      [
+        68.311961,
+        18.464287
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.311961,
+        18.464287
+      ],
+      [
+        68.121485,
+        18.416668
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.121485,
+        18.416668
+      ],
+      [
+        67.788152,
+        18.416668
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.788152,
+        18.416668
+      ],
+      [
+        67.597676,
+        18.464287
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.597676,
+        18.464287
+      ],
+      [
+        67.502438,
+        18.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        18.559525
+      ],
+      [
+        67.454819,
+        18.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.35958,
+        20.083334
+      ],
+      [
+        68.4072,
+        20.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        20.035715
+      ],
+      [
+        68.454819,
+        19.892858
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        19.892858
+      ],
+      [
+        68.454819,
+        19.79762
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        19.79762
+      ],
+      [
+        68.4072,
+        19.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.4072,
+        19.654763
+      ],
+      [
+        68.311961,
+        19.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.311961,
+        19.559525
+      ],
+      [
+        68.216723,
+        19.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.216723,
+        19.511906
+      ],
+      [
+        68.026247,
+        19.464287
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.026247,
+        19.464287
+      ],
+      [
+        67.88339,
+        19.464287
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.88339,
+        19.464287
+      ],
+      [
+        67.692914,
+        19.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.692914,
+        19.511906
+      ],
+      [
+        67.597676,
+        19.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.597676,
+        19.559525
+      ],
+      [
+        67.502438,
+        19.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        19.654763
+      ],
+      [
+        67.454819,
+        19.79762
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        19.79762
+      ],
+      [
+        67.454819,
+        19.892858
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        19.892858
+      ],
+      [
+        67.502438,
+        20.035715
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.502438,
+        20.035715
+      ],
+      [
+        67.550057,
+        20.083334
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        20.511906
+      ],
+      [
+        67.454819,
+        20.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        21.083334
+      ],
+      [
+        67.88339,
+        20.654763
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        21.083334
+      ],
+      [
+        68.026247,
+        20.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.931009,
+        21.511906
+      ],
+      [
+        67.931009,
+        21.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        21.988096
+      ],
+      [
+        68.454819,
+        21.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        21.511906
+      ],
+      [
+        67.454819,
+        21.511906
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        21.511906
+      ],
+      [
+        67.454819,
+        21.988096
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        67.454819,
+        22.273811
+      ],
+      [
+        67.454819,
+        22.845239
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  },
+  {
+    "kind": "line",
+    "points": [
+      [
+        68.454819,
+        22.559525
+      ],
+      [
+        67.454819,
+        22.559525
+      ]
+    ],
+    "aperture": [
+      "C",
+      [
+        0.15
+      ]
+    ],
+    "dark": true,
+    "net": null,
+    "component": null,
+    "pad": null
+  }
+]

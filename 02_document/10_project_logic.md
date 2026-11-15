@@ -76,6 +76,7 @@ Checksum/ACK của RSP và việc kiểm tra nội dung flash sau nạp là các
 | `probe_bmd` | Build adapter và libc/platform shim cho backend upstream được ghim bằng submodule |
 | `probe_state` | Cung cấp snapshot trạng thái nhất quán giữa các task |
 | `probe_console` | Nhận lệnh UART để xem trạng thái, cấu hình mạng và gửi yêu cầu clock |
+| `probe_sd` | Sở hữu SPI2, card/FAT và mutex cho SD; mount/list/read/write/unmount qua API có giới hạn |
 | `probe_encoder` | Đọc A/B/nút nhấn, giải mã thành sự kiện xoay/chọn/quay lại |
 | `probe_oled` | Sở hữu I2C/panel SSD1306 và framebuffer chữ trong task UI |
 | `probe_local_ui` | Xử lý menu, đọc snapshot và gửi yêu cầu cấu hình qua API dịch vụ debug |
@@ -94,11 +95,15 @@ Thứ tự trong [`app_main()`](../01_source/main/main.c):
 4. Tạo task sở hữu SWD trên core 1, khởi tạo GPIO/timing và nhận kết quả khởi tạo.
 5. Khi SWD khởi tạo thành công, tạo task TCP listener trên core 0.
 6. Tạo queue sự kiện, input encoder và task giao diện OLED.
-7. Tạo console UART để chẩn đoán và cấu hình.
+7. Khởi tạo detect SD, thử mount FAT nếu có thẻ. Không có thẻ hoặc lỗi mount là nonfatal.
+8. Tạo console UART để chẩn đoán và cấu hình, gồm nhóm lệnh `sd`.
 
 Application kiểm tra lỗi khởi tạo bằng `ESP_ERROR_CHECK`. Sai profile, lỗi storage hoặc
 lỗi thiết lập dịch vụ bắt buộc có thể làm dừng/reset khởi động. Thiếu OLED được xử lý
 không nghiêm trọng bên trong task UI nên không làm dừng probe.
+Tương tự, microSD là ngoại vi tùy chọn; `probe_sd` không format thẻ khi mount lỗi.
+Thao tác SD chạy trong task gọi (startup/console ở core 0), dùng SPI2 riêng và mutex;
+không gọi backend SWD. Cách dùng và giới hạn I/O nằm trong [tài liệu SD](11_sd_storage.md).
 
 Wi-Fi kết nối và DHCP diễn ra bất đồng bộ: log dịch vụ đã khởi chạy không đồng nghĩa
 STA đã có IP. Tương tự, TCP listener báo sẵn sàng sau khi bind/listen thực sự thành công.
@@ -291,7 +296,8 @@ Chức năng OTA cập nhật chính ESP32 chưa triển khai.
 Encoder được chọn là dạng cơ khí rời có nút nhấn theo ảnh người dùng cung cấp ngày
 30/10/2026, hình dáng giống EC11. Mã linh kiện và pinout chưa được xác nhận. Cách đấu theo
 chức năng A/B/common và cặp công tắc được ghi trong [tài liệu phần cứng](05_hardware_and_local_ui.md).
-GPIO11/12/13 dùng pull-up nội, common và đầu còn lại của công tắc nối GND.
+Encoder A/B/SW dùng GPIO15/16/17 theo schematic PCB revision C, có pull-up ngoài 10 kΩ
+và pull-up nội. Common và đầu còn lại của công tắc nối GND; SW qua R26/C10 lọc RC.
 
 Encoder được đọc mỗi 1 ms. Decoder nhận chuỗi quadrature A/B, quy đổi bốn cạnh hợp lệ
 trở về AB=3 thành một nấc và loại chuyển hai bit không hợp lệ. Nút nhấn debounce 20 ms;

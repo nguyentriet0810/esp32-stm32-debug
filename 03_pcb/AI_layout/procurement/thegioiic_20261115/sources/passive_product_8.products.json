@@ -1,0 +1,61 @@
+[
+  {
+    "id": 28120,
+    "name": "Tụ Tantalum 22uF 16V 1411 T491B226K016AT",
+    "description": null,
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": null,
+    "slug": "tu-tantalum-22uf-16v-1411-t491b226k016at",
+    "image_id": 35313,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "price": 17100,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": true,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "comments_count": 0,
+    "package_quantity": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121435,
+        "product_id": 28120,
+        "quantity": 1,
+        "price": 17100
+      }
+    ],
+    "images": [],
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "price": null,
+        "image_id": null
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "price": 20000,
+        "image_id": null
+      }
+    ],
+    "favorites": []
+  }
+]

@@ -1,0 +1,188 @@
+{
+  "product": {
+    "id": 2794,
+    "name": "Tụ Gốm 1206 10uF 16V",
+    "description": "",
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": null,
+    "slug": "tu-gom-1206-10uf-16v",
+    "image_id": 1666,
+    "inventory": 1675,
+    "rohs": true,
+    "supplier_id": 4,
+    "price": 1140,
+    "category_id": 146,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": true,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "10%, 1206 (3216 Metric)",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 43,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 2000
+    },
+    "supplier": {
+      "id": 4,
+      "name": "Samsung",
+      "slug": "samsung"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 7961,
+        "product_id": 2794,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 222908,
+        "product_id": 2794,
+        "quantity": 100,
+        "price": 1083
+      },
+      {
+        "id": 222909,
+        "product_id": 2794,
+        "quantity": 500,
+        "price": 1026
+      },
+      {
+        "id": 222910,
+        "product_id": 2794,
+        "quantity": 2000,
+        "price": 872
+      }
+    ],
+    "images": [],
+    "category_extras": [
+      {
+        "id": 6,
+        "name": "Cut Tape",
+        "price": null,
+        "image_id": 57948
+      },
+      {
+        "id": 7,
+        "name": "Reel",
+        "price": 10000,
+        "image_id": 57949
+      }
+    ],
+    "favorites": []
+  },
+  "product_tabs": [],
+  "crumbs": [
+    {
+      "id": 3,
+      "name": "Linh Kiện Điện Tử Thụ Động",
+      "parent_id": 0,
+      "level": 1,
+      "slug": "linh-kien-dien-tu-thu-dong"
+    },
+    {
+      "id": 138,
+      "name": "Tụ Điện",
+      "parent_id": 3,
+      "level": 2,
+      "slug": "tu-dien"
+    },
+    {
+      "id": 146,
+      "name": "Tụ Gốm Dán SMD",
+      "parent_id": 138,
+      "level": 3,
+      "slug": "tu-gom-dan-smd"
+    }
+  ],
+  "product_properties": [
+    {
+      "id": 14,
+      "name": "Điện áp",
+      "value": "16V",
+      "sorted": 3
+    },
+    {
+      "id": 6681,
+      "name": "Kiểu đóng gói",
+      "value": "1206 (3216M)",
+      "sorted": 4
+    },
+    {
+      "id": 5805,
+      "name": "Điện dung",
+      "value": "10 uF",
+      "sorted": 2
+    },
+    {
+      "id": 23605,
+      "name": "Loại",
+      "value": "Đơn",
+      "sorted": 5
+    },
+    {
+      "id": 23563,
+      "name": "Kiểu chân",
+      "value": "Dán bề mặt",
+      "sorted": 6
+    },
+    {
+      "id": 23565,
+      "name": "Sai số",
+      "value": "±10 %",
+      "sorted": 7
+    },
+    {
+      "id": 23573,
+      "name": "Cách gắn mạch",
+      "value": "Hàn",
+      "sorted": 8
+    },
+    {
+      "id": 23596,
+      "name": "Kích thước",
+      "value": "3.2 x 1.6 x 1.27mm",
+      "sorted": 9
+    },
+    {
+      "id": 23597,
+      "name": "Chiều dài",
+      "value": "3.2 mm",
+      "sorted": 10
+    },
+    {
+      "id": 23598,
+      "name": "Chiều rộng",
+      "value": "1.6 mm",
+      "sorted": 11
+    },
+    {
+      "id": 23599,
+      "name": "Chiều cao",
+      "value": "1.27 mm",
+      "sorted": 12
+    },
+    {
+      "id": 23578,
+      "name": "Nhiệt độ min",
+      "value": "-55 °C",
+      "sorted": 13
+    },
+    {
+      "id": 23579,
+      "name": "Nhiệt độ max",
+      "value": "+125 °C",
+      "sorted": 14
+    }
+  ]
+}

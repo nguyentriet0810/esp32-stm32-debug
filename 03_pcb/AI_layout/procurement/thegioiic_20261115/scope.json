@@ -1,0 +1,6 @@
+{
+  "updated_date": "2026-11-15",
+  "excluded_by_user": ["SSD1306 OLED module", "rotary encoder", "all headers"],
+  "excluded_pcb_references": ["OLED", "SW1", "SWDIO", "UART"],
+  "note": "Exclude these finished modules/connectors from procurement only. Keep their associated resistors, capacitors, protection components, and all PCB geometry unchanged."
+}

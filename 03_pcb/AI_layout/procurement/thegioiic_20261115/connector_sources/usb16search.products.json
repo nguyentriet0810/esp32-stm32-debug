@@ -1,0 +1,310 @@
+[
+  {
+    "id": 43618,
+    "name": "Nguồn Adapter 5.1V 3A Đầu USB Type C Cho Raspberry Pi 4, SKU: 16973",
+    "description": null,
+    "unit": "Cái",
+    "slug": "nguon-adapter-5-1v-3a-dau-usb-type-c-cho-raspberry-pi-4-sku-16973",
+    "image_id": 63524,
+    "inventory": 27,
+    "rohs": true,
+    "supplier_id": 152,
+    "category_id": 335,
+    "product_tag_id": null,
+    "sheetfile": "",
+    "desc_small": "Vào: 100-240VAC, công suất ngõ ra: 15.3W, cáp dài 1.5m",
+    "sheetname": "",
+    "manufacturer_code": "",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 425220,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 152,
+      "name": "Waveshare",
+      "slug": "waveshare"
+    },
+    "product_tags": [
+      {
+        "id": 8334,
+        "name": "Chính hãng",
+        "product_tag_id": 7,
+        "background_color": "#f25220",
+        "text_color": "#000000",
+        "color": "#2b00ff"
+      }
+    ],
+    "prices": [
+      {
+        "id": 259659,
+        "product_id": 43618,
+        "quantity": 1,
+        "price": 425220
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 42344,
+    "name": "Arduino Nano V3 ATMEGA168 CH340 5V 12Mhz USB Type C",
+    "description": null,
+    "unit": "Cái",
+    "slug": "arduino-nano-v3-atmega168-ch340-5v-12mhz-usb-type-c",
+    "image_id": 65491,
+    "inventory": 25,
+    "rohs": true,
+    "supplier_id": 118,
+    "category_id": 430,
+    "product_tag_id": null,
+    "sheetfile": "",
+    "desc_small": "Nguồn vào: 6-12VDC, giao tiếp UART, ngõ ra: 5V/800mA, 3.3V/180mA",
+    "sheetname": "",
+    "manufacturer_code": "",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 80000,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 118,
+      "name": "Arduino",
+      "slug": "arduino"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 251088,
+        "product_id": 42344,
+        "quantity": 1,
+        "price": 80000
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 36686,
+    "name": "Cổng USB Cái 3.1 Type C 16 Chân Thẳng Dán SMD",
+    "description": null,
+    "unit": "Cái",
+    "slug": "cong-usb-cai-3-1-type-c-16-chan-thang-dan-smd",
+    "image_id": 53002,
+    "inventory": 17,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 856,
+    "product_tag_id": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734591720_TYPE-C-16PIN.pdf",
+    "desc_small": "Dòng điện định mức: 5A",
+    "sheetname": "Datasheet",
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 1710,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 190405,
+        "product_id": 36686,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 203093,
+        "product_id": 36686,
+        "quantity": 100,
+        "price": 1596
+      },
+      {
+        "id": 203094,
+        "product_id": 36686,
+        "quantity": 500,
+        "price": 1482
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 53,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1000
+    }
+  },
+  {
+    "id": 34569,
+    "name": "Mạch Sạc Pin 18650 4 Viên 4S-2A USB Type C 3-6V Sang 16.8V",
+    "description": null,
+    "unit": "",
+    "slug": "mach-sac-pin-18650-4-vien-4s-2a-usb-type-c-3-6v-sang-16-8v",
+    "image_id": 46341,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 543,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Điện áp cấp: 3-6V (Khuyên dùng 3.7V, 5V), Điện áp sạc: 16.8V",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 17100,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 153433,
+        "product_id": 34569,
+        "quantity": 1,
+        "price": 17100
+      },
+      {
+        "id": 204434,
+        "product_id": 34569,
+        "quantity": 20,
+        "price": 16872
+      },
+      {
+        "id": 204435,
+        "product_id": 34569,
+        "quantity": 50,
+        "price": 16644
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 40223,
+    "name": "SW3516 Mạch Sạc Nhanh 6-35V Ngõ Ra USB, Type C 24W",
+    "description": null,
+    "unit": "Cái",
+    "slug": "sw3516-mach-sac-nhanh-6-35v-ngo-ra-usb-type-c-24w",
+    "image_id": 59060,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 543,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Nguồn: 6-35VDC, không hỗ trợ sạc nhanh OPPO VOOC và sạc nhanh OnePlus DASH",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 57000,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 238998,
+        "product_id": 40223,
+        "quantity": 1,
+        "price": 57000
+      },
+      {
+        "id": 250352,
+        "product_id": 40223,
+        "quantity": 10,
+        "price": 55860
+      },
+      {
+        "id": 250353,
+        "product_id": 40223,
+        "quantity": 20,
+        "price": 54720
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 42379,
+    "name": "Cổng USB Cái Đôi Type C 16 Chân Cong 90 Độ",
+    "description": null,
+    "unit": "",
+    "slug": "cong-usb-cai-doi-type-c-16-chan-cong-90-do",
+    "image_id": 61974,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 856,
+    "product_tag_id": null,
+    "sheetfile": "",
+    "desc_small": "30VAC 1A",
+    "sheetname": "",
+    "manufacturer_code": "",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 60420,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 251348,
+        "product_id": 42379,
+        "quantity": 1,
+        "price": 60420
+      },
+      {
+        "id": 251560,
+        "product_id": 42379,
+        "quantity": 10,
+        "price": 59280
+      },
+      {
+        "id": 251561,
+        "product_id": 42379,
+        "quantity": 20,
+        "price": 58140
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  }
+]

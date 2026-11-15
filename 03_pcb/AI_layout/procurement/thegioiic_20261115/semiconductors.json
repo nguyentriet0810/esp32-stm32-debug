@@ -1,0 +1,357 @@
+{
+  "checked_on": "2026-11-15",
+  "timezone": "Asia/Bangkok",
+  "scope": "1 AI_layout board, semiconductors only; read-only retailer research; no cart/order/PCB edits",
+  "price_and_stock_evidence": "Live public Next.js page data downloaded 18:10-18:15 +07, not search-engine cached prices. Prices/stock can change; product minimums included.",
+  "items": [
+    {
+      "bom_value": "AMS1117-3.3",
+      "references": [
+        "AMS1117"
+      ],
+      "quantity_per_board": 1,
+      "required_package": "SOT-223-3, tab pin 2",
+      "match_status": "exact_electrical_and_package",
+      "pinout": "1=GND; 2/tab=VOUT; 3=VIN",
+      "offers": [
+        {
+          "title": "AMS1117-3.3V IC Ổn Áp 3.3V 1A SOT-223",
+          "url": "https://www.thegioiic.com/ams1117-3-3v-ic-on-ap-3-3v-1a-sot-223",
+          "retailer_code": "IC1025",
+          "manufacturer_code": "AMS1117-3.3V",
+          "retailer_brand": "AMS",
+          "unit_price_vnd": 3990,
+          "inventory_units": 2430,
+          "minimum_order_quantity": 1,
+          "order_multiple": 1,
+          "price_breaks": [
+            {
+              "id": 2527,
+              "product_id": 1025,
+              "quantity": 1,
+              "price": 3990
+            },
+            {
+              "id": 208564,
+              "product_id": 1025,
+              "quantity": 100,
+              "price": 3876
+            },
+            {
+              "id": 208565,
+              "product_id": 1025,
+              "quantity": 500,
+              "price": 3762
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1740385794_AMS1117.pdf",
+          "live_retrieved_local": "2026-11-15T18:10:24+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\ams1117.products.json",
+          "minimum_purchase_for_one_board": 1,
+          "minimum_purchase_line_total_vnd": 3990
+        }
+      ],
+      "notes": "Chọn phiên bản 3.3V cố định, không chọn ADJ/5V/TO-252. C2 22uF tantalum được giữ nguyên như PCB."
+    },
+    {
+      "bom_value": "MMBT3904",
+      "references": [
+        "Q1",
+        "Q2"
+      ],
+      "quantity_per_board": 2,
+      "required_package": "SOT-23",
+      "match_status": "exact_electrical_and_package",
+      "pinout": "1=B; 2=E; 3=C",
+      "offers": [
+        {
+          "title": "MMBT3904-1AM Transistor NPN 40V 0.2A 3 Chân SOT-23",
+          "url": "https://www.thegioiic.com/mmbt3904-1am-transistor-npn-40v-0-2a-3-chan-sot-23",
+          "retailer_code": "IC1337",
+          "manufacturer_code": "MMBT3904",
+          "retailer_brand": "OEM",
+          "unit_price_vnd": 399,
+          "inventory_units": 9502,
+          "minimum_order_quantity": 20,
+          "order_multiple": 10,
+          "price_breaks": [
+            {
+              "id": 206909,
+              "product_id": 1337,
+              "quantity": 1,
+              "price": 399
+            },
+            {
+              "id": 206910,
+              "product_id": 1337,
+              "quantity": 500,
+              "price": 376
+            },
+            {
+              "id": 206911,
+              "product_id": 1337,
+              "quantity": 1000,
+              "price": 353
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1734592101_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--MMBT3904.pdf",
+          "live_retrieved_local": "2026-11-15T18:13:23+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\mmbt3904.products.json",
+          "minimum_purchase_for_one_board": 20,
+          "minimum_purchase_line_total_vnd": 7980
+        }
+      ],
+      "notes": "Mã 1AM phù hợp datasheet Jiangsu gắn trên trang; nhà bán lẻ ghi OEM/China. Không thay bằng 2N3904 TO-92."
+    },
+    {
+      "bom_value": "AO3401A",
+      "references": [
+        "Q3"
+      ],
+      "quantity_per_board": 1,
+      "required_package": "SOT-23",
+      "match_status": "exact_electrical_and_package",
+      "pinout": "1=G; 2=S; 3=D",
+      "offers": [
+        {
+          "title": "AO3401A MOSFET Kênh P 30V 4A SOT23",
+          "url": "https://www.thegioiic.com/ao3401a-mosfet-kenh-p-30v-4a-sot23",
+          "retailer_code": "IC11258",
+          "manufacturer_code": "AO3401A",
+          "retailer_brand": "Alpha & Omega Semicon",
+          "unit_price_vnd": 2772,
+          "inventory_units": 3344,
+          "minimum_order_quantity": 1,
+          "order_multiple": 1,
+          "price_breaks": [
+            {
+              "id": 173658,
+              "product_id": 11258,
+              "quantity": 1,
+              "price": 2772
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1736213009_Alpha---Omega-Semicon-AO3401A_C15127.pdf",
+          "live_retrieved_local": "2026-11-15T18:11:27+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\ao3401a.products.json",
+          "minimum_purchase_for_one_board": 1,
+          "minimum_purchase_line_total_vnd": 2772
+        }
+      ],
+      "notes": "P-channel, đúng AO3401A; không chọn AO3400A N-channel."
+    },
+    {
+      "bom_value": "BAT54S",
+      "references": [
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "quantity_per_board": 4,
+      "required_package": "SOT-23, dual SERIES Schottky",
+      "match_status": "not_found_in_own_site_search",
+      "pinout": "1=anode diode1; 2=cathode diode2; 3=series midpoint",
+      "offers": [],
+      "search_url": "https://www.thegioiic.com/tim-kiem?q=BAT54S",
+      "search_number_of_items": 0,
+      "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\search_bat54s.rsc.txt",
+      "notes": "Tìm kiếm trực tiếp BAT54S trả 0; danh mục Schottky61 và arrays9 không có mã S. BAT54C/Common Cathode và BAT54A/Common Anode không tương thích, không mua thay."
+    },
+    {
+      "bom_value": "SS34",
+      "references": [
+        "D1",
+        "D13"
+      ],
+      "quantity_per_board": 2,
+      "required_package": "DO-214AC / SMA",
+      "match_status": "exact_electrical_and_package",
+      "pinout": "1=K cathode (đầu có vạch); 2=A anode",
+      "offers": [
+        {
+          "title": "SS34 SMA Diode Schottky 3A",
+          "url": "https://www.thegioiic.com/ss34-sma-diode-schottky-3a",
+          "retailer_code": "IC2529",
+          "manufacturer_code": "SS34",
+          "retailer_brand": "OEM",
+          "unit_price_vnd": 570,
+          "inventory_units": 18128,
+          "minimum_order_quantity": 10,
+          "order_multiple": 5,
+          "price_breaks": [
+            {
+              "id": 222657,
+              "product_id": 2529,
+              "quantity": 1,
+              "price": 570
+            },
+            {
+              "id": 222658,
+              "product_id": 2529,
+              "quantity": 100,
+              "price": 547
+            },
+            {
+              "id": 222659,
+              "product_id": 2529,
+              "quantity": 500,
+              "price": 524
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1740544899_SS34_SMA.pdf",
+          "live_retrieved_local": "2026-11-15T18:11:27+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\ss34_sma.products.json",
+          "minimum_purchase_for_one_board": 10,
+          "minimum_purchase_line_total_vnd": 5700
+        },
+        {
+          "title": "TWGMC SS34 SMA Diode Schottky 3A",
+          "url": "https://www.thegioiic.com/twgmc-ss34-sma-diode-schottky-3a",
+          "retailer_code": "IC36304",
+          "manufacturer_code": "SS34",
+          "retailer_brand": "TWGMC",
+          "unit_price_vnd": 1140,
+          "inventory_units": 5983,
+          "minimum_order_quantity": 1,
+          "order_multiple": 1,
+          "price_breaks": [
+            {
+              "id": 173661,
+              "product_id": 36304,
+              "quantity": 1,
+              "price": 1140
+            },
+            {
+              "id": 173662,
+              "product_id": 36304,
+              "quantity": 100,
+              "price": 1083
+            },
+            {
+              "id": 173663,
+              "product_id": 36304,
+              "quantity": 500,
+              "price": 1026
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1734592150_TWGMC-SS34.pdf",
+          "live_retrieved_local": "2026-11-15T18:13:22+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\ss34_twgmc.products.json",
+          "minimum_purchase_for_one_board": 2,
+          "minimum_purchase_line_total_vnd": 2280
+        }
+      ],
+      "notes": "Hai lựa chọn cùng SS34 SMA40V3A. IC2529 OEM rẻ mỗi con nhưng min10; IC36304 TWGMC min1 nên hai con rẻ hơn tổng lô OEM. Không chọn SS34 SMB IC11422 hoặc SMC."
+    },
+    {
+      "bom_value": "SMAJ5.0A",
+      "references": [
+        "D12",
+        "D14"
+      ],
+      "quantity_per_board": 2,
+      "required_package": "DO-214AC / SMA, unidirectional TVS",
+      "match_status": "exact_electrical_and_package",
+      "pinout": "1=K cathode (đầu có vạch); 2=A anode",
+      "offers": [
+        {
+          "title": "SMAJ5.0A",
+          "url": "https://www.thegioiic.com/smaj5-0a",
+          "retailer_code": "IC1316",
+          "manufacturer_code": "SMAJ5.0A",
+          "retailer_brand": "OEM",
+          "unit_price_vnd": 570,
+          "inventory_units": 7438,
+          "minimum_order_quantity": 10,
+          "order_multiple": 5,
+          "price_breaks": [
+            {
+              "id": 179315,
+              "product_id": 1316,
+              "quantity": 1,
+              "price": 570
+            },
+            {
+              "id": 179318,
+              "product_id": 1316,
+              "quantity": 100,
+              "price": 547
+            },
+            {
+              "id": 179319,
+              "product_id": 1316,
+              "quantity": 500,
+              "price": 524
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1740557455_SMAJ5.0A.pdf",
+          "live_retrieved_local": "2026-11-15T18:11:26+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\smaj5_0a.products.json",
+          "minimum_purchase_for_one_board": 10,
+          "minimum_purchase_line_total_vnd": 5700
+        }
+      ],
+      "notes": "Đúng suffix A một chiều; không mua SMAJ5.0CA hai chiều. Datasheet chỉ V_RWM=5V, không đồng nghĩa kẹp ở5V."
+    },
+    {
+      "bom_value": "USBLC6-2SC6",
+      "references": [
+        "D3"
+      ],
+      "quantity_per_board": 1,
+      "required_package": "SOT-23-6L",
+      "match_status": "exact_electrical_and_package",
+      "pinout": "1/6=I/O1; 3/4=I/O2; 2=GND; 5=VBUS",
+      "offers": [
+        {
+          "title": "USBLC6-2SC6 TVS DIODE 5.25V 17V SOT-23-6L",
+          "url": "https://www.thegioiic.com/usblc6-2sc6-tvs-diode-5-25v-17v-sot-23-6l",
+          "retailer_code": "IC45239",
+          "manufacturer_code": "",
+          "retailer_brand": "STMicroelectronics",
+          "unit_price_vnd": 5040,
+          "inventory_units": 489,
+          "minimum_order_quantity": 1,
+          "order_multiple": 1,
+          "price_breaks": [
+            {
+              "id": 261875,
+              "product_id": 45239,
+              "quantity": 1,
+              "price": 5040
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1790393863_ST_USBLC6-2SC6.pdf",
+          "live_retrieved_local": "2026-11-15T18:12:19+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\usblc6_2sc6.products.json",
+          "minimum_purchase_for_one_board": 1,
+          "minimum_purchase_line_total_vnd": 5040
+        }
+      ],
+      "notes": "Mã sản phẩm trên title đúngSC6, STMicroelectronics; trường manufacturer_code nội bộ trống. ST official datasheet xác nhậnSC6 SOT23-6L. Không mua USBLC6-2P6 SOT-666."
+    }
+  ],
+  "rejected_offers": [
+    {
+      "url": "https://www.thegioiic.com/bat54c",
+      "reason": "Common cathode instead of dual series BAT54S"
+    },
+    {
+      "url": "https://www.thegioiic.com/ss34-smb-schottky-barrier-diodes-40v-3a",
+      "reason": "SMB footprint mismatch"
+    },
+    {
+      "url": "https://www.thegioiic.com/usblc6-2p6-tvs-diode-5-25v-17v-sot-666",
+      "reason": "SOT-666 footprint mismatch"
+    }
+  ],
+  "technical_sources": [
+    "https://www.st.com/resource/en/datasheet/usblc6-2.pdf",
+    "https://file.thegioiic.com/upload/documents/1734592101_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--MMBT3904.pdf",
+    "https://file.thegioiic.com/upload/documents/1740557455_SMAJ5.0A.pdf",
+    "https://file.thegioiic.com/upload/documents/1740544899_SS34_SMA.pdf",
+    "https://www.aosmd.com/sites/default/files/res/data_sheets/AO3401A.pdf",
+    "https://file.thegioiic.com/upload/documents/1734592234_BAT54C-215.pdf"
+  ]
+}

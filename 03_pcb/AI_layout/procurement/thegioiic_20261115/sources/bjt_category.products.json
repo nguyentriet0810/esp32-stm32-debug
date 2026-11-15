@@ -1,0 +1,7704 @@
+[
+  {
+    "id": 1622,
+    "name": "2SC1815 Transistor NPN 50V 0.15A 3 Chân TO-92",
+    "description": "",
+    "unit": "Con",
+    "slug": "2sc1815-transistor-npn-50v-0-15a-3-chan-to-92",
+    "image_id": 43342,
+    "inventory": 17796,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558539_2SC1815.pdf",
+    "sheetname": "2SC1815",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3950,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206902,
+        "product_id": 1622,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 206903,
+        "product_id": 1622,
+        "quantity": 100,
+        "price": 331
+      },
+      {
+        "id": 206904,
+        "product_id": 1622,
+        "quantity": 500,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3267,
+        "product_id": 1622,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25042,
+        "product_id": 1622,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101996,
+        "product_id": 1622,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101997,
+        "product_id": 1622,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101998,
+        "product_id": 1622,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287336,
+        "product_id": 1622,
+        "property_id": 32876,
+        "property": {
+          "id": 32876,
+          "name": "250mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287337,
+        "product_id": 1622,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287338,
+        "product_id": 1622,
+        "property_id": 32981,
+        "property": {
+          "id": 32981,
+          "name": "200 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287339,
+        "product_id": 1622,
+        "property_id": 32972,
+        "property": {
+          "id": 32972,
+          "name": "200 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287340,
+        "product_id": 1622,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287341,
+        "product_id": 1622,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287342,
+        "product_id": 1622,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 172,
+        "user_id": 1678
+      },
+      {
+        "id": 7669,
+        "user_id": 84144
+      }
+    ],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "2SC1815",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.2W",
+    "category_extras": []
+  },
+  {
+    "id": 1337,
+    "name": "MMBT3904-1AM Transistor NPN 40V 0.2A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "mmbt3904-1am-transistor-npn-40v-0-2a-3-chan-sot-23",
+    "image_id": 29871,
+    "inventory": 9502,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 399,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592101_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--MMBT3904.pdf",
+    "sheetname": "MMBT3904",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3936,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206909,
+        "product_id": 1337,
+        "quantity": 1,
+        "price": 399
+      },
+      {
+        "id": 206910,
+        "product_id": 1337,
+        "quantity": 500,
+        "price": 376
+      },
+      {
+        "id": 206911,
+        "product_id": 1337,
+        "quantity": 1000,
+        "price": 353
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3254,
+        "product_id": 1337,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25052,
+        "product_id": 1337,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 102011,
+        "product_id": 1337,
+        "property_id": 15231,
+        "property": {
+          "id": 15231,
+          "name": "40 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 102012,
+        "product_id": 1337,
+        "property_id": 15246,
+        "property": {
+          "id": 15246,
+          "name": "200 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 102014,
+        "product_id": 1337,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287440,
+        "product_id": 1337,
+        "property_id": 32847,
+        "property": {
+          "id": 32847,
+          "name": "300mV @ 5mA, 50mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287441,
+        "product_id": 1337,
+        "property_id": 32831,
+        "property": {
+          "id": 32831,
+          "name": "50nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287442,
+        "product_id": 1337,
+        "property_id": 32832,
+        "property": {
+          "id": 32832,
+          "name": "100 @ 10mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287443,
+        "product_id": 1337,
+        "property_id": 32972,
+        "property": {
+          "id": 32972,
+          "name": "200 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287444,
+        "product_id": 1337,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287445,
+        "product_id": 1337,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287446,
+        "product_id": 1337,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "MMBT3904",
+    "desc_small": "Điện áp Vce max: 40V, dòng Ic max: 0.2A, công suất: 0.3W",
+    "category_extras": []
+  },
+  {
+    "id": 36294,
+    "name": "C1815 Transistor NPN 50V 0.15A 3 Chân TO-92",
+    "description": "",
+    "unit": "Con",
+    "slug": "c1815-transistor-npn-50v-0-15a-3-chan-to-92",
+    "image_id": 52686,
+    "inventory": 8202,
+    "rohs": true,
+    "supplier_id": 347,
+    "category_id": 179,
+    "product_tag_id": 7,
+    "price": 683,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592197_C1815_TO-92_V2.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 347,
+      "name": "JSCJ (China)",
+      "slug": "jscj-china"
+    },
+    "product_tags": [
+      {
+        "id": 3128,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206313,
+        "product_id": 36294,
+        "quantity": 1,
+        "price": 683
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 233692,
+        "product_id": 36294,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 233693,
+        "product_id": 36294,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 233694,
+        "product_id": 36294,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 233695,
+        "product_id": 36294,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 233696,
+        "product_id": 36294,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286720,
+        "product_id": 36294,
+        "property_id": 32840,
+        "property": {
+          "id": 32840,
+          "name": "70 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286721,
+        "product_id": 36294,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286722,
+        "product_id": 36294,
+        "property_id": 32841,
+        "property": {
+          "id": 32841,
+          "name": "400 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286723,
+        "product_id": 36294,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286724,
+        "product_id": 36294,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287257,
+        "product_id": 36294,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287531,
+        "product_id": 36294,
+        "property_id": 32876,
+        "property": {
+          "id": 32876,
+          "name": "250mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "2SC1815",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.4W",
+    "category_extras": []
+  },
+  {
+    "id": 11379,
+    "name": "S8050 J3Y Transistor NPN 25V 0.5A 3 Chân SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "s8050-j3y-transistor-npn-25v-0-5a-3-chan-sot-23",
+    "image_id": 45395,
+    "inventory": 6360,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592313_S8050.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4092,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 178873,
+        "product_id": 11379,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 178874,
+        "product_id": 11379,
+        "quantity": 500,
+        "price": 319
+      },
+      {
+        "id": 178875,
+        "product_id": 11379,
+        "quantity": 1000,
+        "price": 296
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 9636,
+        "product_id": 11379,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25113,
+        "product_id": 11379,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101825,
+        "product_id": 11379,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101827,
+        "product_id": 11379,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286970,
+        "product_id": 11379,
+        "property_id": 15210,
+        "property": {
+          "id": 15210,
+          "name": "500 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 286971,
+        "product_id": 11379,
+        "property_id": 32866,
+        "property": {
+          "id": 32866,
+          "name": "600mV @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286972,
+        "product_id": 11379,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286973,
+        "product_id": 11379,
+        "property_id": 32867,
+        "property": {
+          "id": 32867,
+          "name": "120 @ 50mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286974,
+        "product_id": 11379,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286975,
+        "product_id": 11379,
+        "property_id": 32868,
+        "property": {
+          "id": 32868,
+          "name": "150MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286976,
+        "product_id": 11379,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286977,
+        "product_id": 11379,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "S8050",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 0.5A, công suất: 0.3W",
+    "category_extras": []
+  },
+  {
+    "id": 2046,
+    "name": "MMBT2222A 1P Transistor NPN 40V 0.6A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "mmbt2222a-1p-transistor-npn-40v-0-6a-3-chan-sot-23",
+    "image_id": 30424,
+    "inventory": 5820,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592311_MMBT2222A.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3971,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172432,
+        "product_id": 2046,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 172433,
+        "product_id": 2046,
+        "quantity": 500,
+        "price": 433
+      },
+      {
+        "id": 172434,
+        "product_id": 2046,
+        "quantity": 1000,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3239,
+        "product_id": 2046,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25012,
+        "product_id": 2046,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101951,
+        "product_id": 2046,
+        "property_id": 15231,
+        "property": {
+          "id": 15231,
+          "name": "40 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101952,
+        "product_id": 2046,
+        "property_id": 15232,
+        "property": {
+          "id": 15232,
+          "name": "600 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101953,
+        "product_id": 2046,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287285,
+        "product_id": 2046,
+        "property_id": 32891,
+        "property": {
+          "id": 32891,
+          "name": "1V @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287286,
+        "product_id": 2046,
+        "property_id": 32912,
+        "property": {
+          "id": 32912,
+          "name": "10nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287287,
+        "product_id": 2046,
+        "property_id": 32836,
+        "property": {
+          "id": 32836,
+          "name": "100 @ 150mA, 10V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287288,
+        "product_id": 2046,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287289,
+        "product_id": 2046,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287290,
+        "product_id": 2046,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287291,
+        "product_id": 2046,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 895,
+        "user_id": 7987
+      },
+      {
+        "id": 2828,
+        "user_id": 2914
+      },
+      {
+        "id": 5835,
+        "user_id": 1105
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "MMBT2222A",
+    "desc_small": "Điện áp Vce max: 40V, dòng Ic max: 0.6A, công suất: 0.3W",
+    "category_extras": []
+  },
+  {
+    "id": 2045,
+    "name": "2SA1015LT1-BA Transistor PNP 50V 0.15A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "2sa1015lt1-ba-transistor-pnp-50v-0-15a-3-chan-sot-23",
+    "image_id": 30408,
+    "inventory": 5542,
+    "rohs": true,
+    "supplier_id": 350,
+    "category_id": 179,
+    "product_tag_id": 7,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592153_2SA1015.PDF.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 350,
+      "name": "JD (China)",
+      "slug": "jd-china"
+    },
+    "product_tags": [
+      {
+        "id": 901,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 5689,
+        "product_id": 2045,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 179708,
+        "product_id": 2045,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 179709,
+        "product_id": 2045,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3270,
+        "product_id": 2045,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25014,
+        "product_id": 2045,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101954,
+        "product_id": 2045,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101955,
+        "product_id": 2045,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101956,
+        "product_id": 2045,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287278,
+        "product_id": 2045,
+        "property_id": 32971,
+        "property": {
+          "id": 32971,
+          "name": "300mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287279,
+        "product_id": 2045,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287280,
+        "product_id": 2045,
+        "property_id": 32840,
+        "property": {
+          "id": 32840,
+          "name": "70 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287281,
+        "product_id": 2045,
+        "property_id": 32972,
+        "property": {
+          "id": 32972,
+          "name": "200 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287282,
+        "product_id": 2045,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287283,
+        "product_id": 2045,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287284,
+        "product_id": 2045,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1299,
+        "user_id": 12827
+      },
+      {
+        "id": 6758,
+        "user_id": 76543
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "2SA1015-BDW",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A",
+    "category_extras": []
+  },
+  {
+    "id": 1338,
+    "name": "MMBT3906 Transistor PNP 40V 0.2A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "mmbt3906-transistor-pnp-40v-0-2a-3-chan-sot-23",
+    "image_id": 29873,
+    "inventory": 5340,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592148_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--MMBT3906.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3937,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 192786,
+        "product_id": 1338,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 192787,
+        "product_id": 1338,
+        "quantity": 500,
+        "price": 319
+      },
+      {
+        "id": 192788,
+        "product_id": 1338,
+        "quantity": 1000,
+        "price": 296
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3253,
+        "product_id": 1338,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25050,
+        "product_id": 1338,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 102008,
+        "product_id": 1338,
+        "property_id": 15231,
+        "property": {
+          "id": 15231,
+          "name": "40 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 102009,
+        "product_id": 1338,
+        "property_id": 15246,
+        "property": {
+          "id": 15246,
+          "name": "200 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 102010,
+        "product_id": 1338,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287447,
+        "product_id": 1338,
+        "property_id": 32847,
+        "property": {
+          "id": 32847,
+          "name": "300mV @ 5mA, 50mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287448,
+        "product_id": 1338,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287449,
+        "product_id": 1338,
+        "property_id": 32832,
+        "property": {
+          "id": 32832,
+          "name": "100 @ 10mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287450,
+        "product_id": 1338,
+        "property_id": 32972,
+        "property": {
+          "id": 32972,
+          "name": "200 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287451,
+        "product_id": 1338,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287452,
+        "product_id": 1338,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287453,
+        "product_id": 1338,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "MMBT3906",
+    "desc_small": "Điện áp Vce max: 40V, dòng Ic max: 0.2A, công suất: 0.3W",
+    "category_extras": []
+  },
+  {
+    "id": 3180,
+    "name": "SS8050 Y1 Transistor NPN 25V 1.5A 3 Chân SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "ss8050-y1-transistor-npn-25v-1-5a-3-chan-sot-23",
+    "image_id": 30416,
+    "inventory": 5250,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.elecfans.com/web1/M00/82/00/pIYBAFw0YWiAHqSfAAQV1Egn4i0073.pdf",
+    "sheetname": "SS8050",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3998,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 178876,
+        "product_id": 3180,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 178877,
+        "product_id": 3180,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 178878,
+        "product_id": 3180,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3223,
+        "product_id": 3180,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24980,
+        "product_id": 3180,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101905,
+        "product_id": 3180,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101907,
+        "product_id": 3180,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287253,
+        "product_id": 3180,
+        "property_id": 15233,
+        "property": {
+          "id": 15233,
+          "name": "1.5 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287254,
+        "product_id": 3180,
+        "property_id": 32937,
+        "property": {
+          "id": 32937,
+          "name": "500mV @ 80mA, 800mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287255,
+        "product_id": 3180,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287258,
+        "product_id": 3180,
+        "property_id": 32938,
+        "property": {
+          "id": 32938,
+          "name": "120 @ 100mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287259,
+        "product_id": 3180,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287260,
+        "product_id": 3180,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287261,
+        "product_id": 3180,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287262,
+        "product_id": 3180,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "SS8050",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 1.5A, công suất: 0.6W",
+    "category_extras": []
+  },
+  {
+    "id": 36296,
+    "name": "BC847B Transistor NPN 45V 0.1A SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "bc847b-transistor-npn-45v-0-1a-sot-23",
+    "image_id": 322,
+    "inventory": 4230,
+    "rohs": true,
+    "supplier_id": 194,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 285,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592197_BC847B-215.pdf",
+    "sheetname": "BC847B",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 194,
+      "name": "Nexperia",
+      "slug": "nexperia"
+    },
+    "product_tags": [
+      {
+        "id": 4198,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 223233,
+        "product_id": 36296,
+        "quantity": 1,
+        "price": 285
+      },
+      {
+        "id": 223234,
+        "product_id": 36296,
+        "quantity": 500,
+        "price": 274
+      },
+      {
+        "id": 223235,
+        "product_id": 36296,
+        "quantity": 1000,
+        "price": 262
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 233699,
+        "product_id": 36296,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 233702,
+        "product_id": 36296,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 233704,
+        "product_id": 36296,
+        "property_id": 15236,
+        "property": {
+          "id": 15236,
+          "name": "45 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 233705,
+        "product_id": 36296,
+        "property_id": 15237,
+        "property": {
+          "id": 15237,
+          "name": "100 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 233707,
+        "product_id": 36296,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286725,
+        "product_id": 36296,
+        "property_id": 32843,
+        "property": {
+          "id": 32843,
+          "name": "400mV @ 5mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286726,
+        "product_id": 36296,
+        "property_id": 32844,
+        "property": {
+          "id": 32844,
+          "name": "15nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286727,
+        "product_id": 36296,
+        "property_id": 32845,
+        "property": {
+          "id": 32845,
+          "name": "200 @ 2mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286728,
+        "product_id": 36296,
+        "property_id": 32822,
+        "property": {
+          "id": 32822,
+          "name": "250 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286729,
+        "product_id": 36296,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286730,
+        "product_id": 36296,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286731,
+        "product_id": 36296,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "BC847B",
+    "desc_small": "Điện áp Vce max: 45V, dòng Ic max: 0.1A, công suất: 0.25W",
+    "category_extras": []
+  },
+  {
+    "id": 2069,
+    "name": "BC817 Transistor NPN 45V 0.5A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "bc817-transistor-npn-45v-0-5a-3-chan-sot-23",
+    "image_id": 30427,
+    "inventory": 3396,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 538,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592311_BC817_SOT-23_V2.1.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3974,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172390,
+        "product_id": 2069,
+        "quantity": 1,
+        "price": 538
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3236,
+        "product_id": 2069,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25006,
+        "product_id": 2069,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101942,
+        "product_id": 2069,
+        "property_id": 15236,
+        "property": {
+          "id": 15236,
+          "name": "45 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101943,
+        "product_id": 2069,
+        "property_id": 15210,
+        "property": {
+          "id": 15210,
+          "name": "500 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101944,
+        "product_id": 2069,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287314,
+        "product_id": 2069,
+        "property_id": 32975,
+        "property": {
+          "id": 32975,
+          "name": "700mV @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287315,
+        "product_id": 2069,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287316,
+        "product_id": 2069,
+        "property_id": 32976,
+        "property": {
+          "id": 32976,
+          "name": "100 @ 100mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287317,
+        "product_id": 2069,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287318,
+        "product_id": 2069,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287319,
+        "product_id": 2069,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287320,
+        "product_id": 2069,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 871,
+        "user_id": 9947
+      },
+      {
+        "id": 6242,
+        "user_id": 17589
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "BC817",
+    "desc_small": "Điện áp Vce max: 45V, dòng Ic max: 0.5A, công suất: 0.3W",
+    "category_extras": []
+  },
+  {
+    "id": 36794,
+    "name": "SS8550 Y2 Transistor PNP 25V 1.5A 3 Chân SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "ss8550-y2-transistor-pnp-25v-1-5a-3-chan-sot-23",
+    "image_id": 53326,
+    "inventory": 3121,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 399,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592313_SS8550.pdf",
+    "sheetname": "SS8550",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4209,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 221027,
+        "product_id": 36794,
+        "quantity": 1,
+        "price": 399
+      },
+      {
+        "id": 221028,
+        "product_id": 36794,
+        "quantity": 500,
+        "price": 376
+      },
+      {
+        "id": 221029,
+        "product_id": 36794,
+        "quantity": 1000,
+        "price": 353
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 260885,
+        "product_id": 36794,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 260886,
+        "product_id": 36794,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 260889,
+        "product_id": 36794,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 260890,
+        "product_id": 36794,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286611,
+        "product_id": 36794,
+        "property_id": 32785,
+        "property": {
+          "id": 32785,
+          "name": "225 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286613,
+        "product_id": 36794,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287117,
+        "product_id": 36794,
+        "property_id": 15233,
+        "property": {
+          "id": 15233,
+          "name": "1.5 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287118,
+        "product_id": 36794,
+        "property_id": 32937,
+        "property": {
+          "id": 32937,
+          "name": "500mV @ 80mA, 800mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287119,
+        "product_id": 36794,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287120,
+        "product_id": 36794,
+        "property_id": 32938,
+        "property": {
+          "id": 32938,
+          "name": "120 @ 100mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287121,
+        "product_id": 36794,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287122,
+        "product_id": 36794,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287123,
+        "product_id": 36794,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "SS8550",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 1.5A",
+    "category_extras": []
+  },
+  {
+    "id": 36293,
+    "name": "A1015 Transistor PNP 50V 0.15A 3 Chân TO-92",
+    "description": "",
+    "unit": "Con",
+    "slug": "a1015-transistor-pnp-50v-0-15a-3-chan-to-92",
+    "image_id": 63676,
+    "inventory": 2735,
+    "rohs": true,
+    "supplier_id": 347,
+    "category_id": 179,
+    "product_tag_id": 7,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592198_2SA1015_TO-92_V2.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 347,
+      "name": "JSCJ (China)",
+      "slug": "jscj-china"
+    },
+    "product_tags": [
+      {
+        "id": 3127,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206310,
+        "product_id": 36293,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 221031,
+        "product_id": 36293,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 221032,
+        "product_id": 36293,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 233686,
+        "product_id": 36293,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 233687,
+        "product_id": 36293,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 233688,
+        "product_id": 36293,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 233689,
+        "product_id": 36293,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 233690,
+        "product_id": 36293,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286713,
+        "product_id": 36293,
+        "property_id": 32840,
+        "property": {
+          "id": 32840,
+          "name": "70 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286714,
+        "product_id": 36293,
+        "property_id": 32841,
+        "property": {
+          "id": 32841,
+          "name": "400 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286715,
+        "product_id": 36293,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286716,
+        "product_id": 36293,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286717,
+        "product_id": 36293,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287256,
+        "product_id": 36293,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287529,
+        "product_id": 36293,
+        "property_id": 32971,
+        "property": {
+          "id": 32971,
+          "name": "300mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "2SA1015",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.4W",
+    "category_extras": []
+  },
+  {
+    "id": 3748,
+    "name": "MMBT2907A Transistor PNP 60V 0.6A 3 Chân SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "mmbt2907a-transistor-pnp-60v-0-6a-3-chan-sot-23",
+    "image_id": 29875,
+    "inventory": 2707,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592311_MMBT2907A_SOT-23_V2.1.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4005,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 165721,
+        "product_id": 3748,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 165722,
+        "product_id": 3748,
+        "quantity": 500,
+        "price": 433
+      },
+      {
+        "id": 165723,
+        "product_id": 3748,
+        "quantity": 1000,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3221,
+        "product_id": 3748,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24976,
+        "product_id": 3748,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101899,
+        "product_id": 3748,
+        "property_id": 15230,
+        "property": {
+          "id": 15230,
+          "name": "60 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101900,
+        "product_id": 3748,
+        "property_id": 15232,
+        "property": {
+          "id": 15232,
+          "name": "600 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101901,
+        "product_id": 3748,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287128,
+        "product_id": 3748,
+        "property_id": 32835,
+        "property": {
+          "id": 32835,
+          "name": "1.6V @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287129,
+        "product_id": 3748,
+        "property_id": 32939,
+        "property": {
+          "id": 32939,
+          "name": "20nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287130,
+        "product_id": 3748,
+        "property_id": 32836,
+        "property": {
+          "id": 32836,
+          "name": "100 @ 150mA, 10V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287131,
+        "product_id": 3748,
+        "property_id": 32822,
+        "property": {
+          "id": 32822,
+          "name": "250 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287132,
+        "product_id": 3748,
+        "property_id": 32837,
+        "property": {
+          "id": 32837,
+          "name": "200MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287133,
+        "product_id": 3748,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287134,
+        "product_id": 3748,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "MMBT2907A",
+    "desc_small": "Điện áp Vce max: 60V, dòng Ic max: 0.6A, công suất: 0.35W",
+    "category_extras": []
+  },
+  {
+    "id": 5796,
+    "name": "BC547 Transistor NPN 45V 0.1A 3 Chân TO-92",
+    "description": null,
+    "unit": "Con",
+    "slug": "bc547-transistor-npn-45v-0-1a-3-chan-to-92",
+    "image_id": 53470,
+    "inventory": 2682,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 479,
+    "price_change": null,
+    "sheetfile": "https://www.mouser.com/datasheet/2/149/BC547-888524.pdf",
+    "sheetname": "BC547",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4042,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 260789,
+        "product_id": 5796,
+        "quantity": 1,
+        "price": 479
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3215,
+        "product_id": 5796,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24964,
+        "product_id": 5796,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101881,
+        "product_id": 5796,
+        "property_id": 15236,
+        "property": {
+          "id": 15236,
+          "name": "45 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101882,
+        "product_id": 5796,
+        "property_id": 15237,
+        "property": {
+          "id": 15237,
+          "name": "100 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101883,
+        "product_id": 5796,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287162,
+        "product_id": 5796,
+        "property_id": 32947,
+        "property": {
+          "id": 32947,
+          "name": "600mV @ 5mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287163,
+        "product_id": 5796,
+        "property_id": 32844,
+        "property": {
+          "id": 32844,
+          "name": "15nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287164,
+        "product_id": 5796,
+        "property_id": 32948,
+        "property": {
+          "id": 32948,
+          "name": "110 @ 2mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287165,
+        "product_id": 5796,
+        "property_id": 32949,
+        "property": {
+          "id": 32949,
+          "name": "500 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287166,
+        "product_id": 5796,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287167,
+        "product_id": 5796,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287168,
+        "product_id": 5796,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 7822,
+        "user_id": 78288
+      }
+    ],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "BC547",
+    "desc_small": "Điện áp Vce max: 45V, dòng Ic max: 0.1A, công suất: 0.5W",
+    "category_extras": []
+  },
+  {
+    "id": 1835,
+    "name": "2SA1015GR Transistor PNP 50V 0.15A 3 Chân TO-92",
+    "description": "",
+    "unit": "Con",
+    "slug": "2sa1015gr-transistor-pnp-50v-0-15a-3-chan-to-92",
+    "image_id": 43384,
+    "inventory": 2400,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558480_2SA1015GR.pdf",
+    "sheetname": "2SA1015GR",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3960,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206895,
+        "product_id": 1835,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 206898,
+        "product_id": 1835,
+        "quantity": 100,
+        "price": 331
+      },
+      {
+        "id": 206899,
+        "product_id": 1835,
+        "quantity": 500,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3269,
+        "product_id": 1835,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25036,
+        "product_id": 1835,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101987,
+        "product_id": 1835,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 101988,
+        "product_id": 1835,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101989,
+        "product_id": 1835,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 287357,
+        "product_id": 1835,
+        "property_id": 32971,
+        "property": {
+          "id": 32971,
+          "name": "300mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287358,
+        "product_id": 1835,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287359,
+        "product_id": 1835,
+        "property_id": 32840,
+        "property": {
+          "id": 32840,
+          "name": "70 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287360,
+        "product_id": 1835,
+        "property_id": 32841,
+        "property": {
+          "id": 32841,
+          "name": "400 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287361,
+        "product_id": 1835,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287362,
+        "product_id": 1835,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287363,
+        "product_id": 1835,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "2SA1015",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.4W",
+    "category_extras": []
+  },
+  {
+    "id": 19530,
+    "name": "2SC2383 Transistor NPN 160V 1A 3 Chân TO-92",
+    "description": null,
+    "unit": "Con",
+    "slug": "2sc2383-transistor-npn-160v-1a-3-chan-to-92",
+    "image_id": 29776,
+    "inventory": 2243,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557815_2SC2383.pdf",
+    "sheetname": "2SC2383",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4160,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 221037,
+        "product_id": 19530,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 221038,
+        "product_id": 19530,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 221039,
+        "product_id": 19530,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 67748,
+        "product_id": 19530,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 67752,
+        "product_id": 19530,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101776,
+        "product_id": 19530,
+        "property_id": 15215,
+        "property": {
+          "id": 15215,
+          "name": "160 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101777,
+        "product_id": 19530,
+        "property_id": 15216,
+        "property": {
+          "id": 15216,
+          "name": "1 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101778,
+        "product_id": 19530,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286888,
+        "product_id": 19530,
+        "property_id": 32891,
+        "property": {
+          "id": 32891,
+          "name": "1V @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286889,
+        "product_id": 19530,
+        "property_id": 32827,
+        "property": {
+          "id": 32827,
+          "name": "1µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286890,
+        "product_id": 19530,
+        "property_id": 32892,
+        "property": {
+          "id": 32892,
+          "name": "60 @ 200mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286891,
+        "product_id": 19530,
+        "property_id": 32853,
+        "property": {
+          "id": 32853,
+          "name": "750 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286892,
+        "product_id": 19530,
+        "property_id": 32893,
+        "property": {
+          "id": 32893,
+          "name": "20MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286893,
+        "product_id": 19530,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286894,
+        "product_id": 19530,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "2SC2383",
+    "desc_small": "Điện áp Vce max: 160V, dòng Ic max: 1A, công suất: 0.9W",
+    "category_extras": []
+  },
+  {
+    "id": 2033,
+    "name": "2N3904 Transistor NPN 40V 0.2A 3 Chân TO-92",
+    "description": "",
+    "unit": null,
+    "slug": "2n3904-transistor-npn-40v-0-2a-3-chan-to-92",
+    "image_id": 43381,
+    "inventory": 2070,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558392_2N3904.pdf",
+    "sheetname": "2N3904",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 3969,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172354,
+        "product_id": 2033,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 172355,
+        "product_id": 2033,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 172356,
+        "product_id": 2033,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3241,
+        "product_id": 2033,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25018,
+        "product_id": 2033,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101960,
+        "product_id": 2033,
+        "property_id": 15231,
+        "property": {
+          "id": 15231,
+          "name": "40 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101961,
+        "product_id": 2033,
+        "property_id": 15246,
+        "property": {
+          "id": 15246,
+          "name": "200 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101962,
+        "product_id": 2033,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287264,
+        "product_id": 2033,
+        "property_id": 32847,
+        "property": {
+          "id": 32847,
+          "name": "300mV @ 5mA, 50mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287265,
+        "product_id": 2033,
+        "property_id": 32831,
+        "property": {
+          "id": 32831,
+          "name": "50nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287266,
+        "product_id": 2033,
+        "property_id": 32832,
+        "property": {
+          "id": 32832,
+          "name": "100 @ 10mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287267,
+        "product_id": 2033,
+        "property_id": 32870,
+        "property": {
+          "id": 32870,
+          "name": "625 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287268,
+        "product_id": 2033,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287269,
+        "product_id": 2033,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287270,
+        "product_id": 2033,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 370,
+        "user_id": 2678
+      }
+    ],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "2N3904",
+    "desc_small": "Điện áp Vce max: 40V, dòng Ic max: 0.2A, công suất: 0.6W",
+    "category_extras": []
+  },
+  {
+    "id": 846,
+    "name": "2SC1815-HF Transistor NPN 50V 0.15A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "2sc1815-hf-transistor-npn-50v-0-15a-3-chan-sot-23",
+    "image_id": 30407,
+    "inventory": 1903,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592310_C1815_SOT-23_V2.pdf",
+    "sheetname": "C1815",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3925,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 179705,
+        "product_id": 846,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 179706,
+        "product_id": 846,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 179707,
+        "product_id": 846,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3265,
+        "product_id": 846,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25060,
+        "product_id": 846,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 102024,
+        "product_id": 846,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 102029,
+        "product_id": 846,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 134178,
+        "product_id": 846,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287419,
+        "product_id": 846,
+        "property_id": 32876,
+        "property": {
+          "id": 32876,
+          "name": "250mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287420,
+        "product_id": 846,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287421,
+        "product_id": 846,
+        "property_id": 32871,
+        "property": {
+          "id": 32871,
+          "name": "120 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287422,
+        "product_id": 846,
+        "property_id": 32972,
+        "property": {
+          "id": 32972,
+          "name": "200 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287423,
+        "product_id": 846,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287424,
+        "product_id": 846,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287425,
+        "product_id": 846,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 384,
+        "user_id": 2721
+      },
+      {
+        "id": 1072,
+        "user_id": 11635
+      },
+      {
+        "id": 1298,
+        "user_id": 12827
+      },
+      {
+        "id": 2563,
+        "user_id": 11829
+      },
+      {
+        "id": 3847,
+        "user_id": 20942
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "C1815",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.2W",
+    "category_extras": []
+  },
+  {
+    "id": 36237,
+    "name": "2SC1815L Transistor NPN 50V 0.15A 3 Chân TO-92",
+    "description": "",
+    "unit": "Con",
+    "slug": "2sc1815l-transistor-npn-50v-0-15a-3-chan-to-92",
+    "image_id": 52088,
+    "inventory": 1761,
+    "rohs": true,
+    "supplier_id": 190,
+    "category_id": 179,
+    "product_tag_id": 7,
+    "price": 1140,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592232_UTC-Unisonic-Tech-2SC1815L-GR-T92-B.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 190,
+      "name": "UTC",
+      "slug": "utc"
+    },
+    "product_tags": [
+      {
+        "id": 3074,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173090,
+        "product_id": 36237,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 173091,
+        "product_id": 36237,
+        "quantity": 100,
+        "price": 1083
+      },
+      {
+        "id": 173092,
+        "product_id": 36237,
+        "quantity": 500,
+        "price": 1026
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 230683,
+        "product_id": 36237,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 230684,
+        "product_id": 36237,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 230685,
+        "product_id": 36237,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 230686,
+        "product_id": 36237,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 230687,
+        "product_id": 36237,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286801,
+        "product_id": 36237,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286802,
+        "product_id": 36237,
+        "property_id": 32840,
+        "property": {
+          "id": 32840,
+          "name": "70 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286803,
+        "product_id": 36237,
+        "property_id": 32870,
+        "property": {
+          "id": 32870,
+          "name": "625 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286804,
+        "product_id": 36237,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286805,
+        "product_id": 36237,
+        "property_id": 32824,
+        "property": {
+          "id": 32824,
+          "name": "125°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286806,
+        "product_id": 36237,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287530,
+        "product_id": 36237,
+        "property_id": 32876,
+        "property": {
+          "id": 32876,
+          "name": "250mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "2SC1815L-BL-T92-B",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.4W",
+    "category_extras": []
+  },
+  {
+    "id": 3181,
+    "name": "S8550 2TY Transistor PNP 25V 0.5A 3 Chân SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "s8550-2ty-transistor-pnp-25v-0-5a-3-chan-sot-23",
+    "image_id": 29876,
+    "inventory": 1548,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--S8550-RANGE-120-200_C105432.pdf",
+    "sheetname": "S8550",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3999,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206614,
+        "product_id": 3181,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 219946,
+        "product_id": 3181,
+        "quantity": 500,
+        "price": 319
+      },
+      {
+        "id": 219947,
+        "product_id": 3181,
+        "quantity": 1000,
+        "price": 296
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3222,
+        "product_id": 3181,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24978,
+        "product_id": 3181,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101902,
+        "product_id": 3181,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101904,
+        "product_id": 3181,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287111,
+        "product_id": 3181,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287113,
+        "product_id": 3181,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287115,
+        "product_id": 3181,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287116,
+        "product_id": 3181,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287124,
+        "product_id": 3181,
+        "property_id": 15210,
+        "property": {
+          "id": 15210,
+          "name": "500 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287125,
+        "product_id": 3181,
+        "property_id": 32866,
+        "property": {
+          "id": 32866,
+          "name": "600mV @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287126,
+        "product_id": 3181,
+        "property_id": 32867,
+        "property": {
+          "id": 32867,
+          "name": "120 @ 50mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287127,
+        "product_id": 3181,
+        "property_id": 32868,
+        "property": {
+          "id": 32868,
+          "name": "150MHz",
+          "parent_id": 32782
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 2174,
+        "user_id": 8069
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "S8550",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 0.5A, công suất: 0.225W",
+    "category_extras": []
+  },
+  {
+    "id": 4656,
+    "name": "S8050-D Transistor NPN 25V 1.5A 3 Chân TO-92",
+    "description": null,
+    "unit": null,
+    "slug": "s8050-d-transistor-npn-25v-1-5a-3-chan-to-92",
+    "image_id": 43350,
+    "inventory": 1470,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558307_S8050-D.pdf",
+    "sheetname": "S8050-D",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4029,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172444,
+        "product_id": 4656,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 172445,
+        "product_id": 4656,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 172446,
+        "product_id": 4656,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3220,
+        "product_id": 4656,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24974,
+        "product_id": 4656,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101896,
+        "product_id": 4656,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101897,
+        "product_id": 4656,
+        "property_id": 15233,
+        "property": {
+          "id": 15233,
+          "name": "1.5 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101898,
+        "product_id": 4656,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287135,
+        "product_id": 4656,
+        "property_id": 32937,
+        "property": {
+          "id": 32937,
+          "name": "500mV @ 80mA, 800mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287136,
+        "product_id": 4656,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287137,
+        "product_id": 4656,
+        "property_id": 32940,
+        "property": {
+          "id": 32940,
+          "name": "40 @ 800mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287139,
+        "product_id": 4656,
+        "property_id": 32870,
+        "property": {
+          "id": 32870,
+          "name": "625 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287140,
+        "product_id": 4656,
+        "property_id": 32911,
+        "property": {
+          "id": 32911,
+          "name": "190MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287141,
+        "product_id": 4656,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287142,
+        "product_id": 4656,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 6608,
+        "user_id": 1105
+      }
+    ],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "S8050-D",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 1.5A",
+    "category_extras": []
+  },
+  {
+    "id": 36238,
+    "name": "2SA1015L Transistor PNP 50V 0.15A 3 Chân TO-92",
+    "description": "",
+    "unit": "Con",
+    "slug": "2sa1015l-transistor-pnp-50v-0-15a-3-chan-to-92",
+    "image_id": 52089,
+    "inventory": 1288,
+    "rohs": true,
+    "supplier_id": 190,
+    "category_id": 179,
+    "product_tag_id": 7,
+    "price": 1140,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592233_UTC-Unisonic-Tech-2SA1015L-Y-T92.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 190,
+      "name": "UTC",
+      "slug": "utc"
+    },
+    "product_tags": [
+      {
+        "id": 3075,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173093,
+        "product_id": 36238,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 173094,
+        "product_id": 36238,
+        "quantity": 100,
+        "price": 1083
+      },
+      {
+        "id": 173095,
+        "product_id": 36238,
+        "quantity": 500,
+        "price": 1026
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 230689,
+        "product_id": 36238,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 230690,
+        "product_id": 36238,
+        "property_id": 15242,
+        "property": {
+          "id": 15242,
+          "name": "50 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 230691,
+        "product_id": 36238,
+        "property_id": 15265,
+        "property": {
+          "id": 15265,
+          "name": "150 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 230692,
+        "product_id": 36238,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 230693,
+        "product_id": 36238,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286808,
+        "product_id": 36238,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286809,
+        "product_id": 36238,
+        "property_id": 32871,
+        "property": {
+          "id": 32871,
+          "name": "120 @ 2mA, 6V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286810,
+        "product_id": 36238,
+        "property_id": 32841,
+        "property": {
+          "id": 32841,
+          "name": "400 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286811,
+        "product_id": 36238,
+        "property_id": 32823,
+        "property": {
+          "id": 32823,
+          "name": "80MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286812,
+        "product_id": 36238,
+        "property_id": 32824,
+        "property": {
+          "id": 32824,
+          "name": "125°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286813,
+        "product_id": 36238,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287527,
+        "product_id": 36238,
+        "property_id": 32971,
+        "property": {
+          "id": 32971,
+          "name": "300mV @ 10mA, 100mA",
+          "parent_id": 32778
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "2SA1015L-Y-T92-B",
+    "desc_small": "Điện áp Vce max: 50V, dòng Ic max: 0.15A, công suất: 0.4W",
+    "category_extras": []
+  },
+  {
+    "id": 7870,
+    "name": "2SD882 Transistor NPN 30V 3A 3 Chân TO-126",
+    "description": null,
+    "unit": null,
+    "slug": "2sd882-transistor-npn-30v-3a-3-chan-to-126",
+    "image_id": 30379,
+    "inventory": 1065,
+    "rohs": true,
+    "supplier_id": 195,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 1140,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558238_2SD882.pdf",
+    "sheetname": "2SD882",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [
+      {
+        "id": 4059,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172408,
+        "product_id": 7870,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 172409,
+        "product_id": 7870,
+        "quantity": 100,
+        "price": 1083
+      },
+      {
+        "id": 172410,
+        "product_id": 7870,
+        "quantity": 500,
+        "price": 1026
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 5898,
+        "product_id": 7870,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24952,
+        "product_id": 7870,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101857,
+        "product_id": 7870,
+        "property_id": 15221,
+        "property": {
+          "id": 15221,
+          "name": "30 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101858,
+        "product_id": 7870,
+        "property_id": 15222,
+        "property": {
+          "id": 15222,
+          "name": "3 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101860,
+        "product_id": 7870,
+        "property_id": 15248,
+        "property": {
+          "id": 15248,
+          "name": "TO-126",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287061,
+        "product_id": 7870,
+        "property_id": 32925,
+        "property": {
+          "id": 32925,
+          "name": "1.1V @ 150mA, 3A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287062,
+        "product_id": 7870,
+        "property_id": 32809,
+        "property": {
+          "id": 32809,
+          "name": "100µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287063,
+        "product_id": 7870,
+        "property_id": 32926,
+        "property": {
+          "id": 32926,
+          "name": "100 @ 100mA, 2V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287064,
+        "product_id": 7870,
+        "property_id": 32927,
+        "property": {
+          "id": 32927,
+          "name": "12.5 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287065,
+        "product_id": 7870,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287066,
+        "product_id": 7870,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287067,
+        "product_id": 7870,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1674,
+        "user_id": 7044
+      }
+    ],
+    "package_quantity": {
+      "id": 31,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 200
+    },
+    "manufacturer_code": "2SD882",
+    "desc_small": "Điện áp Vce max: 30V, dòng Ic max: 3A, công suất: 10W",
+    "category_extras": []
+  },
+  {
+    "id": 2721,
+    "name": "BC847W Transistor NPN 45V 0.1A 3 Chân SOT-323",
+    "description": "",
+    "unit": "Con",
+    "slug": "bc847w-transistor-npn-45v-0-1a-3-chan-sot-323",
+    "image_id": 30888,
+    "inventory": 910,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592312_BC847W.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3994,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206928,
+        "product_id": 2721,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 206929,
+        "product_id": 2721,
+        "quantity": 500,
+        "price": 433
+      },
+      {
+        "id": 206930,
+        "product_id": 2721,
+        "quantity": 1000,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3226,
+        "product_id": 2721,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24986,
+        "product_id": 2721,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101914,
+        "product_id": 2721,
+        "property_id": 15237,
+        "property": {
+          "id": 15237,
+          "name": "100 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101915,
+        "product_id": 2721,
+        "property_id": 15236,
+        "property": {
+          "id": 15236,
+          "name": "45 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101916,
+        "product_id": 2721,
+        "property_id": 15257,
+        "property": {
+          "id": 15257,
+          "name": "SOT-323",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287228,
+        "product_id": 2721,
+        "property_id": 32947,
+        "property": {
+          "id": 32947,
+          "name": "600mV @ 5mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287229,
+        "product_id": 2721,
+        "property_id": 32844,
+        "property": {
+          "id": 32844,
+          "name": "15nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287230,
+        "product_id": 2721,
+        "property_id": 32948,
+        "property": {
+          "id": 32948,
+          "name": "110 @ 2mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287231,
+        "product_id": 2721,
+        "property_id": 32966,
+        "property": {
+          "id": 32966,
+          "name": "150 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287232,
+        "product_id": 2721,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287233,
+        "product_id": 2721,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287234,
+        "product_id": 2721,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "BC847W",
+    "desc_small": "Điện áp Vce max: 45V, dòng Ic max: 0.1A, công suất: 0.2W",
+    "category_extras": []
+  },
+  {
+    "id": 11579,
+    "name": "P2N2222A Transistor NPN 40V 0.6A 3 Chân TO-92",
+    "description": null,
+    "unit": "Con",
+    "slug": "p2n2222a-transistor-npn-40v-0-6a-3-chan-to-92",
+    "image_id": 43345,
+    "inventory": 900,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://media.digikey.com/pdf/Data%20Sheets/ON%20Semiconductor%20PDFs/P2N2222A%20Rev3.pdf",
+    "sheetname": "P2N2222A",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4125,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172351,
+        "product_id": 11579,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 221042,
+        "product_id": 11579,
+        "quantity": 100,
+        "price": 433
+      },
+      {
+        "id": 221043,
+        "product_id": 11579,
+        "quantity": 500,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 10058,
+        "product_id": 11579,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24917,
+        "product_id": 11579,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101807,
+        "product_id": 11579,
+        "property_id": 15231,
+        "property": {
+          "id": 15231,
+          "name": "40 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101808,
+        "product_id": 11579,
+        "property_id": 15232,
+        "property": {
+          "id": 15232,
+          "name": "600 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101809,
+        "product_id": 11579,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287007,
+        "product_id": 11579,
+        "property_id": 32891,
+        "property": {
+          "id": 32891,
+          "name": "1V @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287008,
+        "product_id": 11579,
+        "property_id": 32912,
+        "property": {
+          "id": 32912,
+          "name": "10nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287009,
+        "product_id": 11579,
+        "property_id": 32836,
+        "property": {
+          "id": 32836,
+          "name": "100 @ 150mA, 10V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287010,
+        "product_id": 11579,
+        "property_id": 32870,
+        "property": {
+          "id": 32870,
+          "name": "625 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287011,
+        "product_id": 11579,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287012,
+        "product_id": 11579,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287013,
+        "product_id": 11579,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "P2N2222A",
+    "desc_small": "Điện áp Vce max: 40V, dòng Ic max: 0.6A, công suất: 0.6W",
+    "category_extras": []
+  },
+  {
+    "id": 3175,
+    "name": "C828 Transistor NPN 25V 0.1A 3 Chân TO-92",
+    "description": null,
+    "unit": "Con",
+    "slug": "c828-transistor-npn-25v-0-1a-3-chan-to-92",
+    "image_id": 43351,
+    "inventory": 853,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://datasheetspdf.com/pdf-file/855811/SEMTECH/C828/1",
+    "sheetname": "C828",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 3996,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 206572,
+        "product_id": 3175,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 206573,
+        "product_id": 3175,
+        "quantity": 500,
+        "price": 433
+      },
+      {
+        "id": 206574,
+        "product_id": 3175,
+        "quantity": 1000,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3224,
+        "product_id": 3175,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24982,
+        "product_id": 3175,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101908,
+        "product_id": 3175,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101909,
+        "product_id": 3175,
+        "property_id": 15237,
+        "property": {
+          "id": 15237,
+          "name": "100 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101910,
+        "product_id": 3175,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287246,
+        "product_id": 3175,
+        "property_id": 32968,
+        "property": {
+          "id": 32968,
+          "name": "140mV @ 5mA, 50mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287247,
+        "product_id": 3175,
+        "property_id": 32969,
+        "property": {
+          "id": 32969,
+          "name": "130 @ 2mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287248,
+        "product_id": 3175,
+        "property_id": 32841,
+        "property": {
+          "id": 32841,
+          "name": "400 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287249,
+        "product_id": 3175,
+        "property_id": 32970,
+        "property": {
+          "id": 32970,
+          "name": "220MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287251,
+        "product_id": 3175,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287252,
+        "product_id": 3175,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 371,
+        "user_id": 2678
+      }
+    ],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "C828",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 0.1A, công suất: 0.4W",
+    "category_extras": []
+  },
+  {
+    "id": 39044,
+    "name": "MJD41C Transistor NPN 100V 6A 3 Chân TO-252",
+    "description": null,
+    "unit": "Con",
+    "slug": "mjd41c-transistor-npn-100v-6a-3-chan-to-252",
+    "image_id": 339,
+    "inventory": 794,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 2850,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740121889_MJD41C.PDF",
+    "sheetname": "MJD41C",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4223,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 237201,
+        "product_id": 39044,
+        "quantity": 1,
+        "price": 2850
+      },
+      {
+        "id": 237202,
+        "product_id": 39044,
+        "quantity": 100,
+        "price": 2736
+      },
+      {
+        "id": 237203,
+        "product_id": 39044,
+        "quantity": 500,
+        "price": 2622
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 312574,
+        "product_id": 39044,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 312575,
+        "product_id": 39044,
+        "property_id": 15228,
+        "property": {
+          "id": 15228,
+          "name": "6 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 312576,
+        "product_id": 39044,
+        "property_id": 15227,
+        "property": {
+          "id": 15227,
+          "name": "100 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 312577,
+        "product_id": 39044,
+        "property_id": 32859,
+        "property": {
+          "id": 32859,
+          "name": "1.5V @ 600mA, 6A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 312578,
+        "product_id": 39044,
+        "property_id": 32978,
+        "property": {
+          "id": 32978,
+          "name": "50µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 312579,
+        "product_id": 39044,
+        "property_id": 32861,
+        "property": {
+          "id": 32861,
+          "name": "15 @ 3A, 4V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 312580,
+        "product_id": 39044,
+        "property_id": 32896,
+        "property": {
+          "id": 32896,
+          "name": "20 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 312581,
+        "product_id": 39044,
+        "property_id": 32863,
+        "property": {
+          "id": 32863,
+          "name": "3MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 312582,
+        "product_id": 39044,
+        "property_id": 32786,
+        "property": {
+          "id": 32786,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 312583,
+        "product_id": 39044,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 312584,
+        "product_id": 39044,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 312585,
+        "product_id": 39044,
+        "property_id": 15211,
+        "property": {
+          "id": 15211,
+          "name": "TO-252",
+          "parent_id": 15208
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MJD41CT4G",
+    "desc_small": "Điện áp Vce max: 100V, dòng Ic max: 6A, công suất: 20W",
+    "category_extras": []
+  },
+  {
+    "id": 11578,
+    "name": "S8550 Transistor PNP 25V 0.5A TO-92",
+    "description": null,
+    "unit": "Con",
+    "slug": "s8550-transistor-pnp-25v-0-5a-to-92",
+    "image_id": 43343,
+    "inventory": 741,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557892_S8550.pdf",
+    "sheetname": "S8550",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4124,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 178870,
+        "product_id": 11578,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 178871,
+        "product_id": 11578,
+        "quantity": 500,
+        "price": 319
+      },
+      {
+        "id": 178872,
+        "product_id": 11578,
+        "quantity": 1000,
+        "price": 296
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 10057,
+        "product_id": 11578,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24919,
+        "product_id": 11578,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101810,
+        "product_id": 11578,
+        "property_id": 15234,
+        "property": {
+          "id": 15234,
+          "name": "25 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101812,
+        "product_id": 11578,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286999,
+        "product_id": 11578,
+        "property_id": 15210,
+        "property": {
+          "id": 15210,
+          "name": "500 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287000,
+        "product_id": 11578,
+        "property_id": 32866,
+        "property": {
+          "id": 32866,
+          "name": "600mV @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287001,
+        "product_id": 11578,
+        "property_id": 32820,
+        "property": {
+          "id": 32820,
+          "name": "100nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287002,
+        "product_id": 11578,
+        "property_id": 32867,
+        "property": {
+          "id": 32867,
+          "name": "120 @ 50mA, 1V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287003,
+        "product_id": 11578,
+        "property_id": 32870,
+        "property": {
+          "id": 32870,
+          "name": "625 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287004,
+        "product_id": 11578,
+        "property_id": 32868,
+        "property": {
+          "id": 32868,
+          "name": "150MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287005,
+        "product_id": 11578,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287006,
+        "product_id": 11578,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 37,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 1000
+    },
+    "manufacturer_code": "S8550",
+    "desc_small": "Điện áp Vce max: 25V, dòng Ic max: 0.5A, công suất: 0.63W",
+    "category_extras": []
+  },
+  {
+    "id": 7252,
+    "name": "D438 Transistor NPN 80V 0.7A 3 Chân TO-92",
+    "description": null,
+    "unit": null,
+    "slug": "d438-transistor-npn-80v-0-7a-3-chan-to-92",
+    "image_id": 29593,
+    "inventory": 507,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 3420,
+    "price_change": null,
+    "sheetfile": "https://datasheetspdf.com/pdf-file/611330/SanyoSemiconductorCorporation/D438/1",
+    "sheetname": "D438",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4051,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 28782,
+        "product_id": 7252,
+        "quantity": 1,
+        "price": 3420
+      },
+      {
+        "id": 28785,
+        "product_id": 7252,
+        "quantity": 100,
+        "price": 3306
+      },
+      {
+        "id": 107186,
+        "product_id": 7252,
+        "quantity": 500,
+        "price": 3192
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 5279,
+        "product_id": 7252,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24938,
+        "product_id": 7252,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101868,
+        "product_id": 7252,
+        "property_id": 15240,
+        "property": {
+          "id": 15240,
+          "name": "80 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101869,
+        "product_id": 7252,
+        "property_id": 15250,
+        "property": {
+          "id": 15250,
+          "name": "700 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101870,
+        "product_id": 7252,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287039,
+        "product_id": 7252,
+        "property_id": 32918,
+        "property": {
+          "id": 32918,
+          "name": "800mV @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287040,
+        "product_id": 7252,
+        "property_id": 32827,
+        "property": {
+          "id": 32827,
+          "name": "1µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287041,
+        "product_id": 7252,
+        "property_id": 32919,
+        "property": {
+          "id": 32919,
+          "name": "60 @ 50mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287042,
+        "product_id": 7252,
+        "property_id": 32914,
+        "property": {
+          "id": 32914,
+          "name": "900 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287043,
+        "product_id": 7252,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287044,
+        "product_id": 7252,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287045,
+        "product_id": 7252,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "D438",
+    "desc_small": "Điện áp Vce max: 80V, dòng Ic max: 0.7A, công suất: 0.9W",
+    "category_extras": []
+  },
+  {
+    "id": 2438,
+    "name": "D468 Transistor NPN 20V 1A 3 Chân TO-92",
+    "description": "",
+    "unit": null,
+    "slug": "d468-transistor-npn-20v-1a-3-chan-to-92",
+    "image_id": 30930,
+    "inventory": 478,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 798,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558329_D468.pdf",
+    "sheetname": "D468",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3992,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 166041,
+        "product_id": 2438,
+        "quantity": 1,
+        "price": 798
+      },
+      {
+        "id": 166042,
+        "product_id": 2438,
+        "quantity": 500,
+        "price": 741
+      },
+      {
+        "id": 166043,
+        "product_id": 2438,
+        "quantity": 1000,
+        "price": 684
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3230,
+        "product_id": 2438,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24994,
+        "product_id": 2438,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101926,
+        "product_id": 2438,
+        "property_id": 15259,
+        "property": {
+          "id": 15259,
+          "name": "20 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101927,
+        "product_id": 2438,
+        "property_id": 15216,
+        "property": {
+          "id": 15216,
+          "name": "1 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101928,
+        "product_id": 2438,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287206,
+        "product_id": 2438,
+        "property_id": 32937,
+        "property": {
+          "id": 32937,
+          "name": "500mV @ 80mA, 800mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287207,
+        "product_id": 2438,
+        "property_id": 32827,
+        "property": {
+          "id": 32827,
+          "name": "1µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287208,
+        "product_id": 2438,
+        "property_id": 32957,
+        "property": {
+          "id": 32957,
+          "name": "85 @ 500mA, 2V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287209,
+        "product_id": 2438,
+        "property_id": 32853,
+        "property": {
+          "id": 32853,
+          "name": "750 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287210,
+        "product_id": 2438,
+        "property_id": 32911,
+        "property": {
+          "id": 32911,
+          "name": "190MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287211,
+        "product_id": 2438,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287212,
+        "product_id": 2438,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 171,
+        "user_id": 1678
+      },
+      {
+        "id": 1690,
+        "user_id": 7044
+      }
+    ],
+    "package_quantity": {
+      "id": 35,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 500
+    },
+    "manufacturer_code": "D468",
+    "desc_small": "Điện áp Vce max: 20V, dòng Ic max: 1A",
+    "category_extras": []
+  },
+  {
+    "id": 8443,
+    "name": "MJE13003 Transistor NPN 400V 1.5A 3 Chân TO-126",
+    "description": null,
+    "unit": null,
+    "slug": "mje13003-transistor-npn-400v-1-5a-3-chan-to-126",
+    "image_id": 30383,
+    "inventory": 401,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 1140,
+    "price_change": null,
+    "sheetfile": "https://www.onsemi.com/pdf/datasheet/mje13003-d.pdf",
+    "sheetname": "MJE13003",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4069,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172429,
+        "product_id": 8443,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 172430,
+        "product_id": 8443,
+        "quantity": 100,
+        "price": 1083
+      },
+      {
+        "id": 172431,
+        "product_id": 8443,
+        "quantity": 500,
+        "price": 1026
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 9769,
+        "product_id": 8443,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24931,
+        "product_id": 8443,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101834,
+        "product_id": 8443,
+        "property_id": 15212,
+        "property": {
+          "id": 15212,
+          "name": "400 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101835,
+        "product_id": 8443,
+        "property_id": 15233,
+        "property": {
+          "id": 15233,
+          "name": "1.5 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 126264,
+        "product_id": 8443,
+        "property_id": 15248,
+        "property": {
+          "id": 15248,
+          "name": "TO-126",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287103,
+        "product_id": 8443,
+        "property_id": 32935,
+        "property": {
+          "id": 32935,
+          "name": "3V @ 500mA, 1.5A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287104,
+        "product_id": 8443,
+        "property_id": 32936,
+        "property": {
+          "id": 32936,
+          "name": "8 @ 500mA, 2V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287105,
+        "product_id": 8443,
+        "property_id": 32930,
+        "property": {
+          "id": 32930,
+          "name": "40 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287106,
+        "product_id": 8443,
+        "property_id": 32816,
+        "property": {
+          "id": 32816,
+          "name": "10MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287107,
+        "product_id": 8443,
+        "property_id": 32786,
+        "property": {
+          "id": 32786,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287108,
+        "product_id": 8443,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1675,
+        "user_id": 7044
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "MJE13003",
+    "desc_small": "Điện áp Vce max: 400V, dòng Ic max: 1.5A, công suất: 40W",
+    "category_extras": []
+  },
+  {
+    "id": 19220,
+    "name": "2SD718 Transistor NPN 120V 10A 3 Chân TO-3P",
+    "description": null,
+    "unit": null,
+    "slug": "2sd718-transistor-npn-120v-10a-3-chan-to-3p",
+    "image_id": 42736,
+    "inventory": 284,
+    "rohs": false,
+    "supplier_id": 190,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 10260,
+    "price_change": null,
+    "sheetfile": "http://www.unisonic.com.tw/datasheet/2SD718.pdf",
+    "sheetname": "2SD718",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 190,
+      "name": "UTC",
+      "slug": "utc"
+    },
+    "product_tags": [
+      {
+        "id": 4158,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172375,
+        "product_id": 19220,
+        "quantity": 1,
+        "price": 10260
+      },
+      {
+        "id": 172376,
+        "product_id": 19220,
+        "quantity": 50,
+        "price": 10032
+      },
+      {
+        "id": 172377,
+        "product_id": 19220,
+        "quantity": 100,
+        "price": 9804
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 55537,
+        "product_id": 19220,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 55538,
+        "product_id": 19220,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101779,
+        "product_id": 19220,
+        "property_id": 15218,
+        "property": {
+          "id": 15218,
+          "name": "120 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 247736,
+        "product_id": 19220,
+        "property_id": 15252,
+        "property": {
+          "id": 15252,
+          "name": "TO-3P",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286880,
+        "product_id": 19220,
+        "property_id": 15235,
+        "property": {
+          "id": 15235,
+          "name": "10 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 286881,
+        "product_id": 19220,
+        "property_id": 32889,
+        "property": {
+          "id": 32889,
+          "name": "2V @ 600mA, 6A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286882,
+        "product_id": 19220,
+        "property_id": 32801,
+        "property": {
+          "id": 32801,
+          "name": "10µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286883,
+        "product_id": 19220,
+        "property_id": 32795,
+        "property": {
+          "id": 32795,
+          "name": "55 @ 1A, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286884,
+        "product_id": 19220,
+        "property_id": 32888,
+        "property": {
+          "id": 32888,
+          "name": "80 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286885,
+        "product_id": 19220,
+        "property_id": 32890,
+        "property": {
+          "id": 32890,
+          "name": "12MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286886,
+        "product_id": 19220,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286887,
+        "product_id": 19220,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 6178,
+        "user_id": 60631
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "2SD718",
+    "desc_small": "Điện áp Vce max: 120V, dòng Ic max: 10A, công suất: 80W",
+    "category_extras": []
+  },
+  {
+    "id": 36822,
+    "name": "NJW0302G Transistor PNP 250V 15A 3 Chân TO-3P",
+    "description": null,
+    "unit": null,
+    "slug": "njw0302g-transistor-pnp-250v-15a-3-chan-to-3p",
+    "image_id": 54757,
+    "inventory": 251,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 13680,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734591414_NJW0281G.PDF",
+    "sheetname": "NJW0302G",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4215,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 204954,
+        "product_id": 36822,
+        "quantity": 1,
+        "price": 13680
+      },
+      {
+        "id": 204969,
+        "product_id": 36822,
+        "quantity": 20,
+        "price": 13110
+      },
+      {
+        "id": 204970,
+        "product_id": 36822,
+        "quantity": 50,
+        "price": 12540
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 262813,
+        "product_id": 36822,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 262814,
+        "product_id": 36822,
+        "property_id": 15274,
+        "property": {
+          "id": 15274,
+          "name": "250V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 262815,
+        "product_id": 36822,
+        "property_id": 15229,
+        "property": {
+          "id": 15229,
+          "name": "15 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 262816,
+        "product_id": 36822,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 262817,
+        "product_id": 36822,
+        "property_id": 15252,
+        "property": {
+          "id": 15252,
+          "name": "TO-3P",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286649,
+        "product_id": 36822,
+        "property_id": 32805,
+        "property": {
+          "id": 32805,
+          "name": "1V @ 500mA, 5A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286650,
+        "product_id": 36822,
+        "property_id": 32801,
+        "property": {
+          "id": 32801,
+          "name": "10µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286652,
+        "product_id": 36822,
+        "property_id": 32806,
+        "property": {
+          "id": 32806,
+          "name": "75 @ 3A, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286653,
+        "product_id": 36822,
+        "property_id": 32807,
+        "property": {
+          "id": 32807,
+          "name": "150 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286654,
+        "product_id": 36822,
+        "property_id": 32791,
+        "property": {
+          "id": 32791,
+          "name": "30MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286655,
+        "product_id": 36822,
+        "property_id": 32786,
+        "property": {
+          "id": 32786,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286656,
+        "product_id": 36822,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 67,
+      "package_id": 128,
+      "package_name": "Ống",
+      "quantity": 30
+    },
+    "manufacturer_code": "NJW0302G",
+    "desc_small": "Điện áp Vce max: 250V, dòng Ic max: 15A, công suất: 150W",
+    "category_extras": []
+  },
+  {
+    "id": 2117,
+    "name": "KSA1013-CN Transistor PNP 160V 1A 3 Chân TO-92",
+    "description": "",
+    "unit": null,
+    "slug": "ksa1013-cn-transistor-pnp-160v-1a-3-chan-to-92",
+    "image_id": 42737,
+    "inventory": 250,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558359_KSA1013.pdf",
+    "sheetname": "KSA1013",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3979,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172414,
+        "product_id": 2117,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 172415,
+        "product_id": 2117,
+        "quantity": 100,
+        "price": 559
+      },
+      {
+        "id": 172416,
+        "product_id": 2117,
+        "quantity": 500,
+        "price": 547
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3271,
+        "product_id": 2117,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25004,
+        "product_id": 2117,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101940,
+        "product_id": 2117,
+        "property_id": 15216,
+        "property": {
+          "id": 15216,
+          "name": "1 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101941,
+        "product_id": 2117,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287321,
+        "product_id": 2117,
+        "property_id": 15215,
+        "property": {
+          "id": 15215,
+          "name": "160 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 287322,
+        "product_id": 2117,
+        "property_id": 32796,
+        "property": {
+          "id": 32796,
+          "name": "1.5V @ 50mA, 500mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287323,
+        "product_id": 2117,
+        "property_id": 32827,
+        "property": {
+          "id": 32827,
+          "name": "1µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287324,
+        "product_id": 2117,
+        "property_id": 32892,
+        "property": {
+          "id": 32892,
+          "name": "60 @ 200mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287325,
+        "product_id": 2117,
+        "property_id": 32914,
+        "property": {
+          "id": 32914,
+          "name": "900 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287326,
+        "product_id": 2117,
+        "property_id": 32858,
+        "property": {
+          "id": 32858,
+          "name": "50MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287327,
+        "product_id": 2117,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287328,
+        "product_id": 2117,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1692,
+        "user_id": 7044
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "KSA1013",
+    "desc_small": "Điện áp Vce max: 160V, dòng Ic max: 1A, công suất: 0.9W",
+    "category_extras": []
+  },
+  {
+    "id": 23464,
+    "name": "13001 Transistor NPN 400V 0.3A 3 Chân TO-92",
+    "description": null,
+    "unit": null,
+    "slug": "13001-transistor-npn-400v-0-3a-3-chan-to-92",
+    "image_id": 35816,
+    "inventory": 244,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://html.alldatasheet.vn/html-pdf/888527/SEMTECH_ELEC/13001/862/1/13001.html",
+    "sheetname": "13001",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4176,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172423,
+        "product_id": 23464,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 172424,
+        "product_id": 23464,
+        "quantity": 100,
+        "price": 331
+      },
+      {
+        "id": 172425,
+        "product_id": 23464,
+        "quantity": 500,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 113362,
+        "product_id": 23464,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 113363,
+        "product_id": 23464,
+        "property_id": 15212,
+        "property": {
+          "id": 15212,
+          "name": "400 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 113364,
+        "product_id": 23464,
+        "property_id": 16216,
+        "property": {
+          "id": 16216,
+          "name": "300 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 113365,
+        "product_id": 23464,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 113366,
+        "product_id": 23464,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286763,
+        "product_id": 23464,
+        "property_id": 32851,
+        "property": {
+          "id": 32851,
+          "name": "500mV @ 10mA, 50mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286764,
+        "product_id": 23464,
+        "property_id": 32809,
+        "property": {
+          "id": 32809,
+          "name": "100µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286765,
+        "product_id": 23464,
+        "property_id": 32852,
+        "property": {
+          "id": 32852,
+          "name": "5 @ 0.25mA, 10V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286766,
+        "product_id": 23464,
+        "property_id": 32853,
+        "property": {
+          "id": 32853,
+          "name": "750 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286767,
+        "product_id": 23464,
+        "property_id": 32854,
+        "property": {
+          "id": 32854,
+          "name": "8MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286768,
+        "product_id": 23464,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286769,
+        "product_id": 23464,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "13001",
+    "desc_small": "Điện áp Vce max: 400V, dòng Ic max: 0.3A, công suất: 0.75W",
+    "category_extras": []
+  },
+  {
+    "id": 3172,
+    "name": "2SB562 Transistor PNP 20V 1A 3 Chân TO-92",
+    "description": null,
+    "unit": null,
+    "slug": "2sb562-transistor-pnp-20v-1a-3-chan-to-92",
+    "image_id": 30373,
+    "inventory": 222,
+    "rohs": false,
+    "supplier_id": 132,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 912,
+    "price_change": null,
+    "sheetfile": "https://pdf.datasheetcatalog.com/datasheet/HitachiSemiconductor/mXwvsrs.pdf",
+    "sheetname": "2SB562",
+    "multiples": 5,
+    "minimum_order_quantity": 5,
+    "package_name": null,
+    "supplier": {
+      "id": 132,
+      "name": "Hitachi",
+      "slug": "hitachi"
+    },
+    "product_tags": [
+      {
+        "id": 3995,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172381,
+        "product_id": 3172,
+        "quantity": 1,
+        "price": 912
+      },
+      {
+        "id": 172382,
+        "product_id": 3172,
+        "quantity": 100,
+        "price": 855
+      },
+      {
+        "id": 172383,
+        "product_id": 3172,
+        "quantity": 500,
+        "price": 798
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24984,
+        "product_id": 3172,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101913,
+        "product_id": 3172,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287236,
+        "product_id": 3172,
+        "property_id": 15216,
+        "property": {
+          "id": 15216,
+          "name": "1 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287237,
+        "product_id": 3172,
+        "property_id": 15259,
+        "property": {
+          "id": 15259,
+          "name": "20 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 287238,
+        "product_id": 3172,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 287239,
+        "product_id": 3172,
+        "property_id": 32937,
+        "property": {
+          "id": 32937,
+          "name": "500mV @ 80mA, 800mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287240,
+        "product_id": 3172,
+        "property_id": 32827,
+        "property": {
+          "id": 32827,
+          "name": "1µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287241,
+        "product_id": 3172,
+        "property_id": 32957,
+        "property": {
+          "id": 32957,
+          "name": "85 @ 500mA, 2V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287242,
+        "product_id": 3172,
+        "property_id": 32914,
+        "property": {
+          "id": 32914,
+          "name": "900 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287243,
+        "product_id": 3172,
+        "property_id": 32967,
+        "property": {
+          "id": 32967,
+          "name": "350MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287244,
+        "product_id": 3172,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287245,
+        "product_id": 3172,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1691,
+        "user_id": 7044
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "2SB562",
+    "desc_small": "Điện áp Vce max: 20V, dòng Ic max: 1A, công suất: 0.9W",
+    "category_extras": []
+  },
+  {
+    "id": 11424,
+    "name": "2N5551 Transistor NPN 160V 0.6A 3 Chân TO-92",
+    "description": null,
+    "unit": null,
+    "slug": "2n5551-transistor-npn-160v-0-6a-3-chan-to-92",
+    "image_id": 43346,
+    "inventory": 194,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557917_2N5551.pdf",
+    "sheetname": "2N5551",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4119,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172360,
+        "product_id": 11424,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 172362,
+        "product_id": 11424,
+        "quantity": 100,
+        "price": 433
+      },
+      {
+        "id": 172364,
+        "product_id": 11424,
+        "quantity": 500,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 9694,
+        "product_id": 11424,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24927,
+        "product_id": 11424,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101822,
+        "product_id": 11424,
+        "property_id": 15215,
+        "property": {
+          "id": 15215,
+          "name": "160 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101823,
+        "product_id": 11424,
+        "property_id": 15232,
+        "property": {
+          "id": 15232,
+          "name": "600 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101824,
+        "product_id": 11424,
+        "property_id": 15217,
+        "property": {
+          "id": 15217,
+          "name": "TO-92",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 286978,
+        "product_id": 11424,
+        "property_id": 32864,
+        "property": {
+          "id": 32864,
+          "name": "200mV @ 5mA, 50mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 286979,
+        "product_id": 11424,
+        "property_id": 32831,
+        "property": {
+          "id": 32831,
+          "name": "50nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 286980,
+        "product_id": 11424,
+        "property_id": 32903,
+        "property": {
+          "id": 32903,
+          "name": "80 @ 10mA, 5V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 286981,
+        "product_id": 11424,
+        "property_id": 32870,
+        "property": {
+          "id": 32870,
+          "name": "625 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 286982,
+        "product_id": 11424,
+        "property_id": 32848,
+        "property": {
+          "id": 32848,
+          "name": "300MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 286983,
+        "product_id": 11424,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 286984,
+        "product_id": 11424,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "2N5551",
+    "desc_small": "Điện áp Vce max: 160V, dòng Ic max: 0.6A, công suất: 0.6W",
+    "category_extras": []
+  },
+  {
+    "id": 1841,
+    "name": "TIP41C Transistor NPN 100V 6A 3 Chân TO-220",
+    "description": "",
+    "unit": null,
+    "slug": "tip41c-transistor-npn-100v-6a-3-chan-to-220",
+    "image_id": 30193,
+    "inventory": 189,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 2850,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558448_TIP41C.pdf",
+    "sheetname": "TIP41C",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 3964,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172465,
+        "product_id": 1841,
+        "quantity": 1,
+        "price": 2850
+      },
+      {
+        "id": 172466,
+        "product_id": 1841,
+        "quantity": 100,
+        "price": 2736
+      },
+      {
+        "id": 172467,
+        "product_id": 1841,
+        "quantity": 500,
+        "price": 2622
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3244,
+        "product_id": 1841,
+        "property_id": 469,
+        "property": {
+          "id": 469,
+          "name": "NPN",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25024,
+        "product_id": 1841,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101969,
+        "product_id": 1841,
+        "property_id": 15227,
+        "property": {
+          "id": 15227,
+          "name": "100 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101970,
+        "product_id": 1841,
+        "property_id": 15228,
+        "property": {
+          "id": 15228,
+          "name": "6 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101971,
+        "product_id": 1841,
+        "property_id": 15214,
+        "property": {
+          "id": 15214,
+          "name": "TO-220",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287388,
+        "product_id": 1841,
+        "property_id": 32859,
+        "property": {
+          "id": 32859,
+          "name": "1.5V @ 600mA, 6A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287389,
+        "product_id": 1841,
+        "property_id": 32860,
+        "property": {
+          "id": 32860,
+          "name": "700µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287390,
+        "product_id": 1841,
+        "property_id": 32861,
+        "property": {
+          "id": 32861,
+          "name": "15 @ 3A, 4V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287391,
+        "product_id": 1841,
+        "property_id": 32862,
+        "property": {
+          "id": 32862,
+          "name": "65 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287392,
+        "product_id": 1841,
+        "property_id": 32863,
+        "property": {
+          "id": 32863,
+          "name": "3MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287393,
+        "product_id": 1841,
+        "property_id": 32786,
+        "property": {
+          "id": 32786,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287394,
+        "product_id": 1841,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1688,
+        "user_id": 7044
+      },
+      {
+        "id": 3836,
+        "user_id": 26897
+      },
+      {
+        "id": 6030,
+        "user_id": 61744
+      }
+    ],
+    "package_quantity": {
+      "id": 13,
+      "package_id": 128,
+      "package_name": "Ống",
+      "quantity": 50
+    },
+    "manufacturer_code": "TIP41C",
+    "desc_small": "Điện áp Vce max: 100V, dòng Ic max: 6A, công suất: 65W",
+    "category_extras": []
+  },
+  {
+    "id": 2031,
+    "name": "BC857 Transistor PNP 45V 0.1A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "slug": "bc857-transistor-pnp-45v-0-1a-3-chan-sot-23",
+    "image_id": 30428,
+    "inventory": 180,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://www.onsemi.com/pdf/datasheet/bc856alt1-d.pdf",
+    "sheetname": "BC857BLT1G",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3967,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154645,
+        "product_id": 2031,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 204407,
+        "product_id": 2031,
+        "quantity": 500,
+        "price": 433
+      },
+      {
+        "id": 204408,
+        "product_id": 2031,
+        "quantity": 1000,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3243,
+        "product_id": 2031,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 25022,
+        "product_id": 2031,
+        "property_id": 3536,
+        "property": {
+          "id": 3536,
+          "name": "Dán bề mặt",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101966,
+        "product_id": 2031,
+        "property_id": 15236,
+        "property": {
+          "id": 15236,
+          "name": "45 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101967,
+        "product_id": 2031,
+        "property_id": 15237,
+        "property": {
+          "id": 15237,
+          "name": "100 mA",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 287395,
+        "product_id": 2031,
+        "property_id": 32986,
+        "property": {
+          "id": 32986,
+          "name": "650mV @ 5mA, 100mA",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287396,
+        "product_id": 2031,
+        "property_id": 32844,
+        "property": {
+          "id": 32844,
+          "name": "15nA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287397,
+        "product_id": 2031,
+        "property_id": 32849,
+        "property": {
+          "id": 32849,
+          "name": "300 mW",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287398,
+        "product_id": 2031,
+        "property_id": 32846,
+        "property": {
+          "id": 32846,
+          "name": "100MHz",
+          "parent_id": 32782
+        }
+      },
+      {
+        "id": 287399,
+        "product_id": 2031,
+        "property_id": 32804,
+        "property": {
+          "id": 32804,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287401,
+        "product_id": 2031,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      },
+      {
+        "id": 287402,
+        "product_id": 2031,
+        "property_id": 15238,
+        "property": {
+          "id": 15238,
+          "name": "SOT-23",
+          "parent_id": 15208
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 3912,
+        "user_id": 15863
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "BC857BLT1G",
+    "desc_small": "Điện áp Vce max: 45V, dòng Ic max: 0.1A, công suất: 0.3W",
+    "category_extras": []
+  },
+  {
+    "id": 4931,
+    "name": "TIP32C Transistor PNP 100V 3A 3 Chân TO-220",
+    "description": null,
+    "unit": null,
+    "slug": "tip32c-transistor-pnp-100v-3a-3-chan-to-220",
+    "image_id": 28841,
+    "inventory": 163,
+    "rohs": true,
+    "supplier_id": 17,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "price": 5130,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740558267_TIP32C.pdf",
+    "sheetname": "TIP32C",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tags": [
+      {
+        "id": 4033,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172462,
+        "product_id": 4931,
+        "quantity": 1,
+        "price": 5130
+      },
+      {
+        "id": 172463,
+        "product_id": 4931,
+        "quantity": 50,
+        "price": 5016
+      },
+      {
+        "id": 172464,
+        "product_id": 4931,
+        "quantity": 100,
+        "price": 4902
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 3218,
+        "product_id": 4931,
+        "property_id": 471,
+        "property": {
+          "id": 471,
+          "name": "PNP",
+          "parent_id": 2194
+        }
+      },
+      {
+        "id": 24970,
+        "product_id": 4931,
+        "property_id": 3535,
+        "property": {
+          "id": 3535,
+          "name": "Xuyên lỗ",
+          "parent_id": 3534
+        }
+      },
+      {
+        "id": 101890,
+        "product_id": 4931,
+        "property_id": 15227,
+        "property": {
+          "id": 15227,
+          "name": "100 V",
+          "parent_id": 15207
+        }
+      },
+      {
+        "id": 101891,
+        "product_id": 4931,
+        "property_id": 15222,
+        "property": {
+          "id": 15222,
+          "name": "3 A",
+          "parent_id": 15206
+        }
+      },
+      {
+        "id": 101892,
+        "product_id": 4931,
+        "property_id": 15214,
+        "property": {
+          "id": 15214,
+          "name": "TO-220",
+          "parent_id": 15208
+        }
+      },
+      {
+        "id": 287150,
+        "product_id": 4931,
+        "property_id": 32941,
+        "property": {
+          "id": 32941,
+          "name": "1.2V @ 375mA, 3A",
+          "parent_id": 32778
+        }
+      },
+      {
+        "id": 287151,
+        "product_id": 4931,
+        "property_id": 32942,
+        "property": {
+          "id": 32942,
+          "name": "300µA",
+          "parent_id": 32779
+        }
+      },
+      {
+        "id": 287152,
+        "product_id": 4931,
+        "property_id": 32943,
+        "property": {
+          "id": 32943,
+          "name": "10 @ 3A, 4V",
+          "parent_id": 32780
+        }
+      },
+      {
+        "id": 287153,
+        "product_id": 4931,
+        "property_id": 32930,
+        "property": {
+          "id": 32930,
+          "name": "40 W",
+          "parent_id": 32781
+        }
+      },
+      {
+        "id": 287154,
+        "product_id": 4931,
+        "property_id": 32792,
+        "property": {
+          "id": 32792,
+          "name": "150°C (TJ)",
+          "parent_id": 32783
+        }
+      },
+      {
+        "id": 287155,
+        "product_id": 4931,
+        "property_id": 32787,
+        "property": {
+          "id": 32787,
+          "name": "3",
+          "parent_id": 32784
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1679,
+        "user_id": 7044
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "TIP32C",
+    "desc_small": "Điện áp Vce max: 100V, dòng Ic max: 3A, công suất: 40W",
+    "category_extras": []
+  }
+]

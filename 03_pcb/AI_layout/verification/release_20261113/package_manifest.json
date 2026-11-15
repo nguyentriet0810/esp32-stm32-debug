@@ -1,0 +1,25 @@
+{
+  "zip": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113.zip",
+  "bytes": 214071,
+  "sha256": "426c87f197d92fe3a43af3a1fef84c9908ee7ce143eecf7e3f6ac88310a30695",
+  "source_pcb_sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "source_unchanged": true,
+  "archive_crc_pass": true,
+  "all_archive_files_identical_to_verified_release": true,
+  "files": [
+    "AI_layout-B_Cu.gbr",
+    "AI_layout-B_Mask.gbr",
+    "AI_layout-B_Paste.gbr",
+    "AI_layout-B_Silkscreen.gbr",
+    "AI_layout-Edge_Cuts.gbr",
+    "AI_layout-F_Cu.gbr",
+    "AI_layout-F_Mask.gbr",
+    "AI_layout-F_Paste.gbr",
+    "AI_layout-F_Silkscreen.gbr",
+    "AI_layout-job.gbrjob",
+    "AI_layout-NPTH.drl",
+    "AI_layout-PTH.drl",
+    "README_FAB.txt",
+    "SHA256SUMS.txt"
+  ]
+}

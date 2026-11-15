@@ -61,14 +61,16 @@ Lần setup trên máy mới cần kết nối mạng. Binary toolchain không n
 
 ## Nạp và xem log
 
-Board hiện tại được xác nhận ở `COM13`, qua USB-UART CH343:
+Chọn cổng serial của thiết bị thực tế. `COM13` qua CH343 là thiết lập DevKit đã
+kiểm tra trước đây; PCB revision C dùng UART0 tại J2 và USB native tại J1:
 
 ```powershell
 .\01_source\tools\idf.ps1 -p COM13 -b 460800 flash monitor
 ```
 
-Console chính là UART0; log ứng dụng xuất thêm qua USB Serial/JTAG của S3.
-Nếu board có hai cổng USB, cổng sử dụng phụ thuộc mạch nối của model board đó.
+Console chính là UART0 tại J2 (GPIO43 TX/GPIO44 RX), cần USB-UART ngoài mức 3,3 V;
+J2 còn có DTR/RTS cho auto-reset. J1 nối USB native GPIO19/20 của S3, dùng nạp qua
+USB Serial/JTAG và xuất log phụ. Firmware hiện đọc lệnh console từ UART0.
 
 Log ứng dụng mong đợi:
 
@@ -90,10 +92,36 @@ Khi thay defaults sau lần build đầu, cập nhật bằng `menuconfig`, ho�
 
 ## Cấu hình và kiểm tra firmware
 
-`menuconfig` → `STM32 probe hardware` cho phép đổi pin, clock SWD khởi tạo, cổng TCP,
-bật/tắt OLED và encoder. Profile N16R8 từ chối chân trùng hoặc chân dành cho flash/PSRAM,
-USB, UART0, boot strap và LED tham chiếu. Defaults giữ OLED/encoder bật để phát hiện khi
-cắm vào; thiếu OLED là lỗi không nghiêm trọng.
+`menuconfig` → `STM32 probe hardware` cho phép đổi clock SWD khởi tạo, cổng TCP,
+bật/tắt OLED và encoder. Pin cố định theo PCB mới nhất, không còn profile pin DevKit.
+Profile N16R8 từ chối chân trùng hoặc chân dành cho flash/PSRAM,
+USB, UART0, boot strap; nhóm microSD GPIO38–42 thuộc riêng component `probe_sd`. Defaults giữ OLED/encoder bật
+để phát hiện khi cắm vào; thiếu OLED là lỗi không nghiêm trọng.
+
+Pin mặc định theo schematic revision C: SWDIO/SWCLK/SWO/nRST = 4/5/6/7,
+OLED SDA/SCL = 8/9, encoder A/B/SW = 15/16/17. Các symbol GPIO trong Kconfig không
+còn cho sửa bằng menuconfig; khi reconfigure, giá trị pin đã lưu được thay bằng pin PCB.
+Sau cập nhật source/Kconfig, chạy:
+
+```powershell
+.\01_source\tools\idf.ps1 reconfigure build
+```
+
+microSD được bật mặc định (`CONFIG_PROBE_SD_ENABLE=y`), SPI tối đa 4000 kHz qua
+`CONFIG_PROBE_SD_MAX_FREQ_KHZ`. Có thể tắt riêng driver trong menuconfig; GPIO vẫn cố định.
+Thẻ FAT được mount tại `/sdcard`; thiếu/lỗi thẻ không dừng probe, không tự format.
+Xem [lệnh console và quy trình kiểm tra SD](11_sd_storage.md).
+Kiểm tra cấu hình với netlist mới xuất từ schematic:
+
+```powershell
+New-Item -ItemType Directory -Force .\01_source\.cache\schematic_audit > $null
+& 'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe' sch export netlist --format kicadxml -o .\01_source\.cache\schematic_audit\latest.xml .\03_pcb\AI_layout\AI_layout.kicad_sch
+& .\01_source\.tooling\python\python.exe .\01_source\tools\test_board_config.py --netlist .\01_source\.cache\schematic_audit\latest.xml --sdkconfig .\01_source\sdkconfig
+```
+
+Script kiểm tra 14 GPIO, kết nối J3/J4/J5 và pin trong cấu hình build.
+Chú thích tự do trong schematic còn ghi nhóm SD GPIO14–18 là thông tin cũ; kết nối
+netlist thực tế dùng CS/MOSI/SCK/MISO/DETECT = 38/39/40/41/42.
 
 Console UART 115200: `wifi <SSID>|<password>`, `status`, `pins`, `clock <Hz>`, `ap`.
 SSID 1–32 byte, mật khẩu WPA2 8–63 byte; dấu `|` phân cách nên không dùng trong SSID.

@@ -1,0 +1,74 @@
+--- D:\esp32_debug\03_pcb\.tooling\ai-layout\ground-audit\ground_snapshot.kicad_pcb
++++ D:\esp32_debug\03_pcb\AI_layout\AI_layout.kicad_pcb
+@@ -2462,7 +2462,7 @@
+ 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+ 		(tags "resistor handsolder")
+ 		(property "Reference" "R24"
+-			(at -3.5 0 0)
++			(at -4 0 0)
+ 			(layer "F.SilkS")
+ 			(uuid "4003ab79-253f-48ae-ae82-ff0f052fc091")
+ 			(effects
+@@ -3624,7 +3624,7 @@
+ 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+ 		(tags "resistor handsolder")
+ 		(property "Reference" "R37"
+-			(at 4 -0.25 0)
++			(at 3.2 0.25 270)
+ 			(layer "F.SilkS")
+ 			(uuid "2e6e21bd-bd92-4dab-b0fd-54d29aff2e6a")
+ 			(effects
+@@ -6795,7 +6795,7 @@
+ 		(descr "SOT, 6 Pin (JEDEC MO-178 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
+ 		(tags "SOT TO_SOT_SMD")
+ 		(property "Reference" "D3"
+-			(at 3 0 180)
++			(at 2.9 1.5 180)
+ 			(layer "F.SilkS")
+ 			(uuid "faf10023-7981-427b-8aa8-52111b18c725")
+ 			(effects
+@@ -7151,7 +7151,7 @@
+ 		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+ 		(tags "resistor handsolder")
+ 		(property "Reference" "R34"
+-			(at 0 -2.5 180)
++			(at -1 -2.5 180)
+ 			(layer "F.SilkS")
+ 			(uuid "3b512f92-2ba3-43d9-9ab6-6a79cb74296e")
+ 			(effects
+@@ -10478,7 +10478,7 @@
+ 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
+ 		(tags "SOT TO_SOT_SMD")
+ 		(property "Reference" "D6"
+-			(at 1.7 -1.5 0)
++			(at 2.7 0 0)
+ 			(layer "F.SilkS")
+ 			(uuid "1009ee8f-8e1d-403e-a9a6-fa61c41ad8ee")
+ 			(effects
+@@ -11450,7 +11450,7 @@
+ 		(descr "Diode SMA (DO-214AC)")
+ 		(tags "Diode SMA (DO-214AC)")
+ 		(property "Reference" "D1"
+-			(at 3 -3 180)
++			(at 3 -2.5 180)
+ 			(layer "F.SilkS")
+ 			(uuid "5b2aa0ca-1411-48c6-8b65-ed81af5c326e")
+ 			(effects
+@@ -12326,7 +12326,7 @@
+ 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
+ 		(tags "SOT TO_SOT_SMD")
+ 		(property "Reference" "Q1"
+-			(at 2 2 180)
++			(at 2.9375 0 180)
+ 			(layer "F.SilkS")
+ 			(uuid "2eb93008-8b9f-479b-aaca-d7c71f5a4562")
+ 			(effects
+@@ -14600,7 +14600,7 @@
+ 		(layer "Edge.Cuts")
+ 		(uuid "59019b88-6f82-4597-a3fa-eb23a7709c31")
+ 	)
+-	(gr_text "AI_layout"
++	(gr_text "REV 1.0"
+ 		(locked yes)
+ 		(at 151 108.5 0)
+ 		(layer "F.SilkS")

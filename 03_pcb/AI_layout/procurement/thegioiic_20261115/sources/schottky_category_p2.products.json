@@ -1,0 +1,3282 @@
+[
+  {
+    "id": 42882,
+    "name": "MBR20200CT Schottky Barrier Diodes 10A 200V TO-220",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbr20200ct-schottky-barrier-diodes-10a-200v-to-220",
+    "image_id": 1649,
+    "inventory": 117,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "price": 8550,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592151_MBR20200CT.pdf",
+    "sheetname": "MBR20200CT",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4225,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 256871,
+        "product_id": 42882,
+        "quantity": 1,
+        "price": 8550
+      },
+      {
+        "id": 257007,
+        "product_id": 42882,
+        "quantity": 50,
+        "price": 8322
+      },
+      {
+        "id": 257008,
+        "product_id": 42882,
+        "quantity": 100,
+        "price": 8094
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 353456,
+        "product_id": 42882,
+        "property_id": 15959,
+        "property": {
+          "id": 15959,
+          "name": "200 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 353457,
+        "product_id": 42882,
+        "property_id": 32167,
+        "property": {
+          "id": 32167,
+          "name": "10A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 353458,
+        "product_id": 42882,
+        "property_id": 32250,
+        "property": {
+          "id": 32250,
+          "name": "900 mV @ 10 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 353459,
+        "product_id": 42882,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 353460,
+        "product_id": 42882,
+        "property_id": 32251,
+        "property": {
+          "id": 32251,
+          "name": "1 mA @ 200 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 353461,
+        "product_id": 42882,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 353462,
+        "product_id": 42882,
+        "property_id": 32226,
+        "property": {
+          "id": 32226,
+          "name": "TO-220",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 353463,
+        "product_id": 42882,
+        "property_id": 32231,
+        "property": {
+          "id": 32231,
+          "name": "-65°C ~ 175°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 13,
+      "package_id": 128,
+      "package_name": "Ống",
+      "quantity": 50
+    },
+    "manufacturer_code": "MBR20200CT",
+    "desc_small": "Common Cathode 200V 10A",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 11253,
+    "name": "MBR20100CT Diode Schottky 100V 10A TO-220",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbr20100ct-diode-schottky-100v-10a-to-220",
+    "image_id": 63391,
+    "inventory": 96,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "price": 4560,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740479483_MBR20100CT.pdf",
+    "sheetname": "MBR20100CT",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4080,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 175836,
+        "product_id": 11253,
+        "quantity": 1,
+        "price": 4560
+      },
+      {
+        "id": 175837,
+        "product_id": 11253,
+        "quantity": 50,
+        "price": 4446
+      },
+      {
+        "id": 175838,
+        "product_id": 11253,
+        "quantity": 100,
+        "price": 4332
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24576,
+        "product_id": 11253,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108823,
+        "product_id": 11253,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284869,
+        "product_id": 11253,
+        "property_id": 32167,
+        "property": {
+          "id": 32167,
+          "name": "10A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284870,
+        "product_id": 11253,
+        "property_id": 32259,
+        "property": {
+          "id": 32259,
+          "name": "850 mV @ 10 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284871,
+        "product_id": 11253,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284872,
+        "product_id": 11253,
+        "property_id": 32201,
+        "property": {
+          "id": 32201,
+          "name": "100 µA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284873,
+        "product_id": 11253,
+        "property_id": 32166,
+        "property": {
+          "id": 32166,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284874,
+        "product_id": 11253,
+        "property_id": 32226,
+        "property": {
+          "id": 32226,
+          "name": "TO-220",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBR20100CT",
+    "desc_small": "DIODE SCHOTTKY 100V 10A TO220AB",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 11393,
+    "name": "SB2100 Diode Schottky 100V 2A",
+    "description": null,
+    "unit": "Con",
+    "slug": "sb2100-diode-schottky-100v-2a",
+    "image_id": 1124,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 1140,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740479302_SB2100.pdf",
+    "sheetname": "SB2100",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 246313,
+        "product_id": 11393,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 246314,
+        "product_id": 11393,
+        "quantity": 100,
+        "price": 1083
+      },
+      {
+        "id": 246315,
+        "product_id": 11393,
+        "quantity": 500,
+        "price": 1026
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24566,
+        "product_id": 11393,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108802,
+        "product_id": 11393,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284329,
+        "product_id": 11393,
+        "property_id": 32183,
+        "property": {
+          "id": 32183,
+          "name": "2A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284330,
+        "product_id": 11393,
+        "property_id": 32197,
+        "property": {
+          "id": 32197,
+          "name": "850 mV @ 2 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284331,
+        "product_id": 11393,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284332,
+        "product_id": 11393,
+        "property_id": 32238,
+        "property": {
+          "id": 32238,
+          "name": "500 µA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284333,
+        "product_id": 11393,
+        "property_id": 32241,
+        "property": {
+          "id": 32241,
+          "name": "170pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284335,
+        "product_id": 11393,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284336,
+        "product_id": 11393,
+        "property_id": 32213,
+        "property": {
+          "id": 32213,
+          "name": "DO-204AC, DO-15",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SB2100",
+    "desc_small": "DIODE SCHOTTKY 100V 2A DO15",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 40314,
+    "name": "C4D20120H Carbide Schottky Diode 1200V 54A TO-247",
+    "description": null,
+    "unit": "Con",
+    "slug": "c4d20120h-carbide-schottky-diode-1200v-54a-to-247",
+    "image_id": 59246,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 169,
+    "category_id": 164,
+    "product_tag_id": 7,
+    "price": 127680,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1745636257_C4D20120H.pdf",
+    "sheetname": "C4D20120H",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 169,
+      "name": "Cree",
+      "slug": "cree"
+    },
+    "product_tags": [
+      {
+        "id": 3792,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 239221,
+        "product_id": 40314,
+        "quantity": 1,
+        "price": 127680
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 330021,
+        "product_id": 40314,
+        "property_id": 38387,
+        "property": {
+          "id": 38387,
+          "name": "1200 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 330023,
+        "product_id": 40314,
+        "property_id": 38389,
+        "property": {
+          "id": 38389,
+          "name": "1.8 V @ 20 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 330024,
+        "product_id": 40314,
+        "property_id": 38390,
+        "property": {
+          "id": 38390,
+          "name": "200 µA @ 1200 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 330025,
+        "product_id": 40314,
+        "property_id": 38391,
+        "property": {
+          "id": 38391,
+          "name": "1500pF @ 0V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 330026,
+        "product_id": 40314,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 330029,
+        "product_id": 40314,
+        "property_id": 38388,
+        "property": {
+          "id": 38388,
+          "name": "54 A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 330030,
+        "product_id": 40314,
+        "property_id": 38392,
+        "property": {
+          "id": 38392,
+          "name": "TO-247",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 330031,
+        "product_id": 40314,
+        "property_id": 38393,
+        "property": {
+          "id": 38393,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "C4D20120H",
+    "desc_small": "DIODE SIL CARB 1200V 54A TO2472",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 38271,
+    "name": "(Thanh Lý) SS26 SMA Diode Schottky 2A",
+    "description": null,
+    "unit": "Con",
+    "slug": "thanh-ly-ss26-sma-diode-schottky-2a",
+    "image_id": 52051,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 341,
+    "category_id": 164,
+    "product_tag_id": 21,
+    "price": 228,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734590548_SS26_mdd.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 2500,
+    "minimum_order_quantity": 2500,
+    "package_name": null,
+    "supplier": {
+      "id": 341,
+      "name": "Microdiode Semiconductor",
+      "slug": "microdiode-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4425,
+        "name": "Hàng giảm giá",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 21,
+        "color": "#cb4848"
+      }
+    ],
+    "product_tag": {
+      "id": 21,
+      "name": "Hàng giảm giá"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 234617,
+        "product_id": 38271,
+        "quantity": 1,
+        "price": 228
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 305409,
+        "product_id": 38271,
+        "property_id": 15960,
+        "property": {
+          "id": 15960,
+          "name": "60 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 305410,
+        "product_id": 38271,
+        "property_id": 32183,
+        "property": {
+          "id": 32183,
+          "name": "2A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 305411,
+        "product_id": 38271,
+        "property_id": 32184,
+        "property": {
+          "id": 32184,
+          "name": "700 mV @ 2 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 305412,
+        "product_id": 38271,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 305413,
+        "product_id": 38271,
+        "property_id": 32185,
+        "property": {
+          "id": 32185,
+          "name": "80pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 305414,
+        "product_id": 38271,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 305415,
+        "product_id": 38271,
+        "property_id": 32174,
+        "property": {
+          "id": 32174,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 305416,
+        "product_id": 38271,
+        "property_id": 32186,
+        "property": {
+          "id": 32186,
+          "name": "-55°C ~125°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS26",
+    "desc_small": "2A, 60V, tình trạng: hàng mới 100%",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 36825,
+    "name": "MBR0520T1G Diode Schottky 20V 0.5A SOD-123",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbr0520t1g-diode-schottky-20v-0-5a-sod-123",
+    "image_id": 19907,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734591415_MBR0520T1G.pdf",
+    "sheetname": "MBR0520T1G",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4218,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 205005,
+        "product_id": 36825,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 205006,
+        "product_id": 36825,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 205007,
+        "product_id": 36825,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 265355,
+        "product_id": 36825,
+        "property_id": 15963,
+        "property": {
+          "id": 15963,
+          "name": "20 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 265357,
+        "product_id": 36825,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 284172,
+        "product_id": 36825,
+        "property_id": 32192,
+        "property": {
+          "id": 32192,
+          "name": "500mA",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284173,
+        "product_id": 36825,
+        "property_id": 32193,
+        "property": {
+          "id": 32193,
+          "name": "450 mV @ 500 mA",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284174,
+        "product_id": 36825,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284175,
+        "product_id": 36825,
+        "property_id": 32194,
+        "property": {
+          "id": 32194,
+          "name": "80 µA @ 20 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284176,
+        "product_id": 36825,
+        "property_id": 32195,
+        "property": {
+          "id": 32195,
+          "name": "30pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284177,
+        "product_id": 36825,
+        "property_id": 32181,
+        "property": {
+          "id": 32181,
+          "name": "SOD-123",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284178,
+        "product_id": 36825,
+        "property_id": 32196,
+        "property": {
+          "id": 32196,
+          "name": "-40°C ~125°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBR0520T1G",
+    "desc_small": "Diode Schottky 20V 0.5A SOD-123",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 36305,
+    "name": "1N5819HW Diode Schottky 1A 40V SOD-123",
+    "description": null,
+    "unit": "Con",
+    "slug": "1n5819hw-diode-schottky-1a-40v-sod-123",
+    "image_id": 19907,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 64,
+    "category_id": 164,
+    "product_tag_id": 7,
+    "price": 798,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592149_Diodes-Incorporated-1N5819HW-7-F.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 64,
+      "name": "Diodes Inc",
+      "slug": "diodes-inc"
+    },
+    "product_tags": [
+      {
+        "id": 3137,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 173601,
+        "product_id": 36305,
+        "quantity": 1,
+        "price": 798
+      },
+      {
+        "id": 173602,
+        "product_id": 36305,
+        "quantity": 100,
+        "price": 775
+      },
+      {
+        "id": 173603,
+        "product_id": 36305,
+        "quantity": 500,
+        "price": 752
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 284149,
+        "product_id": 36305,
+        "property_id": 15956,
+        "property": {
+          "id": 15956,
+          "name": "40 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284151,
+        "product_id": 36305,
+        "property_id": 32171,
+        "property": {
+          "id": 32171,
+          "name": "1A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284152,
+        "product_id": 36305,
+        "property_id": 32178,
+        "property": {
+          "id": 32178,
+          "name": "450 mV @ 1 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284153,
+        "product_id": 36305,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284154,
+        "product_id": 36305,
+        "property_id": 32179,
+        "property": {
+          "id": 32179,
+          "name": "1 mA @ 40 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284155,
+        "product_id": 36305,
+        "property_id": 32180,
+        "property": {
+          "id": 32180,
+          "name": "60pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284156,
+        "product_id": 36305,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 284157,
+        "product_id": 36305,
+        "property_id": 32181,
+        "property": {
+          "id": 32181,
+          "name": "SOD-123",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284158,
+        "product_id": 36305,
+        "property_id": 32182,
+        "property": {
+          "id": 32182,
+          "name": "-65°C ~ 125°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "1N5819HW-7-F",
+    "desc_small": "1A, 40V, SMD",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 36215,
+    "name": "SS14 SMA TE85L,F Diode Schottky 40V 1A",
+    "description": "",
+    "unit": "Con",
+    "slug": "ss14-sma-te85l-f-diode-schottky-40v-1a",
+    "image_id": 30547,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 14,
+    "category_id": 164,
+    "product_tag_id": 7,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740478986_SS14_SMA_TE85L,F.pdf",
+    "sheetname": "SS14 SMA TE85L,F",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 14,
+      "name": "Toshiba",
+      "slug": "toshiba"
+    },
+    "product_tags": [
+      {
+        "id": 3053,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 172966,
+        "product_id": 36215,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 172967,
+        "product_id": 36215,
+        "quantity": 500,
+        "price": 627
+      },
+      {
+        "id": 172968,
+        "product_id": 36215,
+        "quantity": 1000,
+        "price": 570
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 230466,
+        "product_id": 36215,
+        "property_id": 15956,
+        "property": {
+          "id": 15956,
+          "name": "40 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 230468,
+        "product_id": 36215,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 284137,
+        "product_id": 36215,
+        "property_id": 32171,
+        "property": {
+          "id": 32171,
+          "name": "1A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284138,
+        "product_id": 36215,
+        "property_id": 32172,
+        "property": {
+          "id": 32172,
+          "name": "500 mV @ 1 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284139,
+        "product_id": 36215,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284140,
+        "product_id": 36215,
+        "property_id": 32173,
+        "property": {
+          "id": 32173,
+          "name": "200 µA @ 40 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284141,
+        "product_id": 36215,
+        "property_id": 32174,
+        "property": {
+          "id": 32174,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284142,
+        "product_id": 36215,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS14",
+    "desc_small": "Size A, DIODE SCHOTTKY 1A 40V SMA",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 15394,
+    "name": "MBR30100PT Schottky Barrier Diodes 100V 30A TO-247AD",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbr30100pt-schottky-barrier-diodes-100v-30a-to-247ad",
+    "image_id": 52525,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 385,
+    "category_id": 164,
+    "product_tag_id": 7,
+    "price": 12540,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592153_HUAKE-MBR30100PT.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 385,
+      "name": "HUAKE",
+      "slug": "huake"
+    },
+    "product_tags": [
+      {
+        "id": 1573,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173646,
+        "product_id": 15394,
+        "quantity": 1,
+        "price": 12540
+      },
+      {
+        "id": 173647,
+        "product_id": 15394,
+        "quantity": 20,
+        "price": 11970
+      },
+      {
+        "id": 173648,
+        "product_id": 15394,
+        "quantity": 50,
+        "price": 11400
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 108067,
+        "product_id": 15394,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108772,
+        "product_id": 15394,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284190,
+        "product_id": 15394,
+        "property_id": 32199,
+        "property": {
+          "id": 32199,
+          "name": "30A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284191,
+        "product_id": 15394,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284192,
+        "product_id": 15394,
+        "property_id": 32200,
+        "property": {
+          "id": 32200,
+          "name": "1.05V @ 30 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284193,
+        "product_id": 15394,
+        "property_id": 32201,
+        "property": {
+          "id": 32201,
+          "name": "100 µA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284194,
+        "product_id": 15394,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284195,
+        "product_id": 15394,
+        "property_id": 32202,
+        "property": {
+          "id": 32202,
+          "name": "TO-3P",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 4325,
+        "user_id": 17306
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "MBR30100PT",
+    "desc_small": "100V 30A, TO-247AD (TO-3P)",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 15066,
+    "name": "SS28 SMB Diode Schottky 80V 2A",
+    "description": null,
+    "unit": "Con",
+    "slug": "ss28-smb-diode-schottky-80v-2a",
+    "image_id": 30543,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 30,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://www.onsemi.com/pdf/datasheet/ss29-d.pdf",
+    "sheetname": "SS28",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 4145,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 165670,
+        "product_id": 15066,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 165671,
+        "product_id": 15066,
+        "quantity": 500,
+        "price": 559
+      },
+      {
+        "id": 165672,
+        "product_id": 15066,
+        "quantity": 1000,
+        "price": 547
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24554,
+        "product_id": 15066,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108774,
+        "product_id": 15066,
+        "property_id": 15957,
+        "property": {
+          "id": 15957,
+          "name": "80 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284185,
+        "product_id": 15066,
+        "property_id": 32183,
+        "property": {
+          "id": 32183,
+          "name": "2A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284186,
+        "product_id": 15066,
+        "property_id": 32197,
+        "property": {
+          "id": 32197,
+          "name": "850 mV @ 2 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284187,
+        "product_id": 15066,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284188,
+        "product_id": 15066,
+        "property_id": 32198,
+        "property": {
+          "id": 32198,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284189,
+        "product_id": 15066,
+        "property_id": 32182,
+        "property": {
+          "id": 32182,
+          "name": "-65°C ~ 125°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS28",
+    "desc_small": "Diode Schottky 80V 2A DO214AA",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 13784,
+    "name": "MBR30100CT Schottky 100V 30A",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbr30100ct-schottky-100v-30a",
+    "image_id": 50324,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 341,
+    "category_id": 164,
+    "product_tag_id": 7,
+    "price": 10260,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740479050_MBR30100CT.pdf",
+    "sheetname": "MBR30100CT",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 341,
+      "name": "Microdiode Semiconductor",
+      "slug": "microdiode-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 1508,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173520,
+        "product_id": 13784,
+        "quantity": 1,
+        "price": 10260
+      },
+      {
+        "id": 173521,
+        "product_id": 13784,
+        "quantity": 50,
+        "price": 10032
+      },
+      {
+        "id": 173522,
+        "product_id": 13784,
+        "quantity": 100,
+        "price": 9804
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24556,
+        "product_id": 13784,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108779,
+        "product_id": 13784,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284270,
+        "product_id": 13784,
+        "property_id": 32199,
+        "property": {
+          "id": 32199,
+          "name": "30A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284271,
+        "product_id": 13784,
+        "property_id": 32224,
+        "property": {
+          "id": 32224,
+          "name": "850 mV @ 15 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284272,
+        "product_id": 13784,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284273,
+        "product_id": 13784,
+        "property_id": 32225,
+        "property": {
+          "id": 32225,
+          "name": "1 mA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284274,
+        "product_id": 13784,
+        "property_id": 32205,
+        "property": {
+          "id": 32205,
+          "name": "500pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284275,
+        "product_id": 13784,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284276,
+        "product_id": 13784,
+        "property_id": 32226,
+        "property": {
+          "id": 32226,
+          "name": "TO-220",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 1603,
+        "user_id": 11829
+      },
+      {
+        "id": 2248,
+        "user_id": 16336
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "MBR30100CT",
+    "desc_small": "DIODE ARRAY SCHOTTKY 100V 30A TO220",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 11405,
+    "name": "SS54F SMB Schottky Diode 5A 40V",
+    "description": null,
+    "unit": "Con",
+    "slug": "ss54f-smb-schottky-diode-5a-40v",
+    "image_id": 8181,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://html.alldatasheet.vn/html-pdf/813934/YFWDIODE/SS54-SMB/385/1/SS54-SMB.html",
+    "sheetname": "SS54F",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 246316,
+        "product_id": 11405,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 246317,
+        "product_id": 11405,
+        "quantity": 100,
+        "price": 1596
+      },
+      {
+        "id": 246318,
+        "product_id": 11405,
+        "quantity": 500,
+        "price": 1482
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24560,
+        "product_id": 11405,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108788,
+        "product_id": 11405,
+        "property_id": 15956,
+        "property": {
+          "id": 15956,
+          "name": "40 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284227,
+        "product_id": 11405,
+        "property_id": 32203,
+        "property": {
+          "id": 32203,
+          "name": "5A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284228,
+        "product_id": 11405,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284229,
+        "product_id": 11405,
+        "property_id": 32204,
+        "property": {
+          "id": 32204,
+          "name": "550 mV @ 5 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284230,
+        "product_id": 11405,
+        "property_id": 32210,
+        "property": {
+          "id": 32210,
+          "name": "500 µA @ 40 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284231,
+        "product_id": 11405,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284868,
+        "product_id": 11405,
+        "property_id": 32198,
+        "property": {
+          "id": 32198,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS54F",
+    "desc_small": "5A 40V Schottky Diode",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 882,
+    "name": "SS34 SMC Diode Schottky 3A",
+    "description": "",
+    "unit": "Con",
+    "slug": "ss34-smc-diode-schottky-3a",
+    "image_id": 30542,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://www.datasheet.live/pdfviewer?url=https%3A%2F%2Fpdf.datasheet.live%2Fdatasheets-1%2Ffairchild_semiconductor%2FSS34.pdf",
+    "sheetname": "SS34",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 3928,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 166079,
+        "product_id": 882,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 166080,
+        "product_id": 882,
+        "quantity": 100,
+        "price": 1596
+      },
+      {
+        "id": 166081,
+        "product_id": 882,
+        "quantity": 500,
+        "price": 1482
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24602,
+        "product_id": 882,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108874,
+        "product_id": 882,
+        "property_id": 15956,
+        "property": {
+          "id": 15956,
+          "name": "40 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284966,
+        "product_id": 882,
+        "property_id": 32161,
+        "property": {
+          "id": 32161,
+          "name": "3A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284967,
+        "product_id": 882,
+        "property_id": 32176,
+        "property": {
+          "id": 32176,
+          "name": "500 mV @ 3 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284968,
+        "product_id": 882,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284969,
+        "product_id": 882,
+        "property_id": 32210,
+        "property": {
+          "id": 32210,
+          "name": "500 µA @ 40 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284970,
+        "product_id": 882,
+        "property_id": 32245,
+        "property": {
+          "id": 32245,
+          "name": "DO-214AB, SMC",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284971,
+        "product_id": 882,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS34",
+    "desc_small": "Size C, DIODE SCHOTTKY 3A 40V SMC",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 11387,
+    "name": "SB5100 Diode Schottky 100V 5A",
+    "description": null,
+    "unit": "Con",
+    "slug": "sb5100-diode-schottky-100v-5a",
+    "image_id": 1124,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 2166,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740479327_SB5100.pdf",
+    "sheetname": "SB5100",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 45493,
+        "product_id": 11387,
+        "quantity": 1,
+        "price": 2166
+      },
+      {
+        "id": 45494,
+        "product_id": 11387,
+        "quantity": 20,
+        "price": 2143
+      },
+      {
+        "id": 45495,
+        "product_id": 11387,
+        "quantity": 50,
+        "price": 2120
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24568,
+        "product_id": 11387,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108807,
+        "product_id": 11387,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284316,
+        "product_id": 11387,
+        "property_id": 32203,
+        "property": {
+          "id": 32203,
+          "name": "5A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284317,
+        "product_id": 11387,
+        "property_id": 32220,
+        "property": {
+          "id": 32220,
+          "name": "850 mV @ 5 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284318,
+        "product_id": 11387,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284319,
+        "product_id": 11387,
+        "property_id": 32238,
+        "property": {
+          "id": 32238,
+          "name": "500 µA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284320,
+        "product_id": 11387,
+        "property_id": 32239,
+        "property": {
+          "id": 32239,
+          "name": "380pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284321,
+        "product_id": 11387,
+        "property_id": 32165,
+        "property": {
+          "id": 32165,
+          "name": "DO-201AD",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284322,
+        "product_id": 11387,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SB5100",
+    "desc_small": "DIODE SCHOTTKY 100V 5A DO201AD",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 11375,
+    "name": "SS110 SMA Diode Schottky 100V 1A",
+    "description": null,
+    "unit": "Con",
+    "slug": "ss110-sma-diode-schottky-100v-1a",
+    "image_id": 30530,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740479456_SS110_SMA.pdf",
+    "sheetname": "SS110 SMA",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4089,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 172019,
+        "product_id": 11375,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 172020,
+        "product_id": 11375,
+        "quantity": 1000,
+        "price": 547
+      },
+      {
+        "id": 172021,
+        "product_id": 11375,
+        "quantity": 2000,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24573,
+        "product_id": 11375,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108816,
+        "product_id": 11375,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284287,
+        "product_id": 11375,
+        "property_id": 32171,
+        "property": {
+          "id": 32171,
+          "name": "1A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284288,
+        "product_id": 11375,
+        "property_id": 32227,
+        "property": {
+          "id": 32227,
+          "name": "850 mV @ 1 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284289,
+        "product_id": 11375,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284290,
+        "product_id": 11375,
+        "property_id": 32228,
+        "property": {
+          "id": 32228,
+          "name": "200 µA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284291,
+        "product_id": 11375,
+        "property_id": 32185,
+        "property": {
+          "id": 32185,
+          "name": "80pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284292,
+        "product_id": 11375,
+        "property_id": 32186,
+        "property": {
+          "id": 32186,
+          "name": "-55°C ~125°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284293,
+        "product_id": 11375,
+        "property_id": 32174,
+        "property": {
+          "id": 32174,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS110",
+    "desc_small": "DIODE SCHOTTKY 100V 1A SMA",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 11252,
+    "name": "MBR10100CT Diode Schottky 100V 5A",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbr10100ct-diode-schottky-100v-5a",
+    "image_id": 1649,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 4560,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740544428_MBR10100CT.pdf",
+    "sheetname": "MBR10100CT",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 246319,
+        "product_id": 11252,
+        "quantity": 1,
+        "price": 4560
+      },
+      {
+        "id": 246320,
+        "product_id": 11252,
+        "quantity": 50,
+        "price": 4332
+      },
+      {
+        "id": 246321,
+        "product_id": 11252,
+        "quantity": 100,
+        "price": 4104
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24577,
+        "product_id": 11252,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108825,
+        "product_id": 11252,
+        "property_id": 15954,
+        "property": {
+          "id": 15954,
+          "name": "100 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284862,
+        "product_id": 11252,
+        "property_id": 32203,
+        "property": {
+          "id": 32203,
+          "name": "5A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284863,
+        "product_id": 11252,
+        "property_id": 32258,
+        "property": {
+          "id": 32258,
+          "name": "780 mV @ 3 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284864,
+        "product_id": 11252,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284865,
+        "product_id": 11252,
+        "property_id": 32225,
+        "property": {
+          "id": 32225,
+          "name": "1 mA @ 100 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284866,
+        "product_id": 11252,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      },
+      {
+        "id": 284867,
+        "product_id": 11252,
+        "property_id": 32226,
+        "property": {
+          "id": 32226,
+          "name": "TO-220",
+          "parent_id": 32157
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBR10100CT",
+    "desc_small": "DIODE SCHOTTKY 100V 5A TO220AB",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 8282,
+    "name": "SS24 SMC Diode Schottky 2A 40V",
+    "description": null,
+    "unit": "Con",
+    "slug": "ss24-smc-diode-schottky-2a-40v",
+    "image_id": 1164,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 1140,
+    "price_change": null,
+    "sheetfile": null,
+    "sheetname": "SS24",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 32562,
+        "product_id": 8282,
+        "quantity": 1,
+        "price": 1140
+      },
+      {
+        "id": 32563,
+        "product_id": 8282,
+        "quantity": 50,
+        "price": 1083
+      },
+      {
+        "id": 32564,
+        "product_id": 8282,
+        "quantity": 100,
+        "price": 1026
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24579,
+        "product_id": 8282,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 284855,
+        "product_id": 8282,
+        "property_id": 15956,
+        "property": {
+          "id": 15956,
+          "name": "40 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284856,
+        "product_id": 8282,
+        "property_id": 32183,
+        "property": {
+          "id": 32183,
+          "name": "2A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284857,
+        "product_id": 8282,
+        "property_id": 32256,
+        "property": {
+          "id": 32256,
+          "name": "500 mV @ 2 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284858,
+        "product_id": 8282,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284859,
+        "product_id": 8282,
+        "property_id": 32257,
+        "property": {
+          "id": 32257,
+          "name": "400 µA @ 40V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284860,
+        "product_id": 8282,
+        "property_id": 32245,
+        "property": {
+          "id": 32245,
+          "name": "DO-214AB, SMC",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284861,
+        "product_id": 8282,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SS24",
+    "desc_small": "DIODE SCHOTTKY 2A 40V SMC",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 2278,
+    "name": "B360B-13-F Diode Schottky 3A",
+    "description": "",
+    "unit": "Con",
+    "slug": "b360b-13-f-diode-schottky-3a",
+    "image_id": 637,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 64,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 2280,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740545050_B360B-13-F.pdf",
+    "sheetname": "B360B-13-F",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 64,
+      "name": "Diodes Inc",
+      "slug": "diodes-inc"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 246310,
+        "product_id": 2278,
+        "quantity": 1,
+        "price": 2280
+      },
+      {
+        "id": 246311,
+        "product_id": 2278,
+        "quantity": 100,
+        "price": 2166
+      },
+      {
+        "id": 246312,
+        "product_id": 2278,
+        "quantity": 500,
+        "price": 2052
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24590,
+        "product_id": 2278,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108850,
+        "product_id": 2278,
+        "property_id": 15960,
+        "property": {
+          "id": 15960,
+          "name": "60 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284925,
+        "product_id": 2278,
+        "property_id": 32161,
+        "property": {
+          "id": 32161,
+          "name": "3A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284926,
+        "product_id": 2278,
+        "property_id": 32268,
+        "property": {
+          "id": 32268,
+          "name": "700 mV @ 3 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284927,
+        "product_id": 2278,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284928,
+        "product_id": 2278,
+        "property_id": 32209,
+        "property": {
+          "id": 32209,
+          "name": "500 µA @ 60 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284929,
+        "product_id": 2278,
+        "property_id": 32242,
+        "property": {
+          "id": 32242,
+          "name": "200pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284930,
+        "product_id": 2278,
+        "property_id": 32198,
+        "property": {
+          "id": 32198,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284931,
+        "product_id": 2278,
+        "property_id": 32175,
+        "property": {
+          "id": 32175,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "B360B-13-F",
+    "desc_small": "DIODE SCHOTTKY 60V 3A SMB",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 1648,
+    "name": "SSC54-E3/57T Diode Schottky 5A",
+    "description": "",
+    "unit": "Con",
+    "slug": "ssc54-e3-57t-diode-schottky-5a",
+    "image_id": 1677,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 22,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 5586,
+    "price_change": null,
+    "sheetfile": "https://www.vishay.com/docs/88885/ssc53l.pdf",
+    "sheetname": "SSC54-E3/57T",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": true,
+    "prices": [
+      {
+        "id": 246307,
+        "product_id": 1648,
+        "quantity": 1,
+        "price": 5586
+      },
+      {
+        "id": 246308,
+        "product_id": 1648,
+        "quantity": 50,
+        "price": 5358
+      },
+      {
+        "id": 246309,
+        "product_id": 1648,
+        "quantity": 100,
+        "price": 5130
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24594,
+        "product_id": 1648,
+        "property_id": 3498,
+        "property": {
+          "id": 3498,
+          "name": "Dán bề mặt",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108858,
+        "product_id": 1648,
+        "property_id": 15956,
+        "property": {
+          "id": 15956,
+          "name": "40 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284893,
+        "product_id": 1648,
+        "property_id": 32203,
+        "property": {
+          "id": 32203,
+          "name": "5A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284894,
+        "product_id": 1648,
+        "property_id": 32264,
+        "property": {
+          "id": 32264,
+          "name": "490 mV @ 5 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284897,
+        "product_id": 1648,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284899,
+        "product_id": 1648,
+        "property_id": 32210,
+        "property": {
+          "id": 32210,
+          "name": "500 µA @ 40 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284900,
+        "product_id": 1648,
+        "property_id": 32245,
+        "property": {
+          "id": 32245,
+          "name": "DO-214AB, SMC",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284901,
+        "product_id": 1648,
+        "property_id": 32166,
+        "property": {
+          "id": 32166,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 125,
+        "user_id": 1381
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "SSC54-E3/57T",
+    "desc_small": "DIODE SCHOTTKY 40V 5A DO214AB",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 886,
+    "name": "MBR350 Diode Schottky 3A",
+    "description": "",
+    "unit": "Con",
+    "slug": "mbr350-diode-schottky-3a",
+    "image_id": 1124,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://www.farnell.com/datasheets/667569.pdf",
+    "sheetname": "MBR350",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 2038,
+        "product_id": 886,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 2039,
+        "product_id": 886,
+        "quantity": 50,
+        "price": 1596
+      },
+      {
+        "id": 8046,
+        "product_id": 886,
+        "quantity": 100,
+        "price": 1482
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24599,
+        "product_id": 886,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108868,
+        "product_id": 886,
+        "property_id": 15965,
+        "property": {
+          "id": 15965,
+          "name": "50 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284991,
+        "product_id": 886,
+        "property_id": 32161,
+        "property": {
+          "id": 32161,
+          "name": "3A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284992,
+        "product_id": 886,
+        "property_id": 32272,
+        "property": {
+          "id": 32272,
+          "name": "730 mV @ 3 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284993,
+        "product_id": 886,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284994,
+        "product_id": 886,
+        "property_id": 32273,
+        "property": {
+          "id": 32273,
+          "name": "600 µA @ 50 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284996,
+        "product_id": 886,
+        "property_id": 32274,
+        "property": {
+          "id": 32274,
+          "name": "190pF @ 4V, 1MHz",
+          "parent_id": 32156
+        }
+      },
+      {
+        "id": 284997,
+        "product_id": 886,
+        "property_id": 32271,
+        "property": {
+          "id": 32271,
+          "name": "C-16",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284998,
+        "product_id": 886,
+        "property_id": 32255,
+        "property": {
+          "id": 32255,
+          "name": "-40°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBR350",
+    "desc_small": "DIODE SCHOTTKY 50V 3A C-16",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": 885,
+    "name": "MBR360 Diode Schottky 3A",
+    "description": "",
+    "unit": "Con",
+    "slug": "mbr360-diode-schottky-3a",
+    "image_id": 1124,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 22,
+    "category_id": 164,
+    "product_tag_id": null,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://www.mouser.com/catalog/specsheets/Vishay_MBR3x0(-M3).pdf",
+    "sheetname": "MBR360",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 2035,
+        "product_id": 885,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 2036,
+        "product_id": 885,
+        "quantity": 50,
+        "price": 1596
+      },
+      {
+        "id": 2037,
+        "product_id": 885,
+        "quantity": 100,
+        "price": 1482
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24600,
+        "product_id": 885,
+        "property_id": 3497,
+        "property": {
+          "id": 3497,
+          "name": "Xuyên lỗ",
+          "parent_id": 3496
+        }
+      },
+      {
+        "id": 108870,
+        "product_id": 885,
+        "property_id": 15960,
+        "property": {
+          "id": 15960,
+          "name": "60 V",
+          "parent_id": 15952
+        }
+      },
+      {
+        "id": 284984,
+        "product_id": 885,
+        "property_id": 32161,
+        "property": {
+          "id": 32161,
+          "name": "3A",
+          "parent_id": 32159
+        }
+      },
+      {
+        "id": 284985,
+        "product_id": 885,
+        "property_id": 32269,
+        "property": {
+          "id": 32269,
+          "name": "740 mV @ 3 A",
+          "parent_id": 32153
+        }
+      },
+      {
+        "id": 284986,
+        "product_id": 885,
+        "property_id": 32163,
+        "property": {
+          "id": 32163,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32154
+        }
+      },
+      {
+        "id": 284987,
+        "product_id": 885,
+        "property_id": 32270,
+        "property": {
+          "id": 32270,
+          "name": "600 µA @ 60 V",
+          "parent_id": 32155
+        }
+      },
+      {
+        "id": 284989,
+        "product_id": 885,
+        "property_id": 32271,
+        "property": {
+          "id": 32271,
+          "name": "C-16",
+          "parent_id": 32157
+        }
+      },
+      {
+        "id": 284990,
+        "product_id": 885,
+        "property_id": 32255,
+        "property": {
+          "id": 32255,
+          "name": "-40°C ~ 150°C",
+          "parent_id": 32158
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBR360",
+    "desc_small": "DIODE SCHOTTKY 60V 3A C-16",
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000
+      }
+    ]
+  }
+]

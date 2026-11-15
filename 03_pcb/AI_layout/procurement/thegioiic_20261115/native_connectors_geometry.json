@@ -1,0 +1,1097 @@
+{
+  "BOOT": {
+    "footprint": "SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+    "pads": [
+      {
+        "number": "1",
+        "local_position_mm": [
+          -3.875,
+          0.0
+        ],
+        "size_mm": [
+          1.25,
+          1.0
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          3.875,
+          0.0
+        ],
+        "size_mm": [
+          1.25,
+          1.0
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "TYPE-C": {
+    "footprint": "USB_C_Receptacle_G-Switch_GT-USB-7010ASV",
+    "pads": [
+      {
+        "number": "",
+        "local_position_mm": [
+          -2.89,
+          -2.605
+        ],
+        "size_mm": [
+          0.65,
+          0.65
+        ],
+        "drill_mm": [
+          0.65,
+          0.65
+        ]
+      },
+      {
+        "number": "",
+        "local_position_mm": [
+          2.89,
+          -2.605
+        ],
+        "size_mm": [
+          0.65,
+          0.65
+        ],
+        "drill_mm": [
+          0.65,
+          0.65
+        ]
+      },
+      {
+        "number": "A1",
+        "local_position_mm": [
+          -3.2,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A4",
+        "local_position_mm": [
+          -2.4,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A5",
+        "local_position_mm": [
+          -1.25,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A6",
+        "local_position_mm": [
+          -0.25,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A7",
+        "local_position_mm": [
+          0.25,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A8",
+        "local_position_mm": [
+          1.25,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A9",
+        "local_position_mm": [
+          2.4,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "A12",
+        "local_position_mm": [
+          3.2,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B1",
+        "local_position_mm": [
+          3.2,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B4",
+        "local_position_mm": [
+          2.4,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B5",
+        "local_position_mm": [
+          1.75,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B6",
+        "local_position_mm": [
+          0.75,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B7",
+        "local_position_mm": [
+          -0.75,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B8",
+        "local_position_mm": [
+          -1.75,
+          -3.725
+        ],
+        "size_mm": [
+          0.3,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B9",
+        "local_position_mm": [
+          -2.4,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "B12",
+        "local_position_mm": [
+          -3.2,
+          -3.725
+        ],
+        "size_mm": [
+          0.6,
+          1.24
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          -4.32,
+          -3.125
+        ],
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          -4.32,
+          1.075
+        ],
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          4.32,
+          -3.125
+        ],
+        "size_mm": [
+          1.0,
+          2.1
+        ],
+        "drill_mm": [
+          0.6,
+          1.7
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          4.32,
+          1.075
+        ],
+        "size_mm": [
+          1.0,
+          1.8
+        ],
+        "drill_mm": [
+          0.6,
+          1.4
+        ]
+      }
+    ]
+  },
+  "OLED": {
+    "footprint": "PinHeader_1x04_P2.54mm_Vertical",
+    "pads": [
+      {
+        "number": "1",
+        "local_position_mm": [
+          0.0,
+          0.0
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          0.0,
+          2.54
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "3",
+        "local_position_mm": [
+          0.0,
+          5.08
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "4",
+        "local_position_mm": [
+          0.0,
+          7.62
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "SD SOCKET": {
+    "footprint": "JXTCONN_TF-01A",
+    "pads": [
+      {
+        "number": "",
+        "local_position_mm": [
+          -4.95,
+          0.0
+        ],
+        "size_mm": [
+          1.0,
+          1.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "",
+        "local_position_mm": [
+          3.05,
+          0.0
+        ],
+        "size_mm": [
+          1.0,
+          1.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "1",
+        "local_position_mm": [
+          2.25,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          1.15,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "3",
+        "local_position_mm": [
+          0.05,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "4",
+        "local_position_mm": [
+          -1.05,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "5",
+        "local_position_mm": [
+          -2.15,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "6",
+        "local_position_mm": [
+          -3.25,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "7",
+        "local_position_mm": [
+          -4.35,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "8",
+        "local_position_mm": [
+          -5.45,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "9",
+        "local_position_mm": [
+          -6.55,
+          -11.0
+        ],
+        "size_mm": [
+          0.7,
+          1.6
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          -7.75,
+          -10.0
+        ],
+        "size_mm": [
+          1.2,
+          1.5
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          -7.75,
+          -0.4
+        ],
+        "size_mm": [
+          1.2,
+          2.2
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          6.85,
+          -10.0
+        ],
+        "size_mm": [
+          1.6,
+          1.5
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "SH",
+        "local_position_mm": [
+          7.75,
+          -0.4
+        ],
+        "size_mm": [
+          1.2,
+          2.2
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "ANTEN": {
+    "footprint": "SMA_BAT_Wireless_BWSMA-KWE-Z001",
+    "pads": [
+      {
+        "number": "1",
+        "local_position_mm": [
+          0.0,
+          0.0
+        ],
+        "size_mm": [
+          2.3,
+          2.3
+        ],
+        "drill_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          -2.55,
+          -2.55
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          -2.55,
+          2.55
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          2.55,
+          -2.55
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          2.55,
+          2.55
+        ],
+        "size_mm": [
+          2.2,
+          2.2
+        ],
+        "drill_mm": [
+          1.4,
+          1.4
+        ]
+      }
+    ]
+  },
+  "RESET": {
+    "footprint": "SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+    "pads": [
+      {
+        "number": "1",
+        "local_position_mm": [
+          -3.875,
+          0.0
+        ],
+        "size_mm": [
+          1.25,
+          1.0
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          3.875,
+          0.0
+        ],
+        "size_mm": [
+          1.25,
+          1.0
+        ],
+        "drill_mm": [
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "SW1": {
+    "footprint": "RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
+    "pads": [
+      {
+        "number": "A",
+        "local_position_mm": [
+          0.0,
+          0.0
+        ],
+        "size_mm": [
+          2.0,
+          2.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "B",
+        "local_position_mm": [
+          0.0,
+          5.0
+        ],
+        "size_mm": [
+          2.0,
+          2.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "C",
+        "local_position_mm": [
+          0.0,
+          2.5
+        ],
+        "size_mm": [
+          2.0,
+          2.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "MP",
+        "local_position_mm": [
+          7.5,
+          -3.1
+        ],
+        "size_mm": [
+          3.2,
+          2.0
+        ],
+        "drill_mm": [
+          2.8,
+          1.5
+        ]
+      },
+      {
+        "number": "MP",
+        "local_position_mm": [
+          7.5,
+          8.1
+        ],
+        "size_mm": [
+          3.2,
+          2.0
+        ],
+        "drill_mm": [
+          2.8,
+          1.5
+        ]
+      },
+      {
+        "number": "S1",
+        "local_position_mm": [
+          14.5,
+          5.0
+        ],
+        "size_mm": [
+          2.0,
+          2.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "S2",
+        "local_position_mm": [
+          14.5,
+          0.0
+        ],
+        "size_mm": [
+          2.0,
+          2.0
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "SWDIO": {
+    "footprint": "PinHeader_1x07_P2.54mm_Vertical",
+    "pads": [
+      {
+        "number": "1",
+        "local_position_mm": [
+          0.0,
+          0.0
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          0.0,
+          2.54
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "3",
+        "local_position_mm": [
+          0.0,
+          5.08
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "4",
+        "local_position_mm": [
+          0.0,
+          7.62
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "5",
+        "local_position_mm": [
+          0.0,
+          10.16
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "6",
+        "local_position_mm": [
+          0.0,
+          12.7
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "7",
+        "local_position_mm": [
+          0.0,
+          15.24
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "UART": {
+    "footprint": "PinHeader_2x03_P2.54mm_Vertical",
+    "pads": [
+      {
+        "number": "1",
+        "local_position_mm": [
+          0.0,
+          0.0
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "2",
+        "local_position_mm": [
+          2.54,
+          0.0
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "3",
+        "local_position_mm": [
+          0.0,
+          2.54
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "4",
+        "local_position_mm": [
+          2.54,
+          2.54
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "5",
+        "local_position_mm": [
+          0.0,
+          5.08
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "6",
+        "local_position_mm": [
+          2.54,
+          5.08
+        ],
+        "size_mm": [
+          1.7,
+          1.7
+        ],
+        "drill_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "product": {
+    "id": 6174,
+    "name": "Điện Trở 0 Ohm 1206 1%",
+    "description": null,
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": null,
+    "slug": "dien-tro-0-ohm-1206-1-",
+    "image_id": 36861,
+    "inventory": 5250,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 114,
+    "category_id": 142,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": true,
+    "multiples": 25,
+    "minimum_order_quantity": 25,
+    "desc_small": "Code 0R, 1/4W",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 8,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 5000
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 213170,
+        "product_id": 6174,
+        "quantity": 1,
+        "price": 114
+      },
+      {
+        "id": 213171,
+        "product_id": 6174,
+        "quantity": 1000,
+        "price": 108
+      },
+      {
+        "id": 213172,
+        "product_id": 6174,
+        "quantity": 2000,
+        "price": 103
+      },
+      {
+        "id": 213173,
+        "product_id": 6174,
+        "quantity": 5000,
+        "price": 86
+      }
+    ],
+    "images": [],
+    "category_extras": [
+      {
+        "id": 4,
+        "name": "Cut Tape",
+        "price": 0,
+        "image_id": 57948
+      },
+      {
+        "id": 3,
+        "name": "Reel",
+        "price": 10000,
+        "image_id": 57949
+      }
+    ],
+    "favorites": []
+  },
+  "product_tabs": [
+    {
+      "id": 64906,
+      "product_id": 6174,
+      "title": "Tham khảo",
+      "content": "<ul>\r\n<li><a href=\"https://file.thegioiic.com/tin-tuc/dien-tro-dan-smd\" target=\"_blank\" rel=\"noopener\">Cách đọc điện trở dán SMD</a></li>\r\n<li><a href=\"https://www.truongcongly.com/2024/04/cong-cu-tinh-ma-dien-tro-smd.html\" target=\"_blank\" rel=\"noopener\">Công cụ đọc mã điện trở dán SMD Online</a></li>\r\n</ul>"
+    }
+  ],
+  "crumbs": [
+    {
+      "id": 3,
+      "name": "Linh Kiện Điện Tử Thụ Động",
+      "parent_id": 0,
+      "level": 1,
+      "slug": "linh-kien-dien-tu-thu-dong"
+    },
+    {
+      "id": 137,
+      "name": "Điện Trở",
+      "parent_id": 3,
+      "level": 2,
+      "slug": "dien-tro"
+    },
+    {
+      "id": 142,
+      "name": "Điện Trở Dán SMD",
+      "parent_id": 137,
+      "level": 3,
+      "slug": "dien-tro-dan-smd"
+    }
+  ],
+  "product_properties": [
+    {
+      "id": 290,
+      "name": "Sai số",
+      "value": "±1%",
+      "sorted": 4
+    },
+    {
+      "id": 6632,
+      "name": "Kiểu đóng gói",
+      "value": "1206 (3216M)",
+      "sorted": 2
+    },
+    {
+      "id": 7037,
+      "name": "Công suất",
+      "value": "0.25W, 1/4W",
+      "sorted": 5
+    },
+    {
+      "id": 21990,
+      "name": "Giá trị điện trở",
+      "value": "0 Ohm",
+      "sorted": 3
+    },
+    {
+      "id": 21925,
+      "name": "Loại",
+      "value": "Đơn",
+      "sorted": 6
+    },
+    {
+      "id": 22619,
+      "name": "Thành phần cấu tạo",
+      "value": "Thick Film",
+      "sorted": 7
+    },
+    {
+      "id": 22623,
+      "name": "Nhiệt độ hoạt động",
+      "value": "-55 ~ 155°C",
+      "sorted": 9
+    },
+    {
+      "id": 22621,
+      "name": "Hệ số biến đổi nhiệt",
+      "value": "±100ppm/°C",
+      "sorted": 8
+    }
+  ]
+}

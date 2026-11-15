@@ -1,0 +1,339 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-13T11:24:23",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [
+        {
+            "description": "Missing footprint J1 (USB-C Native)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J2 (UART_3V3_TX_RX_GND_DTR_RTS)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J3 (SSD1306 I2C)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J4 (SWD / Probe Power IN)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J5 (JXTCONN TF-01A)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J6 (SMA BWSMA-KWE-Z001)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint SW2 (BOOT)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint SW3 (RESET)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U1 (ESP32-S3-WROOM-1-N16R8)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U2 (AMS1117-3.3)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint BOOT",
+                    "pos": {
+                        "x": 153.5,
+                        "y": 53.5
+                    },
+                    "uuid": "1290d59f-94e6-44d9-b988-5a624b32fad4"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint TYPE-C",
+                    "pos": {
+                        "x": 135.0,
+                        "y": 106.0
+                    },
+                    "uuid": "154c10d1-c753-4196-83f6-cbd0173ba90e"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint OLED",
+                    "pos": {
+                        "x": 140.08,
+                        "y": 84.0
+                    },
+                    "uuid": "4f670724-5512-4696-95b8-02465190d461"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint SD SCHOKET",
+                    "pos": {
+                        "x": 165.5,
+                        "y": 91.25
+                    },
+                    "uuid": "6bacdc88-e416-4ae3-84ad-0887826f58c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint ANTEN",
+                    "pos": {
+                        "x": 165.5,
+                        "y": 64.5
+                    },
+                    "uuid": "73113d3d-a8aa-46f4-b508-886c296710d4"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint RESET",
+                    "pos": {
+                        "x": 153.5,
+                        "y": 59.0
+                    },
+                    "uuid": "8265cb32-4d6b-422e-b40e-0e06e8b54bb6"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint ESP32-S3",
+                    "pos": {
+                        "x": 135.1,
+                        "y": 56.5
+                    },
+                    "uuid": "8df9a735-e67c-4636-bc80-a11c7d8c8782"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint SWDIO",
+                    "pos": {
+                        "x": 102.5,
+                        "y": 72.3
+                    },
+                    "uuid": "f0866755-ee1a-4606-b7d3-6a91c3fb17c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint UART",
+                    "pos": {
+                        "x": 165.225,
+                        "y": 73.46
+                    },
+                    "uuid": "f0c27cd1-cd3c-44a6-bcd6-f3573a8c5b1b"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint AMS1117",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 76.0
+                    },
+                    "uuid": "f148bc2d-2f07-4e3a-9bfd-c4bdcd934ef0"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        }
+    ],
+    "source": "AI_layout.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 121.5,
+                        "y": 66.48
+                    },
+                    "uuid": "0a03f894-4769-4a49-8372-16fdab625202"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'USB_C_Receptacle_G-Switch_GT-USB-7010ASV' does not match copy in library 'Connector_USB'",
+            "items": [
+                {
+                    "description": "Footprint TYPE-C",
+                    "pos": {
+                        "x": 135.0,
+                        "y": 106.0
+                    },
+                    "uuid": "154c10d1-c753-4196-83f6-cbd0173ba90e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 121.5,
+                        "y": 69.02
+                    },
+                    "uuid": "538d1f89-bf24-4971-ad5a-fa062df021cc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'ESP32-S3-WROOM-1' does not match copy in library 'RF_Module'",
+            "items": [
+                {
+                    "description": "Footprint ESP32-S3",
+                    "pos": {
+                        "x": 135.1,
+                        "y": 56.5
+                    },
+                    "uuid": "8df9a735-e67c-4636-bc80-a11c7d8c8782"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R25",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 85.0
+                    },
+                    "uuid": "970fdc95-69c0-49a6-abbe-6c2935a6c1bc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 92.0
+                    },
+                    "uuid": "a75540d6-ed78-45c3-b6cf-54fc7890f091"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        }
+    ]
+}

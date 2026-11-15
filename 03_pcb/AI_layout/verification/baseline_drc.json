@@ -1,0 +1,189 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-13T10:57:44",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "AI_layout.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 121.5,
+                        "y": 66.48
+                    },
+                    "uuid": "0a03f894-4769-4a49-8372-16fdab625202"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'USB_C_Receptacle_G-Switch_GT-USB-7010ASV' does not match copy in library 'Connector_USB'",
+            "items": [
+                {
+                    "description": "Footprint TYPE-C",
+                    "pos": {
+                        "x": 135.0,
+                        "y": 106.0
+                    },
+                    "uuid": "154c10d1-c753-4196-83f6-cbd0173ba90e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 121.5,
+                        "y": 69.02
+                    },
+                    "uuid": "538d1f89-bf24-4971-ad5a-fa062df021cc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "The footprint library 'Probe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint SD SCHOKET",
+                    "pos": {
+                        "x": 165.5,
+                        "y": 91.25
+                    },
+                    "uuid": "6bacdc88-e416-4ae3-84ad-0887826f58c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Footprint 'ESP32-S3-WROOM-1' does not match copy in library 'RF_Module'",
+            "items": [
+                {
+                    "description": "Footprint ESP32-S3",
+                    "pos": {
+                        "x": 135.1,
+                        "y": 56.5
+                    },
+                    "uuid": "8df9a735-e67c-4636-bc80-a11c7d8c8782"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R25",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 85.0
+                    },
+                    "uuid": "970fdc95-69c0-49a6-abbe-6c2935a6c1bc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R_1206_3216Metric_Pad1.30x1.75mm_HandSolder' does not match copy in library 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 128.5,
+                        "y": 92.0
+                    },
+                    "uuid": "a75540d6-ed78-45c3-b6cf-54fc7890f091"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of AMS1117 on F.Silkscreen",
+                    "pos": {
+                        "x": 128.09,
+                        "y": 74.15
+                    },
+                    "uuid": "bf4ec291-db4c-4148-beda-7dd3a30e0cce"
+                },
+                {
+                    "description": "Reference field of AMS1117",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 76.0
+                    },
+                    "uuid": "f8034939-d7cc-49e0-8c96-58c66ef7b1b4"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of D7",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 68.5
+                    },
+                    "uuid": "478961b0-5d22-4d3c-a8d0-0256f8bcfb0b"
+                },
+                {
+                    "description": "Segment of D7 on F.Silkscreen",
+                    "pos": {
+                        "x": 114.44,
+                        "y": 68.56
+                    },
+                    "uuid": "6e50cff8-9354-418b-8102-148d5d2c4422"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

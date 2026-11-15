@@ -1,0 +1,2196 @@
+[
+  {
+    "id": 1004,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 TAJA475K016RNJ",
+    "description": "",
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-taja475k016rnj",
+    "image_id": 35069,
+    "inventory": 458,
+    "rohs": true,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": 7,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 2850,
+    "show_package": true,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [
+      {
+        "id": 731,
+        "name": "Chính hãng",
+        "product_tag_id": 7,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#2b00ff"
+      }
+    ],
+    "prices": [
+      {
+        "id": 165792,
+        "product_id": 1004,
+        "quantity": 1,
+        "price": 2850
+      },
+      {
+        "id": 165793,
+        "product_id": 1004,
+        "quantity": 100,
+        "price": 2736
+      },
+      {
+        "id": 165794,
+        "product_id": 1004,
+        "quantity": 500,
+        "price": 2622
+      },
+      {
+        "id": 224256,
+        "product_id": 1004,
+        "quantity": 2000,
+        "price": 2339
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "package_quantity": {
+      "id": 43,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 2000
+    }
+  },
+  {
+    "id": 28423,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 THJA475K016RJN",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-thja475k016rjn",
+    "image_id": 35299,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 12540,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121930,
+        "product_id": 28423,
+        "quantity": 1,
+        "price": 12540
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28942,
+    "name": "Tụ Tantalum 4.7uF 25V 1206 293D475X9025A2TE3",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-25v-1206-293d475x9025a2te3",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 11400,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123272,
+        "product_id": 28942,
+        "quantity": 1,
+        "price": 11400
+      },
+      {
+        "id": 123273,
+        "product_id": 28942,
+        "quantity": 50,
+        "price": 11286
+      },
+      {
+        "id": 123274,
+        "product_id": 28942,
+        "quantity": 100,
+        "price": 11172
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28937,
+    "name": "Tụ Tantalum 4.7uF 20V 1206 293D475X9020A2TE3",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-20v-1206-293d475x9020a2te3",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 9120,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123257,
+        "product_id": 28937,
+        "quantity": 1,
+        "price": 9120
+      },
+      {
+        "id": 123258,
+        "product_id": 28937,
+        "quantity": 50,
+        "price": 9006
+      },
+      {
+        "id": 123259,
+        "product_id": 28937,
+        "quantity": 100,
+        "price": 8892
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28930,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 293D475X9016A2TE3",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-293d475x9016a2te3",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 8322,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123236,
+        "product_id": 28930,
+        "quantity": 1,
+        "price": 8322
+      },
+      {
+        "id": 123237,
+        "product_id": 28930,
+        "quantity": 50,
+        "price": 8208
+      },
+      {
+        "id": 123238,
+        "product_id": 28930,
+        "quantity": 100,
+        "price": 8094
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28917,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 293D475X9010A2TE3",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-293d475x9010a2te3",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7524,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123197,
+        "product_id": 28917,
+        "quantity": 1,
+        "price": 7524
+      },
+      {
+        "id": 123198,
+        "product_id": 28917,
+        "quantity": 50,
+        "price": 7410
+      },
+      {
+        "id": 123199,
+        "product_id": 28917,
+        "quantity": 100,
+        "price": 7296
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28916,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 TR3A475K010C1400",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-tr3a475k010c1400",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 13680,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123194,
+        "product_id": 28916,
+        "quantity": 1,
+        "price": 13680
+      },
+      {
+        "id": 123195,
+        "product_id": 28916,
+        "quantity": 50,
+        "price": 13452
+      },
+      {
+        "id": 123196,
+        "product_id": 28916,
+        "quantity": 100,
+        "price": 13224
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28901,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 TMCUA1C475KTRF",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-tmcua1c475ktrf",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 8892,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123149,
+        "product_id": 28901,
+        "quantity": 1,
+        "price": 8892
+      },
+      {
+        "id": 123150,
+        "product_id": 28901,
+        "quantity": 50,
+        "price": 8778
+      },
+      {
+        "id": 123151,
+        "product_id": 28901,
+        "quantity": 100,
+        "price": 8664
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28824,
+    "name": "Tụ Tantalum 4.7uF 25V 1206 TR3A475K025C3500",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-25v-1206-tr3a475k025c3500",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 10602,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122915,
+        "product_id": 28824,
+        "quantity": 1,
+        "price": 10602
+      },
+      {
+        "id": 122916,
+        "product_id": 28824,
+        "quantity": 50,
+        "price": 10488
+      },
+      {
+        "id": 122917,
+        "product_id": 28824,
+        "quantity": 100,
+        "price": 10374
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28823,
+    "name": "Tụ Tantalum 4.7uF 25V 1206 TR3A475K025C3000",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-25v-1206-tr3a475k025c3000",
+    "image_id": 35390,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 12540,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122912,
+        "product_id": 28823,
+        "quantity": 1,
+        "price": 12540
+      },
+      {
+        "id": 122913,
+        "product_id": 28823,
+        "quantity": 50,
+        "price": 12426
+      },
+      {
+        "id": 122914,
+        "product_id": 28823,
+        "quantity": 100,
+        "price": 12312
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28633,
+    "name": "Tụ Tantalum 4.7uF 20V 1206 TPSA475K020R1800",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-20v-1206-tpsa475k020r1800",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 9804,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122382,
+        "product_id": 28633,
+        "quantity": 1,
+        "price": 9804
+      },
+      {
+        "id": 122383,
+        "product_id": 28633,
+        "quantity": 50,
+        "price": 9690
+      },
+      {
+        "id": 122384,
+        "product_id": 28633,
+        "quantity": 100,
+        "price": 9576
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28622,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 TPSA475M010R1400",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-tpsa475m010r1400",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 20%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7524,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122349,
+        "product_id": 28622,
+        "quantity": 1,
+        "price": 7524
+      },
+      {
+        "id": 122350,
+        "product_id": 28622,
+        "quantity": 50,
+        "price": 7410
+      },
+      {
+        "id": 122351,
+        "product_id": 28622,
+        "quantity": 100,
+        "price": 7296
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28621,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 TPSA475K010R1400",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-tpsa475k010r1400",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7980,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122346,
+        "product_id": 28621,
+        "quantity": 1,
+        "price": 7980
+      },
+      {
+        "id": 122347,
+        "product_id": 28621,
+        "quantity": 50,
+        "price": 7923
+      },
+      {
+        "id": 122348,
+        "product_id": 28621,
+        "quantity": 100,
+        "price": 7866
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28437,
+    "name": "Tụ Tantalum 4.7uF 25V 1206 TAJA475K025RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-25v-1206-taja475k025rnj",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 5016,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121970,
+        "product_id": 28437,
+        "quantity": 1,
+        "price": 5016
+      },
+      {
+        "id": 121971,
+        "product_id": 28437,
+        "quantity": 100,
+        "price": 4902
+      },
+      {
+        "id": 121972,
+        "product_id": 28437,
+        "quantity": 500,
+        "price": 4788
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28432,
+    "name": "Tụ Tantalum 4.7uF 20V 1206 TAJA475M020RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-20v-1206-taja475m020rnj",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 20%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7752,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121955,
+        "product_id": 28432,
+        "quantity": 1,
+        "price": 7752
+      },
+      {
+        "id": 121956,
+        "product_id": 28432,
+        "quantity": 100,
+        "price": 7638
+      },
+      {
+        "id": 121957,
+        "product_id": 28432,
+        "quantity": 500,
+        "price": 7524
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28431,
+    "name": "Tụ Tantalum 4.7uF 20V 1206 TAJA475K020RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-20v-1206-taja475k020rnj",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7980,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121952,
+        "product_id": 28431,
+        "quantity": 1,
+        "price": 7980
+      },
+      {
+        "id": 121953,
+        "product_id": 28431,
+        "quantity": 100,
+        "price": 7866
+      },
+      {
+        "id": 121954,
+        "product_id": 28431,
+        "quantity": 500,
+        "price": 7752
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28422,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 F931C475KAA",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-f931c475kaa",
+    "image_id": 35299,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 8322,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121927,
+        "product_id": 28422,
+        "quantity": 1,
+        "price": 8322
+      },
+      {
+        "id": 121928,
+        "product_id": 28422,
+        "quantity": 100,
+        "price": 8208
+      },
+      {
+        "id": 121929,
+        "product_id": 28422,
+        "quantity": 500,
+        "price": 8094
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28421,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 TAJA475M016RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-taja475m016rnj",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 20%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7068,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121924,
+        "product_id": 28421,
+        "quantity": 1,
+        "price": 7068
+      },
+      {
+        "id": 121925,
+        "product_id": 28421,
+        "quantity": 100,
+        "price": 6954
+      },
+      {
+        "id": 121926,
+        "product_id": 28421,
+        "quantity": 500,
+        "price": 6840
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28409,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 F931A475MAA",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-f931a475maa",
+    "image_id": 35299,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 20%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 2280,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121900,
+        "product_id": 28409,
+        "quantity": 1,
+        "price": 2280
+      },
+      {
+        "id": 121901,
+        "product_id": 28409,
+        "quantity": 100,
+        "price": 2269
+      },
+      {
+        "id": 121902,
+        "product_id": 28409,
+        "quantity": 500,
+        "price": 2257
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28408,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 TAJA475M010RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-taja475m010rnj",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 20%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 6042,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121897,
+        "product_id": 28408,
+        "quantity": 1,
+        "price": 6042
+      },
+      {
+        "id": 121898,
+        "product_id": 28408,
+        "quantity": 100,
+        "price": 5928
+      },
+      {
+        "id": 121899,
+        "product_id": 28408,
+        "quantity": 500,
+        "price": 5814
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28407,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 TAJA475K010RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-taja475k010rnj",
+    "image_id": 35303,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 5700,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121894,
+        "product_id": 28407,
+        "quantity": 1,
+        "price": 5700
+      },
+      {
+        "id": 121895,
+        "product_id": 28407,
+        "quantity": 100,
+        "price": 5643
+      },
+      {
+        "id": 121896,
+        "product_id": 28407,
+        "quantity": 500,
+        "price": 5586
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28224,
+    "name": "Tụ Tantalum 4.7uF 25V 1206 T491A475K025AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-25v-1206-t491a475k025at",
+    "image_id": 35310,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7980,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121599,
+        "product_id": 28224,
+        "quantity": 1,
+        "price": 7980
+      },
+      {
+        "id": 121600,
+        "product_id": 28224,
+        "quantity": 100,
+        "price": 7866
+      },
+      {
+        "id": 121601,
+        "product_id": 28224,
+        "quantity": 200,
+        "price": 7752
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28223,
+    "name": "Tụ Tantalum 4.7uF 20V 1206 T491A475K020AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-20v-1206-t491a475k020at",
+    "image_id": 35310,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 7980,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121596,
+        "product_id": 28223,
+        "quantity": 1,
+        "price": 7980
+      },
+      {
+        "id": 121597,
+        "product_id": 28223,
+        "quantity": 100,
+        "price": 7866
+      },
+      {
+        "id": 121598,
+        "product_id": 28223,
+        "quantity": 200,
+        "price": 7752
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28091,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 T491A475K016AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-t491a475k016at",
+    "image_id": 35310,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 9348,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121370,
+        "product_id": 28091,
+        "quantity": 1,
+        "price": 9348
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28089,
+    "name": "Tụ Tantalum 4.7uF 10V 1206 T491A475K010AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-10v-1206-t491a475k010at",
+    "image_id": 35310,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 6840,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121366,
+        "product_id": 28089,
+        "quantity": 1,
+        "price": 6840
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28083,
+    "name": "Tụ Tantalum 4.7uF 6.3V 1206 T491A475K006AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-6-3v-1206-t491a475k006at",
+    "image_id": 35310,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 3420,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121350,
+        "product_id": 28083,
+        "quantity": 1,
+        "price": 3420
+      },
+      {
+        "id": 121351,
+        "product_id": 28083,
+        "quantity": 100,
+        "price": 3363
+      },
+      {
+        "id": 121352,
+        "product_id": 28083,
+        "quantity": 500,
+        "price": 3306
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28063,
+    "name": "Tụ Tantalum 4.7uF 16V 1206 F971C475MAA",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-16v-1206-f971c475maa",
+    "image_id": 35300,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 20%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 14820,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121314,
+        "product_id": 28063,
+        "quantity": 1,
+        "price": 14820
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 27814,
+    "name": "Tụ Tantalum 4.7uF 20V 1206 F931D475MA",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-20v-1206-f931d475ma",
+    "image_id": 35299,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 6%, 1206 (3216M)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 12540,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 120635,
+        "product_id": 27814,
+        "quantity": 1,
+        "price": 12540
+      },
+      {
+        "id": 120636,
+        "product_id": 27814,
+        "quantity": 100,
+        "price": 12426
+      },
+      {
+        "id": 120637,
+        "product_id": 27814,
+        "quantity": 500,
+        "price": 12312
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 15318,
+    "name": "Tụ Tantalum 4.7uF 6.3V 1206 TAJA475M006RNJ",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-4-7uf-6-3v-1206-taja475m006rnj",
+    "image_id": 1487,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 39,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 475 10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 9120,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 39,
+      "name": "AVX",
+      "slug": "avx"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 65608,
+        "product_id": 15318,
+        "quantity": 1,
+        "price": 9120
+      },
+      {
+        "id": 65609,
+        "product_id": 15318,
+        "quantity": 10,
+        "price": 8892
+      },
+      {
+        "id": 65610,
+        "product_id": 15318,
+        "quantity": 20,
+        "price": 8664
+      },
+      {
+        "id": 65611,
+        "product_id": 15318,
+        "quantity": 50,
+        "price": 8436
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 12744,
+    "name": "Tụ Gốm 1206 4.7uF 50V",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-gom-1206-4-7uf-50v",
+    "image_id": 1666,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 326,
+    "category_id": 146,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "10%, 1206 (3216 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 2772,
+    "show_package": true,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 6,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 146,
+        "price": null,
+        "image_id": 57948,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 7,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 146,
+        "price": 10000,
+        "image_id": 57949,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 326,
+      "name": "CCTC",
+      "slug": "cctc"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 145216,
+        "product_id": 12744,
+        "quantity": 1,
+        "price": 2772
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 43,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 2000
+    }
+  }
+]

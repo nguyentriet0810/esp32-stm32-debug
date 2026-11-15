@@ -1,0 +1,11 @@
+{
+  "old_text": "SD SCHOKET",
+  "new_text": "SD SOCKET",
+  "corrected_layer": "F.SilkS",
+  "footprint_uuid": "6bacdc88-e416-4ae3-84ad-0887826f58c0",
+  "original_pcb_sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "corrected_pcb_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "exact_source_difference": "One Reference string; every other PCB byte identical",
+  "local_library_reference_default_corrected": true,
+  "original_ordered_packages_preserved": true
+}

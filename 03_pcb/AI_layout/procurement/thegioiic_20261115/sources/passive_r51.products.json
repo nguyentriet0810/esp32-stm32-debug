@@ -1,0 +1,87 @@
+[
+  {
+    "id": 13394,
+    "name": "Điện Trở 5.1 KOhm 1206 5%",
+    "description": null,
+    "unit": "Con",
+    "slug": "dien-tro-5-1-kohm-1206-5-",
+    "image_id": 37070,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 142,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 5101, 1/4W",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 25,
+    "minimum_order_quantity": 25,
+    "price": 87,
+    "show_package": true,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 3,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 142,
+        "price": 10000,
+        "image_id": 57949,
+        "enabled": true,
+        "sorted": 2
+      },
+      {
+        "id": 4,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 142,
+        "price": 0,
+        "image_id": 57948,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 213385,
+        "product_id": 13394,
+        "quantity": 1,
+        "price": 87
+      },
+      {
+        "id": 213386,
+        "product_id": 13394,
+        "quantity": 1000,
+        "price": 84
+      },
+      {
+        "id": 213387,
+        "product_id": 13394,
+        "quantity": 2000,
+        "price": 82
+      },
+      {
+        "id": 213388,
+        "product_id": 13394,
+        "quantity": 5000,
+        "price": 68
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 8,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 5000
+    }
+  }
+]

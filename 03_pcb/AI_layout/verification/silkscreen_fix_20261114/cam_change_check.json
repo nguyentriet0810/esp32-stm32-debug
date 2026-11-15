@@ -1,0 +1,170 @@
+{
+  "old_directory": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261113",
+  "new_directory": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261114_socket_fix",
+  "source_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "expected_source_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "layers": {
+    "probe-B_Cu.gbr": {
+      "same_geometry": true,
+      "old_primitives": 392,
+      "new_primitives": 392,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "35d3cd1d09bea1fa9acd4e33f828de218d05e59b38e58f683f69905180ee3138",
+      "new_sha256": "eb9db58948c9faeba42cb01dcce91cb103180eb16470b6b6bd0fe5c856cb392a"
+    },
+    "probe-B_Mask.gbr": {
+      "same_geometry": true,
+      "old_primitives": 41,
+      "new_primitives": 41,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "5ac380d794ca04842338daf29f63dca17b591b80d203b9e8c78c3bfb8b8e0639",
+      "new_sha256": "f986ba0c00823296b6a693223961974374e1b0009121ce61aff2873e0e50fefd"
+    },
+    "probe-B_Paste.gbr": {
+      "same_geometry": true,
+      "old_primitives": 0,
+      "new_primitives": 0,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "01003ddbd62e18258d40448081e48a5cbe148511d0adedfb80db8f81aca23687",
+      "new_sha256": "495809aa49cc95d95c26e0e81ae2233117b169bdaf1614de8b55943d5e624ec1"
+    },
+    "probe-B_Silkscreen.gbr": {
+      "same_geometry": true,
+      "old_primitives": 507,
+      "new_primitives": 507,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "37b42fd875ffba99027fb0ccaa6cbeae907cb612fc481a2545cf895af2c5631b",
+      "new_sha256": "f4d6a3d3eb2c5ab229f8c91837ad72cc03c96be91815a75ccf29d9bb6d245064"
+    },
+    "probe-Edge_Cuts.gbr": {
+      "same_geometry": true,
+      "old_primitives": 9,
+      "new_primitives": 9,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "f017f26c4337d8878b5099ebecea36d971028525c09edf05e1edfd2bae76f15d",
+      "new_sha256": "d83f23ed43525b7a14e051d7202253f6793c9cce18d81ada16d3e7a04d9f9e48"
+    },
+    "probe-F_Cu.gbr": {
+      "same_geometry": true,
+      "old_primitives": 627,
+      "new_primitives": 627,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "8d81a11c25410458adcc66de1ba3321d5d4812a955d7aa9e83b7ef08e58123da",
+      "new_sha256": "59432033f2cfd916ab2b12722c1471d2cda1a9120e65389790a964fec6d29196"
+    },
+    "probe-F_Mask.gbr": {
+      "same_geometry": true,
+      "old_primitives": 222,
+      "new_primitives": 222,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "bc1ae62950bff3bc7f409d2a2bca37ae4dfb2005cece7b22151cf8da4d66adba",
+      "new_sha256": "b5fe8be6d866695515c83c7ca8d3f42d2d5c68a31624267089adcdd81a210029"
+    },
+    "probe-F_Paste.gbr": {
+      "same_geometry": true,
+      "old_primitives": 193,
+      "new_primitives": 193,
+      "removed_primitives": 0,
+      "added_primitives": 0,
+      "removed_components": {},
+      "added_components": {},
+      "old_sha256": "3bb6d4615902c6aeea2e54caed9ce45747342832d5efa3ada05f97955784ee38",
+      "new_sha256": "f737503188ddeb3486f5140eecc63f8eb532b1f51ced759194bcf5fefeb9223e"
+    },
+    "probe-F_Silkscreen.gbr": {
+      "same_geometry": false,
+      "old_primitives": 2655,
+      "new_primitives": 2652,
+      "removed_primitives": 93,
+      "added_primitives": 90,
+      "removed_components": {
+        "null": 93
+      },
+      "added_components": {
+        "null": 90
+      },
+      "old_sha256": "e91b92115a13e57597a5789d60f100e3e0d4f0ed5bcc29c1b9597fe696e06324",
+      "new_sha256": "20a8b2e0bd0c85c62675c55584b02b0762d9f636a2caa945a4f3e6d2a6102df1"
+    }
+  },
+  "drills": {
+    "probe-PTH.drl": {
+      "same_geometry": true,
+      "positions": 160,
+      "round_holes": 154,
+      "slots": 6
+    },
+    "probe-NPTH.drl": {
+      "same_geometry": true,
+      "positions": 8,
+      "round_holes": 8,
+      "slots": 0
+    }
+  },
+  "front_silk_delta_bounds_mm": {
+    "x": [
+      67.454819,
+      68.454819
+    ],
+    "y": [
+      14.226191,
+      23.369048
+    ]
+  },
+  "front_silk_delta_only_sd_reference": true,
+  "sd_reference_localization_method": "All removed/added strokes lie within SD reference legend rectangle X67.2..68.7, Y13.5..24.2mm; KiCad reference text strokes carry no component X2 tag.",
+  "common_coordinates_headers": [
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780",
+    "PX5f5e100PY68e7780"
+  ],
+  "origin_header_correct": true,
+  "job_nine_paths_resolve": true,
+  "job_stackup": {
+    "ProjectId": {
+      "Name": "AI_layout",
+      "GUID": "41495f6c-6179-46f7-9574-2e6b69636164",
+      "Revision": "rev?"
+    },
+    "Size": {
+      "X": 70.05,
+      "Y": 60.05
+    },
+    "LayerNumber": 2,
+    "BoardThickness": 1.6,
+    "Finish": "None"
+  },
+  "changed_layers": [
+    "probe-F_Silkscreen.gbr"
+  ],
+  "all_copper_mask_paste_outline_back_silk_unchanged": true,
+  "all_drills_unchanged": true,
+  "pass": true
+}

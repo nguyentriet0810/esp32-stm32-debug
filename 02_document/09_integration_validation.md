@@ -2,6 +2,50 @@
 
 Ngày: 30/10/2026. Bản phát triển, chưa phát hành MVP đã nghiệm thu trên STM32.
 
+## Tích hợp microSD — 15/11/2026
+
+Đã thêm `probe_sd` trên SPI2, GPIO CS/MOSI/SCK/MISO/DETECT = 38/39/40/41/42,
+clock tối đa mặc định 4 MHz. Startup thử mount FAT tại `/sdcard`; các lệnh console
+`sd`, `sd mount`, `sd ls`, `sd read`, `sd write`, `sd unmount` gọi API tuần tự hóa.
+Lệnh file giới hạn basename 8.3, I/O 256 byte/lần; ghi tạo file mới độc quyền và kiểm tra
+fsync/close. Không có format hoặc ghi file thử khi khởi động.
+
+- Build cấu hình SD bật bằng toolchain Xtensa/ESP-IDF v6.1: đạt, GNU17 và GCC analyzer.
+- Build cấu hình SD tắt độc lập tại `.cache/sd-off`: đạt; cấu hình chính vẫn giữ SD bật.
+- `test_board_config.py` với netlist hiện tại và cả cấu hình SD bật/tắt: đạt,
+  gồm 14 GPIO và kết nối OLED/debug/SD.
+- `test_sd_host.py`: đạt với SD bật và tắt; dùng production source cùng mock SDK/VFS.
+  Đã thử thiếu/tháo thẻ, lỗi card init, hết drive slot, lỗi cấp phát/xung đột VFS,
+  mount FAT lỗi, cleanup/retry, tên/file trùng, I/O/sync lỗi và mutex timeout.
+- Clang-format dry-run trên C/header thay đổi: đạt.
+- Binary SD bật: `01_source/build/stm32_wifi_probe.bin`, **985072 byte**,
+  SHA256 `0B14310A898F7849AF6930FD7FCFA167770669DA9D903962CC3E53F9FABEA1A7`.
+
+Component quản lý riêng các bước SPI/device/diskio/VFS/FAT để cleanup khi mount lỗi;
+không dùng convenience mount của SDK có nhánh cấp phát context muộn thiếu cleanup.
+Mock không kiểm chứng nội bộ SDK hoặc phần điện. Chưa nạp binary mới, chưa thử thẻ thật,
+nguồn/tín hiệu hoặc hoạt động SD đồng thời với debug trên PCB. Cụm SD đang mang DNP,
+cần lắp đầy đủ trước khi thử. Quy trình thao tác và nghiệm thu ở [microSD](11_sd_storage.md).
+
+## Cập nhật cấu hình PCB — 13/11/2026
+
+Firmware hiện dùng duy nhất pin schematic revision C của PCB REV 1.0. Kconfig cố định
+GPIO debug 4/5/6/7, OLED 8/9 và encoder 15/16/17; GPIO38–42 vẫn dành riêng cho SD,
+chưa có driver thẻ nhớ. Hai schematic `layout_manual` và `AI_layout` có cùng SHA256
+`77799A620E7AD52E5E54E8E3EDEDFBC5ED0166C7C95BC58371E13FC0BF7F23E3`.
+
+- Build `idf.ps1 reconfigure build` bằng ESP-IDF v6.1/toolchain cục bộ: đạt.
+  Mã dự án được build với strict warnings, `-Werror` và GCC analyzer.
+- `test_board_config.py` với netlist KiCad mới xuất và `sdkconfig` sinh ra: đạt;
+  đối chiếu 14 GPIO và kết nối J3/J4. Thử cấu hình/netlist sai chân: bị từ chối đúng.
+- Kconfig thay các pin đã lưu bằng pin PCB cố định: đạt; OLED/encoder vẫn cho tắt riêng.
+- clang-format dry-run trên `probe_board.c`: đạt.
+- Binary mới: `01_source/build/stm32_wifi_probe.bin`, **892048 byte**;
+  SHA256 `41ACADC8AFC98D778493EDF4231AB09080C94C7F5836052806893FCC6A5237EF`.
+
+Chưa nạp binary mới lên phần cứng hoặc nghiệm thu PCB lắp ráp. Các kết quả runtime
+bên dưới thuộc lần thử DevKit ngày 30/10/2026, không phải kết quả thử PCB mới.
+
 ## Môi trường và nguồn mã
 
 | Hạng mục | Giá trị |

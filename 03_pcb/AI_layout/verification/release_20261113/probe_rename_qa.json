@@ -1,0 +1,133 @@
+{
+  "folder": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261113",
+  "archive": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261113.zip",
+  "source_pcb_sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "source_hash_matches": true,
+  "manufacturing_files": {
+    "probe-B_Cu.gbr": {
+      "reference_name": "AI_layout-B_Cu.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "35d3cd1d09bea1fa9acd4e33f828de218d05e59b38e58f683f69905180ee3138"
+    },
+    "probe-B_Mask.gbr": {
+      "reference_name": "AI_layout-B_Mask.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "5ac380d794ca04842338daf29f63dca17b591b80d203b9e8c78c3bfb8b8e0639"
+    },
+    "probe-B_Paste.gbr": {
+      "reference_name": "AI_layout-B_Paste.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "01003ddbd62e18258d40448081e48a5cbe148511d0adedfb80db8f81aca23687"
+    },
+    "probe-B_Silkscreen.gbr": {
+      "reference_name": "AI_layout-B_Silkscreen.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "37b42fd875ffba99027fb0ccaa6cbeae907cb612fc481a2545cf895af2c5631b"
+    },
+    "probe-Edge_Cuts.gbr": {
+      "reference_name": "AI_layout-Edge_Cuts.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "f017f26c4337d8878b5099ebecea36d971028525c09edf05e1edfd2bae76f15d"
+    },
+    "probe-F_Cu.gbr": {
+      "reference_name": "AI_layout-F_Cu.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "8d81a11c25410458adcc66de1ba3321d5d4812a955d7aa9e83b7ef08e58123da"
+    },
+    "probe-F_Mask.gbr": {
+      "reference_name": "AI_layout-F_Mask.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "bc1ae62950bff3bc7f409d2a2bca37ae4dfb2005cece7b22151cf8da4d66adba"
+    },
+    "probe-F_Paste.gbr": {
+      "reference_name": "AI_layout-F_Paste.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "3bb6d4615902c6aeea2e54caed9ce45747342832d5efa3ada05f97955784ee38"
+    },
+    "probe-F_Silkscreen.gbr": {
+      "reference_name": "AI_layout-F_Silkscreen.gbr",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "e91b92115a13e57597a5789d60f100e3e0d4f0ed5bcc29c1b9597fe696e06324"
+    },
+    "probe-NPTH.drl": {
+      "reference_name": "AI_layout-NPTH.drl",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "23bed546588c7970e7e4a9394333e9d7bfa5cde7b4f1ca9777150a862064d564"
+    },
+    "probe-PTH.drl": {
+      "reference_name": "AI_layout-PTH.drl",
+      "exists": true,
+      "byte_identical_to_previous_release": true,
+      "sha256": "53bd5760d60e38721eb971e4c6040ed278dc2882f0c41cf7eb56c995a3d33fd0"
+    }
+  },
+  "all_eleven_files_identical": true,
+  "job_only_paths_changed": true,
+  "job_paths": [
+    "probe-F_Cu.gbr",
+    "probe-B_Cu.gbr",
+    "probe-F_Paste.gbr",
+    "probe-B_Paste.gbr",
+    "probe-F_Silkscreen.gbr",
+    "probe-B_Silkscreen.gbr",
+    "probe-F_Mask.gbr",
+    "probe-B_Mask.gbr",
+    "probe-Edge_Cuts.gbr"
+  ],
+  "job_nine_paths_resolve": true,
+  "job_project_identity_preserved": true,
+  "old_prefix_filenames_remaining": [],
+  "checksums": {
+    "entries": 13,
+    "malformed_lines": [],
+    "duplicate_names": [],
+    "missing_package_files": [],
+    "extra_manifest_files": [],
+    "mismatched_files": [],
+    "pass": true
+  },
+  "readme": {
+    "contains_probe_name": true,
+    "source_pcb_name_preserved": true,
+    "missing_new_file_list_entries": [],
+    "stale_old_fabrication_filenames": [],
+    "pass": true
+  },
+  "zip": {
+    "sha256": "5c894549ae13146e0c8b22c6a58393344a627c80e9cf32d8a1c6e8336c7069c3",
+    "crc_error_member": null,
+    "files": 14,
+    "duplicate_basenames": [],
+    "missing_files": [],
+    "extra_files": [],
+    "different_content": [],
+    "pass": true
+  },
+  "all_package_filenames": [
+    "README_FAB.txt",
+    "SHA256SUMS.txt",
+    "probe-B_Cu.gbr",
+    "probe-B_Mask.gbr",
+    "probe-B_Paste.gbr",
+    "probe-B_Silkscreen.gbr",
+    "probe-Edge_Cuts.gbr",
+    "probe-F_Cu.gbr",
+    "probe-F_Mask.gbr",
+    "probe-F_Paste.gbr",
+    "probe-F_Silkscreen.gbr",
+    "probe-NPTH.drl",
+    "probe-PTH.drl",
+    "probe-job.gbrjob"
+  ],
+  "pass": true
+}

@@ -38,6 +38,7 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | SWD và Black Magic Debug | Đã tích hợp, scan không có target phục hồi được; chưa thử STM32 thật |
 | MCUViewer, SWO, USB probe | Chưa triển khai |
 | OLED SSD1306 và encoder | Có driver/menu, decoder đã test host; thiếu OLED không dừng probe; encoder đã chọn dạng cơ khí rời, chưa nghiệm thu vật lý |
+| microSD SPI/FAT | Có component và lệnh console mount/list/read/write/unmount; chưa nghiệm thu trên PCB/thẻ thật |
 
 ### Phần cứng người dùng đang có
 
@@ -102,8 +103,9 @@ Mã gốc dự án dùng GPL-3.0-or-later, giữ khả năng tích hợp backend
 - Ghi mã đầy đủ của F103/F411/H503/C562; chọn F103 làm target đầu tiên và F411 làm target thứ hai của MVP.
 - Đánh giá phạm vi driver cho H503 và C562; tách việc bổ sung driver nếu backend được chọn chưa hỗ trợ.
 - Chốt pin map SWDIO/SWCLK/nRST, logic 3.3 V cho nguyên mẫu và cách nối nguồn/GND.
-- Giữ chân debug mẫu GPIO4/5/6/10; đề xuất OLED SDA/SCL GPIO8/9, encoder A/B/SW GPIO11/12/13.
-- Xác nhận model encoder, pull-up/nguồn OLED và cách thao tác menu; giữ GPIO21 và GPIO0/BOOT theo chức năng tham chiếu.
+- Pin theo schematic PCB revision C: SWDIO/SWCLK/SWO/nRST GPIO4/5/6/7,
+  OLED SDA/SCL GPIO8/9, encoder A/B/SW GPIO15/16/17; dành riêng GPIO38–42 cho microSD.
+- Xác nhận model encoder, pull-up/nguồn OLED và cách thao tác menu; giữ GPIO0 cho BOOT.
 - Chọn phiên bản Black Magic Debug; quyết định tái sử dụng phần nào của port tham khảo.
 - Chốt hành vi detach, mất TCP, reset và lỗi flash; phân biệt mất kết nối với lệnh chủ động của GDB.
 - Chốt danh sách chức năng MVP và cách đánh dấu model đã thử/chưa thử.

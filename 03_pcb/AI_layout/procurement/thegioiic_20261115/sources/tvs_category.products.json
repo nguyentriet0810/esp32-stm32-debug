@@ -1,0 +1,5942 @@
+[
+  {
+    "id": 1316,
+    "name": "SMAJ5.0A",
+    "description": "",
+    "unit": "Con",
+    "slug": "smaj5-0a",
+    "image_id": 30602,
+    "inventory": 7438,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557455_SMAJ5.0A.pdf",
+    "sheetname": "SMAJ5.0A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3935,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 179315,
+        "product_id": 1316,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 179318,
+        "product_id": 1316,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 179319,
+        "product_id": 1316,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24772,
+        "product_id": 1316,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286418,
+        "product_id": 1316,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286419,
+        "product_id": 1316,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286420,
+        "product_id": 1316,
+        "property_id": 32696,
+        "property": {
+          "id": 32696,
+          "name": "5V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286421,
+        "product_id": 1316,
+        "property_id": 32702,
+        "property": {
+          "id": 32702,
+          "name": "6.4V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286422,
+        "product_id": 1316,
+        "property_id": 32703,
+        "property": {
+          "id": 32703,
+          "name": "9.2V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286423,
+        "product_id": 1316,
+        "property_id": 32704,
+        "property": {
+          "id": 32704,
+          "name": "43.5A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286424,
+        "product_id": 1316,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286425,
+        "product_id": 1316,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286426,
+        "product_id": 1316,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 971,
+        "user_id": 9579
+      },
+      {
+        "id": 4378,
+        "user_id": 17306
+      }
+    ],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ5.0A",
+    "desc_small": "DIODE TVS 5.0V 400W UNI 5% SMA",
+    "category_extras": []
+  },
+  {
+    "id": 15823,
+    "name": "SMAJ18A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj18a",
+    "image_id": 30448,
+    "inventory": 2716,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf",
+    "sheetname": "SMAJ18A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4152,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 163277,
+        "product_id": 15823,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 163278,
+        "product_id": 15823,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 163279,
+        "product_id": 15823,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24728,
+        "product_id": 15823,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286244,
+        "product_id": 15823,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286245,
+        "product_id": 15823,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286246,
+        "product_id": 15823,
+        "property_id": 32620,
+        "property": {
+          "id": 32620,
+          "name": "18V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286247,
+        "product_id": 15823,
+        "property_id": 32621,
+        "property": {
+          "id": 32621,
+          "name": "20V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286248,
+        "product_id": 15823,
+        "property_id": 32622,
+        "property": {
+          "id": 32622,
+          "name": "29.2V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286249,
+        "product_id": 15823,
+        "property_id": 32623,
+        "property": {
+          "id": 32623,
+          "name": "13.7A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286250,
+        "product_id": 15823,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286251,
+        "product_id": 15823,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286252,
+        "product_id": 15823,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 5565,
+        "user_id": 12053
+      }
+    ],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ18A",
+    "desc_small": "DIODE TVS 18V 400W UNI 5% SMA",
+    "category_extras": []
+  },
+  {
+    "id": 13238,
+    "name": "SMBJ24CA-E3/52",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj24ca-e3-52",
+    "image_id": 30598,
+    "inventory": 2306,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 912,
+    "price_change": null,
+    "sheetfile": "https://www.vishay.com/docs/88392/smbj.pdf",
+    "sheetname": "SMBJ24CA-E3/52",
+    "multiples": 5,
+    "minimum_order_quantity": 5,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4136,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222693,
+        "product_id": 13238,
+        "quantity": 1,
+        "price": 912
+      },
+      {
+        "id": 222694,
+        "product_id": 13238,
+        "quantity": 100,
+        "price": 855
+      },
+      {
+        "id": 222695,
+        "product_id": 13238,
+        "quantity": 500,
+        "price": 798
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24734,
+        "product_id": 13238,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286393,
+        "product_id": 13238,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286394,
+        "product_id": 13238,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286395,
+        "product_id": 13238,
+        "property_id": 32691,
+        "property": {
+          "id": 32691,
+          "name": "24V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286396,
+        "product_id": 13238,
+        "property_id": 32692,
+        "property": {
+          "id": 32692,
+          "name": "26.7V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286397,
+        "product_id": 13238,
+        "property_id": 32693,
+        "property": {
+          "id": 32693,
+          "name": "38.9V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286398,
+        "product_id": 13238,
+        "property_id": 32694,
+        "property": {
+          "id": 32694,
+          "name": "15.4A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286399,
+        "product_id": 13238,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286400,
+        "product_id": 13238,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286401,
+        "product_id": 13238,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 3379,
+        "user_id": 20591
+      }
+    ],
+    "package_quantity": {
+      "id": 134,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 750
+    },
+    "manufacturer_code": "SMBJ24CA-E3/52",
+    "desc_small": "TVS DIODE 24V 38.9V DO214AA",
+    "category_extras": []
+  },
+  {
+    "id": 15395,
+    "name": "SMAJ12A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj12a",
+    "image_id": 30600,
+    "inventory": 1895,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf",
+    "sheetname": "SMAJ12A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4148,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222705,
+        "product_id": 15395,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 222706,
+        "product_id": 15395,
+        "quantity": 100,
+        "price": 661
+      },
+      {
+        "id": 222707,
+        "product_id": 15395,
+        "quantity": 500,
+        "price": 638
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24732,
+        "product_id": 15395,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286218,
+        "product_id": 15395,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286219,
+        "product_id": 15395,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286220,
+        "product_id": 15395,
+        "property_id": 32605,
+        "property": {
+          "id": 32605,
+          "name": "12V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286221,
+        "product_id": 15395,
+        "property_id": 32606,
+        "property": {
+          "id": 32606,
+          "name": "13.3V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286222,
+        "product_id": 15395,
+        "property_id": 32607,
+        "property": {
+          "id": 32607,
+          "name": "19.9V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286224,
+        "product_id": 15395,
+        "property_id": 32608,
+        "property": {
+          "id": 32608,
+          "name": "20.1A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286225,
+        "product_id": 15395,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286226,
+        "product_id": 15395,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286227,
+        "product_id": 15395,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ12A",
+    "desc_small": "TVS DIODE 12V 19.9V DO214AC",
+    "category_extras": []
+  },
+  {
+    "id": 2931,
+    "name": "SMF05C ESD Protection Diode Array SOT-363",
+    "description": "",
+    "unit": "Con",
+    "slug": "smf05c-esd-protection-diode-array-sot-363",
+    "image_id": 30441,
+    "inventory": 1490,
+    "rohs": true,
+    "supplier_id": 392,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 1482,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592010_SMF05C.pdf",
+    "sheetname": "SMF05C",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 392,
+      "name": "DIOS",
+      "slug": "dios"
+    },
+    "product_tags": [
+      {
+        "id": 1022,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222689,
+        "product_id": 2931,
+        "quantity": 1,
+        "price": 1482
+      },
+      {
+        "id": 222690,
+        "product_id": 2931,
+        "quantity": 100,
+        "price": 1368
+      },
+      {
+        "id": 222691,
+        "product_id": 2931,
+        "quantity": 500,
+        "price": 1254
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24764,
+        "product_id": 2931,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286469,
+        "product_id": 2931,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286470,
+        "product_id": 2931,
+        "property_id": 32714,
+        "property": {
+          "id": 32714,
+          "name": "5",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286471,
+        "product_id": 2931,
+        "property_id": 32696,
+        "property": {
+          "id": 32696,
+          "name": "5V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286472,
+        "product_id": 2931,
+        "property_id": 32651,
+        "property": {
+          "id": 32651,
+          "name": "6V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286473,
+        "product_id": 2931,
+        "property_id": 32715,
+        "property": {
+          "id": 32715,
+          "name": "12V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286474,
+        "product_id": 2931,
+        "property_id": 32653,
+        "property": {
+          "id": 32653,
+          "name": "5A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286475,
+        "product_id": 2931,
+        "property_id": 32717,
+        "property": {
+          "id": 32717,
+          "name": "60W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286477,
+        "product_id": 2931,
+        "property_id": 32718,
+        "property": {
+          "id": 32718,
+          "name": "-40°C ~ 125°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286478,
+        "product_id": 2931,
+        "property_id": 32719,
+        "property": {
+          "id": 32719,
+          "name": "SOT-363",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 889,
+        "user_id": 7987
+      }
+    ],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "SMF05C",
+    "desc_small": "ESD Protection Diode Array",
+    "category_extras": []
+  },
+  {
+    "id": 19790,
+    "name": "SMAJ28A-E3/61 TVS DIODE 28V 45.4V DO214AC",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj28a-e3-61-tvs-diode-28v-45-4v-do214ac",
+    "image_id": 30444,
+    "inventory": 1391,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 3420,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557204_SMAJ28A.pdf",
+    "sheetname": "SMAJ28A",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [
+      {
+        "id": 1999,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 165121,
+        "product_id": 19790,
+        "quantity": 1,
+        "price": 3420
+      },
+      {
+        "id": 165122,
+        "product_id": 19790,
+        "quantity": 100,
+        "price": 3306
+      },
+      {
+        "id": 165123,
+        "product_id": 19790,
+        "quantity": 500,
+        "price": 3192
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 73274,
+        "product_id": 19790,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286278,
+        "product_id": 19790,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286279,
+        "product_id": 19790,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286280,
+        "product_id": 19790,
+        "property_id": 32638,
+        "property": {
+          "id": 32638,
+          "name": "28V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286281,
+        "product_id": 19790,
+        "property_id": 32639,
+        "property": {
+          "id": 32639,
+          "name": "31.1V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286282,
+        "product_id": 19790,
+        "property_id": 32640,
+        "property": {
+          "id": 32640,
+          "name": "45.4V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286283,
+        "product_id": 19790,
+        "property_id": 32641,
+        "property": {
+          "id": 32641,
+          "name": "8.8A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286284,
+        "product_id": 19790,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286285,
+        "product_id": 19790,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286286,
+        "product_id": 19790,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ28A-E3/61",
+    "desc_small": "45.4V Clamp 8.8A Ipp Tvs diode surface mount",
+    "category_extras": []
+  },
+  {
+    "id": 11256,
+    "name": "SMAJ8.0A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj8-0a",
+    "image_id": 30603,
+    "inventory": 1266,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf",
+    "sheetname": "SMAJ8.0A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [
+      {
+        "id": 4083,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154624,
+        "product_id": 11256,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 154625,
+        "product_id": 11256,
+        "quantity": 100,
+        "price": 661
+      },
+      {
+        "id": 154626,
+        "product_id": 11256,
+        "quantity": 500,
+        "price": 638
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24746,
+        "product_id": 11256,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286349,
+        "product_id": 11256,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286350,
+        "product_id": 11256,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286351,
+        "product_id": 11256,
+        "property_id": 32671,
+        "property": {
+          "id": 32671,
+          "name": "8V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286352,
+        "product_id": 11256,
+        "property_id": 32672,
+        "property": {
+          "id": 32672,
+          "name": "8.89V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286353,
+        "product_id": 11256,
+        "property_id": 32673,
+        "property": {
+          "id": 32673,
+          "name": "13.6V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286354,
+        "product_id": 11256,
+        "property_id": 32674,
+        "property": {
+          "id": 32674,
+          "name": "29.4A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286355,
+        "product_id": 11256,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286356,
+        "product_id": 11256,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286357,
+        "product_id": 11256,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SMAJ8.0A",
+    "desc_small": "TVS DIODE 8V 13.6V DO214AC",
+    "category_extras": []
+  },
+  {
+    "id": 36163,
+    "name": "SMAJ28A TVS DIODE 28V 45.4V DO214AC",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj28a-tvs-diode-28v-45-4v-do214ac",
+    "image_id": 30444,
+    "inventory": 1241,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 798,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557204_SMAJ28A.pdf",
+    "sheetname": "SMAJ28A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4194,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222701,
+        "product_id": 36163,
+        "quantity": 1,
+        "price": 798
+      },
+      {
+        "id": 222702,
+        "product_id": 36163,
+        "quantity": 100,
+        "price": 741
+      },
+      {
+        "id": 222703,
+        "product_id": 36163,
+        "quantity": 500,
+        "price": 684
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286299,
+        "product_id": 36163,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286300,
+        "product_id": 36163,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286301,
+        "product_id": 36163,
+        "property_id": 32638,
+        "property": {
+          "id": 32638,
+          "name": "28V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286302,
+        "product_id": 36163,
+        "property_id": 32639,
+        "property": {
+          "id": 32639,
+          "name": "31.1V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286303,
+        "product_id": 36163,
+        "property_id": 32640,
+        "property": {
+          "id": 32640,
+          "name": "45.4V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286304,
+        "product_id": 36163,
+        "property_id": 32641,
+        "property": {
+          "id": 32641,
+          "name": "8.8A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286305,
+        "product_id": 36163,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286306,
+        "product_id": 36163,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286307,
+        "product_id": 36163,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286308,
+        "product_id": 36163,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ28A",
+    "desc_small": "45.4V Clamp 8.8A Ipp Tvs diode surface mount",
+    "category_extras": []
+  },
+  {
+    "id": 7630,
+    "name": "SMBJ12CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj12ca",
+    "image_id": 30445,
+    "inventory": 1070,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://www.mouser.com/datasheet/2/240/Littelfuse_TVS_Diode_SMBJ_Datasheet.pdf-1108540.pdf",
+    "sheetname": "SMBJ12CA",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4055,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222709,
+        "product_id": 7630,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 222710,
+        "product_id": 7630,
+        "quantity": 100,
+        "price": 661
+      },
+      {
+        "id": 222711,
+        "product_id": 7630,
+        "quantity": 500,
+        "price": 638
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24756,
+        "product_id": 7630,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286506,
+        "product_id": 7630,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286507,
+        "product_id": 7630,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286508,
+        "product_id": 7630,
+        "property_id": 32605,
+        "property": {
+          "id": 32605,
+          "name": "12V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286509,
+        "product_id": 7630,
+        "property_id": 32606,
+        "property": {
+          "id": 32606,
+          "name": "13.3V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286510,
+        "product_id": 7630,
+        "property_id": 32607,
+        "property": {
+          "id": 32607,
+          "name": "19.9V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286511,
+        "product_id": 7630,
+        "property_id": 32725,
+        "property": {
+          "id": 32725,
+          "name": "30.2A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286512,
+        "product_id": 7630,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286513,
+        "product_id": 7630,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286514,
+        "product_id": 7630,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 3370,
+        "user_id": 20591
+      }
+    ],
+    "package_quantity": {
+      "id": 134,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 750
+    },
+    "manufacturer_code": "SMBJ12CA",
+    "desc_small": "ESD Suppressors / TVS Diodes 12Vr 600W 30.2A 5% BiDirectional",
+    "category_extras": []
+  },
+  {
+    "id": 18968,
+    "name": "SMBJ30A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj30a",
+    "image_id": 30538,
+    "inventory": 965,
+    "rohs": false,
+    "supplier_id": 350,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 912,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734591720_SMBJ30A.pdf",
+    "sheetname": "SMBJ30A",
+    "multiples": 5,
+    "minimum_order_quantity": 5,
+    "package_name": null,
+    "supplier": {
+      "id": 350,
+      "name": "JD (China)",
+      "slug": "jd-china"
+    },
+    "product_tags": [
+      {
+        "id": 1932,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 176000,
+        "product_id": 18968,
+        "quantity": 1,
+        "price": 912
+      },
+      {
+        "id": 176001,
+        "product_id": 18968,
+        "quantity": 100,
+        "price": 855
+      },
+      {
+        "id": 176002,
+        "product_id": 18968,
+        "quantity": 500,
+        "price": 798
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24724,
+        "product_id": 18968,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286261,
+        "product_id": 18968,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286262,
+        "product_id": 18968,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286263,
+        "product_id": 18968,
+        "property_id": 32628,
+        "property": {
+          "id": 32628,
+          "name": "30V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286264,
+        "product_id": 18968,
+        "property_id": 32629,
+        "property": {
+          "id": 32629,
+          "name": "33.3V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286265,
+        "product_id": 18968,
+        "property_id": 32630,
+        "property": {
+          "id": 32630,
+          "name": "48.4V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286266,
+        "product_id": 18968,
+        "property_id": 32631,
+        "property": {
+          "id": 32631,
+          "name": "12.4A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286267,
+        "product_id": 18968,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286268,
+        "product_id": 18968,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "SMBJ30A",
+    "desc_small": "TVS DIODE 30V 48.4V DO214AA",
+    "category_extras": []
+  },
+  {
+    "id": 11414,
+    "name": "SMBJ6.8A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj6-8a",
+    "image_id": 30597,
+    "inventory": 965,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 912,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557304_SMBJ6.8A.pdf",
+    "sheetname": "SMBJ6.8A",
+    "multiples": 5,
+    "minimum_order_quantity": 5,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4114,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222713,
+        "product_id": 11414,
+        "quantity": 1,
+        "price": 912
+      },
+      {
+        "id": 222714,
+        "product_id": 11414,
+        "quantity": 100,
+        "price": 855
+      },
+      {
+        "id": 222715,
+        "product_id": 11414,
+        "quantity": 500,
+        "price": 798
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24738,
+        "product_id": 11414,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286375,
+        "product_id": 11414,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286376,
+        "product_id": 11414,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286377,
+        "product_id": 11414,
+        "property_id": 32683,
+        "property": {
+          "id": 32683,
+          "name": "5.8V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286378,
+        "product_id": 11414,
+        "property_id": 32684,
+        "property": {
+          "id": 32684,
+          "name": "6.45V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286379,
+        "product_id": 11414,
+        "property_id": 32685,
+        "property": {
+          "id": 32685,
+          "name": "10.5V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286380,
+        "product_id": 11414,
+        "property_id": 32686,
+        "property": {
+          "id": 32686,
+          "name": "58.1A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286381,
+        "product_id": 11414,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286382,
+        "product_id": 11414,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286383,
+        "product_id": 11414,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 134,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 750
+    },
+    "manufacturer_code": "SMBJ6.8A",
+    "desc_small": "TVS DIODE 5.8V 10.5V DO214AA",
+    "category_extras": []
+  },
+  {
+    "id": 8202,
+    "name": "P6KE180CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "p6ke180ca",
+    "image_id": 30580,
+    "inventory": 815,
+    "rohs": true,
+    "supplier_id": 22,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 798,
+    "price_change": null,
+    "sheetfile": "https://www.vishay.com/docs/88369/p6ke.pdf",
+    "sheetname": "P6KE180CA",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154633,
+        "product_id": 8202,
+        "quantity": 1,
+        "price": 798
+      },
+      {
+        "id": 154634,
+        "product_id": 8202,
+        "quantity": 100,
+        "price": 741
+      },
+      {
+        "id": 154635,
+        "product_id": 8202,
+        "quantity": 500,
+        "price": 684
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24752,
+        "product_id": 8202,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286322,
+        "product_id": 8202,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286323,
+        "product_id": 8202,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286324,
+        "product_id": 8202,
+        "property_id": 32658,
+        "property": {
+          "id": 32658,
+          "name": "154V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286325,
+        "product_id": 8202,
+        "property_id": 32659,
+        "property": {
+          "id": 32659,
+          "name": "171V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286326,
+        "product_id": 8202,
+        "property_id": 32660,
+        "property": {
+          "id": 32660,
+          "name": "246V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286327,
+        "product_id": 8202,
+        "property_id": 32661,
+        "property": {
+          "id": 32661,
+          "name": "2.4A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286328,
+        "product_id": 8202,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286329,
+        "product_id": 8202,
+        "property_id": 32618,
+        "property": {
+          "id": 32618,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286330,
+        "product_id": 8202,
+        "property_id": 32662,
+        "property": {
+          "id": 32662,
+          "name": "DO-204AC, DO-15",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 4309,
+        "user_id": 17306
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "P6KE180CA",
+    "desc_small": "ESD Suppressors / TVS Diodes 600W 180V Bidirect",
+    "category_extras": []
+  },
+  {
+    "id": 11417,
+    "name": "P6KE10A",
+    "description": null,
+    "unit": "Con",
+    "slug": "p6ke10a",
+    "image_id": 30582,
+    "inventory": 729,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://www.mouser.com/datasheet/2/308/P6KE10A-1301563.pdf",
+    "sheetname": "P6KE10A",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 45591,
+        "product_id": 11417,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 45593,
+        "product_id": 11417,
+        "quantity": 100,
+        "price": 1482
+      },
+      {
+        "id": 45594,
+        "product_id": 11417,
+        "quantity": 50,
+        "price": 1596
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24736,
+        "product_id": 11417,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286384,
+        "product_id": 11417,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286385,
+        "product_id": 11417,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286386,
+        "product_id": 11417,
+        "property_id": 32687,
+        "property": {
+          "id": 32687,
+          "name": "8.55V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286387,
+        "product_id": 11417,
+        "property_id": 32688,
+        "property": {
+          "id": 32688,
+          "name": "9.5V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286388,
+        "product_id": 11417,
+        "property_id": 32689,
+        "property": {
+          "id": 32689,
+          "name": "14.5V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286389,
+        "product_id": 11417,
+        "property_id": 32690,
+        "property": {
+          "id": 32690,
+          "name": "41A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286390,
+        "product_id": 11417,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286391,
+        "product_id": 11417,
+        "property_id": 32647,
+        "property": {
+          "id": 32647,
+          "name": "-65°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286392,
+        "product_id": 11417,
+        "property_id": 32662,
+        "property": {
+          "id": 32662,
+          "name": "DO-204AC, DO-15",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "P6KE10A",
+    "desc_small": "TVS DIODE 8.55V 14.5V DO15",
+    "category_extras": []
+  },
+  {
+    "id": 2997,
+    "name": "P6KE6.8AG",
+    "description": "",
+    "unit": "Con",
+    "slug": "p6ke6-8ag",
+    "image_id": 30578,
+    "inventory": 608,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://html.alldatasheet.vn/html-pdf/551017/ONSEMI/P6KE6.8AG/218/1/P6KE6.8AG.html",
+    "sheetname": "P6KE6.8AG",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154627,
+        "product_id": 2997,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 154628,
+        "product_id": 2997,
+        "quantity": 100,
+        "price": 661
+      },
+      {
+        "id": 154629,
+        "product_id": 2997,
+        "quantity": 500,
+        "price": 638
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24762,
+        "product_id": 2997,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286479,
+        "product_id": 2997,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286480,
+        "product_id": 2997,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286481,
+        "product_id": 2997,
+        "property_id": 32683,
+        "property": {
+          "id": 32683,
+          "name": "5.8V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286482,
+        "product_id": 2997,
+        "property_id": 32684,
+        "property": {
+          "id": 32684,
+          "name": "6.45V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286483,
+        "product_id": 2997,
+        "property_id": 32685,
+        "property": {
+          "id": 32685,
+          "name": "10.5V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286484,
+        "product_id": 2997,
+        "property_id": 32720,
+        "property": {
+          "id": 32720,
+          "name": "57A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286485,
+        "product_id": 2997,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286486,
+        "product_id": 2997,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286487,
+        "product_id": 2997,
+        "property_id": 32721,
+        "property": {
+          "id": 32721,
+          "name": "T-18, Axial",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "P6KE6.8AG",
+    "desc_small": "TVS DIODE 5.8VWM 10.5VC AXIAL",
+    "category_extras": []
+  },
+  {
+    "id": 7924,
+    "name": "PSD12C",
+    "description": null,
+    "unit": "Con",
+    "slug": "psd12c",
+    "image_id": 30452,
+    "inventory": 534,
+    "rohs": true,
+    "supplier_id": 276,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 2280,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557360_PSD12C.pdf",
+    "sheetname": "PSD12C",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 276,
+      "name": "ProTek Devices",
+      "slug": "protek-devices"
+    },
+    "product_tags": [
+      {
+        "id": 1230,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 205908,
+        "product_id": 7924,
+        "quantity": 1,
+        "price": 2280
+      },
+      {
+        "id": 205909,
+        "product_id": 7924,
+        "quantity": 100,
+        "price": 2166
+      },
+      {
+        "id": 205910,
+        "product_id": 7924,
+        "quantity": 500,
+        "price": 2052
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24754,
+        "product_id": 7924,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286317,
+        "product_id": 7924,
+        "property_id": 32656,
+        "property": {
+          "id": 32656,
+          "name": "19V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286318,
+        "product_id": 7924,
+        "property_id": 32606,
+        "property": {
+          "id": 32606,
+          "name": "13.3V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286319,
+        "product_id": 7924,
+        "property_id": 32605,
+        "property": {
+          "id": 32605,
+          "name": "12V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286320,
+        "product_id": 7924,
+        "property_id": 32657,
+        "property": {
+          "id": 32657,
+          "name": "SOD-323",
+          "parent_id": 32601
+        }
+      },
+      {
+        "id": 286321,
+        "product_id": 7924,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "manufacturer_code": "PSD12C-LF-T7",
+    "desc_small": "Package SOD323, Diode TVS, 50 pF, 29.5 V",
+    "category_extras": []
+  },
+  {
+    "id": 45239,
+    "name": "USBLC6-2SC6 TVS DIODE 5.25V 17V SOT-23-6L",
+    "description": null,
+    "unit": "Con",
+    "slug": "usblc6-2sc6-tvs-diode-5-25v-17v-sot-23-6l",
+    "image_id": 609,
+    "inventory": 489,
+    "rohs": false,
+    "supplier_id": 17,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 5040,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1790393863_ST_USBLC6-2SC6.pdf",
+    "sheetname": "ST USBLC6-2SC6",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tags": [
+      {
+        "id": 8445,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#000000",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 261875,
+        "product_id": 45239,
+        "quantity": 1,
+        "price": 5040
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 368445,
+        "product_id": 45239,
+        "property_id": 32648,
+        "property": {
+          "id": 32648,
+          "name": "Steering (Rail to Rail)",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 368446,
+        "product_id": 45239,
+        "property_id": 32649,
+        "property": {
+          "id": 32649,
+          "name": "2",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 368448,
+        "product_id": 45239,
+        "property_id": 32650,
+        "property": {
+          "id": 32650,
+          "name": "5.25V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 368449,
+        "product_id": 45239,
+        "property_id": 32651,
+        "property": {
+          "id": 32651,
+          "name": "6V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 368450,
+        "product_id": 45239,
+        "property_id": 32652,
+        "property": {
+          "id": 32652,
+          "name": "17V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 368451,
+        "product_id": 45239,
+        "property_id": 32653,
+        "property": {
+          "id": 32653,
+          "name": "5A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 368453,
+        "product_id": 45239,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 368539,
+        "product_id": 45239,
+        "property_id": 41220,
+        "property": {
+          "id": 41220,
+          "name": "SOT-23-6",
+          "parent_id": 32601
+        }
+      },
+      {
+        "id": 368540,
+        "product_id": 45239,
+        "property_id": 32718,
+        "property": {
+          "id": 32718,
+          "name": "-40°C ~ 125°C",
+          "parent_id": 32600
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "",
+    "desc_small": "17V Clamp 5A (8/20µs) Ipp Tvs Diode",
+    "category_extras": []
+  },
+  {
+    "id": 2280,
+    "name": "SMAJ45A",
+    "description": "",
+    "unit": "Con",
+    "slug": "smaj45a",
+    "image_id": 30532,
+    "inventory": 388,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smaj_datasheet.pdf.pdf",
+    "sheetname": "SMAJ45A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3989,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222697,
+        "product_id": 2280,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 222698,
+        "product_id": 2280,
+        "quantity": 100,
+        "price": 661
+      },
+      {
+        "id": 222699,
+        "product_id": 2280,
+        "quantity": 500,
+        "price": 638
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24768,
+        "product_id": 2280,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286458,
+        "product_id": 2280,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286459,
+        "product_id": 2280,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286460,
+        "product_id": 2280,
+        "property_id": 32709,
+        "property": {
+          "id": 32709,
+          "name": "45V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286461,
+        "product_id": 2280,
+        "property_id": 32710,
+        "property": {
+          "id": 32710,
+          "name": "50V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286462,
+        "product_id": 2280,
+        "property_id": 32711,
+        "property": {
+          "id": 32711,
+          "name": "72.7V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286463,
+        "product_id": 2280,
+        "property_id": 32712,
+        "property": {
+          "id": 32712,
+          "name": "5.5A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286464,
+        "product_id": 2280,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286465,
+        "product_id": 2280,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286466,
+        "product_id": 2280,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 2840,
+        "user_id": 9161
+      }
+    ],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ45A",
+    "desc_small": "DIODE TVS 45V 400W UNI 5% SMA",
+    "category_extras": []
+  },
+  {
+    "id": 19528,
+    "name": "1.5KE68A TVS DIODE 58.1V 92V DO201",
+    "description": null,
+    "unit": "Con",
+    "slug": "1-5ke68a-tvs-diode-58-1v-92v-do201",
+    "image_id": 30606,
+    "inventory": 340,
+    "rohs": false,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557267_1.5KE68A.pdf",
+    "sheetname": "1.5KE68A",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 164857,
+        "product_id": 19528,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 164858,
+        "product_id": 19528,
+        "quantity": 100,
+        "price": 1653
+      },
+      {
+        "id": 164859,
+        "product_id": 19528,
+        "quantity": 500,
+        "price": 1596
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 67698,
+        "product_id": 19528,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286269,
+        "product_id": 19528,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286270,
+        "product_id": 19528,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286271,
+        "product_id": 19528,
+        "property_id": 32634,
+        "property": {
+          "id": 32634,
+          "name": "58.1V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286272,
+        "product_id": 19528,
+        "property_id": 32635,
+        "property": {
+          "id": 32635,
+          "name": "64.6V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286273,
+        "product_id": 19528,
+        "property_id": 32636,
+        "property": {
+          "id": 32636,
+          "name": "92V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286274,
+        "product_id": 19528,
+        "property_id": 32637,
+        "property": {
+          "id": 32637,
+          "name": "16.5A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286275,
+        "product_id": 19528,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286276,
+        "product_id": 19528,
+        "property_id": 32618,
+        "property": {
+          "id": 32618,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286277,
+        "product_id": 19528,
+        "property_id": 32619,
+        "property": {
+          "id": 32619,
+          "name": "DO-201",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "1.5KE68A",
+    "desc_small": "92V Clamp 16.5A Ipp Tvs Diode",
+    "category_extras": []
+  },
+  {
+    "id": 15819,
+    "name": "1.5KE15CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "1-5ke15ca",
+    "image_id": 30604,
+    "inventory": 299,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_1_5ke_datasheet.pdf.pdf",
+    "sheetname": "1.5KE15CA",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [
+      {
+        "id": 4151,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 182951,
+        "product_id": 15819,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 182952,
+        "product_id": 15819,
+        "quantity": 50,
+        "price": 1596
+      },
+      {
+        "id": 182953,
+        "product_id": 15819,
+        "quantity": 100,
+        "price": 1482
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24730,
+        "product_id": 15819,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286229,
+        "product_id": 15819,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286236,
+        "product_id": 15819,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286237,
+        "product_id": 15819,
+        "property_id": 32613,
+        "property": {
+          "id": 32613,
+          "name": "12.8V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286238,
+        "product_id": 15819,
+        "property_id": 32614,
+        "property": {
+          "id": 32614,
+          "name": "14.3V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286239,
+        "product_id": 15819,
+        "property_id": 32615,
+        "property": {
+          "id": 32615,
+          "name": "21.2V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286240,
+        "product_id": 15819,
+        "property_id": 32616,
+        "property": {
+          "id": 32616,
+          "name": "71.7A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286241,
+        "product_id": 15819,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286242,
+        "product_id": 15819,
+        "property_id": 32618,
+        "property": {
+          "id": 32618,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286243,
+        "product_id": 15819,
+        "property_id": 32619,
+        "property": {
+          "id": 32619,
+          "name": "DO-201",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "1.5KE15CA",
+    "desc_small": "TVS DIODE 12.8V 21.2V DO201",
+    "category_extras": []
+  },
+  {
+    "id": 1972,
+    "name": "1.5KE12CA",
+    "description": "",
+    "unit": "Con",
+    "slug": "1-5ke12ca",
+    "image_id": 33089,
+    "inventory": 285,
+    "rohs": true,
+    "supplier_id": 22,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 2850,
+    "price_change": null,
+    "sheetfile": "https://www.vishay.com/docs/88301/15ke.pdf",
+    "sheetname": "1.5KE12CA-E3/51",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [
+      {
+        "id": 881,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154639,
+        "product_id": 1972,
+        "quantity": 1,
+        "price": 2850
+      },
+      {
+        "id": 154640,
+        "product_id": 1972,
+        "quantity": 100,
+        "price": 2736
+      },
+      {
+        "id": 154641,
+        "product_id": 1972,
+        "quantity": 500,
+        "price": 2622
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24770,
+        "product_id": 1972,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286449,
+        "product_id": 1972,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286450,
+        "product_id": 1972,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286451,
+        "product_id": 1972,
+        "property_id": 32705,
+        "property": {
+          "id": 32705,
+          "name": "10.2V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286452,
+        "product_id": 1972,
+        "property_id": 32706,
+        "property": {
+          "id": 32706,
+          "name": "11.4V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286453,
+        "product_id": 1972,
+        "property_id": 32707,
+        "property": {
+          "id": 32707,
+          "name": "16.7V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286454,
+        "product_id": 1972,
+        "property_id": 32708,
+        "property": {
+          "id": 32708,
+          "name": "89.8A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286455,
+        "product_id": 1972,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286456,
+        "product_id": 1972,
+        "property_id": 32618,
+        "property": {
+          "id": 32618,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286457,
+        "product_id": 1972,
+        "property_id": 32619,
+        "property": {
+          "id": 32619,
+          "name": "DO-201",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "1.5KE12CA-E3/51",
+    "desc_small": "TRANSIL 1500W 12V BIDIR DO-201",
+    "category_extras": []
+  },
+  {
+    "id": 17491,
+    "name": "1.5KE22CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "1-5ke22ca",
+    "image_id": 30605,
+    "inventory": 219,
+    "rohs": false,
+    "supplier_id": 17,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 2052,
+    "price_change": null,
+    "sheetfile": "https://www.st.com/content/ccc/resource/technical/document/datasheet/03/7a/4e/3b/96/c3/4e/37/CD00000663.pdf/files/CD00000663.pdf/jcr:content/translations/en.CD00000663.pdf",
+    "sheetname": "1.5KE22CA",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154642,
+        "product_id": 17491,
+        "quantity": 1,
+        "price": 2052
+      },
+      {
+        "id": 154643,
+        "product_id": 17491,
+        "quantity": 100,
+        "price": 1938
+      },
+      {
+        "id": 154644,
+        "product_id": 17491,
+        "quantity": 500,
+        "price": 1824
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24726,
+        "product_id": 17491,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286253,
+        "product_id": 17491,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286254,
+        "product_id": 17491,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286255,
+        "product_id": 17491,
+        "property_id": 32624,
+        "property": {
+          "id": 32624,
+          "name": "18.8V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286256,
+        "product_id": 17491,
+        "property_id": 32625,
+        "property": {
+          "id": 32625,
+          "name": "20.9V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286257,
+        "product_id": 17491,
+        "property_id": 32626,
+        "property": {
+          "id": 32626,
+          "name": "39.3V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286258,
+        "product_id": 17491,
+        "property_id": 32627,
+        "property": {
+          "id": 32627,
+          "name": "254A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286259,
+        "product_id": 17491,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286260,
+        "product_id": 17491,
+        "property_id": 32619,
+        "property": {
+          "id": 32619,
+          "name": "DO-201",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "1.5KE22CA",
+    "desc_small": "TVS DIODE 20.9-39.3V 254A 1500W DO201",
+    "category_extras": []
+  },
+  {
+    "id": 4624,
+    "name": "1.5SMC18CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "1-5smc18ca",
+    "image_id": 30599,
+    "inventory": 199,
+    "rohs": true,
+    "supplier_id": 22,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 2850,
+    "price_change": null,
+    "sheetfile": "https://www.vishay.com/docs/88303/15smc.pdf",
+    "sheetname": "1.5SMC18CA",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [
+      {
+        "id": 4027,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 165074,
+        "product_id": 4624,
+        "quantity": 1,
+        "price": 2850
+      },
+      {
+        "id": 165075,
+        "product_id": 4624,
+        "quantity": 500,
+        "price": 2736
+      },
+      {
+        "id": 165076,
+        "product_id": 4624,
+        "quantity": 1000,
+        "price": 2622
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24758,
+        "product_id": 4624,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286497,
+        "product_id": 4624,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286498,
+        "product_id": 4624,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286499,
+        "product_id": 4624,
+        "property_id": 32643,
+        "property": {
+          "id": 32643,
+          "name": "15.3V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286500,
+        "product_id": 4624,
+        "property_id": 32644,
+        "property": {
+          "id": 32644,
+          "name": "17.1V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286501,
+        "product_id": 4624,
+        "property_id": 32645,
+        "property": {
+          "id": 32645,
+          "name": "25.2V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286502,
+        "product_id": 4624,
+        "property_id": 32646,
+        "property": {
+          "id": 32646,
+          "name": "59.5A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286503,
+        "product_id": 4624,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286504,
+        "product_id": 4624,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286505,
+        "product_id": 4624,
+        "property_id": 32724,
+        "property": {
+          "id": 32724,
+          "name": "DO-214AB, SMC",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 6856,
+        "user_id": 13066
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "1.5SMC18CA",
+    "desc_small": "TVS DIODE 15.3VWM 25.2VC DO214AB",
+    "category_extras": []
+  },
+  {
+    "id": 40334,
+    "name": "NUP2105LT1G TVS Diode 24V 44V SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "nup2105lt1g-tvs-diode-24v-44v-sot-23",
+    "image_id": 322,
+    "inventory": 125,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 4560,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1745891914_NUP2105LT1G.pdf",
+    "sheetname": "NUP2105LT1G",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 3794,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 239409,
+        "product_id": 40334,
+        "quantity": 1,
+        "price": 4560
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 330198,
+        "product_id": 40334,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 330199,
+        "product_id": 40334,
+        "property_id": 38425,
+        "property": {
+          "id": 38425,
+          "name": "2",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 330200,
+        "product_id": 40334,
+        "property_id": 32691,
+        "property": {
+          "id": 32691,
+          "name": "24V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 330201,
+        "product_id": 40334,
+        "property_id": 38426,
+        "property": {
+          "id": 38426,
+          "name": "26.2V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 330202,
+        "product_id": 40334,
+        "property_id": 38427,
+        "property": {
+          "id": 38427,
+          "name": "44V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 330203,
+        "product_id": 40334,
+        "property_id": 38428,
+        "property": {
+          "id": 38428,
+          "name": "8A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 330204,
+        "product_id": 40334,
+        "property_id": 38429,
+        "property": {
+          "id": 38429,
+          "name": "350W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 330205,
+        "product_id": 40334,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 330206,
+        "product_id": 40334,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 330207,
+        "product_id": 40334,
+        "property_id": 38430,
+        "property": {
+          "id": 38430,
+          "name": "SOT-23-3",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 7991,
+        "user_id": 17306
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "NUP2105LT1G",
+    "desc_small": "TVS DIODE 24VWM 44VC",
+    "category_extras": []
+  },
+  {
+    "id": 11408,
+    "name": "SMBJ36CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj36ca",
+    "image_id": 30596,
+    "inventory": 56,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557331_SMBJ36CA.pdf",
+    "sheetname": "SMBJ36CA",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4109,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 222684,
+        "product_id": 11408,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 222685,
+        "product_id": 11408,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 222686,
+        "product_id": 11408,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24742,
+        "product_id": 11408,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286366,
+        "product_id": 11408,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286367,
+        "product_id": 11408,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286368,
+        "product_id": 11408,
+        "property_id": 32679,
+        "property": {
+          "id": 32679,
+          "name": "36V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286369,
+        "product_id": 11408,
+        "property_id": 32680,
+        "property": {
+          "id": 32680,
+          "name": "40V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286370,
+        "product_id": 11408,
+        "property_id": 32681,
+        "property": {
+          "id": 32681,
+          "name": "58.1V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286371,
+        "product_id": 11408,
+        "property_id": 32682,
+        "property": {
+          "id": 32682,
+          "name": "10.3A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286372,
+        "product_id": 11408,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286373,
+        "product_id": 11408,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286374,
+        "product_id": 11408,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 134,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 750
+    },
+    "manufacturer_code": "SMBJ36CA",
+    "desc_small": "TVS DIODE 36V 58.1V DO214AA",
+    "category_extras": []
+  },
+  {
+    "id": 8329,
+    "name": "SMBJ120A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj120a",
+    "image_id": 30595,
+    "inventory": 1,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 3420,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557148_SMBJ120A.pdf",
+    "sheetname": "SMBJ120A",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 32736,
+        "product_id": 8329,
+        "quantity": 1,
+        "price": 3420
+      },
+      {
+        "id": 32737,
+        "product_id": 8329,
+        "quantity": 50,
+        "price": 3306
+      },
+      {
+        "id": 32738,
+        "product_id": 8329,
+        "quantity": 100,
+        "price": 3192
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24750,
+        "product_id": 8329,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286331,
+        "product_id": 8329,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286332,
+        "product_id": 8329,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286333,
+        "product_id": 8329,
+        "property_id": 32663,
+        "property": {
+          "id": 32663,
+          "name": "120V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286334,
+        "product_id": 8329,
+        "property_id": 32664,
+        "property": {
+          "id": 32664,
+          "name": "133V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286335,
+        "product_id": 8329,
+        "property_id": 32665,
+        "property": {
+          "id": 32665,
+          "name": "193V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286336,
+        "product_id": 8329,
+        "property_id": 32666,
+        "property": {
+          "id": 32666,
+          "name": "3.1A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286337,
+        "product_id": 8329,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286338,
+        "product_id": 8329,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286339,
+        "product_id": 8329,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SMBJ120A",
+    "desc_small": "TVS DIODE 120V 193V DO214AA",
+    "category_extras": []
+  },
+  {
+    "id": 2869,
+    "name": "SP720ABG",
+    "description": "",
+    "unit": "Con",
+    "slug": "sp720abg",
+    "image_id": 152,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 74100,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557432_SP720ABG.pdf",
+    "sheetname": "SP720ABG",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 8280,
+        "product_id": 2869,
+        "quantity": 1,
+        "price": 74100
+      },
+      {
+        "id": 8281,
+        "product_id": 2869,
+        "quantity": 10,
+        "price": 71820
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24766,
+        "product_id": 2869,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286467,
+        "product_id": 2869,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286468,
+        "product_id": 2869,
+        "property_id": 32713,
+        "property": {
+          "id": 32713,
+          "name": "16-SOIC",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SP720ABG",
+    "desc_small": "TVS Diode Arrays 35V(SUP) 2A(I(IN)) 130THRM RES",
+    "category_extras": []
+  },
+  {
+    "id": 3778,
+    "name": "SMAJ36A",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj36a",
+    "image_id": 30533,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 169,
+    "product_tag_id": 8,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557395_SMAJ36A.pdf",
+    "sheetname": "SMAJ36A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4006,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154630,
+        "product_id": 3778,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 154631,
+        "product_id": 3778,
+        "quantity": 100,
+        "price": 627
+      },
+      {
+        "id": 154632,
+        "product_id": 3778,
+        "quantity": 500,
+        "price": 570
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24760,
+        "product_id": 3778,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286488,
+        "product_id": 3778,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286489,
+        "product_id": 3778,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286490,
+        "product_id": 3778,
+        "property_id": 32679,
+        "property": {
+          "id": 32679,
+          "name": "36V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286491,
+        "product_id": 3778,
+        "property_id": 32680,
+        "property": {
+          "id": 32680,
+          "name": "40V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286492,
+        "product_id": 3778,
+        "property_id": 32681,
+        "property": {
+          "id": 32681,
+          "name": "58.1V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286493,
+        "product_id": 3778,
+        "property_id": 32722,
+        "property": {
+          "id": 32722,
+          "name": "6.9A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286494,
+        "product_id": 3778,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286495,
+        "product_id": 3778,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286496,
+        "product_id": 3778,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": {
+      "id": 94,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1800
+    },
+    "manufacturer_code": "SMAJ36A",
+    "desc_small": "TVS DIODE 36VWM 58.1VC SMA",
+    "category_extras": []
+  },
+  {
+    "id": 10767,
+    "name": "1.5KE400A",
+    "description": null,
+    "unit": "Con",
+    "slug": "1-5ke400a",
+    "image_id": 30562,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 2850,
+    "price_change": null,
+    "sheetfile": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_1_5ke_datasheet.pdf.pdf",
+    "sheetname": "1.5KE400A",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 42989,
+        "product_id": 10767,
+        "quantity": 1,
+        "price": 2850
+      },
+      {
+        "id": 42990,
+        "product_id": 10767,
+        "quantity": 50,
+        "price": 2736
+      },
+      {
+        "id": 42991,
+        "product_id": 10767,
+        "quantity": 100,
+        "price": 2622
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24748,
+        "product_id": 10767,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286340,
+        "product_id": 10767,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286341,
+        "product_id": 10767,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286342,
+        "product_id": 10767,
+        "property_id": 32667,
+        "property": {
+          "id": 32667,
+          "name": "342V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286343,
+        "product_id": 10767,
+        "property_id": 32668,
+        "property": {
+          "id": 32668,
+          "name": "380V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286344,
+        "product_id": 10767,
+        "property_id": 32669,
+        "property": {
+          "id": 32669,
+          "name": "548V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286345,
+        "product_id": 10767,
+        "property_id": 32670,
+        "property": {
+          "id": 32670,
+          "name": "2.8A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286346,
+        "product_id": 10767,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286347,
+        "product_id": 10767,
+        "property_id": 32618,
+        "property": {
+          "id": 32618,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286348,
+        "product_id": 10767,
+        "property_id": 32619,
+        "property": {
+          "id": 32619,
+          "name": "DO-201",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 4310,
+        "user_id": 17306
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "1.5KE400A",
+    "desc_small": "TVS DIODE 342V 548V DO201",
+    "category_extras": []
+  },
+  {
+    "id": 22866,
+    "name": "1.5KE18CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "1-5ke18ca",
+    "image_id": 30932,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 3420,
+    "price_change": null,
+    "sheetfile": "https://www.st.com/content/ccc/resource/technical/document/datasheet/03/7a/4e/3b/96/c3/4e/37/CD00000663.pdf/files/CD00000663.pdf/jcr:content/translations/en.CD00000663.pdf",
+    "sheetname": "1.5KE18CA",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [
+      {
+        "id": 2207,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 166032,
+        "product_id": 22866,
+        "quantity": 1,
+        "price": 3420
+      },
+      {
+        "id": 166033,
+        "product_id": 22866,
+        "quantity": 100,
+        "price": 3306
+      },
+      {
+        "id": 166034,
+        "product_id": 22866,
+        "quantity": 500,
+        "price": 3192
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 109494,
+        "product_id": 22866,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286287,
+        "product_id": 22866,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286288,
+        "product_id": 22866,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286289,
+        "product_id": 22866,
+        "property_id": 32643,
+        "property": {
+          "id": 32643,
+          "name": "15.3V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286290,
+        "product_id": 22866,
+        "property_id": 32644,
+        "property": {
+          "id": 32644,
+          "name": "17.1V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286291,
+        "product_id": 22866,
+        "property_id": 32645,
+        "property": {
+          "id": 32645,
+          "name": "25.2V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286292,
+        "product_id": 22866,
+        "property_id": 32646,
+        "property": {
+          "id": 32646,
+          "name": "59.5A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286293,
+        "product_id": 22866,
+        "property_id": 32617,
+        "property": {
+          "id": 32617,
+          "name": "1500W (1.5kW)",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286294,
+        "product_id": 22866,
+        "property_id": 32647,
+        "property": {
+          "id": 32647,
+          "name": "-65°C ~ 175°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286295,
+        "product_id": 22866,
+        "property_id": 32619,
+        "property": {
+          "id": 32619,
+          "name": "DO-201",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "1.5KE18CA",
+    "desc_small": "TVS DIODE 15.3V 32.5V DO201",
+    "category_extras": []
+  },
+  {
+    "id": 840,
+    "name": "SM6T27A",
+    "description": "",
+    "unit": "Con",
+    "slug": "sm6t27a",
+    "image_id": 1137,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 17,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 2280,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740557724_SM6T27A.pdf",
+    "sheetname": "SM6T27A",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 1920,
+        "product_id": 840,
+        "quantity": 1,
+        "price": 2280
+      },
+      {
+        "id": 1921,
+        "product_id": 840,
+        "quantity": 50,
+        "price": 2052
+      },
+      {
+        "id": 1922,
+        "product_id": 840,
+        "quantity": 100,
+        "price": 1824
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24776,
+        "product_id": 840,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286409,
+        "product_id": 840,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286410,
+        "product_id": 840,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286411,
+        "product_id": 840,
+        "property_id": 32698,
+        "property": {
+          "id": 32698,
+          "name": "23.1V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286412,
+        "product_id": 840,
+        "property_id": 32699,
+        "property": {
+          "id": 32699,
+          "name": "25.7V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286413,
+        "product_id": 840,
+        "property_id": 32700,
+        "property": {
+          "id": 32700,
+          "name": "37.5V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286414,
+        "product_id": 840,
+        "property_id": 32701,
+        "property": {
+          "id": 32701,
+          "name": "16A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286415,
+        "product_id": 840,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286416,
+        "product_id": 840,
+        "property_id": 32642,
+        "property": {
+          "id": 32642,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286417,
+        "product_id": 840,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SM6T27A",
+    "desc_small": "TRANSIL 600W 27V UNIDIR SMB",
+    "category_extras": []
+  },
+  {
+    "id": 36295,
+    "name": "USBLC6-2P6 TVS DIODE 5.25V 17V SOT-666",
+    "description": null,
+    "unit": "Con",
+    "slug": "usblc6-2p6-tvs-diode-5-25v-17v-sot-666",
+    "image_id": 50723,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 358,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 3306,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592197_USBLC6-2P6.pdf",
+    "sheetname": "USBLC6-2P6",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 358,
+      "name": "TECH PUBLIC",
+      "slug": "tech-public"
+    },
+    "product_tags": [
+      {
+        "id": 3129,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173497,
+        "product_id": 36295,
+        "quantity": 1,
+        "price": 3306
+      },
+      {
+        "id": 173498,
+        "product_id": 36295,
+        "quantity": 100,
+        "price": 3192
+      },
+      {
+        "id": 173499,
+        "product_id": 36295,
+        "quantity": 500,
+        "price": 3078
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 233698,
+        "product_id": 36295,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286309,
+        "product_id": 36295,
+        "property_id": 32648,
+        "property": {
+          "id": 32648,
+          "name": "Steering (Rail to Rail)",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286310,
+        "product_id": 36295,
+        "property_id": 32649,
+        "property": {
+          "id": 32649,
+          "name": "2",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286311,
+        "product_id": 36295,
+        "property_id": 32650,
+        "property": {
+          "id": 32650,
+          "name": "5.25V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286312,
+        "product_id": 36295,
+        "property_id": 32651,
+        "property": {
+          "id": 32651,
+          "name": "6V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286313,
+        "product_id": 36295,
+        "property_id": 32652,
+        "property": {
+          "id": 32652,
+          "name": "17V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286314,
+        "product_id": 36295,
+        "property_id": 32653,
+        "property": {
+          "id": 32653,
+          "name": "5A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286315,
+        "product_id": 36295,
+        "property_id": 32654,
+        "property": {
+          "id": 32654,
+          "name": "-40°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 286316,
+        "product_id": 36295,
+        "property_id": 32655,
+        "property": {
+          "id": 32655,
+          "name": "SOT-666",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "USBLC6-2P6",
+    "desc_small": "17V Clamp 5A (8/20µs) Ipp Tvs Diode",
+    "category_extras": []
+  },
+  {
+    "id": 37895,
+    "name": "SMAJ24CA TVS DIODE 24V 38.9V DO-214AC, SMA",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj24ca-tvs-diode-24v-38-9v-do-214ac-sma",
+    "image_id": 56505,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734590718_SMAJ24CA.pdf",
+    "sheetname": "SMAJ24CA",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 231913,
+        "product_id": 37895,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 231921,
+        "product_id": 37895,
+        "quantity": 100,
+        "price": 319
+      },
+      {
+        "id": 231922,
+        "product_id": 37895,
+        "quantity": 500,
+        "price": 296
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 299404,
+        "product_id": 37895,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 299406,
+        "product_id": 37895,
+        "property_id": 32691,
+        "property": {
+          "id": 32691,
+          "name": "24V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 299407,
+        "product_id": 37895,
+        "property_id": 32692,
+        "property": {
+          "id": 32692,
+          "name": "26.7V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 299408,
+        "product_id": 37895,
+        "property_id": 32693,
+        "property": {
+          "id": 32693,
+          "name": "38.9V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 299409,
+        "product_id": 37895,
+        "property_id": 32682,
+        "property": {
+          "id": 32682,
+          "name": "10.3A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 299410,
+        "product_id": 37895,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 299411,
+        "product_id": 37895,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 299412,
+        "product_id": 37895,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 299413,
+        "product_id": 37895,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 299414,
+        "product_id": 37895,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      },
+      {
+        "id": 299415,
+        "product_id": 37895,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SMAJ24CA",
+    "desc_small": "38.9V Clamp 10.3A Ipp Tvs",
+    "category_extras": []
+  },
+  {
+    "id": 37896,
+    "name": "SMAJ30A TVS DIODE 30V 48.4V DO-214AC, SMA",
+    "description": null,
+    "unit": "Con",
+    "slug": "smaj30a-tvs-diode-30v-48-4v-do-214ac-sma",
+    "image_id": 56505,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734590718_SMAJ24CA.pdf",
+    "sheetname": "SMAJ30A",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 231936,
+        "product_id": 37896,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 231937,
+        "product_id": 37896,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 231938,
+        "product_id": 37896,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 299416,
+        "product_id": 37896,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 299417,
+        "product_id": 37896,
+        "property_id": 32604,
+        "property": {
+          "id": 32604,
+          "name": "1",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 299418,
+        "product_id": 37896,
+        "property_id": 32628,
+        "property": {
+          "id": 32628,
+          "name": "30V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 299419,
+        "product_id": 37896,
+        "property_id": 32629,
+        "property": {
+          "id": 32629,
+          "name": "33.3V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 299420,
+        "product_id": 37896,
+        "property_id": 32630,
+        "property": {
+          "id": 32630,
+          "name": "48.4V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 299421,
+        "product_id": 37896,
+        "property_id": 32630,
+        "property": {
+          "id": 32630,
+          "name": "48.4V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 299422,
+        "product_id": 37896,
+        "property_id": 32609,
+        "property": {
+          "id": 32609,
+          "name": "400W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 299423,
+        "product_id": 37896,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 299424,
+        "product_id": 37896,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 299425,
+        "product_id": 37896,
+        "property_id": 32611,
+        "property": {
+          "id": 32611,
+          "name": "DO-214AC, SMA",
+          "parent_id": 32601
+        }
+      },
+      {
+        "id": 299426,
+        "product_id": 37896,
+        "property_id": 35190,
+        "property": {
+          "id": 35190,
+          "name": "8.3A",
+          "parent_id": 32598
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SMAJ30A",
+    "desc_small": "48.4V Clamp 8.3A Ipp Tvs Diode",
+    "category_extras": []
+  },
+  {
+    "id": 37897,
+    "name": "SMBJ15CA TVS DIODE 15V 24.4V DO-214AA, SMB",
+    "description": null,
+    "unit": "Con",
+    "slug": "smbj15ca-tvs-diode-15v-24-4v-do-214aa-smb",
+    "image_id": 56506,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 1710,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734590718_SMBJ15CA.pdf",
+    "sheetname": "SMBJ15CA",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 231939,
+        "product_id": 37897,
+        "quantity": 1,
+        "price": 1710
+      },
+      {
+        "id": 231940,
+        "product_id": 37897,
+        "quantity": 100,
+        "price": 1596
+      },
+      {
+        "id": 231941,
+        "product_id": 37897,
+        "quantity": 500,
+        "price": 1482
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 299427,
+        "product_id": 37897,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 299428,
+        "product_id": 37897,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 299429,
+        "product_id": 37897,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 299430,
+        "product_id": 37897,
+        "property_id": 32610,
+        "property": {
+          "id": 32610,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 299431,
+        "product_id": 37897,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 299432,
+        "product_id": 37897,
+        "property_id": 32633,
+        "property": {
+          "id": 32633,
+          "name": "DO-214AA, SMB",
+          "parent_id": 32601
+        }
+      },
+      {
+        "id": 299440,
+        "product_id": 37897,
+        "property_id": 35191,
+        "property": {
+          "id": 35191,
+          "name": "15V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 299441,
+        "product_id": 37897,
+        "property_id": 35192,
+        "property": {
+          "id": 35192,
+          "name": "16.7V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 299442,
+        "product_id": 37897,
+        "property_id": 35193,
+        "property": {
+          "id": 35193,
+          "name": "24.4V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 299443,
+        "product_id": 37897,
+        "property_id": 35194,
+        "property": {
+          "id": 35194,
+          "name": "24.6A",
+          "parent_id": 32598
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "SMBJ15CA",
+    "desc_small": "24.4V Clamp 24.6A Ipp Tvs Diode",
+    "category_extras": []
+  },
+  {
+    "id": 11386,
+    "name": "P6KE33CA",
+    "description": null,
+    "unit": "Con",
+    "slug": "p6ke33ca",
+    "image_id": 30928,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 17,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 570,
+    "price_change": null,
+    "sheetfile": "https://www.st.com/content/ccc/resource/technical/document/datasheet/1a/3b/f2/a9/96/72/49/ca/CD00000720.pdf/files/CD00000720.pdf/jcr:content/translations/en.CD00000720.pdf",
+    "sheetname": "P6KE33CA",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 154636,
+        "product_id": 11386,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 154637,
+        "product_id": 11386,
+        "quantity": 500,
+        "price": 559
+      },
+      {
+        "id": 154638,
+        "product_id": 11386,
+        "quantity": 1000,
+        "price": 547
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24744,
+        "product_id": 11386,
+        "property_id": 3513,
+        "property": {
+          "id": 3513,
+          "name": "Xuyên lỗ",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286358,
+        "product_id": 11386,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286359,
+        "product_id": 11386,
+        "property_id": 32612,
+        "property": {
+          "id": 32612,
+          "name": "1",
+          "parent_id": 32594
+        }
+      },
+      {
+        "id": 286360,
+        "product_id": 11386,
+        "property_id": 32675,
+        "property": {
+          "id": 32675,
+          "name": "28.2V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286361,
+        "product_id": 11386,
+        "property_id": 32676,
+        "property": {
+          "id": 32676,
+          "name": "31.4V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286362,
+        "product_id": 11386,
+        "property_id": 32677,
+        "property": {
+          "id": 32677,
+          "name": "59V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286363,
+        "product_id": 11386,
+        "property_id": 32678,
+        "property": {
+          "id": 32678,
+          "name": "68A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286364,
+        "product_id": 11386,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 286365,
+        "product_id": 11386,
+        "property_id": 32662,
+        "property": {
+          "id": 32662,
+          "name": "DO-204AC, DO-15",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 4349,
+        "user_id": 17306
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "P6KE33CA",
+    "desc_small": "TVS DIODE 28.2V 59V DO15",
+    "category_extras": []
+  },
+  {
+    "id": 41446,
+    "name": "SM712 Asymmetrical TVS Diode Array 7-12V SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "sm712-asymmetrical-tvs-diode-array-7-12v-sot-23",
+    "image_id": 322,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 113,
+    "category_id": 169,
+    "product_tag_id": 7,
+    "price": 7056,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1752207872_Littelfuse_SM712-02HTG.pdf",
+    "sheetname": "Littelfuse SM712-02HTG",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 113,
+      "name": "Littelfuse",
+      "slug": "littelfuse"
+    },
+    "product_tags": [
+      {
+        "id": 3810,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 248074,
+        "product_id": 41446,
+        "quantity": 1,
+        "price": 7056
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 345371,
+        "product_id": 41446,
+        "property_id": 32602,
+        "property": {
+          "id": 32602,
+          "name": "Zener",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 345372,
+        "product_id": 41446,
+        "property_id": 32632,
+        "property": {
+          "id": 32632,
+          "name": "600W",
+          "parent_id": 32599
+        }
+      },
+      {
+        "id": 345373,
+        "product_id": 41446,
+        "property_id": 32718,
+        "property": {
+          "id": 32718,
+          "name": "-40°C ~ 125°C",
+          "parent_id": 32600
+        }
+      },
+      {
+        "id": 345375,
+        "product_id": 41446,
+        "property_id": 39353,
+        "property": {
+          "id": 39353,
+          "name": "7.5V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 345383,
+        "product_id": 41446,
+        "property_id": 32656,
+        "property": {
+          "id": 32656,
+          "name": "19V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 345384,
+        "product_id": 41446,
+        "property_id": 39354,
+        "property": {
+          "id": 39354,
+          "name": "19A",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 345385,
+        "product_id": 41446,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 345386,
+        "product_id": 41446,
+        "property_id": 38430,
+        "property": {
+          "id": 38430,
+          "name": "SOT-23-3",
+          "parent_id": 32601
+        }
+      },
+      {
+        "id": 345393,
+        "product_id": 41446,
+        "property_id": 39356,
+        "property": {
+          "id": 39356,
+          "name": "31V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 345394,
+        "product_id": 41446,
+        "property_id": 38425,
+        "property": {
+          "id": 38425,
+          "name": "2",
+          "parent_id": 32594
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 7751,
+        "user_id": 1105
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "SM712-02HTG",
+    "desc_small": "19V, 31V Clamp 19A Ipp Tvs Diode",
+    "category_extras": []
+  },
+  {
+    "id": 717,
+    "name": "USBULC6-2M6",
+    "description": "",
+    "unit": "Con",
+    "slug": "usbulc6-2m6",
+    "image_id": 8185,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 17,
+    "category_id": 169,
+    "product_tag_id": null,
+    "price": 74100,
+    "price_change": null,
+    "sheetfile": "https://www.st.com/resource/en/datasheet/usbulc6-2m6.pdf",
+    "sheetname": "USBULC6-2M6",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 17,
+      "name": "STMicroelectronics",
+      "slug": "stmicroelectronics"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 1626,
+        "product_id": 717,
+        "quantity": 1,
+        "price": 74100
+      },
+      {
+        "id": 1627,
+        "product_id": 717,
+        "quantity": 50,
+        "price": 72960
+      },
+      {
+        "id": 1628,
+        "product_id": 717,
+        "quantity": 100,
+        "price": 68400
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 24778,
+        "product_id": 717,
+        "property_id": 3514,
+        "property": {
+          "id": 3514,
+          "name": "Dán bề mặt",
+          "parent_id": 3512
+        }
+      },
+      {
+        "id": 286402,
+        "product_id": 717,
+        "property_id": 32648,
+        "property": {
+          "id": 32648,
+          "name": "Steering (Rail to Rail)",
+          "parent_id": 32593
+        }
+      },
+      {
+        "id": 286403,
+        "product_id": 717,
+        "property_id": 32649,
+        "property": {
+          "id": 32649,
+          "name": "2",
+          "parent_id": 32603
+        }
+      },
+      {
+        "id": 286404,
+        "product_id": 717,
+        "property_id": 32696,
+        "property": {
+          "id": 32696,
+          "name": "5V",
+          "parent_id": 32595
+        }
+      },
+      {
+        "id": 286405,
+        "product_id": 717,
+        "property_id": 32651,
+        "property": {
+          "id": 32651,
+          "name": "6V",
+          "parent_id": 32596
+        }
+      },
+      {
+        "id": 286406,
+        "product_id": 717,
+        "property_id": 32652,
+        "property": {
+          "id": 32652,
+          "name": "17V",
+          "parent_id": 32597
+        }
+      },
+      {
+        "id": 286407,
+        "product_id": 717,
+        "property_id": 32653,
+        "property": {
+          "id": 32653,
+          "name": "5A (8/20µs)",
+          "parent_id": 32598
+        }
+      },
+      {
+        "id": 286408,
+        "product_id": 717,
+        "property_id": 32697,
+        "property": {
+          "id": 32697,
+          "name": "6-UFDFN",
+          "parent_id": 32601
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "USBULC6-2M6",
+    "desc_small": "17V Clamp 5A (8/20µs) Ipp Tvs Diode Surface Mount 6-µQFN (1.45x1.0)",
+    "category_extras": []
+  }
+]

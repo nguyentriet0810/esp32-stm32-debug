@@ -1,0 +1,60 @@
+[
+  {
+    "id": 5095,
+    "name": "SMA-KWE-14.5 Đầu RF SMA Đực Dài 14.5mm Vuông Góc 90 Độ Hàn PCB",
+    "description": null,
+    "unit": "",
+    "info": "",
+    "manufacturer_code": null,
+    "slug": "sma-kwe-14-5-dau-rf-sma-duc-dai-14-5mm-vuong-goc-90-do-han-pcb",
+    "image_id": 36472,
+    "inventory": 325,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 11400,
+    "category_id": 360,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "Mạ vàng, 50 Ohm",
+    "comments_count": 0,
+    "package_quantity": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 188891,
+        "product_id": 5095,
+        "quantity": 1,
+        "price": 11400
+      },
+      {
+        "id": 188892,
+        "product_id": 5095,
+        "quantity": 20,
+        "price": 10830
+      },
+      {
+        "id": 188893,
+        "product_id": 5095,
+        "quantity": 50,
+        "price": 10260
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

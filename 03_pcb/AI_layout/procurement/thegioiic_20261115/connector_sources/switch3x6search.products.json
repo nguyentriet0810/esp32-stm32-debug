@@ -1,0 +1,590 @@
+[
+  {
+    "id": 985,
+    "name": "Nút Nhấn 3x6mm Cao 2.5mm 2 Chân SMD Đầu Đỏ",
+    "description": "",
+    "unit": "Cái",
+    "slug": "nut-nhan-3x6mm-cao-2-5mm-2-chan-smd-dau-do",
+    "image_id": 1232,
+    "inventory": 2633,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 50mA",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "price": 570,
+    "show_package": true,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [
+      {
+        "id": 248,
+        "created_at": "2015-11-19T23:08:38.000Z",
+        "updated_at": "2022-07-22T03:23:35.000Z",
+        "product_id": 985,
+        "user_id": 1938,
+        "favoriteable_id": 985,
+        "favoriteable_type": "App\\Models\\Product"
+      }
+    ],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 221021,
+        "product_id": 985,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 221022,
+        "product_id": 985,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 221023,
+        "product_id": 985,
+        "quantity": 500,
+        "price": 524
+      },
+      {
+        "id": 221024,
+        "product_id": 985,
+        "quantity": 3000,
+        "price": 420
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    }
+  },
+  {
+    "id": 3592,
+    "name": "Nút Nhấn 3x6mm Cao 2.5mm 2 Chân SMD Đầu Trắng",
+    "description": null,
+    "unit": "Cái",
+    "slug": "nut-nhan-3x6mm-cao-2-5mm-2-chan-smd-dau-trang",
+    "image_id": 3427,
+    "inventory": 2559,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 0.1A",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "price": 570,
+    "show_package": true,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [
+      {
+        "id": 1473,
+        "created_at": "2020-01-10T09:56:12.000Z",
+        "updated_at": "2022-07-22T03:23:42.000Z",
+        "product_id": 3592,
+        "user_id": 13961,
+        "favoriteable_id": 3592,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 1659,
+        "created_at": "2020-03-17T19:03:42.000Z",
+        "updated_at": "2022-07-22T03:23:43.000Z",
+        "product_id": 3592,
+        "user_id": 15265,
+        "favoriteable_id": 3592,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 4425,
+        "created_at": "2022-04-28T15:29:33.000Z",
+        "updated_at": "2022-07-22T03:24:01.000Z",
+        "product_id": 3592,
+        "user_id": 3282,
+        "favoriteable_id": 3592,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 5984,
+        "created_at": "2023-11-09T02:56:43.000Z",
+        "updated_at": "2023-11-09T02:56:43.000Z",
+        "product_id": null,
+        "user_id": 37987,
+        "favoriteable_id": 3592,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 6029,
+        "created_at": "2023-11-25T03:07:53.000Z",
+        "updated_at": "2023-11-25T03:07:53.000Z",
+        "product_id": null,
+        "user_id": 57075,
+        "favoriteable_id": 3592,
+        "favoriteable_type": "App\\Models\\Product"
+      }
+    ],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 221017,
+        "product_id": 3592,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 221018,
+        "product_id": 3592,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 221019,
+        "product_id": 3592,
+        "quantity": 500,
+        "price": 524
+      },
+      {
+        "id": 221020,
+        "product_id": 3592,
+        "quantity": 3000,
+        "price": 437
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    }
+  },
+  {
+    "id": 3237,
+    "name": "Nút Nhấn 3x6mm Cao 3.5mm 4 Chân SMD Chỉnh Ngang",
+    "description": null,
+    "unit": null,
+    "slug": "nut-nhan-3x6mm-cao-3-5mm-4-chan-smd-chinh-ngang",
+    "image_id": 2956,
+    "inventory": 1890,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 0.1A",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "price": 342,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 178009,
+        "product_id": 3237,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 178010,
+        "product_id": 3237,
+        "quantity": 100,
+        "price": 319
+      },
+      {
+        "id": 178011,
+        "product_id": 3237,
+        "quantity": 500,
+        "price": 296
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 43,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 2000
+    }
+  },
+  {
+    "id": 1975,
+    "name": "Nút Nhấn 3x6mm Cao 5mm 4 Chân Xuyên Lỗ Chỉnh Ngang",
+    "description": "",
+    "unit": null,
+    "slug": "nut-nhan-3x6mm-cao-5mm-4-chan-xuyen-lo-chinh-ngang",
+    "image_id": 1862,
+    "inventory": 1041,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 50mA",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "price": 682,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 178015,
+        "product_id": 1975,
+        "quantity": 1,
+        "price": 682
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 1977,
+    "name": "Nút Nhấn 3x6mm Cao 5.0mm 2 Chân Xuyên Lỗ",
+    "description": "",
+    "unit": null,
+    "slug": "nut-nhan-3x6mm-cao-5-0mm-2-chan-xuyen-lo",
+    "image_id": 1866,
+    "inventory": 97,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 50mA",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "price": 741,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [
+      {
+        "id": 355,
+        "created_at": "2016-05-26T05:30:16.000Z",
+        "updated_at": "2022-07-22T03:23:35.000Z",
+        "product_id": 1977,
+        "user_id": 1226,
+        "favoriteable_id": 1977,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 491,
+        "created_at": "2017-03-21T23:18:09.000Z",
+        "updated_at": "2022-07-22T03:23:36.000Z",
+        "product_id": 1977,
+        "user_id": 3727,
+        "favoriteable_id": 1977,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 4379,
+        "created_at": "2022-04-03T16:19:25.000Z",
+        "updated_at": "2022-07-22T03:24:01.000Z",
+        "product_id": 1977,
+        "user_id": 15165,
+        "favoriteable_id": 1977,
+        "favoriteable_type": "App\\Models\\Product"
+      }
+    ],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 177964,
+        "product_id": 1977,
+        "quantity": 1,
+        "price": 741
+      },
+      {
+        "id": 177965,
+        "product_id": 1977,
+        "quantity": 100,
+        "price": 718
+      },
+      {
+        "id": 177966,
+        "product_id": 1977,
+        "quantity": 500,
+        "price": 695
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 1976,
+    "name": "Nút Nhấn 3x6mm Cao 5mm 2 Chân SMD Đầu Trắng",
+    "description": "",
+    "unit": "Cái",
+    "slug": "nut-nhan-3x6mm-cao-5mm-2-chan-smd-dau-trang",
+    "image_id": 1916,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 50mA",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "price": 570,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [
+      {
+        "id": 5697,
+        "created_at": "2023-07-26T07:07:19.000Z",
+        "updated_at": "2023-07-26T07:07:19.000Z",
+        "product_id": null,
+        "user_id": 55466,
+        "favoriteable_id": 1976,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 5963,
+        "created_at": "2023-11-03T04:16:57.000Z",
+        "updated_at": "2023-11-03T04:16:57.000Z",
+        "product_id": null,
+        "user_id": 57075,
+        "favoriteable_id": 1976,
+        "favoriteable_type": "App\\Models\\Product"
+      }
+    ],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 204386,
+        "product_id": 1976,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 204387,
+        "product_id": 1976,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 204388,
+        "product_id": 1976,
+        "quantity": 500,
+        "price": 524
+      },
+      {
+        "id": 253663,
+        "product_id": 1976,
+        "quantity": 1500,
+        "price": 359
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": {
+      "id": 54,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 1500
+    }
+  },
+  {
+    "id": 5139,
+    "name": "Nút Nhấn 3x6mm Cao 5.0mm 2 Chân SMD",
+    "description": null,
+    "unit": null,
+    "slug": "nut-nhan-3x6mm-cao-5-0mm-2-chan-smd",
+    "image_id": 4773,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 302,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "12VDC 0.1A",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 1368,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 18844,
+        "product_id": 5139,
+        "quantity": 1,
+        "price": 1368
+      },
+      {
+        "id": 18846,
+        "product_id": 5139,
+        "quantity": 100,
+        "price": 1311
+      },
+      {
+        "id": 18847,
+        "product_id": 5139,
+        "quantity": 500,
+        "price": 1254
+      },
+      {
+        "id": 18848,
+        "product_id": 5139,
+        "quantity": 1000,
+        "price": 1140
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 29596,
+    "name": "Cáp Điện Cadivi CVV-3x6mm 300/500V",
+    "description": null,
+    "unit": "Mét",
+    "slug": "cap-dien-cadivi-cvv-3x6mm-300-500v",
+    "image_id": 36522,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 199,
+    "category_id": 1733,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Tiết điện: 3x6mm2, Lõi: 3×7/1.04",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 80940,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 199,
+      "name": "Cadivi",
+      "slug": "cadivi"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 125180,
+        "product_id": 29596,
+        "quantity": 1,
+        "price": 80940
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 42697,
+    "name": "Ron Cao Su VMQ O-Ring 3x6mm",
+    "description": null,
+    "unit": "Cái",
+    "slug": "ron-cao-su-vmq-o-ring-3x6mm",
+    "image_id": 62730,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 1779,
+    "product_tag_id": null,
+    "sheetfile": "",
+    "desc_small": "Dày: 1.5mm, chịu nhiệt: -35-200℃",
+    "sheetname": "",
+    "manufacturer_code": "",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 1140,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 254096,
+        "product_id": 42697,
+        "quantity": 1,
+        "price": 1140
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  }
+]

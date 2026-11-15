@@ -1,0 +1,3798 @@
+{
+  "baseline": {
+    "path": "D:\\esp32_debug\\03_pcb\\layout_manual\\schematic.kicad_pcb",
+    "thickness_mm": 1.6,
+    "footprints": 63,
+    "locked_footprints": [
+      {
+        "reference": "BOOT",
+        "value": "BOOT",
+        "library_id": "Button_Switch_SMD:SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+        "locked": true,
+        "position_mm": [
+          153.5,
+          53.5
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "dnp": false,
+        "pads": {
+          "ac655eb8-2061-4bf7-952b-e2be48836f1f": {
+            "number": "1",
+            "net": "/ESP_BOOT",
+            "local_position_mm": [
+              -3.875,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.25,
+              1.0
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "a8d15cdf-ff87-4c8e-8c44-85dc6e7421e8": {
+            "number": "2",
+            "net": "/GND",
+            "local_position_mm": [
+              3.875,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.25,
+              1.0
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          }
+        }
+      },
+      {
+        "reference": "TYPE-C",
+        "value": "USB-C Native",
+        "library_id": "Connector_USB:USB_C_Receptacle_G-Switch_GT-USB-7010ASV",
+        "locked": true,
+        "position_mm": [
+          135.0,
+          106.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "dnp": false,
+        "pads": {
+          "8a78a044-7795-46fc-a057-11d6539b7820": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -2.89,
+              -2.605
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.65,
+              0.65
+            ],
+            "drill_mm": [
+              0.65,
+              0.65
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "113e3c36-9ad7-4a23-a8a8-d37a66f7a853": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              2.89,
+              -2.605
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.65,
+              0.65
+            ],
+            "drill_mm": [
+              0.65,
+              0.65
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "6bdc8398-3c4d-4e6b-8f7d-6230404eadf8": {
+            "number": "A1",
+            "net": "/GND",
+            "local_position_mm": [
+              -3.2,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "4cacfa81-9ad4-46b6-bc34-4b5c9d17e1fd": {
+            "number": "A4",
+            "net": "/VBUS_NATIVE",
+            "local_position_mm": [
+              -2.4,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "0c70843f-8edb-4b3a-a9f8-048ad67c4356": {
+            "number": "A5",
+            "net": "/J1_CC1",
+            "local_position_mm": [
+              -1.25,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "0a9c2bbd-bed0-451a-b586-e2443963e375": {
+            "number": "A6",
+            "net": "/USB_N_P",
+            "local_position_mm": [
+              -0.25,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "8ecd5124-f47c-4067-a5e9-4cfa41afaedc": {
+            "number": "A7",
+            "net": "/USB_N_N",
+            "local_position_mm": [
+              0.25,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "517b92af-6b25-45fe-baab-aa9f4df6cc05": {
+            "number": "A8",
+            "net": "unconnected-(J1-SBU1-PadA8)",
+            "local_position_mm": [
+              1.25,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "38255da3-31b9-4976-80b1-95c52c7a45f9": {
+            "number": "A9",
+            "net": "/VBUS_NATIVE",
+            "local_position_mm": [
+              2.4,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "a91e1dac-a4bd-4df6-b80c-4005dac70537": {
+            "number": "A12",
+            "net": "/GND",
+            "local_position_mm": [
+              3.2,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "2808f06a-4039-4398-91d0-73bc5cd17ffe": {
+            "number": "B1",
+            "net": "/GND",
+            "local_position_mm": [
+              3.2,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "fbdae100-f605-4ff6-8ec5-95202be518b0": {
+            "number": "B4",
+            "net": "/VBUS_NATIVE",
+            "local_position_mm": [
+              2.4,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "fe80070a-d587-4a80-999b-03bfc698aed0": {
+            "number": "B5",
+            "net": "/J1_CC2",
+            "local_position_mm": [
+              1.75,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "1d49b9c1-a7f5-45da-8f18-01b455c6ce6b": {
+            "number": "B6",
+            "net": "/USB_N_P",
+            "local_position_mm": [
+              0.75,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "068cefa5-f0b2-4e43-9d07-73cf63e5f722": {
+            "number": "B7",
+            "net": "/USB_N_N",
+            "local_position_mm": [
+              -0.75,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "b44a39aa-d109-433b-a4a9-8fb85d832858": {
+            "number": "B8",
+            "net": "unconnected-(J1-SBU2-PadB8)",
+            "local_position_mm": [
+              -1.75,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.3,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "e771e585-a8c2-4020-a219-4c8323cca214": {
+            "number": "B9",
+            "net": "/VBUS_NATIVE",
+            "local_position_mm": [
+              -2.4,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "ee87df8c-0c58-4cd8-8d3d-f9f06d78292e": {
+            "number": "B12",
+            "net": "/GND",
+            "local_position_mm": [
+              -3.2,
+              -3.725
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.6,
+              1.24
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 4,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "7e7ded5e-e419-4211-8901-5ded2443b756": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              -4.32,
+              -3.125
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.0,
+              2.1
+            ],
+            "drill_mm": [
+              0.6,
+              1.7
+            ],
+            "shape": 2,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "dd160477-8013-40fc-b544-9791e2fdad37": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              -4.32,
+              1.075
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.0,
+              1.8
+            ],
+            "drill_mm": [
+              0.6,
+              1.4
+            ],
+            "shape": 2,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "d7a48d1c-983f-4065-b07b-e40d7a31d1b9": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              4.32,
+              -3.125
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.0,
+              2.1
+            ],
+            "drill_mm": [
+              0.6,
+              1.7
+            ],
+            "shape": 2,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "c7ed32ab-6b08-4384-9119-817cb2e87f14": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              4.32,
+              1.075
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.0,
+              1.8
+            ],
+            "drill_mm": [
+              0.6,
+              1.4
+            ],
+            "shape": 2,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "",
+        "value": "",
+        "library_id": "MountingHole:MountingHole_3.2mm_M3",
+        "locked": true,
+        "position_mm": [
+          165.0,
+          105.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 28,
+        "dnp": false,
+        "pads": {
+          "6818a6f4-525d-4f48-8f99-97a19a5cee97": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              3.2,
+              3.2
+            ],
+            "drill_mm": [
+              3.2,
+              3.2
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "",
+        "value": "",
+        "library_id": "MountingHole:MountingHole_3.2mm_M3",
+        "locked": true,
+        "position_mm": [
+          105.0,
+          105.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 28,
+        "dnp": false,
+        "pads": {
+          "db2b8116-edeb-4770-b5be-2375ab8d6f5e": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              3.2,
+              3.2
+            ],
+            "drill_mm": [
+              3.2,
+              3.2
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "SD SCHOKET",
+        "value": "JXTCONN TF-01A",
+        "library_id": "Probe:JXTCONN_TF-01A",
+        "locked": true,
+        "position_mm": [
+          165.5,
+          91.25
+        ],
+        "angle_deg": 90.0,
+        "layer": "F.Cu",
+        "attributes": 66,
+        "dnp": true,
+        "pads": {
+          "7eaa213e-645b-48c0-8c9b-892c64baf09c": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -4.95,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.0,
+              1.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "00bef204-806d-4b98-86fb-455bf575949d": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              3.05,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.0,
+              1.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "0397c74a-c42c-464a-ad2e-2586169815b7": {
+            "number": "1",
+            "net": "/SD_DAT2",
+            "local_position_mm": [
+              2.25,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "da028835-c4e4-41b5-9746-393a308030f1": {
+            "number": "2",
+            "net": "/SD_CS_N",
+            "local_position_mm": [
+              1.15,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "3faaba90-4121-4ecc-ae7c-b75c02e97aa2": {
+            "number": "3",
+            "net": "/SD_MOSI",
+            "local_position_mm": [
+              0.05,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "eb7a3cf8-158e-47af-a7be-d95ab33a75f3": {
+            "number": "4",
+            "net": "/SD_3V3",
+            "local_position_mm": [
+              -1.05,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "4dff6f0c-4850-450e-94f9-7ef880084adf": {
+            "number": "5",
+            "net": "/SD_CLK",
+            "local_position_mm": [
+              -2.15,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "d411eacc-a432-4fb2-86e4-7b11db312ad7": {
+            "number": "6",
+            "net": "/GND",
+            "local_position_mm": [
+              -3.25,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "bc5b8d79-7f6f-4ce6-a039-0be5cb3bd745": {
+            "number": "7",
+            "net": "/SD_MISO",
+            "local_position_mm": [
+              -4.35,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "ed6372c9-a0bb-482f-86c2-07c6e2b5c125": {
+            "number": "8",
+            "net": "/SD_DAT1",
+            "local_position_mm": [
+              -5.45,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "a29aa9b9-5fb7-47eb-a16c-c28fa62fe77a": {
+            "number": "9",
+            "net": "/SD_DETECT_N",
+            "local_position_mm": [
+              -6.55,
+              -11.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.7,
+              1.6
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "a56e36df-53d4-45de-919c-415d7aa8861a": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              -7.75,
+              -10.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.2,
+              1.5
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "bbef1c3e-eb2c-48cc-b3b6-f52811f74824": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              -7.75,
+              -0.4
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.2,
+              2.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "7b16cb82-8695-4d04-9bd8-7644d81f9df2": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              6.85,
+              -10.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.6,
+              1.5
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "d2aba934-0ef7-448b-baf3-992806e93549": {
+            "number": "SH",
+            "net": "/GND",
+            "local_position_mm": [
+              7.75,
+              -0.4
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.2,
+              2.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          }
+        }
+      },
+      {
+        "reference": "ANTEN",
+        "value": "SMA BWSMA-KWE-Z001",
+        "library_id": "Connector_Coaxial:SMA_BAT_Wireless_BWSMA-KWE-Z001",
+        "locked": true,
+        "position_mm": [
+          165.5,
+          64.5
+        ],
+        "angle_deg": -90.0,
+        "layer": "F.Cu",
+        "attributes": 65,
+        "dnp": true,
+        "pads": {
+          "cbc22e22-95ad-4641-a95c-a4a2082eef01": {
+            "number": "1",
+            "net": "unconnected-(J6-In-Pad1)",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.3,
+              2.3
+            ],
+            "drill_mm": [
+              1.4,
+              1.4
+            ],
+            "shape": 4,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "4dc09add-e83d-4094-8e51-cccb66e0559c": {
+            "number": "2",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.55,
+              -2.55
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.2,
+              2.2
+            ],
+            "drill_mm": [
+              1.4,
+              1.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "c651d039-e54a-4845-842e-600fdc036b58": {
+            "number": "2",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.55,
+              2.55
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.2,
+              2.2
+            ],
+            "drill_mm": [
+              1.4,
+              1.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "2157deb9-392b-4162-95f5-15190e9e7c8f": {
+            "number": "2",
+            "net": "/GND",
+            "local_position_mm": [
+              2.55,
+              -2.55
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.2,
+              2.2
+            ],
+            "drill_mm": [
+              1.4,
+              1.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "4a8e9885-3764-4928-869b-bd94469f5226": {
+            "number": "2",
+            "net": "/GND",
+            "local_position_mm": [
+              2.55,
+              2.55
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.2,
+              2.2
+            ],
+            "drill_mm": [
+              1.4,
+              1.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "RESET",
+        "value": "RESET",
+        "library_id": "Button_Switch_SMD:SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+        "locked": true,
+        "position_mm": [
+          153.5,
+          59.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "dnp": false,
+        "pads": {
+          "34b701f8-f8cf-4550-aef7-31400b226cca": {
+            "number": "1",
+            "net": "/ESP_EN",
+            "local_position_mm": [
+              -3.875,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.25,
+              1.0
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "062c0169-afbe-42d1-b481-f835e87dccd6": {
+            "number": "2",
+            "net": "/GND",
+            "local_position_mm": [
+              3.875,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.25,
+              1.0
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          }
+        }
+      },
+      {
+        "reference": "",
+        "value": "",
+        "library_id": "MountingHole:MountingHole_3.2mm_M3",
+        "locked": true,
+        "position_mm": [
+          105.0,
+          55.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 28,
+        "dnp": false,
+        "pads": {
+          "8934077d-0750-424e-9142-3335dd564fe6": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              3.2,
+              3.2
+            ],
+            "drill_mm": [
+              3.2,
+              3.2
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "ESP32-S3",
+        "value": "ESP32-S3-WROOM-1-N16R8",
+        "library_id": "RF_Module:ESP32-S3-WROOM-1",
+        "locked": true,
+        "position_mm": [
+          135.1,
+          56.5
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "dnp": false,
+        "pads": {
+          "9a6a8596-7df4-484a-9346-9e1bcf8c168e": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -2.9,
+              1.06
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "82729fd7-1618-4ea5-a215-7bb0f727e4cd": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -2.9,
+              2.46
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "e38ff8fd-5f3d-45c0-9768-58f9d7be1e06": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -2.9,
+              3.86
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "6ab9b7a1-72c0-44c4-85ca-0e40bfdbc73e": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -1.5,
+              1.06
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "7caf04a8-3d5e-4231-b1e6-2c52bbe54adc": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -1.5,
+              2.46
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "bb190326-697a-47a2-bfc9-b7cbbdb9d793": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -1.5,
+              3.86
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "bfb7d8da-36b5-4f23-aa6d-482d144aecbd": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -0.1,
+              1.06
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "0c4e0dfa-18fa-4336-b772-f38f23cf0aba": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -0.1,
+              2.46
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "83de2934-371d-4dfc-8617-ec70561b2f70": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              -0.1,
+              3.86
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              0.9,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002000"
+          },
+          "5742e101-6b53-40fd-8701-bdb4507b8d76": {
+            "number": "1",
+            "net": "/GND",
+            "local_position_mm": [
+              -8.75,
+              -5.26
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "c0474d71-4c23-4233-ac0d-7e5dbb4f5746": {
+            "number": "2",
+            "net": "/+3V3",
+            "local_position_mm": [
+              -8.75,
+              -3.99
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "32357202-6d82-4f00-91e6-bb00411dfdbd": {
+            "number": "3",
+            "net": "/ESP_EN",
+            "local_position_mm": [
+              -8.75,
+              -2.72
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "29be2650-d024-43ad-8b09-7e0a2ba94f64": {
+            "number": "4",
+            "net": "/SWDIO",
+            "local_position_mm": [
+              -8.75,
+              -1.45
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "4f630782-342c-48df-a823-73e5c8a3c294": {
+            "number": "5",
+            "net": "/SWCLK",
+            "local_position_mm": [
+              -8.75,
+              -0.18
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "9a382a3c-431e-42d0-9c15-c0bd59cf7743": {
+            "number": "6",
+            "net": "/SWO",
+            "local_position_mm": [
+              -8.75,
+              1.09
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "22173ae3-d124-4043-b7e7-d63e1a0fc47e": {
+            "number": "7",
+            "net": "/TARGET_NRST",
+            "local_position_mm": [
+              -8.75,
+              2.36
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "ff256dd7-0bde-4bca-b573-274b6a64575c": {
+            "number": "8",
+            "net": "/ENC_A",
+            "local_position_mm": [
+              -8.75,
+              3.63
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "e7405fed-a7d3-43ba-959b-8b898f1b793d": {
+            "number": "9",
+            "net": "/ENC_B",
+            "local_position_mm": [
+              -8.75,
+              4.9
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "02bf14a6-db6c-46d1-8597-017569c202fa": {
+            "number": "10",
+            "net": "/ENC_SW",
+            "local_position_mm": [
+              -8.75,
+              6.17
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "4adad831-90de-4c69-8a10-4cd6e4c43825": {
+            "number": "11",
+            "net": "unconnected-(U1-IO18-Pad11)",
+            "local_position_mm": [
+              -8.75,
+              7.44
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "6d3d1ae7-6efc-4114-bdc1-4b1007fe9ca9": {
+            "number": "12",
+            "net": "/OLED_SDA",
+            "local_position_mm": [
+              -8.75,
+              8.71
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "828ed864-54b5-4173-9447-a2907cfae0dd": {
+            "number": "13",
+            "net": "/ESP_USB_N",
+            "local_position_mm": [
+              -8.75,
+              9.98
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "36d6ab90-ead8-4345-99ab-aa2a6fa399d3": {
+            "number": "14",
+            "net": "/ESP_USB_P",
+            "local_position_mm": [
+              -8.75,
+              11.25
+            ],
+            "local_angle_deg": 180.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "f5cd4249-83a1-4d48-9e97-195627fb92bc": {
+            "number": "15",
+            "net": "unconnected-(U1-IO3-Pad15)",
+            "local_position_mm": [
+              -6.985,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "f5524639-eeaf-4b73-acb5-9cc6098d1fec": {
+            "number": "16",
+            "net": "unconnected-(U1-IO46-Pad16)",
+            "local_position_mm": [
+              -5.715,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "c8382994-6980-4db4-a5c3-cbc316b217ea": {
+            "number": "17",
+            "net": "/OLED_SCL",
+            "local_position_mm": [
+              -4.445,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "dfb95f24-0a3e-47ac-9042-3ee878fab2c5": {
+            "number": "18",
+            "net": "unconnected-(U1-IO10-Pad18)",
+            "local_position_mm": [
+              -3.175,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "2ec4d89e-dd8f-4b49-9ada-388ade1f2e85": {
+            "number": "19",
+            "net": "unconnected-(U1-IO11-Pad19)",
+            "local_position_mm": [
+              -1.905,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "1dab7b16-caf3-4d02-bd23-4b20440c7f06": {
+            "number": "20",
+            "net": "unconnected-(U1-IO12-Pad20)",
+            "local_position_mm": [
+              -0.635,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "b4bd76f5-defe-4cee-bd54-60b08b09f09b": {
+            "number": "21",
+            "net": "unconnected-(U1-IO13-Pad21)",
+            "local_position_mm": [
+              0.635,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "871269f2-f067-4731-8e64-7070f1eb1f55": {
+            "number": "22",
+            "net": "unconnected-(U1-IO14-Pad22)",
+            "local_position_mm": [
+              1.905,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "49ecdb07-788b-4053-ae43-540f96febe7c": {
+            "number": "23",
+            "net": "unconnected-(U1-IO21-Pad23)",
+            "local_position_mm": [
+              3.175,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "807cd25c-8169-4212-9f3c-121f0ec6f7e3": {
+            "number": "24",
+            "net": "unconnected-(U1-IO47-Pad24)",
+            "local_position_mm": [
+              4.445,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "777dad22-b4d2-4663-9695-09d0df851a58": {
+            "number": "25",
+            "net": "unconnected-(U1-IO48-Pad25)",
+            "local_position_mm": [
+              5.715,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "ca3e2e17-c9db-4da5-9dba-9640698d1e78": {
+            "number": "26",
+            "net": "unconnected-(U1-IO45-Pad26)",
+            "local_position_mm": [
+              6.985,
+              12.5
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "3f60062f-285b-44a0-a99e-0d7c619ac844": {
+            "number": "27",
+            "net": "/ESP_BOOT",
+            "local_position_mm": [
+              8.75,
+              11.25
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "f72dc489-7766-40a5-a1fb-f67989023f05": {
+            "number": "28",
+            "net": "unconnected-(U1-IO35-Pad28)",
+            "local_position_mm": [
+              8.75,
+              9.98
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "ea031378-dd56-418a-9b6e-79dc6fab99f4": {
+            "number": "29",
+            "net": "unconnected-(U1-IO36-Pad29)",
+            "local_position_mm": [
+              8.75,
+              8.71
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "54aa3718-5c4c-4fe1-8638-20e4ff1c351e": {
+            "number": "30",
+            "net": "unconnected-(U1-IO37-Pad30)",
+            "local_position_mm": [
+              8.75,
+              7.44
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "1503bba8-fa5e-45f3-ae4f-b749219645d1": {
+            "number": "31",
+            "net": "/SD_CS_N",
+            "local_position_mm": [
+              8.75,
+              6.17
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "e6b676d1-0627-4d5d-9057-c6a1c6610d14": {
+            "number": "32",
+            "net": "/SD_MOSI",
+            "local_position_mm": [
+              8.75,
+              4.9
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "5ccd0e81-9e10-45b6-8ee3-825e67906e76": {
+            "number": "33",
+            "net": "/SD_SCK",
+            "local_position_mm": [
+              8.75,
+              3.63
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "4ed5e5c3-fc9b-4283-9815-923394d0b630": {
+            "number": "34",
+            "net": "/SD_MISO",
+            "local_position_mm": [
+              8.75,
+              2.36
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "724ef229-752c-4efa-8d17-191a20e0396a": {
+            "number": "35",
+            "net": "/SD_DETECT_N",
+            "local_position_mm": [
+              8.75,
+              1.09
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "5d49072d-d29c-4852-b8c0-f64bcb865b35": {
+            "number": "36",
+            "net": "/UART_RX_HDR",
+            "local_position_mm": [
+              8.75,
+              -0.18
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "810f6591-f9ca-44f0-a3ed-23fdabca22a8": {
+            "number": "37",
+            "net": "/UART_TX_HDR",
+            "local_position_mm": [
+              8.75,
+              -1.45
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "5b68d68e-1dcc-480f-8989-fe1cc7ae498b": {
+            "number": "38",
+            "net": "unconnected-(U1-IO2-Pad38)",
+            "local_position_mm": [
+              8.75,
+              -2.72
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "b0893ce9-30da-4cdb-80fb-91bce34b9347": {
+            "number": "39",
+            "net": "unconnected-(U1-IO1-Pad39)",
+            "local_position_mm": [
+              8.75,
+              -3.99
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "820653f4-ef8b-4fb6-b899-b5e5e54b2366": {
+            "number": "40",
+            "net": "/GND",
+            "local_position_mm": [
+              8.75,
+              -5.26
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.5,
+              0.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00002003"
+          },
+          "8de49cc3-01cf-4a2e-82bc-ef11c4f38687": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.9,
+              1.76
+            ],
+            "local_angle_deg": 90.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "dc265fc2-2dda-4999-aea5-16cce328d29d": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.9,
+              3.16
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "fae2ff1e-bcf9-4d9d-996a-d07de1088d92": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.2,
+              1.06
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "f03e9b8f-525a-4e9c-94d0-8b08d99e72fa": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.2,
+              2.46
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "c8a8c19d-25ed-48f7-b2c3-84ab0129df21": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -2.2,
+              3.86
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "6fcf0de6-11b0-4967-81d1-92d5e4392dac": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -1.5,
+              1.76
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "aaa4077c-b633-4932-beba-617ddb5bbfed": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -1.5,
+              2.46
+            ],
+            "local_angle_deg": 270.0,
+            "size_mm": [
+              3.9,
+              3.9
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "shape": 1,
+            "attribute": 1,
+            "layers": "00000000_00000000_00000000_00000003"
+          },
+          "9591452c-498e-40bf-a7f3-824363d2b678": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -1.5,
+              3.16
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "0ceee892-6b47-4d11-bbff-759661db5dec": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -0.8,
+              1.06
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "03089e2d-d02c-41d1-906c-14eef3907979": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -0.8,
+              2.46
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "b37a84ed-9de3-48d3-bf77-cb718dff6cf6": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -0.8,
+              3.86
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "d61dd249-2494-4f50-a083-c986585bf79a": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -0.1,
+              1.76
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          },
+          "d8b0f94b-5c84-4473-b634-89dbda6650c9": {
+            "number": "41",
+            "net": "/GND",
+            "local_position_mm": [
+              -0.1,
+              3.16
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              0.8,
+              0.8
+            ],
+            "drill_mm": [
+              0.4,
+              0.4
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_55555557"
+          }
+        }
+      },
+      {
+        "reference": "",
+        "value": "",
+        "library_id": "MountingHole:MountingHole_3.2mm_M3",
+        "locked": true,
+        "position_mm": [
+          165.0,
+          55.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 28,
+        "dnp": false,
+        "pads": {
+          "3db4aba9-e592-40ee-83c6-1c785d37e2c3": {
+            "number": "",
+            "net": "",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              3.2,
+              3.2
+            ],
+            "drill_mm": [
+              3.2,
+              3.2
+            ],
+            "shape": 0,
+            "attribute": 3,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "SW1",
+        "value": "EC11-style encoder",
+        "library_id": "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
+        "locked": true,
+        "position_mm": [
+          111.75,
+          98.5
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 1,
+        "dnp": false,
+        "pads": {
+          "35f4592b-4a6e-4eed-881c-93fce47e0d55": {
+            "number": "A",
+            "net": "/ENC_A",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 1,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "2f56dcf4-9258-496c-8441-9b632e4ae343": {
+            "number": "B",
+            "net": "/ENC_B",
+            "local_position_mm": [
+              0.0,
+              5.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "0ff37748-a61e-4ccc-af7e-bb5e7a0e9c5a": {
+            "number": "C",
+            "net": "/GND",
+            "local_position_mm": [
+              0.0,
+              2.5
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "68cc2c97-2777-49f6-ba68-4e70b19f6da4": {
+            "number": "MP",
+            "net": "/GND",
+            "local_position_mm": [
+              7.5,
+              -3.1
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              3.2,
+              2.0
+            ],
+            "drill_mm": [
+              2.8,
+              1.5
+            ],
+            "shape": 1,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "daa9d4f0-5307-412a-902d-66fa06c82c5e": {
+            "number": "MP",
+            "net": "/GND",
+            "local_position_mm": [
+              7.5,
+              8.1
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              3.2,
+              2.0
+            ],
+            "drill_mm": [
+              2.8,
+              1.5
+            ],
+            "shape": 1,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "42c6b335-2f2c-4ba5-9e58-36670280b6d5": {
+            "number": "S1",
+            "net": "/ENC_CONTACT",
+            "local_position_mm": [
+              14.5,
+              5.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "e7699350-7449-482a-934e-30df049a72aa": {
+            "number": "S2",
+            "net": "/GND",
+            "local_position_mm": [
+              14.5,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "SWDIO",
+        "value": "",
+        "library_id": "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical",
+        "locked": true,
+        "position_mm": [
+          102.5,
+          72.3
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 1,
+        "dnp": false,
+        "pads": {
+          "6cdff5fc-cf36-4df6-8d54-337a7a970b16": {
+            "number": "1",
+            "net": "/GND",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 1,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "6022decc-852f-4711-9ea9-395c54ded097": {
+            "number": "2",
+            "net": "/EXT_SWDIO",
+            "local_position_mm": [
+              0.0,
+              2.54
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "6c5b9609-46a2-4b5c-8139-18c24e95f13c": {
+            "number": "3",
+            "net": "/EXT_SWCLK",
+            "local_position_mm": [
+              0.0,
+              5.08
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "a8177a64-f359-4f01-b03e-b6e34ccc7dec": {
+            "number": "4",
+            "net": "/EXT_SWO",
+            "local_position_mm": [
+              0.0,
+              7.62
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "78d28330-b2f0-4917-ae24-072fc8b45827": {
+            "number": "5",
+            "net": "/EXT_NRST",
+            "local_position_mm": [
+              0.0,
+              10.16
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "3e8cd02a-2e25-4b67-9874-2fc9ff3dbdf2": {
+            "number": "6",
+            "net": "/J4_3V3_IN",
+            "local_position_mm": [
+              0.0,
+              12.7
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "7331f687-284f-4ae6-863b-2b5e36512977": {
+            "number": "7",
+            "net": "/J4_5V_IN",
+            "local_position_mm": [
+              0.0,
+              15.24
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      },
+      {
+        "reference": "UART",
+        "value": "UART_3V3_TX_RX_GND_DTR_RTS",
+        "library_id": "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical",
+        "locked": true,
+        "position_mm": [
+          165.225,
+          73.46
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 1,
+        "dnp": false,
+        "pads": {
+          "ca1eaa19-78f2-4dfc-8087-e3631b096118": {
+            "number": "1",
+            "net": "/+3V3",
+            "local_position_mm": [
+              0.0,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 1,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "10808742-794d-413e-b685-5fad1fe70e2f": {
+            "number": "2",
+            "net": "/UART_TX_HDR",
+            "local_position_mm": [
+              2.54,
+              0.0
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "08c6c8a2-22ae-4145-8a71-3b4254a3c619": {
+            "number": "3",
+            "net": "/UART_RX_HDR",
+            "local_position_mm": [
+              0.0,
+              2.54
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "682cc86e-eb6d-401a-93c4-aa21e675cf78": {
+            "number": "4",
+            "net": "/GND",
+            "local_position_mm": [
+              2.54,
+              2.54
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "a1f87db1-c9e4-4dc1-b9dd-7ef0609489e6": {
+            "number": "5",
+            "net": "/UART_DTR_N",
+            "local_position_mm": [
+              0.0,
+              5.08
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          },
+          "083242d3-5974-4202-b336-7209cbd61fdd": {
+            "number": "6",
+            "net": "/UART_RTS_N",
+            "local_position_mm": [
+              2.54,
+              5.08
+            ],
+            "local_angle_deg": 0.0,
+            "size_mm": [
+              1.7,
+              1.7
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "shape": 0,
+            "attribute": 0,
+            "layers": "00000000_00000000_55555555_5555555f"
+          }
+        }
+      }
+    ],
+    "limits": {
+      "min_track_mm": 0.2,
+      "min_power_track_mm": 0.4,
+      "min_via_drill_mm": 0.4,
+      "min_via_annulus_mm": 0.2,
+      "min_silk_text_stroke_mm": 0.15,
+      "thin_silk_graphic_count": 217,
+      "track_widths_mm": {
+        "0.4": 296,
+        "0.6": 76,
+        "1.0": 40,
+        "0.25": 17,
+        "0.5": 9,
+        "0.2": 26,
+        "0.8": 9,
+        "0.3": 6
+      },
+      "via_sizes": {
+        "0.8/0.4": 95,
+        "1.0/0.5": 20
+      }
+    },
+    "lengths": {
+      "SPI": {
+        "signals": {
+          "MOSI": {
+            "segments": [
+              {
+                "net": "/SD_MOSI",
+                "endpoints": [
+                  "ESP32-S3",
+                  "32",
+                  "SD SCHOKET",
+                  "3"
+                ],
+                "length_mm": 41.365433,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 41.365433
+          },
+          "MISO": {
+            "segments": [
+              {
+                "net": "/SD_MISO",
+                "endpoints": [
+                  "ESP32-S3",
+                  "34",
+                  "SD SCHOKET",
+                  "7"
+                ],
+                "length_mm": 47.84513,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 47.84513
+          },
+          "CS": {
+            "segments": [
+              {
+                "net": "/SD_CS_N",
+                "endpoints": [
+                  "ESP32-S3",
+                  "31",
+                  "SD SCHOKET",
+                  "2"
+                ],
+                "length_mm": 38.936854,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 38.936854
+          },
+          "CLK": {
+            "segments": [
+              {
+                "net": "/SD_SCK",
+                "endpoints": [
+                  "ESP32-S3",
+                  "33",
+                  "R34",
+                  "1"
+                ],
+                "length_mm": 6.677107,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              },
+              {
+                "net": "/SD_CLK",
+                "endpoints": [
+                  "R34",
+                  "2",
+                  "SD SCHOKET",
+                  "5"
+                ],
+                "length_mm": 34.88259,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 41.559697
+          }
+        },
+        "skew_mm": 8.908276
+      },
+      "USB_B_contacts": {
+        "signals": {
+          "N": {
+            "segments": [
+              {
+                "net": "/USB_N_N",
+                "endpoints": [
+                  "TYPE-C",
+                  "B7",
+                  "R5",
+                  "1"
+                ],
+                "length_mm": 44.007341,
+                "vias": 0,
+                "widths_mm": [
+                  0.2,
+                  0.4,
+                  0.5
+                ]
+              },
+              {
+                "net": "/ESP_USB_N",
+                "endpoints": [
+                  "R5",
+                  "2",
+                  "ESP32-S3",
+                  "13"
+                ],
+                "length_mm": 3.3,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 47.307341
+          },
+          "P": {
+            "segments": [
+              {
+                "net": "/USB_N_P",
+                "endpoints": [
+                  "TYPE-C",
+                  "B6",
+                  "R6",
+                  "1"
+                ],
+                "length_mm": 41.166479,
+                "vias": 0,
+                "widths_mm": [
+                  0.2,
+                  0.4,
+                  0.5
+                ]
+              },
+              {
+                "net": "/ESP_USB_P",
+                "endpoints": [
+                  "R6",
+                  "2",
+                  "ESP32-S3",
+                  "14"
+                ],
+                "length_mm": 6.140862,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 47.307341
+          }
+        },
+        "skew_mm": 0.0
+      },
+      "USB_A_contacts": {
+        "signals": {
+          "N": {
+            "segments": [
+              {
+                "net": "/USB_N_N",
+                "endpoints": [
+                  "TYPE-C",
+                  "A7",
+                  "R5",
+                  "1"
+                ],
+                "length_mm": 51.049373,
+                "vias": 2,
+                "widths_mm": [
+                  0.2,
+                  0.25,
+                  0.4,
+                  0.5,
+                  0.8
+                ]
+              },
+              {
+                "net": "/ESP_USB_N",
+                "endpoints": [
+                  "R5",
+                  "2",
+                  "ESP32-S3",
+                  "13"
+                ],
+                "length_mm": 3.3,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 54.349373
+          },
+          "P": {
+            "segments": [
+              {
+                "net": "/USB_N_P",
+                "endpoints": [
+                  "TYPE-C",
+                  "A6",
+                  "R6",
+                  "1"
+                ],
+                "length_mm": 48.20851,
+                "vias": 2,
+                "widths_mm": [
+                  0.2,
+                  0.25,
+                  0.4,
+                  0.5,
+                  0.8
+                ]
+              },
+              {
+                "net": "/ESP_USB_P",
+                "endpoints": [
+                  "R6",
+                  "2",
+                  "ESP32-S3",
+                  "14"
+                ],
+                "length_mm": 6.140862,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 54.349372
+          }
+        },
+        "skew_mm": 1e-06
+      },
+      "SWD": {
+        "signals": {
+          "SWDIO": {
+            "segments": [
+              {
+                "net": "/SWDIO",
+                "endpoints": [
+                  "ESP32-S3",
+                  "4",
+                  "R17",
+                  "2"
+                ],
+                "length_mm": 22.426956,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_SWDIO",
+                "endpoints": [
+                  "R17",
+                  "1",
+                  "SWDIO",
+                  "2"
+                ],
+                "length_mm": 18.091219,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518175
+          },
+          "SWCLK": {
+            "segments": [
+              {
+                "net": "/SWCLK",
+                "endpoints": [
+                  "ESP32-S3",
+                  "5",
+                  "R18",
+                  "2"
+                ],
+                "length_mm": 24.472742,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_SWCLK",
+                "endpoints": [
+                  "R18",
+                  "1",
+                  "SWDIO",
+                  "3"
+                ],
+                "length_mm": 16.045433,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518175
+          },
+          "SWO": {
+            "segments": [
+              {
+                "net": "/SWO",
+                "endpoints": [
+                  "ESP32-S3",
+                  "6",
+                  "R19",
+                  "2"
+                ],
+                "length_mm": 26.518528,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_SWO",
+                "endpoints": [
+                  "R19",
+                  "1",
+                  "SWDIO",
+                  "4"
+                ],
+                "length_mm": 13.999646,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518174
+          },
+          "NRST": {
+            "segments": [
+              {
+                "net": "/TARGET_NRST",
+                "endpoints": [
+                  "ESP32-S3",
+                  "7",
+                  "R20",
+                  "2"
+                ],
+                "length_mm": 28.593604,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_NRST",
+                "endpoints": [
+                  "R20",
+                  "1",
+                  "SWDIO",
+                  "5"
+                ],
+                "length_mm": 11.924571,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518175
+          }
+        },
+        "skew_mm": 1e-06
+      },
+      "Encoder": {
+        "signals": {
+          "A": {
+            "segments": [
+              {
+                "net": "/ENC_A",
+                "endpoints": [
+                  "ESP32-S3",
+                  "8",
+                  "SW1",
+                  "A"
+                ],
+                "length_mm": 54.370922,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 54.370922
+          },
+          "B": {
+            "segments": [
+              {
+                "net": "/ENC_B",
+                "endpoints": [
+                  "ESP32-S3",
+                  "9",
+                  "SW1",
+                  "B"
+                ],
+                "length_mm": 54.37092,
+                "vias": 1,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 54.37092
+          }
+        },
+        "skew_mm": 2e-06
+      }
+    }
+  },
+  "final": {
+    "path": "03_pcb\\AI_layout\\AI_layout.kicad_pcb",
+    "limits": {
+      "min_track_mm": 0.2,
+      "min_power_track_mm": 0.4,
+      "min_via_drill_mm": 0.4,
+      "min_via_annulus_mm": 0.2,
+      "min_silk_text_stroke_mm": 0.15,
+      "thin_silk_graphic_count": 217,
+      "track_widths_mm": {
+        "0.4": 320,
+        "0.6": 76,
+        "1.0": 40,
+        "0.25": 17,
+        "0.5": 9,
+        "0.2": 26,
+        "0.8": 9,
+        "0.3": 6
+      },
+      "via_sizes": {
+        "0.8/0.4": 95,
+        "1.0/0.5": 20
+      }
+    },
+    "lengths": {
+      "SPI": {
+        "signals": {
+          "MOSI": {
+            "segments": [
+              {
+                "net": "/SD_MOSI",
+                "endpoints": [
+                  "ESP32-S3",
+                  "32",
+                  "SD SCHOKET",
+                  "3"
+                ],
+                "length_mm": 47.845131,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 47.845131
+          },
+          "MISO": {
+            "segments": [
+              {
+                "net": "/SD_MISO",
+                "endpoints": [
+                  "ESP32-S3",
+                  "34",
+                  "SD SCHOKET",
+                  "7"
+                ],
+                "length_mm": 47.84513,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 47.84513
+          },
+          "CS": {
+            "segments": [
+              {
+                "net": "/SD_CS_N",
+                "endpoints": [
+                  "ESP32-S3",
+                  "31",
+                  "SD SCHOKET",
+                  "2"
+                ],
+                "length_mm": 47.845131,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 47.845131
+          },
+          "CLK": {
+            "segments": [
+              {
+                "net": "/SD_SCK",
+                "endpoints": [
+                  "ESP32-S3",
+                  "33",
+                  "R34",
+                  "1"
+                ],
+                "length_mm": 6.677107,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              },
+              {
+                "net": "/SD_CLK",
+                "endpoints": [
+                  "R34",
+                  "2",
+                  "SD SCHOKET",
+                  "5"
+                ],
+                "length_mm": 41.168025,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 47.845132
+          }
+        },
+        "skew_mm": 2e-06
+      },
+      "USB_B_contacts": {
+        "signals": {
+          "N": {
+            "segments": [
+              {
+                "net": "/USB_N_N",
+                "endpoints": [
+                  "TYPE-C",
+                  "B7",
+                  "R5",
+                  "1"
+                ],
+                "length_mm": 44.007341,
+                "vias": 0,
+                "widths_mm": [
+                  0.2,
+                  0.4,
+                  0.5
+                ]
+              },
+              {
+                "net": "/ESP_USB_N",
+                "endpoints": [
+                  "R5",
+                  "2",
+                  "ESP32-S3",
+                  "13"
+                ],
+                "length_mm": 3.3,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 47.307341
+          },
+          "P": {
+            "segments": [
+              {
+                "net": "/USB_N_P",
+                "endpoints": [
+                  "TYPE-C",
+                  "B6",
+                  "R6",
+                  "1"
+                ],
+                "length_mm": 41.166479,
+                "vias": 0,
+                "widths_mm": [
+                  0.2,
+                  0.4,
+                  0.5
+                ]
+              },
+              {
+                "net": "/ESP_USB_P",
+                "endpoints": [
+                  "R6",
+                  "2",
+                  "ESP32-S3",
+                  "14"
+                ],
+                "length_mm": 6.140862,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 47.307341
+          }
+        },
+        "skew_mm": 0.0
+      },
+      "USB_A_contacts": {
+        "signals": {
+          "N": {
+            "segments": [
+              {
+                "net": "/USB_N_N",
+                "endpoints": [
+                  "TYPE-C",
+                  "A7",
+                  "R5",
+                  "1"
+                ],
+                "length_mm": 51.049373,
+                "vias": 2,
+                "widths_mm": [
+                  0.2,
+                  0.25,
+                  0.4,
+                  0.5,
+                  0.8
+                ]
+              },
+              {
+                "net": "/ESP_USB_N",
+                "endpoints": [
+                  "R5",
+                  "2",
+                  "ESP32-S3",
+                  "13"
+                ],
+                "length_mm": 3.3,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 54.349373
+          },
+          "P": {
+            "segments": [
+              {
+                "net": "/USB_N_P",
+                "endpoints": [
+                  "TYPE-C",
+                  "A6",
+                  "R6",
+                  "1"
+                ],
+                "length_mm": 48.20851,
+                "vias": 2,
+                "widths_mm": [
+                  0.2,
+                  0.25,
+                  0.4,
+                  0.5,
+                  0.8
+                ]
+              },
+              {
+                "net": "/ESP_USB_P",
+                "endpoints": [
+                  "R6",
+                  "2",
+                  "ESP32-S3",
+                  "14"
+                ],
+                "length_mm": 6.140862,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 54.349372
+          }
+        },
+        "skew_mm": 1e-06
+      },
+      "SWD": {
+        "signals": {
+          "SWDIO": {
+            "segments": [
+              {
+                "net": "/SWDIO",
+                "endpoints": [
+                  "ESP32-S3",
+                  "4",
+                  "R17",
+                  "2"
+                ],
+                "length_mm": 22.426956,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_SWDIO",
+                "endpoints": [
+                  "R17",
+                  "1",
+                  "SWDIO",
+                  "2"
+                ],
+                "length_mm": 18.091219,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518175
+          },
+          "SWCLK": {
+            "segments": [
+              {
+                "net": "/SWCLK",
+                "endpoints": [
+                  "ESP32-S3",
+                  "5",
+                  "R18",
+                  "2"
+                ],
+                "length_mm": 24.472742,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_SWCLK",
+                "endpoints": [
+                  "R18",
+                  "1",
+                  "SWDIO",
+                  "3"
+                ],
+                "length_mm": 16.045433,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518175
+          },
+          "SWO": {
+            "segments": [
+              {
+                "net": "/SWO",
+                "endpoints": [
+                  "ESP32-S3",
+                  "6",
+                  "R19",
+                  "2"
+                ],
+                "length_mm": 26.518528,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_SWO",
+                "endpoints": [
+                  "R19",
+                  "1",
+                  "SWDIO",
+                  "4"
+                ],
+                "length_mm": 13.999646,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518174
+          },
+          "NRST": {
+            "segments": [
+              {
+                "net": "/TARGET_NRST",
+                "endpoints": [
+                  "ESP32-S3",
+                  "7",
+                  "R20",
+                  "2"
+                ],
+                "length_mm": 28.593604,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              },
+              {
+                "net": "/EXT_NRST",
+                "endpoints": [
+                  "R20",
+                  "1",
+                  "SWDIO",
+                  "5"
+                ],
+                "length_mm": 11.924571,
+                "vias": 0,
+                "widths_mm": [
+                  0.4
+                ]
+              }
+            ],
+            "length_mm": 40.518175
+          }
+        },
+        "skew_mm": 1e-06
+      },
+      "Encoder": {
+        "signals": {
+          "A": {
+            "segments": [
+              {
+                "net": "/ENC_A",
+                "endpoints": [
+                  "ESP32-S3",
+                  "8",
+                  "SW1",
+                  "A"
+                ],
+                "length_mm": 54.370922,
+                "vias": 2,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 54.370922
+          },
+          "B": {
+            "segments": [
+              {
+                "net": "/ENC_B",
+                "endpoints": [
+                  "ESP32-S3",
+                  "9",
+                  "SW1",
+                  "B"
+                ],
+                "length_mm": 54.37092,
+                "vias": 1,
+                "widths_mm": [
+                  0.4,
+                  0.8
+                ]
+              }
+            ],
+            "length_mm": 54.37092
+          }
+        },
+        "skew_mm": 2e-06
+      }
+    }
+  },
+  "comparison": {
+    "footprint_count_unchanged": true,
+    "missing_footprints": [],
+    "locked_placement_changes": [],
+    "pad_and_library_geometry_changes": [],
+    "pad_net_changes": [],
+    "footprint_graphical_geometry_changes": [],
+    "assembly_flag_changes": [],
+    "thickness_unchanged": true,
+    "stackup_unchanged": true,
+    "outline_unchanged": true
+  }
+}

@@ -1,0 +1,1200 @@
+{
+  "sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "footprints": [
+    {
+      "reference": "R12",
+      "value": "10k",
+      "fpid": "R_1206_3216Metric_Pad1.30x1.75mm_HandSolder",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/+3V3",
+          "x_mm": 119.95,
+          "y_mm": 59.0
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "/ESP_EN",
+          "x_mm": 123.05,
+          "y_mm": 59.0
+        }
+      ]
+    },
+    {
+      "reference": "R33",
+      "value": "0R",
+      "fpid": "R_1206_3216Metric_Pad1.30x1.75mm_HandSolder",
+      "dnp": true,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/+3V3",
+          "x_mm": 146.45,
+          "y_mm": 83.5
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "/SD_3V3",
+          "x_mm": 149.55,
+          "y_mm": 83.5
+        }
+      ]
+    },
+    {
+      "reference": "TYPE-C",
+      "value": "USB-C Native",
+      "fpid": "USB_C_Receptacle_G-Switch_GT-USB-7010ASV",
+      "dnp": false,
+      "locked": true,
+      "pads": [
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 132.11,
+          "y_mm": 103.395
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 137.89,
+          "y_mm": 103.395
+        },
+        {
+          "n": "A1",
+          "function": "GND_A1",
+          "net": "/GND",
+          "x_mm": 131.8,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A4",
+          "function": "VBUS_A4",
+          "net": "/VBUS_NATIVE",
+          "x_mm": 132.6,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A5",
+          "function": "CC1_A5",
+          "net": "/J1_CC1",
+          "x_mm": 133.75,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A6",
+          "function": "D+_A6",
+          "net": "/USB_N_P",
+          "x_mm": 134.75,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A7",
+          "function": "D-_A7",
+          "net": "/USB_N_N",
+          "x_mm": 135.25,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A8",
+          "function": "SBU1_A8",
+          "net": "unconnected-(J1-SBU1-PadA8)",
+          "x_mm": 136.25,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A9",
+          "function": "VBUS_A9",
+          "net": "/VBUS_NATIVE",
+          "x_mm": 137.4,
+          "y_mm": 102.275
+        },
+        {
+          "n": "A12",
+          "function": "GND_A12",
+          "net": "/GND",
+          "x_mm": 138.2,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B1",
+          "function": "GND_B1",
+          "net": "/GND",
+          "x_mm": 138.2,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B4",
+          "function": "VBUS_B4",
+          "net": "/VBUS_NATIVE",
+          "x_mm": 137.4,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B5",
+          "function": "CC2_B5",
+          "net": "/J1_CC2",
+          "x_mm": 136.75,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B6",
+          "function": "D+_B6",
+          "net": "/USB_N_P",
+          "x_mm": 135.75,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B7",
+          "function": "D-_B7",
+          "net": "/USB_N_N",
+          "x_mm": 134.25,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B8",
+          "function": "SBU2_B8",
+          "net": "unconnected-(J1-SBU2-PadB8)",
+          "x_mm": 133.25,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B9",
+          "function": "VBUS_B9",
+          "net": "/VBUS_NATIVE",
+          "x_mm": 132.6,
+          "y_mm": 102.275
+        },
+        {
+          "n": "B12",
+          "function": "GND_B12",
+          "net": "/GND",
+          "x_mm": 131.8,
+          "y_mm": 102.275
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 130.68,
+          "y_mm": 102.875
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 130.68,
+          "y_mm": 107.075
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 139.32,
+          "y_mm": 102.875
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 139.32,
+          "y_mm": 107.075
+        }
+      ]
+    },
+    {
+      "reference": "Q2",
+      "value": "MMBT3904",
+      "fpid": "SOT-23",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "B_1",
+          "net": "Net-(Q2-B)",
+          "x_mm": 160.05,
+          "y_mm": 72.375
+        },
+        {
+          "n": "2",
+          "function": "E_2",
+          "net": "/UART_DTR_N",
+          "x_mm": 161.95,
+          "y_mm": 72.375
+        },
+        {
+          "n": "3",
+          "function": "C_3",
+          "net": "/ESP_BOOT",
+          "x_mm": 161.0,
+          "y_mm": 70.5
+        }
+      ]
+    },
+    {
+      "reference": "R11",
+      "value": "10k",
+      "fpid": "R_1206_3216Metric_Pad1.30x1.75mm_HandSolder",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/UART_RTS_N",
+          "x_mm": 157.0,
+          "y_mm": 79.55
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "Net-(Q2-B)",
+          "x_mm": 157.0,
+          "y_mm": 76.45
+        }
+      ]
+    },
+    {
+      "reference": "D14",
+      "value": "SMAJ5.0A",
+      "fpid": "D_SMA",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "K_1",
+          "net": "/J4_3V3_IN",
+          "x_mm": 112.0,
+          "y_mm": 79.5
+        },
+        {
+          "n": "2",
+          "function": "A_2",
+          "net": "/GND",
+          "x_mm": 116.0,
+          "y_mm": 79.5
+        }
+      ]
+    },
+    {
+      "reference": "SD SCHOKET",
+      "value": "JXTCONN TF-01A",
+      "fpid": "JXTCONN_TF-01A",
+      "dnp": true,
+      "locked": true,
+      "pads": [
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 165.5,
+          "y_mm": 96.2
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 165.5,
+          "y_mm": 88.2
+        },
+        {
+          "n": "1",
+          "function": "DAT2_1",
+          "net": "/SD_DAT2",
+          "x_mm": 154.5,
+          "y_mm": 89.0
+        },
+        {
+          "n": "2",
+          "function": "DAT3/CD_2",
+          "net": "/SD_CS_N",
+          "x_mm": 154.5,
+          "y_mm": 90.1
+        },
+        {
+          "n": "3",
+          "function": "CMD_3",
+          "net": "/SD_MOSI",
+          "x_mm": 154.5,
+          "y_mm": 91.2
+        },
+        {
+          "n": "4",
+          "function": "VDD_4",
+          "net": "/SD_3V3",
+          "x_mm": 154.5,
+          "y_mm": 92.3
+        },
+        {
+          "n": "5",
+          "function": "CLK_5",
+          "net": "/SD_CLK",
+          "x_mm": 154.5,
+          "y_mm": 93.4
+        },
+        {
+          "n": "6",
+          "function": "VSS_6",
+          "net": "/GND",
+          "x_mm": 154.5,
+          "y_mm": 94.5
+        },
+        {
+          "n": "7",
+          "function": "DAT0_7",
+          "net": "/SD_MISO",
+          "x_mm": 154.5,
+          "y_mm": 95.6
+        },
+        {
+          "n": "8",
+          "function": "DAT1_8",
+          "net": "/SD_DAT1",
+          "x_mm": 154.5,
+          "y_mm": 96.7
+        },
+        {
+          "n": "9",
+          "function": "DET_9",
+          "net": "/SD_DETECT_N",
+          "x_mm": 154.5,
+          "y_mm": 97.8
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 155.5,
+          "y_mm": 99.0
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 165.1,
+          "y_mm": 99.0
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 155.5,
+          "y_mm": 84.4
+        },
+        {
+          "n": "SH",
+          "function": "SHIELD_SH",
+          "net": "/GND",
+          "x_mm": 165.1,
+          "y_mm": 83.5
+        }
+      ]
+    },
+    {
+      "reference": "D3",
+      "value": "USBLC6-2SC6",
+      "fpid": "SOT-23-6",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "I/O1_1",
+          "net": "/USB_N_N",
+          "x_mm": 134.55,
+          "y_mm": 97.5375
+        },
+        {
+          "n": "2",
+          "function": "GND_2",
+          "net": "/GND",
+          "x_mm": 135.5,
+          "y_mm": 97.5375
+        },
+        {
+          "n": "3",
+          "function": "I/O2_3",
+          "net": "/USB_N_P",
+          "x_mm": 136.45,
+          "y_mm": 97.5375
+        },
+        {
+          "n": "4",
+          "function": "I/O2_4",
+          "net": "/USB_N_P",
+          "x_mm": 136.45,
+          "y_mm": 95.2625
+        },
+        {
+          "n": "5",
+          "function": "VBUS_5",
+          "net": "/VBUS_OR",
+          "x_mm": 135.5,
+          "y_mm": 95.2625
+        },
+        {
+          "n": "6",
+          "function": "I/O1_6",
+          "net": "/USB_N_N",
+          "x_mm": 134.55,
+          "y_mm": 95.2625
+        }
+      ]
+    },
+    {
+      "reference": "R34",
+      "value": "22R",
+      "fpid": "R_1206_3216Metric_Pad1.30x1.75mm_HandSolder",
+      "dnp": true,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/SD_SCK",
+          "x_mm": 147.0,
+          "y_mm": 63.95
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "/SD_CLK",
+          "x_mm": 147.0,
+          "y_mm": 67.05
+        }
+      ]
+    },
+    {
+      "reference": "ANTEN",
+      "value": "SMA BWSMA-KWE-Z001",
+      "fpid": "SMA_BAT_Wireless_BWSMA-KWE-Z001",
+      "dnp": true,
+      "locked": true,
+      "pads": [
+        {
+          "n": "1",
+          "function": "In_1",
+          "net": "unconnected-(J6-In-Pad1)",
+          "x_mm": 165.5,
+          "y_mm": 64.5
+        },
+        {
+          "n": "2",
+          "function": "Ext_2",
+          "net": "/GND",
+          "x_mm": 168.05,
+          "y_mm": 61.95
+        },
+        {
+          "n": "2",
+          "function": "Ext_2",
+          "net": "/GND",
+          "x_mm": 162.95,
+          "y_mm": 61.95
+        },
+        {
+          "n": "2",
+          "function": "Ext_2",
+          "net": "/GND",
+          "x_mm": 168.05,
+          "y_mm": 67.05
+        },
+        {
+          "n": "2",
+          "function": "Ext_2",
+          "net": "/GND",
+          "x_mm": 162.95,
+          "y_mm": 67.05
+        }
+      ]
+    },
+    {
+      "reference": "ESP32-S3",
+      "value": "ESP32-S3-WROOM-1-N16R8",
+      "fpid": "ESP32-S3-WROOM-1",
+      "dnp": false,
+      "locked": true,
+      "pads": [
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 132.2,
+          "y_mm": 57.56
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 132.2,
+          "y_mm": 58.96
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 132.2,
+          "y_mm": 60.36
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 133.6,
+          "y_mm": 57.56
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 133.6,
+          "y_mm": 58.96
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 133.6,
+          "y_mm": 60.36
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 135.0,
+          "y_mm": 57.56
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 135.0,
+          "y_mm": 58.96
+        },
+        {
+          "n": "",
+          "function": "",
+          "net": "",
+          "x_mm": 135.0,
+          "y_mm": 60.36
+        },
+        {
+          "n": "1",
+          "function": "GND_1",
+          "net": "/GND",
+          "x_mm": 126.35,
+          "y_mm": 51.24
+        },
+        {
+          "n": "2",
+          "function": "3V3_2",
+          "net": "/+3V3",
+          "x_mm": 126.35,
+          "y_mm": 52.51
+        },
+        {
+          "n": "3",
+          "function": "EN_3",
+          "net": "/ESP_EN",
+          "x_mm": 126.35,
+          "y_mm": 53.78
+        },
+        {
+          "n": "4",
+          "function": "IO4_4",
+          "net": "/SWDIO",
+          "x_mm": 126.35,
+          "y_mm": 55.05
+        },
+        {
+          "n": "5",
+          "function": "IO5_5",
+          "net": "/SWCLK",
+          "x_mm": 126.35,
+          "y_mm": 56.32
+        },
+        {
+          "n": "6",
+          "function": "IO6_6",
+          "net": "/SWO",
+          "x_mm": 126.35,
+          "y_mm": 57.59
+        },
+        {
+          "n": "7",
+          "function": "IO7_7",
+          "net": "/TARGET_NRST",
+          "x_mm": 126.35,
+          "y_mm": 58.86
+        },
+        {
+          "n": "8",
+          "function": "IO15_8",
+          "net": "/ENC_A",
+          "x_mm": 126.35,
+          "y_mm": 60.13
+        },
+        {
+          "n": "9",
+          "function": "IO16_9",
+          "net": "/ENC_B",
+          "x_mm": 126.35,
+          "y_mm": 61.4
+        },
+        {
+          "n": "10",
+          "function": "IO17_10",
+          "net": "/ENC_SW",
+          "x_mm": 126.35,
+          "y_mm": 62.67
+        },
+        {
+          "n": "11",
+          "function": "IO18_11",
+          "net": "unconnected-(U1-IO18-Pad11)",
+          "x_mm": 126.35,
+          "y_mm": 63.94
+        },
+        {
+          "n": "12",
+          "function": "IO8_12",
+          "net": "/OLED_SDA",
+          "x_mm": 126.35,
+          "y_mm": 65.21
+        },
+        {
+          "n": "13",
+          "function": "USB_D-_13",
+          "net": "/ESP_USB_N",
+          "x_mm": 126.35,
+          "y_mm": 66.48
+        },
+        {
+          "n": "14",
+          "function": "USB_D+_14",
+          "net": "/ESP_USB_P",
+          "x_mm": 126.35,
+          "y_mm": 67.75
+        },
+        {
+          "n": "15",
+          "function": "IO3_15",
+          "net": "unconnected-(U1-IO3-Pad15)",
+          "x_mm": 128.115,
+          "y_mm": 69.0
+        },
+        {
+          "n": "16",
+          "function": "IO46_16",
+          "net": "unconnected-(U1-IO46-Pad16)",
+          "x_mm": 129.385,
+          "y_mm": 69.0
+        },
+        {
+          "n": "17",
+          "function": "IO9_17",
+          "net": "/OLED_SCL",
+          "x_mm": 130.655,
+          "y_mm": 69.0
+        },
+        {
+          "n": "18",
+          "function": "IO10_18",
+          "net": "unconnected-(U1-IO10-Pad18)",
+          "x_mm": 131.925,
+          "y_mm": 69.0
+        },
+        {
+          "n": "19",
+          "function": "IO11_19",
+          "net": "unconnected-(U1-IO11-Pad19)",
+          "x_mm": 133.195,
+          "y_mm": 69.0
+        },
+        {
+          "n": "20",
+          "function": "IO12_20",
+          "net": "unconnected-(U1-IO12-Pad20)",
+          "x_mm": 134.465,
+          "y_mm": 69.0
+        },
+        {
+          "n": "21",
+          "function": "IO13_21",
+          "net": "unconnected-(U1-IO13-Pad21)",
+          "x_mm": 135.735,
+          "y_mm": 69.0
+        },
+        {
+          "n": "22",
+          "function": "IO14_22",
+          "net": "unconnected-(U1-IO14-Pad22)",
+          "x_mm": 137.005,
+          "y_mm": 69.0
+        },
+        {
+          "n": "23",
+          "function": "IO21_23",
+          "net": "unconnected-(U1-IO21-Pad23)",
+          "x_mm": 138.275,
+          "y_mm": 69.0
+        },
+        {
+          "n": "24",
+          "function": "IO47_24",
+          "net": "unconnected-(U1-IO47-Pad24)",
+          "x_mm": 139.545,
+          "y_mm": 69.0
+        },
+        {
+          "n": "25",
+          "function": "IO48_25",
+          "net": "unconnected-(U1-IO48-Pad25)",
+          "x_mm": 140.815,
+          "y_mm": 69.0
+        },
+        {
+          "n": "26",
+          "function": "IO45_26",
+          "net": "unconnected-(U1-IO45-Pad26)",
+          "x_mm": 142.085,
+          "y_mm": 69.0
+        },
+        {
+          "n": "27",
+          "function": "IO0_27",
+          "net": "/ESP_BOOT",
+          "x_mm": 143.85,
+          "y_mm": 67.75
+        },
+        {
+          "n": "28",
+          "function": "IO35_28",
+          "net": "unconnected-(U1-IO35-Pad28)",
+          "x_mm": 143.85,
+          "y_mm": 66.48
+        },
+        {
+          "n": "29",
+          "function": "IO36_29",
+          "net": "unconnected-(U1-IO36-Pad29)",
+          "x_mm": 143.85,
+          "y_mm": 65.21
+        },
+        {
+          "n": "30",
+          "function": "IO37_30",
+          "net": "unconnected-(U1-IO37-Pad30)",
+          "x_mm": 143.85,
+          "y_mm": 63.94
+        },
+        {
+          "n": "31",
+          "function": "IO38_31",
+          "net": "/SD_CS_N",
+          "x_mm": 143.85,
+          "y_mm": 62.67
+        },
+        {
+          "n": "32",
+          "function": "IO39_32",
+          "net": "/SD_MOSI",
+          "x_mm": 143.85,
+          "y_mm": 61.4
+        },
+        {
+          "n": "33",
+          "function": "IO40_33",
+          "net": "/SD_SCK",
+          "x_mm": 143.85,
+          "y_mm": 60.13
+        },
+        {
+          "n": "34",
+          "function": "IO41_34",
+          "net": "/SD_MISO",
+          "x_mm": 143.85,
+          "y_mm": 58.86
+        },
+        {
+          "n": "35",
+          "function": "IO42_35",
+          "net": "/SD_DETECT_N",
+          "x_mm": 143.85,
+          "y_mm": 57.59
+        },
+        {
+          "n": "36",
+          "function": "RXD0_36",
+          "net": "/UART_RX_HDR",
+          "x_mm": 143.85,
+          "y_mm": 56.32
+        },
+        {
+          "n": "37",
+          "function": "TXD0_37",
+          "net": "/UART_TX_HDR",
+          "x_mm": 143.85,
+          "y_mm": 55.05
+        },
+        {
+          "n": "38",
+          "function": "IO2_38",
+          "net": "unconnected-(U1-IO2-Pad38)",
+          "x_mm": 143.85,
+          "y_mm": 53.78
+        },
+        {
+          "n": "39",
+          "function": "IO1_39",
+          "net": "unconnected-(U1-IO1-Pad39)",
+          "x_mm": 143.85,
+          "y_mm": 52.51
+        },
+        {
+          "n": "40",
+          "function": "GND_40",
+          "net": "/GND",
+          "x_mm": 143.85,
+          "y_mm": 51.24
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 132.2,
+          "y_mm": 58.26
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 132.2,
+          "y_mm": 59.66
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 132.9,
+          "y_mm": 57.56
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 132.9,
+          "y_mm": 58.96
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 132.9,
+          "y_mm": 60.36
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 133.6,
+          "y_mm": 58.26
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 133.6,
+          "y_mm": 58.96
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 133.6,
+          "y_mm": 59.66
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 134.3,
+          "y_mm": 57.56
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 134.3,
+          "y_mm": 58.96
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 134.3,
+          "y_mm": 60.36
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 135.0,
+          "y_mm": 58.26
+        },
+        {
+          "n": "41",
+          "function": "GND_41",
+          "net": "/GND",
+          "x_mm": 135.0,
+          "y_mm": 59.66
+        }
+      ]
+    },
+    {
+      "reference": "C9",
+      "value": "1uF",
+      "fpid": "C_1206_3216Metric_Pad1.33x1.80mm_HandSolder",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/ESP_EN",
+          "x_mm": 123.0625,
+          "y_mm": 56.5
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "/GND",
+          "x_mm": 119.9375,
+          "y_mm": 56.5
+        }
+      ]
+    },
+    {
+      "reference": "D13",
+      "value": "SS34",
+      "fpid": "D_SMA",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "K_1",
+          "net": "/VBUS_OR",
+          "x_mm": 116.0,
+          "y_mm": 83.5
+        },
+        {
+          "n": "2",
+          "function": "A_2",
+          "net": "/J4_5V_IN",
+          "x_mm": 112.0,
+          "y_mm": 83.5
+        }
+      ]
+    },
+    {
+      "reference": "D1",
+      "value": "SS34",
+      "fpid": "D_SMA",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "K_1",
+          "net": "/VBUS_OR",
+          "x_mm": 131.5,
+          "y_mm": 95.0
+        },
+        {
+          "n": "2",
+          "function": "A_2",
+          "net": "/VBUS_NATIVE",
+          "x_mm": 131.5,
+          "y_mm": 99.0
+        }
+      ]
+    },
+    {
+      "reference": "R10",
+      "value": "10k",
+      "fpid": "R_1206_3216Metric_Pad1.30x1.75mm_HandSolder",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/UART_DTR_N",
+          "x_mm": 160.5,
+          "y_mm": 79.55
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "Net-(Q1-B)",
+          "x_mm": 160.5,
+          "y_mm": 76.45
+        }
+      ]
+    },
+    {
+      "reference": "D12",
+      "value": "SMAJ5.0A",
+      "fpid": "D_SMA",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "K_1",
+          "net": "/J4_5V_IN",
+          "x_mm": 107.5,
+          "y_mm": 84.0
+        },
+        {
+          "n": "2",
+          "function": "A_2",
+          "net": "/GND",
+          "x_mm": 107.5,
+          "y_mm": 88.0
+        }
+      ]
+    },
+    {
+      "reference": "Q1",
+      "value": "MMBT3904",
+      "fpid": "SOT-23",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "B_1",
+          "net": "Net-(Q1-B)",
+          "x_mm": 155.55,
+          "y_mm": 72.375
+        },
+        {
+          "n": "2",
+          "function": "E_2",
+          "net": "/UART_RTS_N",
+          "x_mm": 157.45,
+          "y_mm": 72.375
+        },
+        {
+          "n": "3",
+          "function": "C_3",
+          "net": "/ESP_EN",
+          "x_mm": 156.5,
+          "y_mm": 70.5
+        }
+      ]
+    },
+    {
+      "reference": "AMS1117",
+      "value": "AMS1117-3.3",
+      "fpid": "SOT-223-3_TabPin2",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "GND_1",
+          "net": "/GND",
+          "x_mm": 133.8,
+          "y_mm": 72.85
+        },
+        {
+          "n": "2",
+          "function": "VO_2",
+          "net": "/+3V3",
+          "x_mm": 131.5,
+          "y_mm": 72.85
+        },
+        {
+          "n": "2",
+          "function": "VO_2",
+          "net": "/+3V3",
+          "x_mm": 131.5,
+          "y_mm": 79.15
+        },
+        {
+          "n": "3",
+          "function": "VI_3",
+          "net": "/VBUS_OR",
+          "x_mm": 129.2,
+          "y_mm": 72.85
+        }
+      ]
+    },
+    {
+      "reference": "R13",
+      "value": "10k",
+      "fpid": "R_1206_3216Metric_Pad1.30x1.75mm_HandSolder",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "",
+          "net": "/+3V3",
+          "x_mm": 146.5,
+          "y_mm": 72.55
+        },
+        {
+          "n": "2",
+          "function": "",
+          "net": "/ESP_BOOT",
+          "x_mm": 146.5,
+          "y_mm": 69.45
+        }
+      ]
+    },
+    {
+      "reference": "Q3",
+      "value": "AO3401A",
+      "fpid": "SOT-23",
+      "dnp": false,
+      "locked": false,
+      "pads": [
+        {
+          "n": "1",
+          "function": "G_1",
+          "net": "/GND",
+          "x_mm": 116.4375,
+          "y_mm": 75.95
+        },
+        {
+          "n": "2",
+          "function": "S_2",
+          "net": "/+3V3",
+          "x_mm": 116.4375,
+          "y_mm": 74.05
+        },
+        {
+          "n": "3",
+          "function": "D_3",
+          "net": "/J4_3V3_IN",
+          "x_mm": 114.5625,
+          "y_mm": 75.0
+        }
+      ]
+    }
+  ]
+}

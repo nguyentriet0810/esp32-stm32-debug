@@ -1,0 +1,23 @@
+{
+  "zip": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261114_socket_fix.zip",
+  "zip_bytes": 214122,
+  "zip_sha256": "0694b5c8409ff7e31cd8d50135eab44cd192b4eb84727383240d2fa2c990aa22",
+  "archive_crc_pass": true,
+  "source_unchanged_since_correction": true,
+  "files": [
+    "README_FAB.txt",
+    "SHA256SUMS.txt",
+    "probe-B_Cu.gbr",
+    "probe-B_Mask.gbr",
+    "probe-B_Paste.gbr",
+    "probe-B_Silkscreen.gbr",
+    "probe-Edge_Cuts.gbr",
+    "probe-F_Cu.gbr",
+    "probe-F_Mask.gbr",
+    "probe-F_Paste.gbr",
+    "probe-F_Silkscreen.gbr",
+    "probe-NPTH.drl",
+    "probe-PTH.drl",
+    "probe-job.gbrjob"
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 11400,
+    "name": "BAT54C",
+    "description": null,
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": "BAT54C",
+    "slug": "bat54c",
+    "image_id": 30421,
+    "inventory": 2180,
+    "rohs": true,
+    "supplier_id": 5,
+    "price": 285,
+    "category_id": 470,
+    "product_tag_id": 8,
+    "sheetfile": "https://media.digikey.com/pdf/Data%20Sheets/ON%20Semiconductor%20PDFs/BAT54(A,C,S).pdf",
+    "sheetname": "BAT54C",
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "desc_small": "DIODE ARRAY SCHOTTKY 30V SOT23-3",
+    "comments_count": 0,
+    "package_quantity": null,
+    "supplier": {
+      "id": 5,
+      "name": "NXP",
+      "slug": "nxp"
+    },
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "product_tags": [
+      {
+        "id": 4104,
+        "name": "China",
+        "product_tag_id": 8,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#007e9e"
+      }
+    ],
+    "prices": [
+      {
+        "id": 172339,
+        "product_id": 11400,
+        "quantity": 1,
+        "price": 285
+      },
+      {
+        "id": 172340,
+        "product_id": 11400,
+        "quantity": 500,
+        "price": 274
+      },
+      {
+        "id": 172341,
+        "product_id": 11400,
+        "quantity": 1000,
+        "price": 262
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

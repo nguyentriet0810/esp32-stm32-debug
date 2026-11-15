@@ -1,0 +1,1504 @@
+[
+  {
+    "id": 11400,
+    "name": "BAT54C",
+    "description": null,
+    "unit": "Con",
+    "slug": "bat54c",
+    "image_id": 30421,
+    "inventory": 2180,
+    "rohs": true,
+    "supplier_id": 5,
+    "category_id": 470,
+    "product_tag_id": 8,
+    "price": 285,
+    "price_change": null,
+    "sheetfile": "https://media.digikey.com/pdf/Data%20Sheets/ON%20Semiconductor%20PDFs/BAT54(A,C,S).pdf",
+    "sheetname": "BAT54C",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 5,
+      "name": "NXP",
+      "slug": "nxp"
+    },
+    "product_tags": [
+      {
+        "id": 4104,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 172339,
+        "product_id": 11400,
+        "quantity": 1,
+        "price": 285
+      },
+      {
+        "id": 172340,
+        "product_id": 11400,
+        "quantity": 500,
+        "price": 274
+      },
+      {
+        "id": 172341,
+        "product_id": 11400,
+        "quantity": 1000,
+        "price": 262
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286544,
+        "product_id": 11400,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286545,
+        "product_id": 11400,
+        "property_id": 32748,
+        "property": {
+          "id": 32748,
+          "name": "Schottky",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286546,
+        "product_id": 11400,
+        "property_id": 32757,
+        "property": {
+          "id": 32757,
+          "name": "30 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286547,
+        "product_id": 11400,
+        "property_id": 32758,
+        "property": {
+          "id": 32758,
+          "name": "200mA",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286548,
+        "product_id": 11400,
+        "property_id": 32759,
+        "property": {
+          "id": 32759,
+          "name": "800 mV @ 100 mA",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286550,
+        "product_id": 11400,
+        "property_id": 32760,
+        "property": {
+          "id": 32760,
+          "name": "=< 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286551,
+        "product_id": 11400,
+        "property_id": 32761,
+        "property": {
+          "id": 32761,
+          "name": "5 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286552,
+        "product_id": 11400,
+        "property_id": 32762,
+        "property": {
+          "id": 32762,
+          "name": "2 µA @ 25 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286553,
+        "product_id": 11400,
+        "property_id": 32744,
+        "property": {
+          "id": 32744,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286554,
+        "product_id": 11400,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286555,
+        "product_id": 11400,
+        "property_id": 32747,
+        "property": {
+          "id": 32747,
+          "name": "SOT-23-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [
+      {
+        "id": 3355,
+        "user_id": 9181
+      }
+    ],
+    "package_quantity": null,
+    "manufacturer_code": "BAT54C",
+    "desc_small": "DIODE ARRAY SCHOTTKY 30V SOT23-3",
+    "category_extras": []
+  },
+  {
+    "id": 8286,
+    "name": "BAV99",
+    "description": null,
+    "unit": "Con",
+    "slug": "bav99",
+    "image_id": 30430,
+    "inventory": 215,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 470,
+    "product_tag_id": 8,
+    "price": 342,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592268_BAV99.pdf",
+    "sheetname": "BAV99",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 4066,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 174109,
+        "product_id": 8286,
+        "quantity": 1,
+        "price": 342
+      },
+      {
+        "id": 174110,
+        "product_id": 8286,
+        "quantity": 500,
+        "price": 331
+      },
+      {
+        "id": 174111,
+        "product_id": 8286,
+        "quantity": 1000,
+        "price": 319
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286534,
+        "product_id": 8286,
+        "property_id": 32756,
+        "property": {
+          "id": 32756,
+          "name": "1 Pair Series Connection",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286535,
+        "product_id": 8286,
+        "property_id": 32738,
+        "property": {
+          "id": 32738,
+          "name": "Standard",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286536,
+        "product_id": 8286,
+        "property_id": 32739,
+        "property": {
+          "id": 32739,
+          "name": "70 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286538,
+        "product_id": 8286,
+        "property_id": 32740,
+        "property": {
+          "id": 32740,
+          "name": "1.25 V @ 150 mA",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286539,
+        "product_id": 8286,
+        "property_id": 32741,
+        "property": {
+          "id": 32741,
+          "name": "6 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286540,
+        "product_id": 8286,
+        "property_id": 32743,
+        "property": {
+          "id": 32743,
+          "name": "2.5 μA @ 70 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286541,
+        "product_id": 8286,
+        "property_id": 32744,
+        "property": {
+          "id": 32744,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286542,
+        "product_id": 8286,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286543,
+        "product_id": 8286,
+        "property_id": 32747,
+        "property": {
+          "id": 32747,
+          "name": "SOT-23-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "BAV99",
+    "desc_small": "DIODE ARRAY GP 70V 200MA SOT23-3",
+    "category_extras": []
+  },
+  {
+    "id": 2075,
+    "name": "BAV70",
+    "description": "",
+    "unit": "Con",
+    "slug": "bav70",
+    "image_id": 30422,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 470,
+    "product_tag_id": 8,
+    "price": 456,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592311_BAV70.pdf",
+    "sheetname": "Datasheet",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [
+      {
+        "id": 3977,
+        "name": "China",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 8,
+        "color": "#007e9e"
+      }
+    ],
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 165724,
+        "product_id": 2075,
+        "quantity": 1,
+        "price": 456
+      },
+      {
+        "id": 165725,
+        "product_id": 2075,
+        "quantity": 500,
+        "price": 433
+      },
+      {
+        "id": 165726,
+        "product_id": 2075,
+        "quantity": 1000,
+        "price": 410
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286515,
+        "product_id": 2075,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286516,
+        "product_id": 2075,
+        "property_id": 32738,
+        "property": {
+          "id": 32738,
+          "name": "Standard",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286517,
+        "product_id": 2075,
+        "property_id": 32739,
+        "property": {
+          "id": 32739,
+          "name": "70 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286518,
+        "product_id": 2075,
+        "property_id": 32740,
+        "property": {
+          "id": 32740,
+          "name": "1.25 V @ 150 mA",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286519,
+        "product_id": 2075,
+        "property_id": 32741,
+        "property": {
+          "id": 32741,
+          "name": "6 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286520,
+        "product_id": 2075,
+        "property_id": 32743,
+        "property": {
+          "id": 32743,
+          "name": "2.5 μA @ 70 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286521,
+        "product_id": 2075,
+        "property_id": 32744,
+        "property": {
+          "id": 32744,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286522,
+        "product_id": 2075,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286523,
+        "product_id": 2075,
+        "property_id": 32747,
+        "property": {
+          "id": 32747,
+          "name": "SOT-23-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "BAV70",
+    "desc_small": "Diodes - General Purpose, Power, Switching 70V 350mW",
+    "category_extras": []
+  },
+  {
+    "id": 5769,
+    "name": "MBRF20200CTG",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbrf20200ctg",
+    "image_id": 1759,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 470,
+    "product_tag_id": null,
+    "price": 10260,
+    "price_change": null,
+    "sheetfile": "https://www.onsemi.com/pdf/datasheet/mbrf20200ct-d.pdf",
+    "sheetname": "MBRF20200CTG",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 21546,
+        "product_id": 5769,
+        "quantity": 1,
+        "price": 10260
+      },
+      {
+        "id": 21547,
+        "product_id": 5769,
+        "quantity": 20,
+        "price": 9804
+      },
+      {
+        "id": 21548,
+        "product_id": 5769,
+        "quantity": 10,
+        "price": 10032
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286524,
+        "product_id": 5769,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286525,
+        "product_id": 5769,
+        "property_id": 32748,
+        "property": {
+          "id": 32748,
+          "name": "Schottky",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286526,
+        "product_id": 5769,
+        "property_id": 32749,
+        "property": {
+          "id": 32749,
+          "name": "200 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286527,
+        "product_id": 5769,
+        "property_id": 32750,
+        "property": {
+          "id": 32750,
+          "name": "10A",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286528,
+        "product_id": 5769,
+        "property_id": 32751,
+        "property": {
+          "id": 32751,
+          "name": "900 mV @ 10 A",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286529,
+        "product_id": 5769,
+        "property_id": 32752,
+        "property": {
+          "id": 32752,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286530,
+        "product_id": 5769,
+        "property_id": 32753,
+        "property": {
+          "id": 32753,
+          "name": "1 mA @ 200 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286531,
+        "product_id": 5769,
+        "property_id": 32754,
+        "property": {
+          "id": 32754,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286532,
+        "product_id": 5769,
+        "property_id": 32745,
+        "property": {
+          "id": 32745,
+          "name": "Xuyên lỗ",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286533,
+        "product_id": 5769,
+        "property_id": 32755,
+        "property": {
+          "id": 32755,
+          "name": "TO-220-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBRF20200CTG",
+    "desc_small": "Diode Array 1 Pair Common Cathode Schottky 200V 10A Through Hole TO-220-3 Full Pack",
+    "category_extras": []
+  },
+  {
+    "id": 19087,
+    "name": "FEP30GP-E3/45 DIODE ARRAY GP 400V 15A TO3P",
+    "description": null,
+    "unit": "Con",
+    "slug": "fep30gp-e3-45-diode-array-gp-400v-15a-to3p",
+    "image_id": 7175,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 470,
+    "product_tag_id": null,
+    "price": 69540,
+    "price_change": null,
+    "sheetfile": "https://www.vishay.com/docs/88597/fep30xp-e3.pdf",
+    "sheetname": "FEP30GP-E3/45",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 88392,
+        "product_id": 19087,
+        "quantity": 1,
+        "price": 69540
+      },
+      {
+        "id": 88393,
+        "product_id": 19087,
+        "quantity": 10,
+        "price": 68400
+      },
+      {
+        "id": 88394,
+        "product_id": 19087,
+        "quantity": 20,
+        "price": 67260
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286556,
+        "product_id": 19087,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286557,
+        "product_id": 19087,
+        "property_id": 32738,
+        "property": {
+          "id": 32738,
+          "name": "Standard",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286558,
+        "product_id": 19087,
+        "property_id": 32763,
+        "property": {
+          "id": 32763,
+          "name": "400 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286559,
+        "product_id": 19087,
+        "property_id": 32764,
+        "property": {
+          "id": 32764,
+          "name": "15A",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286560,
+        "product_id": 19087,
+        "property_id": 32765,
+        "property": {
+          "id": 32765,
+          "name": "1.3 V @ 15 A",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286561,
+        "product_id": 19087,
+        "property_id": 32752,
+        "property": {
+          "id": 32752,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286562,
+        "product_id": 19087,
+        "property_id": 32766,
+        "property": {
+          "id": 32766,
+          "name": "50 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286563,
+        "product_id": 19087,
+        "property_id": 32767,
+        "property": {
+          "id": 32767,
+          "name": "10 µA @ 400 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286564,
+        "product_id": 19087,
+        "property_id": 32744,
+        "property": {
+          "id": 32744,
+          "name": "-55°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286565,
+        "product_id": 19087,
+        "property_id": 32745,
+        "property": {
+          "id": 32745,
+          "name": "Xuyên lỗ",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286566,
+        "product_id": 19087,
+        "property_id": 32768,
+        "property": {
+          "id": 32768,
+          "name": "TO-3P",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "FEP30GP-E3/45",
+    "desc_small": "Diode array 1 pair common cathode",
+    "category_extras": []
+  },
+  {
+    "id": 20481,
+    "name": "MBRD20100CT Diode Array Schottky 100V 10A",
+    "description": null,
+    "unit": "Con",
+    "slug": "mbrd20100ct-diode-array-schottky-100v-10a",
+    "image_id": 6062,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 64,
+    "category_id": 470,
+    "product_tag_id": null,
+    "price": 3648,
+    "price_change": null,
+    "sheetfile": "https://datasheet.lcsc.com/lcsc/1912111437_Diodes-Incorporated-MBRD20100CT-13_C460890.pdf",
+    "sheetname": "MBRD20100CT",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "package_name": null,
+    "supplier": {
+      "id": 64,
+      "name": "Diodes Inc",
+      "slug": "diodes-inc"
+    },
+    "product_tags": [],
+    "product_tag": null,
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 96541,
+        "product_id": 20481,
+        "quantity": 1,
+        "price": 3648
+      },
+      {
+        "id": 96542,
+        "product_id": 20481,
+        "quantity": 50,
+        "price": 3534
+      },
+      {
+        "id": 96543,
+        "product_id": 20481,
+        "quantity": 100,
+        "price": 3420
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286568,
+        "product_id": 20481,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286569,
+        "product_id": 20481,
+        "property_id": 32748,
+        "property": {
+          "id": 32748,
+          "name": "Schottky",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286570,
+        "product_id": 20481,
+        "property_id": 32769,
+        "property": {
+          "id": 32769,
+          "name": "100 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286571,
+        "product_id": 20481,
+        "property_id": 32750,
+        "property": {
+          "id": 32750,
+          "name": "10A",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286572,
+        "product_id": 20481,
+        "property_id": 32770,
+        "property": {
+          "id": 32770,
+          "name": "790 mV @ 10 A",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286573,
+        "product_id": 20481,
+        "property_id": 32752,
+        "property": {
+          "id": 32752,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286574,
+        "product_id": 20481,
+        "property_id": 32771,
+        "property": {
+          "id": 32771,
+          "name": "100 μA @ 100 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286575,
+        "product_id": 20481,
+        "property_id": 32772,
+        "property": {
+          "id": 32772,
+          "name": "-55°C ~ 175°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286576,
+        "product_id": 20481,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286577,
+        "product_id": 20481,
+        "property_id": 32773,
+        "property": {
+          "id": 32773,
+          "name": "TO-252-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "MBRD20100CT",
+    "desc_small": "DPAK TO-252-3",
+    "category_extras": []
+  },
+  {
+    "id": 36244,
+    "name": "BAV70,215  Diode Array GP 100V 215mA SOT-23-3",
+    "description": "",
+    "unit": "Con",
+    "slug": "bav70-215-diode-array-gp-100v-215ma-sot-23-3",
+    "image_id": 322,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 194,
+    "category_id": 470,
+    "product_tag_id": 7,
+    "price": 502,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592234_BAV70-215.pdf",
+    "sheetname": "BAV70,215",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 194,
+      "name": "Nexperia",
+      "slug": "nexperia"
+    },
+    "product_tags": [
+      {
+        "id": 3080,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173128,
+        "product_id": 36244,
+        "quantity": 1,
+        "price": 502
+      },
+      {
+        "id": 173129,
+        "product_id": 36244,
+        "quantity": 500,
+        "price": 479
+      },
+      {
+        "id": 173130,
+        "product_id": 36244,
+        "quantity": 1000,
+        "price": 456
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286578,
+        "product_id": 36244,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286579,
+        "product_id": 36244,
+        "property_id": 32738,
+        "property": {
+          "id": 32738,
+          "name": "Standard",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286580,
+        "product_id": 36244,
+        "property_id": 32769,
+        "property": {
+          "id": 32769,
+          "name": "100 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286581,
+        "product_id": 36244,
+        "property_id": 32774,
+        "property": {
+          "id": 32774,
+          "name": "215mA (DC)",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286582,
+        "product_id": 36244,
+        "property_id": 32740,
+        "property": {
+          "id": 32740,
+          "name": "1.25 V @ 150 mA",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286583,
+        "product_id": 36244,
+        "property_id": 32752,
+        "property": {
+          "id": 32752,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286584,
+        "product_id": 36244,
+        "property_id": 32775,
+        "property": {
+          "id": 32775,
+          "name": "4 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286585,
+        "product_id": 36244,
+        "property_id": 32776,
+        "property": {
+          "id": 32776,
+          "name": "500 nA @ 80 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286586,
+        "product_id": 36244,
+        "property_id": 32754,
+        "property": {
+          "id": 32754,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286587,
+        "product_id": 36244,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286588,
+        "product_id": 36244,
+        "property_id": 32747,
+        "property": {
+          "id": 32747,
+          "name": "SOT-23-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "BAV70,215",
+    "desc_small": "Diode Array 1 cặp Cathode chung 100V 215mA",
+    "category_extras": []
+  },
+  {
+    "id": 36246,
+    "name": "BAT54C,215 Diode Array Schottky 30V SOT-23-3",
+    "description": null,
+    "unit": "Con",
+    "slug": "bat54c-215-diode-array-schottky-30v-sot-23-3",
+    "image_id": 322,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 194,
+    "category_id": 470,
+    "product_tag_id": 7,
+    "price": 490,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592234_BAT54C-215.pdf",
+    "sheetname": "BAT54C,215",
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "package_name": null,
+    "supplier": {
+      "id": 194,
+      "name": "Nexperia",
+      "slug": "nexperia"
+    },
+    "product_tags": [
+      {
+        "id": 3082,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173137,
+        "product_id": 36246,
+        "quantity": 1,
+        "price": 490
+      },
+      {
+        "id": 173138,
+        "product_id": 36246,
+        "quantity": 500,
+        "price": 479
+      },
+      {
+        "id": 173139,
+        "product_id": 36246,
+        "quantity": 1000,
+        "price": 467
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286589,
+        "product_id": 36246,
+        "property_id": 32737,
+        "property": {
+          "id": 32737,
+          "name": "1 Pair Common Cathode",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286590,
+        "product_id": 36246,
+        "property_id": 32748,
+        "property": {
+          "id": 32748,
+          "name": "Schottky",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286591,
+        "product_id": 36246,
+        "property_id": 32757,
+        "property": {
+          "id": 32757,
+          "name": "30 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286592,
+        "product_id": 36246,
+        "property_id": 32777,
+        "property": {
+          "id": 32777,
+          "name": "200mA (DC)",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286593,
+        "product_id": 36246,
+        "property_id": 32759,
+        "property": {
+          "id": 32759,
+          "name": "800 mV @ 100 mA",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286594,
+        "product_id": 36246,
+        "property_id": 32760,
+        "property": {
+          "id": 32760,
+          "name": "=< 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286595,
+        "product_id": 36246,
+        "property_id": 32761,
+        "property": {
+          "id": 32761,
+          "name": "5 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286596,
+        "product_id": 36246,
+        "property_id": 32762,
+        "property": {
+          "id": 32762,
+          "name": "2 µA @ 25 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286597,
+        "product_id": 36246,
+        "property_id": 32754,
+        "property": {
+          "id": 32754,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286598,
+        "product_id": 36246,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286599,
+        "product_id": 36246,
+        "property_id": 32747,
+        "property": {
+          "id": 32747,
+          "name": "SOT-23-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "BAT54C,215",
+    "desc_small": "Diode Array Schottky 30V SOT-23-3",
+    "category_extras": []
+  },
+  {
+    "id": 36309,
+    "name": "BAV99LT1G Diode Array 100V 215mA SOT-23",
+    "description": null,
+    "unit": "Con",
+    "slug": "bav99lt1g-diode-array-100v-215ma-sot-23",
+    "image_id": 322,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 30,
+    "category_id": 470,
+    "product_tag_id": 7,
+    "price": 684,
+    "price_change": null,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592152_BAV99LT1G.pdf",
+    "sheetname": "BAV99LT1G",
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "package_name": null,
+    "supplier": {
+      "id": 30,
+      "name": "On Semiconductor",
+      "slug": "on-semiconductor"
+    },
+    "product_tags": [
+      {
+        "id": 3141,
+        "name": "Chính hãng",
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "product_tag_id": 7,
+        "color": "#2b00ff"
+      }
+    ],
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "show_category_extra": false,
+    "prices": [
+      {
+        "id": 173627,
+        "product_id": 36309,
+        "quantity": 1,
+        "price": 684
+      },
+      {
+        "id": 173628,
+        "product_id": 36309,
+        "quantity": 500,
+        "price": 673
+      },
+      {
+        "id": 173629,
+        "product_id": 36309,
+        "quantity": 1000,
+        "price": 661
+      }
+    ],
+    "product_properties": [
+      {
+        "id": 286600,
+        "product_id": 36309,
+        "property_id": 32756,
+        "property": {
+          "id": 32756,
+          "name": "1 Pair Series Connection",
+          "parent_id": 32726
+        }
+      },
+      {
+        "id": 286601,
+        "product_id": 36309,
+        "property_id": 32738,
+        "property": {
+          "id": 32738,
+          "name": "Standard",
+          "parent_id": 32727
+        }
+      },
+      {
+        "id": 286602,
+        "product_id": 36309,
+        "property_id": 32769,
+        "property": {
+          "id": 32769,
+          "name": "100 V",
+          "parent_id": 32728
+        }
+      },
+      {
+        "id": 286603,
+        "product_id": 36309,
+        "property_id": 32774,
+        "property": {
+          "id": 32774,
+          "name": "215mA (DC)",
+          "parent_id": 32729
+        }
+      },
+      {
+        "id": 286604,
+        "product_id": 36309,
+        "property_id": 32740,
+        "property": {
+          "id": 32740,
+          "name": "1.25 V @ 150 mA",
+          "parent_id": 32730
+        }
+      },
+      {
+        "id": 286605,
+        "product_id": 36309,
+        "property_id": 32752,
+        "property": {
+          "id": 32752,
+          "name": "=< 500ns, > 200mA (Io)",
+          "parent_id": 32731
+        }
+      },
+      {
+        "id": 286606,
+        "product_id": 36309,
+        "property_id": 32741,
+        "property": {
+          "id": 32741,
+          "name": "6 ns",
+          "parent_id": 32732
+        }
+      },
+      {
+        "id": 286607,
+        "product_id": 36309,
+        "property_id": 32743,
+        "property": {
+          "id": 32743,
+          "name": "2.5 μA @ 70 V",
+          "parent_id": 32733
+        }
+      },
+      {
+        "id": 286608,
+        "product_id": 36309,
+        "property_id": 32754,
+        "property": {
+          "id": 32754,
+          "name": "-65°C ~ 150°C",
+          "parent_id": 32734
+        }
+      },
+      {
+        "id": 286609,
+        "product_id": 36309,
+        "property_id": 32746,
+        "property": {
+          "id": 32746,
+          "name": "Dán bề mặt",
+          "parent_id": 32735
+        }
+      },
+      {
+        "id": 286610,
+        "product_id": 36309,
+        "property_id": 32747,
+        "property": {
+          "id": 32747,
+          "name": "SOT-23-3",
+          "parent_id": 32736
+        }
+      }
+    ],
+    "favorites": [],
+    "package_quantity": null,
+    "manufacturer_code": "BAV99LT1G",
+    "desc_small": "Diode Array 1 Pair Series Connection 100 V 215mA (DC)",
+    "category_extras": []
+  }
+]

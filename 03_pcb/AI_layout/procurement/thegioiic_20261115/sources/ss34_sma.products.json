@@ -1,0 +1,90 @@
+[
+  {
+    "id": 2529,
+    "name": "SS34 SMA Diode Schottky 3A",
+    "description": "",
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": "SS34",
+    "slug": "ss34-sma-diode-schottky-3a",
+    "image_id": 30540,
+    "inventory": 18128,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 570,
+    "category_id": 164,
+    "product_tag_id": 8,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740544899_SS34_SMA.pdf",
+    "sheetname": "SS34 SMA",
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": true,
+    "multiples": 5,
+    "minimum_order_quantity": 10,
+    "desc_small": "Size A, DIODE SCHOTTKY 3A 40V SMA",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 43,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 2000
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "product_tags": [
+      {
+        "id": 3993,
+        "name": "China",
+        "product_tag_id": 8,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#007e9e"
+      }
+    ],
+    "prices": [
+      {
+        "id": 222657,
+        "product_id": 2529,
+        "quantity": 1,
+        "price": 570
+      },
+      {
+        "id": 222658,
+        "product_id": 2529,
+        "quantity": 100,
+        "price": 547
+      },
+      {
+        "id": 222659,
+        "product_id": 2529,
+        "quantity": 500,
+        "price": 524
+      }
+    ],
+    "images": [],
+    "category_extras": [
+      {
+        "id": 10,
+        "name": "Cut Tape",
+        "price": null,
+        "image_id": 57948
+      },
+      {
+        "id": 11,
+        "name": "Reel",
+        "price": 10000,
+        "image_id": 57949
+      }
+    ],
+    "favorites": []
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "id": 14868,
+    "name": "Hàng Rào Đực Đôi 2.54mm 80 Chân 2 Hàng Cao 11.2mm Xuyên Lỗ",
+    "description": null,
+    "unit": null,
+    "info": "",
+    "manufacturer_code": null,
+    "slug": "hang-rao-duc-doi-2-54mm-80-chan-2-hang-cao-11-2mm-xuyen-lo",
+    "image_id": 21092,
+    "inventory": 3120,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 1938,
+    "category_id": 388,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "2x40 chân, mạ thiếc",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 20,
+      "package_id": 129,
+      "package_name": "Bịch",
+      "quantity": 100
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 82308,
+        "product_id": 14868,
+        "quantity": 1,
+        "price": 1938
+      },
+      {
+        "id": 87035,
+        "product_id": 14868,
+        "quantity": 100,
+        "price": 1824
+      },
+      {
+        "id": 87036,
+        "product_id": 14868,
+        "quantity": 500,
+        "price": 1710
+      }
+    ],
+    "images": [
+      {
+        "product_id": 14868,
+        "image_id": 12982
+      }
+    ],
+    "category_extras": [],
+    "favorites": []
+  }
+]

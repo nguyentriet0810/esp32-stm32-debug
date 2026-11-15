@@ -36,17 +36,29 @@ static esp_err_t probe_board_check_pins(void)
 #if CONFIG_PROBE_ENCODER_ENABLE
         CONFIG_PROBE_ENCODER_A_GPIO, CONFIG_PROBE_ENCODER_B_GPIO, CONFIG_PROBE_ENCODER_SW_GPIO,
 #endif
+#if CONFIG_PROBE_SD_ENABLE
+        CONFIG_PROBE_SD_CS_GPIO,     CONFIG_PROBE_SD_MOSI_GPIO,   CONFIG_PROBE_SD_SCK_GPIO,
+        CONFIG_PROBE_SD_MISO_GPIO,   CONFIG_PROBE_SD_DETECT_GPIO,
+#endif
     };
+    const size_t pin_count = sizeof(pins) / sizeof(pins[0]);
     uint64_t used = UINT64_C(0);
     esp_err_t result = ESP_OK;
-    for (size_t index = 0U; index < (sizeof(pins) / sizeof(pins[0])); ++index)
+    for (size_t index = 0U; index < pin_count; ++index)
     {
         const int pin = pins[index];
         if (pin >= 0)
         {
-            /* Leave boot straps, SPI memory, USB, UART0 and reference LED untouched. */
-            const bool allowed = ((pin >= 1) && (pin <= 18) && (pin != 3)) ||
-                                 ((pin >= 38) && (pin <= 42)) || (pin == 47) || (pin == 48);
+            /* Leave straps, SPI memory, USB and UART0 untouched. SD owns GPIO38-42. */
+            bool allowed = ((pin >= 1) && (pin <= 18) && (pin != 3)) || (pin == 21) ||
+                           (pin == 47) || (pin == 48);
+#if CONFIG_PROBE_SD_ENABLE
+            /* The last five assignments belong exclusively to the SD component. */
+            if (index >= (pin_count - 5U))
+            {
+                allowed = (pin >= 38) && (pin <= 42);
+            }
+#endif
             if (!allowed)
             {
                 ESP_LOGE(probe_board_log_tag, "GPIO%d is reserved by the N16R8 profile", pin);
@@ -154,6 +166,14 @@ esp_err_t probe_board_check(void)
 
     if (result == ESP_OK)
     {
+        ESP_LOGI(probe_board_log_tag, "Pin profile: PCB revision C (PCB REV 1.0)");
+#if CONFIG_PROBE_SD_ENABLE
+        ESP_LOGI(probe_board_log_tag, "microSD CS=%d MOSI=%d SCK=%d MISO=%d CD=%d",
+                 CONFIG_PROBE_SD_CS_GPIO, CONFIG_PROBE_SD_MOSI_GPIO, CONFIG_PROBE_SD_SCK_GPIO,
+                 CONFIG_PROBE_SD_MISO_GPIO, CONFIG_PROBE_SD_DETECT_GPIO);
+#else
+        ESP_LOGI(probe_board_log_tag, "microSD disabled; GPIO38-42 reserved");
+#endif
         ESP_LOGI(probe_board_log_tag, "Free internal heap: %zu bytes",
                  heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT));
         ESP_LOGI(probe_board_log_tag, "Free PSRAM heap: %zu bytes",

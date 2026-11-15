@@ -1,0 +1,185 @@
+{
+  "source": "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb",
+  "source_sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "baseline": "D:\\esp32_debug\\03_pcb\\.tooling\\ai-layout\\ground-audit\\ground_snapshot.kicad_pcb",
+  "baseline_sha256": "adfa08d080b39db993dff03f7276c7955daf49b9553c37edc63b007e2c0585dc",
+  "only_reference_field_placement_and_board_text_content_changed": true,
+  "reference_text_changes": [
+    {
+      "reference": "R24",
+      "old_position_mm": [
+        115.0,
+        87.0
+      ],
+      "new_position_mm": [
+        115.0,
+        86.5
+      ],
+      "old_angle_deg": 0.0,
+      "new_angle_deg": 0.0
+    },
+    {
+      "reference": "R37",
+      "old_position_mm": [
+        153.3,
+        87.5
+      ],
+      "new_position_mm": [
+        152.5,
+        88.0
+      ],
+      "old_angle_deg": 0.0,
+      "new_angle_deg": 270.0
+    },
+    {
+      "reference": "D3",
+      "old_position_mm": [
+        135.5,
+        93.4
+      ],
+      "new_position_mm": [
+        137.0,
+        93.5
+      ],
+      "old_angle_deg": 180.0,
+      "new_angle_deg": 180.0
+    },
+    {
+      "reference": "R34",
+      "old_position_mm": [
+        149.5,
+        65.5
+      ],
+      "new_position_mm": [
+        149.5,
+        64.5
+      ],
+      "old_angle_deg": 180.0,
+      "new_angle_deg": 180.0
+    },
+    {
+      "reference": "D6",
+      "old_position_mm": [
+        113.5,
+        64.5
+      ],
+      "new_position_mm": [
+        112.5,
+        63.0
+      ],
+      "old_angle_deg": 0.0,
+      "new_angle_deg": 0.0
+    },
+    {
+      "reference": "D1",
+      "old_position_mm": [
+        134.5,
+        100.0
+      ],
+      "new_position_mm": [
+        134.0,
+        100.0
+      ],
+      "old_angle_deg": 180.0,
+      "new_angle_deg": 180.0
+    },
+    {
+      "reference": "Q1",
+      "old_position_mm": [
+        158.5,
+        69.4375
+      ],
+      "new_position_mm": [
+        156.5,
+        68.5
+      ],
+      "old_angle_deg": 180.0,
+      "new_angle_deg": 180.0
+    }
+  ],
+  "board_text_changes": [
+    {
+      "old": "AI_layout",
+      "new": "REV 1.0",
+      "at_mm": [
+        151.0,
+        108.5
+      ]
+    }
+  ],
+  "reference_designators_and_values_unchanged": true,
+  "category_unchanged": {
+    "tracks_and_vias": true,
+    "zones_including_fill": true,
+    "setup_including_stackup_and_origins": true,
+    "net_definitions": true,
+    "general_thickness": true
+  },
+  "invariant_comparison": {
+    "footprint_count_unchanged": true,
+    "missing_footprints": [],
+    "locked_placement_changes": [],
+    "pad_and_library_geometry_changes": [],
+    "pad_net_changes": [],
+    "footprint_graphical_geometry_changes": [],
+    "assembly_flag_changes": [],
+    "thickness_unchanged": true,
+    "stackup_unchanged": true,
+    "outline_unchanged": true
+  },
+  "fabrication": {
+    "board_thickness_mm": 1.6,
+    "copper_layer_count": 2,
+    "minimum_track_mm": 0.2,
+    "minimum_power_track_mm": 0.4,
+    "minimum_via_drill_mm": 0.4,
+    "minimum_via_annulus_mm": 0.2,
+    "minimum_pth_drill_minor_mm": 0.4,
+    "minimum_pth_annulus_mm": 0.2,
+    "configured_minimum_copper_clearance_mm": 0.2,
+    "minimum_visible_text_stroke_mm": 0.15,
+    "minimum_visible_text_height_mm": 1.0,
+    "footprint_graphic_strokes_below_015mm": 217,
+    "note": "217 unchanged 0.12mm footprint outlines are graphical strokes; all visible text strokes satisfy the supplied 0.15mm text requirement."
+  },
+  "below_manufacturer_limits": {
+    "tracks": [],
+    "power_tracks": [],
+    "vias": [],
+    "visible_text": []
+  },
+  "unchanged_pad_geometries": 63,
+  "pth_pad_count": 45,
+  "via_count": 115,
+  "track_segment_count": 503,
+  "current_label_drc": {
+    "report": "drc.json",
+    "label_checks_pass": true,
+    "issues": [],
+    "moved_reference_fields_checked": [
+      "R24",
+      "R37",
+      "D3",
+      "R34",
+      "D6",
+      "D1",
+      "Q1"
+    ],
+    "visible_text_minimum_stroke_mm": 0.15,
+    "visible_text_minimum_height_mm": 1.0
+  },
+  "order_review_assessment": {
+    "new_design_blockers": [],
+    "manufacturing_minima_pass": true,
+    "label_placement_pass": true,
+    "existing_library_mismatch_refs": [
+      "R1",
+      "R5",
+      "R6",
+      "R25",
+      "TYPE-C",
+      "ESP32-S3"
+    ],
+    "scope": "PCB geometry and supplied manufacturer minima; current Gerber/drill release alignment is assessed separately."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "scope": "verification only; not a production Gerber release",
+  "saved_board_sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "pcb_content_unchanged": true,
+  "aux_origin_mm": [
+    100.0,
+    110.0
+  ],
+  "grid_origin_mm": [
+    100.0,
+    110.0
+  ],
+  "stored_plot_use_aux_origin": true,
+  "outline_centerline_bounds": {
+    "x_mm": [
+      0.0,
+      70.0
+    ],
+    "y_mm": [
+      0.0,
+      60.0
+    ]
+  },
+  "outline_extents_pass": true,
+  "mounting_holes_diameter_mm": 3.2,
+  "mounting_holes_xy_mm": [
+    [
+      5.0,
+      5.0
+    ],
+    [
+      5.0,
+      55.0
+    ],
+    [
+      65.0,
+      5.0
+    ],
+    [
+      65.0,
+      55.0
+    ]
+  ],
+  "mounting_holes_pass": true,
+  "drill_alignment": {
+    "PTH": {
+      "checked": 160,
+      "expected_unique": 160,
+      "maximum_center_error_mm": 0.0004999999999988347,
+      "mismatches": [],
+      "missing_expected": [],
+      "pass": true,
+      "file": "AI_layout-PTH.drl"
+    },
+    "NPTH": {
+      "checked": 8,
+      "expected_unique": 8,
+      "maximum_center_error_mm": 1.464821375527116e-14,
+      "mismatches": [],
+      "missing_expected": [],
+      "pass": true,
+      "file": "AI_layout-NPTH.drl"
+    }
+  },
+  "pass": true,
+  "commands": [
+    {
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\python.exe",
+        "D:\\esp32_debug\\03_pcb\\.tooling\\ai-layout\\origin\\expected_drills.py",
+        "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb",
+        "D:\\esp32_debug\\03_pcb\\AI_layout\\verification\\order_review_20261113\\origin_check\\expected_drills.json"
+      ],
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "gerbers",
+        "--layers",
+        "Edge.Cuts",
+        "--use-drill-file-origin",
+        "--no-protel-ext",
+        "--output",
+        "D:\\esp32_debug\\03_pcb\\AI_layout\\verification\\order_review_20261113\\origin_check/",
+        "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb"
+      ],
+      "stdout": "Plotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\verification\\order_review_20261113\\origin_check\\AI_layout-Edge_Cuts.gbr'.",
+      "stderr": "15:02:49: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Access is denied.)\n15:02:49: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 2: The system cannot find the file specified.)"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "drill",
+        "--format",
+        "excellon",
+        "--drill-origin",
+        "plot",
+        "--excellon-zeros-format",
+        "decimal",
+        "--excellon-oval-format",
+        "route",
+        "--excellon-units",
+        "mm",
+        "--excellon-separate-th",
+        "--output",
+        "D:\\esp32_debug\\03_pcb\\AI_layout\\verification\\order_review_20261113\\origin_check/",
+        "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb"
+      ],
+      "stdout": "Created file 'D:\\esp32_debug\\03_pcb\\AI_layout\\verification\\order_review_20261113\\origin_check\\AI_layout-PTH.drl'\nCreated file 'D:\\esp32_debug\\03_pcb\\AI_layout\\verification\\order_review_20261113\\origin_check\\AI_layout-NPTH.drl'\nDone.",
+      "stderr": "15:02:49: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Access is denied.)\n15:02:49: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 2: The system cannot find the file specified.)"
+    }
+  ]
+}

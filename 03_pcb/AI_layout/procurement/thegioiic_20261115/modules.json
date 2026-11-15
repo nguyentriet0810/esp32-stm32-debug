@@ -1,0 +1,34 @@
+{
+  "checked_date": "2026-11-15",
+  "verification": "Live retailer search and product pages read in the browser; no cart changes or purchases",
+  "items": [
+    {
+      "bom_value": "ESP32-S3-WROOM-1-N16R8",
+      "refs": ["ESP32-S3"],
+      "qty_per_board": 1,
+      "match": "exact_module",
+      "title": "ESP32-S3-WROOM-1-N16R8 Module WiFi Bluetooth 16MB Flash, 8MB PSRAM 2.4GHz",
+      "url": "https://www.thegioiic.com/esp32-s3-wroom-1-n16r8-module-wifi-bluetooth-16mb-flash-8mb-psram-2-4ghz",
+      "retailer_code": "IC44278",
+      "unit_price_vnd": 172000,
+      "stock_seen": 32,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Module rời có antenna PCB, 16 MB flash / 8 MB PSRAM; đúng biến thể N16R8. Không mua DevKit/CAM board hoặc WROOM-1U thay cho module này."
+    },
+    {
+      "bom_value": "SSD1306 I2C",
+      "refs": ["OLED"],
+      "qty_per_board": 1,
+      "match": "functional_module_check_pin_order",
+      "title": "LCD OLED SSD1306 0.96inch 128x64 Chữ Trắng 4 Chân Giao Tiếp IIC",
+      "url": "https://www.thegioiic.com/lcd-oled-ssd1306-0-96inch-128x64-chu-trang-4-chan-giao-tiep-iic",
+      "retailer_code": "IC3528",
+      "unit_price_vnd": 57000,
+      "stock_seen": 51,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Đúng driver SSD1306 / I2C / 128x64 / 0.96 inch, điện áp công bố 3.3–5 V. Cấp 3.3 V trên probe. Đây là module LCD rời; header OLED 1x4 P2.54 gắn PCB là một món kết nối riêng. Đối chiếu GND/VCC/SCL/SDA thực tế, dùng dây theo chức năng nếu thứ tự header khác."
+    }
+  ]
+}

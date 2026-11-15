@@ -1,0 +1,608 @@
+{
+  "date": "2026-11-15",
+  "retailer": "https://www.thegioiic.com/",
+  "source_pcb_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "source_pcb_unchanged": true,
+  "quantities": "For one PCB; SD optional and other DNP are not included in base quantity",
+  "scope": {
+    "updated_date": "2026-11-15",
+    "excluded_by_user": [
+      "SSD1306 OLED module",
+      "rotary encoder",
+      "all headers"
+    ],
+    "excluded_pcb_references": [
+      "OLED",
+      "SW1",
+      "SWDIO",
+      "UART"
+    ],
+    "note": "Exclude these finished modules/connectors from procurement only. Keep their associated resistors, capacitors, protection components, and all PCB geometry unchanged."
+  },
+  "excluded_purchase_groups": [
+    {
+      "part": "SSD1306 I2C",
+      "refs": [
+        "OLED"
+      ]
+    },
+    {
+      "part": "Alps EC11E switched vertical H20 footprint family",
+      "refs": [
+        "SW1"
+      ]
+    },
+    {
+      "part": "1×40 breakaway strip",
+      "refs": [
+        "OLED",
+        "SWDIO"
+      ]
+    },
+    {
+      "part": "2×40 breakaway strip",
+      "refs": [
+        "UART"
+      ]
+    }
+  ],
+  "covered_pcb_references": 55,
+  "price_scope": "Live public retailer data on 2026-11-15; prices are per unit before shipping. MOQ/order multiple may exceed PCB quantities.",
+  "group_counts": {
+    "available": 17,
+    "not_found_exact": 2,
+    "out_of_stock": 2,
+    "mechanical_confirmation_required": 4
+  },
+  "items": [
+    {
+      "category": "Module",
+      "required_part": "ESP32-S3-WROOM-1-N16R8",
+      "refs": [
+        "ESP32-S3"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/esp32-s3-wroom-1-n16r8-module-wifi-bluetooth-16mb-flash-8mb-psram-2-4ghz",
+      "title": "ESP32-S3-WROOM-1-N16R8 Module WiFi Bluetooth 16MB Flash, 8MB PSRAM 2.4GHz",
+      "supplier_code": "IC44278",
+      "unit_price_vnd": 172000,
+      "inventory": 32,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Module rời có antenna PCB, 16 MB flash / 8 MB PSRAM; đúng biến thể N16R8. Không mua DevKit/CAM board hoặc WROOM-1U thay cho module này."
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "AMS1117-3.3 / SOT-223-3, tab pin 2",
+      "refs": [
+        "AMS1117"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/ams1117-3-3v-ic-on-ap-3-3v-1a-sot-223",
+      "title": "AMS1117-3.3V IC Ổn Áp 3.3V 1A SOT-223",
+      "supplier_code": "IC1025",
+      "unit_price_vnd": 3990,
+      "inventory": 2430,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Chọn phiên bản 3.3V cố định, không chọn ADJ/5V/TO-252. C2 22uF tantalum được giữ nguyên như PCB.",
+      "alternative_offers": []
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "MMBT3904 / SOT-23",
+      "refs": [
+        "Q1",
+        "Q2"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/mmbt3904-1am-transistor-npn-40v-0-2a-3-chan-sot-23",
+      "title": "MMBT3904-1AM Transistor NPN 40V 0.2A 3 Chân SOT-23",
+      "supplier_code": "IC1337",
+      "unit_price_vnd": 399,
+      "inventory": 9502,
+      "minimum_order_quantity": 20,
+      "order_multiple": 10,
+      "notes": "Mã 1AM phù hợp datasheet Jiangsu gắn trên trang; nhà bán lẻ ghi OEM/China. Không thay bằng 2N3904 TO-92.",
+      "alternative_offers": []
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "AO3401A / SOT-23",
+      "refs": [
+        "Q3"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/ao3401a-mosfet-kenh-p-30v-4a-sot23",
+      "title": "AO3401A MOSFET Kênh P 30V 4A SOT23",
+      "supplier_code": "IC11258",
+      "unit_price_vnd": 2772,
+      "inventory": 3344,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "P-channel, đúng AO3401A; không chọn AO3400A N-channel.",
+      "alternative_offers": []
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "BAT54S / SOT-23, dual SERIES Schottky",
+      "refs": [
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "base_quantity": 4,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "not_found_exact",
+      "url": null,
+      "title": null,
+      "supplier_code": null,
+      "unit_price_vnd": null,
+      "inventory": null,
+      "minimum_order_quantity": null,
+      "order_multiple": null,
+      "notes": "Tìm kiếm trực tiếp BAT54S trả 0; danh mục Schottky61 và arrays9 không có mã S. BAT54C/Common Cathode và BAT54A/Common Anode không tương thích, không mua thay.",
+      "alternative_offers": []
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "SS34 / DO-214AC / SMA",
+      "refs": [
+        "D1",
+        "D13"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/ss34-sma-diode-schottky-3a",
+      "title": "SS34 SMA Diode Schottky 3A",
+      "supplier_code": "IC2529",
+      "unit_price_vnd": 570,
+      "inventory": 18128,
+      "minimum_order_quantity": 10,
+      "order_multiple": 5,
+      "notes": "Hai lựa chọn cùng SS34 SMA40V3A. IC2529 OEM rẻ mỗi con nhưng min10; IC36304 TWGMC min1 nên hai con rẻ hơn tổng lô OEM. Không chọn SS34 SMB IC11422 hoặc SMC.",
+      "alternative_offers": [
+        {
+          "title": "TWGMC SS34 SMA Diode Schottky 3A",
+          "url": "https://www.thegioiic.com/twgmc-ss34-sma-diode-schottky-3a",
+          "retailer_code": "IC36304",
+          "manufacturer_code": "SS34",
+          "retailer_brand": "TWGMC",
+          "unit_price_vnd": 1140,
+          "inventory_units": 5983,
+          "minimum_order_quantity": 1,
+          "order_multiple": 1,
+          "price_breaks": [
+            {
+              "id": 173661,
+              "product_id": 36304,
+              "quantity": 1,
+              "price": 1140
+            },
+            {
+              "id": 173662,
+              "product_id": 36304,
+              "quantity": 100,
+              "price": 1083
+            },
+            {
+              "id": 173663,
+              "product_id": 36304,
+              "quantity": 500,
+              "price": 1026
+            }
+          ],
+          "linked_datasheet_url": "https://file.thegioiic.com/upload/documents/1734592150_TWGMC-SS34.pdf",
+          "live_retrieved_local": "2026-11-15T18:13:22+07:00",
+          "evidence_file": "D:\\esp32_debug\\03_pcb\\AI_layout\\procurement\\thegioiic_20261115\\sources\\ss34_twgmc.products.json",
+          "minimum_purchase_for_one_board": 2,
+          "minimum_purchase_line_total_vnd": 2280
+        }
+      ]
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "SMAJ5.0A / DO-214AC / SMA, unidirectional TVS",
+      "refs": [
+        "D12",
+        "D14"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/smaj5-0a",
+      "title": "SMAJ5.0A",
+      "supplier_code": "IC1316",
+      "unit_price_vnd": 570,
+      "inventory": 7438,
+      "minimum_order_quantity": 10,
+      "order_multiple": 5,
+      "notes": "Đúng suffix A một chiều; không mua SMAJ5.0CA hai chiều. Datasheet chỉ V_RWM=5V, không đồng nghĩa kẹp ở5V.",
+      "alternative_offers": []
+    },
+    {
+      "category": "Bán dẫn",
+      "required_part": "USBLC6-2SC6 / SOT-23-6L",
+      "refs": [
+        "D3"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/usblc6-2sc6-tvs-diode-5-25v-17v-sot-23-6l",
+      "title": "USBLC6-2SC6 TVS DIODE 5.25V 17V SOT-23-6L",
+      "supplier_code": "IC45239",
+      "unit_price_vnd": 5040,
+      "inventory": 489,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Mã sản phẩm trên title đúngSC6, STMicroelectronics; trường manufacturer_code nội bộ trống. ST official datasheet xác nhậnSC6 SOT23-6L. Không mua USBLC6-2P6 SOT-666.",
+      "alternative_offers": []
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "0 Ohm / 1206 (3216 metric)",
+      "refs": [
+        "R33"
+      ],
+      "base_quantity": 0,
+      "sd_option_additional_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/dien-tro-0-ohm-1206-1-",
+      "title": "Điện Trở 0 Ohm 1206 1%",
+      "supplier_code": "IC6174",
+      "unit_price_vnd": 114,
+      "inventory": 5250,
+      "minimum_order_quantity": 25,
+      "order_multiple": 25,
+      "notes": "Currently DNP; only SD option. No assumption about jumper current rating."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "22 Ohm / 1206 (3216 metric)",
+      "refs": [
+        "R5",
+        "R6",
+        "R34"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/dien-tro-22-ohm-1206-1-",
+      "title": "Điện Trở 22 Ohm 1206 1%",
+      "supplier_code": "IC6126",
+      "unit_price_vnd": 114,
+      "inventory": 2775,
+      "minimum_order_quantity": 25,
+      "order_multiple": 25,
+      "notes": "R5/R6 populated; R34 remains DNP unless SD option is populated."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "330 Ohm / 1206 (3216 metric)",
+      "refs": [
+        "R17",
+        "R18",
+        "R19",
+        "R20"
+      ],
+      "base_quantity": 4,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/dien-tro-330-ohm-1206-5-",
+      "title": "Điện Trở 330 Ohm 1206 5%",
+      "supplier_code": "IC1635",
+      "unit_price_vnd": 87,
+      "inventory": 2750,
+      "minimum_order_quantity": 25,
+      "order_multiple": 25,
+      "notes": "PCB value does not specify resistor tolerance."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "1 KOhm / 1206 (3216 metric)",
+      "refs": [
+        "R26"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/dien-tro-1-kohm-1206-1-",
+      "title": "Điện Trở 1 KOhm 1206 1%",
+      "supplier_code": "IC6142",
+      "unit_price_vnd": 176,
+      "inventory": 120,
+      "minimum_order_quantity": 25,
+      "order_multiple": 25,
+      "notes": ""
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "4.7 KOhm / 1206 (3216 metric)",
+      "refs": [
+        "R14",
+        "R15"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/dien-tro-4-7-kohm-1206-1-",
+      "title": "Điện Trở 4.7 KOhm 1206 1%",
+      "supplier_code": "IC6151",
+      "unit_price_vnd": 176,
+      "inventory": 2029,
+      "minimum_order_quantity": 25,
+      "order_multiple": 25,
+      "notes": ""
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "5.1 KOhm 1% / 1206 (3216 metric)",
+      "refs": [
+        "R1",
+        "R2"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "not_found_exact",
+      "url": null,
+      "title": null,
+      "supplier_code": null,
+      "unit_price_vnd": null,
+      "inventory": null,
+      "minimum_order_quantity": null,
+      "order_multiple": null,
+      "notes": "R1/R2 explicitly specify1% in PCB. Do not automatically substitute5% or another package. This is an exact-spec search gap, not proof no vendor product can ever be obtained."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "10 KOhm / 1206 (3216 metric)",
+      "refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R23",
+        "R24",
+        "R25",
+        "R36",
+        "R37",
+        "R38",
+        "R39",
+        "R40",
+        "R41"
+      ],
+      "base_quantity": 7,
+      "sd_option_additional_quantity": 6,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/dien-tro-10-kohm-1206-5-",
+      "title": "Điện Trở 10 KOhm 1206 5%",
+      "supplier_code": "IC1640",
+      "unit_price_vnd": 101,
+      "inventory": 1600,
+      "minimum_order_quantity": 25,
+      "order_multiple": 25,
+      "notes": ""
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "4.7 uF / 1206 (3216 metric)",
+      "refs": [
+        "C1"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "out_of_stock",
+      "url": "https://www.thegioiic.com/tu-gom-1206-4-7uf-50v",
+      "title": "Tụ Gốm 1206 4.7uF 50V",
+      "supplier_code": "IC12744",
+      "unit_price_vnd": 2772,
+      "inventory": 0,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Exact4.7uF1206MLCC product found by retailer own search; currently out of stock. Keep ceramic type; do not replace with same-number tantalum1206 whose body/footprint convention differs."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "22 uF / 16V Ta / EIA-3528-21, Kemet B, approximately 3.5 x 2.8 x 2.1 mm; imperial 1411",
+      "refs": [
+        "C2"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "out_of_stock",
+      "url": "https://www.thegioiic.com/tu-tantalum-22uf-16v-1411-t491b226k016at",
+      "title": "Tụ Tantalum 22uF 16V 1411 T491B226K016AT",
+      "supplier_code": "IC28120",
+      "unit_price_vnd": 17100,
+      "inventory": 0,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Kemet B /1411(3528M) matches3.5x2.8 footprint body size and fits2.1mmheight envelope. Polarized tantalum. Exact product and seven additional22uF16V1411 choices all have liveinventory0; do not substitute2917/2312 or ceramic automatically."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "10 uF / 1206 (3216 metric)",
+      "refs": [
+        "C3",
+        "C15"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/tu-gom-1206-10uf-16v",
+      "title": "Tụ Gốm 1206 10uF 16V",
+      "supplier_code": "IC2794",
+      "unit_price_vnd": 1140,
+      "inventory": 1675,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Confirm dielectric and DC-bias capacitance before purchasing if regulator or transient requirements impose a minimum effective capacitance. No change to PCB value."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "100 nF / 1206 (3216 metric)",
+      "refs": [
+        "C4",
+        "C10",
+        "C16"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/tu-gom-1206-100nf-0-1uf-50v",
+      "title": "Tụ Gốm 1206 100nF (0.1uF) 50V",
+      "supplier_code": "IC7222",
+      "unit_price_vnd": 570,
+      "inventory": 5094,
+      "minimum_order_quantity": 10,
+      "order_multiple": 5,
+      "notes": ""
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "1 uF / 1206 (3216 metric)",
+      "refs": [
+        "C9"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "available",
+      "url": "https://www.thegioiic.com/tu-gom-1206-1uf-50v",
+      "title": "Tụ Gốm 1206 1uF 50V",
+      "supplier_code": "IC7224",
+      "unit_price_vnd": 735,
+      "inventory": 3970,
+      "minimum_order_quantity": 10,
+      "order_multiple": 5,
+      "notes": "Auto-reset EN capacitor; choose stable MLCC dielectric and verify effective capacitance/tolerance on product datasheet."
+    },
+    {
+      "category": "Điện trở / tụ",
+      "required_part": "10 pF / 1206 (3216 metric)",
+      "refs": [
+        "C7",
+        "C8"
+      ],
+      "base_quantity": 0,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 2,
+      "status": "available",
+      "url": "https://www.thegioiic.com/tu-gom-1206-10pf-50v",
+      "title": "Tụ Gốm 1206 10pF 50V",
+      "supplier_code": "IC7221",
+      "unit_price_vnd": 456,
+      "inventory": 609,
+      "minimum_order_quantity": 20,
+      "order_multiple": 10,
+      "notes": "C7/C8 remain DNP on USB. They are not part of the SD option or the default purchase quantity."
+    },
+    {
+      "category": "Đầu nối / cơ khí",
+      "required_part": "G-Switch GT-USB-7010ASV",
+      "refs": [
+        "TYPE-C"
+      ],
+      "base_quantity": 1,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "mechanical_confirmation_required",
+      "url": "https://www.thegioiic.com/cong-usb-cai-3-1-type-c-16-chan-thang-dan-smd",
+      "title": "Cổng USB Cái 3.1 Type C 16 Chân Thẳng Dán SMD",
+      "supplier_code": "IC36686",
+      "unit_price_vnd": 1710,
+      "inventory": 17,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Live product is Shouhan TYPE-C 16PIN 2MD(073) per its PDF, not GT-USB-7010ASV. Contact-row concept and guide spacing 5.78mm are similar, but shell-slot/land dimensions must be checked against the already ordered board; 16 pins alone does not establish compatibility. Native guide holes: Ø0.65mm at ±2.89; shell columns ±4.32mm, fore/aft separation4.20mm; native slot drills0.6×1.7 and0.6×1.4mm."
+    },
+    {
+      "category": "Đầu nối / cơ khí",
+      "required_part": "C&K PTS636Sx25SMTRLFS footprint family",
+      "refs": [
+        "BOOT",
+        "RESET"
+      ],
+      "base_quantity": 2,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "mechanical_confirmation_required",
+      "url": "https://www.thegioiic.com/nut-nhan-3x6mm-cao-2-5mm-2-chan-smd-dau-trang",
+      "title": "Nút Nhấn 3x6mm Cao 2.5mm 2 Chân SMD Đầu Trắng",
+      "supplier_code": "IC3592",
+      "unit_price_vnd": 570,
+      "inventory": 2559,
+      "minimum_order_quantity": 10,
+      "order_multiple": 5,
+      "notes": "OEM top-actuated normally-open two-lead SMD switch, 6×3mm and2.5mm high. Native C&K body6×3.5mm; two native pads7.75mm centre spacing, each1.25×1.0mm. Supplier drawing shows8.0±0.1mm overall lead span and1.3mm lead width; this is a plausible hand-solder candidate, not a proven exact land-pattern match. MOQ10 even though only2 are needed."
+    },
+    {
+      "category": "Đầu nối / cơ khí",
+      "required_part": "JXTCONN TF-01A",
+      "refs": [
+        "SD SOCKET"
+      ],
+      "base_quantity": 0,
+      "sd_option_additional_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "mechanical_confirmation_required",
+      "url": "https://www.thegioiic.com/misd-pp-9p-v1-khay-the-nho-microsd-9-chan-push-push",
+      "title": "MiSD-PP-9P-V1 Khay Thẻ Nhớ MicroSD 9 Chân Push-Push",
+      "supplier_code": "IC4602",
+      "unit_price_vnd": 2508,
+      "inventory": 92,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "9-contact push-push candidate has1.1mm contact pitch and8mm guide spacing, similar to TF-01A, but it is not identified as JXTCONN TF-01A and no complete recommended PCB land pattern is supplied. Supplier body/overall dimensions14.5×16.12×2.45mm versus native TF-01A drawing body14.75×14.5mm, height1.8–2.0mm. Shell-tab positions and card-detect geometry must match; do not substitute merely because both are microSD9-pin. This PCB marks the SD assembly optional/DNP."
+    },
+    {
+      "category": "Đầu nối / cơ khí",
+      "required_part": "BAT Wireless BWSMA-KWE-Z001",
+      "refs": [
+        "ANTEN"
+      ],
+      "base_quantity": 0,
+      "sd_option_additional_quantity": 0,
+      "other_dnp_quantity": 1,
+      "status": "mechanical_confirmation_required",
+      "url": "https://www.thegioiic.com/sma-kwe-14-5-dau-rf-sma-duc-dai-14-5mm-vuong-goc-90-do-han-pcb",
+      "title": "SMA-KWE-14.5 Đầu RF SMA Đực Dài 14.5mm Vuông Góc 90 Độ Hàn PCB",
+      "supplier_code": "IC5095",
+      "unit_price_vnd": 11400,
+      "inventory": 325,
+      "minimum_order_quantity": 1,
+      "order_multiple": 1,
+      "notes": "Generic right-angle SMA-KWE-14.5 is not BWSMA-KWE-Z001 and no verified pin-pattern match was established. Native pattern has four ground holes at(±2.55,±2.55)mm around the centre pin, allØ1.4mm drills. ANTEN is DNP/NC in the present design; installing this connector does not create an external-antenna RF connection."
+    }
+  ]
+}

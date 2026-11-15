@@ -1,0 +1,1826 @@
+{
+  "source": "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb",
+  "ground_pad_count": 62,
+  "ground_pad_connected_components": 1,
+  "connectivity_unconnected_count": 0,
+  "all_ground_pads_reach_both_zones": true,
+  "ground_pads": [
+    {
+      "ref": "C2",
+      "number": "2",
+      "uuid": "79bc9c15-5364-4cfc-b162-8f39b66b8098",
+      "pos_mm": [
+        137.0,
+        73.3725
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "BOOT",
+      "number": "2",
+      "uuid": "a8d15cdf-ff87-4c8e-8c44-85dc6e7421e8",
+      "pos_mm": [
+        157.375,
+        53.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "A1",
+      "uuid": "6bdc8398-3c4d-4e6b-8f7d-6230404eadf8",
+      "pos_mm": [
+        131.8,
+        102.275
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "A12",
+      "uuid": "a91e1dac-a4bd-4df6-b80c-4005dac70537",
+      "pos_mm": [
+        138.2,
+        102.275
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "B1",
+      "uuid": "2808f06a-4039-4398-91d0-73bc5cd17ffe",
+      "pos_mm": [
+        138.2,
+        102.275
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "B12",
+      "uuid": "ee87df8c-0c58-4cd8-8d3d-f9f06d78292e",
+      "pos_mm": [
+        131.8,
+        102.275
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "SH",
+      "uuid": "7e7ded5e-e419-4211-8901-5ded2443b756",
+      "pos_mm": [
+        130.68,
+        102.875
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "SH",
+      "uuid": "dd160477-8013-40fc-b544-9791e2fdad37",
+      "pos_mm": [
+        130.68,
+        107.075
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "SH",
+      "uuid": "d7a48d1c-983f-4065-b07b-e40d7a31d1b9",
+      "pos_mm": [
+        139.32,
+        102.875
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "TYPE-C",
+      "number": "SH",
+      "uuid": "c7ed32ab-6b08-4384-9119-817cb2e87f14",
+      "pos_mm": [
+        139.32,
+        107.075
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C1",
+      "number": "2",
+      "uuid": "484baec4-6b4e-4ab8-9dc5-fdbb46b51a41",
+      "pos_mm": [
+        126.5,
+        73.9375
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C10",
+      "number": "2",
+      "uuid": "fe35c2c8-5b03-416e-acc6-2c82dab884b4",
+      "pos_mm": [
+        119.0,
+        92.0625
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D7",
+      "number": "1",
+      "uuid": "32be3e3d-762e-4773-911b-3558d5987bfa",
+      "pos_mm": [
+        116.1375,
+        67.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C15",
+      "number": "2",
+      "uuid": "438bf8ed-6953-40fd-abf5-9de94516b8a3",
+      "pos_mm": [
+        141.4375,
+        96.25
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C3",
+      "number": "2",
+      "uuid": "aab656ad-b237-4545-96cc-c63d4d27838b",
+      "pos_mm": [
+        123.125,
+        54.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "R2",
+      "number": "2",
+      "uuid": "657fb5eb-7f18-48f0-b3a2-6a3462af2b33",
+      "pos_mm": [
+        139.0,
+        95.45
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "OLED",
+      "number": "1",
+      "uuid": "dcd80fbb-bab1-4b30-aa03-21e501c7b091",
+      "pos_mm": [
+        140.08,
+        84.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D5",
+      "number": "1",
+      "uuid": "964fc5fe-0f7f-498c-8f68-2cf5dda595e2",
+      "pos_mm": [
+        116.1375,
+        59.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D8",
+      "number": "1",
+      "uuid": "13976721-1923-4838-8f00-c415114f844b",
+      "pos_mm": [
+        116.4375,
+        71.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D14",
+      "number": "2",
+      "uuid": "321b817b-74de-4a4b-abf4-cc5d556c5f93",
+      "pos_mm": [
+        116.0,
+        79.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SD SCHOKET",
+      "number": "6",
+      "uuid": "d411eacc-a432-4fb2-86e4-7b11db312ad7",
+      "pos_mm": [
+        154.5,
+        94.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SD SCHOKET",
+      "number": "SH",
+      "uuid": "a56e36df-53d4-45de-919c-415d7aa8861a",
+      "pos_mm": [
+        155.5,
+        99.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SD SCHOKET",
+      "number": "SH",
+      "uuid": "bbef1c3e-eb2c-48cc-b3b6-f52811f74824",
+      "pos_mm": [
+        165.1,
+        99.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SD SCHOKET",
+      "number": "SH",
+      "uuid": "7b16cb82-8695-4d04-9bd8-7644d81f9df2",
+      "pos_mm": [
+        155.5,
+        84.4
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SD SCHOKET",
+      "number": "SH",
+      "uuid": "d2aba934-0ef7-448b-baf3-992806e93549",
+      "pos_mm": [
+        165.1,
+        83.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D3",
+      "number": "2",
+      "uuid": "0286d2b8-1f5a-4a65-bff2-9a5f4ac5136f",
+      "pos_mm": [
+        135.5,
+        97.5375
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 1
+    },
+    {
+      "ref": "ANTEN",
+      "number": "2",
+      "uuid": "4dc09add-e83d-4094-8e51-cccb66e0559c",
+      "pos_mm": [
+        168.05,
+        61.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ANTEN",
+      "number": "2",
+      "uuid": "c651d039-e54a-4845-842e-600fdc036b58",
+      "pos_mm": [
+        162.95,
+        61.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ANTEN",
+      "number": "2",
+      "uuid": "2157deb9-392b-4162-95f5-15190e9e7c8f",
+      "pos_mm": [
+        168.05,
+        67.05
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ANTEN",
+      "number": "2",
+      "uuid": "4a8e9885-3764-4928-869b-bd94469f5226",
+      "pos_mm": [
+        162.95,
+        67.05
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "RESET",
+      "number": "2",
+      "uuid": "062c0169-afbe-42d1-b481-f835e87dccd6",
+      "pos_mm": [
+        157.375,
+        59.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C4",
+      "number": "2",
+      "uuid": "3f18b615-d844-4325-a34f-0b620fca0a67",
+      "pos_mm": [
+        123.125,
+        51.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "1",
+      "uuid": "5742e101-6b53-40fd-8701-bdb4507b8d76",
+      "pos_mm": [
+        126.35,
+        51.24
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "40",
+      "uuid": "820653f4-ef8b-4fb6-b899-b5e5e54b2366",
+      "pos_mm": [
+        143.85,
+        51.24
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "8de49cc3-01cf-4a2e-82bc-ef11c4f38687",
+      "pos_mm": [
+        132.2,
+        58.26
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "dc265fc2-2dda-4999-aea5-16cce328d29d",
+      "pos_mm": [
+        132.2,
+        59.66
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "fae2ff1e-bcf9-4d9d-996a-d07de1088d92",
+      "pos_mm": [
+        132.9,
+        57.56
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "f03e9b8f-525a-4e9c-94d0-8b08d99e72fa",
+      "pos_mm": [
+        132.9,
+        58.96
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "c8a8c19d-25ed-48f7-b2c3-84ab0129df21",
+      "pos_mm": [
+        132.9,
+        60.36
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "6fcf0de6-11b0-4967-81d1-92d5e4392dac",
+      "pos_mm": [
+        133.6,
+        58.26
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "aaa4077c-b633-4932-beba-617ddb5bbfed",
+      "pos_mm": [
+        133.6,
+        58.96
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "9591452c-498e-40bf-a7f3-824363d2b678",
+      "pos_mm": [
+        133.6,
+        59.66
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "0ceee892-6b47-4d11-bbff-759661db5dec",
+      "pos_mm": [
+        134.3,
+        57.56
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "03089e2d-d02c-41d1-906c-14eef3907979",
+      "pos_mm": [
+        134.3,
+        58.96
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "b37a84ed-9de3-48d3-bf77-cb718dff6cf6",
+      "pos_mm": [
+        134.3,
+        60.36
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "d61dd249-2494-4f50-a083-c986585bf79a",
+      "pos_mm": [
+        135.0,
+        58.26
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "ESP32-S3",
+      "number": "41",
+      "uuid": "d8b0f94b-5c84-4473-b634-89dbda6650c9",
+      "pos_mm": [
+        135.0,
+        59.66
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "R1",
+      "number": "2",
+      "uuid": "aceb4fdc-66c1-41c6-a115-ca3bd834fea4",
+      "pos_mm": [
+        126.95,
+        92.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C9",
+      "number": "2",
+      "uuid": "b9d2f21c-a4d2-446b-a030-e172c578bf9c",
+      "pos_mm": [
+        119.9375,
+        56.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SW1",
+      "number": "C",
+      "uuid": "0ff37748-a61e-4ccc-af7e-bb5e7a0e9c5a",
+      "pos_mm": [
+        111.75,
+        101.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SW1",
+      "number": "MP",
+      "uuid": "68cc2c97-2777-49f6-ba68-4e70b19f6da4",
+      "pos_mm": [
+        119.25,
+        95.4
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SW1",
+      "number": "MP",
+      "uuid": "daa9d4f0-5307-412a-902d-66fa06c82c5e",
+      "pos_mm": [
+        119.25,
+        106.6
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SW1",
+      "number": "S2",
+      "uuid": "e7699350-7449-482a-934e-30df049a72aa",
+      "pos_mm": [
+        126.25,
+        98.5
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C7",
+      "number": "2",
+      "uuid": "e0fc2f9e-40d8-4c3f-a6f3-33d11d8a2b81",
+      "pos_mm": [
+        123.0625,
+        63.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D6",
+      "number": "1",
+      "uuid": "d0cb6054-1bfe-41d6-a84c-0d0526cb1be7",
+      "pos_mm": [
+        116.1375,
+        63.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "D12",
+      "number": "2",
+      "uuid": "ec070353-7384-44b9-8d25-b4fe06a05a77",
+      "pos_mm": [
+        107.5,
+        88.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C16",
+      "number": "2",
+      "uuid": "c1a23eb1-388a-451d-b854-10e1f8c97832",
+      "pos_mm": [
+        147.4375,
+        93.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "C8",
+      "number": "2",
+      "uuid": "30d91d94-0558-4499-a30a-67df51126846",
+      "pos_mm": [
+        121.5,
+        76.1625
+      ],
+      "local_zone_connection": 2,
+      "connection_type": "solid",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "SWDIO",
+      "number": "1",
+      "uuid": "6cdff5fc-cf36-4df6-8d54-337a7a970b16",
+      "pos_mm": [
+        102.5,
+        72.3
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "UART",
+      "number": "4",
+      "uuid": "682cc86e-eb6d-401a-93c4-aa21e675cf78",
+      "pos_mm": [
+        167.765,
+        76.0
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "AMS1117",
+      "number": "1",
+      "uuid": "2663573a-35ad-4cd5-9e2a-afc025feff25",
+      "pos_mm": [
+        133.8,
+        72.85
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    },
+    {
+      "ref": "Q3",
+      "number": "1",
+      "uuid": "2c8b3dfd-15cd-44dd-b8dd-f18e16ed39d1",
+      "pos_mm": [
+        116.4375,
+        75.95
+      ],
+      "local_zone_connection": -1,
+      "connection_type": "thermal inherited",
+      "reachable_counts": {
+        "PCB_VIA": 42,
+        "ZONE": 11,
+        "PAD": 62,
+        "PCB_TRACK": 3
+      },
+      "connected_zones": [
+        "GND_Back",
+        "GND_Front"
+      ],
+      "immediate_track_count": 0
+    }
+  ],
+  "zones": [
+    {
+      "name": "GND_Front",
+      "net": "/GND",
+      "uuid": "e6a5da35-bcb1-4ffc-b917-7126aff1f2ca",
+      "island_mode": 0,
+      "island_mode_name": "ALWAYS",
+      "filled_area_mm2": 2829.4864966988093,
+      "default_pad_connection": 1,
+      "thermal_gap_mm": 0.25,
+      "thermal_spoke_mm": 0.5,
+      "layers": [
+        {
+          "layer": "F.Cu",
+          "polygons": 5,
+          "isolated_island_indices": []
+        }
+      ]
+    },
+    {
+      "name": "GND_Back",
+      "net": "/GND",
+      "uuid": "a65aa604-008e-468f-8e09-102ec9d64ff9",
+      "island_mode": 0,
+      "island_mode_name": "ALWAYS",
+      "filled_area_mm2": 3155.2692287165387,
+      "default_pad_connection": 1,
+      "thermal_gap_mm": 0.25,
+      "thermal_spoke_mm": 0.5,
+      "layers": [
+        {
+          "layer": "B.Cu",
+          "polygons": 6,
+          "isolated_island_indices": []
+        }
+      ]
+    }
+  ],
+  "dangling_tracks": [],
+  "duplicate_copper_items": [],
+  "ground_tracks_and_vias": [
+    {
+      "uuid": "0edbf807-137c-4171-b271-a014fef222a0",
+      "kind": "PCB_TRACK",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "1638a7a6-5277-42cd-a7a7-8aa1c5a7a7b6",
+      "kind": "PCB_TRACK",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "3e8d9c02-ef3b-43ce-8e83-3d316edb3444",
+      "kind": "PCB_TRACK",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "07a87cc3-3721-493b-b4cf-cdf195daa91e",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "07d410d9-5041-4bfb-817d-c6f14131724e",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "0a76b50a-2055-4b2a-8952-7b604afa7519",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "10779e4c-b624-4347-b454-58bce67ee475",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "1a964d5b-7148-4672-bfea-e0ba3d6ef356",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "237ad0f1-0fe3-4920-ad3e-338b3d67ebac",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "25098a9c-5030-4ac9-8524-a0cc7848c3b3",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "2f3c95e9-0f4a-4b6d-96e6-1547cc73ff4b",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "3d8854f8-0792-4059-9f6a-853513f1017d",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "3da53688-7667-4389-9df9-913a156b1323",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "4297da7e-2ea4-4ef4-a4cd-9c88f94cb55c",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "531f6ad1-029f-4d6f-b02e-7fe1da410634",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "55e3ba09-b6c5-4778-b105-1b4f0bcbb93a",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "5d00f0cc-2707-4717-9c6e-20eeb4a7c3f8",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "5d2f45d3-bf5e-477a-8e67-63f49aae77f3",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "60fa8853-831f-4f35-ba25-696fbf40c717",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "6117d6cb-3daa-47ac-b406-12a96c0303e8",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "66533394-7e19-42cd-92ff-46604c5aaa2f",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "6f822560-ebc3-4508-bcb0-d350db86ba7c",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "84766667-8ac7-4a7f-aa4b-16feba876e3a",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "84a47ab0-5fb3-425c-9e3a-0fb516092cc2",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "8bcd1366-b385-4011-aec5-6cc9e50c7dbc",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "8c824fe4-ed5d-4864-8da1-92a596def155",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "8db88172-fbf6-488d-941d-5d60d363b369",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "8e42a83b-e72a-48ee-9efd-2de9ddc946e5",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "96453103-e7f6-4235-834d-552857c932a2",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "a051a098-c50d-4734-9250-b5a9e0d1f920",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "a2e60687-a1c9-46ba-83f3-dbbccf3b8914",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "a7c53c05-7cb2-4cc1-b8fe-b8a98bc7da54",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "b08078ee-e185-4f51-b59a-4f78334f910b",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "b3dd8883-ddfb-4357-b7d5-e781eef61ab4",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "ba48af16-0ba8-4755-9e92-03e6f4d84f4e",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "c634c839-7f4f-4dce-9c00-3962d9ac7cf0",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "ca4129fa-ba0a-457f-b95a-360ad91d2d1c",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "ccb8c5e3-253b-4eac-9f50-18e54c76b82b",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "d0b92ef4-99ab-43f9-95a7-ba9467340f3d",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "d77cb77a-0200-4af5-9291-7302cc43b49d",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "dba4cb7c-1de7-4065-869e-2ffddb09ec45",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "e0611226-17c7-4300-8f6f-13544b99eb08",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "e2cfcae0-2c8f-477d-9812-4af6191f3dcb",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "f8054be1-8614-4f7b-88db-af6126e6441c",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    },
+    {
+      "uuid": "fc5f93cb-4700-482f-bbc9-0a8cc8dcd1b2",
+      "kind": "PCB_VIA",
+      "reachable_count": 118,
+      "zones": [
+        "GND_Back",
+        "GND_Front"
+      ]
+    }
+  ],
+  "cleanup_decision": {
+    "removed_track_count": 0,
+    "retained_ground_track_count": 3,
+    "reason": "Three existing ground segments provide the short ESD return and a deliberate stitching connection; none is dangling or duplicate.",
+    "retained_ground_vias": 42
+  }
+}

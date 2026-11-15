@@ -1,0 +1,65 @@
+[
+  {
+    "id": 11258,
+    "name": "AO3401A MOSFET Kênh P 30V 4A SOT23",
+    "description": null,
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": "AO3401A",
+    "slug": "ao3401a-mosfet-kenh-p-30v-4a-sot23",
+    "image_id": 51318,
+    "inventory": 3344,
+    "rohs": true,
+    "supplier_id": 286,
+    "price": 2772,
+    "category_id": 178,
+    "product_tag_id": 7,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1736213009_Alpha---Omega-Semicon-AO3401A_C15127.pdf",
+    "sheetname": "Datasheet",
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "MOSFET P-CH 30V SOT23",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "supplier": {
+      "id": 286,
+      "name": "Alpha & Omega Semicon",
+      "slug": "alpha-omega-semicon"
+    },
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "product_tags": [
+      {
+        "id": 1407,
+        "name": "Chính hãng",
+        "product_tag_id": 7,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#2b00ff"
+      }
+    ],
+    "prices": [
+      {
+        "id": 173658,
+        "product_id": 11258,
+        "quantity": 1,
+        "price": 2772
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

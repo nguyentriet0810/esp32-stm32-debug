@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1337,
+    "name": "MMBT3904-1AM Transistor NPN 40V 0.2A 3 Chân SOT-23",
+    "description": "",
+    "unit": "Con",
+    "info": "<p>Không đổi trả</p>",
+    "manufacturer_code": "MMBT3904",
+    "slug": "mmbt3904-1am-transistor-npn-40v-0-2a-3-chan-sot-23",
+    "image_id": 29871,
+    "inventory": 9502,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 399,
+    "category_id": 179,
+    "product_tag_id": 8,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1734592101_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--MMBT3904.pdf",
+    "sheetname": "MMBT3904",
+    "show_package": true,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 10,
+    "minimum_order_quantity": 20,
+    "desc_small": "Điện áp Vce max: 40V, dòng Ic max: 0.2A, công suất: 0.3W",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 45,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 3000
+    },
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": {
+      "id": 8,
+      "name": "China"
+    },
+    "product_tags": [
+      {
+        "id": 3936,
+        "name": "China",
+        "product_tag_id": 8,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#007e9e"
+      }
+    ],
+    "prices": [
+      {
+        "id": 206909,
+        "product_id": 1337,
+        "quantity": 1,
+        "price": 399
+      },
+      {
+        "id": 206910,
+        "product_id": 1337,
+        "quantity": 500,
+        "price": 376
+      },
+      {
+        "id": 206911,
+        "product_id": 1337,
+        "quantity": 1000,
+        "price": 353
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1025,
+    "name": "AMS1117-3.3V IC Ổn Áp 3.3V 1A SOT-223",
+    "description": "",
+    "unit": "Con",
+    "info": null,
+    "manufacturer_code": "AMS1117-3.3V",
+    "slug": "ams1117-3-3v-ic-on-ap-3-3v-1a-sot-223",
+    "image_id": 46701,
+    "inventory": 2430,
+    "rohs": true,
+    "supplier_id": 97,
+    "price": 3990,
+    "category_id": 42,
+    "product_tag_id": 7,
+    "sheetfile": "https://file.thegioiic.com/upload/documents/1740385794_AMS1117.pdf",
+    "sheetname": "AMS1117",
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "Điện áp vào max: 15VDC, điện áp ra: 3.3VDC",
+    "comments_count": 0,
+    "package_quantity": {
+      "id": 46,
+      "package_id": 127,
+      "package_name": "Cuộn",
+      "quantity": 2500
+    },
+    "supplier": {
+      "id": 97,
+      "name": "AMS",
+      "slug": "ams"
+    },
+    "product_tag": {
+      "id": 7,
+      "name": "Chính hãng"
+    },
+    "product_tags": [
+      {
+        "id": 743,
+        "name": "Chính hãng",
+        "product_tag_id": 7,
+        "background_color": "#f25220",
+        "text_color": "#ffffff",
+        "color": "#2b00ff"
+      }
+    ],
+    "prices": [
+      {
+        "id": 2527,
+        "product_id": 1025,
+        "quantity": 1,
+        "price": 3990
+      },
+      {
+        "id": 208564,
+        "product_id": 1025,
+        "quantity": 100,
+        "price": 3876
+      },
+      {
+        "id": 208565,
+        "product_id": 1025,
+        "quantity": 500,
+        "price": 3762
+      }
+    ],
+    "images": [],
+    "category_extras": [],
+    "favorites": []
+  }
+]

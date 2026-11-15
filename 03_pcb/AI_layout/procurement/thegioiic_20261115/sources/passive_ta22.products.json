@@ -1,0 +1,558 @@
+[
+  {
+    "id": 28120,
+    "name": "Tụ Tantalum 22uF 16V 1411 T491B226K016AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-t491b226k016at",
+    "image_id": 35313,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 17100,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121435,
+        "product_id": 28120,
+        "quantity": 1,
+        "price": 17100
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28238,
+    "name": "Tụ Tantalum 22uF 16V 1411 T494B226K016AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-t494b226k016at",
+    "image_id": 35313,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 28500,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121627,
+        "product_id": 28238,
+        "quantity": 1,
+        "price": 28500
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28240,
+    "name": "Tụ Tantalum 22uF 16V 1411 T494B226M016AT",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-t494b226m016at",
+    "image_id": 35313,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 20%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 22344,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 121629,
+        "product_id": 28240,
+        "quantity": 1,
+        "price": 22344
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28666,
+    "name": "Tụ Tantalum 22uF 16V 1411 TPSB226K016R0600",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-tpsb226k016r0600",
+    "image_id": 35313,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 11058,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122479,
+        "product_id": 28666,
+        "quantity": 1,
+        "price": 11058
+      },
+      {
+        "id": 122480,
+        "product_id": 28666,
+        "quantity": 50,
+        "price": 10944
+      },
+      {
+        "id": 122481,
+        "product_id": 28666,
+        "quantity": 100,
+        "price": 10830
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28667,
+    "name": "Tụ Tantalum 22uF 16V 1411 TPSB226K016R0400",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-tpsb226k016r0400",
+    "image_id": 35313,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 195,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 21090,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 195,
+      "name": "Kemet",
+      "slug": "kemet"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122482,
+        "product_id": 28667,
+        "quantity": 1,
+        "price": 21090
+      },
+      {
+        "id": 122483,
+        "product_id": 28667,
+        "quantity": 50,
+        "price": 20862
+      },
+      {
+        "id": 122484,
+        "product_id": 28667,
+        "quantity": 100,
+        "price": 20520
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28832,
+    "name": "Tụ Tantalum 22uF 16V 1411 TM3B226K016HBA",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-tm3b226k016hba",
+    "image_id": 35349,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 8550,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 122937,
+        "product_id": 28832,
+        "quantity": 1,
+        "price": 8550
+      },
+      {
+        "id": 122938,
+        "product_id": 28832,
+        "quantity": 100,
+        "price": 8436
+      },
+      {
+        "id": 122939,
+        "product_id": 28832,
+        "quantity": 500,
+        "price": 8322
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28972,
+    "name": "Tụ Tantalum 22uF 16V 1411 293D226X9016B2TE3",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-293d226x9016b2te3",
+    "image_id": 35349,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 15960,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123364,
+        "product_id": 28972,
+        "quantity": 1,
+        "price": 15960
+      },
+      {
+        "id": 123365,
+        "product_id": 28972,
+        "quantity": 50,
+        "price": 15732
+      },
+      {
+        "id": 123366,
+        "product_id": 28972,
+        "quantity": 100,
+        "price": 15504
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 28973,
+    "name": "Tụ Tantalum 22uF 16V 1411 593D226X9016B2TE3",
+    "description": null,
+    "unit": "Con",
+    "slug": "tu-tantalum-22uf-16v-1411-593d226x9016b2te3",
+    "image_id": 35349,
+    "inventory": 0,
+    "rohs": false,
+    "supplier_id": 22,
+    "category_id": 149,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Code 226 10%, 1411 (3528 Metric)",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 20520,
+    "show_package": false,
+    "show_category_extra": true,
+    "category_extras": [
+      {
+        "id": 8,
+        "name": "Cut Tape",
+        "name_en": "Cut Tape",
+        "category_id": 149,
+        "price": null,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      },
+      {
+        "id": 9,
+        "name": "Reel",
+        "name_en": "Reel",
+        "category_id": 149,
+        "price": 20000,
+        "image_id": null,
+        "enabled": true,
+        "sorted": 1
+      }
+    ],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 22,
+      "name": "Vishay",
+      "slug": "vishay"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 123367,
+        "product_id": 28973,
+        "quantity": 1,
+        "price": 20520
+      },
+      {
+        "id": 123368,
+        "product_id": 28973,
+        "quantity": 50,
+        "price": 20292
+      },
+      {
+        "id": 123369,
+        "product_id": 28973,
+        "quantity": 100,
+        "price": 20064
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  }
+]

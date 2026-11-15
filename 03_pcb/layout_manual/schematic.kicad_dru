@@ -1,7 +1,8 @@
 (version 1)
 # Manual layout, 2 copper layers, 1.6mm total / 35um copper.
 # Matched pad-centre paths include 1.6mm per via; component body gaps excluded.
-# SPI 50.146349mm; SWD 40.518175mm; I2C 25.042165mm; encoder 54.370920mm.
+# SPI: short point-to-point routing, no forced exact matching.
+# SWD 40.518175mm; I2C 25.042165mm; encoder 54.370920mm.
 # USB B6/B7 47.307341mm; USB A6/A7 54.349372mm.
 # USB nominal 0.50mm width / 0.20mm gap, 0.25mm outside GND clearance.
 # The 25mm uncoupled check includes all branch copper in the mirrored USB-C
@@ -51,3 +52,10 @@
 (rule "USB-C mirrored contact crossover"
  (condition "A.inDiffPair('/USB_N') && A.Layer == 'B.Cu'")
  (constraint diff_pair_gap (min 0.20mm) (opt 0.20mm) (max 4.50mm)))
+
+# microSD prototype profile; power width rule remains >= 0.40 mm.
+(rule "microSD signals"
+ (condition "A.NetName == '/SD_SCK' || A.NetName == '/SD_CLK' || A.NetName == '/SD_MOSI' || A.NetName == '/SD_MISO' || A.NetName == '/SD_CS_N' || A.NetName == '/SD_DETECT_N' || A.NetName == '/SD_DAT1' || A.NetName == '/SD_DAT2'")
+ (constraint track_width (min 0.20mm) (opt 0.30mm) (max 0.80mm))
+ (constraint via_diameter (min 0.60mm) (opt 0.80mm) (max 0.80mm))
+ (constraint hole_size (min 0.30mm) (opt 0.40mm) (max 0.40mm)))

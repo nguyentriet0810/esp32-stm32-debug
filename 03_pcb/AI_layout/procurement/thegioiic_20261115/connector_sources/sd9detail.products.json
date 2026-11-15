@@ -1,0 +1,65 @@
+[
+  {
+    "id": 4602,
+    "name": "MiSD-PP-9P-V1 Khay Thẻ Nhớ MicroSD 9 Chân Push-Push",
+    "description": null,
+    "unit": "",
+    "info": "",
+    "manufacturer_code": null,
+    "slug": "misd-pp-9p-v1-khay-the-nho-microsd-9-chan-push-push",
+    "image_id": 4305,
+    "inventory": 92,
+    "rohs": true,
+    "supplier_id": 48,
+    "price": 2508,
+    "category_id": 908,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "sheetname": null,
+    "show_package": false,
+    "show_weight": false,
+    "weight_unit": null,
+    "price_change": null,
+    "show_category_extra": false,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "desc_small": "Khoảng cách chân 1.1mm",
+    "comments_count": 0,
+    "package_quantity": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tag": null,
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 68856,
+        "product_id": 4602,
+        "quantity": 1,
+        "price": 2508
+      },
+      {
+        "id": 192474,
+        "product_id": 4602,
+        "quantity": 100,
+        "price": 2394
+      },
+      {
+        "id": 192475,
+        "product_id": 4602,
+        "quantity": 500,
+        "price": 2280
+      }
+    ],
+    "images": [
+      {
+        "product_id": 4602,
+        "image_id": 20404
+      }
+    ],
+    "category_extras": [],
+    "favorites": []
+  }
+]

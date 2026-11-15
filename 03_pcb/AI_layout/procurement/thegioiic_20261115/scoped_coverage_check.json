@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-15",
+  "review_type": "Read-only scoped procurement QA; no PCB/cart/order edits",
+  "source_pcb_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "passed": true,
+  "checks": {
+    "scope_exclusions_exact": true,
+    "report_scope_matches_file": true,
+    "purchase_group_count_25": true,
+    "covered_exact_remaining_55_refs": true,
+    "excluded_refs_absent": true,
+    "no_duplicate_ref_coverage": true,
+    "required_associated_passives_and_protection_retained": true,
+    "quantities_match_actual_pcb": true,
+    "base41_sd11_otherdnp3": true,
+    "status_counts_expected": true,
+    "markdown_has_exact25_purchase_rows": true,
+    "markdown_matches_json": true,
+    "passive_links_prices_quantities_match_source": true,
+    "all_product_links_primary_retailer": true,
+    "source_pcb_hash_matches": true,
+    "source_pcb_unchanged_during_qa": true
+  },
+  "scope_excluded_refs": [
+    "OLED",
+    "SW1",
+    "SWDIO",
+    "UART"
+  ],
+  "covered_ref_count": 55,
+  "purchase_group_count": 25,
+  "base_quantity": 41,
+  "sd_optional_dnp_quantity": 11,
+  "other_dnp_quantity": 3,
+  "status_counts": {
+    "available": 17,
+    "not_found_exact": 2,
+    "out_of_stock": 2,
+    "mechanical_confirmation_required": 4
+  },
+  "retained_associated_refs": [
+    "C1",
+    "C10",
+    "C2",
+    "C3",
+    "C4",
+    "D1",
+    "D12",
+    "D13",
+    "D14",
+    "D3",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "R14",
+    "R15",
+    "R23",
+    "R24",
+    "R25",
+    "R26"
+  ],
+  "quantity_errors": [],
+  "markdown_errors": [],
+  "source_mismatches": [],
+  "outstanding_gaps": [
+    {
+      "refs": [
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "required": "BAT54S / SOT-23, dual SERIES Schottky",
+      "status": "not_found_exact"
+    },
+    {
+      "refs": [
+        "R1",
+        "R2"
+      ],
+      "required": "5.1 KOhm 1% / 1206 (3216 metric)",
+      "status": "not_found_exact"
+    },
+    {
+      "refs": [
+        "C1"
+      ],
+      "required": "4.7 uF / 1206 (3216 metric)",
+      "status": "out_of_stock"
+    },
+    {
+      "refs": [
+        "C2"
+      ],
+      "required": "22 uF / 16V Ta / EIA-3528-21, Kemet B, approximately 3.5 x 2.8 x 2.1 mm; imperial 1411",
+      "status": "out_of_stock"
+    },
+    {
+      "refs": [
+        "TYPE-C"
+      ],
+      "required": "G-Switch GT-USB-7010ASV",
+      "status": "mechanical_confirmation_required"
+    },
+    {
+      "refs": [
+        "BOOT",
+        "RESET"
+      ],
+      "required": "C&K PTS636Sx25SMTRLFS footprint family",
+      "status": "mechanical_confirmation_required"
+    },
+    {
+      "refs": [
+        "SD SOCKET"
+      ],
+      "required": "JXTCONN TF-01A",
+      "status": "mechanical_confirmation_required"
+    },
+    {
+      "refs": [
+        "ANTEN"
+      ],
+      "required": "BAT Wireless BWSMA-KWE-Z001",
+      "status": "mechanical_confirmation_required"
+    }
+  ],
+  "note": "Excluded only SSD1306/OLED module, rotary encoder and header purchase groups. OLED pull-ups, encoder support, all supplies and protections remain. Price and inventory are prior live snapshots, not refreshed in this QA."
+}

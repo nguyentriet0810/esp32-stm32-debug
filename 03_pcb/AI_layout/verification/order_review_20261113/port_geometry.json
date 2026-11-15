@@ -1,0 +1,433 @@
+{
+  "TYPE-C": {
+    "value": "USB-C Native",
+    "footprint": "USB_C_Receptacle_G-Switch_GT-USB-7010ASV",
+    "locked": true,
+    "position_mm": [
+      135.0,
+      106.0
+    ],
+    "drills": [
+      {
+        "number": "",
+        "size_mm": [
+          0.65,
+          0.65
+        ]
+      },
+      {
+        "number": "",
+        "size_mm": [
+          0.65,
+          0.65
+        ]
+      },
+      {
+        "number": "SH",
+        "size_mm": [
+          0.6,
+          1.7
+        ]
+      },
+      {
+        "number": "SH",
+        "size_mm": [
+          0.6,
+          1.4
+        ]
+      },
+      {
+        "number": "SH",
+        "size_mm": [
+          0.6,
+          1.7
+        ]
+      },
+      {
+        "number": "SH",
+        "size_mm": [
+          0.6,
+          1.4
+        ]
+      }
+    ]
+  },
+  "OLED": {
+    "value": "SSD1306 I2C",
+    "footprint": "PinHeader_1x04_P2.54mm_Vertical",
+    "locked": false,
+    "position_mm": [
+      140.08,
+      84.0
+    ],
+    "drills": [
+      {
+        "number": "1",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "3",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "4",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "SD SCHOKET": {
+    "value": "JXTCONN TF-01A",
+    "footprint": "JXTCONN_TF-01A",
+    "locked": true,
+    "position_mm": [
+      165.5,
+      91.25
+    ],
+    "drills": [
+      {
+        "number": "",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "ANTEN": {
+    "value": "SMA BWSMA-KWE-Z001",
+    "footprint": "SMA_BAT_Wireless_BWSMA-KWE-Z001",
+    "locked": true,
+    "position_mm": [
+      165.5,
+      64.5
+    ],
+    "drills": [
+      {
+        "number": "1",
+        "size_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.4,
+          1.4
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.4,
+          1.4
+        ]
+      }
+    ]
+  },
+  "ESP32-S3": {
+    "value": "ESP32-S3-WROOM-1-N16R8",
+    "footprint": "ESP32-S3-WROOM-1",
+    "locked": true,
+    "position_mm": [
+      135.1,
+      56.5
+    ],
+    "drills": [
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "number": "41",
+        "size_mm": [
+          0.4,
+          0.4
+        ]
+      }
+    ]
+  },
+  "SW1": {
+    "value": "EC11-style encoder",
+    "footprint": "RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
+    "locked": true,
+    "position_mm": [
+      111.75,
+      98.5
+    ],
+    "drills": [
+      {
+        "number": "A",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "B",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "C",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "MP",
+        "size_mm": [
+          2.8,
+          1.5
+        ]
+      },
+      {
+        "number": "MP",
+        "size_mm": [
+          2.8,
+          1.5
+        ]
+      },
+      {
+        "number": "S1",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "S2",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "SWDIO": {
+    "value": "",
+    "footprint": "PinHeader_1x07_P2.54mm_Vertical",
+    "locked": true,
+    "position_mm": [
+      102.5,
+      72.3
+    ],
+    "drills": [
+      {
+        "number": "1",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "3",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "4",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "5",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "6",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "7",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "UART": {
+    "value": "UART_3V3_TX_RX_GND_DTR_RTS",
+    "footprint": "PinHeader_2x03_P2.54mm_Vertical",
+    "locked": true,
+    "position_mm": [
+      165.225,
+      73.46
+    ],
+    "drills": [
+      {
+        "number": "1",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "2",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "3",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "4",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "5",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "number": "6",
+        "size_mm": [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  }
+}

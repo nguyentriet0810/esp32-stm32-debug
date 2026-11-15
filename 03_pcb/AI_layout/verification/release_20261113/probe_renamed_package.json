@@ -1,0 +1,27 @@
+{
+  "folder": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261113",
+  "zip": "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_probe_REV1.0_20261113.zip",
+  "zip_bytes": 213978,
+  "zip_sha256": "5c894549ae13146e0c8b22c6a58393344a627c80e9cf32d8a1c6e8336c7069c3",
+  "original_package_unchanged": true,
+  "pcb_unchanged": true,
+  "gerber_and_drill_bytes_unchanged": true,
+  "job_paths_resolve": true,
+  "archive_crc_pass": true,
+  "files": [
+    "probe-B_Cu.gbr",
+    "probe-B_Mask.gbr",
+    "probe-B_Paste.gbr",
+    "probe-B_Silkscreen.gbr",
+    "probe-Edge_Cuts.gbr",
+    "probe-F_Cu.gbr",
+    "probe-F_Mask.gbr",
+    "probe-F_Paste.gbr",
+    "probe-F_Silkscreen.gbr",
+    "probe-job.gbrjob",
+    "probe-NPTH.drl",
+    "probe-PTH.drl",
+    "README_FAB.txt",
+    "SHA256SUMS.txt"
+  ]
+}

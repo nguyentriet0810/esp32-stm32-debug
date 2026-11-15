@@ -1,0 +1,986 @@
+{
+  "review_date": "2026-11-15",
+  "retailer": "https://www.thegioiic.com/",
+  "pcb": "D:/esp32_debug/03_pcb/AI_layout/AI_layout.kicad_pcb",
+  "scope": "Resistors and capacitors, read-only procurement lookup; PCB/cart/order unchanged.",
+  "quantity_basis": "Per one PCB. base_refs are populated in saved PCB. sd_option_refs are currently DNP and only needed when populating the SD option. other_dnp_refs remain DNP.",
+  "evidence_limits": "Product information, prices, quantities, MOQ and multiples were read from public live retailer HTML/Next.js data on 2026-11-15. Saved source HTML, extracted products and property tables are in sources/passive_*. Inventory and price can change after this snapshot; no order/cart action was performed. Ceramic dielectric is not published in these product property tables.",
+  "summary": {
+    "value_groups": 13,
+    "matched_groups": 12,
+    "not_found_exact_groups": 1,
+    "base_passive_parts": 24,
+    "sd_option_parts_currently_dnp": 10,
+    "other_dnp_parts": 2,
+    "matched_but_out_of_stock_groups": 2
+  },
+  "items": [
+    {
+      "kind": "resistor",
+      "required_value": "0 Ohm",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [],
+      "sd_option_refs": [
+        "R33"
+      ],
+      "other_dnp_refs": [],
+      "base_quantity": 0,
+      "sd_option_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Điện Trở 0 Ohm 1206 1%",
+      "url": "https://www.thegioiic.com/dien-tro-0-ohm-1206-1-",
+      "verified_specs": {
+        "resistance_ohm": 0,
+        "package": "1206 (3216M)",
+        "listed_tolerance_percent": 1,
+        "power_w": 0.25,
+        "technology": "Thick Film"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/san-pham/dien-tro-dan-smd?page=4"
+      ],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 114,
+      "notes": "Currently DNP; only SD option. No assumption about jumper current rating.",
+      "retailer_code": "IC6174",
+      "retailer_brand": "OEM",
+      "live_inventory": 5250,
+      "live_stock_status": "in_stock",
+      "live_moq": 25,
+      "live_multiple": 25,
+      "live_price_tiers": [
+        {
+          "id": 213170,
+          "product_id": 6174,
+          "quantity": 1,
+          "price": 114
+        },
+        {
+          "id": 213171,
+          "product_id": 6174,
+          "quantity": 1000,
+          "price": 108
+        },
+        {
+          "id": 213172,
+          "product_id": 6174,
+          "quantity": 2000,
+          "price": 103
+        },
+        {
+          "id": 213173,
+          "product_id": 6174,
+          "quantity": 5000,
+          "price": 86
+        }
+      ],
+      "retailer_product_properties": {
+        "Sai số": "±1%",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Công suất": "0.25W, 1/4W",
+        "Giá trị điện trở": "0 Ohm",
+        "Loại": "Đơn",
+        "Thành phần cấu tạo": "Thick Film",
+        "Nhiệt độ hoạt động": "-55 ~ 155°C",
+        "Hệ số biến đổi nhiệt": "±100ppm/°C"
+      },
+      "source_files": [
+        "sources/passive_product_0.html",
+        "sources/passive_product_0.products.json",
+        "sources/passive_product_0.detail.json"
+      ]
+    },
+    {
+      "kind": "resistor",
+      "required_value": "22 Ohm",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "R5",
+        "R6"
+      ],
+      "sd_option_refs": [
+        "R34"
+      ],
+      "other_dnp_refs": [],
+      "base_quantity": 2,
+      "sd_option_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Điện Trở 22 Ohm 1206 1%",
+      "url": "https://www.thegioiic.com/dien-tro-22-ohm-1206-1-",
+      "verified_specs": {
+        "resistance_ohm": 22,
+        "package": "1206 (3216M)",
+        "tolerance_percent": 1,
+        "power_w": 0.25,
+        "technology": "Thick Film"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/san-pham/dien-tro-dan-smd?page=7"
+      ],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 114,
+      "notes": "R5/R6 populated; R34 remains DNP unless SD option is populated.",
+      "retailer_code": "IC6126",
+      "retailer_brand": "OEM",
+      "live_inventory": 2775,
+      "live_stock_status": "in_stock",
+      "live_moq": 25,
+      "live_multiple": 25,
+      "live_price_tiers": [
+        {
+          "id": 213283,
+          "product_id": 6126,
+          "quantity": 1,
+          "price": 114
+        },
+        {
+          "id": 213284,
+          "product_id": 6126,
+          "quantity": 1000,
+          "price": 108
+        },
+        {
+          "id": 213285,
+          "product_id": 6126,
+          "quantity": 2000,
+          "price": 103
+        },
+        {
+          "id": 213286,
+          "product_id": 6126,
+          "quantity": 5000,
+          "price": 86
+        }
+      ],
+      "retailer_product_properties": {
+        "Sai số": "±1%",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Công suất": "0.25W, 1/4W",
+        "Giá trị điện trở": "22 Ohm",
+        "Loại": "Đơn",
+        "Thành phần cấu tạo": "Thick Film",
+        "Hệ số biến đổi nhiệt": "±100ppm/°C",
+        "Nhiệt độ hoạt động": "-55 ~ 155°C"
+      },
+      "source_files": [
+        "sources/passive_product_1.html",
+        "sources/passive_product_1.products.json",
+        "sources/passive_product_1.detail.json"
+      ]
+    },
+    {
+      "kind": "resistor",
+      "required_value": "330 Ohm",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "R17",
+        "R18",
+        "R19",
+        "R20"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 4,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Điện Trở 330 Ohm 1206 5%",
+      "url": "https://www.thegioiic.com/dien-tro-330-ohm-1206-5-",
+      "verified_specs": {
+        "resistance_ohm": 330,
+        "package": "1206 (3216M)",
+        "tolerance_percent": 5,
+        "power_w": 0.25,
+        "technology": "Thick Film"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/san-pham/dien-tro-dan-smd?page=7&prid="
+      ],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 87,
+      "notes": "PCB value does not specify resistor tolerance.",
+      "retailer_code": "IC1635",
+      "retailer_brand": "OEM",
+      "live_inventory": 2750,
+      "live_stock_status": "in_stock",
+      "live_moq": 25,
+      "live_multiple": 25,
+      "live_price_tiers": [
+        {
+          "id": 213632,
+          "product_id": 1635,
+          "quantity": 1,
+          "price": 87
+        },
+        {
+          "id": 213633,
+          "product_id": 1635,
+          "quantity": 1000,
+          "price": 84
+        },
+        {
+          "id": 213634,
+          "product_id": 1635,
+          "quantity": 2000,
+          "price": 82
+        },
+        {
+          "id": 213635,
+          "product_id": 1635,
+          "quantity": 5000,
+          "price": 68
+        }
+      ],
+      "retailer_product_properties": {
+        "Sai số": "±5%",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Công suất": "0.25W, 1/4W",
+        "Giá trị điện trở": "330 Ohm",
+        "Loại": "Đơn",
+        "Thành phần cấu tạo": "Thick Film",
+        "Hệ số biến đổi nhiệt": "±200ppm/°C",
+        "Nhiệt độ hoạt động": "-55 ~ 155°C"
+      },
+      "source_files": [
+        "sources/passive_product_2.html",
+        "sources/passive_product_2.products.json",
+        "sources/passive_product_2.detail.json"
+      ]
+    },
+    {
+      "kind": "resistor",
+      "required_value": "1 KOhm",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "R26"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 1,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Điện Trở 1 KOhm 1206 1%",
+      "url": "https://www.thegioiic.com/dien-tro-1-kohm-1206-1-",
+      "verified_specs": {
+        "resistance_ohm": 1000,
+        "package": "1206 (3216M)",
+        "tolerance_percent": 1,
+        "power_w": 0.25,
+        "technology": "Thick Film"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/san-pham/dien-tro-dan-smd?page=12"
+      ],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 176,
+      "retailer_code": "IC6142",
+      "retailer_brand": "OEM",
+      "live_inventory": 120,
+      "live_stock_status": "in_stock",
+      "live_moq": 25,
+      "live_multiple": 25,
+      "live_price_tiers": [
+        {
+          "id": 213353,
+          "product_id": 6142,
+          "quantity": 1,
+          "price": 176
+        }
+      ],
+      "retailer_product_properties": {
+        "Sai số": "±1%",
+        "Giá trị điện trở": "1 KOhm",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Công suất": "0.25W, 1/4W",
+        "Loại": "Đơn",
+        "Thành phần cấu tạo": "Thick Film",
+        "Hệ số biến đổi nhiệt": "±100ppm/°C",
+        "Nhiệt độ hoạt động": "-55 ~ 155°C"
+      },
+      "source_files": [
+        "sources/passive_product_3.html",
+        "sources/passive_product_3.products.json",
+        "sources/passive_product_3.detail.json"
+      ]
+    },
+    {
+      "kind": "resistor",
+      "required_value": "4.7 KOhm",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "R14",
+        "R15"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 2,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Điện Trở 4.7 KOhm 1206 1%",
+      "url": "https://www.thegioiic.com/dien-tro-4-7-kohm-1206-1-",
+      "verified_specs": {
+        "resistance_ohm": 4700,
+        "package": "1206 (3216M)",
+        "tolerance_percent": 1,
+        "power_w": 0.25,
+        "technology": "Thick Film"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 176,
+      "retailer_code": "IC6151",
+      "retailer_brand": "OEM",
+      "live_inventory": 2029,
+      "live_stock_status": "in_stock",
+      "live_moq": 25,
+      "live_multiple": 25,
+      "live_price_tiers": [
+        {
+          "id": 213090,
+          "product_id": 6151,
+          "quantity": 1,
+          "price": 176
+        }
+      ],
+      "retailer_product_properties": {
+        "Sai số": "±1%",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Công suất": "0.25W, 1/4W",
+        "Giá trị điện trở": "4.7 KOhm",
+        "Loại": "Đơn",
+        "Thành phần cấu tạo": "Thick Film",
+        "Hệ số biến đổi nhiệt": "±100ppm/°C",
+        "Nhiệt độ hoạt động": "-55 ~ 155°C"
+      },
+      "source_files": [
+        "sources/passive_product_4.html",
+        "sources/passive_product_4.products.json",
+        "sources/passive_product_4.detail.json"
+      ]
+    },
+    {
+      "kind": "resistor",
+      "required_value": "5.1 KOhm 1%",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "R1",
+        "R2"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 2,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "not_found_exact",
+      "product_title": null,
+      "url": null,
+      "verified_specs": null,
+      "evidence": [
+        "Live retailer own search q=5.1 1206 1% returns zero products (structured numberOfItems=0).",
+        "Live own search q=5.1 1206 returns one 1206 product, but it is 5% and out of stock."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/tim-kiem?q=5.1%201206%201%25",
+        "https://www.thegioiic.com/tim-kiem?q=5.1%201206"
+      ],
+      "live_stock_verified": false,
+      "live_unit_price_vnd": null,
+      "notes": "R1/R2 explicitly specify1% in PCB. Do not automatically substitute5% or another package. This is an exact-spec search gap, not proof no vendor product can ever be obtained.",
+      "rejected_candidates": [
+        {
+          "title": "Điện Trở 5.1 KOhm 1206 5%",
+          "url": "https://www.thegioiic.com/dien-tro-5-1-kohm-1206-5-",
+          "reason": "Wrong specified tolerance:5% versus required1%; not approved as substitution.",
+          "live_inventory": 0,
+          "live_unit_price_vnd": 87,
+          "live_moq": 25,
+          "live_multiple": 25
+        }
+      ],
+      "source_files": [
+        "sources/passive_r51_1percent.html",
+        "sources/passive_r51_1percent.products.json",
+        "sources/passive_r51_5percent.detail.json"
+      ]
+    },
+    {
+      "kind": "resistor",
+      "required_value": "10 KOhm",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R23",
+        "R24",
+        "R25"
+      ],
+      "sd_option_refs": [
+        "R36",
+        "R37",
+        "R38",
+        "R39",
+        "R40",
+        "R41"
+      ],
+      "other_dnp_refs": [],
+      "base_quantity": 7,
+      "sd_option_quantity": 6,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Điện Trở 10 KOhm 1206 5%",
+      "url": "https://www.thegioiic.com/dien-tro-10-kohm-1206-5-",
+      "retailer_code": "IC1640",
+      "verified_specs": {
+        "resistance_ohm": 10000,
+        "package": "1206 (3216M)",
+        "tolerance_percent": 5,
+        "power_w": 0.25,
+        "technology": "Thick Film"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 101,
+      "retailer_brand": "OEM",
+      "live_inventory": 1600,
+      "live_stock_status": "in_stock",
+      "live_moq": 25,
+      "live_multiple": 25,
+      "live_price_tiers": [
+        {
+          "id": 213612,
+          "product_id": 1640,
+          "quantity": 1,
+          "price": 101
+        }
+      ],
+      "retailer_product_properties": {
+        "Sai số": "±5%",
+        "Giá trị điện trở": "10 KOhm",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Công suất": "0.25W, 1/4W",
+        "Loại": "Đơn",
+        "Thành phần cấu tạo": "Thick Film",
+        "Hệ số biến đổi nhiệt": "±200ppm/°C",
+        "Nhiệt độ hoạt động": "-55 ~ 155°C"
+      },
+      "source_files": [
+        "sources/passive_product_6.html",
+        "sources/passive_product_6.products.json",
+        "sources/passive_product_6.detail.json"
+      ]
+    },
+    {
+      "kind": "ceramic capacitor",
+      "required_value": "4.7 uF",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "C1"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 1,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Tụ Gốm 1206 4.7uF 50V",
+      "url": "https://www.thegioiic.com/tu-gom-1206-4-7uf-50v",
+      "verified_specs": {
+        "package": "1206 (3216M)",
+        "tolerance_percent": 10,
+        "capacitance_uf": 4.7,
+        "voltage_v": 50,
+        "body_mm": [
+          3.2,
+          1.6,
+          1.27
+        ],
+        "dielectric": null
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 2772,
+      "notes": "Exact4.7uF1206MLCC product found by retailer own search; currently out of stock. Keep ceramic type; do not replace with same-number tantalum1206 whose body/footprint convention differs.",
+      "retailer_code": "IC12744",
+      "retailer_brand": "CCTC",
+      "live_inventory": 0,
+      "live_stock_status": "out_of_stock",
+      "live_moq": 1,
+      "live_multiple": 1,
+      "live_price_tiers": [
+        {
+          "id": 145216,
+          "product_id": 12744,
+          "quantity": 1,
+          "price": 2772
+        }
+      ],
+      "retailer_product_properties": {
+        "Điện áp": "50V",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Điện dung": "4.7 uF",
+        "Loại": "Đơn",
+        "Kiểu chân": "Dán bề mặt",
+        "Sai số": "±10 %",
+        "Cách gắn mạch": "Hàn",
+        "Kích thước": "3.2 x 1.6 x 1.27mm",
+        "Chiều dài": "3.2 mm",
+        "Chiều rộng": "1.6 mm",
+        "Chiều cao": "1.27 mm",
+        "Nhiệt độ min": "-55 °C",
+        "Nhiệt độ max": "+125 °C"
+      },
+      "source_files": [
+        "sources/passive_product_7.html",
+        "sources/passive_product_7.products.json",
+        "sources/passive_product_7.detail.json"
+      ]
+    },
+    {
+      "kind": "tantalum capacitor",
+      "required_value": "22 uF / 16V Ta",
+      "required_package": "EIA-3528-21, Kemet B, approximately 3.5 x 2.8 x 2.1 mm; imperial 1411",
+      "base_refs": [
+        "C2"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 1,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Tụ Tantalum 22uF 16V 1411 T491B226K016AT",
+      "url": "https://www.thegioiic.com/tu-tantalum-22uf-16v-1411-t491b226k016at",
+      "verified_specs": {
+        "package": "1411 (3528M)",
+        "tolerance_percent": 10,
+        "capacitance_uf": 22,
+        "voltage_v": 16,
+        "body_mm": [
+          3.5,
+          2.8,
+          1.9
+        ],
+        "chemistry": "tantalum"
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/tim-kiem?q=22uF%2016V%201411"
+      ],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 17100,
+      "rejected_candidates": [
+        {
+          "title": "Tụ Tantalum 22uF 16V 2917 T491D226K016AT",
+          "url": "https://www.thegioiic.com/tu-tantalum-22uf-16v-2917-t491d226k016at",
+          "reason": "2917/7343 D case, 7.3 x 4.3 x 2.8mm; footprint mismatch. Search-index page says out of stock.",
+          "retailer_code": "IC28173"
+        }
+      ],
+      "notes": "Kemet B /1411(3528M) matches3.5x2.8 footprint body size and fits2.1mmheight envelope. Polarized tantalum. Exact product and seven additional22uF16V1411 choices all have liveinventory0; do not substitute2917/2312 or ceramic automatically.",
+      "retailer_code": "IC28120",
+      "retailer_brand": "Kemet",
+      "live_inventory": 0,
+      "live_stock_status": "out_of_stock",
+      "live_moq": 1,
+      "live_multiple": 1,
+      "live_price_tiers": [
+        {
+          "id": 121435,
+          "product_id": 28120,
+          "quantity": 1,
+          "price": 17100
+        }
+      ],
+      "retailer_product_properties": {
+        "Điện dung": "22 uF",
+        "Điện áp": "16V",
+        "Kiểu chân": "Dán bề mặt",
+        "Kiểu đóng gói": "1411 (3528M)",
+        "Sai số": "±10%",
+        "Kích thước": "3.5 x 2.8 x 1.9mm",
+        "Chiều dài": "3.5mm",
+        "Chiều rộng": "2.8mm",
+        "Chiều cao": "1.9mm",
+        "Nhiệt độ min": "-55°C",
+        "Nhiệt độ max": "+125°C"
+      },
+      "source_files": [
+        "sources/passive_product_8.html",
+        "sources/passive_product_8.products.json",
+        "sources/passive_product_8.detail.json"
+      ]
+    },
+    {
+      "kind": "ceramic capacitor",
+      "required_value": "10 uF",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "C3"
+      ],
+      "sd_option_refs": [
+        "C15"
+      ],
+      "other_dnp_refs": [],
+      "base_quantity": 1,
+      "sd_option_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Tụ Gốm 1206 10uF 16V",
+      "url": "https://www.thegioiic.com/tu-gom-1206-10uf-16v",
+      "verified_specs": {
+        "capacitance_uf": 10,
+        "package": "1206 (3216M)",
+        "voltage_v": 16,
+        "tolerance_percent": 10,
+        "dielectric": null
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [
+        "https://www.thegioiic.com/san-pham/tu-gom-dan-smd?page=4"
+      ],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 1140,
+      "notes": "Confirm dielectric and DC-bias capacitance before purchasing if regulator or transient requirements impose a minimum effective capacitance. No change to PCB value.",
+      "retailer_code": "IC2794",
+      "retailer_brand": "Samsung",
+      "live_inventory": 1675,
+      "live_stock_status": "in_stock",
+      "live_moq": 1,
+      "live_multiple": 1,
+      "live_price_tiers": [
+        {
+          "id": 7961,
+          "product_id": 2794,
+          "quantity": 1,
+          "price": 1140
+        },
+        {
+          "id": 222908,
+          "product_id": 2794,
+          "quantity": 100,
+          "price": 1083
+        },
+        {
+          "id": 222909,
+          "product_id": 2794,
+          "quantity": 500,
+          "price": 1026
+        },
+        {
+          "id": 222910,
+          "product_id": 2794,
+          "quantity": 2000,
+          "price": 872
+        }
+      ],
+      "retailer_product_properties": {
+        "Điện áp": "16V",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Điện dung": "10 uF",
+        "Loại": "Đơn",
+        "Kiểu chân": "Dán bề mặt",
+        "Sai số": "±10 %",
+        "Cách gắn mạch": "Hàn",
+        "Kích thước": "3.2 x 1.6 x 1.27mm",
+        "Chiều dài": "3.2 mm",
+        "Chiều rộng": "1.6 mm",
+        "Chiều cao": "1.27 mm",
+        "Nhiệt độ min": "-55 °C",
+        "Nhiệt độ max": "+125 °C"
+      },
+      "source_files": [
+        "sources/passive_product_9.html",
+        "sources/passive_product_9.products.json",
+        "sources/passive_product_9.detail.json"
+      ]
+    },
+    {
+      "kind": "ceramic capacitor",
+      "required_value": "100 nF",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "C4",
+        "C10"
+      ],
+      "sd_option_refs": [
+        "C16"
+      ],
+      "other_dnp_refs": [],
+      "base_quantity": 2,
+      "sd_option_quantity": 1,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Tụ Gốm 1206 100nF (0.1uF) 50V",
+      "url": "https://www.thegioiic.com/tu-gom-1206-100nf-0-1uf-50v",
+      "retailer_code": "IC7222",
+      "verified_specs": {
+        "capacitance_nf": 100,
+        "package": "1206 (3216M)",
+        "voltage_v": 50,
+        "tolerance_percent": 10,
+        "body_mm": [
+          3.2,
+          1.6,
+          1.27
+        ],
+        "dielectric": null
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 570,
+      "retailer_brand": "CCTC",
+      "live_inventory": 5094,
+      "live_stock_status": "in_stock",
+      "live_moq": 10,
+      "live_multiple": 5,
+      "live_price_tiers": [
+        {
+          "id": 145563,
+          "product_id": 7222,
+          "quantity": 1,
+          "price": 570
+        },
+        {
+          "id": 214897,
+          "product_id": 7222,
+          "quantity": 1000,
+          "price": 547
+        },
+        {
+          "id": 214898,
+          "product_id": 7222,
+          "quantity": 2000,
+          "price": 524
+        },
+        {
+          "id": 214899,
+          "product_id": 7222,
+          "quantity": 4000,
+          "price": 455
+        }
+      ],
+      "retailer_product_properties": {
+        "Điện áp": "50V",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Điện dung": "100 nF",
+        "Loại": "Đơn",
+        "Kiểu chân": "Dán bề mặt",
+        "Sai số": "±10 %",
+        "Cách gắn mạch": "Hàn",
+        "Kích thước": "3.2 x 1.6 x 1.27mm",
+        "Chiều dài": "3.2 mm",
+        "Chiều rộng": "1.6 mm",
+        "Chiều cao": "1.27 mm",
+        "Nhiệt độ min": "-55 °C",
+        "Nhiệt độ max": "+125 °C"
+      },
+      "source_files": [
+        "sources/passive_product_10.html",
+        "sources/passive_product_10.products.json",
+        "sources/passive_product_10.detail.json"
+      ]
+    },
+    {
+      "kind": "ceramic capacitor",
+      "required_value": "1 uF",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [
+        "C9"
+      ],
+      "sd_option_refs": [],
+      "other_dnp_refs": [],
+      "base_quantity": 1,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 0,
+      "status": "matched_value_package",
+      "product_title": "Tụ Gốm 1206 1uF 50V",
+      "url": "https://www.thegioiic.com/tu-gom-1206-1uf-50v",
+      "verified_specs": {
+        "capacitance_uf": 1,
+        "package": "1206 (3216M)",
+        "voltage_v": 50,
+        "tolerance_percent": 10,
+        "dielectric": null
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 735,
+      "notes": "Auto-reset EN capacitor; choose stable MLCC dielectric and verify effective capacitance/tolerance on product datasheet.",
+      "retailer_code": "IC7224",
+      "retailer_brand": "Samsung",
+      "live_inventory": 3970,
+      "live_stock_status": "in_stock",
+      "live_moq": 10,
+      "live_multiple": 5,
+      "live_price_tiers": [
+        {
+          "id": 205404,
+          "product_id": 7224,
+          "quantity": 1,
+          "price": 735
+        }
+      ],
+      "retailer_product_properties": {
+        "Điện áp": "50V",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Điện dung": "1 uF",
+        "Loại": "Đơn",
+        "Kiểu chân": "Dán bề mặt",
+        "Sai số": "±10 %",
+        "Cách gắn mạch": "Hàn",
+        "Kích thước": "3.2 x 1.6 x 1.27mm",
+        "Chiều dài": "3.2 mm",
+        "Chiều rộng": "1.6 mm",
+        "Chiều cao": "1.27 mm",
+        "Nhiệt độ min": "-55 °C",
+        "Nhiệt độ max": "+125 °C"
+      },
+      "source_files": [
+        "sources/passive_product_11.html",
+        "sources/passive_product_11.products.json",
+        "sources/passive_product_11.detail.json"
+      ]
+    },
+    {
+      "kind": "ceramic capacitor",
+      "required_value": "10 pF",
+      "required_package": "1206 (3216 metric)",
+      "base_refs": [],
+      "sd_option_refs": [],
+      "other_dnp_refs": [
+        "C7",
+        "C8"
+      ],
+      "base_quantity": 0,
+      "sd_option_quantity": 0,
+      "other_dnp_quantity": 2,
+      "status": "matched_value_package",
+      "product_title": "Tụ Gốm 1206 10pF 50V",
+      "url": "https://www.thegioiic.com/tu-gom-1206-10pf-50v",
+      "verified_specs": {
+        "capacitance_pf": 10,
+        "package": "1206 (3216M)",
+        "voltage_v": 50,
+        "tolerance_percent": 10,
+        "dielectric": null
+      },
+      "evidence": [
+        "Live public retailer product HTML contains matching product identity, price, inventory and property table."
+      ],
+      "supporting_urls": [],
+      "live_stock_verified": true,
+      "live_unit_price_vnd": 456,
+      "notes": "C7/C8 remain DNP on USB. They are not part of the SD option or the default purchase quantity.",
+      "retailer_code": "IC7221",
+      "retailer_brand": "OEM",
+      "live_inventory": 609,
+      "live_stock_status": "in_stock",
+      "live_moq": 20,
+      "live_multiple": 10,
+      "live_price_tiers": [
+        {
+          "id": 145230,
+          "product_id": 7221,
+          "quantity": 1,
+          "price": 456
+        },
+        {
+          "id": 145566,
+          "product_id": 7221,
+          "quantity": 500,
+          "price": 445
+        },
+        {
+          "id": 145567,
+          "product_id": 7221,
+          "quantity": 1000,
+          "price": 433
+        }
+      ],
+      "retailer_product_properties": {
+        "Điện áp": "50V",
+        "Kiểu đóng gói": "1206 (3216M)",
+        "Điện dung": "10 pF",
+        "Loại": "Đơn",
+        "Kiểu chân": "Dán bề mặt",
+        "Sai số": "±10 %",
+        "Cách gắn mạch": "Hàn",
+        "Kích thước": "3.2 x 1.6 x 1.27mm",
+        "Chiều dài": "3.2 mm",
+        "Chiều rộng": "1.6 mm",
+        "Chiều cao": "1.27 mm",
+        "Nhiệt độ min": "-55 °C",
+        "Nhiệt độ max": "+125 °C"
+      },
+      "source_files": [
+        "sources/passive_product_12.html",
+        "sources/passive_product_12.products.json",
+        "sources/passive_product_12.detail.json"
+      ]
+    }
+  ],
+  "source_pcb_sha256": "4564b3adcc9ba60f7f3480086e134ff43d77ab029f6bceeecc49d554f9217be5",
+  "site_search_gaps": [
+    {
+      "refs": [
+        "R1",
+        "R2"
+      ],
+      "required": "5.1kOhm1%1206",
+      "result": "Exact query0products; only5%1206product shown by broader search."
+    }
+  ],
+  "site_search_matching_out_of_stock": [
+    {
+      "refs": [
+        "C1"
+      ],
+      "product": "Tụ Gốm1206 4.7uF50V",
+      "inventory": 0
+    },
+    {
+      "refs": [
+        "C2"
+      ],
+      "product": "T491B226K016AT1411/3528",
+      "inventory": 0
+    }
+  ]
+}

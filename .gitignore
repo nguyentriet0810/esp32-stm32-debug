@@ -16,6 +16,7 @@
 # Local KiCad history and user interface state.
 .history/
 *.kicad_prl
+/03_pcb/layout_manual.rar
 
 # Local credentials and editor state.
 .env

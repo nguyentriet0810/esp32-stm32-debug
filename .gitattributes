@@ -4,3 +4,6 @@
 *.png binary
 *.jpg binary
 *.pdf binary
+
+# Preserve fabrication package bytes so their recorded SHA-256 hashes remain valid.
+03_pcb/AI_layout/Gerber_*/** -text

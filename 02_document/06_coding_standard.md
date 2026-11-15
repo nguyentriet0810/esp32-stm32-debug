@@ -22,6 +22,7 @@ components/
   probe_network/              # AP/STA và NVS
   probe_state/                # Snapshot đồng bộ giữa các task
   probe_console/              # Provision và chẩn đoán UART
+  probe_sd/                   # microSD SPI/FAT, API tuần tự hóa và I/O có giới hạn
   probe_oled/                 # SSD1306, I2C và renderer
   probe_encoder/              # Input task và pure decoder
   probe_local_ui/             # Menu và request cấu hình

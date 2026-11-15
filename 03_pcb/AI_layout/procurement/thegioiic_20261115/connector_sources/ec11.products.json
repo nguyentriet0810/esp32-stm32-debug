@@ -1,0 +1,218 @@
+[
+  {
+    "id": 19056,
+    "name": "EC11 Rotary Encoder 20 Vị Trí, Trục D Dài 20mm",
+    "description": null,
+    "unit": "",
+    "slug": "ec11-rotary-encoder-20-vi-tri-truc-d-dai-20mm",
+    "image_id": 52847,
+    "inventory": 903,
+    "rohs": false,
+    "supplier_id": 48,
+    "category_id": 1346,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "Núm vặn dài 20mm, 5 chân",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 12540,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 233835,
+        "product_id": 19056,
+        "quantity": 1,
+        "price": 12540
+      },
+      {
+        "id": 233836,
+        "product_id": 19056,
+        "quantity": 20,
+        "price": 11970
+      },
+      {
+        "id": 233837,
+        "product_id": 19056,
+        "quantity": 50,
+        "price": 11400
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 3745,
+    "name": "EC11 Rotary Encoder 20 Vị Trí, Trục Dài 15mm",
+    "description": null,
+    "unit": "",
+    "slug": "ec11-rotary-encoder-20-vi-tri-truc-dai-15mm",
+    "image_id": 56415,
+    "inventory": 67,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 1346,
+    "product_tag_id": null,
+    "sheetfile": null,
+    "desc_small": "20 vị trí, núm vặn dài 15mm",
+    "sheetname": null,
+    "manufacturer_code": null,
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 12540,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [
+      {
+        "id": 168,
+        "created_at": "2015-09-02T07:42:00.000Z",
+        "updated_at": "2022-07-22T03:23:34.000Z",
+        "product_id": 3745,
+        "user_id": 1668,
+        "favoriteable_id": 3745,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 339,
+        "created_at": "2016-05-25T06:08:51.000Z",
+        "updated_at": "2022-07-22T03:23:35.000Z",
+        "product_id": 3745,
+        "user_id": 1226,
+        "favoriteable_id": 3745,
+        "favoriteable_type": "App\\Models\\Product"
+      },
+      {
+        "id": 1136,
+        "created_at": "2019-03-29T07:40:12.000Z",
+        "updated_at": "2022-07-22T03:23:40.000Z",
+        "product_id": 3745,
+        "user_id": 12403,
+        "favoriteable_id": 3745,
+        "favoriteable_type": "App\\Models\\Product"
+      }
+    ],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 233832,
+        "product_id": 3745,
+        "quantity": 1,
+        "price": 12540
+      },
+      {
+        "id": 233833,
+        "product_id": 3745,
+        "quantity": 20,
+        "price": 11970
+      },
+      {
+        "id": 233834,
+        "product_id": 3745,
+        "quantity": 50,
+        "price": 11400
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 45216,
+    "name": "EC11 Rotary Encoder 20 Vị Trí, Trục Dài 20mm",
+    "description": null,
+    "unit": "Cái",
+    "slug": "ec11-rotary-encoder-20-vi-tri-truc-dai-20mm",
+    "image_id": 66105,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 1346,
+    "product_tag_id": null,
+    "sheetfile": "",
+    "desc_small": "Trục dài 20mm",
+    "sheetname": "",
+    "manufacturer_code": "",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 11000,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 261851,
+        "product_id": 45216,
+        "quantity": 1,
+        "price": 11000
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  },
+  {
+    "id": 45218,
+    "name": "EC11 Rotary Encoder 20 Vị Trí, Trục D Dài 15mm",
+    "description": null,
+    "unit": "Cái",
+    "slug": "ec11-rotary-encoder-20-vi-tri-truc-d-dai-15mm",
+    "image_id": 66099,
+    "inventory": 0,
+    "rohs": true,
+    "supplier_id": 48,
+    "category_id": 1346,
+    "product_tag_id": null,
+    "sheetfile": "",
+    "desc_small": "Trục D dài 15mm",
+    "sheetname": "",
+    "manufacturer_code": "",
+    "multiples": 1,
+    "minimum_order_quantity": 1,
+    "price": 11000,
+    "show_package": false,
+    "show_category_extra": false,
+    "category_extras": [],
+    "favorites": [],
+    "price_change": null,
+    "supplier": {
+      "id": 48,
+      "name": "OEM",
+      "slug": "oem"
+    },
+    "product_tags": [],
+    "prices": [
+      {
+        "id": 261853,
+        "product_id": 45218,
+        "quantity": 1,
+        "price": 11000
+      }
+    ],
+    "product_tag": null,
+    "package_quantity": null
+  }
+]

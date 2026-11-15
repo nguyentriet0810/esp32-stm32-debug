@@ -1,0 +1,48 @@
+[
+  {
+    "command": [
+      "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+      "pcb",
+      "export",
+      "gerbers",
+      "--layers",
+      "F.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts",
+      "--use-drill-file-origin",
+      "--no-protel-ext",
+      "--precision",
+      "6",
+      "--check-zones",
+      "--output",
+      "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113/",
+      "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb"
+    ],
+    "returncode": 0,
+    "stdout": "Plotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-F_Cu.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-B_Cu.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-F_Paste.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-B_Paste.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-F_Silkscreen.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-B_Silkscreen.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-F_Mask.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-B_Mask.gbr'.\nPlotted to 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-Edge_Cuts.gbr'.\n",
+    "stderr": "15:14:35: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Access is denied.)\n15:14:35: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 2: The system cannot find the file specified.)\n"
+  },
+  {
+    "command": [
+      "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--drill-origin",
+      "plot",
+      "--excellon-zeros-format",
+      "decimal",
+      "--excellon-oval-format",
+      "route",
+      "--excellon-units",
+      "mm",
+      "--excellon-separate-th",
+      "--output",
+      "D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113/",
+      "D:\\esp32_debug\\03_pcb\\AI_layout\\AI_layout.kicad_pcb"
+    ],
+    "returncode": 0,
+    "stdout": "Created file 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-PTH.drl'\nCreated file 'D:\\esp32_debug\\03_pcb\\AI_layout\\Gerber_AI_layout_REV1.0_20261113\\AI_layout-NPTH.drl'\nDone.\n",
+    "stderr": "15:14:36: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Access is denied.)\n15:14:36: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 2: The system cannot find the file specified.)\n"
+  }
+]

@@ -1,0 +1,2029 @@
+{
+  "aux_origin_mm": [
+    100.0,
+    110.0
+  ],
+  "grid_origin_mm": [
+    100.0,
+    110.0
+  ],
+  "stored_plot_use_aux_origin": true,
+  "holes": [
+    {
+      "kind": "hole",
+      "at": [
+        32.110000000000014,
+        6.605000000000004
+      ],
+      "diameter": 0.65,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "TYPE-C",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        37.889999999999986,
+        6.605000000000004
+      ],
+      "diameter": 0.65,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "TYPE-C",
+      "pad": ""
+    },
+    {
+      "kind": "slot",
+      "at": [
+        30.680000000000007,
+        7.125
+      ],
+      "diameter": 0.6,
+      "slot_length": 1.1,
+      "plated": true,
+      "ref": "TYPE-C",
+      "pad": "SH"
+    },
+    {
+      "kind": "slot",
+      "at": [
+        30.680000000000007,
+        2.924999999999997
+      ],
+      "diameter": 0.6,
+      "slot_length": 0.7999999999999999,
+      "plated": true,
+      "ref": "TYPE-C",
+      "pad": "SH"
+    },
+    {
+      "kind": "slot",
+      "at": [
+        39.31999999999999,
+        7.125
+      ],
+      "diameter": 0.6,
+      "slot_length": 1.1,
+      "plated": true,
+      "ref": "TYPE-C",
+      "pad": "SH"
+    },
+    {
+      "kind": "slot",
+      "at": [
+        39.31999999999999,
+        2.924999999999997
+      ],
+      "diameter": 0.6,
+      "slot_length": 0.7999999999999999,
+      "plated": true,
+      "ref": "TYPE-C",
+      "pad": "SH"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.0,
+        5.0
+      ],
+      "diameter": 3.2,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        5.0,
+        5.0
+      ],
+      "diameter": 3.2,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        40.08000000000001,
+        26.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "OLED",
+      "pad": "1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        37.53999999999999,
+        26.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "OLED",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        35.0,
+        26.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "OLED",
+      "pad": "3"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.46000000000001,
+        26.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "OLED",
+      "pad": "4"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.5,
+        13.799999999999997
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "SD SCHOKET",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.5,
+        21.799999999999997
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "SD SCHOKET",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.5,
+        45.5
+      ],
+      "diameter": 1.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ANTEN",
+      "pad": "1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        68.05000000000001,
+        48.05
+      ],
+      "diameter": 1.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ANTEN",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        62.94999999999999,
+        48.05
+      ],
+      "diameter": 1.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ANTEN",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        68.05000000000001,
+        42.95
+      ],
+      "diameter": 1.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ANTEN",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        62.94999999999999,
+        42.95
+      ],
+      "diameter": 1.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ANTEN",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        5.0,
+        55.0
+      ],
+      "diameter": 3.2,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.19999999999999,
+        51.74
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.19999999999999,
+        50.34
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.900000000000006,
+        52.44
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.900000000000006,
+        51.04
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.900000000000006,
+        49.64
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        33.599999999999994,
+        51.74
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        33.599999999999994,
+        50.34
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        34.30000000000001,
+        52.44
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        34.30000000000001,
+        51.04
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        34.30000000000001,
+        49.64
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        35.0,
+        51.74
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        35.0,
+        50.34
+      ],
+      "diameter": 0.4,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "ESP32-S3",
+      "pad": "41"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.0,
+        55.0
+      ],
+      "diameter": 3.2,
+      "slot_length": 0.0,
+      "plated": false,
+      "ref": "",
+      "pad": ""
+    },
+    {
+      "kind": "hole",
+      "at": [
+        11.75,
+        11.5
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "A"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        11.75,
+        6.5
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "B"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        11.75,
+        9.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "C"
+    },
+    {
+      "kind": "slot",
+      "at": [
+        19.25,
+        14.599999999999994
+      ],
+      "diameter": 1.5,
+      "slot_length": 1.2999999999999998,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "MP"
+    },
+    {
+      "kind": "slot",
+      "at": [
+        19.25,
+        3.4000000000000057
+      ],
+      "diameter": 1.5,
+      "slot_length": 1.2999999999999998,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "MP"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        26.25,
+        6.5
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "S1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        26.25,
+        11.5
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SW1",
+      "pad": "S2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        37.7
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        35.16
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        32.620000000000005
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "3"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        30.08
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "4"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        27.540000000000006
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "5"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        25.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "6"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        2.5,
+        22.459999999999994
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "SWDIO",
+      "pad": "7"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.225,
+        36.540000000000006
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "UART",
+      "pad": "1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        67.76499999999999,
+        36.540000000000006
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "UART",
+      "pad": "2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.225,
+        34.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "UART",
+      "pad": "3"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        67.76499999999999,
+        34.0
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "UART",
+      "pad": "4"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        65.225,
+        31.459999999999994
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "UART",
+      "pad": "5"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        67.76499999999999,
+        31.459999999999994
+      ],
+      "diameter": 1.0,
+      "slot_length": 0.0,
+      "plated": true,
+      "ref": "UART",
+      "pad": "6"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        12.799999999999997,
+        49.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "79f032aa-ad21-4be0-a6b4-3d6207dab4d7"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        54.95
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8675fb70-a820-4dee-8e2d-29525c36b74e"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        16.4375,
+        37.0
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "039398ad-e418-4597-9d73-3efa5b44c3f1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        21.400000000000006,
+        40.25
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "6d571719-ae4f-4032-8b5b-cdb50506a8b7"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        18.5,
+        58.5
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "89be49a1-6426-4307-bdbe-830af5a3cbd1"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        18.450000000000003,
+        26.650000000000006
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "933db4bd-aea8-4c95-bdd3-21b12322177b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        39.19999999999999,
+        20.849999999999994
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "a828ecff-f395-42a2-b41c-1142ee90dcad"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        61.0,
+        44.5
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "b7cabd48-d855-454a-87ee-3b646c64a1ff"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        57.8
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "cf05a870-00f2-48cf-b99c-d93b7e1f7d06"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        16.950000000000003,
+        39.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "d1e570f3-690f-4637-85d4-17604dbb672d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        15.0,
+        22.450000000000003
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "ff7a2e0d-40df-4137-b060-0d13d1404b67"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        14.0,
+        48.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "07a87cc3-3721-493b-b4cf-cdf195daa91e"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        49.0,
+        42.400000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "07d410d9-5041-4bfb-817d-c6f14131724e"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        30.5,
+        8.900000000000006
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "0a76b50a-2055-4b2a-8952-7b604afa7519"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        35.5,
+        11.150000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "10779e4c-b624-4347-b454-58bce67ee475"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        52.69999999999999,
+        25.799999999999997
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "1a964d5b-7148-4672-bfea-e0ba3d6ef356"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        63.5,
+        41.3
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "237ad0f1-0fe3-4920-ad3e-338b3d67ebac"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        40.69999999999999,
+        12.0
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "25098a9c-5030-4ac9-8524-a0cc7848c3b3"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        28.0,
+        54.3
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "2f3c95e9-0f4a-4b6d-96e6-1547cc73ff4b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        4.0,
+        26.099999999999994
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "3d8854f8-0792-4059-9f6a-853513f1017d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        61.0,
+        25.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "3da53688-7667-4389-9df9-913a156b1323"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        47.0,
+        15.400000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "4297da7e-2ea4-4ef4-a4cd-9c88f94cb55c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        58.80000000000001,
+        10.799999999999997
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "531f6ad1-029f-4d6f-b02e-7fe1da410634"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        62.0,
+        49.6
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "55e3ba09-b6c5-4778-b105-1b4f0bcbb93a"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        34.599999999999994,
+        38.8
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "5d00f0cc-2707-4717-9c6e-20eeb4a7c3f8"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        53.0,
+        15.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "5d2f45d3-bf5e-477a-8e67-63f49aae77f3"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        21.0,
+        35.2
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "60fa8853-831f-4f35-ba25-696fbf40c717"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        14.0,
+        44.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "6117d6cb-3daa-47ac-b406-12a96c0303e8"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        25.0,
+        59.1
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "66533394-7e19-42cd-92ff-46604c5aaa2f"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        61.0,
+        11.099999999999994
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "6f822560-ebc3-4508-bcb0-d350db86ba7c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        21.5,
+        57.15
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "84766667-8ac7-4a7f-aa4b-16feba876e3a"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        48.0,
+        51.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "84a47ab0-5fb3-425c-9e3a-0fb516092cc2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        28.0,
+        51.8
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8bcd1366-b385-4011-aec5-6cc9e50c7dbc"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        22.0,
+        49.4
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8c824fe4-ed5d-4864-8da1-92a596def155"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        17.5,
+        17.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8db88172-fbf6-488d-941d-5d60d363b369"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        57.400000000000006,
+        59.3
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8e42a83b-e72a-48ee-9efd-2de9ddc946e5"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.44999999999999,
+        43.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "96453103-e7f6-4235-834d-552857c932a2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        56.80000000000001,
+        44.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "a051a098-c50d-4734-9250-b5a9e0d1f920"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        14.0,
+        36.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "a2e60687-a1c9-46ba-83f3-dbbccf3b8914"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        48.69999999999999,
+        44.599999999999994
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "a7c53c05-7cb2-4cc1-b8fe-b8a98bc7da54"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        57.400000000000006,
+        49.8
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "b08078ee-e185-4f51-b59a-4f78334f910b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        16.0,
+        56.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "b3dd8883-ddfb-4357-b7d5-e781eef61ab4"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        38.900000000000006,
+        36.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "ba48af16-0ba8-4755-9e92-03e6f4d84f4e"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.19999999999999,
+        59.3
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "c634c839-7f4f-4dce-9c00-3962d9ac7cf0"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        14.0,
+        40.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "ca4129fa-ba0a-457f-b95a-360ad91d2d1c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        28.0,
+        35.099999999999994
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "ccb8c5e3-253b-4eac-9f50-18e54c76b82b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        55.30000000000001,
+        35.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "d0b92ef4-99ab-43f9-95a7-ba9467340f3d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        47.599999999999994,
+        31.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "d77cb77a-0200-4af5-9291-7302cc43b49d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        56.19999999999999,
+        24.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "dba4cb7c-1de7-4065-869e-2ffddb09ec45"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        36.0,
+        4.0
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "e0611226-17c7-4300-8f6f-13544b99eb08"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        52.69999999999999,
+        43.3
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "e2cfcae0-2c8f-477d-9812-4af6191f3dcb"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.950000000000003,
+        46.06
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "f8054be1-8614-4f7b-88db-af6126e6441c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        21.0,
+        45.2
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "fc5f93cb-4700-482f-bbc9-0a8cc8dcd1b2"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        35.25,
+        10.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "c8776cad-876d-4b44-81cb-3e5e889eb35c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        33.55000000000001,
+        11.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "f3f19a6b-d64d-4b4b-8e76-0df09a034b94"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        55.0,
+        49.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "4146d241-c5fb-4861-8c47-a682b8880417"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        56.22
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "5743b2ab-bdb0-40e5-bc0f-af0f3783e764"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        21.5625,
+        56.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "657ff345-cb62-4a06-af8d-d5f7ad0574c4"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        47.0,
+        57.25
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "db763e33-cf58-4750-bd1c-c0da7745030c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        55.55000000000001,
+        40.05
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "fbe5a005-c22d-423d-8267-1c7e33f98986"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        49.55000000000001,
+        28.049999999999997
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "3d31c8dc-5447-4bbe-a39f-0a7c1f40ad81"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        49.55000000000001,
+        22.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "80ebb2f8-79f6-4bd5-8a7b-b6cdd8f684e7"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        54.5,
+        42.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "00f30899-62a9-4be6-9e96-16b54b8dccff"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        52.69999999999999,
+        42.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "c7466a24-4e06-4dd8-95b9-c7cc5ece7ee3"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        38.599999999999994,
+        9.700000000000003
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "e4302520-0f05-456d-9bb3-11c50191f865"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.349999999999994,
+        9.049999999999997
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "fa20a464-564c-4057-9236-7f980b1a1cef"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        33.5,
+        9.200000000000003
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "13a3fc44-444e-426d-98d1-7cd20258418b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        33.650000000000006,
+        12.900000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "25d33a34-de5b-48e6-9966-815774268e4b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        37.0,
+        10.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "553a1dda-7192-4932-ac61-904de52efb6c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        34.75,
+        6.400000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "f7457c66-61e7-49fa-93ab-b3e2838777c7"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        36.75,
+        6.400000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "18d6656f-870a-463c-a507-568f18765a99"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        37.44999999999999,
+        11.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "64781c8d-0755-43d0-bc68-49da03c6b521"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        32.80000000000001,
+        22.200000000000003
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "125d42bd-f9c0-4129-847d-b07123853438"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        21.0,
+        19.650000000000006
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "45bae61c-9a7b-4ef6-8113-a39a1831e75d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        31.80000000000001,
+        28.299999999999997
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "79b27f7a-b524-4d5c-ae99-a6e73a750bb9"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        28.30000000000001,
+        32.099999999999994
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "7e6aa4e7-2d55-4651-99bf-5d81f074122f"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        35.5,
+        16.019999999999996
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "979cff37-3763-412d-ac12-50ce9453db36"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        29.69999899999999,
+        15.0
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "a9a245bb-7809-4c6e-8227-9e9e19de20d6"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        29.19999899999999,
+        38.900000000000006
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "ecf906b0-5b62-4df8-8b6d-49644559024e"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.69999999999999,
+        48.6
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "7c5a7dde-0dc7-4127-be41-bd1d843ce381"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        51.900000000000006,
+        24.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "95d7d788-f338-417e-93ab-9226da9a757f"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.799999999999997,
+        24.400000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "27c7a6db-8356-4e0a-bbb3-72587bc618dd"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        28.099999999999994,
+        47.33
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8dac4c6a-38a5-4141-8b89-665f2200b9e7"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        28.099999999999994,
+        38.8
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "b508bd8f-0cee-4087-83bd-5eafae9d41ea"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        25.799999999999997,
+        38.8
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "cd9d4ae3-1053-44c3-a692-aa61afbc608b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        48.6
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "1fed8e93-0165-4253-ada7-ab879e842bac"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        52.41
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "8248f078-0671-44c7-a74e-8624c1021f88"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        12.799999999999997,
+        41.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "f51fcc64-7a23-4f7d-b9e5-31c0c60dd12d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.849999999999994,
+        44.790001000000004
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "9ff168cb-307a-4a1b-b547-fc8e2c4ae128"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        54.30000000000001,
+        24.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "423a2fb8-ccb0-4e85-ae1d-e6860702bf06"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.69999999999999,
+        52.41
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "5aeb67d7-1337-42f4-aee9-c75527caee4b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        54.30000000000001,
+        9.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "7c3c18f7-5e4e-4b99-879e-01b1d7ec94d4"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        55.099999999999994,
+        41.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "ee88d285-ec9b-4c6d-879e-0fee75ce824b"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        53.0,
+        19.900000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "4e86c988-fcd9-4c7b-acdf-225830efbfab"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.69999999999999,
+        47.33
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "cc49eb09-f21d-4aa9-a181-11681da06a9c"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        50.400000000000006,
+        23.75
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "e55c4078-6858-4b38-b88a-38686bdf1098"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        58.30000000000001,
+        34.849999999999994
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "72fe33f1-aee7-4b13-ad1c-389c3b994064"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        59.099999999999994,
+        37.625
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "e04110ca-269c-4286-ba4e-e2c8bd70bef8"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        39.19999999999999,
+        23.900000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "65f51e1d-0187-433c-b3de-2a5271fb5b8d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        30.655,
+        39.3
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "86187b8f-0604-40a5-9d7a-f9ec4fb0addd"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        58.19999999999999,
+        40.55
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "3986dbe4-05eb-43ee-9751-1446e3660c1f"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        58.25,
+        29.200000000000003
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "d1eb13c6-ef4b-4974-bfa3-c9df6a3d2887"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        53.0,
+        14.400000000000006
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "895672f0-3ba0-4afe-ab51-a414a11d77df"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        53.5,
+        23.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "eee2b32f-4a8a-4535-8cb4-c002be969707"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        12.799999999999997,
+        37.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "1c353069-0f4c-4954-9dd5-763aa7c41e5e"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        51.14
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "4ecf349a-b83b-4748-8d71-7495ed507a4a"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        12.0,
+        32.400000000000006
+      ],
+      "diameter": 0.5,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "2d84609e-6507-4bee-8aa9-a5a91a50b854"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        53.0,
+        16.599999999999994
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "3156bdc9-1639-4258-8352-039f8cef305d"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        48.25,
+        41.7
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "9dade11a-5f20-44d6-bf2b-39fb11201151"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        12.799999999999997,
+        45.0
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "867ebf15-37ab-4b76-91a7-e28306c4c7d9"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        53.68
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "bae5f2cb-f4be-4eb8-bb28-1edfae859558"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        11.75,
+        15.5
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "40ebf9e6-73e3-43dd-98ec-498a07751e68"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        24.700000000000003,
+        49.87
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "b54cd5cf-b2c6-4086-a76a-3bdc1cbfd8ff"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.69999999999999,
+        53.68
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "2953af0c-b5d7-42e5-bc81-d6a12c856360"
+    },
+    {
+      "kind": "hole",
+      "at": [
+        45.69999999999999,
+        54.95
+      ],
+      "diameter": 0.4,
+      "slot_length": 0,
+      "plated": true,
+      "ref": "via",
+      "uuid": "359d4a00-e722-4129-9107-a451b14eae18"
+    }
+  ]
+}

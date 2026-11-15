@@ -1,0 +1,197 @@
+{
+  "scope": "Fresh verification-only CAM export from saved AI_layout; not a production release",
+  "source_pcb_sha256": "82da382a408244f0554dbf6b1e7cf92267938712c95e73f0253b3162a39e05fb",
+  "layers": {
+    "AI_layout-B_Cu.gbr": {
+      "primitives": 392,
+      "kinds": {
+        "flash": 160,
+        "line": 226,
+        "region": 6
+      },
+      "draw_widths_mm": [
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "sha256": "79945330ee03fa6ca96f1c7233ec154ae99901a058b3e7ecd06ee1f0ead098a3"
+    },
+    "AI_layout-B_Mask.gbr": {
+      "primitives": 41,
+      "kinds": {
+        "region": 41
+      },
+      "draw_widths_mm": [],
+      "sha256": "a401827ea831931b6c1b8f640ea833c152bbe8a75bd05282a624d2cf319cd4ef"
+    },
+    "AI_layout-B_Paste.gbr": {
+      "primitives": 0,
+      "kinds": {},
+      "draw_widths_mm": [],
+      "sha256": "6b4f6861fab95f4ec3d4ee4219aa82c57a50c3789a54201cedf2a224540c42ba"
+    },
+    "AI_layout-B_Silkscreen.gbr": {
+      "primitives": 507,
+      "kinds": {
+        "line": 507
+      },
+      "draw_widths_mm": [
+        0.2
+      ],
+      "sha256": "09e781bb8422936a24af8e9b640d82095deaca042aa3789bc8220ae10b631090"
+    },
+    "AI_layout-Edge_Cuts.gbr": {
+      "primitives": 9,
+      "kinds": {
+        "line": 9
+      },
+      "draw_widths_mm": [
+        0.05
+      ],
+      "sha256": "6f154a3fda8636a599ed56dd0e3d9ffc46848e5cf08481fb054aa698cf5ef7c0"
+    },
+    "AI_layout-F_Cu.gbr": {
+      "primitives": 627,
+      "kinds": {
+        "flash": 345,
+        "line": 277,
+        "region": 5
+      },
+      "draw_widths_mm": [
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        1.0
+      ],
+      "sha256": "9db8e0bc561c1877304a2a9dac3b3cceb3553baf60b1abdb348136e4025d65d4"
+    },
+    "AI_layout-F_Mask.gbr": {
+      "primitives": 222,
+      "kinds": {
+        "region": 222
+      },
+      "draw_widths_mm": [],
+      "sha256": "95b0921501292d5ff36227235694cc8f741a5beb18b94e233ee85399c058b970"
+    },
+    "AI_layout-F_Paste.gbr": {
+      "primitives": 193,
+      "kinds": {
+        "flash": 193
+      },
+      "draw_widths_mm": [],
+      "sha256": "534887452d98e830861466ce1f414a125ef363a76518a1a38073711907b51eb7"
+    },
+    "AI_layout-F_Silkscreen.gbr": {
+      "primitives": 2655,
+      "kinds": {
+        "line": 2646,
+        "region": 9
+      },
+      "draw_widths_mm": [
+        0.12,
+        0.15,
+        0.18,
+        0.2
+      ],
+      "sha256": "7e57e820a382a48ba4f394e7428836789ca72c91805c8a3c5594255b8e1c2780"
+    }
+  },
+  "raster_outside_board": {
+    "AI_layout-B_Cu": {
+      "outside_board_pixels": 0,
+      "raster_mm_per_pixel": 0.025,
+      "outside_bbox_pixels": null
+    },
+    "AI_layout-B_Mask": {
+      "outside_board_pixels": 0,
+      "raster_mm_per_pixel": 0.025,
+      "outside_bbox_pixels": null
+    },
+    "AI_layout-B_Silkscreen": {
+      "outside_board_pixels": 0,
+      "raster_mm_per_pixel": 0.025,
+      "outside_bbox_pixels": null
+    },
+    "AI_layout-F_Cu": {
+      "outside_board_pixels": 0,
+      "raster_mm_per_pixel": 0.025,
+      "outside_bbox_pixels": null
+    },
+    "AI_layout-F_Mask": {
+      "outside_board_pixels": 0,
+      "raster_mm_per_pixel": 0.025,
+      "outside_bbox_pixels": null
+    },
+    "AI_layout-F_Silkscreen": {
+      "outside_board_pixels": 6189,
+      "raster_mm_per_pixel": 0.025,
+      "outside_bbox_pixels": [
+        1113,
+        61,
+        1855,
+        315
+      ]
+    }
+  },
+  "mask_opening_silk_intersection": {
+    "F": {
+      "silk_over_mask_opening_pixels": 0,
+      "raster_mm_per_pixel": 0.025
+    },
+    "B": {
+      "silk_over_mask_opening_pixels": 0,
+      "raster_mm_per_pixel": 0.025
+    }
+  },
+  "pth_copper_alignment": {
+    "F": {
+      "pth_positions_checked": 160,
+      "max_center_error_mm": 0.0004999999999988347,
+      "positions_over_0_002mm": 0
+    },
+    "B": {
+      "pth_positions_checked": 160,
+      "max_center_error_mm": 0.0004999999999988347,
+      "positions_over_0_002mm": 0
+    }
+  },
+  "drills": {
+    "PTH": {
+      "count": 160,
+      "round": 154,
+      "slots": 6,
+      "diameter_counts": {
+        "0.4": 107,
+        "0.5": 20,
+        "1.0": 22,
+        "1.4": 5,
+        "0.6": 4,
+        "1.5": 2
+      }
+    },
+    "NPTH": {
+      "count": 8,
+      "diameter_counts": {
+        "0.65": 2,
+        "1.0": 2,
+        "3.2": 4
+      }
+    }
+  },
+  "native_profile_mm": {
+    "size": [
+      70,
+      60
+    ],
+    "corner_radius": 3,
+    "layers": 2,
+    "thickness": 1.6
+  }
+}
