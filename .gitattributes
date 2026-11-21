@@ -7,3 +7,6 @@
 
 # Preserve fabrication package bytes so their recorded SHA-256 hashes remain valid.
 03_pcb/AI_layout/Gerber_*/** -text
+
+# Preserve vendor STEP models without line-ending or whitespace normalization.
+03_pcb/AI_PCB/3dmodels/*.step -text -whitespace
