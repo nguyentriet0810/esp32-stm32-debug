@@ -1,0 +1,166 @@
+{
+  "folders": [
+    {
+      "name": "probe",
+      "path": "01_source"
+    }
+  ],
+  "settings": {
+    "idf.extensionActivationMode": "always",
+    "idf.currentSetup": "${workspaceFolder}/.tooling/esp-idf-v6.1",
+    "idf.customExtraVars": {
+      "IDF_PATH": "${workspaceFolder}/.tooling/esp-idf-v6.1",
+      "IDF_TOOLS_PATH": "${workspaceFolder}/.tooling/idf-tools",
+      "IDF_PYTHON_ENV_PATH": "${workspaceFolder}/.tooling/python-env",
+      "IDF_TARGET": "esp32s3",
+      "PYTHONUTF8": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CCACHE_DIR": "${workspaceFolder}/.cache/ccache",
+      "OPENOCD_SCRIPTS": "${workspaceFolder}/.tooling/idf-tools/tools/openocd-esp32/v0.12.0-esp32-20260703/openocd-esp32/share/openocd/scripts"
+    },
+    "idf.buildPath": "${workspaceFolder}/build-vscode",
+    "idf.sdkconfigFilePath": "${workspaceFolder}/sdkconfig.vscode",
+    "idf.sdkconfigDefaults": [
+      "${workspaceFolder}/sdkconfig.defaults",
+      "${workspaceFolder}/sdkconfig.vscode.defaults"
+    ],
+    "idf.port": "COM9",
+    "idf.flashType": "UART",
+    "idf.flashBaudRate": "460800",
+    "idf.monitorBaudRate": "115200",
+    "idf.monitorNoReset": true,
+    "idf.openOcdConfigs": ["board/esp32s3-builtin.cfg"],
+    "idf.openOcdLaunchArgs": [
+      "-d2", "-f", "board/esp32s3-builtin.cfg",
+      "-c", "bindto 127.0.0.1",
+      "-c", "init; reset halt"
+    ],
+    "idf.customOpenOCDPath": "${workspaceFolder}/.tooling/idf-tools/tools/openocd-esp32/v0.12.0-esp32-20260703/openocd-esp32/bin/openocd.exe",
+    "idf.launchMonitorOnDebugSession": false,
+    "idf.showOnboardingOnInit": false,
+    "idf.enableUpdateSrcsToCMakeListsFile": false,
+    "idf.customTerminalExecutable": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "idf.customTerminalExecutableArgs": ["-NoLogo", "-NoProfile"],
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build-vscode/compile_commands.json",
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.default.intelliSenseMode": "gcc-x86",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.clang_format_path": "${workspaceFolder}/.tooling/python-env/Scripts/clang-format.exe",
+    "C_Cpp.clang_format_style": "file",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [100],
+    "[c]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools",
+      "editor.formatOnSave": true
+    },
+    "[cpp]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools",
+      "editor.formatOnSave": true
+    },
+    "files.exclude": {
+      "**/.tooling": true,
+      "**/.cache": true
+    },
+    "files.watcherExclude": {
+      "**/.tooling/**": true,
+      "**/.cache/**": true,
+      "**/build/**": true,
+      "**/build-vscode/**": true
+    },
+    "search.exclude": {
+      "**/.tooling/**": true,
+      "**/.cache/**": true,
+      "**/build/**": true,
+      "**/build-vscode/**": true
+    },
+    "terminal.integrated.profiles.windows": {
+      "ESP32 Probe (ESP-IDF v6.1)": {
+        "path": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": [
+          "-NoLogo", "-NoProfile", "-NoExit", "-Command",
+          ". '${workspaceFolder}/tools/terminal.ps1'"
+        ]
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "ESP32 Probe (ESP-IDF v6.1)",
+    "terminal.integrated.cwd": "${workspaceFolder}"
+  },
+  "extensions": {
+    "recommendations": ["espressif.esp-idf-extension", "ms-vscode.cpptools", "twxs.cmake"],
+    "unwantedRecommendations": ["ms-vscode.cpptools-extension-pack", "ms-vscode.cmake-tools", "platformio.platformio-ide"]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "options": {"cwd": "${workspaceFolder}"},
+    "tasks": [
+      {
+        "label": "ESP32: Build",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "build"],
+        "group": {"kind": "build", "isDefault": true},
+        "problemMatcher": ["$espIdf", "$espIdfLd"]
+      },
+      {
+        "label": "ESP32: Reconfigure",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "reconfigure"],
+        "problemMatcher": ["$espIdf", "$espIdfLd"]
+      },
+      {
+        "label": "ESP32: Menuconfig",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "menuconfig"],
+        "problemMatcher": []
+      },
+      {
+        "label": "ESP32: Flash",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "-p", "${config:idf.port}", "-b", "460800", "flash"],
+        "problemMatcher": ["$espIdf", "$espIdfLd"]
+      },
+      {
+        "label": "ESP32: Build + Flash",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "-p", "${config:idf.port}", "-b", "460800", "build", "flash"],
+        "problemMatcher": ["$espIdf", "$espIdfLd"]
+      },
+      {
+        "label": "ESP32: Monitor",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "-p", "${config:idf.port}", "monitor", "--no-reset"],
+        "problemMatcher": []
+      },
+      {
+        "label": "ESP32: Build + Flash + Monitor",
+        "type": "process",
+        "command": "${env:SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe",
+        "args": ["-NoLogo", "-NoProfile", "-File", "${workspaceFolder}/tools/dev.ps1", "-p", "${config:idf.port}", "-b", "460800", "build", "flash", "monitor", "--no-reset"],
+        "problemMatcher": ["$espIdf", "$espIdfLd"]
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "ESP32-S3: Build, Flash and Debug (USB-JTAG)",
+        "type": "gdbtarget",
+        "request": "attach",
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/build-vscode/stm32_wifi_probe.elf",
+        "gdb": "${workspaceFolder}/.tooling/idf-tools/tools/xtensa-esp-elf-gdb/17.1_20260402/xtensa-esp-elf-gdb/bin/xtensa-esp32s3-elf-gdb.exe",
+        "initialBreakpoint": "app_main",
+        "runOpenOCD": true,
+        "buildFlashMonitor": false,
+        "preLaunchTask": "ESP32: Build + Flash"
+      }
+    ]
+  }
+}

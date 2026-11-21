@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32: Attach via ESP32 Wi-Fi",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "external",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/${input:stm32Elf}",
+            "gdbTarget": "${input:probeEndpoint}",
+            "overrideAttachCommands": [
+                "monitor swd_scan",
+                "attach 1"
+            ],
+            "swoConfig": {
+                "enabled": false
+            },
+            "rttConfig": {
+                "enabled": false
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "stm32Elf",
+            "type": "promptString",
+            "description": "STM32 ELF path relative to the open project folder",
+            "default": "build/firmware.elf"
+        },
+        {
+            "id": "probeEndpoint",
+            "type": "promptString",
+            "description": "ESP32 probe IP address and TCP port",
+            "default": "192.168.4.1:2022"
+        }
+    ]
+}

@@ -18,6 +18,11 @@ kiểm chứng được trên phần cứng và quản lý đầy đủ bằng G
 - OLED SSD1306 128×64 và rotary encoder để xem trạng thái, thao tác menu và cấu hình probe khi rảnh.
 - Có hướng dẫn sử dụng, cấu hình kết nối GDB và ma trận phần cứng đã kiểm chứng.
 
+Giao diện host được chọn ngày 16/11/2026: **VS Code + Cortex-Debug**, dùng ARM GDB
+kết nối tới TCP 2022 trên ESP32. Mục tiêu là breakpoint, step theo dòng code, Variables,
+Watch, registers, memory và call stack. [Cấu hình attach mẫu](12_vscode_debug.md) đã có;
+nạp flash, reset/restart và toàn bộ phiên VS Code cần được nghiệm thu trên STM32 thật.
+
 Các mốc sau bổ sung đọc RAM liên tục cho MCUViewer, SWO và USB/CMSIS-DAP.
 Chưa cam kết hỗ trợ toàn bộ STM32; mỗi model được công bố cần có trạng thái kiểm chứng.
 Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trước khi có board và số đo nền.

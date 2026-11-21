@@ -1,5 +1,98 @@
 # Build và bộ công cụ
 
+## Phát triển firmware ESP32 trong VS Code
+
+Từ thư mục repository, chạy launcher để luôn chọn profile VS Code riêng của dự án:
+
+```powershell
+.\open-vscode.ps1
+# Hoặc gọi trực tiếp:
+code --new-window --profile "ESP32 Probe" .\esp32-probe.code-workspace
+```
+
+Profile **ESP32 Probe** được tạo từ profile trống, có thiết lập và danh sách extension
+riêng. Workspace đã được gắn với profile này trên máy hiện tại. Chỉ có ba extension:
+
+- `espressif.esp-idf-extension` **2.3.0**: build, nạp và debug ESP32.
+- `ms-vscode.cpptools` **1.35.6**: IntelliSense và định dạng C/C++.
+- `twxs.cmake` **0.0.17**: tô màu cú pháp CMake.
+
+STM32Cube, PlatformIO, Cortex-Debug và CMake Tools không được cài trong profile này.
+Các profile khác giữ nguyên danh sách extension và thiết lập. Trên máy mới, lệnh mở
+ở trên tạo profile trống nếu chưa có; sau đó cài ba extension được workspace đề xuất
+vào **ESP32 Probe**. Launcher không tự cài extension.
+
+Workspace chỉ mở `01_source`. SDK, Python, compiler, GDB, OpenOCD và clang-format đều trỏ tới
+bộ công cụ cục bộ đã ghim. Không cần chạy Installation Manager để tải một SDK khác.
+`idf.extensionActivationMode = always` kích hoạt ESP-IDF cho workspace này dù bộ
+nhận diện tự động không nhận CMakeLists có kiểm tra phiên bản SDK của dự án.
+Launcher sinh `01_source/.vscode/settings.json` với đường dẫn môi trường thực tế từ
+template `idf.customExtraVars` trong workspace; ESP-IDF 2.3 không thay biến
+`${workspaceFolder}` bên trong object này. File cục bộ được Git bỏ qua; chạy lại
+launcher sau khi chuyển repository sang đường dẫn khác.
+
+Cấu hình build Debug dùng `sdkconfig.vscode.defaults` sau `sdkconfig.defaults`, sinh
+`sdkconfig.vscode` và output trong `build-vscode`. Optimization Debug (`-Og`) giúp xem
+biến và step code; GPIO/N16R8 giữ theo PCB. Console chính qua USB Serial/JTAG nên các
+lệnh `status`, `pins`, `wifi`, `sd` dùng trực tiếp trên COM9. Build CLI `tools/idf.ps1`
+và cấu hình `sdkconfig` hiện có vẫn độc lập với profile này.
+
+| Thao tác | Cách dùng |
+|---|---|
+| Build Debug | `Ctrl+Shift+B` hoặc task `ESP32: Build` |
+| Nạp firmware | Task `ESP32: Flash` hoặc `ESP32: Build + Flash` |
+| Xem log và gửi lệnh USB | Task `ESP32: Monitor`; thoát bằng `Ctrl+]` |
+| Build, nạp và mở console | Task `ESP32: Build + Flash + Monitor` |
+| Debug ESP32-S3 qua USB-JTAG | `F5`, chọn `ESP32-S3: Build, Flash and Debug (USB-JTAG)` |
+| Chỉnh cấu hình | Task `ESP32: Menuconfig` |
+| Sinh lại build database | Task `ESP32: Reconfigure` |
+
+`F5` build và nạp bản Debug trước, rồi kết nối OpenOCD và dừng ở `app_main`.
+OpenOCD thực hiện `init; reset halt` trước khi GDB kết nối để đọc bản đồ flash từ
+trạng thái dừng xác định; server chỉ lắng nghe trên localhost.
+Đặt breakpoint bằng `F9`; step `F10`/`F11`, chạy tiếp `F5`, dừng debug `Shift+F5`.
+Đây là debug **ESP32 của probe**, không phải kết nối tới STM32 qua TCP2022.
+Đóng monitor trước khi Flash hoặc Debug để giải phóng cổng COM.
+Nếu Windows đổi số COM, sửa `idf.port` trong file workspace cho đúng thiết bị.
+
+Mở terminal mới trong workspace sẽ có sẵn ESP-IDF và lệnh `idf.py` của profile lập trình:
+
+```powershell
+idf.py build
+idf.py -p COM9 flash
+idf.py -p COM9 monitor --no-reset
+idf.py menuconfig
+```
+
+Trong terminal bên ngoài VS Code có thể gọi tương đương:
+
+```powershell
+.\01_source\tools\dev.ps1 build
+.\01_source\tools\dev.ps1 -p COM9 flash
+```
+
+IntelliSense đọc `build-vscode/compile_commands.json`; build/reconfigure lần đầu cần
+hoàn tất trước khi editor có đủ thông tin header. Formatter dùng `.clang-format` của
+repository. `.tooling` và `.cache` được ẩn trong Explorer để tập trung vào mã dự án.
+
+Các file cấu hình workflow được giữ trong workspace, không ghi đè thiết lập VS Code
+toàn cục hoặc các project STM32 khác. Tài liệu attach STM32 riêng nằm ở
+[hướng dẫn Cortex-Debug](12_vscode_debug.md).
+
+Đã kiểm tra ngày 21/11/2026 trên PCB COM9: build và nạp profile Debug thành công;
+USB-JTAG nhận đủ hai lõi, GDB dừng đúng `app_main`, step qua kiểm tra board và đọc
+`result = 0`. Console USB trả lời `status` và `pins`; VS Code nhận cấu hình debug,
+IntelliSense sẵn sàng và không báo Problems ở `main.c`. Log kiểm tra cục bộ nằm tại
+`01_source/.cache/vscode-setup-20261121/`. Phép kiểm tra này không sửa lỗi remount SD.
+Profile `ESP32 Probe` đã được kiểm tra có đúng ba extension trên, workspace mở đúng
+profile và status bar nhận **ESP-IDF v6.1.0**. Danh sách 62 extension và checksum
+settings của profile Default giữ nguyên; bằng chứng cục bộ nằm tại
+`01_source/.cache/vscode-profile-20261121/`.
+
+Tham chiếu cấu hình: [Profile và extension riêng trong VS Code](https://code.visualstudio.com/docs/configure/profiles),
+[SDK cục bộ trong extension Espressif](https://docs.espressif.com/projects/vscode-esp-idf-extension/en/latest/installation.html)
+và [debug USB-JTAG với gdbtarget](https://docs.espressif.com/projects/vscode-esp-idf-extension/en/latest/debugproject.html).
+
 ## Bộ công cụ cục bộ
 
 Mọi đường dẫn build được tính từ vị trí `01_source`, gồm:

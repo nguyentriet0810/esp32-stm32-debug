@@ -1,0 +1,8 @@
+# Development overlay; loaded after sdkconfig.defaults into sdkconfig.vscode.
+# Keep the production build and its sdkconfig independent.
+CONFIG_COMPILER_OPTIMIZATION_DEBUG=y
+# CONFIG_COMPILER_OPTIMIZATION_PERF is not set
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+# CONFIG_ESP_CONSOLE_UART_DEFAULT is not set
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+# CONFIG_ESP_CONSOLE_SECONDARY_USB_SERIAL_JTAG is not set

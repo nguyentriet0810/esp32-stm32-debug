@@ -49,6 +49,16 @@ esp32-stm32-debug/
 └── README.md
 ```
 
+## Lập trình firmware ESP32 trong VS Code
+
+Chạy `./open-vscode.ps1` từ thư mục repository để mở
+[esp32-probe.code-workspace](esp32-probe.code-workspace) bằng profile VS Code riêng
+**ESP32 Probe**. Profile chỉ có ESP-IDF, C/C++ và CMake syntax.
+Workspace dùng ESP-IDF v6.1 cục bộ, cấu hình build Debug và console USB native tại COM9.
+`Ctrl+Shift+B` để build; `F5` để build, nạp và debug ESP32-S3 qua USB-JTAG.
+Task `ESP32: Monitor` mở console; `Ctrl+]` để đóng monitor trước khi nạp/debug.
+Hướng dẫn chi tiết nằm trong [Build và bộ công cụ](02_document/02_build_and_tooling.md).
+
 ## Build nhanh
 
 Nếu bộ công cụ cục bộ đã được chuẩn bị:
@@ -99,6 +109,10 @@ attach 1
 
 Chỉ `attach 1` khi scan đã liệt kê target. Chưa có STM32 nối dây thì scan báo lỗi là
 kết quả mong đợi. Hướng dẫn đấu nối nằm trong [tài liệu phần cứng](02_document/05_hardware_and_local_ui.md).
+
+Giao diện debug được chọn là **VS Code + Cortex-Debug**, kết nối tới GDB/TCP của probe.
+Xem [hướng dẫn và cấu hình attach mẫu](02_document/12_vscode_debug.md).
+Mẫu dùng trong project ứng dụng STM32; phiên debug trên target thật vẫn chờ nghiệm thu.
 
 ## Quản lý phiên bản
 
