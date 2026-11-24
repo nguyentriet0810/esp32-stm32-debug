@@ -1,4 +1,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
+
+# @file CMakeLists.txt
+# @brief probe_network component registration and dependency visibility.
+#
+# Public dependencies support the exported headers; private dependencies remain implementation
+# details.
+
 idf_component_register(SRCS "probe_network.c" INCLUDE_DIRS "include" REQUIRES esp_common PRIV_REQUIRES esp_wifi esp_netif esp_event nvs_flash esp_hw_support log probe_state)
 if(NOT CMAKE_BUILD_EARLY_EXPANSION)
     include("${CMAKE_CURRENT_LIST_DIR}/../../cmake/project_options.cmake")

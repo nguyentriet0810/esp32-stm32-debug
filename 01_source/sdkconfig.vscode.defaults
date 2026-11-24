@@ -1,3 +1,9 @@
+# @file sdkconfig.vscode.defaults
+# @brief Debug-build overlay for the isolated VS Code workflow.
+#
+# Loaded after sdkconfig.defaults into sdkconfig.vscode; selects debuggable optimization and the
+# native USB console.
+
 # Development overlay; loaded after sdkconfig.defaults into sdkconfig.vscode.
 # Keep the production build and its sdkconfig independent.
 CONFIG_COMPILER_OPTIMIZATION_DEBUG=y

@@ -1,4 +1,12 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
+
+/**
+ * @file ff.h
+ * @brief FatFs mount and error subset for host tests.
+ *
+ * Supports injected FAT mount and cleanup outcomes without implementing a filesystem. Test-only
+ * header; not used in firmware builds.
+ */
 #ifndef SD_TEST_FATFS_H
 #define SD_TEST_FATFS_H
 #define FF_VOLUMES 2
@@ -18,5 +26,8 @@ typedef enum
     FR_NOT_ENOUGH_CORE = 17,
     FR_TIMEOUT = 15
 } FRESULT;
+/**
+ * @brief Model FAT mount ownership and one-shot mount/unmount failures.
+ */
 FRESULT f_mount(FATFS *filesystem, const TCHAR *drive, BYTE immediate);
 #endif

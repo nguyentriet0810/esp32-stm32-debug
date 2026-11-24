@@ -1,3 +1,15 @@
+<#
+.SYNOPSIS
+Run ESP-IDF actions for the separate VS Code Debug build.
+.DESCRIPTION
+Forwards arguments through idf.ps1 while selecting build-vscode, sdkconfig.vscode and its defaults
+overlay. Reuses generated configuration until reconfigure is explicitly requested.
+.EXAMPLE
+.\01_source\tools\dev.ps1 build
+.NOTES
+File: dev.ps1. Project scripts use process-local environment and repository-local generated files.
+#>
+
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Build the VS Code development profile using the project's pinned ESP-IDF.
 $ErrorActionPreference = 'Stop'

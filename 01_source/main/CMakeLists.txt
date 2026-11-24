@@ -1,6 +1,11 @@
 # SPDX-FileCopyrightText: 2026 Nguyen Hoang Minh Triet
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+# @file CMakeLists.txt
+# @brief Application component registration and startup dependencies.
+#
+# The entry point links the services it starts; strict C17 checks apply to this target.
+
 idf_component_register(
     SRCS "main.c"
     INCLUDE_DIRS "."

@@ -1,3 +1,9 @@
+# @file partitions.csv
+# @brief Flash partition layout for NVS, PHY data and the factory application.
+#
+# Offsets and sizes are bytes; M suffixes follow the ESP-IDF partition parser. No OTA slot is
+# configured.
+
 # Name,   Type, SubType, Offset,   Size,     Flags
 nvs,      data, nvs,     0x9000,   0x6000,
 phy_init, data, phy,     0xf000,   0x1000,

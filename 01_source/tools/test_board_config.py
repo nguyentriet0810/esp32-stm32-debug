@@ -34,7 +34,13 @@ OPTIONAL_PERIPHERALS = ("PROBE_OLED_ENABLE", "PROBE_ENCODER_ENABLE", "PROBE_SD_E
 
 
 def read_kconfig_defaults(path):
-    """Read the unconditional scalar defaults used by the board Kconfig."""
+    """Return first unconditional scalar defaults indexed by Kconfig symbol.
+
+    Args:
+        path: UTF-8 board Kconfig path.
+    Returns:
+        A new symbol-to-text dictionary; the source file is not modified.
+    """
     result = {}
     symbol = None
     for line in path.read_text(encoding="utf-8").splitlines():
@@ -49,7 +55,13 @@ def read_kconfig_defaults(path):
 
 
 def read_sdkconfig(path):
-    """Read configuration values, including the standard disabled-bool syntax."""
+    """Parse SDK configuration values, including disabled-bool comment syntax.
+
+    Args:
+        path: UTF-8 defaults or generated sdkconfig file.
+    Returns:
+        Symbol values as strings, with disabled bools represented by "n".
+    """
     result = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         match = re.fullmatch(r"CONFIG_(\w+)=(.*)", line)
@@ -63,6 +75,15 @@ def read_sdkconfig(path):
 
 
 def check_netlist(path, errors):
+    """Append schematic pin and connector mismatches to the caller-owned errors list.
+
+    Args:
+        path: Freshly exported KiCad XML netlist.
+        errors: Mutable diagnostic list updated in place.
+    Raises:
+        OSError: The netlist cannot be read.
+        ET.ParseError: The input is not valid XML.
+    """
     tree = ET.parse(path)
     nets = {}
     pins = {}
@@ -90,6 +111,7 @@ def check_netlist(path, errors):
             )
 
     def expect_pin(reference, pin, expected_net):
+        """Append a diagnostic unless one connector pin has exactly the expected net."""
         actual = pins.get((reference, pin), [])
         if actual != [expected_net]:
             errors.append(
@@ -122,6 +144,14 @@ def check_netlist(path, errors):
 
 
 def check_config(values, label, errors, generated=False):
+    """Append PCB configuration mismatches without altering the supplied values.
+
+    Args:
+        values: Symbol-to-text configuration dictionary.
+        label: Source label included in diagnostics.
+        errors: Caller-owned list to which mismatches are appended.
+        generated: Permit explicit enable/disable choices for optional peripherals.
+    """
     expected = {symbol: str(gpio) for symbol, _, gpio in SIGNALS}
     if not generated:
         expected.update({symbol: "y" for symbol in OPTIONAL_PERIPHERALS})
@@ -144,6 +174,11 @@ def check_config(values, label, errors, generated=False):
 
 
 def main():
+    """Compare schematic, defaults and optional generated configuration from CLI arguments.
+
+    Returns:
+        Zero on agreement, or one after printing accumulated diagnostics.
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--netlist", type=Path, required=True, help="Fresh KiCad XML netlist")
     parser.add_argument("--sdkconfig", type=Path, help="Also check the generated build configuration")

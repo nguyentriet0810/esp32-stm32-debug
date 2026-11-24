@@ -5,7 +5,9 @@
 
 /**
  * @file probe_board.h
- * @brief Startup validation of the ESP32-S3 N16R8 hardware profile.
+ * @brief N16R8 hardware validation API.
+ *
+ * Checks the chip, flash, PSRAM and PCB pin ownership before application services start.
  */
 
 #ifndef PROBE_BOARD_H

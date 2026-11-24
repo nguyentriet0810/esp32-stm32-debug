@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_network.c @brief Always-available AP with optional persisted station mode. */
+/**
+ * @file probe_network.c
+ * @brief Fallback Wi-Fi AP and station provisioning.
+ *
+ * Credentials are stored in NVS; event callbacks publish copied state snapshots. Connection and
+ * DHCP completion happen asynchronously.
+ */
 #include "probe_network.h"
 #include <inttypes.h>
 #include <stdatomic.h>
@@ -20,7 +26,14 @@
 static const char network_tag[] = "probe_network";
 static char ap_name[33];
 static atomic_bool station_enabled;
-/** @brief Network callbacks publish copied snapshots; no target access occurs here. */
+/**
+ * @brief Reconnect an enabled station and publish network identity after DHCP.
+ * @param[in] context Unused event-handler context.
+ * @param[in] base ESP-IDF event family.
+ * @param[in] id Event identifier within that family.
+ * @param[in] data Borrowed event payload, valid only during this callback.
+ * @note Runs in the event-loop task; publishes copied state without accessing the target.
+ */
 static void network_event(void *context, esp_event_base_t base, int32_t id, void *data)
 {
     (void)context;
@@ -53,7 +66,11 @@ static void network_event(void *context, esp_event_base_t base, int32_t id, void
         ESP_LOGI(network_tag, "STA connected: ssid=%s ip=%s", name, ip);
     }
 }
-/** @brief Load station credentials without exposing them to diagnostics. */
+/**
+ * @brief Load persisted station credentials without logging their contents.
+ * @param[in,out] config Non-NULL station configuration initialized by the caller.
+ * @return true only when both stored SSID and password were read successfully.
+ */
 static bool network_load_station(wifi_config_t *config)
 {
     nvs_handle_t handle = 0U;
@@ -77,6 +94,9 @@ static bool network_load_station(wifi_config_t *config)
     }
     return found;
 }
+/**
+ * @brief Prepare AP/STA interfaces and start Wi-Fi with stored or generated credentials.
+ */
 esp_err_t probe_network_start(void)
 {
     esp_err_t result = esp_netif_init();
@@ -175,6 +195,9 @@ esp_err_t probe_network_start(void)
     }
     return result;
 }
+/**
+ * @brief Copy active AP credentials to the explicitly requested console buffers.
+ */
 esp_err_t probe_network_ap_credentials(char ssid[33], char password[64])
 {
     esp_err_t result = ESP_ERR_INVALID_ARG;
@@ -192,6 +215,9 @@ esp_err_t probe_network_ap_credentials(char ssid[33], char password[64])
     }
     return result;
 }
+/**
+ * @brief Persist a validated station profile and request asynchronous reconnection.
+ */
 esp_err_t probe_network_provision(const char *ssid, const char *password)
 {
     esp_err_t result = ESP_ERR_INVALID_ARG;
@@ -223,6 +249,7 @@ esp_err_t probe_network_provision(const char *ssid, const char *password)
                 (void)memcpy(config.sta.ssid, ssid, ssid_length);
                 (void)memcpy(config.sta.password, password, password_length);
                 config.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
+                /* Suppress reconnect callbacks until the replacement profile is installed. */
                 atomic_store(&station_enabled, false);
                 (void)esp_wifi_disconnect();
                 result = esp_wifi_set_config(WIFI_IF_STA, &config);

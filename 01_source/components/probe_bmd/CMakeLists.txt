@@ -1,4 +1,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
+
+# @file CMakeLists.txt
+# @brief Build adapter for the pinned Black Magic Debug backend and libc shim.
+#
+# Compiles the selected upstream core/STM32 sources and force-includes the compatibility ABI
+# without editing the submodule.
+
 get_filename_component(bmd_dir "${CMAKE_CURRENT_LIST_DIR}/../../external/blackmagic" ABSOLUTE)
 set(bmd_src "${bmd_dir}/src")
 set(core command.c crc32.c exception.c gdb_main.c gdb_packet.c hex_utils.c maths_utils.c

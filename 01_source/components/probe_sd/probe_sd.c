@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_sd.c @brief Optional SDSPI FAT mount and bounded local file operations. */
+/**
+ * @file probe_sd.c
+ * @brief Serialized microSD SPI and FAT access.
+ *
+ * The component owns SPI2 and mounts existing FAT media at /sdcard. Mutex-protected operations
+ * bound file sizes and directory work; no API formats or deletes files.
+ */
 #include "probe_sd.h"
 
 #include "sdkconfig.h"
@@ -26,6 +32,7 @@
 #include "sdmmc_cmd.h"
 
 static const char sd_mount_path[] = "/sdcard";
+/* After startup, the mutex serializes every resource flag, handle and card operation. */
 static SemaphoreHandle_t sd_mutex;
 static sdmmc_card_t sd_card_storage;
 static sdmmc_card_t *sd_card;
@@ -40,7 +47,9 @@ static bool sd_fat_registered;
 static FATFS *sd_filesystem;
 static esp_err_t sd_last_error = ESP_ERR_INVALID_STATE;
 
-/** @brief Keep card detection defined even when the optional pull-up is not populated. */
+/**
+ * @brief Enable the internal card-detect pull-up when the PCB external pull-up is DNP.
+ */
 static esp_err_t sd_configure_detect(void)
 {
     const gpio_config_t detect = {.pin_bit_mask = UINT64_C(1) << CONFIG_PROBE_SD_DETECT_GPIO,
@@ -51,11 +60,19 @@ static esp_err_t sd_configure_detect(void)
     return gpio_config(&detect);
 }
 
+/**
+ * @brief Read the active-low mechanical card-detect contact.
+ * @return true when the configured detect GPIO reads low.
+ */
 static bool sd_present(void)
 {
     return gpio_get_level((gpio_num_t)CONFIG_PROBE_SD_DETECT_GPIO) == 0;
 }
 
+/**
+ * @brief Acquire the SD mutex with a one-second maximum task wait.
+ * @return ESP_OK, ESP_ERR_TIMEOUT or ESP_ERR_INVALID_STATE before initialization.
+ */
 static esp_err_t sd_lock(void)
 {
     esp_err_t result = ESP_ERR_INVALID_STATE;
@@ -67,13 +84,24 @@ static esp_err_t sd_lock(void)
     return result;
 }
 
+/**
+ * @brief Check whether any completed mount stage still needs cleanup.
+ * @return true if bus, device, disk, VFS or FAT ownership remains.
+ * @pre Caller holds the SD mutex.
+ */
 static bool sd_resources_owned(void)
 {
     return sd_bus_initialized || sd_device_initialized || sd_disk_registered || sd_vfs_registered ||
            sd_fat_registered;
 }
 
-/** @brief Release only completed ownership stages, keeping failed stages for another attempt. */
+/**
+ * @brief Release completed ownership stages in reverse dependency order.
+ * @return ESP_OK when cleanup succeeds; otherwise the recorded cleanup error.
+ * @pre Caller holds the SD mutex, or startup has exclusive access.
+ * @note Stages still owned after a failure remain available for retry. The pull-up is restored
+ *       because device deinitialization can clear its GPIO configuration.
+ */
 static esp_err_t sd_cleanup_locked(void)
 {
     esp_err_t result = ESP_OK;
@@ -138,6 +166,11 @@ static esp_err_t sd_cleanup_locked(void)
     return result;
 }
 
+/**
+ * @brief Validate card presence and clean up a removed card before an operation.
+ * @return ESP_OK when mounted, NOT_FOUND when absent, or a state/cleanup error.
+ * @pre Caller holds the SD mutex.
+ */
 static esp_err_t sd_require_mounted_locked(void)
 {
     esp_err_t result = ESP_OK;
@@ -156,7 +189,12 @@ static esp_err_t sd_require_mounted_locked(void)
     return result;
 }
 
-/** @brief Observe removal after closing all file handles, then publish the operation result. */
+/**
+ * @brief Recheck removal, record the operation result and release the SD mutex.
+ * @param[in] result Result from the completed operation.
+ * @return Final operation or removal/cleanup error.
+ * @pre All file and directory handles are closed and the caller holds the SD mutex.
+ */
 static esp_err_t sd_finish_locked(esp_err_t result)
 {
     if (!sd_present())
@@ -169,7 +207,9 @@ static esp_err_t sd_finish_locked(esp_err_t result)
     return result;
 }
 
-/** @brief Attach and initialize one component-owned card without allocating its descriptor. */
+/**
+ * @brief Acquire SPI2 and its SDSPI device, then initialize the static card descriptor.
+ */
 static esp_err_t sd_initialize_card_locked(void)
 {
     const spi_bus_config_t bus = {.mosi_io_num = CONFIG_PROBE_SD_MOSI_GPIO,
@@ -209,7 +249,9 @@ static esp_err_t sd_initialize_card_locked(void)
     return result;
 }
 
-/** @brief Register disk I/O and VFS before mounting an existing FAT filesystem. */
+/**
+ * @brief Register disk and VFS ownership before mounting an existing FAT filesystem.
+ */
 static esp_err_t sd_register_fat_locked(void)
 {
     esp_err_t result = ff_diskio_get_drive(&sd_drive);
@@ -253,6 +295,11 @@ static esp_err_t sd_register_fat_locked(void)
     return result;
 }
 
+/**
+ * @brief Keep a valid mount or rebuild the mount stages after previous cleanup.
+ * @return ESP_OK when mounted, NOT_FOUND when absent, or an SDK/cleanup error.
+ * @pre Caller holds the SD mutex. A failed stage is unwound without formatting media.
+ */
 static esp_err_t sd_mount_locked(void)
 {
     esp_err_t result = ESP_OK;
@@ -290,7 +337,11 @@ static esp_err_t sd_mount_locked(void)
     return result;
 }
 
-/** @brief Deliberately accept one portable ASCII 8.3 basename without FAT aliases. */
+/**
+ * @brief Validate one portable ASCII 8.3 basename without paths or aliases.
+ * @param[in] name NUL-terminated candidate; NULL is rejected.
+ * @return true for a 1..8 character stem and optional 1..3 character extension.
+ */
 static bool sd_name_valid(const char *name)
 {
     bool extension = false;
@@ -336,6 +387,13 @@ static bool sd_name_valid(const char *name)
     return valid;
 }
 
+/**
+ * @brief Join the mount point and a validated basename without truncation.
+ * @param[in] name Candidate basename using sd_name_valid rules.
+ * @param[out] path Non-NULL caller-owned output buffer.
+ * @param[in] capacity Output capacity in bytes, including the terminator.
+ * @return ESP_OK when the complete path fits, or ESP_ERR_INVALID_ARG.
+ */
 static esp_err_t sd_make_path(const char *name, char *path, size_t capacity)
 {
     esp_err_t result = ESP_ERR_INVALID_ARG;
@@ -350,6 +408,11 @@ static esp_err_t sd_make_path(const char *name, char *path, size_t capacity)
     return result;
 }
 
+/**
+ * @brief Translate selected errno values into the SD public error vocabulary.
+ * @param[in] error Saved errno from the failed filesystem operation.
+ * @return A matching ESP_ERR_* value, or ESP_FAIL for other errors.
+ */
 static esp_err_t sd_io_error(int error)
 {
     esp_err_t result = ESP_FAIL;
@@ -372,7 +435,15 @@ static esp_err_t sd_io_error(int error)
     return result;
 }
 
-/** @brief Return complete names only; callers never receive a truncated filename. */
+/**
+ * @brief Scan at most 32 directory records and return only complete supported names.
+ * @param[out] entries Caller-owned array of at least capacity entries.
+ * @param[in] capacity Maximum entries to publish.
+ * @param[out] count Entry count, written on success.
+ * @param[out] truncated True when entries were skipped or the scan did not exhaust the root.
+ * @return ESP_OK after closing the directory, or a translated filesystem error.
+ * @pre Caller holds the SD mutex and has validated the mount and output buffers.
+ */
 static esp_err_t sd_list_locked(probe_sd_entry_t *entries, size_t capacity, size_t *count,
                                 bool *truncated)
 {
@@ -447,6 +518,9 @@ static esp_err_t sd_list_locked(probe_sd_entry_t *entries, size_t capacity, size
 }
 #endif
 
+/**
+ * @brief Create serialization and card detection, then attempt the initial optional FAT mount.
+ */
 esp_err_t probe_sd_start(void)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;
@@ -473,6 +547,9 @@ esp_err_t probe_sd_start(void)
     return result;
 }
 
+/**
+ * @brief Serialize a mount attempt and publish the final result after checking removal.
+ */
 esp_err_t probe_sd_mount(void)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;
@@ -486,6 +563,9 @@ esp_err_t probe_sd_mount(void)
     return result;
 }
 
+/**
+ * @brief Serialize cleanup and retain ownership flags needed for a failed-stage retry.
+ */
 esp_err_t probe_sd_unmount(void)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;
@@ -501,6 +581,9 @@ esp_err_t probe_sd_unmount(void)
     return result;
 }
 
+/**
+ * @brief Snapshot detect state, capacity and mount ownership after stale-card cleanup.
+ */
 esp_err_t probe_sd_get_status(probe_sd_status_t *status)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;
@@ -532,6 +615,9 @@ esp_err_t probe_sd_get_status(probe_sd_status_t *status)
     return result;
 }
 
+/**
+ * @brief Validate output bounds and serialize a bounded scan of root directory entries.
+ */
 esp_err_t probe_sd_list(probe_sd_entry_t *entries, size_t capacity, size_t *count, bool *truncated)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;
@@ -574,6 +660,9 @@ esp_err_t probe_sd_list(probe_sd_entry_t *entries, size_t capacity, size_t *coun
     return result;
 }
 
+/**
+ * @brief Read a bounded file prefix and close its descriptor before checking card removal.
+ */
 esp_err_t probe_sd_read(const char *name, void *data, size_t capacity, size_t *length,
                         bool *truncated)
 {
@@ -660,6 +749,9 @@ esp_err_t probe_sd_read(const char *name, void *data, size_t capacity, size_t *l
     return result;
 }
 
+/**
+ * @brief Create a new root file exclusively, synchronize it and close before unlocking.
+ */
 esp_err_t probe_sd_write(const char *name, const void *data, size_t length)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;

@@ -1,3 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+<#
+.SYNOPSIS
+Define and initialize the project-local ESP-IDF environment.
+.DESCRIPTION
+Dot-source this file before calling Initialize-ProbeEnvironment. Paths resolve from the script
+location. Initialization updates only this process and generated files under 01_source.
+.NOTES
+File: environment.ps1. Project scripts use process-local environment and repository-local generated files.
+#>
+
 # Shared environment for build and setup scripts; paths are relative to 01_source.
 $probeSourceRoot = Split-Path -Parent $PSScriptRoot
 $probeRepositoryRoot = Split-Path -Parent $probeSourceRoot
@@ -9,6 +21,15 @@ $probePythonBase = Join-Path $probePythonHome 'python.exe'
 $probePythonEnv = Join-Path $probeToolingRoot 'python-env'
 $probePython = Join-Path $probePythonEnv 'Scripts\python.exe'
 
+<#
+.SYNOPSIS
+Validate bundled tooling and initialize process-local ESP-IDF variables.
+.PARAMETER ForSetup
+Allow a missing Python virtual environment while setup prepares it.
+.DESCRIPTION
+Checks required files, repairs a relocated venv base path and writes generated idf-env.json.
+Throws on missing required tooling; callers decide whether to stop their workflow.
+#>
 function Initialize-ProbeEnvironment {
     param([switch]$ForSetup)
 

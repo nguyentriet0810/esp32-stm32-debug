@@ -1,6 +1,12 @@
 # SPDX-FileCopyrightText: 2026 Nguyen Hoang Minh Triet
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+# @file CMakeLists.txt
+# @brief probe_board component registration and dependency visibility.
+#
+# Public dependencies support the exported headers; private dependencies remain implementation
+# details.
+
 idf_component_register(
     SRCS "probe_board.c"
     INCLUDE_DIRS "include"

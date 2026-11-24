@@ -1,10 +1,19 @@
 # SPDX-FileCopyrightText: 2026 Nguyen Hoang Minh Triet
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+# @file project_options.cmake
+# @brief Warnings, C dialect and analyzer settings for project-owned targets.
+#
+# Applies source-level dialect flags after transitive SDK flags; upstream targets keep their own
+# options.
+
 include_guard(GLOBAL)
 
 option(PROBE_ENABLE_GCC_ANALYZER "Run GCC static analysis on project-owned C targets" ON)
 
+# Apply the project C policy to an already registered target.
+# target_name: existing target; optional SDK_ADAPTER permits GNU asm in SDK headers.
+# Side effects: target warnings/analyzer flags and C-source dialect options.
 function(probe_apply_c_options target_name)
     set(probe_c_dialect -std=c17)
     if(ARGC GREATER 1 AND ARGV1 STREQUAL "SDK_ADAPTER")

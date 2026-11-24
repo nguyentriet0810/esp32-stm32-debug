@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_encoder.c @brief Debounced input task; never performs I2C or SWD. */
+/**
+ * @file probe_encoder.c
+ * @brief Queued encoder and button input.
+ *
+ * The sampling task debounces the physical inputs and sends bounded events to the UI queue
+ * without accessing SWD or I2C.
+ */
 #include "probe_encoder.h"
 #include <stdbool.h>
 #include <stdint.h>
@@ -15,6 +21,11 @@
 #include "probe_encoder_decode.h"
 #if CONFIG_PROBE_ENCODER_ENABLE
 static QueueHandle_t event_queue;
+/**
+ * @brief Send one input event without blocking the sampling task.
+ * @param[in] event Event copied to the caller-owned UI queue.
+ * @note A full queue drops the new event and emits an overflow diagnostic.
+ */
 static void encoder_emit(probe_encoder_event_t event)
 {
     if (xQueueSend(event_queue, &event, 0U) != pdTRUE)
@@ -22,11 +33,21 @@ static void encoder_emit(probe_encoder_event_t event)
         ESP_LOGW("probe_encoder", "UI input queue overflow");
     }
 }
+/**
+ * @brief Pack GPIO A into bit 1 and GPIO B into bit 0.
+ * @return Current two-bit quadrature sample, 0..3.
+ */
 static uint8_t encoder_sample(void)
 {
     return (uint8_t)(((uint32_t)gpio_get_level(CONFIG_PROBE_ENCODER_A_GPIO) << 1U) |
                      (uint32_t)gpio_get_level(CONFIG_PROBE_ENCODER_B_GPIO));
 }
+/**
+ * @brief Poll quadrature and debounce active-low button transitions on core 0.
+ * @param[in] context Unused FreeRTOS task argument.
+ * @note Uses a 1 ms sampling period, 20 ms button debounce and a 750 ms hold event.
+ *       A hold suppresses the release-click event for that press.
+ */
 static void encoder_task(void *context)
 {
     (void)context;
@@ -77,6 +98,9 @@ static void encoder_task(void *context)
     }
 }
 #endif
+/**
+ * @brief Configure pull-up inputs and start sampling into the caller-owned queue.
+ */
 esp_err_t probe_encoder_start(QueueHandle_t events)
 {
     esp_err_t result = ESP_ERR_INVALID_ARG;

@@ -1,3 +1,9 @@
+# @file python-requirements.lock.txt
+# @brief Pinned Python packages for the local development environment.
+#
+# Installed by tools/setup.ps1. Exact package versions support reproducible tooling and are
+# independent of firmware runtime behavior.
+
 # Reference environment: Python 3.11.2, ESP-IDF v6.1, Windows x64.
 annotated-types==0.8.0
 boolean.py==5.0

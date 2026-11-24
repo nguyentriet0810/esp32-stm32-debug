@@ -3,14 +3,21 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_encoder_decode.h @brief Pure full-step decoder; AB=3 is the idle detent. */
+/**
+ * @file probe_encoder_decode.h
+ * @brief Platform-independent quadrature decoder contract.
+ *
+ * Each caller owns and serializes its decoder state. Samples contain two AB bits; output is a
+ * signed full-detent count.
+ */
 #ifndef PROBE_ENCODER_DECODE_H
 #define PROBE_ENCODER_DECODE_H
 #include <stdint.h>
+/** @brief Caller-owned history for one independent quadrature input. */
 typedef struct
 {
-    uint8_t previous;
-    int8_t accumulator;
+    uint8_t previous;   /**< Previous AB sample; initialize to idle code 3. */
+    int8_t accumulator; /**< Signed edge count since the last detent; initialize to 0. */
 } probe_encoder_decoder_t;
 /**
  * @brief Feed one 2-bit AB sample; four valid edges returning to AB=3 form one detent.

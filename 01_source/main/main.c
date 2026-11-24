@@ -5,7 +5,10 @@
 
 /**
  * @file main.c
- * @brief Application startup and board validation policy.
+ * @brief Firmware entry point and startup policy.
+ *
+ * Validates the board, prepares NVS and starts network, debug, local UI, SD and console
+ * services. The application decides which startup failures are fatal.
  */
 
 #include "probe_board.h"
@@ -21,6 +24,12 @@
 #include "probe_sd.h"
 
 /* ESP-IDF invokes this externally visible entry point from its main task. */
+/**
+ * @brief Validate the board and start the application services in dependency order.
+ * @pre ESP-IDF startup has initialized memory and the configured console.
+ * @note Runs in the ESP-IDF main task. A missing or failed SD mount is logged and startup
+ *       continues; required service errors use the application fatal-error policy.
+ */
 void app_main(void);
 
 /** @brief Validate the board before any probe service can start. */

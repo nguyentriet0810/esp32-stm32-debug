@@ -1,4 +1,18 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
+<#
+.SYNOPSIS
+Open the ESP32 firmware workspace using its dedicated VS Code profile.
+.DESCRIPTION
+Resolve the VS Code CLI, materialize local ESP-IDF paths from the workspace template
+and open the workspace with the ESP32 Probe profile. Preserve unrelated local folder
+settings. The generated settings file is ignored by Git and no extension is installed.
+.EXAMPLE
+.\open-vscode.ps1
+.NOTES
+Run again after relocating the repository to refresh absolute SDK paths. An absent
+profile is created empty by VS Code; install the workspace's recommended extensions there.
+#>
+
 # Open this project's workspace with its dedicated VS Code profile.
 $ErrorActionPreference = 'Stop'
 

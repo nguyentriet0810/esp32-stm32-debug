@@ -5,7 +5,10 @@
 
 /**
  * @file probe_debug.h
- * @brief Single-owner GDB/SWD service. Public calls are task-context only.
+ * @brief Single-owner GDB and SWD service API.
+ *
+ * The core-0 listener transfers accepted sockets to a core-1 owner. Only that owner touches the
+ * Black Magic Debug backend and the target GPIO.
  */
 #ifndef PROBE_DEBUG_H
 #define PROBE_DEBUG_H
@@ -20,10 +23,14 @@
  */
 esp_err_t probe_debug_start(void);
 /**
- * @brief Queue a new clock; the owner applies it between sessions.
- * @param[in] hz Requested frequency, 1000..8000000 Hz, clamped to the calibrated port limit.
- * @return ESP_OK if queued, INVALID_STATE while busy, INVALID_ARG out of range,
- *         TIMEOUT if the command queue is full. Task context only; no persistence.
+ * @brief Queue a nominal SWD clock for the owner to apply between sessions.
+ * @param[in] hz Requested frequency, 1000..8000000 Hz; the port also clamps to its limit.
+ * @retval ESP_OK The request was queued, not necessarily applied before return.
+ * @retval ESP_ERR_INVALID_STATE A configuration reservation or GDB session is active.
+ * @retval ESP_ERR_INVALID_ARG The clock is out of range or the command queue is unavailable.
+ * @retval ESP_ERR_TIMEOUT The nonblocking queue send failed.
+ * @pre probe_debug_start has completed. Call from task context.
+ * @note Does not persist the selection in NVS.
  */
 esp_err_t probe_debug_set_clock(uint32_t hz);
 /**
@@ -32,6 +39,11 @@ esp_err_t probe_debug_set_clock(uint32_t hz);
  * @note A successful acquisition must be paired with unlock even if configuration fails.
  */
 bool probe_debug_configuration_lock(void);
-/** @brief Release a configuration reservation held by the calling task. */
+/**
+ * @brief Release the idle-state reservation acquired for configuration.
+ * @pre The calling task successfully acquired probe_debug_configuration_lock.
+ * @note Task context only. Pair every successful lock with exactly one unlock, including
+ *       configuration error paths. The reservation is not a recursive mutex.
+ */
 void probe_debug_configuration_unlock(void);
 #endif

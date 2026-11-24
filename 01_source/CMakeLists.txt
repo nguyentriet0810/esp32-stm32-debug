@@ -1,6 +1,11 @@
 # SPDX-FileCopyrightText: 2026 Nguyen Hoang Minh Triet
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+# @file CMakeLists.txt
+# @brief ESP-IDF firmware project and required SDK/target validation.
+#
+# Rejects incompatible SDK versions and targets before configuring project components.
+
 cmake_minimum_required(VERSION 3.22)
 
 if(NOT DEFINED ENV{IDF_PATH})

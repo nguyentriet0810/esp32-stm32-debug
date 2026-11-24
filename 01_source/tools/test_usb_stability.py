@@ -29,6 +29,11 @@ PANIC_PATTERN = re.compile(
 
 
 def main():
+    """Measure live USB continuity, reopen cycles and read-only flash integrity.
+
+    CLI bounds limit duration/cycles/reads. The flash-read phase enters ROM and runs
+    a RAM stub before resetting; logs and a JSON summary are saved under --output.
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--serial-identity", required=True)
     parser.add_argument("--duration", type=float, default=300)
@@ -54,11 +59,13 @@ def main():
     phase_data = {}
 
     def event(kind, **details):
+        """Append and print a timestamped measurement event with caller-supplied fields."""
         record = {"at_s": round(time.monotonic() - start, 3), "kind": kind, **details}
         summary["events"].append(record)
         print(json.dumps(record), flush=True)
 
     def find_port():
+        """Return the unique matching USB serial device, or None while absent/ambiguous."""
         matches = [p for p in list_ports.comports()
                    if p.vid == 0x303A and p.pid == 0x1001
                    and (p.serial_number or "").upper() == identity]
@@ -70,6 +77,11 @@ def main():
         return name
 
     def open_port(name):
+        """Open the named serial port with DTR/RTS deasserted and bounded read/write timeouts.
+
+        Returns:
+            An owned Serial object that the phase must close, including on failure.
+        """
         connection = serial.Serial(port=None, baudrate=115200, timeout=0.05, write_timeout=2)
         connection.dtr = False
         connection.rts = False
@@ -78,6 +90,14 @@ def main():
         return connection
 
     def save_phase(name, data):
+        """Save raw phase bytes and return byte/boot/panic observation counts.
+
+        Args:
+            name: Phase basename under the selected output directory.
+            data: Captured bytes, preserved verbatim in the phase log.
+        Returns:
+            A new dictionary of counts; decoded text is retained for summary evaluation.
+        """
         text = bytes(data).decode("utf-8", errors="replace")
         (args.output / f"{name}.log").write_bytes(data)
         phase_data[name] = text

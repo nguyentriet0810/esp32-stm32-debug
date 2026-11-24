@@ -14,6 +14,14 @@ from test_gdb_transport import Remote
 
 
 def collect(port, seconds):
+    """Read serial data until a monotonic deadline and decode with replacement.
+
+    Args:
+        port: Caller-owned serial port with a finite read timeout.
+        seconds: Collection duration in seconds.
+    Returns:
+        Captured UTF-8 text without changing port ownership.
+    """
     deadline = time.monotonic() + seconds
     data = bytearray()
     while time.monotonic() < deadline:
@@ -22,12 +30,25 @@ def collect(port, seconds):
 
 
 def command(port, text):
+    """Send one ASCII console line, flush it and collect the following response.
+
+    Args:
+        port: Caller-owned open serial connection.
+        text: Console command without a trailing newline.
+    Returns:
+        Text captured during the response window.
+    """
     port.write((text + "\n").encode("ascii"))
     port.flush()
     return collect(port, 1)
 
 
 def main():
+    """Check persisted Wi-Fi and idle/busy clock behavior on a live probe.
+
+    May reboot when requested, opens a GDB session, changes the SWD clock and writes
+    a diagnostic log. Expected clock restoration is part of the successful test path.
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--serial", required=True)
     parser.add_argument("--ssid", required=True)

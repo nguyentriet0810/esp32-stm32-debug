@@ -1,3 +1,9 @@
+# @file espidf.constraints.v6.1.txt
+# @brief ESP-IDF Python dependency compatibility constraints.
+#
+# Consumed by the SDK dependency checker. Requirement bounds and upstream explanatory comments are
+# preserved.
+
 # --------- CORE ----------
 
 # setuptools: version 64 is required to support PEP 621 - pyproject.toml (with editable installs)

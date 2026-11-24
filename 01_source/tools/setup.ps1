@@ -1,3 +1,19 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+<#
+.SYNOPSIS
+Restore the pinned SDK/backend and prepare local ESP32 build tools.
+.DESCRIPTION
+May copy a supplied Python runtime, download/install tools and packages, and generate local
+environment state. Fails when a dependency checkout differs from tooling.lock.json.
+.PARAMETER PythonHome
+Existing Python 3.11 Windows x64 installation copied only when the bundled runtime is missing.
+.EXAMPLE
+.\01_source\tools\setup.ps1 -PythonHome C:\Python311
+.NOTES
+File: setup.ps1. Project scripts use process-local environment and repository-local generated files.
+#>
+
 param(
     # Required on a fresh clone unless .tooling/python has been restored separately.
     [string]$PythonHome

@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_console.c @brief Serial provisioning and observable service diagnostics. */
+/**
+ * @file probe_console.c
+ * @brief Bounded serial command console.
+ *
+ * Consumes ESP-IDF stdin/stdout, so the selected UART or USB console is shared with diagnostics.
+ * Commands run in the console task; input is not echoed.
+ */
 #include "probe_console.h"
 #include <errno.h>
 #include <inttypes.h>
@@ -19,6 +25,9 @@
 #include "probe_network.h"
 #include "probe_state.h"
 #include "probe_sd.h"
+/**
+ * @brief Print a serialized card-state snapshot or its diagnostic error.
+ */
 static void console_sd_status(void)
 {
     probe_sd_status_t sd = {0};
@@ -34,6 +43,11 @@ static void console_sd_status(void)
         (void)printf("SD_STATUS %s\n", esp_err_to_name(result));
     }
 }
+/**
+ * @brief Parse local SD commands and print bounded, escaped results.
+ * @param[in,out] argument Mutable NUL-terminated suffix of the console command.
+ * @note Splits name|payload in place; file operations retain the SD component limits.
+ */
 static void console_sd_command(char *argument)
 {
     if ((argument[0] == '\0') || (strcmp(argument, "status") == 0))
@@ -111,6 +125,9 @@ static void console_sd_command(char *argument)
                      "sd write <8.3-name>|<text>\n");
     }
 }
+/**
+ * @brief Combine service snapshots, SD state and free internal heap for diagnostics.
+ */
 static void console_status(void)
 {
     probe_state_t state = {0};
@@ -134,6 +151,11 @@ static void console_status(void)
                  state.oled_present ? "ONLINE" : "OFFLINE", state.target_errors,
                  heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT), sd_status);
 }
+/**
+ * @brief Dispatch one complete local command and flush its console response.
+ * @param[in,out] line Mutable NUL-terminated command; token separators may be overwritten.
+ * @note Wi-Fi provisioning reserves idle debug state and releases it on completion.
+ */
 static void console_command(char *line)
 {
     if (strcmp(line, "status") == 0)
@@ -214,6 +236,12 @@ static void console_command(char *line)
     }
     (void)fflush(stdout);
 }
+/**
+ * @brief Collect bounded input lines from the configured ESP-IDF console.
+ * @param[in] context Unused FreeRTOS task argument.
+ * @note Drops an overflowing line until its terminator; input is never echoed and the
+ *       line buffer is cleared after each command to discard credential text.
+ */
 static void console_task(void *context)
 {
     (void)context;
@@ -250,6 +278,9 @@ static void console_task(void *context)
         }
     }
 }
+/**
+ * @brief Create the core-0 console task after required services are initialized.
+ */
 esp_err_t probe_console_start(void)
 {
     return (xTaskCreatePinnedToCore(console_task, "console", 6144U, NULL, 2U, NULL, 0) == pdPASS)

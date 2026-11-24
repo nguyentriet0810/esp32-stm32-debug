@@ -1,3 +1,16 @@
+<#
+.SYNOPSIS
+Activate the local development tools in an interactive PowerShell session.
+.DESCRIPTION
+Dot-source this script to export process-local tool paths and define idf.py as the dev.ps1
+wrapper. Preserves the caller directory and error preference; no permanent PATH setting is
+written.
+.EXAMPLE
+. .\01_source\tools\terminal.ps1
+.NOTES
+File: terminal.ps1. Project scripts use process-local environment and repository-local generated files.
+#>
+
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Activate the project's local ESP-IDF tools in the current PowerShell process.
 # Dot-source this file; no user settings or permanent PATH entries are changed.

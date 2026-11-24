@@ -5,7 +5,9 @@
 
 /**
  * @file probe_board.c
- * @brief ESP-IDF adapter for validating the selected N16R8 board profile.
+ * @brief N16R8 hardware validation.
+ *
+ * Checks the chip, flash, PSRAM and PCB pin ownership before application services start.
  */
 
 #include "probe_board.h"
@@ -24,7 +26,10 @@
 
 static const char probe_board_log_tag[] = "probe_board";
 
-/** @brief Reject pin overlap and pins reserved by the N16R8 board profile. */
+/**
+ * @brief Reject overlapping GPIO assignments and pins reserved by the N16R8 profile.
+ * @return ESP_OK for valid enabled assignments, or ESP_ERR_INVALID_ARG.
+ */
 static esp_err_t probe_board_check_pins(void)
 {
     const int pins[] = {
@@ -79,7 +84,10 @@ static esp_err_t probe_board_check_pins(void)
     return result;
 }
 
-/** @brief Read both flash sizes before comparing them with the board profile. */
+/**
+ * @brief Compare physical and configured flash geometry with the 16 MiB profile.
+ * @return ESP_OK, ESP_ERR_INVALID_SIZE, or an unmodified flash-driver error.
+ */
 static esp_err_t probe_board_check_flash(void)
 {
     const uint32_t expected_flash_bytes = UINT32_C(16777216); /* 16 MiB. */
@@ -108,7 +116,10 @@ static esp_err_t probe_board_check_flash(void)
     return result;
 }
 
-/** @brief Check readiness before asking the SDK for the attached PSRAM capacity. */
+/**
+ * @brief Check startup PSRAM initialization and its required 8 MiB capacity.
+ * @return ESP_OK, ESP_ERR_INVALID_STATE when unavailable, or ESP_ERR_INVALID_SIZE.
+ */
 static esp_err_t probe_board_check_psram(void)
 {
     const size_t expected_psram_bytes = (size_t)8388608U; /* 8 MiB. */
@@ -134,6 +145,9 @@ static esp_err_t probe_board_check_psram(void)
     return result;
 }
 
+/**
+ * @brief Validate memory, chip identity and PCB pin ownership before services start.
+ */
 esp_err_t probe_board_check(void)
 {
     const uint8_t expected_core_count = (uint8_t)2U;

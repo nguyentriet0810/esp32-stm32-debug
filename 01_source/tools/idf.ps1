@@ -1,3 +1,17 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+<#
+.SYNOPSIS
+Run ESP-IDF actions using the pinned local SDK and toolchain.
+.DESCRIPTION
+Forwards remaining command-line arguments to idf.py; no arguments means build. Activates process-
+local tools, restores the previous directory and returns the SDK exit code.
+.EXAMPLE
+.\01_source\tools\idf.ps1 build
+.NOTES
+File: idf.ps1. Project scripts use process-local environment and repository-local generated files.
+#>
+
 # Forward all arguments directly to the project's local ESP-IDF installation.
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'environment.ps1')

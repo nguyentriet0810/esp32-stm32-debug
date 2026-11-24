@@ -1,4 +1,12 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
+
+/**
+ * @file sdkconfig.h
+ * @brief Deterministic PCB configuration for SD host tests.
+ *
+ * Pins match the PCB SD interface; the build selects CONFIG_PROBE_SD_ENABLE to exercise both
+ * feature branches. Test-only header; not used in firmware builds.
+ */
 #ifndef SD_TEST_SDKCONFIG_H
 #define SD_TEST_SDKCONFIG_H
 #ifndef CONFIG_PROBE_SD_ENABLE

@@ -12,21 +12,39 @@ class Remote:
     """Minimal acknowledged RSP client with checksum verification."""
 
     def __init__(self, host, port):
+        """Open one live TCP RSP session and initialize acknowledged packet mode.
+
+        Args:
+            host: Probe hostname or IP address.
+            port: Probe GDB TCP port.
+        Raises:
+            OSError: Connection setup fails; socket operations use five-second timeouts.
+        """
         self.connection = socket.create_connection((host, port), timeout=5)
         self.connection.settimeout(5)
         self.console = []
         self.acknowledge = True
 
     def close(self):
+        """Close the owned TCP socket; the caller must also close on assertion failure."""
         self.connection.close()
 
     def byte(self):
+        """Receive one byte, raising ConnectionError if the peer has closed the session."""
         value = self.connection.recv(1)
         if not value:
             raise ConnectionError("Probe closed the RSP connection")
         return value
 
     def reply(self):
+        """Validate a reply checksum and collect console packets until a response arrives.
+
+        Returns:
+            Response payload bytes without framing.
+        Raises:
+            AssertionError: Framing/checksum is invalid or a valid command was rejected.
+            OSError: Receive/acknowledgement fails or times out.
+        """
         while True:
             lead = self.byte()
             if lead in (b"+", b"-"):
@@ -50,6 +68,14 @@ class Remote:
             return bytes(payload)
 
     def command(self, payload, fragmented=False):
+        """Send one ASCII RSP command and return its validated response payload.
+
+        Args:
+            payload: Unframed ASCII command text.
+            fragmented: Send three-byte fragments to exercise TCP stream reconstruction.
+        Returns:
+            Response bytes; asynchronous console text is appended to self.console.
+        """
         payload = payload.encode("ascii")
         packet = b"$" + payload + f"#{sum(payload) % 256:02x}".encode("ascii")
         if fragmented:
@@ -62,6 +88,11 @@ class Remote:
 
 
 def main():
+    """Exercise packet checksums, session exclusivity, SWD scan and reconnect behavior.
+
+    Requires a live probe; SWD scan may drive the target interface. Assertion and socket
+    errors propagate to fail the test process, and opened sessions are closed in finally.
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("host")
     parser.add_argument("--port", type=int, default=2022)

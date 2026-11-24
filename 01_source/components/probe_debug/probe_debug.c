@@ -5,7 +5,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * TCP/GDB poll loop adapted from MCUViewer-probe at 02755f4.
  */
-/** @file probe_debug.c @brief Single-owner core-1 backend and core-0 TCP acceptor. */
+/**
+ * @file probe_debug.c
+ * @brief Single-owner GDB and SWD service.
+ *
+ * The core-0 listener transfers accepted sockets to a core-1 owner. Only that owner touches the
+ * Black Magic Debug backend and the target GPIO.
+ */
 #include "probe_debug.h"
 #include <errno.h>
 #include <limits.h>
@@ -26,14 +32,17 @@
 #include "gdb_main.h"
 #include "gdb_packet.h"
 #include "target_internal.h"
+/** @brief Queue message transferring a client socket or an idle clock request. */
 typedef struct
 {
-    int socket;
-    uint32_t clock_hz;
+    int socket;        /**< Accepted socket transferred to the owner, or -1 for a clock command. */
+    uint32_t clock_hz; /**< Requested Hz, used only when socket is negative. */
 } debug_command_t;
 static QueueHandle_t command_queue;
 static QueueHandle_t startup_queue;
+/* Shared atomic reservation excludes concurrent GDB sessions and configuration changes. */
 static atomic_bool debug_busy;
+/* The socket and all transport buffers below belong exclusively to the core-1 owner. */
 static int client_socket = -1;
 static bool eot_pending;
 static uint8_t rx_buffer[1024];
@@ -41,6 +50,9 @@ static size_t rx_length;
 static size_t rx_index;
 static uint8_t tx_buffer[1024];
 static size_t tx_length;
+/**
+ * @brief Close the owner-held socket, discard buffered bytes and signal end of transport.
+ */
 static void debug_disconnect(void)
 {
     if (client_socket >= 0)
@@ -54,6 +66,12 @@ static void debug_disconnect(void)
     tx_length = 0U;
     eot_pending = true;
 }
+/**
+ * @brief Wait for one TCP chunk and refill the owner-private receive buffer.
+ * @param[in] timeout_ms Maximum select wait in milliseconds.
+ * @return true when bytes were read; false on timeout, interruption or disconnect.
+ * @note A terminal socket error closes the session and leaves an EOT for the backend.
+ */
 static bool debug_receive(uint32_t timeout_ms)
 {
     bool received = false;
@@ -86,10 +104,19 @@ static bool debug_receive(uint32_t timeout_ms)
     }
     return received;
 }
+/**
+ * @brief Satisfy the BMD initialization hook; sockets are owned by the service tasks.
+ * @return Zero; this hook does not allocate or open a transport.
+ */
 int gdb_if_init(void)
 {
     return 0;
 }
+/**
+ * @brief Read a buffered GDB byte, waiting while the session remains connected.
+ * @return The next byte, or EOT (0x04) when the connection ends.
+ * @note Core-1 owner only; consuming pending EOT lets the owner release the session.
+ */
 char gdb_if_getchar(void)
 {
     while ((!eot_pending) && (rx_index >= rx_length) && (client_socket >= 0))
@@ -107,6 +134,12 @@ char gdb_if_getchar(void)
     }
     return value;
 }
+/**
+ * @brief Read a GDB byte with a bounded receive wait.
+ * @param[in] timeout Wait in milliseconds, clamped to INT32_MAX.
+ * @return The next byte, EOT on disconnect, or (char)-1 when no byte is available.
+ * @note Pending EOT remains set for the blocking receive path to consume.
+ */
 char gdb_if_getchar_to(uint32_t timeout)
 {
     char value = (char)-1;
@@ -131,6 +164,11 @@ char gdb_if_getchar_to(uint32_t timeout)
     }
     return value;
 }
+/**
+ * @brief Drain the owner-private transmit buffer to the connected socket.
+ * @param[in] force Backend hint; this transport flushes identically for either value.
+ * @note Handles partial writes and EINTR; a terminal send error disconnects the client.
+ */
 void gdb_if_flush(bool force)
 {
     (void)force;
@@ -149,6 +187,12 @@ void gdb_if_flush(bool force)
     }
     tx_length = 0U;
 }
+/**
+ * @brief Buffer one GDB byte and flush on request or when the buffer is full.
+ * @param[in] value Byte to send; ignored when no client is connected.
+ * @param[in] flush True to send buffered output before returning.
+ * @note Core-1 owner only; socket send may block up to its configured timeout.
+ */
 void gdb_if_putchar(char value, bool flush)
 {
     if (client_socket >= 0)
@@ -160,6 +204,9 @@ void gdb_if_putchar(char value, bool flush)
         }
     }
 }
+/**
+ * @brief Poll a running target, honor interrupt/EOT and dispatch the next RSP packet.
+ */
 static void debug_poll(void)
 {
     while (gdb_target_running && (cur_target != NULL))
@@ -180,6 +227,12 @@ static void debug_poll(void)
     probe_state_debug(client_socket >= 0, gdb_target_running,
                       (cur_target != NULL) ? cur_target->driver : "");
 }
+/**
+ * @brief Own SWD GPIO, backend state and each accepted GDB session on core 1.
+ * @param[in] context Unused FreeRTOS task argument.
+ * @note Publishes GPIO initialization before accepting work. BMD exception recovery stays
+ *       inside this task so non-local jumps never cross project locks or task boundaries.
+ */
 static void debug_owner(void *context)
 {
     (void)context;
@@ -254,6 +307,11 @@ static void debug_owner(void *context)
         }
     }
 }
+/**
+ * @brief Accept TCP clients on core 0 and transfer exclusive session ownership.
+ * @param[in] context Unused FreeRTOS task argument.
+ * @note Rejects competing clients and closes sockets whose queue handoff fails.
+ */
 static void debug_listener(void *context)
 {
     (void)context;
@@ -321,6 +379,9 @@ static void debug_listener(void *context)
         }
     }
 }
+/**
+ * @brief Allocate command queues, await SWD initialization and launch the TCP listener.
+ */
 esp_err_t probe_debug_start(void)
 {
     command_queue = xQueueCreate(4U, sizeof(debug_command_t));
@@ -351,6 +412,9 @@ esp_err_t probe_debug_start(void)
     }
     return result;
 }
+/**
+ * @brief Validate and enqueue a clock request while the debug service is idle.
+ */
 esp_err_t probe_debug_set_clock(uint32_t hz)
 {
     esp_err_t result = ESP_ERR_INVALID_ARG;
@@ -368,11 +432,17 @@ esp_err_t probe_debug_set_clock(uint32_t hz)
     }
     return result;
 }
+/**
+ * @brief Atomically reserve the same idle flag used by incoming GDB sessions.
+ */
 bool probe_debug_configuration_lock(void)
 {
     bool expected = false;
     return atomic_compare_exchange_strong(&debug_busy, &expected, true);
 }
+/**
+ * @brief Release a successfully acquired configuration reservation.
+ */
 void probe_debug_configuration_unlock(void)
 {
     atomic_store(&debug_busy, false);

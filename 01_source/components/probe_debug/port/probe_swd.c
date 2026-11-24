@@ -6,7 +6,13 @@
  * C adaptation of MCUViewer-probe Platform/SwdTap.cpp, commit
  * 02755f409634f0874fb087b720d8883ef6f65dd8. Only the core-1 owner calls this port.
  */
-/** @file probe_swd.c @brief Dedicated GPIO SWD with cycle-counted half-periods. */
+/**
+ * @file probe_swd.c
+ * @brief Cycle-counted dedicated-GPIO SWD port.
+ *
+ * All calls belong to the core-1 debug owner. Tight edge-generation loops use IRAM and cycle
+ * counters; they perform no allocation, logging or task synchronization.
+ */
 #include "probe_port.h"
 #include <inttypes.h>
 #include <stddef.h>
@@ -36,7 +42,13 @@ static uint32_t fastest_hz;
 static bool data_driven;
 static dedic_gpio_bundle_handle_t gpio_bundle;
 swd_proc_s swd_proc;
-/** @brief Modular cycle deadline; delays resynchronize rather than compressing pulses. */
+/**
+ * @brief Wait for a modular CPU-cycle deadline without compressing delayed pulses.
+ * @param[in] edge Previous edge timestamp in CPU cycles.
+ * @param[in] half Requested half-period in CPU cycles; zero uses the fastest loop.
+ * @return Actual or scheduled edge timestamp for the next half-period.
+ * @pre Deadlines span less than half the 32-bit cycle-counter range.
+ */
 static inline __attribute__((always_inline)) uint32_t swd_wait(uint32_t edge, uint32_t half)
 {
     uint32_t now;
@@ -51,6 +63,13 @@ static inline __attribute__((always_inline)) uint32_t swd_wait(uint32_t edge, ui
     }
     return edge;
 }
+/**
+ * @brief Shift output bits LSB-first with low/high SWCLK half-periods.
+ * @param[in] value Low bits to transmit; zero bits follow after the value is exhausted.
+ * @param[in] cycles Number of clock cycles.
+ * @param[in] half Half-period in CPU cycles.
+ * @pre The core-1 owner has configured and enabled the dedicated GPIO bundle.
+ */
 static IRAM_ATTR void swd_output(uint32_t value, size_t cycles, uint32_t half)
 {
     uint32_t edge = esp_cpu_get_cycle_count();
@@ -64,6 +83,13 @@ static IRAM_ATTR void swd_output(uint32_t value, size_t cycles, uint32_t half)
     }
     dedic_gpio_cpu_ll_write_mask(clock_mask, 0U);
 }
+/**
+ * @brief Sample SWDIO and assemble at most 32 bits in LSB-first order.
+ * @param[in] cycles Number of input bits, at most 32.
+ * @param[in] half Half-period in CPU cycles.
+ * @return Sampled bits with the first bit in bit zero.
+ * @pre The core-1 owner has released SWDIO for target-driven input.
+ */
 static IRAM_ATTR uint32_t swd_input(size_t cycles, uint32_t half)
 {
     uint32_t edge = esp_cpu_get_cycle_count();
@@ -79,6 +105,12 @@ static IRAM_ATTR uint32_t swd_input(size_t cycles, uint32_t half)
     }
     return value;
 }
+/**
+ * @brief Insert a turnaround clock only when SWDIO ownership changes.
+ * @param[in] drive True for probe-driven output; false for target-driven input.
+ * @param[in] half Half-period in CPU cycles.
+ * @note Releases the output before input turnaround and enables it after output turnaround.
+ */
 static IRAM_ATTR void swd_turnaround(bool drive, uint32_t half)
 {
     if (drive != data_driven)
@@ -99,11 +131,20 @@ static IRAM_ATTR void swd_turnaround(bool drive, uint32_t half)
         }
     }
 }
+/**
+ * @brief Release SWDIO and read a backend-requested bit sequence using the selected clock.
+ */
 static IRAM_ATTR uint32_t swd_read(size_t cycles)
 {
     swd_turnaround(false, half_period);
     return swd_input(cycles, half_period);
 }
+/**
+ * @brief Read data and an even-parity bit, then return SWDIO to output mode.
+ * @param[out] value Non-NULL destination for the sampled word.
+ * @param[in] cycles Number of data bits, at most 32.
+ * @return true when received parity matches the sampled data.
+ */
 static IRAM_ATTR bool swd_read_parity(uint32_t *value, size_t cycles)
 {
     swd_turnaround(false, half_period);
@@ -113,17 +154,26 @@ static IRAM_ATTR bool swd_read_parity(uint32_t *value, size_t cycles)
     *value = data;
     return (uint32_t)__builtin_parity(data) == parity;
 }
+/**
+ * @brief Acquire SWDIO and transmit the requested LSB-first bit sequence.
+ */
 static IRAM_ATTR void swd_write(uint32_t value, size_t cycles)
 {
     swd_turnaround(true, half_period);
     swd_output(value, cycles, half_period);
 }
+/**
+ * @brief Transmit the word followed by its computed even-parity bit.
+ */
 static IRAM_ATTR void swd_write_parity(uint32_t value, size_t cycles)
 {
     swd_turnaround(true, half_period);
     swd_output(value, cycles, half_period);
     swd_output((uint32_t)__builtin_parity(value), 1U, half_period);
 }
+/**
+ * @brief Bind the BMD SWD procedure table to this port without allocating resources.
+ */
 void swdptap_init(void)
 {
     swd_proc.seq_in = swd_read;
@@ -131,6 +181,9 @@ void swdptap_init(void)
     swd_proc.seq_out = swd_write;
     swd_proc.seq_out_parity = swd_write_parity;
 }
+/**
+ * @brief Enable probe SWD outputs or release both pins without changing their pull-ups.
+ */
 void probe_swd_drive(bool enable)
 {
     const uint32_t pins =
@@ -146,6 +199,9 @@ void probe_swd_drive(bool enable)
     }
     data_driven = enable;
 }
+/**
+ * @brief Clamp the requested clock and derive the cycle-counted half-period.
+ */
 void probe_swd_set_frequency(uint32_t hz)
 {
     uint32_t requested = hz;
@@ -160,6 +216,9 @@ void probe_swd_set_frequency(uint32_t hz)
     half_period =
         (requested >= fastest_hz) ? 0U : (cpu_hz + (2U * requested) - 1U) / (2U * requested);
 }
+/**
+ * @brief Return the selected nominal clock limited by startup calibration.
+ */
 uint32_t probe_swd_get_frequency(void)
 {
     uint32_t hz = fastest_hz;
@@ -173,6 +232,12 @@ uint32_t probe_swd_get_frequency(void)
     }
     return hz;
 }
+/**
+ * @brief Bind dedicated GPIO on the owner core and calibrate its fastest output loop.
+ * @return ESP_OK on success or the first GPIO setup error.
+ * @pre Called once by the core-1 debug owner before any backend operation.
+ * @note Calibration runs with GPIO outputs released; it does not intentionally clock a target.
+ */
 esp_err_t probe_port_init(void)
 {
     const int pins[] = {CONFIG_PROBE_SWCLK_GPIO, CONFIG_PROBE_SWDIO_GPIO};

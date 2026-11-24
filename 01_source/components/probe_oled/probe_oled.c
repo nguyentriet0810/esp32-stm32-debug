@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_oled.c @brief Compact 5x7 renderer using the SDK SSD1306 panel driver. */
+/**
+ * @file probe_oled.c
+ * @brief SSD1306 display lifecycle and text rendering.
+ *
+ * A single UI task owns the I2C bus, panel handles and fixed framebuffer. Driver errors are
+ * returned to the caller.
+ */
 #include "probe_oled.h"
 #include <stdbool.h>
 #include <stdint.h>
@@ -19,6 +25,7 @@ static i2c_master_bus_handle_t oled_bus;
 static esp_lcd_panel_io_handle_t oled_io;
 static esp_lcd_panel_handle_t oled_panel;
 static uint8_t frame[1024];
+/** @brief One supported ASCII glyph encoded as five vertical pixel columns. */
 typedef struct
 {
     char character;
@@ -70,6 +77,9 @@ static const glyph_t glyphs[] = {{'0', {0x3e, 0x51, 0x49, 0x45, 0x3e}},
                                  {'?', {2, 1, 0x51, 9, 6}},
                                  {' ', {0, 0, 0, 0, 0}}};
 #if CONFIG_PROBE_OLED_ENABLE
+/**
+ * @brief Release acquired panel, panel-I/O and I2C handles in reverse ownership order.
+ */
 static void oled_release(void)
 {
     if (oled_panel != NULL)
@@ -89,6 +99,9 @@ static void oled_release(void)
     }
 }
 #endif
+/**
+ * @brief Probe supported I2C addresses and initialize the optional SSD1306 panel.
+ */
 esp_err_t probe_oled_init(void)
 {
     esp_err_t result = ESP_ERR_NOT_SUPPORTED;
@@ -148,6 +161,9 @@ esp_err_t probe_oled_init(void)
 #endif
     return result;
 }
+/**
+ * @brief Render supported glyphs into the fixed framebuffer and transfer the whole panel.
+ */
 esp_err_t probe_oled_draw(const char lines[][22], size_t count)
 {
     esp_err_t result = ESP_ERR_INVALID_STATE;
@@ -178,6 +194,9 @@ esp_err_t probe_oled_draw(const char lines[][22], size_t count)
     }
     return result;
 }
+/**
+ * @brief Send a validated SSD1306 contrast command from the display-owning task.
+ */
 esp_err_t probe_oled_contrast(unsigned int value)
 {
     esp_err_t result = ESP_ERR_INVALID_ARG;

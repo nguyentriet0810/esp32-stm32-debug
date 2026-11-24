@@ -1,3 +1,9 @@
+# @file Kconfig
+# @brief PCB hardware profile, optional peripherals and bounded configuration choices.
+#
+# GPIO defaults follow schematic revision C. The board validator checks enabled assignments again
+# at runtime.
+
 # GPIO defaults follow 03_pcb/layout_manual/schematic.kicad_sch (revision C).
 menu "STM32 probe hardware"
 comment "PCB revision C (REV 1.0): fixed GPIO pin map"

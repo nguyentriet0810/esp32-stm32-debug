@@ -1,4 +1,12 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
+
+/**
+ * @file gpio.h
+ * @brief Card-detect GPIO test interface.
+ *
+ * Provides the GPIO configuration fields and calls checked by the active-low detection tests.
+ * Test-only header; not used in firmware builds.
+ */
 #ifndef SD_TEST_GPIO_H
 #define SD_TEST_GPIO_H
 #include <stdint.h>
@@ -17,6 +25,12 @@ typedef struct
 #define GPIO_PULLUP_DISABLE 0
 #define GPIO_PULLDOWN_DISABLE 0
 #define GPIO_INTR_DISABLE 0
+/**
+ * @brief Validate the SD detect GPIO and restore its simulated internal pull-up.
+ */
 esp_err_t gpio_config(const gpio_config_t *config);
+/**
+ * @brief Model active-low insertion and the missing-pull-up cleanup regression.
+ */
 int gpio_get_level(gpio_num_t pin);
 #endif

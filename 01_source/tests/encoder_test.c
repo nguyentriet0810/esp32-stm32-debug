@@ -2,12 +2,24 @@
  * SPDX-FileCopyrightText: 2026 Nguyen Hoang Minh Triet
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-/** @file encoder_test.c @brief Host tests for full-step, bounce and corrupted input. */
+/**
+ * @file encoder_test.c
+ * @brief Host regression tests for the quadrature decoder.
+ *
+ * Exercises direction, contact bounce, incomplete detents and corrupt state using only standard
+ * C. Assertions fail the process when a decoder invariant is violated.
+ */
 #include <assert.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
 #include "probe_encoder_decode.h"
+/**
+ * @brief Sum full detents produced by one independent sample sequence.
+ * @param[in] samples Borrowed array of count AB values.
+ * @param[in] count Number of array elements to consume.
+ * @return Net signed detent count from an initially idle decoder.
+ */
 static int run(const uint8_t *samples, size_t count)
 {
     probe_encoder_decoder_t decoder = {.previous = 3U, .accumulator = 0};
@@ -18,6 +30,10 @@ static int run(const uint8_t *samples, size_t count)
     }
     return result;
 }
+/**
+ * @brief Exercise deterministic edge cases and 10000 pseudo-random decoder samples.
+ * @return Zero if every assertion passes; assertion failure terminates the process.
+ */
 int main(void)
 {
     const uint8_t positive[] = {3U, 1U, 0U, 2U, 3U};

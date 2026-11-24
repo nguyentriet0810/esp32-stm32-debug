@@ -2,7 +2,13 @@
  * SPDX-FileCopyrightText: 2026 Nguyen Hoang Minh Triet
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-/** @file sd_test.c @brief Host fault-injection tests of the production SD component. */
+/**
+ * @file sd_test.c
+ * @brief Host microSD lifecycle and fault-injection test harness.
+ *
+ * Includes the production SD implementation behind in-memory SDK and filesystem doubles.
+ * Ownership assertions and injected failures check cleanup without accessing physical media.
+ */
 #include <assert.h>
 #include <ctype.h>
 #include <dirent.h>
@@ -20,15 +26,45 @@
 #include "esp_vfs_fat.h"
 #include "freertos/semphr.h"
 
+/**
+ * @brief Emulate one open descriptor and enforce create-new writes without overwrite flags.
+ */
 static int test_open(const char *path, int flags, ...);
+/**
+ * @brief Copy fixture bytes and optionally simulate card removal during an open read.
+ */
 static ssize_t test_read(int fd, void *data, size_t length);
+/**
+ * @brief Write fixture bytes with an optional short-write result.
+ */
 static ssize_t test_write(int fd, const void *data, size_t length);
+/**
+ * @brief Release the single simulated file descriptor and count balanced closes.
+ */
 static int test_close(int fd);
+/**
+ * @brief Count synchronization attempts and return the configured injected outcome.
+ */
 static int test_fsync(int fd);
+/**
+ * @brief Return metadata for the currently open fixture descriptor.
+ */
 static int test_fstat(int fd, struct stat *metadata);
+/**
+ * @brief Return fixture metadata by path, or model ENOENT.
+ */
 static int test_stat(const char *path, struct stat *metadata);
+/**
+ * @brief Reset root enumeration after asserting card and bus ownership.
+ */
 static DIR *test_opendir(const char *path);
+/**
+ * @brief Return fixture names in insertion order using one reused directory entry.
+ */
 static struct dirent *test_readdir(DIR *directory);
+/**
+ * @brief Validate the simulated root-directory handle without filesystem I/O.
+ */
 static int test_closedir(DIR *directory);
 
 /* Keep the real filesystem untouched. These shims affect production calls only. */
@@ -54,6 +90,7 @@ static int test_closedir(DIR *directory);
 #undef readdir
 #undef closedir
 
+/** @brief In-memory file fixture, including deliberately oversized/unsupported entries. */
 typedef struct
 {
     char name[64];
@@ -62,6 +99,7 @@ typedef struct
     bool directory;
 } test_file_t;
 
+/* Fixtures, resource flags and fault switches are owned by this single-threaded harness. */
 static test_file_t files[16];
 static size_t file_count;
 static size_t directory_index;
@@ -103,17 +141,26 @@ static bool fail_device_release;
 static bool fail_vfs_release;
 static bool fail_fat_release;
 
+/**
+ * @brief Return a fixed diagnostic label; numeric error identity is asserted separately.
+ */
 const char *esp_err_to_name(esp_err_t error)
 {
     (void)error;
     return "mock error";
 }
 
+/**
+ * @brief Return the address of the single harness-owned mutex token.
+ */
 SemaphoreHandle_t xSemaphoreCreateMutex(void)
 {
     return &mutex_token;
 }
 
+/**
+ * @brief Assert the bounded lock protocol or inject an unavailable-mutex result.
+ */
 BaseType_t xSemaphoreTake(SemaphoreHandle_t mutex, TickType_t ticks)
 {
     assert(mutex == &mutex_token);
@@ -127,6 +174,9 @@ BaseType_t xSemaphoreTake(SemaphoreHandle_t mutex, TickType_t ticks)
     return pdTRUE;
 }
 
+/**
+ * @brief Assert ownership and release the simulated mutex.
+ */
 BaseType_t xSemaphoreGive(SemaphoreHandle_t mutex)
 {
     assert(mutex == &mutex_token);
@@ -135,12 +185,18 @@ BaseType_t xSemaphoreGive(SemaphoreHandle_t mutex)
     return pdTRUE;
 }
 
+/**
+ * @brief Assert that startup deletes only an unlocked harness-owned mutex.
+ */
 void vSemaphoreDelete(SemaphoreHandle_t mutex)
 {
     assert(mutex == &mutex_token);
     assert(!mutex_locked);
 }
 
+/**
+ * @brief Validate the SD detect GPIO and restore its simulated internal pull-up.
+ */
 esp_err_t gpio_config(const gpio_config_t *config)
 {
     assert(config->pin_bit_mask == (UINT64_C(1) << 42U));
@@ -151,6 +207,9 @@ esp_err_t gpio_config(const gpio_config_t *config)
     return ESP_OK;
 }
 
+/**
+ * @brief Model active-low insertion and the missing-pull-up cleanup regression.
+ */
 int gpio_get_level(gpio_num_t pin)
 {
     assert(pin == 42);
@@ -158,6 +217,9 @@ int gpio_get_level(gpio_num_t pin)
     return (inserted || !detect_pullup) ? 0 : 1;
 }
 
+/**
+ * @brief Assert PCB SPI2 pins and exclusive bus acquisition before recording ownership.
+ */
 esp_err_t spi_bus_initialize(spi_host_device_t host, const spi_bus_config_t *config, int dma)
 {
     assert(host == SPI2_HOST);
@@ -170,6 +232,9 @@ esp_err_t spi_bus_initialize(spi_host_device_t host, const spi_bus_config_t *con
     return ESP_OK;
 }
 
+/**
+ * @brief Require device teardown before releasing SPI2, with an optional one-shot failure.
+ */
 esp_err_t spi_bus_free(spi_host_device_t host)
 {
     assert(host == SPI2_HOST);
@@ -185,11 +250,17 @@ esp_err_t spi_bus_free(spi_host_device_t host)
     return ESP_OK;
 }
 
+/**
+ * @brief Provide a successful no-allocation SDSPI host initialization test double.
+ */
 esp_err_t sdspi_host_init(void)
 {
     return ESP_OK;
 }
 
+/**
+ * @brief Validate device pins and transfer one simulated SDSPI handle to the caller.
+ */
 esp_err_t sdspi_host_init_device(const sdspi_device_config_t *device, sdspi_dev_handle_t *handle)
 {
     assert(device->gpio_cs == 38 && device->gpio_cd == 42 && device->gpio_wp == -1);
@@ -201,6 +272,9 @@ esp_err_t sdspi_host_init_device(const sdspi_device_config_t *device, sdspi_dev_
     return ESP_OK;
 }
 
+/**
+ * @brief Validate host timing and populate static geometry unless a failure is injected.
+ */
 esp_err_t sdmmc_card_init(const sdmmc_host_t *host, sdmmc_card_t *card)
 {
     assert(device_owned && host->slot == 17 && host->max_freq_khz == 4000);
@@ -217,6 +291,9 @@ esp_err_t sdmmc_card_init(const sdmmc_host_t *host, sdmmc_card_t *card)
     return result;
 }
 
+/**
+ * @brief Verify reverse cleanup order and model the SDK clearing the detect pull-up.
+ */
 esp_err_t sdspi_host_remove_device(sdspi_dev_handle_t handle)
 {
     assert(handle == 17 && device_owned);
@@ -234,6 +311,9 @@ esp_err_t sdspi_host_remove_device(sdspi_dev_handle_t handle)
     return ESP_OK;
 }
 
+/**
+ * @brief Allocate simulated FAT drive 1 or consume an injected allocation error.
+ */
 esp_err_t ff_diskio_get_drive(BYTE *drive)
 {
     assert(device_owned && !disk_registered);
@@ -246,17 +326,26 @@ esp_err_t ff_diskio_get_drive(BYTE *drive)
     return result;
 }
 
+/**
+ * @brief Assert card identity and record disk-I/O registration ownership.
+ */
 void ff_diskio_register_sdmmc(BYTE drive, sdmmc_card_t *card)
 {
     assert(drive == 1U && card == active_card && !disk_registered);
     disk_registered = true;
 }
 
+/**
+ * @brief Assert that card-removal checking is enabled for the registered disk.
+ */
 void ff_sdmmc_set_disk_status_check(BYTE drive, bool enabled)
 {
     assert(drive == 1U && disk_registered && enabled);
 }
 
+/**
+ * @brief Assert FAT/VFS teardown before unregistering the simulated disk.
+ */
 void ff_diskio_register(BYTE drive, const ff_diskio_impl_t *implementation)
 {
     assert(drive == 1U && implementation == NULL && disk_registered);
@@ -264,6 +353,9 @@ void ff_diskio_register(BYTE drive, const ff_diskio_impl_t *implementation)
     disk_registered = false;
 }
 
+/**
+ * @brief Model VFS registration, including a foreign filesystem on INVALID_STATE.
+ */
 esp_err_t esp_vfs_fat_register(const esp_vfs_fat_conf_t *configuration, FATFS **filesystem)
 {
     assert(strcmp(configuration->base_path, "/sdcard") == 0);
@@ -285,6 +377,9 @@ esp_err_t esp_vfs_fat_register(const esp_vfs_fat_conf_t *configuration, FATFS **
     return result;
 }
 
+/**
+ * @brief Release simulated VFS ownership and optionally report a cleanup error.
+ */
 esp_err_t esp_vfs_fat_unregister_path(const char *path)
 {
     assert(strcmp(path, "/sdcard") == 0 && vfs_registered);
@@ -298,6 +393,9 @@ esp_err_t esp_vfs_fat_unregister_path(const char *path)
     return ESP_OK;
 }
 
+/**
+ * @brief Model FAT mount ownership and one-shot mount/unmount failures.
+ */
 FRESULT f_mount(FATFS *filesystem, const TCHAR *drive, BYTE immediate)
 {
     assert(strcmp(drive, "1:") == 0);
@@ -321,6 +419,9 @@ FRESULT f_mount(FATFS *filesystem, const TCHAR *drive, BYTE immediate)
     return result;
 }
 
+/**
+ * @brief Compare two fixture basenames with FAT-like case-insensitive ASCII matching.
+ */
 static bool same_name(const char *left, const char *right)
 {
     size_t index = 0U;
@@ -335,6 +436,9 @@ static bool same_name(const char *left, const char *right)
     return left[index] == right[index];
 }
 
+/**
+ * @brief Find a fixture by /sdcard basename without touching the host filesystem.
+ */
 static int find_file(const char *path)
 {
     assert(strncmp(path, "/sdcard/", 8U) == 0);
@@ -348,6 +452,9 @@ static int find_file(const char *path)
     return -1;
 }
 
+/**
+ * @brief Copy a bounded file or directory fixture into harness-owned storage.
+ */
 static void add_file(const char *name, const void *data, size_t length, bool directory)
 {
     assert(file_count < (sizeof(files) / sizeof(files[0])));
@@ -363,6 +470,7 @@ static void add_file(const char *name, const void *data, size_t length, bool dir
     file->directory = directory;
 }
 
+/** @brief Emulate one descriptor and enforce create-new writes without overwrite flags. */
 static int test_open(const char *path, int flags, ...)
 {
     assert(current_file == -1 && inserted && bus_owned);
@@ -390,6 +498,7 @@ static int test_open(const char *path, int flags, ...)
     return 3;
 }
 
+/** @brief Read fixture bytes and optionally inject card removal while the handle is open. */
 static ssize_t test_read(int fd, void *data, size_t length)
 {
     assert(fd == 3 && current_file >= 0);
@@ -406,6 +515,7 @@ static ssize_t test_read(int fd, void *data, size_t length)
     return (ssize_t)count;
 }
 
+/** @brief Write fixture bytes with an optional short-write result. */
 static ssize_t test_write(int fd, const void *data, size_t length)
 {
     assert(fd == 3 && current_file >= 0);
@@ -422,6 +532,7 @@ static ssize_t test_write(int fd, const void *data, size_t length)
     return (ssize_t)count;
 }
 
+/** @brief Release the simulated descriptor and record its balanced close. */
 static int test_close(int fd)
 {
     assert(fd == 3 && current_file >= 0);
@@ -430,6 +541,7 @@ static int test_close(int fd)
     return 0;
 }
 
+/** @brief Count synchronization attempts and return the configured fault outcome. */
 static int test_fsync(int fd)
 {
     assert(fd == 3 && current_file >= 0);
@@ -437,6 +549,9 @@ static int test_fsync(int fd)
     return fail_sync ? -1 : 0;
 }
 
+/**
+ * @brief Populate only fixture size and file/directory mode in a stat result.
+ */
 static void metadata_for(const test_file_t *file, struct stat *metadata)
 {
     (void)memset(metadata, 0, sizeof(*metadata));
@@ -444,6 +559,7 @@ static void metadata_for(const test_file_t *file, struct stat *metadata)
     metadata->st_mode = file->directory ? S_IFDIR : S_IFREG;
 }
 
+/** @brief Populate metadata for the currently open fixture. */
 static int test_fstat(int fd, struct stat *metadata)
 {
     assert(fd == 3 && current_file >= 0);
@@ -451,6 +567,7 @@ static int test_fstat(int fd, struct stat *metadata)
     return 0;
 }
 
+/** @brief Look up fixture metadata by path, modeling ENOENT when absent. */
 static int test_stat(const char *path, struct stat *metadata)
 {
     const int index = find_file(path);
@@ -463,6 +580,7 @@ static int test_stat(const char *path, struct stat *metadata)
     return 0;
 }
 
+/** @brief Begin root enumeration after validating card and bus ownership. */
 static DIR *test_opendir(const char *path)
 {
     assert(strcmp(path, "/sdcard") == 0);
@@ -471,6 +589,7 @@ static DIR *test_opendir(const char *path)
     return (DIR *)&directory_entry;
 }
 
+/** @brief Reuse one dirent to return fixture names in insertion order. */
 static struct dirent *test_readdir(DIR *directory)
 {
     assert(directory == (DIR *)&directory_entry);
@@ -482,6 +601,7 @@ static struct dirent *test_readdir(DIR *directory)
     return &directory_entry;
 }
 
+/** @brief Validate closing the simulated root-directory handle. */
 static int test_closedir(DIR *directory)
 {
     assert(directory == (DIR *)&directory_entry);
@@ -489,6 +609,9 @@ static int test_closedir(DIR *directory)
 }
 
 #if CONFIG_PROBE_SD_ENABLE
+/**
+ * @brief Exercise absent-card startup, insertion, repeated mount and unmount ownership.
+ */
 static void test_lifecycle(void)
 {
     probe_sd_status_t status = {0};
@@ -511,6 +634,9 @@ static void test_lifecycle(void)
     (void)printf("PASS: no-card startup, failed mount cleanup and insertion retry\n");
 }
 
+/**
+ * @brief Exercise filename bounds, listing, bounded reads and create-new write failures.
+ */
 static void test_files(void)
 {
     uint8_t bytes[PROBE_SD_MAX_IO_BYTES + 1U] = {0};
@@ -569,6 +695,9 @@ static void test_files(void)
     (void)printf("PASS: binary read bounds, path rejection, exclusive create and I/O failures\n");
 }
 
+/**
+ * @brief Exercise removed-card detection and bounded mutex acquisition failure.
+ */
 static void test_removal_and_lock(void)
 {
     const unsigned int previous_unmounts = unmounts;
@@ -597,6 +726,9 @@ static void test_removal_and_lock(void)
         "PASS: bounded lock wait, removal invalidation, reinsert and idempotent unmount\n");
 }
 
+/**
+ * @brief Check handle closure after removal and retryable cleanup ownership.
+ */
 static void test_mid_io_removal_and_cleanup_retry(void)
 {
     uint8_t bytes[4] = {0};
@@ -623,6 +755,9 @@ static void test_mid_io_removal_and_cleanup_retry(void)
         "PASS: removal during I/O clears output; failed SPI cleanup preserves retry ownership\n");
 }
 
+/**
+ * @brief Inject failures at mount stages and verify ownership is not leaked or stolen.
+ */
 static void test_mount_stage_failures(void)
 {
     for (unsigned int stage = 0U; stage < 5U; ++stage)
@@ -681,6 +816,10 @@ static void test_mount_stage_failures(void)
 }
 #endif
 
+/**
+ * @brief Run the enabled/disabled SD test scenario selected at compile time.
+ * @return Zero when all assertions pass; assertion failure terminates the process.
+ */
 int main(void)
 {
 #if CONFIG_PROBE_SD_ENABLE

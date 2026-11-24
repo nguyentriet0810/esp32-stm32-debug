@@ -1,4 +1,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
+
+# @file CMakeLists.txt
+# @brief probe_debug component registration and dependency visibility.
+#
+# Public dependencies support the exported headers; private dependencies remain implementation
+# details.
+
 idf_component_register(
     SRCS "probe_debug.c" "port/probe_swd.c" "port/probe_platform.c" "port/probe_jtag.c"
     INCLUDE_DIRS "include" PRIV_INCLUDE_DIRS "port" REQUIRES esp_common

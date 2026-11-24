@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_sd.h @brief Serialized, bounded microSD access for the local console. */
+/**
+ * @file probe_sd.h
+ * @brief Serialized microSD SPI and FAT access API.
+ *
+ * The component owns SPI2 and mounts existing FAT media at /sdcard. Mutex-protected operations
+ * bound file sizes and directory work; no API formats or deletes files.
+ */
 #ifndef PROBE_SD_H
 #define PROBE_SD_H
 
@@ -12,26 +18,29 @@
 #include <stdint.h>
 #include "esp_err.h"
 
+/** @brief Bytes for a full 8.3 basename and its NUL terminator. */
 #define PROBE_SD_NAME_CAPACITY 13U
+/** @brief Maximum payload bytes accepted by a single read or write API call. */
 #define PROBE_SD_MAX_IO_BYTES 256U
+/** @brief Maximum root entries published by one list call. */
 #define PROBE_SD_MAX_LIST_ENTRIES 8U
 
 /** @brief Snapshot of card detection, mount ownership and the last operation result. */
 typedef struct
 {
-    bool enabled;
-    bool present;
-    bool mounted;
-    uint64_t capacity_bytes;
-    esp_err_t last_error;
+    bool enabled;            /**< SD feature availability in this build. */
+    bool present;            /**< Active-low card-detect state sampled under the mutex. */
+    bool mounted;            /**< True while the component owns a mounted card descriptor. */
+    uint64_t capacity_bytes; /**< Card capacity in bytes; zero without known geometry. */
+    esp_err_t last_error;    /**< Last recorded operation or cleanup result. */
 } probe_sd_status_t;
 
 /** @brief Root entry with its complete supported 8.3 name and file size in bytes. */
 typedef struct
 {
-    char name[PROBE_SD_NAME_CAPACITY];
-    uint64_t size_bytes;
-    bool directory;
+    char name[PROBE_SD_NAME_CAPACITY]; /**< Complete, NUL-terminated 8.3 basename. */
+    uint64_t size_bytes; /**< File size in bytes from validated filesystem metadata. */
+    bool directory;      /**< True for a directory entry; listing never descends into it. */
 } probe_sd_entry_t;
 
 /**

@@ -3,7 +3,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** @file probe_local_ui.c @brief Read-only session status and idle-only clock settings. */
+/**
+ * @file probe_local_ui.c
+ * @brief Local OLED and encoder menu.
+ *
+ * The UI task owns display operations and requests clock changes through the debug service.
+ * Optional display failures are reported without stopping the debug service.
+ */
 #include "probe_local_ui.h"
 #include <inttypes.h>
 #include <stdbool.h>
@@ -19,6 +25,12 @@
 #include "probe_oled.h"
 #include "probe_state.h"
 static QueueHandle_t ui_events;
+/**
+ * @brief Own OLED rendering and consume queued menu events on core 0.
+ * @param[in] context Unused FreeRTOS task argument.
+ * @note Caps rendering at one update per 200 ms. Clock selections are requests to the
+ *       debug owner; an OLED error disables rendering for the remaining task lifetime.
+ */
 static void ui_task(void *context)
 {
     (void)context;
@@ -105,6 +117,9 @@ static void ui_task(void *context)
         }
     }
 }
+/**
+ * @brief Create the UI event queue, optional input task and display-owning UI task.
+ */
 esp_err_t probe_local_ui_start(void)
 {
     ui_events = xQueueCreate(32U, sizeof(probe_encoder_event_t));

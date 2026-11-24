@@ -13,6 +13,11 @@ import subprocess
 
 
 def main():
+    """Compile and run enabled/disabled SD host scenarios with the selected C compiler.
+
+    Generated executables stay under .cache/sd_tests. Compiler or assertion failures
+    propagate through subprocess.run; no serial device or physical card is opened.
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cc", default="gcc", help="Host GCC compiler path")
     args = parser.parse_args()
