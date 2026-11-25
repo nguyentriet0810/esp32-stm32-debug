@@ -1,7 +1,7 @@
 # Kế hoạch phát triển
 
 Trạng thái: **đang triển khai, firmware 0.1.0-dev1 đã chạy trên probe thật**.
-Cập nhật: 30/10/2026. Các tiêu chí bên dưới vẫn là mục tiêu nghiệm thu, không tự coi
+Cập nhật: 25/11/2026 (OLED chuyển sang SH1106). Các tiêu chí bên dưới vẫn là mục tiêu nghiệm thu, không tự coi
 là đã hoàn thành chỉ vì backend đã được tích hợp.
 
 ## 1. Mục tiêu và phạm vi bản đầu
@@ -15,7 +15,7 @@ kiểm chứng được trên phần cứng và quản lý đầy đủ bằng G
 - Halt, run, single-step, hardware breakpoint, đọc thanh ghi và đọc/ghi bộ nhớ.
 - Erase/program/verify flash theo driver hỗ trợ đúng model STM32.
 - Quản lý một phiên điều khiển target tại một thời điểm; có timeout và phục hồi phiên.
-- OLED SSD1306 128×64 và rotary encoder để xem trạng thái, thao tác menu và cấu hình probe khi rảnh.
+- OLED SH1106 128×64 và rotary encoder để xem trạng thái, thao tác menu và cấu hình probe khi rảnh.
 - Có hướng dẫn sử dụng, cấu hình kết nối GDB và ma trận phần cứng đã kiểm chứng.
 
 Giao diện host được chọn ngày 16/11/2026: **VS Code + Cortex-Debug**, dùng ARM GDB
@@ -42,7 +42,7 @@ Chưa đặt chỉ tiêu tốc độ tối đa hoặc ngày hoàn thành trướ
 | Wi-Fi và GDB transport | Đã kết nối TRIET, kiểm tra RSP, checksum, một client và 20 lần reconnect |
 | SWD và Black Magic Debug | Đã tích hợp, scan không có target phục hồi được; chưa thử STM32 thật |
 | MCUViewer, SWO, USB probe | Chưa triển khai |
-| OLED SSD1306 và encoder | Có driver/menu, decoder đã test host; thiếu OLED không dừng probe; encoder đã chọn dạng cơ khí rời, chưa nghiệm thu vật lý |
+| OLED SH1106 và encoder | Có driver/menu, decoder đã test host; thiếu OLED không dừng probe; encoder đã chọn dạng cơ khí rời, chưa nghiệm thu vật lý |
 | microSD SPI/FAT | Có component và lệnh console mount/list/read/write/unmount; chưa nghiệm thu trên PCB/thẻ thật |
 
 ### Phần cứng người dùng đang có
@@ -62,7 +62,7 @@ Khả năng truy cập SWD và khả năng nạp flash được kiểm tra riên
 từ driver STM32C0 hoặc từ việc nhận diện được lõi ARM.
 Mã đầy đủ/package của từng chip, probe tham chiếu và dụng cụ đo hiện có sẽ được ghi ở P0.
 
-Giao diện cục bộ gồm OLED 0,96 inch I2C SSD1306 128×64 và encoder cơ khí rời có nút nhấn
+Giao diện cục bộ gồm OLED I2C SH1106 128×64 và encoder cơ khí rời có nút nhấn
 theo ảnh người dùng chọn ngày 30/10/2026. Encoder có hình dáng dòng EC11; mã linh kiện,
 pinout và số cạnh/nấc chưa được xác nhận. Pin map, menu và điều kiện nghiệm thu nằm trong
 [Phần cứng và giao diện tại probe](05_hardware_and_local_ui.md).
@@ -133,7 +133,7 @@ một môi trường sạch build được theo tài liệu. Build hiện có m�
 
 ### P1a — OLED và rotary encoder
 
-- Đối chiếu pin map thực tế, xác minh địa chỉ I2C và hiển thị thông tin board trên SSD1306.
+- Đối chiếu pin map thực tế, xác minh địa chỉ I2C và hiển thị thông tin board trên SH1106.
 - Đọc A/B/nút nhấn, xử lý dội, xác định số cạnh mỗi nấc và chạy menu xoay/chọn/quay lại.
 - Có cấu hình độ tương phản, thời gian tắt màn hình và thông số mặc định ở trạng thái rảnh.
 - Thử thiếu/lỗi OLED, cấp nguồn lại và thao tác encoder nhanh/chậm; mọi chờ I2C có timeout.

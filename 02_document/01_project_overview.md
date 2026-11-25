@@ -16,7 +16,7 @@ sử dụng Black Magic Debug v2.1.0 làm lõi xử lý target, đã ghim bằng
 | CPU | 240 MHz, hai lõi |
 | Framework | ESP-IDF v6.1, commit được ghim bằng submodule |
 | Giao tiếp target dự kiến | SWD; SWO và nRST bổ sung theo nhu cầu |
-| Màn hình cục bộ | OLED I2C 0,96 inch, SSD1306 128×64 |
+| Màn hình cục bộ | OLED I2C SH1106 128×64 |
 | Điều khiển cục bộ | Encoder cơ khí rời A/B/common và nút nhấn, theo ảnh người dùng chọn; hình dáng EC11, chưa xác nhận mã linh kiện |
 | Host phát triển hiện tại | Windows x64 |
 

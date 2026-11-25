@@ -36,8 +36,15 @@ config PROBE_SWD_DEFAULT_HZ
     range 1000 8000000
     default 400000
 config PROBE_OLED_ENABLE
-    bool "Enable optional SSD1306 OLED"
+    bool "Enable optional SH1106 128x64 OLED"
     default y
+config PROBE_OLED_COLUMN_OFFSET
+    int "SH1106 visible-column offset"
+    range 0 4
+    default 2
+    help
+        First RAM column shown by the 128x64 module within SH1106's 132 columns.
+        Most modules use 2. Change only if the physical module maps a different window.
 config PROBE_OLED_SDA_GPIO
     int
     range 0 48

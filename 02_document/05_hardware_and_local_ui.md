@@ -1,6 +1,6 @@
 # Phần cứng và giao diện điều khiển tại probe
 
-Trạng thái: **đã có driver/menu; pin firmware đã đối chiếu schematic PCB revision C ngày
+Trạng thái: **driver SH1106 cập nhật 25/11/2026; pin firmware đã đối chiếu schematic PCB revision C ngày
 13/11/2026, chưa nghiệm thu ngoại vi/target thật trên PCB**.
 
 ## 1. Yêu cầu đã xác nhận
@@ -8,7 +8,7 @@ Trạng thái: **đã có driver/menu; pin firmware đã đối chiếu schemati
 - Probe: ESP32-S3-WROOM-1-N16R8 trên PCB riêng, ESP-IDF v6.1.
 - Pin hiện tại theo [schematic revision C](../03_pcb/layout_manual/schematic.kicad_sch).
   SWDIO/SWCLK/SWO giữ GPIO4/5/6; target nRST chuyển sang GPIO7.
-- Thêm OLED 0,96 inch, I2C, **SSD1306 128×64** theo xác nhận của người dùng.
+- OLED I2C **SH1106 128×64**; chuyển driver theo yêu cầu ngày 25/11/2026.
 - Thêm một rotary encoder để thao tác menu và điều chỉnh thông số khi cần.
 - Ngày 30/10/2026, người dùng chọn encoder cơ khí rời có nút nhấn theo ảnh đã cung cấp.
   Hình dáng giống dòng EC11, với nhóm A/B/common và cặp tiếp điểm nút nhấn riêng.
@@ -58,7 +58,7 @@ Hướng dẫn sử dụng và nghiệm thu: [microSD](11_sd_storage.md).
 
 ## 3. Đấu nối OLED và encoder
 
-### OLED SSD1306
+### OLED SH1106
 
 | Nhãn trên module | Nối tới |
 |---|---|
@@ -73,6 +73,13 @@ Thiết kế ban đầu dùng module I2C bốn chân. Nếu module có thêm RES
 Khởi đầu bus ở 100 kHz, đánh giá 400 kHz sau khi kiểm tra module, dây và pull-up.
 Schematic có pull-up SDA/SCL 4,7 kΩ về 3,3 V tại R14/R15; tính cả pull-up trên module OLED
 khi kiểm tra bus thực tế.
+
+SH1106 có RAM 132×64 nhưng module hiển thị 128×64. Firmware mặc định ghi từ cột RAM 2;
+`CONFIG_PROBE_OLED_COLUMN_OFFSET` cho phép chọn 0..4 trong `menuconfig` nếu module dùng
+cửa sổ khác. ACK tại `0x3C`/`0x3D` chỉ xác nhận thiết bị I2C, không tự nhận diện loại
+controller. Firmware hiện khởi tạo SH1106 trực tiếp, không tự chọn lại SSD1306.
+Ảnh xoay 180° theo yêu cầu ngày 25/11/2026 bằng cặp lệnh segment/common `A0/C0`
+thay cho hướng module `A1/C8`; bố cục framebuffer và thao tác encoder không đổi.
 
 ### Rotary encoder rời đã chọn
 
@@ -121,29 +128,85 @@ không nối đồng thời một nguồn 3,3 V khác vào J4.6. Target dùng ng
 
 | Trang | Nội dung |
 |---|---|
-| Tổng quan | Wi-Fi/IP, tên target nếu có, clock SWD danh định, trạng thái GDB |
-| Clock | Xoay chọn 100/400 kHz, 1/2/4/8 MHz; nhấn áp dụng khi rảnh; giữ để quay lại |
+| Startup | Tắt → sáng theo đường chéo trái trên đến phải dưới → tắt nền theo cùng hướng, giữ chữ MAGIC / DEBUGGER / TOOL |
+| Settings | Header cố định `Settings`, bảy dòng tham số mẫu, encoder chọn/chỉnh giá trị |
 
 Ví dụ bố cục, các giá trị chỉ là minh họa:
 
 ```text
-STM32 PROBE
-WiFi: CONNECTED
-IP:   192.168.1.50
-MCU:  STM32F103
-SWD:  400 kHz
-GDB:  IDLE
+    Settings
+>SWD kHz    400
+ Reset ms   100
+ Retry        3
+ Auto halt   ON
+ SWO kHz    OFF
+ Log level INFO
+ OLED %      50
 ```
 
-- Xoay trong trang clock: đổi tần số được chọn.
-- Nhấn ngắn: chọn mục hoặc áp dụng giá trị đang sửa.
-- Nhấn giữ: quay lại/hủy giá trị đang sửa; không gán thao tác reset target vào nút giữ mặc định.
-- Những thông số đang do phiên host sở hữu được hiển thị chỉ đọc hoặc báo BUSY.
-- Màn hình phân biệt clock đang áp dụng với giá trị đang chọn. Đây là giá trị danh định
-  trong port, chưa phải tần số đo bằng logic analyzer. Thay đổi chưa lưu NVS.
+Màn 128×64 chia 8 dòng × 16 ký tự, mỗi ô 8×8 pixel. Dùng đúng bảng `font8x8_basic_tr`
+do chủ dự án cung cấp, đặt trong `probe_oled/font8x8_basic_tr.h` dưới dạng `static const`.
+Bảng 128 glyph chiếm 1 KiB, mỗi byte là một cột, bit 0 ở trên; có mũi tên lên/xuống
+tại mã 0x01/0x02. Renderer giữ nguyên đủ tám cột và tám hàng, cả dấu gạch dưới và
+đuôi chữ ở hàng pixel cuối. Header `Settings` căn giữa, không có dấu `_` và không thể chọn.
 
-Wi-Fi/IP và trạng thái target lấy từ snapshot thật. Khi chưa có target, hiển thị NONE.
-Trang thông tin, menu contrast, timeout màn hình và lưu cấu hình UI là phần còn lại của P1a.
+- Xoay khi chọn dòng: con trỏ `>` đi qua dòng 2..8, vòng về đầu/cuối khi tới biên.
+- Nhấn SW một lần: vào chỉnh dòng đang trỏ; giá trị nằm trong `[ ]`, con trỏ giữ nguyên.
+- Xoay khi chỉnh: thay giá trị nháp; dừng ở giới hạn lựa chọn, không vòng qua biên.
+- Nhấn SW lần nữa: chốt giá trị trong RAM và trở lại chọn dòng.
+- Giữ SW 750 ms: bỏ giá trị nháp; giữ khi không chỉnh không đổi màn hình.
+
+Bảy tham số trên là **dữ liệu tạm để thử UI**, chưa áp dụng vào SWD, reset, SWO, log hay
+contrast OLED, chưa lưu NVS. Khởi động lại sẽ trở về giá trị mẫu. Danh sách/giới hạn được
+đặt tập trung trong `probe_ui_settings.c` để chỉnh sau khi chốt tham số thật.
+Console vẫn cho xem trạng thái probe và điều chỉnh clock thật qua dịch vụ debug.
+
+Kiểm tra ngày 25/11/2026: test host xác nhận header bất biến, bảy dòng chọn theo vòng,
+giới hạn từng tham số, nháp/chốt/hủy độc lập, buffer 8×17 byte và truyền đủ ô ký tự.
+Các biến thể SH1106 offset 0/2/4 và OLED tắt đều qua. Build Debug ESP-IDF thành công;
+đã nạp COM9, xác minh hash flash, console báo `oled=ONLINE`, `errors=0`. Đây là kết quả
+test model/driver và trạng thái firmware; chiều xoay, số nấc và cảm nhận thao tác encoder
+trên PCB vẫn cần người dùng kiểm tra trực tiếp.
+
+Bản font 8×8 mới cũng đã qua build/test và nạp COM9, xác minh hash flash; hai lần
+`status` sau nạp đều báo `oled=ONLINE`, `errors=0`. Đã đối chiếu đủ 1.024 byte với bảng
+chủ dự án gửi; ảnh menu do driver thật xuất ra khớp ảnh xem trước. Bảng font nằm trong
+`.rodata` với kích thước 0x400 byte. Test có kiểm tra mũi tên, đuôi chữ, dấu gạch dưới
+ở hàng pixel cuối và bỏ qua mã ngoài bảng 128 glyph.
+
+### Startup MAGIC DEBUGGER TOOL
+
+Tên mạch chia ba dòng, mỗi từ một dòng; dùng cùng font 8×8 với menu, phóng 2 lần thành
+ô 16×16 pixel. Các dòng bắt đầu tại y=5/25/45, căn giữa lần lượt trong khoảng rộng
+80/128/64 pixel; dòng DEBUGGER vừa đúng tám ô lớn theo chiều ngang. Tọa độ dùng cùng
+hướng đọc với menu và cấu hình xoay 180° hiện tại.
+
+Trình tự chỉ chạy một lần khi task UI khởi động:
+
+1. Tắt panel và giữ ảnh đen khoảng 250 ms sau khi truyền frame.
+2. Quét sáng từ trái trên đến phải dưới trong 16 frame, tăng contrast đến 128.
+3. Giữ toàn màn sáng thêm 150 ms.
+4. Quét tắt nền cùng chiều trong 16 frame, luôn giữ các pixel thuộc ba dòng tên.
+5. Giữ tên 1,2 giây, rồi chuyển thẳng sang Settings, con trỏ tại dòng 2.
+
+Mỗi frame nhắm chu kỳ 120 ms, kể cả thời gian truyền I2C; thời gian thực tế còn phụ
+thuộc bus. Do SH1106 đơn sắc, biên quét dùng ordered dithering thay cho grayscale
+riêng từng pixel. Chữ cuối cùng là pixel sáng cố định trên nền đen.
+
+Trong startup, task UI nhận và bỏ sự kiện encoder để tránh phát lại thao tác vào menu.
+Wi-Fi, console, SD và SWD owner vẫn chạy; lỗi OLED kết thúc animation và đánh dấu
+màn offline, không dừng probe. Các frame mô phỏng lấy trực tiếp từ test mã driver:
+
+```powershell
+.\01_source\.tooling\python-env\Scripts\python.exe .\01_source\tools\test_oled_host.py --preview-dir .\01_source\.cache\startup-20261125\frames
+```
+
+Đã kiểm tra ngày 25/11/2026: các biến thể host offset 0/2/4 và OLED tắt đều qua; kiểm
+tra pixel xác nhận hai pha đơn điệu, hướng quét, ảnh toàn trắng và mặt nạ tên cuối cùng.
+Đã build và nạp qua COM9, hash flash được xác minh. Một lượt reset có monitor ghi
+`I (6548) probe_ui: Startup complete: MAGIC DEBUGGER TOOL`; console báo OLED online,
+SD mounted, `errors=0`. Điều này xác nhận luồng firmware hoàn tất; cảm nhận hiệu ứng
+và hướng nhìn trên kính thật vẫn do người dùng quan sát.
 
 ### Điều chỉnh thông số của STM32 ở giai đoạn sau
 
@@ -157,16 +220,18 @@ UI với host được chốt trước khi triển khai chức năng này.
 ## 5. Triển khai firmware hiện tại
 
 - `probe_board`: pin map Kconfig và kiểm tra pin trùng/chân dành riêng của profile N16R8.
-- `probe_local_ui`: trạng thái menu; `probe_oled`: renderer SSD1306; `probe_encoder`: input/decoder.
-- OLED dùng I2C master driver và panel SSD1306 sẵn có trong ESP-IDF v6.1, với renderer
-  chữ/menu gọn. Framebuffer monochrome 128×64 cần 1024 byte cho một bản hình.
+- `probe_local_ui`: trạng thái menu; `probe_oled`: driver SH1106 và renderer; `probe_encoder`: input/decoder.
+- OLED dùng I2C master và lớp panel-I/O của ESP-IDF v6.1. Driver SH1106 trong dự án
+  gửi lệnh khởi tạo, xóa đủ RAM 132×64 trước khi bật màn, rồi ghi tám page 128 byte.
+  Mỗi page đặt lại địa chỉ page và cột; framebuffer UI monochrome vẫn là 1024 byte.
+- Sau startup là màn Settings 8×16; model chọn/chỉnh độc lập SDK, chỉ giữ dữ liệu mẫu trong RAM.
 - Encoder dùng task polling 1 ms và decoder C độc lập đã có bài thử host, chưa dùng PCNT.
 - UI chạy task ưu tiên thấp ở core 0; task sở hữu SWD vẫn ở core 1.
 - ISR chỉ ghi nhận sự kiện hoặc thông báo task; không vẽ OLED, ghi NVS hoặc gọi SWD trong ISR.
-- UI nhận snapshot trạng thái và gửi command qua queue; một dịch vụ duy nhất sở hữu target.
-- Cập nhật OLED giới hạn tối đa 5 lần/giây;
+- Menu mẫu không gửi command đến target; một dịch vụ duy nhất vẫn sở hữu SWD.
+- Chỉ vẽ lại OLED khi menu thay đổi, giới hạn tối đa 5 lần/giây;
   đo và điều chỉnh sau, không giữ khóa chung với thao tác SWD trong thời gian truyền I2C.
-- Wi-Fi lưu NVS khi áp dụng ở trạng thái rảnh. Clock UI/console hiện chỉ lưu RAM.
+- Wi-Fi lưu NVS khi áp dụng ở trạng thái rảnh. Clock thật qua console hiện chỉ lưu RAM.
 - Lỗi hoặc thiếu OLED được báo qua log, timeout/retry có giới hạn; debug vẫn có thể tiếp tục.
 - Khi host đang nạp flash hoặc sở hữu phiên debug, UI chỉ thực hiện các thao tác được dịch vụ cho phép.
 
@@ -188,6 +253,27 @@ GPIO6 qua J4.4 mới được dành cho SWO; chưa có thu trace. Sau đấu n�
 
 ## 6. Kế hoạch và nghiệm thu
 
+Kiểm tra driver trên PC, không cần màn hình:
+
+```powershell
+.\01_source\.tooling\python-env\Scripts\python.exe .\01_source\tools\test_oled_host.py
+.\01_source\tools\dev.ps1 build
+```
+
+Bài thử dùng mã driver thật với mô hình RAM SH1106, kiểm tra offset 0/2/4, đủ tám page,
+xóa RAM trước khi bật, fallback địa chỉ, contrast, timeout và cleanup khi khởi tạo lỗi.
+Mô hình này không xác nhận tín hiệu I2C hoặc chiều/căn lề trên kính thật. Sau khi nạp,
+cần kiểm tra đủ tám dòng, mép trái/phải và thao tác encoder trên module đã lắp; ghi
+nhận clock yêu cầu khi rảnh/bận như menu hiện có.
+
+Ngày 25/11/2026: các biến thể host ở trên, kiểm tra hướng xoay 180° và build ESP-IDF
+Debug đã qua; mã OLED được biên dịch với GNU17, `-Werror` và GCC analyzer. Bản xoay đã
+nạp qua USB COM9, esptool xác minh hash thành công. Sau reset, console báo
+`OLED online; encoder input task active`, `oled=ONLINE` và `errors=0`.
+Chưa nghiệm thu trực quan chiều/căn lề và từng thao tác encoder trên màn thật.
+Firmware nằm tại `01_source/build-vscode/stm32_wifi_probe.bin`; log cục bộ tại
+`01_source/.cache/sh1106-20261125/` gồm `flash-com9-rotated.log` và `console-rotated.log`.
+
 1. P0: đối chiếu pin map, xác nhận module encoder, nguồn/pull-up và hành vi menu.
 2. P1a: phát hiện OLED, hiển thị thông tin board, đọc encoder/nút và chạy thử menu.
 3. P3/P4: đưa trạng thái Wi-Fi, phiên GDB, target và lỗi thật lên màn hình.
@@ -205,7 +291,8 @@ Sau khi có debug, việc thao tác UI không gây lệnh target ngoài dự ki�
 - [Pin mặc định MCUViewer-probe](https://github.com/klonyyy/MCUViewer-probe#hardware).
 - [Datasheet ESP32-S3-WROOM-1/1U](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf).
 - [Pin header DevKitC-1 tham chiếu](https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html).
-- [Ví dụ SSD1306 trong ESP-IDF v6.1](https://github.com/espressif/esp-idf/tree/v6.1/examples/peripherals/lcd/i2c_oled).
+- [Datasheet SH1106 V2.3, command table và power sequence](https://files.waveshare.com/upload/0/08/SH1106_V2.3.pdf).
+- [Driver SH1106 của Adafruit, tham chiếu offset mặc định 2](https://github.com/adafruit/Adafruit_SH110x/blob/master/Adafruit_SH1106G.cpp).
 - [Ví dụ encoder/PCNT trong ESP-IDF v6.1](https://github.com/espressif/esp-idf/tree/v6.1/examples/peripherals/pcnt/rotary_encoder).
 - [EC11 của Alps Alpine: ví dụ thông số, tín hiệu và khác biệt tại vị trí nấc](https://tech.alpsalpine.com/e/products/detail/EC11E09244AQ/).
   Chỉ là tài liệu tham khảo cùng dạng linh kiện; không xác định encoder trong ảnh là model này.

@@ -43,6 +43,7 @@ void app_main(void)
     /* SDK-001: bounded startup diagnostics through the ESP-IDF logging interface. */
     ESP_LOGI("probe_app", "ESP-IDF %s", esp_get_idf_version());
     ESP_LOGI("probe_app", "Board bring-up passed: ESP32-S3 N16R8");
+
     esp_err_t storage = nvs_flash_init();
     if ((storage == ESP_ERR_NVS_NO_FREE_PAGES) || (storage == ESP_ERR_NVS_NEW_VERSION_FOUND))
     {

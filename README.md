@@ -22,9 +22,9 @@ esp32-stm32-debug/
 │   │   ├── probe_state/   # Snapshot trạng thái giữa các task
 │   │   ├── probe_console/ # Lệnh chẩn đoán/provision qua UART
 │   │   ├── probe_sd/      # microSD SPI/FAT, mount và đọc/ghi có giới hạn
-│   │   ├── probe_oled/    # SSD1306 I2C và renderer chữ
+│   │   ├── probe_oled/    # SH1106 I2C và renderer chữ
 │   │   ├── probe_encoder/ # A/B, nút và decoder độc lập
-│   │   └── probe_local_ui/ # Menu, trạng thái và yêu cầu đổi SWD clock
+│   │   └── probe_local_ui/ # Startup và Settings mẫu, encoder chọn/chỉnh giá trị RAM
 │   ├── external/blackmagic/ # Git submodule, backend v2.1.0
 │   ├── main/              # Entry point, ghép component và chính sách khởi động
 │   ├── tests/             # Bài thử decoder trên PC

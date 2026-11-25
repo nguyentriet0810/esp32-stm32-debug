@@ -78,7 +78,7 @@ Checksum/ACK của RSP và việc kiểm tra nội dung flash sau nạp là các
 | `probe_console` | Nhận lệnh UART để xem trạng thái, cấu hình mạng và gửi yêu cầu clock |
 | `probe_sd` | Sở hữu SPI2, card/FAT và mutex cho SD; mount/list/read/write/unmount qua API có giới hạn |
 | `probe_encoder` | Đọc A/B/nút nhấn, giải mã thành sự kiện xoay/chọn/quay lại |
-| `probe_oled` | Sở hữu I2C/panel SSD1306 và framebuffer chữ trong task UI |
+| `probe_oled` | Sở hữu I2C/panel-I/O SH1106 và framebuffer chữ trong task UI |
 | `probe_local_ui` | Xử lý menu, đọc snapshot và gửi yêu cầu cấu hình qua API dịch vụ debug |
 
 Backend nằm tại `01_source/external/blackmagic`; mã dự án không sửa trực tiếp checkout
@@ -303,22 +303,34 @@ Encoder được đọc mỗi 1 ms. Decoder nhận chuỗi quadrature A/B, quy �
 trở về AB=3 thành một nấc và loại chuyển hai bit không hợp lệ. Nút nhấn debounce 20 ms;
 giữ 750 ms tạo sự kiện quay lại, không phát thêm click khi thả sau một lần giữ.
 
-Luồng sự kiện: GPIO → input task → queue → UI task → yêu cầu cấu hình dịch vụ debug.
+Luồng sự kiện: GPIO → input task → queue → UI task → model Settings → renderer OLED.
 Các thông số cạnh/nấc và chiều xoay còn cần kiểm tra với linh kiện encoder thực tế.
 Chế độ bốn cạnh về AB=3 hiện tại là giả định của driver, cần điều chỉnh nếu waveform của
 model thực tế khác; chưa thể suy ra một nấc cơ khí tương ứng một sự kiện chỉ từ ảnh.
 
-Menu hiện có trang tổng quan và trang chọn clock 100/400 kHz, 1/2/4/8 MHz. Nhấn để vào
-menu/áp dụng, xoay chọn giá trị, giữ để quay lại. Clock UI/console chưa lưu NVS.
-Trong phiên GDB, yêu cầu đổi clock bị từ chối để giữ quyền điều khiển của host.
+Trước menu, task UI chạy startup: ảnh đen → sáng theo đường chéo trái trên tới phải
+dưới → tắt nền cùng hướng, giữ ba dòng MAGIC / DEBUGGER / TOOL. Sau khi giữ tên 1,2
+giây, UI chuyển thẳng sang Settings. Hiệu ứng dùng cùng tọa độ với hướng xoay OLED hiện tại;
+input trong startup được nhận và bỏ, không đưa lại vào menu. Các task dịch vụ vẫn chạy.
 
-SSD1306 được thử ở địa chỉ I2C `0x3C` rồi `0x3D`, bus 100 kHz. UI dùng framebuffer
-1024 byte và giới hạn cập nhật tối đa 5 lần/giây. Trạng thái mạng/target lấy từ snapshot thật.
-Nếu chưa có target thì hiển thị `NONE`.
+Settings có 8 dòng × 16 ô 8×8 pixel. Dòng 1 luôn là `Settings`, căn giữa; `>` chỉ
+chọn dòng 2..8. Xoay chọn dòng theo vòng; nhấn để chỉnh giá trị trong `[ ]`, xoay thay
+giá trị trong giới hạn, nhấn lại để chốt vào RAM, giữ để hủy nháp. Trong lúc chỉnh,
+con trỏ không chuyển dòng. Bảy mục SWD kHz, Reset ms, Retry, Auto halt, SWO kHz, Log level,
+OLED % hiện là dữ liệu mẫu, chưa nối với dịch vụ debug/contrast và chưa lưu NVS.
+Model không thay đổi cấu hình thật hoặc quyền điều khiển của phiên GDB.
+
+SH1106 được thử ở địa chỉ I2C `0x3C` rồi `0x3D`, bus 100 kHz. Driver đặt lại page và cột
+trước từng đoạn 128 byte, vì SH1106 không có cửa sổ địa chỉ ngang như SSD1306. Offset cột
+mặc định 2 trong RAM 132 cột, chỉnh bằng `CONFIG_PROBE_OLED_COLUMN_OFFSET` (0..4).
+UI dùng framebuffer 1024 byte và chỉ cập nhật khi menu đổi, tối đa 5 lần/giây.
+Renderer dùng bảng `font8x8_basic_tr` do chủ dự án cung cấp: giữ nguyên chữ hoa/thường,
+đủ 8×8 pixel và hai mũi tên tại 0x01/0x02. Startup dùng cùng font phóng đôi; dòng
+DEBUGGER chiếm đúng 128 pixel theo chiều ngang. Bảng font chỉ đọc chiếm 1 KiB.
 
 Thiếu OLED khi boot hoặc lỗi truyền sau khi online sẽ chuyển trạng thái màn hình sang
 offline. Dịch vụ debug tiếp tục hoạt động. Bản hiện tại chưa tự phát hiện lại OLED sau
-khi offline; có thể khởi động lại probe sau khi đấu nối. Menu contrast/timeout là phần còn lại.
+khi offline; có thể khởi động lại probe sau khi đấu nối. Kết nối tham số thật là bước sau.
 
 ## 10. Xử lý lỗi và vòng đời phiên
 

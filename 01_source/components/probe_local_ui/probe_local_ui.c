@@ -7,36 +7,123 @@
  * @file probe_local_ui.c
  * @brief Local OLED and encoder menu.
  *
- * The UI task owns display operations and requests clock changes through the debug service.
+ * The UI task owns display operations and the provisional settings model.
  * Optional display failures are reported without stopping the debug service.
  */
 #include "probe_local_ui.h"
-#include <inttypes.h>
 #include <stdbool.h>
-#include <stdio.h>
 #include "esp_log.h"
 #include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 #include "freertos/task.h"
 #include "sdkconfig.h"
-#include "probe_debug.h"
 #include "probe_encoder.h"
 #include "probe_oled.h"
 #include "probe_state.h"
+#include "probe_ui_settings.h"
+
+_Static_assert(PROBE_UI_SETTINGS_ROWS == PROBE_OLED_TEXT_ROWS &&
+                   PROBE_UI_SETTINGS_COLUMNS == PROBE_OLED_TEXT_COLUMNS,
+               "Settings rows must match the OLED character grid");
 static QueueHandle_t ui_events;
+
+/**
+ * @brief Discard startup-time input until a monotonic deadline without busy waiting.
+ * @param[in] deadline_us Absolute ESP timer deadline in microseconds.
+ * @note The input task remains responsive; queued actions are never replayed after startup.
+ */
+static void ui_startup_wait(int64_t deadline_us)
+{
+    int64_t remaining_us = deadline_us - esp_timer_get_time();
+    while (remaining_us > 0)
+    {
+        const uint32_t wait_ms = (uint32_t)((remaining_us + INT64_C(999)) / INT64_C(1000));
+        probe_encoder_event_t ignored;
+        (void)xQueueReceive(ui_events, &ignored, pdMS_TO_TICKS(wait_ms));
+        remaining_us = deadline_us - esp_timer_get_time();
+    }
+}
+
+/**
+ * @brief Run the bounded startup sequence before the settings screen.
+ * @return ESP_OK when complete or the first OLED error; optional failures leave debug usable.
+ * @note Only the core-0 UI task waits here. Network, console and the SWD owner keep running.
+ */
+static esp_err_t ui_startup(void)
+{
+    esp_err_t result = probe_oled_startup_frame(PROBE_OLED_STARTUP_FILL, 0U);
+    if (result == ESP_OK)
+    {
+        ui_startup_wait(esp_timer_get_time() + INT64_C(250000));
+    }
+    for (unsigned int stage = 0U; (stage < 2U) && (result == ESP_OK); ++stage)
+    {
+        const probe_oled_startup_phase_t phase =
+            (stage == 0U) ? PROBE_OLED_STARTUP_FILL : PROBE_OLED_STARTUP_REVEAL;
+        for (uint32_t step = 1U; (step <= 16U) && (result == ESP_OK); ++step)
+        {
+            const int64_t next_frame_us = esp_timer_get_time() + INT64_C(120000);
+            result = probe_oled_startup_frame(phase, (uint8_t)((step * 255U) / 16U));
+            if (result == ESP_OK)
+            {
+                ui_startup_wait(next_frame_us);
+            }
+        }
+        if ((stage == 0U) && (result == ESP_OK))
+        {
+            ui_startup_wait(esp_timer_get_time() + INT64_C(150000));
+        }
+    }
+    if (result == ESP_OK)
+    {
+        ui_startup_wait(esp_timer_get_time() + INT64_C(1200000));
+    }
+    (void)xQueueReset(ui_events);
+    return result;
+}
+
+/**
+ * @brief Translate one hardware event into a platform-independent settings action.
+ * @param[in,out] settings Initialized model owned by the UI task.
+ * @param[in] event Debounced event copied from the encoder queue.
+ * @return True when the menu needs to be redrawn; unknown events are ignored.
+ */
+static bool ui_settings_event(probe_ui_settings_t *settings, probe_encoder_event_t event)
+{
+    bool changed = false;
+    switch (event)
+    {
+    case PROBE_ENCODER_LEFT:
+        changed = probe_ui_settings_input(settings, PROBE_UI_SETTINGS_PREVIOUS);
+        break;
+    case PROBE_ENCODER_RIGHT:
+        changed = probe_ui_settings_input(settings, PROBE_UI_SETTINGS_NEXT);
+        break;
+    case PROBE_ENCODER_CLICK:
+        changed = probe_ui_settings_input(settings, PROBE_UI_SETTINGS_SELECT);
+        break;
+    case PROBE_ENCODER_BACK:
+        changed = probe_ui_settings_input(settings, PROBE_UI_SETTINGS_CANCEL);
+        break;
+    default:
+        break;
+    }
+    return changed;
+}
+
 /**
  * @brief Own OLED rendering and consume queued menu events on core 0.
  * @param[in] context Unused FreeRTOS task argument.
- * @note Caps rendering at one update per 200 ms. Clock selections are requests to the
- *       debug owner; an OLED error disables rendering for the remaining task lifetime.
+ * @note Runs startup first, then draws changed settings at most once per 200 ms. Values are
+ *       RAM-only examples. An OLED error disables rendering for the remaining task lifetime.
  */
 static void ui_task(void *context)
 {
     (void)context;
-    const uint32_t clocks[] = {100000U, 400000U, 1000000U, 2000000U, 4000000U, 8000000U};
-    size_t clock_index = 1U;
-    bool clock_page = false;
+    probe_ui_settings_t settings;
+    probe_ui_settings_init(&settings);
+    bool dirty = true;
     int64_t last_render_us = 0;
     bool oled_ok = (probe_oled_init() == ESP_OK);
     probe_state_oled(oled_ok);
@@ -47,73 +134,40 @@ static void ui_task(void *context)
 #endif
     ESP_LOGI("probe_ui", "OLED %s; %s", oled_ok ? "online" : "not attached (nonfatal)",
              input_status);
+    if (oled_ok)
+    {
+        const esp_err_t startup = ui_startup();
+        if (startup != ESP_OK)
+        {
+            oled_ok = false;
+            probe_state_oled(false);
+            ESP_LOGW("probe_ui", "Startup display failed: %s", esp_err_to_name(startup));
+        }
+        else
+        {
+            ESP_LOGI("probe_ui", "Startup complete: MAGIC DEBUGGER TOOL");
+        }
+    }
     for (;;)
     {
         probe_encoder_event_t event = PROBE_ENCODER_BACK;
-        if (xQueueReceive(ui_events, &event, pdMS_TO_TICKS(200U)) == pdTRUE)
+        if (xQueueReceive(ui_events, &event, pdMS_TO_TICKS(50U)) == pdTRUE)
         {
-            if (event == PROBE_ENCODER_BACK)
-            {
-                clock_page = false;
-            }
-            else if (event == PROBE_ENCODER_CLICK)
-            {
-                if (clock_page)
-                {
-                    const esp_err_t result = probe_debug_set_clock(clocks[clock_index]);
-                    ESP_LOGI("probe_ui", "Clock request: %s", esp_err_to_name(result));
-                }
-                else
-                {
-                    clock_page = true;
-                }
-            }
-            else if (clock_page)
-            {
-                if (event == PROBE_ENCODER_RIGHT)
-                {
-                    clock_index = (clock_index + 1U) % (sizeof(clocks) / sizeof(clocks[0]));
-                }
-                else
-                {
-                    clock_index = (clock_index == 0U) ? ((sizeof(clocks) / sizeof(clocks[0])) - 1U)
-                                                      : clock_index - 1U;
-                }
-            }
+            dirty = ui_settings_event(&settings, event) || dirty;
         }
-        probe_state_t state = {0};
-        probe_state_get(&state);
         const int64_t now_us = esp_timer_get_time();
-        if (oled_ok && ((now_us - last_render_us) >= INT64_C(200000)))
+        if (oled_ok && dirty && ((now_us - last_render_us) >= INT64_C(200000)))
         {
             last_render_us = now_us;
-            char lines[8][22] = {{0}};
-            (void)snprintf(lines[0], sizeof(lines[0]), "STM32 PROBE");
-            (void)snprintf(lines[1], sizeof(lines[1]), "WIFI: %s",
-                           state.station_connected ? "CONNECTED" : "SETUP AP");
-            (void)snprintf(lines[2], sizeof(lines[2]), "IP: %.16s", state.ip);
-            (void)snprintf(lines[3], sizeof(lines[3]), "MCU: %.16s",
-                           (state.target[0] != '\0') ? state.target : "NONE");
-            (void)snprintf(lines[4], sizeof(lines[4]), "SWD: %" PRIu32 " KHZ",
-                           state.swd_hz / 1000U);
-            (void)snprintf(lines[5], sizeof(lines[5]), "GDB: %s",
-                           state.gdb_connected ? "BUSY" : "IDLE");
-            if (clock_page)
-            {
-                (void)snprintf(lines[6], sizeof(lines[6]), "> CLOCK %" PRIu32 " KHZ",
-                               clocks[clock_index] / 1000U);
-                (void)snprintf(lines[7], sizeof(lines[7]), "PRESS APPLY/HOLD BACK");
-            }
-            else
-            {
-                (void)snprintf(lines[7], sizeof(lines[7]), "PRESS FOR CLOCK MENU");
-            }
-            if (probe_oled_draw(lines, 8U) != ESP_OK)
+            char lines[PROBE_UI_SETTINGS_ROWS][PROBE_UI_SETTINGS_COLUMNS + 1U];
+            probe_ui_settings_render(&settings, lines);
+            if (probe_oled_draw(lines, PROBE_UI_SETTINGS_ROWS) != ESP_OK)
             {
                 oled_ok = false;
                 probe_state_oled(false);
                 ESP_LOGW("probe_ui", "OLED went offline; debug remains available");
             }
+            dirty = false;
         }
     }
 }
