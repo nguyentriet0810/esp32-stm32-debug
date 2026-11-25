@@ -45,6 +45,11 @@ try {
             throw
         }
     }.GetNewClosure()
+    # Espressif's export.ps1 creates an alias that takes precedence over a same-named function.
+    # Remove it only in this process so reactivating the project terminal selects dev.ps1.
+    if (Test-Path -LiteralPath 'Alias:\idf.py') {
+        Remove-Item -LiteralPath 'Alias:\idf.py' -Force
+    }
     Set-Item -LiteralPath 'Function:\global:idf.py' -Value $probeTerminalIdfCommand
 
     $global:LASTEXITCODE = 0

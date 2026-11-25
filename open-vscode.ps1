@@ -51,8 +51,14 @@ if ($null -eq $probeLocalVars) {
 }
 foreach ($probeVariable in $probeWorkspaceConfig.settings.'idf.customExtraVars'.PSObject.Properties) {
     $probeValue = $probeVariable.Value.Replace('${workspaceFolder}', $probeSourceRoot)
+    if ($probeVariable.Name -in @('IDF_PATH', 'IDF_TOOLS_PATH', 'IDF_PYTHON_ENV_PATH',
+                                  'CCACHE_DIR', 'OPENOCD_SCRIPTS')) {
+        # IDF compares Python's executable path as text, so use native separators consistently.
+        $probeValue = [IO.Path]::GetFullPath($probeValue)
+    }
     $probeLocalVars | Add-Member -NotePropertyName $probeVariable.Name -NotePropertyValue $probeValue -Force
 }
+$probeLocalSettings | Add-Member -NotePropertyName 'idf.currentSetup' -NotePropertyValue $probeLocalVars.IDF_PATH -Force
 $probeLocalSettings | Add-Member -NotePropertyName 'idf.customExtraVars' -NotePropertyValue $probeLocalVars -Force
 New-Item -ItemType Directory -Path $probeSettingsDirectory -Force | Out-Null
 [IO.File]::WriteAllText($probeSettingsPath, ($probeLocalSettings | ConvertTo-Json -Depth 20), [Text.UTF8Encoding]::new($false))

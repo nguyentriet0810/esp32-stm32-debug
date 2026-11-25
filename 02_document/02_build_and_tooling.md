@@ -55,7 +55,8 @@ trạng thái dừng xác định; server chỉ lắng nghe trên localhost.
 Đóng monitor trước khi Flash hoặc Debug để giải phóng cổng COM.
 Nếu Windows đổi số COM, sửa `idf.port` trong file workspace cho đúng thiết bị.
 
-Mở terminal mới trong workspace sẽ có sẵn ESP-IDF và lệnh `idf.py` của profile lập trình:
+Terminal mặc định **ESP32 Probe (ESP-IDF v6.1)** trong workspace có sẵn môi trường và
+hàm `idf.py` của profile lập trình:
 
 ```powershell
 idf.py build
@@ -63,6 +64,26 @@ idf.py -p COM9 flash
 idf.py -p COM9 monitor --no-reset
 idf.py menuconfig
 ```
+
+Terminal tạo bằng **ESP-IDF: Open ESP-IDF Terminal** chạy `export.ps1` của extension,
+đặt alias `idf.py` gọi SDK trực tiếp. Với terminal đó, chỉ rõ build folder để dùng
+đúng ELF của bản Debug đã nạp:
+
+```powershell
+idf.py -B build-vscode -p COM9 monitor --no-reset
+```
+
+Hoặc thoát monitor bằng `Ctrl+]`, rồi từ `01_source` kích hoạt lại terminal dự án:
+
+```powershell
+. .\tools\terminal.ps1
+idf.py -p COM9 monitor --no-reset
+```
+
+Script bỏ alias của extension trong process hiện tại trước khi đặt hàm wrapper.
+Launcher chuẩn hóa đường dẫn môi trường sang dấu `\` trên Windows, vì SDK so sánh
+đường dẫn Python dạng chuỗi. Các dòng monitor `GDB cannot open ... COMx` và
+`Using \\.\COM9 instead` là thông báo chuyển tên cổng trên Windows, không phải lỗi mở COM.
 
 Trong terminal bên ngoài VS Code có thể gọi tương đương:
 
