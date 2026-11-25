@@ -313,12 +313,24 @@ dưới → tắt nền cùng hướng, giữ ba dòng MAGIC / DEBUGGER / TOOL. 
 giây, UI chuyển thẳng sang Settings. Hiệu ứng dùng cùng tọa độ với hướng xoay OLED hiện tại;
 input trong startup được nhận và bỏ, không đưa lại vào menu. Các task dịch vụ vẫn chạy.
 
-Settings có 8 dòng × 16 ô 8×8 pixel. Dòng 1 luôn là `Settings`, căn giữa; `>` chỉ
-chọn dòng 2..8. Xoay chọn dòng theo vòng; nhấn để chỉnh giá trị trong `[ ]`, xoay thay
-giá trị trong giới hạn, nhấn lại để chốt vào RAM, giữ để hủy nháp. Trong lúc chỉnh,
-con trỏ không chuyển dòng. Bảy mục SWD kHz, Reset ms, Retry, Auto halt, SWO kHz, Log level,
-OLED % hiện là dữ liệu mẫu, chưa nối với dịch vụ debug/contrast và chưa lưu NVS.
-Model không thay đổi cấu hình thật hoặc quyền điều khiển của phiên GDB.
+Settings có 8 dòng × 16 ô 8×8 pixel. Dòng 1 là `Settings`, căn giữa; dòng 2 trống, dòng
+3..6 là Flash, Target, Link, OLED %, dòng 7 trống và dòng 8 là Info. Nhấn SW mở ngay
+trang con; không có Next. Mỗi trang chọn
+cho xoay chọn nháp, nhấn chốt và về màn chính, giữ hủy và quay lại. Dấu `*` đánh dấu
+giá trị đã chốt, `>` ở trái là con trỏ, `>` bên phải màn chính là mục mở được.
+
+Flash chọn REMOTE/SDCARD; Target chọn SWD/UART/I2C/SPI; Link chọn WiFi/BLE/ESP-NOW.
+Chọn SDCARD khóa Target/Link, hiện `--`; Flash, OLED và Info vẫn truy cập được.
+Giá trị Target/Link được giữ nguyên và phục hồi khi đổi lại. Contrast là cấu hình chung,
+có thể chỉnh ở cả hai chế độ. Các mode hiện lưu RAM, chưa thay đổi backend/transport,
+chưa chạy job nạp từ SD và không thay đổi quyền điều khiển của phiên GDB.
+
+Trang OLED chọn 10/25/50/75/100 %, xoay xem trước contrast thật trong task sở hữu panel;
+nhấn chốt vào RAM hoặc giữ hủy để khôi phục. Contrast quy đổi tuyến tính về 0..255
+(50 % thành 128), không đại diện cho phần trăm độ sáng đo được. Chưa lưu NVS.
+
+Info hiển thị tên mạch, (C) 2026 Nguyen Hoang Minh Triet và GPL-3.0-or-later. Trang chỉ
+đọc, không nhận thao tác xoay; nhấn hoặc giữ SW để quay lại dòng Info ở màn chính.
 
 SH1106 được thử ở địa chỉ I2C `0x3C` rồi `0x3D`, bus 100 kHz. Driver đặt lại page và cột
 trước từng đoạn 128 byte, vì SH1106 không có cửa sổ địa chỉ ngang như SSD1306. Offset cột

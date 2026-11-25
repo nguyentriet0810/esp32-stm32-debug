@@ -115,8 +115,9 @@ static bool ui_settings_event(probe_ui_settings_t *settings, probe_encoder_event
 /**
  * @brief Own OLED rendering and consume queued menu events on core 0.
  * @param[in] context Unused FreeRTOS task argument.
- * @note Runs startup first, then draws changed settings at most once per 200 ms. Values are
- *       RAM-only examples. An OLED error disables rendering for the remaining task lifetime.
+ * @note Runs startup first, then draws changed settings at most once per 200 ms. Mode choices
+ *       stay in RAM; OLED contrast previews apply immediately and cancel restores the old value.
+ *       An OLED error disables rendering for the remaining task lifetime.
  */
 static void ui_task(void *context)
 {
@@ -124,6 +125,7 @@ static void ui_task(void *context)
     probe_ui_settings_t settings;
     probe_ui_settings_init(&settings);
     bool dirty = true;
+    unsigned int applied_contrast = 128U;
     int64_t last_render_us = 0;
     bool oled_ok = (probe_oled_init() == ESP_OK);
     probe_state_oled(oled_ok);
@@ -161,7 +163,22 @@ static void ui_task(void *context)
             last_render_us = now_us;
             char lines[PROBE_UI_SETTINGS_ROWS][PROBE_UI_SETTINGS_COLUMNS + 1U];
             probe_ui_settings_render(&settings, lines);
-            if (probe_oled_draw(lines, PROBE_UI_SETTINGS_ROWS) != ESP_OK)
+            const unsigned int contrast =
+                ((unsigned int)probe_ui_settings_oled_percent(&settings) * 255U + 50U) / 100U;
+            esp_err_t display_result = ESP_OK;
+            if (contrast != applied_contrast)
+            {
+                display_result = probe_oled_contrast(contrast);
+                if (display_result == ESP_OK)
+                {
+                    applied_contrast = contrast;
+                }
+            }
+            if (display_result == ESP_OK)
+            {
+                display_result = probe_oled_draw(lines, PROBE_UI_SETTINGS_ROWS);
+            }
+            if (display_result != ESP_OK)
             {
                 oled_ok = false;
                 probe_state_oled(false);

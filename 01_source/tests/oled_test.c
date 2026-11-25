@@ -51,7 +51,7 @@ static bool fail_bus;
 static bool fail_io_create;
 static TickType_t delayed_ticks;
 
-/** @brief Require sixteen characters per row, an immutable header and exactly one item cursor. */
+/** @brief Require bounded rows, one visible cursor and no home cursor on a locked item. */
 static void check_settings_layout(const probe_ui_settings_t *settings)
 {
     struct
@@ -62,91 +62,267 @@ static void check_settings_layout(const probe_ui_settings_t *settings)
     } guarded;
     (void)memset(&guarded, 0xa5, sizeof(guarded));
     probe_ui_settings_render(settings, guarded.rows);
-    for (size_t index = 0U; index < 8U; ++index)
+    unsigned int cursors = 0U;
+    for (size_t row = 0U; row < 8U; ++row)
     {
-        assert(guarded.before[index] == 0xa5U && guarded.after[index] == 0xa5U);
-        assert(strlen(guarded.rows[index]) == 16U);
+        assert(guarded.before[row] == 0xa5U && guarded.after[row] == 0xa5U);
+        assert(strlen(guarded.rows[row]) == 16U);
+        assert(strstr(guarded.rows[row], "Next") == NULL);
+        assert(strstr(guarded.rows[row], "Mode preview") == NULL);
+        if (guarded.rows[row][0] == '>')
+        {
+            ++cursors;
+        }
     }
-    assert(strcmp(guarded.rows[0], "    Settings    ") == 0);
-    assert(settings->selected < 7U);
-    for (size_t item = 0U; item < 7U; ++item)
+    assert(cursors == ((settings->page == PROBE_UI_SETTINGS_INFO) ? 0U : 1U));
+    assert(guarded.rows[0][0] != '>' && settings->selected < 5U);
+    if (settings->page == PROBE_UI_SETTINGS_HOME)
     {
-        const bool selected = (item == settings->selected);
-        assert(guarded.rows[item + 1U][0] == (selected ? '>' : ' '));
-        assert(guarded.rows[item + 1U][10] == ((selected && settings->editing) ? '[' : ' '));
-        assert(guarded.rows[item + 1U][15] == ((selected && settings->editing) ? ']' : ' '));
+        assert(strcmp(guarded.rows[0], "    Settings    ") == 0);
+        assert(strcmp(guarded.rows[1], "                ") == 0);
+        assert(strcmp(guarded.rows[6], "                ") == 0);
+        for (size_t item = 0U; item < 4U; ++item)
+        {
+            const bool enabled = (settings->values[0] == 0U) || (item == 0U) || (item == 3U);
+            assert(guarded.rows[item + 2U][0] == ((item == settings->selected) ? '>' : ' '));
+            assert(guarded.rows[item + 2U][15] == (enabled ? '>' : ' '));
+            if (!enabled)
+            {
+                assert(strstr(guarded.rows[item + 2U], "--") != NULL);
+                assert(item != settings->selected);
+            }
+        }
+        assert(guarded.rows[7][0] == ((settings->selected == 4U) ? '>' : ' '));
+        assert(strstr(guarded.rows[7], "Info") != NULL && guarded.rows[7][15] == '>');
+    }
+    else if (settings->page == PROBE_UI_SETTINGS_INFO)
+    {
+        assert(strcmp(guarded.rows[0], "      Info      ") == 0);
+        assert(strcmp(guarded.rows[2], " MAGIC DEBUGGER ") == 0);
+        assert(strcmp(guarded.rows[3], "      TOOL      ") == 0);
+        assert(strcmp(guarded.rows[4], "    (C) 2026    ") == 0);
+        assert(strcmp(guarded.rows[5], "  Nguyen Hoang  ") == 0);
+        assert(strcmp(guarded.rows[6], "   Minh Triet   ") == 0);
+        assert(strcmp(guarded.rows[7], "GPL-3.0-or-later") == 0);
+    }
+    else
+    {
+        const uint8_t counts[] = {2U, 4U, 3U, 5U};
+        const size_t item = (size_t)settings->page - 1U;
+        assert(item < 4U && settings->choice < counts[item]);
+        for (size_t choice = 0U; choice < counts[item]; ++choice)
+        {
+            assert(guarded.rows[choice + 1U][0] == ((choice == settings->choice) ? '>' : ' '));
+            assert(guarded.rows[choice + 1U][15] ==
+                   ((choice == settings->values[item]) ? '*' : ' '));
+        }
     }
 }
 
-/** @brief Verify cyclic item navigation, isolated drafts, cancel/commit and every value boundary.
- */
-static void test_settings_model(void)
+/** @brief Verify five home entries, title spacing, read-only Info and isolated child drafts. */
+static void test_settings_navigation(void)
 {
     probe_ui_settings_t settings;
     probe_ui_settings_init(&settings);
     check_settings_layout(&settings);
     char rows[8][17];
     probe_ui_settings_render(&settings, rows);
-    assert(strcmp(rows[1], ">SWD kHz    400 ") == 0);
-    assert(settings.selected == 0U && !settings.editing);
+    assert(strcmp(rows[2], ">Flash   REMOTE>") == 0);
+    assert(strcmp(rows[3], " Target     SWD>") == 0);
+    assert(strcmp(rows[4], " Link      WiFi>") == 0);
+    assert(strcmp(rows[5], " OLED %      50>") == 0);
+    assert(strcmp(rows[7], " Info          >") == 0);
+    assert(probe_ui_settings_oled_percent(&settings) == 50U);
     assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
     assert(!probe_ui_settings_input(&settings, (probe_ui_settings_action_t)99));
-    for (unsigned int step = 0U; step < 14U; ++step)
+    for (unsigned int step = 0U; step < 10U; ++step)
     {
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
-        assert(settings.selected == (step + 1U) % 7U);
+        assert(settings.selected == (step + 1U) % 5U);
         check_settings_layout(&settings);
     }
-    for (unsigned int step = 0U; step < 14U; ++step)
+    for (unsigned int step = 0U; step < 10U; ++step)
     {
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
-        assert(settings.selected == 6U - (step % 7U));
+        assert(settings.selected == 4U - step % 5U);
         check_settings_layout(&settings);
     }
-    const uint8_t counts[] = {6U, 6U, 5U, 2U, 6U, 4U, 5U};
-    for (uint8_t item = 0U; item < 7U; ++item)
+    for (uint8_t item = 0U; item < 5U; ++item)
     {
-        uint8_t committed[7];
+        assert(settings.selected == item && settings.page == PROBE_UI_SETTINGS_HOME);
+        uint8_t committed[4];
         (void)memcpy(committed, settings.values, sizeof(committed));
-        assert(settings.selected == item);
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
-        assert(settings.editing && settings.draft == committed[item]);
-        for (unsigned int step = 0U; step < 20U; ++step)
+        assert(settings.page == (probe_ui_settings_page_t)(item + 1U));
+        check_settings_layout(&settings);
+        if (item == 4U)
         {
-            (void)probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT);
-            assert(settings.selected == item && settings.draft < counts[item]);
-            check_settings_layout(&settings);
+            assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+            assert(settings.page == PROBE_UI_SETTINGS_HOME && settings.selected == 4U);
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
         }
-        assert(settings.draft == counts[item] - 1U);
-        assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        else
+        {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        }
         assert(memcmp(settings.values, committed, sizeof(committed)) == 0);
+        check_settings_layout(&settings);
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
-        assert(!settings.editing);
+        assert(settings.page == PROBE_UI_SETTINGS_HOME && settings.selected == item);
         assert(memcmp(settings.values, committed, sizeof(committed)) == 0);
+        assert(probe_ui_settings_oled_percent(&settings) == 50U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    }
+}
+
+/** @brief Exercise every child choice, cyclic mode lists, OLED limits and contrast cancellation. */
+static void test_settings_choices(void)
+{
+    const uint8_t counts[] = {2U, 4U, 3U, 5U};
+    const uint8_t percentages[] = {10U, 25U, 50U, 75U, 100U};
+    for (uint8_t item = 0U; item < 4U; ++item)
+    {
+        probe_ui_settings_t settings;
+        probe_ui_settings_init(&settings);
+        for (uint8_t step = 0U; step < item; ++step)
+        {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        }
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
-        assert(settings.draft == committed[item]);
-        for (unsigned int step = 0U; step < 20U; ++step)
+        for (unsigned int step = 0U; step < 10U; ++step)
         {
             (void)probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS);
+            check_settings_layout(&settings);
         }
-        assert(settings.draft == 0U);
-        assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
-        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
-        assert(!settings.editing && settings.values[item] == 0U);
-        for (uint8_t other = 0U; other < 7U; ++other)
+        if (item == 3U)
         {
-            assert(settings.values[other] == ((other == item) ? 0U : committed[other]));
+            assert(settings.choice == 0U);
+            assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+            assert(probe_ui_settings_oled_percent(&settings) == 10U);
+            assert(settings.values[3] == 2U);
+        }
+        else
+        {
+            for (uint8_t step = 0U; (step < counts[item]) && (settings.choice != 0U); ++step)
+            {
+                assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            }
+            assert(settings.choice == 0U);
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+            assert(settings.choice == counts[item] - 1U);
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            assert(settings.choice == 0U);
+        }
+        for (uint8_t choice = 0U; choice < counts[item]; ++choice)
+        {
+            assert(settings.choice == choice);
+            if (item == 3U)
+            {
+                assert(probe_ui_settings_oled_percent(&settings) == percentages[choice]);
+            }
+            check_settings_layout(&settings);
+            if (choice + 1U < counts[item])
+            {
+                assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            }
+        }
+        if (item == 3U)
+        {
+            assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
         }
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
-        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
-        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
-        assert(settings.values[item] == 1U && !settings.editing);
-        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(settings.page == PROBE_UI_SETTINGS_HOME);
+        assert(settings.values[item] == counts[item] - 1U);
         check_settings_layout(&settings);
     }
+}
+
+/** @brief Lock Target/Link in SDCARD while preserving OLED adjustment and read-only Info access. */
+static void test_settings_sd_lock(void)
+{
+    probe_ui_settings_t settings;
     probe_ui_settings_init(&settings);
-    assert(settings.selected == 0U && settings.values[0] == 1U && !settings.editing);
-    (void)puts("PASS: settings header, seven-row navigation, edit bounds, cancel and RAM commit");
+    for (uint8_t item = 1U; item < 4U; ++item)
+    {
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(settings.selected == item);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    }
+    const uint8_t target = settings.values[1];
+    const uint8_t link = settings.values[2];
+    const uint8_t oled = settings.values[3];
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.selected == 4U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.selected == 0U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.values[0] == 1U && settings.selected == 0U);
+    check_settings_layout(&settings);
+    for (unsigned int step = 0U; step < 4U; ++step)
+    {
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(settings.selected == 3U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        assert(settings.page == PROBE_UI_SETTINGS_OLED);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+        assert(probe_ui_settings_oled_percent(&settings) == 50U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+        assert(settings.selected == 3U && settings.values[3] == oled);
+        assert(probe_ui_settings_oled_percent(&settings) == 75U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(settings.selected == 4U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        assert(settings.page == PROBE_UI_SETTINGS_INFO);
+        check_settings_layout(&settings);
+        assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(settings.selected == 0U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+        assert(settings.selected == 4U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+        assert(settings.selected == 3U);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+        assert(settings.selected == 0U);
+        check_settings_layout(&settings);
+    }
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.selected == 3U && settings.values[3] == 2U);
+    assert(probe_ui_settings_oled_percent(&settings) == 50U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.selected == 0U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.page == PROBE_UI_SETTINGS_FLASH && settings.choice == 1U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+    assert(settings.values[0] == 1U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.values[0] == 0U);
+    assert(settings.values[1] == target && settings.values[2] == link && settings.values[3] == 2U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.selected == 1U);
+    check_settings_layout(&settings);
+}
+
+/** @brief Run the platform-independent navigation, selection and SD-lock regression cases. */
+static void test_settings_model(void)
+{
+    test_settings_navigation();
+    test_settings_choices();
+    test_settings_sd_lock();
+    (void)puts("PASS: spaced Settings, read-only Info, child drafts and OLED access in SDCARD");
 }
 
 /** @brief Interpret documented SH1106 command bytes, preserving multi-byte command state. */
@@ -484,8 +660,9 @@ static void save_startup_preview(unsigned int index)
                 const bool lit = (ram[y / 8U][x + CONFIG_PROBE_OLED_COLUMN_OFFSET] &
                                   (uint8_t)(1U << (y % 8U))) != 0U;
                 /* Approximate the controller's global contrast for the software preview. */
+                const uint32_t brightness = ((uint32_t)contrast + 1U) * 255U / 129U;
                 pixels[x] =
-                    (display_on && lit) ? (uint8_t)(((uint32_t)contrast + 1U) * 255U / 129U) : 0U;
+                    (display_on && lit) ? (uint8_t)((brightness > 255U) ? 255U : brightness) : 0U;
             }
             assert(fwrite(pixels, 1U, sizeof(pixels), output) == sizeof(pixels));
         }
@@ -522,24 +699,44 @@ static void test_settings_display(void)
     probe_ui_settings_t settings;
     probe_ui_settings_init(&settings);
     char rows[8][17];
-    const probe_ui_settings_action_t actions[] = {PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_NEXT,
-                                                  PROBE_UI_SETTINGS_CANCEL,
-                                                  PROBE_UI_SETTINGS_PREVIOUS};
-    for (size_t step = 0U; step <= 4U; ++step)
+    const probe_ui_settings_action_t actions[] = {
+        PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
+        PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_CANCEL,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
+        PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
+        PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
+        PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_PREVIOUS, PROBE_UI_SETTINGS_CANCEL,
+        PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_PREVIOUS, PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_PREVIOUS,
+        PROBE_UI_SETTINGS_SELECT};
+    for (size_t step = 0U; step <= sizeof(actions) / sizeof(actions[0]); ++step)
     {
         if (step > 0U)
         {
             assert(probe_ui_settings_input(&settings, actions[step - 1U]));
         }
         probe_ui_settings_render(&settings, rows);
+        const unsigned int value =
+            ((unsigned int)probe_ui_settings_oled_percent(&settings) * 255U + 50U) / 100U;
+        assert(probe_oled_contrast(value) == ESP_OK);
         assert(probe_oled_draw(rows, 8U) == ESP_OK);
         save_startup_preview(100U + (unsigned int)step);
-        for (size_t column = 0U; column < 32U; ++column)
+        if (settings.page == PROBE_UI_SETTINGS_HOME)
         {
-            assert(ram[0][offset + column] == 0U);
-            assert(ram[0][offset + 96U + column] == 0U);
+            for (size_t column = 0U; column < 128U; ++column)
+            {
+                assert(ram[1][offset + column] == 0U); /* One complete blank row under Settings. */
+            }
+            for (size_t column = 0U; column < 32U; ++column)
+            {
+                assert(ram[0][offset + column] == 0U);
+                assert(ram[0][offset + 96U + column] == 0U);
+            }
+            assert((ram[0][offset + 80U] & 0x80U) != 0U); /* Header 'g' retains its descender. */
         }
-        assert((ram[0][offset + 80U] & 0x80U) != 0U); /* Header 'g' retains its descender. */
     }
     (void)puts("PASS: owner 8x8 font, 16 cells, arrows, descenders, high bytes and menu frames");
 }

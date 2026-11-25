@@ -129,19 +129,24 @@ không nối đồng thời một nguồn 3,3 V khác vào J4.6. Target dùng ng
 | Trang | Nội dung |
 |---|---|
 | Startup | Tắt → sáng theo đường chéo trái trên đến phải dưới → tắt nền theo cùng hướng, giữ chữ MAGIC / DEBUGGER / TOOL |
-| Settings | Header cố định `Settings`, bảy dòng tham số mẫu, encoder chọn/chỉnh giá trị |
+| Settings | Header `Settings`, một hàng trống, bốn mục Flash / Target / Link / OLED %, Info ở dòng cuối |
+| Flash source | Chọn REMOTE / SDCARD; chốt về màn chính; SDCARD khóa Target và Link |
+| Target IF | Chọn SWD / UART / I2C / SPI trong model UI |
+| Host link | Chọn WiFi / BLE / ESP-NOW trong model UI |
+| OLED | Chọn contrast 10 / 25 / 50 / 75 / 100 %, xem trước trực tiếp trên panel |
+| Info | MAGIC DEBUGGER TOOL, (C) 2026 Nguyen Hoang Minh Triet, GPL-3.0-or-later; chỉ đọc |
 
-Ví dụ bố cục, các giá trị chỉ là minh họa:
+Màn chính mặc định:
 
 ```text
     Settings
->SWD kHz    400
- Reset ms   100
- Retry        3
- Auto halt   ON
- SWO kHz    OFF
- Log level INFO
- OLED %      50
+
+>Flash   REMOTE>
+ Target     SWD>
+ Link      WiFi>
+ OLED %      50>
+
+ Info          >
 ```
 
 Màn 128×64 chia 8 dòng × 16 ký tự, mỗi ô 8×8 pixel. Dùng đúng bảng `font8x8_basic_tr`
@@ -150,23 +155,29 @@ Bảng 128 glyph chiếm 1 KiB, mỗi byte là một cột, bit 0 ở trên; có
 tại mã 0x01/0x02. Renderer giữ nguyên đủ tám cột và tám hàng, cả dấu gạch dưới và
 đuôi chữ ở hàng pixel cuối. Header `Settings` căn giữa, không có dấu `_` và không thể chọn.
 
-- Xoay khi chọn dòng: con trỏ `>` đi qua dòng 2..8, vòng về đầu/cuối khi tới biên.
-- Nhấn SW một lần: vào chỉnh dòng đang trỏ; giá trị nằm trong `[ ]`, con trỏ giữ nguyên.
-- Xoay khi chỉnh: thay giá trị nháp; dừng ở giới hạn lựa chọn, không vòng qua biên.
-- Nhấn SW lần nữa: chốt giá trị trong RAM và trở lại chọn dòng.
-- Giữ SW 750 ms: bỏ giá trị nháp; giữ khi không chỉnh không đổi màn hình.
+- Xoay ở màn chính: chọn bốn dòng 3..6 hoặc Info ở dòng 8, theo vòng; bỏ qua dòng bị khóa và hàng trống.
+- Nhấn SW: mở ngay trang con của dòng đang trỏ; không có dòng Next.
+- Trong trang con: xoay di chuyển `>`; dấu `*` bên phải đánh dấu lựa chọn đã chốt.
+- Nhấn SW trong trang con: chốt vào RAM và về đúng dòng ở màn chính.
+- Giữ SW 750 ms: hủy nháp, quay lại màn chính; giữ ngay tại màn chính không đổi trạng thái.
+- OLED: xoay xem trước contrast thật; nhấn chốt, giữ hủy và khôi phục contrast trước đó.
+  Các mức OLED dừng ở hai biên; danh sách Flash/Target/Link chọn theo vòng.
+- Info: nhấn SW hoặc giữ để quay lại đúng dòng Info; xoay không thay đổi dữ liệu.
 
-Bảy tham số trên là **dữ liệu tạm để thử UI**, chưa áp dụng vào SWD, reset, SWO, log hay
-contrast OLED, chưa lưu NVS. Khởi động lại sẽ trở về giá trị mẫu. Danh sách/giới hạn được
-đặt tập trung trong `probe_ui_settings.c` để chỉnh sau khi chốt tham số thật.
-Console vẫn cho xem trạng thái probe và điều chỉnh clock thật qua dịch vụ debug.
+SDCARD khóa **Target và Link**: hiện `--`, bỏ mũi tên mở trang và không cho encoder chọn.
+Flash, OLED % và Info luôn còn truy cập. Có thể chỉnh/chốt/hủy contrast khi ở SDCARD;
+contrast là cấu hình chung của cả hai chế độ. Target/Link được giữ trong RAM và xuất
+hiện lại khi đổi về REMOTE.
 
-Kiểm tra ngày 25/11/2026: test host xác nhận header bất biến, bảy dòng chọn theo vòng,
-giới hạn từng tham số, nháp/chốt/hủy độc lập, buffer 8×17 byte và truyền đủ ô ký tự.
-Các biến thể SH1106 offset 0/2/4 và OLED tắt đều qua. Build Debug ESP-IDF thành công;
-đã nạp COM9, xác minh hash flash, console báo `oled=ONLINE`, `errors=0`. Đây là kết quả
-test model/driver và trạng thái firmware; chiều xoay, số nấc và cảm nhận thao tác encoder
-trên PCB vẫn cần người dùng kiểm tra trực tiếp.
+Flash/Target/Link hiện là **cấu hình UI**. Chúng chưa đổi
+dịch vụ GDB/SWD, chưa khởi động BLE/ESP-NOW/UART/I2C/SPI hay chạy job nạp độc lập từ SD.
+Riêng OLED % đã nối với `probe_oled_contrast` trong task sở hữu màn hình. Chưa lưu NVS;
+khởi động lại về REMOTE / SWD / WiFi / 50 %. Console và dịch vụ debug vẫn hoạt động.
+
+Test host xác nhận buffer 8×17 byte, khoảng trống tiêu đề, năm mục điều hướng, Info chỉ đọc,
+mở/đóng từng trang con, giữ Target/Link qua SDCARD và xem trước/chốt/hủy OLED trong cả hai chế độ.
+Các biến thể SH1106 offset 0/2/4 và OLED tắt đều qua. Chiều xoay, số nấc và cảm nhận
+thao tác encoder trên PCB vẫn cần người dùng kiểm tra trực tiếp.
 
 Bản font 8×8 mới cũng đã qua build/test và nạp COM9, xác minh hash flash; hai lần
 `status` sau nạp đều báo `oled=ONLINE`, `errors=0`. Đã đối chiếu đủ 1.024 byte với bảng
@@ -224,11 +235,12 @@ UI với host được chốt trước khi triển khai chức năng này.
 - OLED dùng I2C master và lớp panel-I/O của ESP-IDF v6.1. Driver SH1106 trong dự án
   gửi lệnh khởi tạo, xóa đủ RAM 132×64 trước khi bật màn, rồi ghi tám page 128 byte.
   Mỗi page đặt lại địa chỉ page và cột; framebuffer UI monochrome vẫn là 1024 byte.
-- Sau startup là màn Settings 8×16; model chọn/chỉnh độc lập SDK, chỉ giữ dữ liệu mẫu trong RAM.
+- Sau startup là Settings 8×16 với bốn cấu hình và Info; model độc lập SDK, lưu lựa chọn trong RAM.
 - Encoder dùng task polling 1 ms và decoder C độc lập đã có bài thử host, chưa dùng PCNT.
 - UI chạy task ưu tiên thấp ở core 0; task sở hữu SWD vẫn ở core 1.
 - ISR chỉ ghi nhận sự kiện hoặc thông báo task; không vẽ OLED, ghi NVS hoặc gọi SWD trong ISR.
-- Menu mẫu không gửi command đến target; một dịch vụ duy nhất vẫn sở hữu SWD.
+- Các lựa chọn mode không gửi command đến target; UI chỉ áp dụng contrast thật lên OLED.
+  Một dịch vụ duy nhất vẫn sở hữu SWD.
 - Chỉ vẽ lại OLED khi menu thay đổi, giới hạn tối đa 5 lần/giây;
   đo và điều chỉnh sau, không giữ khóa chung với thao tác SWD trong thời gian truyền I2C.
 - Wi-Fi lưu NVS khi áp dụng ở trạng thái rảnh. Clock thật qua console hiện chỉ lưu RAM.
