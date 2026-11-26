@@ -1,0 +1,74 @@
+{
+    "name": "magic-debugger-tool",
+    "displayName": "MAGIC Debugger Tool",
+    "description": "Use a MAGIC Wi-Fi/SWD probe with your project's Cortex-Debug or STM32CubeIDE debugger.",
+    "version": "0.2.0",
+    "publisher": "magic-probe",
+    "license": "GPL-3.0-or-later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nguyentriet0810/esp32-stm32-debug.git",
+        "directory": "04_extension_for_vscode"
+    },
+    "engines": { "vscode": "^1.90.0" },
+    "categories": ["Debuggers", "Other"],
+    "main": "./src/extension.js",
+    "extensionKind": ["workspace"],
+    "activationEvents": ["onView:magicProbe.controls", "onDebugResolve:cortex-debug", "onDebugResolve:stgdbtarget"],
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": false,
+            "description": "MAGIC Probe runs ARM GDB and can program the connected target."
+        },
+        "virtualWorkspaces": false
+    },
+    "scripts": {
+        "check": "node tools/check.js",
+        "test": "node --test test/*.test.js",
+        "package": "node tools/package.js",
+        "smoke": "node tools/smoke.js"
+    },
+    "devDependencies": { "@vscode/vsce": "4.1.1" },
+    "dependencies": { "jsonc-parser": "3.3.1" },
+    "contributes": {
+        "commands": [
+            { "command": "magicProbe.useProbe", "title": "Use MAGIC Wi-Fi Probe in Project", "category": "MAGIC Probe" },
+            { "command": "magicProbe.startProjectDebug", "title": "Start Project Debug Configuration", "category": "MAGIC Probe" },
+            { "command": "magicProbe.configure", "title": "Configure Probe", "category": "MAGIC Probe" },
+            { "command": "magicProbe.checkConnection", "title": "Check Connection", "category": "MAGIC Probe", "icon": "$(plug)" },
+            { "command": "magicProbe.scanTarget", "title": "Scan SWD Targets", "category": "MAGIC Probe", "icon": "$(search)" },
+            { "command": "magicProbe.inspectTarget", "title": "Inspect STM32F103", "category": "MAGIC Probe" },
+            { "command": "magicProbe.selectElf", "title": "Select ELF for Standalone Programming", "category": "MAGIC Probe" },
+            { "command": "magicProbe.flashElf", "title": "Standalone F103 Flash and Verify", "category": "MAGIC Probe" },
+            { "command": "magicProbe.disconnect", "title": "Disconnect Debugger", "category": "MAGIC Probe" },
+            { "command": "magicProbe.showOutput", "title": "Show Output", "category": "MAGIC Probe", "icon": "$(output)" },
+            { "command": "magicProbe.openSettings", "title": "Open Settings", "category": "MAGIC Probe" },
+            { "command": "magicProbe.openControls", "title": "Open Controls", "category": "MAGIC Probe" }
+        ],
+        "viewsContainers": {
+            "activitybar": [{ "id": "magicProbe", "title": "MAGIC Probe", "icon": "media/probe.svg" }]
+        },
+        "views": { "magicProbe": [{ "id": "magicProbe.controls", "name": "Probe & Target" }] },
+        "menus": {
+            "view/title": [
+                { "command": "magicProbe.scanTarget", "when": "view == magicProbe.controls && !magicProbe.busy && !magicProbe.debugActive", "group": "navigation@1" },
+                { "command": "magicProbe.showOutput", "when": "view == magicProbe.controls", "group": "navigation@2" }
+            ]
+        },
+        "configuration": {
+            "title": "MAGIC Probe",
+            "properties": {
+                "magicProbe.configurations": { "type": "array", "items": { "type": "string" }, "uniqueItems": true, "scope": "resource", "default": [], "description": "Names of native launch.json configurations that use the MAGIC Wi-Fi probe. Other configurations are not intercepted." },
+                "magicProbe.host": { "type": "string", "scope": "resource", "default": "192.168.4.1", "description": "Probe IPv4 address or DNS hostname. Use the STA address from the probe status command when using a router." },
+                "magicProbe.port": { "type": "integer", "scope": "resource", "default": 2022, "minimum": 1, "maximum": 65535, "description": "GDB TCP server port." },
+                "magicProbe.gdbPath": { "type": "string", "scope": "resource", "default": "", "description": "Fallback ARM GDB for standalone probe diagnostics/programming. F5 uses the project's native debugger toolchain." },
+                "magicProbe.elfPath": { "type": "string", "scope": "resource", "default": "", "description": "ELF for standalone programming only. F5 inherits ELF/symbol files from the project's native debug configuration." },
+                "magicProbe.clockHz": { "type": "integer", "scope": "resource", "default": 400000, "minimum": 1000, "maximum": 8000000, "description": "Requested nominal SWD frequency. 400 kHz is the validated baseline." },
+                "magicProbe.targetIndex": { "type": "integer", "scope": "resource", "default": 1, "minimum": 1, "maximum": 16, "description": "Target number returned by SWD scan." },
+                "magicProbe.connectUnderReset": { "type": "boolean", "scope": "resource", "default": false, "description": "Assert nRST during scan. Requires the target nRST wire." },
+                "magicProbe.remoteTimeoutSeconds": { "type": "integer", "scope": "resource", "default": 15, "minimum": 1, "maximum": 120, "description": "GDB remote response timeout." },
+                "magicProbe.operationTimeoutSeconds": { "type": "integer", "scope": "resource", "default": 120, "minimum": 5, "maximum": 600, "description": "Maximum duration of a batch GDB operation." }
+            }
+        }
+    }
+}

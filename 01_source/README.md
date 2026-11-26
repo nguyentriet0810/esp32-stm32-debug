@@ -4,6 +4,11 @@ Hướng dẫn đọc và chỉnh firmware ESP32 trong VS Code. Mô tả source 
 **26/11/2026**, chạy trên **ESP32-S3 N16R8**, ESP-IDF **v6.1**, Black Magic Debug **v2.1.0**.
 ESP32 làm probe nhận lệnh GDB qua Wi-Fi/TCP và giao tiếp với STM32 qua SWD.
 
+Phần mềm điều khiển **trên PC** nằm riêng trong
+[04_extension_for_vscode](../04_extension_for_vscode/README.md): sidebar VS Code,
+workflow ARM GDB và quản lý phiên debug. Đây là nơi chỉnh thao tác máy tính;
+`01_source` chứa firmware chạy trên ESP32.
+
 ## Bắt đầu trong VS Code
 
 Từ thư mục `01_source`, mở workspace bằng:

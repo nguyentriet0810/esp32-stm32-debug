@@ -1,13 +1,17 @@
 # Debug STM32 bằng VS Code qua probe ESP32 Wi-Fi
 
-Ngày cập nhật: 26/11/2026. Giao diện debug được chọn là **VS Code + Cortex-Debug**.
+Ngày cập nhật: 26/11/2026. Project giữ debugger **Cortex-Debug hoặc STM32CubeIDE for VS Code**.
 Mục tiêu là đặt breakpoint, chạy/dừng, step theo dòng C/C++, xem/sửa biến, thanh ghi,
-bộ nhớ và call stack; nạp firmware là một phần của MVP cần nghiệm thu riêng.
+bộ nhớ và call stack. Các ví dụ cấu hình thủ công bên dưới dùng Cortex-Debug.
 
 Trạng thái: mẫu attach đã đối chiếu với Cortex-Debug 1.12.1 và BMD v2.1.0. Đã thử
 ARM GDB thật qua Wi-Fi/SWD trên STM32F103C8T6; scan/attach, đọc thanh ghi/bộ nhớ,
-single-step, hardware breakpoint và run/interrupt đạt ở 400 kHz. **Chưa nghiệm thu
-phiên VS Code theo source/biến với ELF STM32 khớp ứng dụng**.
+single-step, hardware breakpoint và run/interrupt đạt ở 400 kHz. **MAGIC v0.2.0 đã đạt
+F5 attach/launch với cả Cortex-Debug và ST Generic GDB Server** trên firmware PC13 mẫu:
+build một lần, Watch `blink_ready=1`, source/call stack, breakpoint, Step Over/Into/Out,
+reset và disconnect. Launch F103C8 đã backup đủ 64 KiB, nạp và đọc lại so byte;
+profile ST-only không yêu cầu cài Cortex-Debug. Phạm vi và phiên bản kiểm chứng ghi
+trong [README extension](../04_extension_for_vscode/README.md#kiểm-chứng).
 Xem [phạm vi đã kiểm tra](09_integration_validation.md).
 
 Ngày 26/11 đã tìm ra BAT54C lắp nhầm vị trí BAT54S làm kẹp tín hiệu lên cao. Sau tháo
@@ -21,8 +25,9 @@ load/compare-sections, readback byte-exact, reset phần mềm và dừng tại 
 ## 1. Luồng debug
 
 ```text
-VS Code / Cortex-Debug
+VS Code / Cortex-Debug hoặc bộ debug ST
     ↔ ARM GDB trên PC + file ELF STM32
+    ↔ MAGIC gateway cục bộ (khi dùng extension)
     ↔ TCP/Wi-Fi <probe-ip>:2022
     ↔ ESP32 / Black Magic Debug
     ↔ SWD
@@ -35,9 +40,16 @@ trong editor, Variables, Watch, Call Stack và các cửa sổ bộ nhớ/thanh 
 
 ## 2. Chuẩn bị
 
+Đã có [extension MAGIC Debugger Tool](../04_extension_for_vscode/README.md) để cấu hình
+endpoint và tích hợp probe vào cấu hình debug của project. Dùng **Use MAGIC Wi-Fi
+Probe in Project**, rồi chọn profile MAGIC và bấm F5; ELF/toolchain/build lấy từ project.
+Phần `launch.json` bên dưới vẫn dùng được khi muốn tự cấu hình Cortex-Debug.
+Mã các thao tác PC được phát triển trong
+`04_extension_for_vscode`, độc lập với firmware ESP32 ở `01_source`.
+
 - Mở thư mục **ứng dụng STM32** trong VS Code. Repo này chứa firmware probe ESP32;
   file `01_source/build/stm32_wifi_probe.elf` không phải ELF cần dùng để debug STM32.
-- Cài [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug).
+- Nếu dùng mẫu Cortex-Debug thủ công bên dưới, cài [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug).
   Máy hiện tại đã có bản 1.12.1; mẫu không yêu cầu cài lại.
 - Cần `arm-none-eabi-gdb`, `arm-none-eabi-objdump` và `arm-none-eabi-nm` trên PATH.
   Máy hiện tại đã có các công cụ này trong

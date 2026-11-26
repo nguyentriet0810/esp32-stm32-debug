@@ -1,0 +1,34 @@
+{
+    "folders": [{ "name": "extension", "path": "." }],
+    "settings": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.rulers": [100],
+        "files.exclude": { "**/node_modules": true, "**/.cache": true, "**/dist": true },
+        "search.exclude": { "**/node_modules/**": true, "**/.cache/**": true, "**/dist/**": true }
+    },
+    "extensions": {
+        "recommendations": ["marus25.cortex-debug", "stmicroelectronics.stm32cube-ide-debug-generic-gdbserver"],
+        "unwantedRecommendations": ["espressif.esp-idf-extension", "platformio.platformio-ide"]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [{
+            "name": "MAGIC Probe: Extension Development Host",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+            "preLaunchTask": "Extension: Check"
+        }]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "options": { "cwd": "${workspaceFolder}" },
+        "tasks": [
+            { "label": "Extension: Check", "type": "process", "command": "node", "args": ["tools/check.js"], "problemMatcher": [] },
+            { "label": "Extension: Test", "type": "shell", "command": "npm test", "problemMatcher": [], "group": "test" },
+            { "label": "Extension: Package VSIX", "type": "shell", "command": "npm run package", "problemMatcher": [] }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+.cache/**
+dist/**
+node_modules/jsonc-parser/lib/esm/**
+node_modules/jsonc-parser/*.md
+!node_modules/jsonc-parser/LICENSE.md
+test/**
+tools/**
+package-lock.json
+*.code-workspace
+.gitignore
+.vscodeignore

@@ -46,6 +46,11 @@ esp32-stm32-debug/
 │   ├── 08_third_party_notices.md
 │   ├── 09_integration_validation.md
 │   └── 10_project_logic.md
+├── 04_extension_for_vscode/ # Ứng dụng PC: tích hợp probe Wi-Fi vào debugger của project
+│   ├── src/                 # Profile probe, gateway RSP, kiểm tra ELF và debug session
+│   ├── test/                # Kiểm thử tự động và Extension Host
+│   ├── tools/               # Profile phát triển, smoke test và đóng gói VSIX
+│   └── README.md            # Hướng dẫn phát triển và sử dụng extension
 ├── LICENSE
 └── README.md
 ```
@@ -59,6 +64,24 @@ Workspace dùng ESP-IDF v6.1 cục bộ, cấu hình build Debug và console USB
 `Ctrl+Shift+B` để build; `F5` để build, nạp và debug ESP32-S3 qua USB-JTAG.
 Task `ESP32: Monitor` mở console; `Ctrl+]` để đóng monitor trước khi nạp/debug.
 Hướng dẫn chi tiết nằm trong [Build và bộ công cụ](02_document/02_build_and_tooling.md).
+
+## Phần mềm PC và extension VS Code
+
+[04_extension_for_vscode](04_extension_for_vscode/README.md) chứa phần điều khiển trên PC:
+MAGIC v0.2.0 tích hợp probe ESP32 Wi-Fi/SWD vào **Cortex-Debug hoặc bộ debug ST**
+đang dùng trong project. Chọn **Use MAGIC Wi-Fi Probe in Project**, rồi dùng cấu hình
+MAGIC trong Run and Debug và bấm F5. Build/ELF/toolchain được kế thừa; cấu hình có dây
+được giữ lại. Luồng launch F103 có backup đầy đủ và readback verify. Firmware ESP32
+được phát triển trong `01_source`.
+
+Mở môi trường phát triển extension bằng profile riêng **MAGIC Probe Extension Dev**:
+
+```powershell
+.\04_extension_for_vscode\tools\open-dev.ps1 -InstallDependency
+```
+
+Trong workspace extension, nhấn F5 để chạy Extension Development Host.
+Hướng dẫn cài VSIX, cấu trúc mã PC và kiểm thử nằm trong README của thư mục này.
 
 ## Build nhanh
 
@@ -91,7 +114,8 @@ PCB COM9 đã có OLED SH1106, encoder và microSD; firmware báo OLED online, S
 UI đã có startup, Settings và các màn con SWD/Wi-Fi. Web nhập cấu hình bằng điện thoại
 và scan Wi-Fi đã build/nạp, lưu profile và kết nối lại router thật sau reset thành công.
 Ping tới hotspot Windows hiện không có phản hồi ICMP; kết nối TCP tới probe vẫn hoạt động.
-Chưa nghiệm thu debug/nạp flash trên STM32, timing SWD và đầy đủ thao tác encoder thật.
+STM32F103C8 đã đạt scan/attach, breakpoint, step và nạp/verify ví dụ LED PC13 500 ms
+qua ARM GDB/Wi-Fi/SWD ở 400 kHz. Timing SWD và đầy đủ thao tác encoder còn cần đo/thử thêm.
 MCUViewer acquisition, SWO và USB/CMSIS-DAP ở các mốc sau.
 Xem [kết quả kiểm tra và giới hạn](02_document/09_integration_validation.md).
 
@@ -132,9 +156,10 @@ attach 1
 Chỉ `attach 1` khi scan đã liệt kê target. Chưa có STM32 nối dây thì scan báo lỗi là
 kết quả mong đợi. Hướng dẫn đấu nối nằm trong [tài liệu phần cứng](02_document/05_hardware_and_local_ui.md).
 
-Giao diện debug được chọn là **VS Code + Cortex-Debug**, kết nối tới GDB/TCP của probe.
+Project tiếp tục dùng **Cortex-Debug hoặc STM32CubeIDE for VS Code**;
+extension MAGIC tích hợp kết nối tới probe Wi-Fi vào luồng debug đó.
 Xem [hướng dẫn và cấu hình attach mẫu](02_document/12_vscode_debug.md).
-Mẫu dùng trong project ứng dụng STM32; phiên debug trên target thật vẫn chờ nghiệm thu.
+Mẫu dùng trong project ứng dụng STM32; extension điều khiển PC nằm trong `04_extension_for_vscode`.
 
 ## Quản lý phiên bản
 
