@@ -69,12 +69,18 @@ static void check_settings_layout(const probe_ui_settings_t *settings)
         assert(strlen(guarded.rows[row]) == 16U);
         assert(strstr(guarded.rows[row], "Next") == NULL);
         assert(strstr(guarded.rows[row], "Mode preview") == NULL);
+        assert(strstr(guarded.rows[row], "Hold SW") == NULL);
+        if (settings->page == PROBE_UI_SETTINGS_HOME)
+        {
+            assert(strstr(guarded.rows[row], "Back") == NULL);
+        }
         if (guarded.rows[row][0] == '>')
         {
             ++cursors;
         }
     }
-    assert(cursors == ((settings->page == PROBE_UI_SETTINGS_INFO) ? 0U : 1U));
+    assert(cursors == 1U);
+    assert(strcmp(guarded.rows[1], "                ") == 0);
     assert(guarded.rows[0][0] != '>' && settings->selected < 5U);
     if (settings->page == PROBE_UI_SETTINGS_HOME)
     {
@@ -100,20 +106,64 @@ static void check_settings_layout(const probe_ui_settings_t *settings)
         assert(strcmp(guarded.rows[0], "      Info      ") == 0);
         assert(strcmp(guarded.rows[2], " MAGIC DEBUGGER ") == 0);
         assert(strcmp(guarded.rows[3], "      TOOL      ") == 0);
-        assert(strcmp(guarded.rows[4], "    (C) 2026    ") == 0);
+        assert(strcmp(guarded.rows[4], "(C)2026 GPL-3.0+") == 0);
         assert(strcmp(guarded.rows[5], "  Nguyen Hoang  ") == 0);
         assert(strcmp(guarded.rows[6], "   Minh Triet   ") == 0);
-        assert(strcmp(guarded.rows[7], "GPL-3.0-or-later") == 0);
+        assert(strcmp(guarded.rows[7], ">Back          <") == 0);
+    }
+    else if (settings->page == PROBE_UI_SETTINGS_SWD)
+    {
+        assert(strcmp(guarded.rows[0], "  SWD Settings  ") == 0);
+        assert(strcmp(guarded.rows[1], "                ") == 0);
+        assert(settings->swd_selected < 5U);
+        assert(guarded.rows[7][0] == ((settings->swd_selected == 4U) ? '>' : ' '));
+        assert(strstr(guarded.rows[7], "Back") != NULL && guarded.rows[7][15] == '<');
+        for (size_t field = 0U; field < 4U; ++field)
+        {
+            const bool enabled = (field != 2U) || (settings->swd_values[1] != 0U);
+            const bool selected = (field == settings->swd_selected);
+            const bool editing = selected && settings->swd_editing;
+            assert(guarded.rows[field + 2U][0] == (selected ? '>' : ' '));
+            assert(guarded.rows[field + 2U][10] == (editing ? '[' : ' '));
+            assert(guarded.rows[field + 2U][15] == (editing ? ']' : ' '));
+            if (!enabled)
+            {
+                assert(!selected && strstr(guarded.rows[field + 2U], "--") != NULL);
+            }
+        }
+    }
+    else if (settings->page == PROBE_UI_SETTINGS_WIFI)
+    {
+        assert(settings->wifi_selected < 2U);
+        assert(strncmp(guarded.rows[2], "STA:", 4U) == 0);
+        assert(guarded.rows[3][0] == ((settings->wifi_selected == 0U) ? '>' : ' '));
+        assert(guarded.rows[7][0] == ((settings->wifi_selected == 1U) ? '>' : ' '));
+        assert((strstr(guarded.rows[4], "192.168.4.1") != NULL) ==
+               (settings->wifi.setup_enabled && settings->wifi.portal_ready));
+        for (size_t row = 0U; row < 8U; ++row)
+        {
+            assert(strstr(guarded.rows[row], "Ping") == NULL);
+        }
+        if (!settings->wifi.setup_enabled || !settings->wifi.portal_ready)
+        {
+            for (size_t row = 4U; row <= 6U; ++row)
+            {
+                assert(strcmp(guarded.rows[row], "                ") == 0);
+            }
+        }
+        assert(strstr(guarded.rows[7], "Back") != NULL);
     }
     else
     {
         const uint8_t counts[] = {2U, 4U, 3U, 5U};
         const size_t item = (size_t)settings->page - 1U;
-        assert(item < 4U && settings->choice < counts[item]);
+        assert(item < 4U && settings->choice <= counts[item]);
+        assert(guarded.rows[7][0] == ((settings->choice == counts[item]) ? '>' : ' '));
+        assert(strstr(guarded.rows[7], "Back") != NULL && guarded.rows[7][15] == '<');
         for (size_t choice = 0U; choice < counts[item]; ++choice)
         {
-            assert(guarded.rows[choice + 1U][0] == ((choice == settings->choice) ? '>' : ' '));
-            assert(guarded.rows[choice + 1U][15] ==
+            assert(guarded.rows[choice + 2U][0] == ((choice == settings->choice) ? '>' : ' '));
+            assert(guarded.rows[choice + 2U][15] ==
                    ((choice == settings->values[item]) ? '*' : ' '));
         }
     }
@@ -211,7 +261,7 @@ static void test_settings_choices(void)
             }
             assert(settings.choice == 0U);
             assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
-            assert(settings.choice == counts[item] - 1U);
+            assert(settings.choice == counts[item]);
             assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
             assert(settings.choice == 0U);
         }
@@ -230,13 +280,52 @@ static void test_settings_choices(void)
         }
         if (item == 3U)
         {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            assert(settings.choice == counts[item]);
+            assert(probe_ui_settings_oled_percent(&settings) == 50U);
             assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
         }
         assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
         assert(settings.page == PROBE_UI_SETTINGS_HOME);
         assert(settings.values[item] == counts[item] - 1U);
         check_settings_layout(&settings);
     }
+}
+
+/** @brief Every child Back returns to its parent without committing a draft or leaking its index.
+ */
+static void test_child_back_actions(void)
+{
+    const uint8_t counts[] = {2U, 4U, 3U, 5U};
+    for (uint8_t item = 0U; item < 5U; ++item)
+    {
+        probe_ui_settings_t settings;
+        probe_ui_settings_init(&settings);
+        for (uint8_t step = 0U; step < item; ++step)
+        {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        }
+        uint8_t committed[4];
+        (void)memcpy(committed, settings.values, sizeof(committed));
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        if (item < 4U)
+        {
+            for (unsigned int step = 0U; (step < 6U) && (settings.choice != counts[item]); ++step)
+            {
+                assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            }
+            assert(settings.choice == counts[item]);
+            assert(probe_ui_settings_oled_percent(&settings) == 50U);
+        }
+        check_settings_layout(&settings);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        assert(settings.page == PROBE_UI_SETTINGS_HOME && settings.selected == item);
+        assert(memcmp(settings.values, committed, sizeof(committed)) == 0);
+        assert(probe_ui_settings_oled_percent(&settings) == 50U);
+        check_settings_layout(&settings);
+    }
+    (void)puts("PASS: Back on Flash/Target/Link/OLED/Info, draft discard and OLED restoration");
 }
 
 /** @brief Lock Target/Link in SDCARD while preserving OLED adjustment and read-only Info access. */
@@ -316,12 +405,252 @@ static void test_settings_sd_lock(void)
     check_settings_layout(&settings);
 }
 
+/** @brief Enter SWD from the default home, using only public input actions. */
+static void open_swd_settings(probe_ui_settings_t *settings)
+{
+    probe_ui_settings_init(settings);
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings->page == PROBE_UI_SETTINGS_TARGET && settings->choice == 0U);
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings->page == PROBE_UI_SETTINGS_SWD && settings->swd_selected == 0U);
+}
+
+/** @brief Require the committed SWD output in Hz/ms; uncommitted drafts must not leak out. */
+static void check_swd_config(const probe_ui_settings_t *settings, uint32_t hz, bool nrst,
+                             uint16_t pulse_ms, bool swo)
+{
+    probe_ui_swd_config_t config;
+    probe_ui_settings_swd_get(settings, &config);
+    assert(config.frequency_hz == hz && config.use_nrst == nrst);
+    assert(config.reset_pulse_ms == pulse_ms && config.use_swo == swo);
+    check_settings_layout(settings);
+}
+
+/** @brief Verify save/cancel, reset-width row locks, SWO intent and nested Target navigation. */
+static void test_swd_settings(void)
+{
+    probe_ui_settings_t settings;
+    open_swd_settings(&settings);
+    check_swd_config(&settings, 400000U, true, 100U, false);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(settings.swd_selected == 4U);
+    check_settings_layout(&settings);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.page == PROBE_UI_SETTINGS_TARGET);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(!probe_ui_settings_input(&settings, (probe_ui_settings_action_t)99));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.swd_editing);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    check_swd_config(&settings, 400000U, true, 100U, false);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+    assert(settings.page == PROBE_UI_SETTINGS_SWD && !settings.swd_editing);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    check_swd_config(&settings, 1000000U, true, 100U, false);
+
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.swd_selected == 1U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    check_swd_config(&settings, 1000000U, false, 100U, false);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.swd_selected == 3U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(settings.swd_selected == 1U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.swd_selected == 2U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    check_swd_config(&settings, 1000000U, true, 200U, false);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.swd_selected == 3U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    check_swd_config(&settings, 1000000U, true, 200U, true);
+
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(settings.swd_selected == 4U);
+    check_settings_layout(&settings);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.page == PROBE_UI_SETTINGS_TARGET && settings.choice == 0U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.page == PROBE_UI_SETTINGS_HOME && settings.values[1] == 1U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.page == PROBE_UI_SETTINGS_SWD && !settings.swd_editing);
+    check_swd_config(&settings, 1000000U, true, 200U, true);
+    assert(probe_ui_settings_oled_percent(&settings) == 50U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+    assert(settings.page == PROBE_UI_SETTINGS_TARGET);
+}
+
+/** @brief Exercise every frequency/pulse preset and clamp both bounds without wrapping. */
+static void test_swd_bounds(void)
+{
+    const uint32_t frequencies[] = {100000U, 400000U, 1000000U, 2000000U, 4000000U, 8000000U};
+    const uint16_t pulses[] = {1U, 5U, 10U, 20U, 50U, 100U, 200U, 500U};
+    probe_ui_settings_t settings;
+    open_swd_settings(&settings);
+    for (unsigned int field = 0U; field <= 2U; field += 2U)
+    {
+        assert(settings.swd_selected == field);
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        for (unsigned int step = 0U; step < 8U; ++step)
+        {
+            (void)probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS);
+        }
+        assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+        const uint8_t count = (field == 0U) ? 6U : 8U;
+        for (uint8_t choice = 0U; choice < count; ++choice)
+        {
+            assert(settings.swd_draft == choice && settings.swd_selected == field);
+            check_settings_layout(&settings);
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+            probe_ui_swd_config_t config;
+            probe_ui_settings_swd_get(&settings, &config);
+            assert(config.frequency_hz == ((field == 0U) ? frequencies[choice] : 8000000U));
+            assert(config.reset_pulse_ms == ((field == 2U) ? pulses[choice] : 100U));
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+            if ((choice + 1U) < count)
+            {
+                assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            }
+        }
+        assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+        assert(!settings.swd_editing && settings.page == PROBE_UI_SETTINGS_SWD);
+        if (field == 0U)
+        {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        }
+    }
+    check_swd_config(&settings, 8000000U, true, 500U, false);
+    (void)puts("PASS: nested SWD edits, Hz/ms presets, NRST lock, SWO flag and draft cancellation");
+}
+
+/** @brief Open the Wi-Fi configuration page through the real home and Link input flow. */
+static void open_wifi_settings(probe_ui_settings_t *settings)
+{
+    probe_ui_settings_init(settings);
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_NEXT));
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings->page == PROBE_UI_SETTINGS_LINK && settings->choice == 0U);
+    assert(probe_ui_settings_input(settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings->page == PROBE_UI_SETTINGS_WIFI);
+}
+
+/** @brief Verify access hiding/alignment, forced setup without STA, truncation and Back. */
+static void test_wifi_settings(void)
+{
+    probe_ui_settings_t settings;
+    open_wifi_settings(&settings);
+    probe_ui_wifi_view_t view = {.station_ssid = "LAB-ROUTER",
+                                 .ap_ssid = "MAGIC-PROBE",
+                                 .ap_password = "1234567890",
+                                 .portal_ready = true,
+                                 .station_connected = true};
+    assert(probe_ui_settings_wifi_update(&settings, &view));
+    assert(!probe_ui_settings_wifi_update(&settings, &view));
+    check_settings_layout(&settings);
+    char rows[8][17];
+    probe_ui_settings_render(&settings, rows);
+    assert(strcmp(rows[1], "                ") == 0);
+    assert(strcmp(rows[2], "STA:LAB-ROUTER  ") == 0);
+    assert(strcmp(rows[3], ">STA setup   OFF") == 0);
+    for (size_t row = 4U; row <= 6U; ++row)
+    {
+        assert(strcmp(rows[row], "                ") == 0);
+    }
+    bool enabled = false;
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_wifi_setup_take(&settings, &enabled) && enabled);
+    assert(!probe_ui_settings_wifi_setup_take(&settings, &enabled));
+    assert(!settings.wifi.setup_enabled && settings.wifi.station_connected);
+    view.setup_enabled = true;
+    assert(probe_ui_settings_wifi_update(&settings, &view));
+    probe_ui_settings_render(&settings, rows);
+    assert(strstr(rows[3], "ON") != NULL);
+    assert(strcmp(rows[4], " IP:192.168.4.1 ") == 0);
+    assert(strcmp(rows[5], " AP:MAGIC-PROBE ") == 0);
+    assert(strcmp(rows[6], " PW:1234567890  ") == 0);
+    assert(strcmp(rows[2], "STA:LAB-ROUTER  ") == 0);
+    check_settings_layout(&settings);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(probe_ui_settings_wifi_setup_take(&settings, &enabled) && !enabled);
+    view.setup_enabled = false;
+    assert(probe_ui_settings_wifi_update(&settings, &view));
+    view.busy = true;
+    assert(probe_ui_settings_wifi_update(&settings, &view));
+    assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(!probe_ui_settings_wifi_setup_take(&settings, &enabled));
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+    check_settings_layout(&settings);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(settings.page == PROBE_UI_SETTINGS_LINK && settings.choice == 0U);
+    assert(settings.wifi.ap_password[0] == '\0');
+    assert(!settings.wifi_setup_requested);
+    assert(!probe_ui_settings_wifi_update(&settings, &view));
+    assert(settings.wifi.ap_password[0] == '\0');
+    check_settings_layout(&settings);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    view.busy = false;
+    view.station_connected = false;
+    (void)probe_ui_settings_wifi_update(&settings, &view);
+    assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    assert(!probe_ui_settings_wifi_setup_take(&settings, &enabled));
+    probe_ui_settings_render(&settings, rows);
+    assert(strcmp(rows[2], "STA: NONE       ") == 0);
+    assert(strstr(rows[3], "ON") != NULL && strstr(rows[4], "192.168.4.1") != NULL);
+    check_settings_layout(&settings);
+    view.station_connected = true;
+    view.station_ssid[0] = '\0';
+    (void)probe_ui_settings_wifi_update(&settings, &view);
+    assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    probe_ui_settings_render(&settings, rows);
+    assert(strcmp(rows[2], "STA: NONE       ") == 0);
+    assert(strstr(rows[3], "ON") != NULL);
+    (void)memcpy(view.station_ssid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456", 33U);
+    (void)probe_ui_settings_wifi_update(&settings, &view);
+    probe_ui_settings_render(&settings, rows);
+    assert(strcmp(rows[2], "STA:ABCDEFGHIJKL") == 0);
+    check_settings_layout(&settings);
+    view.portal_ready = false;
+    (void)probe_ui_settings_wifi_update(&settings, &view);
+    assert(!probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+    probe_ui_settings_render(&settings, rows);
+    assert(strstr(rows[3], "N/A") != NULL);
+    check_settings_layout(&settings);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_PREVIOUS));
+    assert(settings.wifi_selected == 1U);
+    assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_CANCEL));
+    assert(settings.page == PROBE_UI_SETTINGS_LINK);
+    (void)puts(
+        "PASS: WiFi title gap, aligned hidden access rows, NONE forced ON, long SSID and Back");
+}
+
 /** @brief Run the platform-independent navigation, selection and SD-lock regression cases. */
 static void test_settings_model(void)
 {
     test_settings_navigation();
     test_settings_choices();
+    test_child_back_actions();
     test_settings_sd_lock();
+    test_swd_settings();
+    test_swd_bounds();
+    test_wifi_settings();
     (void)puts("PASS: spaced Settings, read-only Info, child drafts and OLED access in SDCARD");
 }
 
@@ -704,7 +1033,7 @@ static void test_settings_display(void)
         PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
         PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
         PROBE_UI_SETTINGS_CANCEL,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
-        PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
+        PROBE_UI_SETTINGS_PREVIOUS, PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
         PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,
         PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
         PROBE_UI_SETTINGS_NEXT,     PROBE_UI_SETTINGS_SELECT,   PROBE_UI_SETTINGS_NEXT,
@@ -739,6 +1068,84 @@ static void test_settings_display(void)
         }
     }
     (void)puts("PASS: owner 8x8 font, 16 cells, arrows, descenders, high bytes and menu frames");
+}
+
+/** @brief Render the SWD detail page through actual SH1106 transfers, including locked reset width.
+ */
+static void test_swd_display(void)
+{
+    probe_ui_settings_t settings;
+    open_swd_settings(&settings);
+    const probe_ui_settings_action_t actions[] = {
+        PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_PREVIOUS,
+        PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_PREVIOUS,
+        PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_NEXT,
+        PROBE_UI_SETTINGS_SELECT, PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_SELECT,
+        PROBE_UI_SETTINGS_NEXT,   PROBE_UI_SETTINGS_SELECT};
+    for (size_t step = 0U; step <= sizeof(actions) / sizeof(actions[0]); ++step)
+    {
+        if (step > 0U)
+        {
+            assert(probe_ui_settings_input(&settings, actions[step - 1U]));
+        }
+        char rows[8][17];
+        probe_ui_settings_render(&settings, rows);
+        check_settings_layout(&settings);
+        assert(probe_oled_draw(rows, 8U) == ESP_OK);
+        save_startup_preview(200U + (unsigned int)step);
+    }
+    check_swd_config(&settings, 1000000U, true, 200U, true);
+    (void)puts("PASS: SWD page pixels, four-digit frequency, draft brackets and disabled Reset ms");
+}
+
+/** @brief Render live Wi-Fi snapshots with fixture credentials only, never real AP secrets. */
+static void test_wifi_display(void)
+{
+    probe_ui_settings_t settings;
+    open_wifi_settings(&settings);
+    probe_ui_wifi_view_t view = {.station_ssid = "LAB-ROUTER",
+                                 .ap_ssid = "MAGIC-PROBE",
+                                 .ap_password = "1234567890",
+                                 .portal_ready = true,
+                                 .station_connected = true};
+    for (unsigned int step = 0U; step < 6U; ++step)
+    {
+        if (step == 1U)
+        {
+            view.setup_enabled = true;
+            view.station_connected = true;
+        }
+        else if (step == 2U)
+        {
+            view.setup_enabled = false;
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+        }
+        else if (step == 3U)
+        {
+            view.station_connected = false;
+        }
+        else if (step == 4U)
+        {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            view.station_connected = true;
+            view.setup_enabled = true;
+            (void)memcpy(view.station_ssid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456", 33U);
+        }
+        else if (step == 5U)
+        {
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_NEXT));
+            assert(probe_ui_settings_input(&settings, PROBE_UI_SETTINGS_SELECT));
+        }
+        (void)probe_ui_settings_wifi_update(&settings, &view);
+        char rows[8][17];
+        probe_ui_settings_render(&settings, rows);
+        check_settings_layout(&settings);
+        assert(probe_oled_draw(rows, 8U) == ESP_OK);
+        save_startup_preview(300U + step);
+    }
+    (void)puts("PASS: spaced WiFi frames, OFF hides IP/AP/PW, NONE and long station names");
 }
 
 /** @brief Validate exact endpoints, diagonal direction, monotonic masks and title geometry. */
@@ -874,6 +1281,8 @@ int main(void)
     test_transfer_errors();
     test_startup();
     test_settings_display();
+    test_swd_display();
+    test_wifi_display();
 #else
     const char rows[1][17] = {"DISABLED"};
     assert(probe_oled_init() == ESP_ERR_NOT_SUPPORTED);

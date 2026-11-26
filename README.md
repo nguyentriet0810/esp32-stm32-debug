@@ -19,6 +19,7 @@ esp32-stm32-debug/
 │   │   ├── probe_bmd/     # Adapter build Black Magic Debug
 │   │   ├── probe_debug/   # GDB/TCP, SWD và platform port
 │   │   ├── probe_network/ # AP/STA và cấu hình Wi-Fi trong NVS
+│   │   ├── probe_wifi_setup/ # Web cấu hình, scan Wi-Fi và Ping gateway router
 │   │   ├── probe_state/   # Snapshot trạng thái giữa các task
 │   │   ├── probe_console/ # Lệnh chẩn đoán/provision qua UART
 │   │   ├── probe_sd/      # microSD SPI/FAT, mount và đọc/ghi có giới hạn
@@ -73,6 +74,11 @@ Hướng dẫn cho máy mới: [Build và bộ công cụ](02_document/02_build_
 Firmware hiện dùng pin cố định theo schematic revision C của PCB REV 1.0:
 SWDIO/SWCLK/SWO/nRST = GPIO4/5/6/7, OLED = GPIO8/9, encoder = GPIO15/16/17.
 microSD dùng SPI tại GPIO38–42, mount FAT tại `/sdcard`; thiếu thẻ không dừng probe.
+Flash N16 đã chia hai slot ESP32 4 MiB, NVS 64 KiB, PHY 8 KiB, otadata 8 KiB,
+coredump 256 KiB, hai vùng ảnh STM32 `fw_1`/`fw_2` mỗi vùng 2 MiB và FAT `storage`
+3,625 MiB. Nhãn `ota_1`/`ota_2` dùng subtype SDK ota_0/ota_1; app đầu ở `0x20000`.
+[Bảng địa chỉ và cách chuyển NVS](02_document/02_build_and_tooling.md#cấu-hình-bộ-nhớ).
+Dung lượng đã phân bổ; các luồng OTA, lưu ảnh STM32 và mount FAT nội bộ chưa triển khai.
 
 ## Trạng thái
 
@@ -81,8 +87,12 @@ Firmware **0.1.0-dev1** đã từng được build và nạp lên ESP32-S3 N16R8
 Backend Black Magic Debug và SWD port đã tích hợp; thử quét khi chưa có target trả lỗi
 có kiểm soát. OLED/encoder đã có driver và menu, hoạt động thiếu OLED không gây dừng probe.
 
-Chưa nghiệm thu debug/nạp flash trên STM32 hoặc hiển thị/thao tác trên OLED/encoder thật
-vì chưa đấu nối các phần cứng này. MCUViewer acquisition, SWO và USB/CMSIS-DAP ở các mốc sau.
+PCB COM9 đã có OLED SH1106, encoder và microSD; firmware báo OLED online, SD mounted.
+UI đã có startup, Settings và các màn con SWD/Wi-Fi. Web nhập cấu hình bằng điện thoại
+và scan Wi-Fi đã build/nạp, lưu profile và kết nối lại router thật sau reset thành công.
+Ping tới hotspot Windows hiện không có phản hồi ICMP; kết nối TCP tới probe vẫn hoạt động.
+Chưa nghiệm thu debug/nạp flash trên STM32, timing SWD và đầy đủ thao tác encoder thật.
+MCUViewer acquisition, SWO và USB/CMSIS-DAP ở các mốc sau.
 Xem [kết quả kiểm tra và giới hạn](02_document/09_integration_validation.md).
 
 ## Kết nối và sử dụng
@@ -98,6 +108,16 @@ lệnh ghi tạo file mới, không ghi đè. Xem [hướng dẫn microSD](02_do
 Cấu hình STA bằng `wifi <SSID>|<password>`; firmware lưu vào NVS và tự kết nối sau reset.
 Không ghi thông tin đăng nhập vào source hoặc file cấu hình Git. Lệnh `ap` hiển thị
 thông tin AP dự phòng trên console khi cần, IP mặc định `192.168.4.1`.
+
+Trên OLED, chọn **Settings → Link → WiFi**, bật **STA setup ON**, nối điện thoại với
+AP **MAGIC-PROBE**, mật khẩu **1234567890**, rồi mở **http://192.168.4.1**.
+STA setup chỉ bật/tắt cấu hình web, không ngắt STA đang nối router. Khi chưa có STA,
+OLED hiện `STA: NONE` và setup luôn ON; sau khi kết nối có thể chủ động chuyển OFF.
+Trang cấu hình dùng tiếng Anh: bấm **Scan Wi-Fi**, chọn mạng
+trong **Available networks** để điền SSID, nhập mật khẩu router 2,4 GHz rồi bấm **Save and connect**;
+cấu hình được lưu NVS, OLED hiện tên STA khi có IP. Ping router nằm trên trang web và
+console; màn WiFi OLED có hàng trống dưới tiêu đề, ẩn cả IP/AP/PW khi setup OFF và giữ Back.
+Console có `web on`, `web off`, `scan`, `ping` và `net` để cấu hình/chẩn đoán. Xem [hướng dẫn UI/Wi-Fi](02_document/05_hardware_and_local_ui.md).
 
 Dùng IP từ `status` để kết nối ARM GDB:
 

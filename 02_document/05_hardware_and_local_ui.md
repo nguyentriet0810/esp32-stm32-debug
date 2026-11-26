@@ -132,7 +132,9 @@ không nối đồng thời một nguồn 3,3 V khác vào J4.6. Target dùng ng
 | Settings | Header `Settings`, một hàng trống, bốn mục Flash / Target / Link / OLED %, Info ở dòng cuối |
 | Flash source | Chọn REMOTE / SDCARD; chốt về màn chính; SDCARD khóa Target và Link |
 | Target IF | Chọn SWD / UART / I2C / SPI trong model UI |
+| SWD Settings | Tần số, dùng nRST, độ rộng xung reset, dùng SWO; Back về Target IF |
 | Host link | Chọn WiFi / BLE / ESP-NOW trong model UI |
+| WiFi config | Tiêu đề cách một hàng, STA hiện tại/NONE, setup ON/OFF, IP/AP/PW chỉ hiện khi ON và Back |
 | OLED | Chọn contrast 10 / 25 / 50 / 75 / 100 %, xem trước trực tiếp trên panel |
 | Info | MAGIC DEBUGGER TOOL, (C) 2026 Nguyen Hoang Minh Triet, GPL-3.0-or-later; chỉ đọc |
 
@@ -153,16 +155,23 @@ Màn 128×64 chia 8 dòng × 16 ký tự, mỗi ô 8×8 pixel. Dùng đúng bả
 do chủ dự án cung cấp, đặt trong `probe_oled/font8x8_basic_tr.h` dưới dạng `static const`.
 Bảng 128 glyph chiếm 1 KiB, mỗi byte là một cột, bit 0 ở trên; có mũi tên lên/xuống
 tại mã 0x01/0x02. Renderer giữ nguyên đủ tám cột và tám hàng, cả dấu gạch dưới và
-đuôi chữ ở hàng pixel cuối. Header `Settings` căn giữa, không có dấu `_` và không thể chọn.
+đuôi chữ ở hàng pixel cuối. Header căn giữa, không có dấu `_` và không thể chọn.
+Mọi màn menu đều để dòng 2 trống dưới header, gồm cả WiFi config.
 
 - Xoay ở màn chính: chọn bốn dòng 3..6 hoặc Info ở dòng 8, theo vòng; bỏ qua dòng bị khóa và hàng trống.
 - Nhấn SW: mở ngay trang con của dòng đang trỏ; không có dòng Next.
 - Trong trang con: xoay di chuyển `>`; dấu `*` bên phải đánh dấu lựa chọn đã chốt.
-- Nhấn SW trong trang con: chốt vào RAM và về đúng dòng ở màn chính.
+- Mọi màn con có Back ở dòng cuối; màn Settings chính không có Back. Chọn Back rồi
+  nhấn SW để hủy nháp và về màn trước. Không hiển thị dòng nhắc `Hold SW`.
+- Nhấn SW trên một lựa chọn: chốt vào RAM và về đúng dòng ở màn chính.
+- Riêng chọn SWD trong Target IF: chốt giao thức rồi mở SWD Settings để chỉnh chi tiết.
+- Chọn WiFi trong Host link: mở WiFi config; STA setup và Back là hai dòng có thể chọn.
 - Giữ SW 750 ms: hủy nháp, quay lại màn chính; giữ ngay tại màn chính không đổi trạng thái.
 - OLED: xoay xem trước contrast thật; nhấn chốt, giữ hủy và khôi phục contrast trước đó.
   Các mức OLED dừng ở hai biên; danh sách Flash/Target/Link chọn theo vòng.
-- Info: nhấn SW hoặc giữ để quay lại đúng dòng Info; xoay không thay đổi dữ liệu.
+  Back nằm sau mức 100 %; trỏ vào Back sẽ khôi phục contrast đã chốt, không lưu mức nháp.
+- Info: header, một hàng trống, tên mạch, `(C)2026 GPL-3.0+`, tên tác giả; Back ở dòng cuối và được trỏ sẵn. Nhấn SW
+  để quay lại đúng dòng Info; xoay không thay đổi dữ liệu. Giữ SW vẫn là phím tắt quay lại.
 
 SDCARD khóa **Target và Link**: hiện `--`, bỏ mũi tên mở trang và không cho encoder chọn.
 Flash, OLED % và Info luôn còn truy cập. Có thể chỉnh/chốt/hủy contrast khi ở SDCARD;
@@ -173,9 +182,13 @@ Flash/Target/Link hiện là **cấu hình UI**. Chúng chưa đổi
 dịch vụ GDB/SWD, chưa khởi động BLE/ESP-NOW/UART/I2C/SPI hay chạy job nạp độc lập từ SD.
 Riêng OLED % đã nối với `probe_oled_contrast` trong task sở hữu màn hình. Chưa lưu NVS;
 khởi động lại về REMOTE / SWD / WiFi / 50 %. Console và dịch vụ debug vẫn hoạt động.
+Trang WiFi đã nối dịch vụ mạng thật để mở/tắt web cấu hình, lưu SSID/mật khẩu router
+qua điện thoại. Ping vẫn dùng được trên web/console, đã bỏ khỏi OLED.
 
 Test host xác nhận buffer 8×17 byte, khoảng trống tiêu đề, năm mục điều hướng, Info chỉ đọc,
 mở/đóng từng trang con, giữ Target/Link qua SDCARD và xem trước/chốt/hủy OLED trong cả hai chế độ.
+Các bài Back kiểm tra hủy nháp trên từng màn, không lưu chỉ số Back như giá trị cấu hình,
+khôi phục contrast và giữ màn Settings đầu không có Back.
 Các biến thể SH1106 offset 0/2/4 và OLED tắt đều qua. Chiều xoay, số nấc và cảm nhận
 thao tác encoder trên PCB vẫn cần người dùng kiểm tra trực tiếp.
 
@@ -184,6 +197,145 @@ Bản font 8×8 mới cũng đã qua build/test và nạp COM9, xác minh hash f
 chủ dự án gửi; ảnh menu do driver thật xuất ra khớp ảnh xem trước. Bảng font nằm trong
 `.rodata` với kích thước 0x400 byte. Test có kiểm tra mũi tên, đuôi chữ, dấu gạch dưới
 ở hàng pixel cuối và bỏ qua mã ngoài bảng 128 glyph.
+
+### SWD Settings
+
+Từ màn chính chọn Target → SWD → nhấn SW để mở trang này. Header có một hàng trống
+bên dưới; bốn mục ở dòng 3..6, gợi ý thao tác ở dòng 7 và Back ở dòng cuối.
+
+| Mục | Lựa chọn | Mặc định |
+|---|---|---|
+| Freq kHz | 100 / 400 / 1000 / 2000 / 4000 / 8000 | 400 |
+| NRST | OFF / ON | ON |
+| Reset ms | 1 / 5 / 10 / 20 / 50 / 100 / 200 / 500 | 100 |
+| SWO | OFF / ON | OFF |
+
+- Xoay chọn mục; nhấn SW vào chỉnh, giá trị nháp nằm trong `[ ]`.
+- Xoay thay nháp trong giới hạn; nhấn lần nữa chốt vào RAM và tiếp tục ở trang SWD.
+- Giữ SW khi chỉnh: bỏ nháp; giữ khi đang chọn dòng: về Target IF.
+- Chọn Back rồi nhấn SW: về Target IF, con trỏ giao thức ở SWD.
+- NRST OFF khóa dòng Reset ms và encoder bỏ qua dòng đó. Độ rộng đã chọn vẫn được giữ
+  để dùng lại khi bật NRST. SWO là lựa chọn độc lập với nRST.
+
+Reset ms biểu diễn thời gian muốn giữ nRST ở mức thấp. Tần số là giá trị danh định;
+API `probe_ui_settings_swd_get` trả giá trị đã chốt theo Hz/ms và hai cờ dùng chân.
+Lựa chọn được giữ khi đổi sang giao thức khác rồi trở lại SWD; khởi động lại về mặc định.
+
+Đây là phần UI ngày 26/11/2026: bốn thông số SWD hiện lưu RAM, chưa nối với dịch vụ
+debug để đổi clock, bật/tắt nRST hay thay độ rộng xung thực tế; thu SWO vẫn chưa triển khai.
+Các dịch vụ debug hiện có tiếp tục dùng cấu hình backend của chúng. OLED % vẫn điều
+khiển contrast thật như mô tả phía trên.
+
+Test host kiểm tra đủ preset Hz/ms, chốt/hủy, giới hạn hai đầu, khóa Reset ms ở cả hai
+chiều xoay, giữ lựa chọn qua việc đổi giao thức, Back và đường quay lại Target. Các
+frame dùng để xem trước được lấy từ driver SH1106 thật chạy với mô hình RAM trên host.
+
+Đã kiểm tra ngày 26/11/2026: host offset 0/2/4 và OLED tắt đều qua; build Debug và nạp
+bản có Back qua USB COM9 thành công, hash flash được xác minh. Hai lần đọc console sau
+nạp báo `oled=ONLINE`, `errors=0`. Đây là kiểm tra firmware/UI; chưa đo hay thay đổi
+tần số và xung nRST thực tế bằng các lựa chọn mới.
+
+### WiFi config và cấu hình router bằng điện thoại
+
+Mở Settings → Link → WiFi rồi nhấn SW. Bố cục tám dòng khi đã nối router và bật web:
+
+```text
+  WiFi config
+
+STA:LAB-ROUTER
+>STA setup    ON
+ IP:192.168.4.1
+ AP:MAGIC-PROBE
+ PW:1234567890
+ Back          <
+```
+
+STA ở dòng 3 là tên router đang nối, chỉ lấy 12 ký tự đầu sau `STA:` nếu tên dài hơn.
+Chưa có kết nối hoặc chưa có tên STA thì hiện `STA: NONE`, setup luôn ON và không cho tắt.
+STA setup ở dòng 4 là công tắc chế độ cấu hình web. Có STA thì nhấn SW để đổi ON/OFF;
+khi OFF cả ba dòng IP/AP/PW để trống. Khi ON, IP/AP/PW hiện ở dòng 5..7, cùng lề ở cột 2
+và cùng cột bắt đầu giá trị sau nhãn. Không còn dòng Ping; Back luôn ở dòng 8.
+Worker tự mở cấu hình khi STA chưa có/mất kết nối, giữ ON sau khi có IP đến khi người dùng tắt.
+Đây là địa chỉ AP của probe, không phải IP STA nhận từ router. Việc đổi chế độ web không
+gọi ngắt/kết nối STA, không đổi profile NVS và không làm mất kết nối router hiện tại.
+
+AP cố định là **MAGIC-PROBE**, mật khẩu **1234567890** theo cấu hình phần cứng/giao diện.
+Không dùng lại tên theo MAC hay mật khẩu AP ngẫu nhiên đã lưu từ bản cũ. AP vẫn hoạt động
+ở cả hai trạng thái web; HTTP trả 403 khi OFF và không cho đọc trạng thái/scan/gửi cấu hình.
+SSID và mật khẩu AP hiển thị được đọc từ cấu hình đang chạy. Không đưa mật khẩu router
+lên OLED hoặc JSON trạng thái. Chọn Back giữ chế độ web vừa chọn; không lưu công tắc web
+vào NVS. Trong quá trình khởi động chưa có STA, chế độ cấu hình sẽ tự mở.
+
+1. Trỏ STA setup, nhấn SW để bật ON. Dùng điện thoại nối vào MAGIC-PROBE / 1234567890.
+   Giữ kết nối dù máy báo không có Internet.
+2. Mở **http://192.168.4.1** trong trình duyệt; firmware không tự bật captive portal.
+3. Trang cấu hình dùng tiếng Anh. Bấm **Scan Wi-Fi**, đợi danh sách **Available networks**,
+   chọn mạng để điền SSID tự động. Mỗi mục có RSSI theo dBm và trạng thái Secured/Open;
+   mạng Open hiện chưa hỗ trợ và không chọn được. Mạng ẩn có thể nhập SSID bằng tay.
+   Kết quả tối đa 16 SSID từ 16 AP mạnh nhất, gộp các AP trùng SSID; không tự kết nối khi chọn.
+4. Nhập SSID 1–32 byte nếu cần và mật khẩu WPA2 8–63 byte, bấm **Save and connect**.
+   Mật khẩu nhập trực tiếp trên điện thoại; không cần đưa vào source hay console.
+5. Chờ OLED hiện tên STA thay cho NONE. HTTP chấp nhận yêu cầu chỉ có nghĩa đã nhận cấu hình; kết nối và DHCP
+   còn chạy bất đồng bộ. AP có thể đổi kênh theo router, điện thoại cần kết nối lại trong vài giây.
+6. Nếu cần kiểm tra router, dùng **Ping router** trên web hoặc `ping` rồi `net` trên console.
+   Phép thử gửi ba ICMP echo tới gateway DHCP; kết quả hiển thị trên web/console.
+7. Xoay đến Back, nhấn SW để về Host link. Dữ liệu truy cập AP trong model UI được xóa
+   khi rời trang; router profile vẫn lưu NVS và dùng lại sau reset.
+
+Ping báo NO WIFI khi chưa có STA/gateway, NO REPLY nếu không có gói trả lời và ERROR khi
+không tạo được phép thử. Router có thể chặn ICMP; NO REPLY không khẳng định mất kết nối Wi-Fi.
+Ping không chặn task UI. Trạng thái STA/web trên OLED được làm mới mỗi 500 ms khi trang đang mở.
+Chọn BLE/ESP-NOW vẫn chỉ lưu lựa chọn UI, chưa đổi transport GDB hiện tại.
+Scan chạy trong worker riêng; giữ quyền cấu hình debug trong lúc quét để không làm gián
+đoạn một phiên GDB đang hoạt động. Scan/Ping/lưu profile qua web không chạy chồng nhau.
+Đang kết nối Wi-Fi có thể khiến SDK trả ESP_ERR_WIFI_STATE; trang cho phép thử scan lại.
+Console `scan` dùng cùng API; `net` đọc trạng thái scan, số mạng và mã lỗi, không in tên
+các mạng lân cận. Mỗi lượt scan giải phóng danh sách AP do SDK cấp phát.
+Console `web on` / `web off` dùng cùng API với encoder; `net` thêm trường `web=ON/OFF`.
+Nếu đang scan/provision/Ping, công tắc web báo bận và giữ trạng thái trước đó; Back vẫn dùng được.
+
+`probe_wifi_setup` phục vụ web qua interface AP, dùng asset HTML/CSS/JS nhúng không phụ
+thuộc Internet. POST dùng token theo lần boot, kiểm tra giới hạn form và không trả mật khẩu
+trong trạng thái. Worker lưu NVS/đổi profile khi giữ được quyền cấu hình của dịch vụ debug;
+đang có phiên GDB sẽ báo bận. Phép Ping và đổi profile không được chạy chồng nhau qua web.
+Lỗi khởi tạo portal là nonfatal; công tắc OLED hiện N/A, console/debug vẫn tiếp tục.
+
+Kiểm thử host và build:
+
+```powershell
+.\01_source\.tooling\python-env\Scripts\python.exe .\01_source\tools\test_oled_host.py
+.\01_source\.tooling\python-env\Scripts\python.exe .\01_source\tools\test_wifi_form_host.py
+node .\01_source\tests\wifi_portal_test.cjs
+.\01_source\tools\dev.ps1 build
+```
+
+Ngày 26/11/2026: kiểm thử OLED offset 0/2/4 và OLED tắt, codec form và JavaScript đều qua;
+web tiếng Anh được xem ở viewport 390×844 với dữ liệu giả, chọn SSID điền đúng ô nhập.
+Build Debug và nạp USB COM9 thành công, hash flash được xác minh. Người dùng đã cấu hình
+router thành công từ điện thoại; probe tự nối lại profile sau reset. Console báo
+`ready=YES`, `oled=ONLINE`, `sd=MOUNTED`, `errors=0`. Hai lượt scan thật trả lần lượt 5 và 4
+mạng, heap sau hai lượt cùng 202892 byte; không có phiên GDB hoạt động thì quét thành công,
+đang có GDB thì từ chối. Ping trong khi scan cũng bị từ chối, sau đó cờ busy được thả.
+
+Khi chưa kết nối router, Ping báo NO WIFI. Khi nối hotspot Windows, probe gửi đủ 3 gói
+đến gateway `192.168.137.1`, nhận 0 phản hồi. Gateway này chính là interface hotspot của
+PC; rule cho phép ICMP echo inbound đang tắt, còn TCP 2022 tới probe kết nối thành công.
+Đây là bằng chứng phù hợp với việc Windows chặn Ping; chưa thay firewall hoặc chứng minh
+đường ICMP bằng capture gói. Chưa nghiệm thu kết quả Ping có phản hồi từ một router khác.
+Log kiểm tra cục bộ nằm ở `01_source/.cache/wifi-setup-20261126/`.
+
+Bản trước khi thêm khoảng cách tiêu đề/ẩn AP/PW đã qua host test, build và nạp COM9, xác minh hash flash.
+Console kiểm tra boot OFF → ON → OFF đều thành công, STA vẫn giữ cùng SSID/IP và heap
+203008 byte; OLED online, SD mounted, errors=0. Bài host kiểm tra đúng thứ tự tám dòng,
+ẩn/hiện địa chỉ theo web-mode, Ping độc lập và Back. Log tại
+`01_source/.cache/wifi-layout-20261126/`. Chưa quan sát trực tiếp từng lần nhấn encoder trên kính.
+
+Bản hiện tại ngày 26/11/2026: host offset 0/2/4 và OLED tắt đều qua; kiểm tra đủ hàng trống,
+cùng lề IP/AP/PW, OFF xóa ba dòng, NONE giữ ON, tên STA 32 ký tự chỉ hiện 12 ký tự đầu và Back.
+Đã build/nạp COM9, hash flash xác minh thành công; bật/tắt web trên mạch không đổi SSID/IP,
+heap giữ 203036 byte, OLED online, SD mounted, errors=0. Trường hợp NONE được kiểm tra
+bằng snapshot host; chưa thử làm mất mạng router thật trong lượt này. Frame xem trước và log
+ở `01_source/.cache/wifi-refine-20261126/`; web được để ON sau kiểm tra để xem bố cục.
 
 ### Startup MAGIC DEBUGGER TOOL
 
@@ -232,6 +384,7 @@ UI với host được chốt trước khi triển khai chức năng này.
 
 - `probe_board`: pin map Kconfig và kiểm tra pin trùng/chân dành riêng của profile N16R8.
 - `probe_local_ui`: trạng thái menu; `probe_oled`: driver SH1106 và renderer; `probe_encoder`: input/decoder.
+- `probe_wifi_setup`: web tiếng Anh trên AP, worker scan/lưu cấu hình router và Ping gateway bất đồng bộ.
 - OLED dùng I2C master và lớp panel-I/O của ESP-IDF v6.1. Driver SH1106 trong dự án
   gửi lệnh khởi tạo, xóa đủ RAM 132×64 trước khi bật màn, rồi ghi tám page 128 byte.
   Mỗi page đặt lại địa chỉ page và cột; framebuffer UI monochrome vẫn là 1024 byte.

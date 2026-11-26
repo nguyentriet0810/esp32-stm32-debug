@@ -1,11 +1,23 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 # @file partitions.csv
-# @brief Flash partition layout for NVS, PHY data and the factory application.
+# @brief Full 16 MiB N16 flash map: ESP32 OTA pair, STM32 image pair and internal storage.
 #
-# Offsets and sizes are bytes; M suffixes follow the ESP-IDF partition parser. No OTA slot is
-# configured.
+# Bootloader occupies 0x000000..0x007FFF; the partition table sector is at 0x008000.
+# 0x01D000..0x01FFFF is 12 KiB of alignment before the first 64 KiB-aligned application.
+# Labels ota_1/ota_2 use SDK subtypes ota_0/ota_1; labels do not change boot slot numbering.
+# STM32 fw_1/fw_2 are raw data, not ESP32 app slots. Their metadata belongs in NVS.
+# Storage ends exactly at 0x1000000; FAT formatting/mounting, OTA download and crash capture
+# are separate features and are not activated by this table alone.
+# Migration: NVS grew from 24 KiB to 64 KiB and the app moved from 0x10000 to 0x20000.
+# Back up NVS and erase/pad its added pages before flashing; never erase all flash to migrate.
 
-# Name,   Type, SubType, Offset,   Size,     Flags
-nvs,      data, nvs,     0x9000,   0x6000,
-phy_init, data, phy,     0xf000,   0x1000,
-factory,  app,  factory, 0x10000,  4M,
-# Remaining flash is reserved; OTA and capture storage are not enabled yet.
+# Name,    Type, SubType,  Offset,    Size,      Flags
+nvs,       data, nvs,      0x009000,  64K,
+phy_init,  data, phy,      0x019000,  8K,
+otadata,   data, ota,      0x01B000,  8K,
+ota_1,     app,  ota_0,    0x020000,  4M,
+ota_2,     app,  ota_1,    0x420000,  4M,
+coredump,  data, coredump, 0x820000,  256K,
+fw_1,      data, undefined,0x860000,  2M,
+fw_2,      data, undefined,0xA60000,  2M,
+storage,   data, fat,      0xC60000,  0x3A0000,

@@ -22,6 +22,7 @@
 #include "probe_console.h"
 #include "probe_local_ui.h"
 #include "probe_sd.h"
+#include "probe_wifi_setup.h"
 
 /* ESP-IDF invokes this externally visible entry point from its main task. */
 /**
@@ -53,6 +54,11 @@ void app_main(void)
     ESP_ERROR_CHECK(storage);
     ESP_ERROR_CHECK(probe_network_start());
     ESP_ERROR_CHECK(probe_debug_start());
+    const esp_err_t wifi_setup = probe_wifi_setup_start();
+    if (wifi_setup != ESP_OK)
+    {
+        ESP_LOGW("probe_app", "Phone Wi-Fi setup unavailable: %s", esp_err_to_name(wifi_setup));
+    }
     ESP_ERROR_CHECK(probe_local_ui_start());
     const esp_err_t sd = probe_sd_start();
     if (sd == ESP_OK)

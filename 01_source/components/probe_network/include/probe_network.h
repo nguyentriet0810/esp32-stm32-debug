@@ -17,11 +17,11 @@
  * @brief Start the fallback AP and any stored station profile.
  * @pre Call once from the startup task after NVS initialization.
  * @return ESP_OK when Wi-Fi started; SDK initialization/storage errors otherwise.
- * @note Connection and DHCP completion are asynchronous. AP credential is generated once.
+ * @note Connection/DHCP are asynchronous. The setup AP uses MAGIC-PROBE / 1234567890.
  */
 esp_err_t probe_network_start(void);
 /**
- * @brief Persist a station profile and request a connection from the console task.
+ * @brief Persist a station profile and request a connection from a provisioning task.
  * @param[in] ssid Borrowed NUL-terminated UTF-8 SSID, 1..32 bytes.
  * @param[in] password Borrowed NUL-terminated WPA password, 8..63 bytes; never logged.
  * @retval ESP_OK The profile was saved and the connection request was accepted.
@@ -33,7 +33,7 @@ esp_err_t probe_network_start(void);
  */
 esp_err_t probe_network_provision(const char *ssid, const char *password);
 /**
- * @brief Copy AP credentials in response to an explicit local console request.
+ * @brief Copy AP credentials for an explicit console request or the opened Wi-Fi UI page.
  * @param[out] ssid Caller-owned output with at least 33 bytes including its terminator.
  * @param[out] password Caller-owned output with at least 64 bytes including its terminator.
  * @retval ESP_OK Both terminated outputs were copied.

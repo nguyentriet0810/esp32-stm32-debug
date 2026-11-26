@@ -9,7 +9,7 @@
 idf_component_register(
     SRCS "main.c"
     INCLUDE_DIRS "."
-    PRIV_REQUIRES probe_board probe_network probe_debug probe_console probe_local_ui probe_sd nvs_flash log
+    PRIV_REQUIRES probe_board probe_network probe_debug probe_console probe_local_ui probe_sd probe_wifi_setup nvs_flash log
 )
 
 if(NOT CMAKE_BUILD_EARLY_EXPANSION)

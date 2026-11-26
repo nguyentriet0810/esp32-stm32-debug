@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- @file wifi_portal.html @brief Self-contained mobile setup UI served only on the probe AP. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>MAGIC DEBUGGER TOOL · Wi-Fi</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101719;color:#edf5ef;font:16px/1.5 system-ui,sans-serif}
+main{max-width:520px;margin:0 auto;padding:32px 20px 48px}header{margin-bottom:26px}
+.brand{font-size:12px;font-weight:750;letter-spacing:.13em;color:#94d8b5}h1{font-size:30px;line-height:1.15;margin:12px 0}
+p{color:#b7c7be;margin:12px 0}.card{background:#192326;border:1px solid #344440;border-radius:16px;padding:22px;margin:18px 0}
+label{display:block;font-weight:650;margin:18px 0 7px}input,select{width:100%;min-width:0;border:1px solid #52645c;border-radius:9px;background:#101719;color:inherit;padding:13px;font:inherit}
+input:focus,select:focus{outline:2px solid #91e7b8;outline-offset:2px}button{width:100%;border:0;border-radius:9px;padding:14px;font:inherit;font-weight:750;background:#9aebbd;color:#10251a;cursor:pointer;margin-top:20px}
+button.secondary{background:#293c34;color:#d4f4e2;border:1px solid #526b5b;margin-top:12px}button:disabled{opacity:.5;cursor:wait}
+.status{display:inline-block;border-radius:20px;padding:5px 11px;background:#293b33;color:#c4e8d4;font-size:13px}
+.online{background:#17482f;color:#a5efc6}.small{font-size:13px}.mono{font-family:ui-monospace,monospace;overflow-wrap:anywhere}
+.result{min-height:26px;color:#e2eadc}h2{font-size:19px;margin:0 0 8px}.note{border-left:3px solid #739d84;padding-left:12px}
+</style>
+</head>
+<body><main>
+<header><div class="brand">MAGIC DEBUGGER TOOL</div><h1>Wi-Fi setup</h1>
+<p>Connect the probe to your router for wireless debugging.</p><span id="state" class="status">Reading status…</span></header>
+<section class="card"><h2>Router Wi-Fi</h2>
+<button id="scan" class="secondary" type="button">Scan Wi-Fi</button>
+<label for="networks">Available networks</label><select id="networks"><option value="">Scan to find nearby networks</option></select>
+<p id="scan-status" class="small" role="status" aria-live="polite">Scan 2.4 GHz networks or enter an SSID below.</p>
+<form id="wifi" method="post" action="/api/wifi"><label for="ssid">Network name · SSID</label><input id="ssid" name="ssid" maxlength="32" required autocomplete="off" spellcheck="false" placeholder="2.4 GHz Wi-Fi name">
+<label for="password">Password</label><input id="password" name="password" type="password" minlength="8" maxlength="63" required autocomplete="new-password" placeholder="Wi-Fi password">
+<p class="small">Use a 2.4 GHz WPA2 network with an 8–63 byte password. Open networks are not supported.</p>
+<button id="save" type="submit">Save and connect</button></form>
+<p id="message" class="result" role="status" aria-live="polite"></p></section>
+<section class="card"><h2>Router connection</h2>
+<p id="network">No network information yet.</p><p id="ip" class="mono small"></p>
+<button id="ping" class="secondary" type="button">Ping router</button>
+<p id="ping-result" class="result" role="status" aria-live="polite">Not tested yet.</p></section>
+<p class="small note">Keep your phone connected to the probe AP, even if it reports no Internet. The AP may briefly reconnect after saving. A router or Windows hotspot may block ICMP while Wi-Fi is still connected.</p>
+<p id="ap" class="small mono"></p>
+</main><script>
+'use strict';
+const byId=id=>document.getElementById(id);
+let token='', busy=false, pending=false, polling=false, connected=false, submitted=false, scanRevision=-1;
+const pingLabels=['Not tested yet.','Pinging router…','','No ICMP reply. The router may block ping; Wi-Fi can still be connected.','Not connected to a router.','Could not start the test.'];
+function buttons(){
+  byId('save').disabled=pending||busy||!token;
+  byId('ping').disabled=pending||busy||!token||!connected;
+  byId('scan').disabled=pending||busy||!token;
+  byId('networks').disabled=pending||busy;
+}
+async function request(path,options={}){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),5000);
+  try{return await fetch(path,{...options,signal:controller.signal});}
+  finally{clearTimeout(timer);}
+}
+async function refreshScan(status){
+  byId('scan').textContent=status.scan===1?'Scanning…':'Scan Wi-Fi';
+  if(status.scan===1){byId('scan-status').textContent='Scanning nearby 2.4 GHz networks…';return;}
+  if(status.scan_revision===scanRevision)return;
+  try{
+    const response=await request('/api/scan',{cache:'no-store'});
+    if(!response.ok)throw new Error('scan');
+    const result=await response.json(),select=byId('networks'),previous=select.value;
+    select.replaceChildren();
+    const placeholder=document.createElement('option');
+    placeholder.value='';placeholder.textContent=result.networks.length?'Select a network…':'No networks listed';
+    select.append(placeholder);
+    for(const network of result.networks){
+      const option=document.createElement('option');option.value=network.ssid;
+      option.textContent=`${network.ssid} · ${network.rssi} dBm · ${network.secured?'Secured':'Open (unsupported)'}`;
+      option.disabled=!network.secured;select.append(option);
+    }
+    select.value=previous;
+    byId('scan-status').textContent=result.state===3?`Scan failed (${result.result}). Wait for Wi-Fi, then retry.`:
+      result.state===0?'Scan 2.4 GHz networks or enter an SSID below.':
+      result.networks.length?`${result.networks.length} networks found. Hidden network? Enter its SSID below.`:'No networks found. Move closer and scan again.';
+    scanRevision=status.scan_revision;
+  }catch(error){byId('scan-status').textContent='Could not load networks. Please try scanning again.';}
+}
+async function refresh(){
+  if(polling)return;polling=true;
+  try{
+    const response=await request('/api/status',{cache:'no-store'});
+    if(!response.ok){
+      const error=await response.json();throw new Error(error.error||'status');
+    }
+    const s=await response.json(); token=s.token;busy=s.busy;connected=s.connected;
+    byId('state').textContent=s.connected?'Router connected':'Router not connected';
+    byId('state').className='status'+(s.connected?' online':'');
+    byId('network').textContent=s.connected?'Network: '+s.ssid:'The probe has no router IP yet.';
+    byId('ip').textContent=s.connected?'Probe IP: '+s.ip:'';
+    byId('ap').textContent='Probe AP: '+s.ap;
+    buttons();
+    byId('ping-result').textContent=s.ping===2?`${s.received}/${s.sent} replies · average ${s.mean_ms} ms · ${s.gateway}`:pingLabels[s.ping]||'Not tested yet.';
+    if(submitted&&!pending){
+      if(s.configuring)byId('message').textContent='Saving configuration…';
+      else if(s.result!=='ESP_OK')byId('message').textContent='Could not save configuration: '+s.result;
+      else if(s.connected)byId('message').textContent='Router connected. You can now run a ping test.';
+      else byId('message').textContent='Configuration accepted. Waiting for connection; check the SSID and password if no IP appears.';
+    }
+    await refreshScan(s);
+  }catch(error){token='';byId('state').className='status';
+    byId('state').textContent=error.message==='setup_disabled'?
+      'Wi-Fi setup is OFF. Turn STA setup ON in the OLED menu.':'Waiting to reconnect to the probe…';buttons();}
+  finally{polling=false;}
+}
+async function post(path,body){
+  if(!token)await refresh();
+  if(!token)throw new Error('offline');
+  const response=await request(path,{method:'POST',headers:{'X-Probe-Token':token,'Content-Type':'application/x-www-form-urlencoded'},body});
+  const result=await response.json();
+  if(!response.ok)throw new Error(result.error||'request');
+  return result;
+}
+byId('wifi').addEventListener('submit',async event=>{
+  event.preventDefault();if(busy||pending)return;
+  const ssid=byId('ssid').value,password=byId('password').value;
+  if(new TextEncoder().encode(ssid).length>32||new TextEncoder().encode(password).length>63){byId('message').textContent='SSID: up to 32 bytes. Password: up to 63 bytes.';return;}
+  pending=true;buttons();submitted=true;
+  try{await post('/api/wifi',new URLSearchParams({ssid,password}));byId('password').value='';byId('message').textContent='Configuration sent. Connecting…';}
+  catch(error){byId('message').textContent=error.message==='debug_busy'?'The probe has an active debug session. End it and retry.':error.message==='busy'?'The probe is processing another request. Please retry shortly.':'Could not send configuration. Check the AP connection and retry.';submitted=false;}
+  finally{pending=false;buttons();await refresh();}
+});
+byId('ping').addEventListener('click',async()=>{
+  if(busy||pending)return;pending=true;buttons();
+  try{await post('/api/ping','');byId('ping-result').textContent='Pinging router…';}
+  catch(error){byId('ping-result').textContent='Could not ping. Check the router connection and retry.';}
+  finally{pending=false;buttons();await refresh();}
+});
+byId('networks').addEventListener('change',()=>{
+  if(byId('networks').value)byId('ssid').value=byId('networks').value;
+});
+byId('scan').addEventListener('click',async()=>{
+  if(busy||pending)return;pending=true;buttons();
+  byId('scan-status').textContent='Starting Wi-Fi scan…';
+  try{await post('/api/scan','');scanRevision=-1;}
+  catch(error){byId('scan-status').textContent=error.message==='busy_or_debug'?
+    'The probe is busy. End any debug session and retry.':'Could not start scanning. Check the AP connection and retry.';}
+  finally{pending=false;buttons();await refresh();}
+});
+buttons();refresh();setInterval(refresh,1500);
+</script></body></html>

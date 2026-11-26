@@ -11,20 +11,18 @@
  * DHCP completion happen asynchronously.
  */
 #include "probe_network.h"
-#include <inttypes.h>
 #include <stdatomic.h>
 #include <stdio.h>
 #include <string.h>
 #include "esp_event.h"
 #include "esp_log.h"
-#include "esp_mac.h"
 #include "esp_netif.h"
-#include "esp_random.h"
 #include "esp_wifi.h"
 #include "nvs.h"
 #include "probe_state.h"
 static const char network_tag[] = "probe_network";
-static char ap_name[33];
+static const char ap_name[] = "MAGIC-PROBE";
+static const char ap_password[] = "1234567890";
 static atomic_bool station_enabled;
 /**
  * @brief Reconnect an enabled station and publish network identity after DHCP.
@@ -95,7 +93,7 @@ static bool network_load_station(wifi_config_t *config)
     return found;
 }
 /**
- * @brief Prepare AP/STA interfaces and start Wi-Fi with stored or generated credentials.
+ * @brief Start the fixed setup AP and any persisted station profile independently.
  */
 esp_err_t probe_network_start(void)
 {
@@ -129,39 +127,15 @@ esp_err_t probe_network_start(void)
     {
         result = esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, network_event, NULL);
     }
-    uint8_t mac[6] = {0};
-    if (result == ESP_OK)
-    {
-        result = esp_read_mac(mac, ESP_MAC_WIFI_SOFTAP);
-    }
     wifi_config_t ap = {0};
     wifi_config_t station = {0};
-    char password[17] = {0};
     station.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
     if (result == ESP_OK)
     {
-        (void)snprintf(ap_name, sizeof(ap_name), "STM32-PROBE-%02X%02X", (unsigned int)mac[4],
-                       (unsigned int)mac[5]);
-        nvs_handle_t handle = 0U;
-        result = nvs_open("probe_wifi", NVS_READWRITE, &handle);
-        if (result == ESP_OK)
-        {
-            size_t length = sizeof(password);
-            if (nvs_get_str(handle, "ap_password", password, &length) != ESP_OK)
-            {
-                (void)snprintf(password, sizeof(password), "P%08" PRIX32 "x", esp_random());
-                result = nvs_set_str(handle, "ap_password", password);
-                if (result == ESP_OK)
-                {
-                    result = nvs_commit(handle);
-                }
-            }
-            nvs_close(handle);
-        }
         const size_t name_length = strlen(ap_name);
         (void)memcpy(ap.ap.ssid, ap_name, name_length);
         ap.ap.ssid_len = (uint8_t)name_length;
-        (void)snprintf((char *)ap.ap.password, sizeof(ap.ap.password), "%s", password);
+        (void)memcpy(ap.ap.password, ap_password, sizeof(ap_password));
         ap.ap.channel = 6U;
         ap.ap.max_connection = 2U;
         ap.ap.authmode = WIFI_AUTH_WPA2_PSK;
@@ -191,12 +165,12 @@ esp_err_t probe_network_start(void)
     {
         (void)esp_wifi_set_ps(WIFI_PS_NONE);
         ESP_LOGI(network_tag, "AP ready: ssid=%s ip=192.168.4.1", ap_name);
-        /* The AP password is provisioned in NVS; it is deliberately omitted from logs. */
+        /* AP access data follows the board UI specification; router credentials stay in NVS. */
     }
     return result;
 }
 /**
- * @brief Copy active AP credentials to the explicitly requested console buffers.
+ * @brief Copy active AP access data for explicit console or local UI display.
  */
 esp_err_t probe_network_ap_credentials(char ssid[33], char password[64])
 {
@@ -251,6 +225,7 @@ esp_err_t probe_network_provision(const char *ssid, const char *password)
                 config.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
                 /* Suppress reconnect callbacks until the replacement profile is installed. */
                 atomic_store(&station_enabled, false);
+                probe_state_network(false, ssid, "192.168.4.1");
                 (void)esp_wifi_disconnect();
                 result = esp_wifi_set_config(WIFI_IF_STA, &config);
                 if (result == ESP_OK)

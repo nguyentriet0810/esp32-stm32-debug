@@ -197,8 +197,72 @@ Board bring-up passed: ESP32-S3 N16R8
 ## Cấu hình bộ nhớ
 
 Flash Quad SPI và PSRAM Octal SPI là hai cấu hình riêng. Không chọn Quad PSRAM cho R8.
-`partitions.csv` hiện dành 4 MB cho ứng dụng, phần flash còn lại chưa sử dụng.
-Chưa có chức năng cập nhật OTA.
+`partitions.csv` dùng bố cục N16 đã chốt ngày 26/11/2026:
+
+| Vùng | Type / subtype | Offset | Dung lượng |
+|---|---|---:|---:|
+| `nvs` | data / nvs | `0x009000` | 64 KiB |
+| `phy_init` | data / phy | `0x019000` | 8 KiB |
+| `otadata` | data / ota | `0x01B000` | 8 KiB |
+| `ota_1` | app / ota_0 | `0x020000` | 4 MiB |
+| `ota_2` | app / ota_1 | `0x420000` | 4 MiB |
+| `coredump` | data / coredump | `0x820000` | 256 KiB |
+| `fw_1` | data / undefined | `0x860000` | 2 MiB |
+| `fw_2` | data / undefined | `0xA60000` | 2 MiB |
+| `storage` | data / fat | `0xC60000` | 3,625 MiB |
+
+Bootloader dành `0x000000..0x007FFF` (32 KiB), bảng phân vùng ở `0x008000` (4 KiB).
+Khoảng `0x01D000..0x01FFFF` là 12 KiB căn chỉnh trước app; vùng cuối kết thúc đúng
+`0x1000000`, tương ứng 16 MiB. R8 là PSRAM 8 MiB riêng, không nằm trong CSV này.
+
+`ota_1`/`ota_2` là nhãn do dự án đặt; subtype SDK phải liên tiếp từ ota_0/ota_1.
+SDK có thể cảnh báo nhãn trùng tên subtype nhưng khác số: đó là chủ ý đánh số 1/2 của
+dự án, không phải đổi thứ tự boot slot. `otadata` bắt buộc đúng `0x2000` (8 KiB);
+64 KiB sẽ bị bộ kiểm tra CSV từ chối. Khi metadata OTA trống và không có factory,
+bootloader chọn slot SDK ota_0, tức nhãn `ota_1` tại `0x20000`.
+
+Hai vùng `fw_1`/`fw_2` dành cho ảnh `.bin` STM32, mỗi ảnh tối đa 2 MiB; metadata dự kiến
+(tên, độ dài, địa chỉ STM32, SHA-256/trạng thái hợp lệ) lưu NVS. Chúng là data partition,
+không dùng subtype app và không được ESP32 bootloader chọn để chạy.
+
+Bảng phân vùng mới chuẩn bị dung lượng; chưa có đường tải OTA ESP32, ghi/chọn ảnh STM32,
+format/mount FAT nội bộ hay bật crash capture. Hiện microSD vẫn mount riêng tại `/sdcard`.
+`phy_init` cũng chưa được dùng để nạp PHY data vì SDK đang lấy init data từ app.
+
+Kiểm tra bảng và build bằng SDK được ghim:
+
+```powershell
+.\01_source\tools\dev.ps1 partition-table build
+```
+
+### Chuyển từ bảng factory 4 MiB trước đây
+
+NVS cũ ở `0x9000` dài 24 KiB, firmware cũ ở `0x10000`. NVS mới dài 64 KiB nên phủ lên
+vùng PHY/app cũ; firmware mới bắt đầu `0x20000`. Nạp bảng phân vùng đơn lẻ trong lúc
+app cũ còn nguyên không tạo thành một bản chuyển đổi hoàn chỉnh.
+
+Trình tự chuyển đổi giữ cấu hình:
+
+1. Sao lưu flash 16 MiB và lấy snapshot NVS cũ 24 KiB trước khi ghi.
+2. Tạo ảnh NVS 64 KiB: giữ nguyên 24 KiB đầu, thêm 40 KiB `0xFF`; xóa trắng vùng PHY mới.
+3. Trong một phiên ROM/esptool, ghi bootloader, bảng mới, NVS đã mở rộng, PHY trống,
+   `ota_data_initial.bin` và firmware tại offset lấy từ `flasher_args.json`; chỉ reset sau khi ghi xong.
+4. Xác minh hash ghi flash, đọc lại metadata và kiểm tra STA vẫn dùng cấu hình đã lưu.
+
+Không dùng `erase-flash` để chuyển đổi. Các lần build/flash tiếp theo dùng `dev.ps1` như
+thường lệ; flash args được SDK sinh từ CSV, gồm app ở `0x20000` và otadata ở `0x1B000`.
+Full flash/ảnh NVS chứa cấu hình riêng, chỉ giữ trong cache đã bị Git bỏ qua.
+
+Đã thực hiện trên PCB COM9 ngày 26/11/2026: sao lưu đủ 16.777.216 byte, kiểm tra
+CSV/binary/flash args, build Debug và chuyển đổi thành công. App 1.067.232 byte nằm
+trong slot 4 MiB, SDK báo còn 75% trống. Đọc lại vùng `0x8000..0x1CFFF` xác nhận
+bảng trên mạch khớp CSV và NVS 64 KiB khớp byte với ảnh gồm 24 KiB cũ + 40 KiB trống.
+STA tự nối lại cùng profile/IP trước đó; console báo OLED online, SD mounted, errors=0.
+Log, bản sao lưu flash, NVS và ảnh chuyển đổi nằm tại
+`01_source/.cache/partitions-n16-20261126/`; COM9 đã đóng sau kiểm tra.
+
+Tham chiếu: [ESP-IDF partition tables](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-guides/partition-tables.html),
+[OTA data và boot slot](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/system/ota.html#ota-data-partition).
 
 `sdkconfig` là trạng thái sinh ra cục bộ. Git lưu `sdkconfig.defaults`.
 Khi thay defaults sau lần build đầu, cập nhật bằng `menuconfig`, hoặc sao lưu
@@ -238,6 +302,12 @@ Chú thích tự do trong schematic còn ghi nhóm SD GPIO14–18 là thông tin
 netlist thực tế dùng CS/MOSI/SCK/MISO/DETECT = 38/39/40/41/42.
 
 Console UART 115200: `wifi <SSID>|<password>`, `status`, `pins`, `clock <Hz>`, `ap`.
+`net` đọc trạng thái web/Ping/scan; `ping` gửi ba gói tới gateway router qua STA;
+`scan` quét Wi-Fi và đọc số mạng/kết quả bằng `net` sau vài giây.
+Điện thoại có thể nhập Wi-Fi tại `http://192.168.4.1` sau khi nối AP được hiển thị ở
+OLED Settings → Link → WiFi và bật STA setup ON. AP là MAGIC-PROBE / 1234567890;
+`web on` / `web off` cũng điều khiển chế độ web qua console mà không ngắt STA.
+[Hướng dẫn và kiểm thử](05_hardware_and_local_ui.md).
 SSID 1–32 byte, mật khẩu WPA2 8–63 byte; dấu `|` phân cách nên không dùng trong SSID.
 Không echo đầu vào credential, không đưa mật khẩu STA vào log. NVS hiện chưa mã hóa;
 đây là cấu hình lưu cục bộ của nguyên mẫu. Lệnh `ap` chỉ in credential AP khi được gọi trực tiếp.

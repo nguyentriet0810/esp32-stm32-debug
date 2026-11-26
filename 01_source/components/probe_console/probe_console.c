@@ -25,6 +25,7 @@
 #include "probe_network.h"
 #include "probe_state.h"
 #include "probe_sd.h"
+#include "probe_wifi_setup.h"
 /**
  * @brief Print a serialized card-state snapshot or its diagnostic error.
  */
@@ -162,6 +163,32 @@ static void console_command(char *line)
     {
         console_status();
     }
+    else if (strcmp(line, "ping") == 0)
+    {
+        (void)printf("PING_START %s\n", esp_err_to_name(probe_wifi_setup_ping_router()));
+    }
+    else if (strcmp(line, "scan") == 0)
+    {
+        (void)printf("SCAN_START %s\n", esp_err_to_name(probe_wifi_setup_scan()));
+    }
+    else if ((strcmp(line, "web on") == 0) || (strcmp(line, "web off") == 0))
+    {
+        (void)printf("WEB_SETUP %s\n",
+                     esp_err_to_name(probe_wifi_setup_set_enabled(strcmp(line, "web on") == 0)));
+    }
+    else if (strcmp(line, "net") == 0)
+    {
+        probe_wifi_setup_status_t status;
+        probe_wifi_setup_get_status(&status);
+        (void)printf("NET_STATUS ready=%s web=%s busy=%s ping=%u gateway=%s sent=%" PRIu32
+                     " replies=%" PRIu32 " mean_ms=%" PRIu32
+                     " config=%s scan=%u networks=%u scan_result=%s\n",
+                     status.ready ? "YES" : "NO", status.enabled ? "ON" : "OFF",
+                     status.busy ? "YES" : "NO", (unsigned int)status.ping, status.gateway,
+                     status.sent, status.received, status.mean_ms,
+                     esp_err_to_name(status.configure_result), (unsigned int)status.scan,
+                     (unsigned int)status.scan_count, esp_err_to_name(status.scan_result));
+    }
     else if (strcmp(line, "ap") == 0)
     {
         char ssid[33] = {0};
@@ -230,9 +257,11 @@ static void console_command(char *line)
     }
     else
     {
-        (void)printf("COMMANDS: status | pins | ap | clock <Hz> | wifi <ssid>|<password> | "
-                     "sd [status|mount|unmount|ls] | sd read <8.3-name> | "
-                     "sd write <8.3-name>|<text>\n");
+        (void)printf(
+            "COMMANDS: status | net | ping | scan | web on|off | pins | ap | clock <Hz> | wifi "
+            "<ssid>|<password> | "
+            "sd [status|mount|unmount|ls] | sd read <8.3-name> | "
+            "sd write <8.3-name>|<text>\n");
     }
     (void)fflush(stdout);
 }

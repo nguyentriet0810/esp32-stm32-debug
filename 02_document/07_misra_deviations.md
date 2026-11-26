@@ -58,6 +58,16 @@ Không dùng danh sách này để bỏ qua toàn bộ cảnh báo hoặc tuyên
   conversion/sign-conversion trong phần header; mã tự viết sau include vẫn giữ kiểm tra.
 - Bằng chứng: build với `-Werror` và review phạm vi pragma; chưa đối chiếu rule MISRA đầy đủ.
 
+## SDK-006 — Symbol asset web được nhúng bởi linker ESP-IDF
+
+- Phạm vi: khai báo `portal_html` với GNU `__asm__` trong `probe_wifi_setup.c`.
+- Lý do: `EMBED_TXTFILES wifi_portal.html` cung cấp symbol linker `_binary_wifi_portal_html_start`;
+  khai báo alias cho phép dùng tên C nội bộ mà không sửa cơ chế asset của SDK.
+- Kiểm soát: dữ liệu chỉ đọc, kết thúc NUL do SDK; chỉ HTTP task đọc để gửi trang.
+  Không chạy mã asm hoặc ghi asset, component vẫn dùng GNU17 và toàn bộ warning/analyzer.
+- Bằng chứng: build/link Debug với SDK đã ghim và host kiểm thử script/form. Chưa đối
+  chiếu rule MISRA bằng checker; không tuyên bố đã hoàn tất deviation record.
+
 ## BMD-001 — Ranh giới backend Black Magic Debug
 
 - Phạm vi: `TRY/CATCH` trong task SWD owner; ABI/hooks của BMD, libc shim trong `probe_bmd/port`.

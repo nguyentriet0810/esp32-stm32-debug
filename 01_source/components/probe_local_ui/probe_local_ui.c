@@ -12,6 +12,8 @@
  */
 #include "probe_local_ui.h"
 #include <stdbool.h>
+#include <stdint.h>
+#include <string.h>
 #include "esp_log.h"
 #include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
@@ -22,6 +24,8 @@
 #include "probe_oled.h"
 #include "probe_state.h"
 #include "probe_ui_settings.h"
+#include "probe_network.h"
+#include "probe_wifi_setup.h"
 
 _Static_assert(PROBE_UI_SETTINGS_ROWS == PROBE_OLED_TEXT_ROWS &&
                    PROBE_UI_SETTINGS_COLUMNS == PROBE_OLED_TEXT_COLUMNS,
@@ -112,11 +116,31 @@ static bool ui_settings_event(probe_ui_settings_t *settings, probe_encoder_event
     return changed;
 }
 
+/** @brief Refresh only the explicitly opened Wi-Fi page from AP and diagnostic snapshots. */
+static bool ui_wifi_refresh(probe_ui_settings_t *settings)
+{
+    probe_ui_wifi_view_t view = {0};
+    probe_state_t network = {0};
+    probe_state_get(&network);
+    probe_wifi_setup_status_t status;
+    probe_wifi_setup_get_status(&status);
+    (void)probe_network_ap_credentials(view.ap_ssid, view.ap_password);
+    view.portal_ready = status.ready;
+    view.setup_enabled = status.enabled;
+    (void)memcpy(view.station_ssid, network.ssid, sizeof(view.station_ssid));
+    view.station_connected = network.station_connected;
+    view.busy = status.busy;
+    const bool changed = probe_ui_settings_wifi_update(settings, &view);
+    (void)memset(&view, 0, sizeof(view));
+    return changed;
+}
+
 /**
  * @brief Own OLED rendering and consume queued menu events on core 0.
  * @param[in] context Unused FreeRTOS task argument.
  * @note Runs startup first, then draws changed settings at most once per 200 ms. Mode choices
  *       stay in RAM; OLED contrast previews apply immediately and cancel restores the old value.
+ *       While Wi-Fi is open, refresh snapshots every 500 ms and dispatch web-mode changes.
  *       An OLED error disables rendering for the remaining task lifetime.
  */
 static void ui_task(void *context)
@@ -127,6 +151,7 @@ static void ui_task(void *context)
     bool dirty = true;
     unsigned int applied_contrast = 128U;
     int64_t last_render_us = 0;
+    int64_t last_wifi_refresh_us = 0;
     bool oled_ok = (probe_oled_init() == ESP_OK);
     probe_state_oled(oled_ok);
 #if CONFIG_PROBE_ENCODER_ENABLE
@@ -158,6 +183,18 @@ static void ui_task(void *context)
             dirty = ui_settings_event(&settings, event) || dirty;
         }
         const int64_t now_us = esp_timer_get_time();
+        bool setup_enabled = false;
+        if (probe_ui_settings_wifi_setup_take(&settings, &setup_enabled))
+        {
+            (void)probe_wifi_setup_set_enabled(setup_enabled);
+            dirty = true;
+        }
+        if ((settings.page == PROBE_UI_SETTINGS_WIFI) &&
+            (dirty || (now_us - last_wifi_refresh_us >= INT64_C(500000))))
+        {
+            dirty = ui_wifi_refresh(&settings) || dirty;
+            last_wifi_refresh_us = now_us;
+        }
         if (oled_ok && dirty && ((now_us - last_render_us) >= INT64_C(200000)))
         {
             last_render_us = now_us;
