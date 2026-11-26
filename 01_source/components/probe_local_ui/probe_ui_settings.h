@@ -9,8 +9,9 @@
  *
  * Flash/Target/Link choices describe UI intent only; they do not activate a transport or
  * programming backend. One UI task owns the model, applies OLED contrast and handles
- * one-shot Wi-Fi setup requests. Settings are volatile; this pure API performs no I/O,
- * allocation or persistent writes. AP access data is copied only while its page is open.
+ * one-shot Wi-Fi setup requests. The adapter restores/persists the committed OLED level;
+ * other mode settings are volatile. This pure API performs no I/O, allocation or persistent
+ * writes. AP access data is copied only while its page is open.
  */
 #ifndef PROBE_UI_SETTINGS_H
 #define PROBE_UI_SETTINGS_H
@@ -129,6 +130,20 @@ void probe_ui_settings_render(const probe_ui_settings_t *settings,
  * @note Pure task-context query; the display-owning adapter applies this value to the OLED.
  */
 uint8_t probe_ui_settings_oled_percent(const probe_ui_settings_t *settings);
+/**
+ * @brief Read the committed OLED percentage, excluding uncommitted preview/Back choices.
+ * @param[in] settings Initialized model owned by the calling UI task.
+ * @return One of 10, 25, 50, 75 or 100 percent; safe to use for persistence comparisons.
+ */
+uint8_t probe_ui_settings_oled_committed_percent(const probe_ui_settings_t *settings);
+/**
+ * @brief Restore a supported OLED percentage into an initialized model before interaction.
+ * @param[in,out] settings Initialized model, on the home page at startup.
+ * @param[in] percent Stored percentage read from NVS.
+ * @return True for a supported preset; false leaves all state unchanged.
+ * @note Does not touch mode settings, perform NVS writes or change the display hardware.
+ */
+bool probe_ui_settings_oled_restore(probe_ui_settings_t *settings, uint8_t percent);
 /**
  * @brief Copy committed SWD UI choices in explicit units for future backend integration.
  * @param[in] settings Non-NULL initialized model, borrowed until return.

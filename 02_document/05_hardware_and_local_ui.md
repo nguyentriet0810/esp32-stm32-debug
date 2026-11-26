@@ -135,10 +135,10 @@ không nối đồng thời một nguồn 3,3 V khác vào J4.6. Target dùng ng
 | SWD Settings | Tần số, dùng nRST, độ rộng xung reset, dùng SWO; Back về Target IF |
 | Host link | Chọn WiFi / BLE / ESP-NOW trong model UI |
 | WiFi config | Tiêu đề cách một hàng, STA hiện tại/NONE, setup ON/OFF, IP/AP/PW chỉ hiện khi ON và Back |
-| OLED | Chọn contrast 10 / 25 / 50 / 75 / 100 %, xem trước trực tiếp trên panel |
+| OLED | Chọn contrast 10 / 25 / 50 / 75 / 100 %, xem trước trực tiếp và lưu mức đã chốt vào NVS |
 | Info | MAGIC DEBUGGER TOOL, (C) 2026 Nguyen Hoang Minh Triet, GPL-3.0-or-later; chỉ đọc |
 
-Màn chính mặc định:
+Màn chính mặc định khi NVS chưa có mức OLED hợp lệ:
 
 ```text
     Settings
@@ -180,8 +180,10 @@ hiện lại khi đổi về REMOTE.
 
 Flash/Target/Link hiện là **cấu hình UI**. Chúng chưa đổi
 dịch vụ GDB/SWD, chưa khởi động BLE/ESP-NOW/UART/I2C/SPI hay chạy job nạp độc lập từ SD.
-Riêng OLED % đã nối với `probe_oled_contrast` trong task sở hữu màn hình. Chưa lưu NVS;
-khởi động lại về REMOTE / SWD / WiFi / 50 %. Console và dịch vụ debug vẫn hoạt động.
+Riêng OLED % nối với `probe_oled_contrast` trong task sở hữu màn hình và lưu mức đã chốt
+vào NVS. Khởi động lại vẫn về REMOTE / SWD / WiFi, nhưng OLED khôi phục mức đã lưu;
+50 % chỉ là mặc định khi khóa chưa tồn tại, lỗi đọc hoặc dữ liệu không thuộc năm preset.
+Console và dịch vụ debug vẫn hoạt động.
 Trang WiFi đã nối dịch vụ mạng thật để mở/tắt web cấu hình, lưu SSID/mật khẩu router
 qua điện thoại. Ping vẫn dùng được trên web/console, đã bỏ khỏi OLED.
 
@@ -197,6 +199,37 @@ Bản font 8×8 mới cũng đã qua build/test và nạp COM9, xác minh hash f
 chủ dự án gửi; ảnh menu do driver thật xuất ra khớp ảnh xem trước. Bảng font nằm trong
 `.rodata` với kích thước 0x400 byte. Test có kiểm tra mũi tên, đuôi chữ, dấu gạch dưới
 ở hàng pixel cuối và bỏ qua mã ngoài bảng 128 glyph.
+
+### Lưu mức OLED qua khởi động lại
+
+Nhấn SW chọn một mức trong trang OLED để chốt. Task UI lưu một byte tại namespace
+`probe_ui`, khóa `oled_pct`, trong phân vùng NVS hiện có; không đụng namespace Wi-Fi.
+Xoay chỉ xem trước, Back/giữ SW chỉ hủy nháp và khôi phục mức đã chốt. Những thao tác này
+không ghi NVS; chọn lại cùng mức đã lưu cũng không gây ghi/commit thừa.
+
+Khi boot, task UI đọc NVS và kiểm tra preset 10/25/50/75/100 trước khi tương tác menu.
+Mức hợp lệ được khôi phục vào model rồi áp dụng khi hiển thị Settings; hiệu ứng startup
+vẫn dùng chuỗi animation riêng. Thiếu khóa/giá trị sai/lỗi đọc giữ mặc định 50 %, không
+xóa NVS hoặc dừng probe. Log `OLED level: ... (NVS/default)` cho biết giá trị khởi động.
+
+Ghi NVS dùng cùng quyền giữ chỗ cấu hình như dịch vụ debug. Nếu đang có GDB hoặc thao tác
+cấu hình khác, mức mới đã chốt vẫn được áp dụng trên OLED, còn ghi flash đợi rảnh và thử lại
+mỗi giây. Lỗi lưu được cảnh báo và thử lại sau 5 giây; `OLED level saved: ...` xác nhận lưu xong.
+Reset/mất nguồn trước khi một lần lưu đang chờ hoàn tất sẽ dùng mức lưu thành công gần nhất.
+
+Kiểm thử host cho đọc/ghi, đủ năm preset qua restart, mặc định, sai kiểu dữ liệu, lỗi SDK,
+đóng handle, không ghi trùng và tách nháp/Back khỏi mức cần lưu:
+
+```powershell
+.\01_source\.tooling\python-env\Scripts\python.exe .\01_source\tools\test_ui_preferences_host.py
+.\01_source\.tooling\python-env\Scripts\python.exe .\01_source\tools\test_oled_host.py
+```
+
+Ngày 26/11/2026: host preferences và OLED offset 0/2/4/OLED tắt đều qua; build Debug và
+nạp app qua COM9 thành công, hash flash được xác minh. Log boot hiện `OLED level: 50%
+(default)` khi khóa chưa có; STA tự nối router, OLED online, SD mounted, errors=0.
+Khôi phục preset khác 50 % qua restart đã kiểm tra trên host; lượt reset với giá trị
+do encoder ghi trên PCB còn chờ thao tác người dùng. Log tại `01_source/.cache/oled-nvs-20261126/`.
 
 ### SWD Settings
 

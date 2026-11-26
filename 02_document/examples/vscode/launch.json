@@ -9,7 +9,12 @@
             "cwd": "${workspaceFolder}",
             "executable": "${workspaceFolder}/${input:stm32Elf}",
             "gdbTarget": "${input:probeEndpoint}",
+            "preAttachCommands": [
+                "set mem inaccessible-by-default off"
+            ],
             "overrideAttachCommands": [
+                "monitor connect_rst disable",
+                "monitor frequency 400000",
                 "monitor swd_scan",
                 "attach 1"
             ],

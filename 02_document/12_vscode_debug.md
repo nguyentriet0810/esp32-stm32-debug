@@ -1,12 +1,22 @@
 # Debug STM32 bằng VS Code qua probe ESP32 Wi-Fi
 
-Ngày cập nhật: 16/11/2026. Giao diện debug được chọn là **VS Code + Cortex-Debug**.
+Ngày cập nhật: 26/11/2026. Giao diện debug được chọn là **VS Code + Cortex-Debug**.
 Mục tiêu là đặt breakpoint, chạy/dừng, step theo dòng C/C++, xem/sửa biến, thanh ghi,
 bộ nhớ và call stack; nạp firmware là một phần của MVP cần nghiệm thu riêng.
 
-Trạng thái: đã có mẫu cấu hình attach, đối chiếu với Cortex-Debug 1.12.1 đang cài trên
-máy và backend BMD v2.1.0 của dự án. **Chưa nghiệm thu phiên VS Code với STM32 thật**.
+Trạng thái: mẫu attach đã đối chiếu với Cortex-Debug 1.12.1 và BMD v2.1.0. Đã thử
+ARM GDB thật qua Wi-Fi/SWD trên STM32F103C8T6; scan/attach, đọc thanh ghi/bộ nhớ,
+single-step, hardware breakpoint và run/interrupt đạt ở 400 kHz. **Chưa nghiệm thu
+phiên VS Code theo source/biến với ELF STM32 khớp ứng dụng**.
 Xem [phạm vi đã kiểm tra](09_integration_validation.md).
+
+Ngày 26/11 đã tìm ra BAT54C lắp nhầm vị trí BAT54S làm kẹp tín hiệu lên cao. Sau tháo
+diode và nối lại STM32, đã nạp firmware probe chính qua COM9; OLED trở lại GPIO8/9,
+Wi-Fi và microSD hoạt động. Endpoint STA trong lần thử: `192.168.137.140:2022`;
+dùng `status` để lấy IP hiện tại vì DHCP có thể đổi. Sau các bài thử chỉ đọc, người dùng
+đã yêu cầu nạp [ví dụ PC13 chu kỳ 500 ms](../01_source/examples/stm32f103_pc13_blink/):
+load/compare-sections, readback byte-exact, reset phần mềm và dừng tại `main` với ELF
+đều đạt. Biến runtime đọc được bằng tên; người dùng xác nhận LED nháy đều.
 
 ## 1. Luồng debug
 
@@ -36,7 +46,9 @@ trong editor, Variables, Watch, Call Stack và các cửa sổ bộ nhớ/thanh 
   thư mục `bin` của bộ công cụ ARM trong cấu hình debug.
 - Build ứng dụng STM32 có debug symbols (`-g`), ưu tiên `-O0` hoặc `-Og` khi nghiệm thu.
   ELF phải khớp firmware trên target; biến bị tối ưu hóa có thể không xem được.
-- Đấu SWDIO, SWCLK, GND và nRST theo [tài liệu phần cứng](05_hardware_and_local_ui.md).
+- Đấu SWDIO, SWCLK và GND theo [tài liệu phần cứng](05_hardware_and_local_ui.md).
+  Với F103C8: PA13 → GPIO4 (J4.2), PA14 → GPIO5 (J4.3), GND → J4.1.
+  nRST là dây tùy chọn; mẫu attach dưới đây tắt connect-under-reset để dùng hai dây SWD.
   Target cần có nguồn và mức tín hiệu phù hợp với probe.
 - PC truy cập được IP probe: dùng IP từ console `status` khi qua router, hoặc
   `192.168.4.1` khi PC nối AP của probe. Cổng mặc định là 2022.
@@ -56,6 +68,9 @@ Trong Run and Debug, chọn `STM32: Attach via ESP32 Wi-Fi`, nhấn F5 và nhậ
 Cortex-Debug tự kết nối bằng `target extended-remote`. Sau đó mẫu chạy:
 
 ```text
+set mem inaccessible-by-default off
+monitor connect_rst disable
+monitor frequency 400000
 monitor swd_scan
 attach 1
 ```
@@ -68,6 +83,11 @@ nếu scan thất bại thì dừng và kiểm tra SWD/nguồn, không coi việ
 `servertype` dùng `external` vì GDB server chạy trên ESP32 và được truy cập qua TCP.
 `overrideAttachCommands` thay lệnh `monitor halt` mặc định bằng trình tự BMD.
 Không thêm một lệnh `target extended-remote` nữa trong danh sách này.
+
+`preAttachCommands` cho phép GDB truy cập địa chỉ ngoài flash/RAM trong memory map,
+ví dụ thanh ghi CPUID, DBGMCU và flash-size. Lần thử ARM GDB mặc định chặn đọc
+`0xE000ED00`; thêm `set mem inaccessible-by-default off` đã đọc thành công.
+Thiết lập này cho phép truy cập, không tự thực hiện đọc hoặc ghi địa chỉ nào.
 
 ## 4. Thao tác và tiêu chí nghiệm thu
 
@@ -88,14 +108,34 @@ loại `external` mặc định gửi `monitor reset halt` theo OpenOCD; lệnh 
 với hành vi reset của BMD. Cần cấu hình và thử trình tự reset riêng trên target trước
 khi thêm profile Reset/Restart và Flash + Debug.
 
-Nạp flash qua `load`, kiểm tra bằng `compare-sections`, reset và dừng tại `main` là
-các tiêu chí tiếp theo của MVP, phụ thuộc driver đúng model STM32. Không suy ra đã đạt
-các tiêu chí này từ việc cấu hình attach hợp lệ.
+Đã thử `load`, `compare-sections`, readback, reset bằng `run` và hardware breakpoint tại
+`main` trên ví dụ F103 PC13. Các model/ứng dụng khác và profile Flash + Debug/Reset trong
+VS Code còn cần nghiệm thu riêng; kết quả ARM GDB không tự xác nhận toàn bộ thao tác IDE.
 
 SWO/SWV, RTT, Live Watch liên tục và RTOS task awareness chưa được cấu hình/nghiệm thu
 cho probe này. Watch khi CPU dừng thuộc luồng debug nền; thu mẫu liên tục là phần mở rộng.
 
 ## 5. Chẩn đoán nhanh
+
+Có thể kiểm tra target mà chưa cần ELF bằng script sau, chạy từ `01_source`:
+
+```powershell
+& .\.tooling\python-env\Scripts\python.exe .\tools\test_stm32_debug.py 192.168.4.1
+```
+
+Thay IP theo `status`. Script yêu cầu scan thành công, attach target 1, kiểm tra
+CPUID/DBGMCU/flash-size, thanh ghi và đọc lặp lại flash/RAM; detach sẽ cho ứng dụng chạy lại.
+Không gửi lệnh ghi RAM, erase/program flash hoặc option bytes. Thêm `--exercise-core`
+để chạy thêm single-step, breakpoint phần cứng và continue/interrupt trên ứng dụng hiện có;
+thao tác này làm ứng dụng tiếp tục thực thi. `--clock 100000` dùng tốc độ thấp khi bring-up.
+Ngày 26/11 script đã chạy đạt trên STM32 nối thật với cả chế độ đọc và `--exercise-core`
+ở 400 kHz. ARM GDB cũng attach/đọc/single-step/detach thành công, không cần nạp lại STM32.
+
+Khi cần xem phản hồi điện của port, bật `CONFIG_PROBE_SWD_TRACE` trong menuconfig rồi
+build/nạp lại ESP32. Console in giới hạn mức pad đọc lại và ACK/data/parity cho mỗi scan.
+Mở monitor để thu log; tắt trace khi debug bình thường vì lấy mẫu/log ảnh hưởng timing.
+ACK=7 và dữ liệu toàn `1` không phải nhận dạng target hợp lệ. Log mức pad không thay thế
+được đo continuity hoặc oscilloscope trên PCB.
 
 | Hiện tượng | Kiểm tra |
 |---|---|

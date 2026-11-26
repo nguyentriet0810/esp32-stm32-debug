@@ -7,7 +7,7 @@
  * @file probe_local_ui.h
  * @brief Local OLED and encoder menu API.
  *
- * The UI task owns display operations and requests clock changes through the debug service.
+ * The UI task owns display operations, restores/persists OLED contrast and handles local setup.
  * Optional display failures are reported without stopping the debug service.
  */
 #ifndef PROBE_LOCAL_UI_H
@@ -15,7 +15,7 @@
 #include "esp_err.h"
 /**
  * @brief Create the menu queue and start optional input and display-owning tasks.
- * @pre Call once from the startup task after debug-service initialization.
+ * @pre Call once from the startup task after NVS and debug-service initialization.
  * @retval ESP_OK The UI task was created; display detection is still asynchronous.
  * @return ESP_ERR_NO_MEM or an encoder GPIO initialization error on failure.
  * @note An absent/failed OLED and a disabled encoder are nonfatal. Queue and task

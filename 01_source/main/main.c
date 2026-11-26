@@ -51,32 +51,40 @@ void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_erase());
         storage = nvs_flash_init();
     }
+
     ESP_ERROR_CHECK(storage);
     ESP_ERROR_CHECK(probe_network_start());
     ESP_ERROR_CHECK(probe_debug_start());
     const esp_err_t wifi_setup = probe_wifi_setup_start();
+
     if (wifi_setup != ESP_OK)
     {
         ESP_LOGW("probe_app", "Phone Wi-Fi setup unavailable: %s", esp_err_to_name(wifi_setup));
     }
+
     ESP_ERROR_CHECK(probe_local_ui_start());
     const esp_err_t sd = probe_sd_start();
+
     if (sd == ESP_OK)
     {
         ESP_LOGI("probe_app", "microSD mounted at /sdcard");
     }
+
     else if (sd == ESP_ERR_NOT_FOUND)
     {
         ESP_LOGI("probe_app", "microSD not inserted (nonfatal)");
     }
+
     else if (sd == ESP_ERR_NOT_SUPPORTED)
     {
         ESP_LOGI("probe_app", "microSD disabled");
     }
+
     else
     {
         ESP_LOGW("probe_app", "microSD unavailable (nonfatal): %s", esp_err_to_name(sd));
     }
+
     ESP_ERROR_CHECK(probe_console_start());
     ESP_LOGI("probe_app", "Probe services started; use 'status' or 'help' on serial");
 }

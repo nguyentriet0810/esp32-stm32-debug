@@ -42,6 +42,11 @@ static uint32_t fastest_hz;
 static bool data_driven;
 static dedic_gpio_bundle_handle_t gpio_bundle;
 swd_proc_s swd_proc;
+#if CONFIG_PROBE_SWD_TRACE
+static uint32_t trace_ack;
+static unsigned int trace_remaining;
+static unsigned int trace_outputs;
+#endif
 /**
  * @brief Wait for a modular CPU-cycle deadline without compressing delayed pulses.
  * @param[in] edge Previous edge timestamp in CPU cycles.
@@ -72,16 +77,52 @@ static inline __attribute__((always_inline)) uint32_t swd_wait(uint32_t edge, ui
  */
 static IRAM_ATTR void swd_output(uint32_t value, size_t cycles, uint32_t half)
 {
+#if CONFIG_PROBE_SWD_TRACE
+    const bool trace = trace_outputs != 0U;
+    uint32_t clock_errors = 0U;
+    uint32_t data_errors = 0U;
+    int clock_low = 0;
+    int clock_high = 0;
+    if (trace)
+    {
+        trace_outputs--;
+    }
+#endif
     uint32_t edge = esp_cpu_get_cycle_count();
     for (size_t bit = 0U; bit < cycles; bit++)
     {
-        dedic_gpio_cpu_ll_write_mask(clock_mask | data_mask, ((value & 1U) != 0U) ? data_mask : 0U);
+        const uint32_t data_bit = value & 1U;
+        dedic_gpio_cpu_ll_write_mask(clock_mask | data_mask, (data_bit != 0U) ? data_mask : 0U);
         value >>= 1U;
         edge = swd_wait(edge, half);
+#if CONFIG_PROBE_SWD_TRACE
+        if (trace)
+        {
+            clock_low = gpio_ll_get_level(&GPIO, CONFIG_PROBE_SWCLK_GPIO);
+            clock_errors += clock_low != 0 ? 1U : 0U;
+            data_errors += gpio_ll_get_level(&GPIO, CONFIG_PROBE_SWDIO_GPIO) != data_bit ? 1U : 0U;
+        }
+#endif
         dedic_gpio_cpu_ll_write_mask(clock_mask, clock_mask);
         edge = swd_wait(edge, half);
+#if CONFIG_PROBE_SWD_TRACE
+        if (trace)
+        {
+            clock_high = gpio_ll_get_level(&GPIO, CONFIG_PROBE_SWCLK_GPIO);
+            clock_errors += clock_high != 1 ? 1U : 0U;
+        }
+#endif
     }
     dedic_gpio_cpu_ll_write_mask(clock_mask, 0U);
+#if CONFIG_PROBE_SWD_TRACE
+    if (trace)
+    {
+        ESP_LOGI("probe_swd",
+                 "Output pad readback: low=%d high=%d cycles=%u clock_errors=%" PRIu32
+                 " data_errors=%" PRIu32,
+                 clock_low, clock_high, (unsigned int)cycles, clock_errors, data_errors);
+    }
+#endif
 }
 /**
  * @brief Sample SWDIO and assemble at most 32 bits in LSB-first order.
@@ -137,7 +178,14 @@ static IRAM_ATTR void swd_turnaround(bool drive, uint32_t half)
 static IRAM_ATTR uint32_t swd_read(size_t cycles)
 {
     swd_turnaround(false, half_period);
-    return swd_input(cycles, half_period);
+    const uint32_t value = swd_input(cycles, half_period);
+#if CONFIG_PROBE_SWD_TRACE
+    if (cycles == 3U)
+    {
+        trace_ack = value;
+    }
+#endif
+    return value;
 }
 /**
  * @brief Read data and an even-parity bit, then return SWDIO to output mode.
@@ -152,7 +200,16 @@ static IRAM_ATTR bool swd_read_parity(uint32_t *value, size_t cycles)
     const uint32_t parity = swd_input(1U, half_period);
     swd_turnaround(true, half_period);
     *value = data;
-    return (uint32_t)__builtin_parity(data) == parity;
+    const bool valid = (uint32_t)__builtin_parity(data) == parity;
+#if CONFIG_PROBE_SWD_TRACE
+    if (trace_remaining != 0U)
+    {
+        trace_remaining--;
+        ESP_LOGI("probe_swd", "Read ACK=%" PRIu32 " data=0x%08" PRIx32 " parity=%s", trace_ack,
+                 data, valid ? "OK" : "BAD");
+    }
+#endif
+    return valid;
 }
 /**
  * @brief Acquire SWDIO and transmit the requested LSB-first bit sequence.
@@ -176,6 +233,10 @@ static IRAM_ATTR void swd_write_parity(uint32_t value, size_t cycles)
  */
 void swdptap_init(void)
 {
+#if CONFIG_PROBE_SWD_TRACE
+    trace_remaining = 8U;
+    trace_outputs = 8U;
+#endif
     swd_proc.seq_in = swd_read;
     swd_proc.seq_in_parity = swd_read_parity;
     swd_proc.seq_out = swd_write;
@@ -241,9 +302,28 @@ uint32_t probe_swd_get_frequency(void)
 esp_err_t probe_port_init(void)
 {
     const int pins[] = {CONFIG_PROBE_SWCLK_GPIO, CONFIG_PROBE_SWDIO_GPIO};
+    /* gpio_config also releases RTC ownership of these RTC-capable pads. */
+    const gpio_config_t pad_config = {.pin_bit_mask = (UINT64_C(1) << CONFIG_PROBE_SWCLK_GPIO) |
+                                                      (UINT64_C(1) << CONFIG_PROBE_SWDIO_GPIO),
+                                      .mode = GPIO_MODE_INPUT,
+                                      .pull_up_en = GPIO_PULLUP_DISABLE,
+                                      .pull_down_en = GPIO_PULLDOWN_DISABLE,
+                                      .intr_type = GPIO_INTR_DISABLE};
     dedic_gpio_bundle_config_t config = {
         .gpio_array = pins, .array_size = 2U, .flags = {.in_en = 1U, .out_en = 1U}};
-    esp_err_t result = dedic_gpio_new_bundle(&config, &gpio_bundle);
+    esp_err_t result = gpio_config(&pad_config);
+    if (result == ESP_OK)
+    {
+        result = gpio_hold_dis((gpio_num_t)CONFIG_PROBE_SWCLK_GPIO);
+    }
+    if (result == ESP_OK)
+    {
+        result = gpio_hold_dis((gpio_num_t)CONFIG_PROBE_SWDIO_GPIO);
+    }
+    if (result == ESP_OK)
+    {
+        result = dedic_gpio_new_bundle(&config, &gpio_bundle);
+    }
     uint32_t output_offset = 0U;
     uint32_t input_offset = 0U;
     if (result == ESP_OK)

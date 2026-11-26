@@ -20,10 +20,12 @@
 #include "esp_wifi.h"
 #include "nvs.h"
 #include "probe_state.h"
+
 static const char network_tag[] = "probe_network";
 static const char ap_name[] = "MAGIC-PROBE";
 static const char ap_password[] = "1234567890";
 static atomic_bool station_enabled;
+
 /**
  * @brief Reconnect an enabled station and publish network identity after DHCP.
  * @param[in] context Unused event-handler context.

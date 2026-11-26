@@ -35,6 +35,15 @@ config PROBE_SWD_DEFAULT_HZ
     int "Initial SWD frequency (Hz)"
     range 1000 8000000
     default 400000
+config PROBE_SWD_TRACE
+    bool "Log bounded SWD pad/read diagnostics for each scan"
+    default n
+    help
+        Check pad levels during the first eight output sequences and print
+        ACK/data/parity for the first eight completed read transactions.
+        Logs stay outside GPIO edge loops. This does not insert test pulses
+        or switch the GPIO mux. Leave disabled for normal debugging because
+        pad sampling and console output affect the diagnostic clock timing.
 config PROBE_OLED_ENABLE
     bool "Enable optional SH1106 128x64 OLED"
     default y

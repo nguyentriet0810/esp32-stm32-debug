@@ -113,6 +113,8 @@ Trên OLED, chọn **Settings → Link → WiFi**, bật **STA setup ON**, nối
 AP **MAGIC-PROBE**, mật khẩu **1234567890**, rồi mở **http://192.168.4.1**.
 STA setup chỉ bật/tắt cấu hình web, không ngắt STA đang nối router. Khi chưa có STA,
 OLED hiện `STA: NONE` và setup luôn ON; sau khi kết nối có thể chủ động chuyển OFF.
+Mức **OLED %** được lưu NVS khi nhấn SW chốt và khôi phục sau reset; xem trước/Back không ghi.
+50 % chỉ là giá trị dự phòng khi chưa có mức lưu hợp lệ.
 Trang cấu hình dùng tiếng Anh: bấm **Scan Wi-Fi**, chọn mạng
 trong **Available networks** để điền SSID, nhập mật khẩu router 2,4 GHz rồi bấm **Save and connect**;
 cấu hình được lưu NVS, OLED hiện tên STA khi có IP. Ping router nằm trên trang web và

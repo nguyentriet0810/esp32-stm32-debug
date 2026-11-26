@@ -2,6 +2,164 @@
 
 Ngày: 30/10/2026. Bản phát triển, chưa phát hành MVP đã nghiệm thu trên STM32.
 
+## Bring-up Wi-Fi/SWD với STM32F103C8T6 — 26/11/2026
+
+PCB ESP32-S3 N16R8 dùng USB COM9 và STA; người dùng xác nhận STM32 có nguồn 3,3 V,
+GND chung, PA13/SWDIO → GPIO4 và PA14/SWCLK → GPIO5. Chưa nối nRST/SWO.
+
+- TCP 2022: `qSupported`, monitor command, ACK/no-ACK và đóng phiên hoạt động;
+  snapshot sau mỗi phiên trả `gdb=IDLE`, `target=NONE`, `errors=0`.
+- Scan ở 400 kHz, 100 kHz và 10 kHz chưa nhận target. Giữ RESET trên STM32 vẫn chưa nhận.
+  Trace đọc `ACK=7`, `data=0xFFFFFFFF`, parity lỗi, không phải DPIDR hợp lệ.
+- Kiểm tra mức pad trong chuỗi reset: SWCLK đọc `low=1 high=1` thay vì `0/1`.
+  Thử xuất GPIO thường cũng đọc `1/1`; dedicated output latch đúng `0x02`, task ở core 1,
+  mux GPIO5→core1 output0 và GPIO4→core1 output1, input/output bật, open-drain tắt.
+- Đã thêm khởi tạo pad bằng `gpio_config` (giải phóng RTC) và nhả hold cho GPIO4/5.
+  Hiện tượng vẫn còn sau reset/nạp lại và sau khi người dùng tháo riêng SWCLK khỏi STM32.
+  Người dùng đo điện áp CLK là 3,3 V và ban đầu báo GPIO5↔3V3 là 0 Ω;
+  sau đó xác nhận phép đo thông mạch không thông với GND hoặc 3V3, nên không xác nhận chập cứng.
+  R18 thực lắp 22 Ω (schematic ghi 330 Ω). Cuối phiên đã tìm ra linh kiện thực lắp là
+  BAT54C thay cho BAT54S; kết quả sau tháo diode được ghi bên dưới.
+  Net SWCLK nối U1.5, R18.2, D6.3; D6.2 nối 3V3, J4.3 qua R18.1.
+  DRC KiCad 10 trên file AI_layout đã lưu, refill zones trong bộ nhớ: 0 violations,
+  0 unconnected; không sửa/lưu board. Báo cáo cục bộ `drc-ai.json`.
+- Đã thêm `CONFIG_PROBE_SWD_TRACE` mặc định tắt: lấy mẫu pad trong tám chuỗi output đầu,
+  log tối đa tám lần đọc ACK/data/parity. Không log bên trong vòng tạo cạnh, không đổi mux
+  hoặc thêm xung thử. Bản thử đổi mux/xung ngắn chỉ dùng cục bộ để khoanh vùng và đã bỏ khỏi source.
+- Có `tools/test_stm32_debug.py` làm tiêu chí scan/attach/identity/register/memory và tùy chọn
+  step/hardware breakpoint/run-interrupt. Lần đầu chưa qua scan; sau tháo diode và nối lại
+  target đã chạy đạt như mục xác nhận bên dưới. Không ghi/xóa flash STM32, không thay option
+  bytes hoặc ghi thử RAM.
+- Build Debug bình thường (trace tắt): đạt với warnings/analyzer của dự án; app 1.068.608 byte.
+  Nhánh trace của port cuối cũng biên dịch đạt bằng cùng toolchain/cờ cảnh báo/analyzer.
+  Format C, kiểm tra whitespace, cú pháp Python và cấu hình attach JSON: đạt.
+  Binary thường đã build và sau đó nạp lại thành công ở bước trở về firmware chính bên dưới.
+
+### Thử OLED độc lập trên GPIO4/5
+
+Theo yêu cầu chạy thử của người dùng, đã build/nạp ứng dụng riêng `oled_gpio45_test`
+qua COM9, chỉ ghi app tại `0x20000`; không thay bootloader, partition table, NVS hay STM32.
+App và script thử nằm cục bộ trong `01_source/.cache/oled-gpio45/`, không đổi pin OLED
+8/9 hoặc bật/tắt dịch vụ trong mã firmware chính. App thử không khởi động SWD, Wi-Fi, SD.
+
+Trước OLED, app cấu hình input/output open-drain, nhả hold, dùng drive capability thấp nhất,
+thử một xung thấp 5 µs mỗi chân rồi nhả. Kết quả runtime:
+
+```text
+GPIO4 open-drain: low=1 released=1
+GPIO5 open-drain: low=1 released=1
+PIN_TEST_FAILED SDA=ESP_ERR_INVALID_STATE SCL=ESP_ERR_INVALID_STATE; OLED not started
+```
+
+Cả hai chân chưa kéo thấp được trong phép thử này. Không suy ra riêng ESP32 đã hỏng;
+cần cô lập tải/diode và đường PCB. OLED chưa khởi động, chưa có frame hiển thị thành công.
+App dừng tạo cạnh sau lỗi, nhả hai chân và chỉ lặp lại log `TEST_STOPPED` mỗi 2 giây.
+Log lần đầu được giữ tại `.cache/oled-gpio45/runtime-first-check.log`; esptool xác nhận
+hash ghi flash đạt.
+
+Phép đối chứng tiếp theo dùng drive capability mặc định 2, tắt sleep selection trên chân:
+GPIO8/9 đều đọc `low=0 released=1`, còn GPIO4/5 vẫn `1/1` dù latch=0, output enable=1,
+matrix=256 (GPIO thường). Sau đó app thử I2C thật trên GPIO4/5: probe 0x3C/0x3D timeout,
+OLED chưa khởi tạo được. SWD/Wi-Fi vẫn tắt. Cảnh báo reserve GPIO trong phép thử này
+phát sinh do bước kiểm tra GPIO trước I2C; SDK chỉ cảnh báo và vẫn cấu hình bus.
+
+### Xác nhận sau tháo diode lắp sai loại
+
+Người dùng phát hiện PCB lắp BAT54C, trong khi schematic yêu cầu BAT54S, rồi tháo các
+diode trên SWDIO, SWCLK, SWO và nRST để trống. Theo datasheet, BAT54C có chân 2 là anode
+và chân 3 là cathode chung; trên PCB chân 2 nối 3V3, chân 3 nối tín hiệu. Cách lắp này
+tạo đường dẫn thuận từ 3V3 tới tín hiệu, phù hợp với hiện tượng bị giữ cao.
+BAT54S có chân 2 là cathode và chân 3 là điểm nối hai diode, đúng mạch kẹp của schematic.
+Tham chiếu: [BAT54C](https://assets.nexperia.com/documents/data-sheet/BAT54C.pdf),
+[BAT54S](https://assets.nexperia.com/documents/data-sheet/BAT54S.pdf).
+
+Sau tháo diode, OLED vẫn nối SDA=GPIO4, SCL=GPIO5; STM32 đã tháo hai dây SWD.
+Đọc COM9 không reset thu được:
+
+```text
+OLED_FRAME_OK 86
+OLED_FRAME_OK 87
+OLED_FRAME_OK 88
+```
+
+Đã xác nhận truyền frame SH1106 qua I2C 100 kHz trên GPIO4/5 hoạt động sau tháo diode.
+Không có cơ sở kết luận hai GPIO này hỏng từ các phép thử trước. Người dùng báo các đường
+SWO/nRST cũng hoạt động bình thường; chưa có phép đo/điều khiển riêng hai chân đó trong log.
+Log xác nhận: `.cache/oled-gpio45/runtime-after-diode-removal.log`.
+
+Sau bước này PCB tạm chạy app thử OLED; kết quả I2C chưa xác nhận SWD. Sau đó người dùng
+đã chuyển OLED về GPIO8/9 (hoặc rời GPIO4/5) và nối lại SWD STM32 để thử firmware chính.
+
+Log/artifact chẩn đoán nằm cục bộ trong `01_source/.cache/swd-f103-20261126/`.
+
+### Trở về firmware chính và xác nhận Wi-Fi/SWD
+
+Đã build/nạp `build-vscode/stm32_wifi_probe.bin` bằng `dev.ps1 -p COM9 -b 460800 app-flash`.
+Esptool xác nhận hash ghi đạt; chỉ thay app, không ghi bootloader/partition table/NVS.
+Firmware chính chạy lại với trace SWD tắt, OLED trên GPIO8/9 ONLINE, microSD MOUNTED,
+STA tự nối từ profile đã lưu. Endpoint trong lần thử: `192.168.137.140:2022`.
+
+| Phép thử | Kết quả |
+|---|---|
+| Scan SWD 400 kHz, `connect_rst disable` | Target 1: `STM32F1 L/M density M3` |
+| CPUID / DBGMCU_IDCODE | `0x411FC231` / `0x00006410` |
+| Flash-size signature | 64 KiB (`0x0040` tại `0x1FFFF7E0`) |
+| Thanh ghi | Đọc 80 byte, PC/SP/xPSR hợp lệ qua RSP và ARM GDB |
+| Đọc bộ nhớ | 10 lần lặp 64 byte đầu flash cho cùng kết quả; đọc RAM thành công |
+| Single-step | Đạt, cả script RSP và ARM GDB |
+| Hardware breakpoint | Set → continue → dừng đúng PC → clear: đạt |
+| Run/interrupt | Continue → Ctrl-C → dừng CPU: đạt |
+| Detach/đóng phiên | Trả về IDLE, `errors=0`, ứng dụng STM32 được resume |
+| ARM GDB thực tế | Attach, XML/registers, memory map, CPUID/DBGMCU/flash-size/vector reads và stepi/detach đạt |
+
+Snapshot cuối:
+
+```text
+STATUS wifi=STA ssid=TRIET ip=192.168.137.140 gdb=IDLE target=NONE swd=400000 oled=ONLINE errors=0 heap=201356 sd=MOUNTED
+```
+
+ARM GDB mặc định chặn địa chỉ thanh ghi ngoài memory map flash/RAM. Đã thử thành công
+với `set mem inaccessible-by-default off` và thêm vào mẫu Cortex-Debug `preAttachCommands`.
+Lần thử GDB chưa chỉ định ELF nên có cảnh báo không có executable/source symbols; không
+ảnh hưởng các phép đọc thanh ghi/bộ nhớ và step theo lệnh đã kiểm tra.
+
+BMD upstream hiện gán memory map flash 128 KiB cho nhóm F1 medium-density, trong khi
+signature trên target báo 64 KiB; RAM map là 20 KiB. Chưa thay upstream hoặc nghiệm thu
+khả năng ghi vùng flash vượt dung lượng báo cáo. Lần thử này không ghi flash STM32,
+không thay option bytes, không ghi thử dữ liệu RAM và không dùng nRST/SWO.
+Chưa nghiệm thu flash/load/verify, reset phần cứng hoặc debug theo source/Watch với ELF khớp.
+
+Log cục bộ: `01_source/.cache/swd-f103-20261126-after-diodes/` gồm `restore-probe.log`,
+`read-rsp.log`, `core-rsp.log`, `arm-gdb-rsp.log` và console tương ứng.
+**PCB hiện chạy firmware probe chính**, không còn app thử OLED GPIO4/5.
+
+### Nạp STM32F103C8: PC13 chu kỳ 500 ms
+
+Người dùng yêu cầu nạp ứng dụng LED PC13. Đã tạo source độc lập tại
+`01_source/examples/stm32f103_pc13_blink/`, build bằng ARM GCC 13.3.1, C17,
+`-Og -g3`, warnings-as-errors và analyzer. Linker giới hạn 64 KiB flash / 20 KiB RAM.
+App dùng HSI 8 MHz, SysTick 1 ms; PC13 active-low, sáng 250 ms / tắt 250 ms.
+
+Trước ghi đã backup 64 KiB flash: `.cache/stm32-pc13-20261126/stm32-before-blink-64k.bin`,
+SHA256 `69f11392464109a35366685326c4c413ca02ed08362f3a6f80086f35da5bf745`.
+Backup và artifact giữ cục bộ, không đưa vào Git.
+
+- `load` qua ARM GDB/Wi-Fi/SWD 400 kHz: đạt, 624 byte flash và 28 byte BSS.
+- `compare-sections`: vector và text đều matched; dump 624 byte sau ghi khớp BIN byte-exact.
+- `hbreak *main` và `run`: dừng đúng source `main.c` tại `main`; reset không cần dây nRST.
+- Script kiểm tra ban đầu lỗi phép toán bit trên `$pc` dạng địa chỉ sau khi đã ghi/verify
+  thành công. Đã sửa cast trong script; không nạp lại flash. Bài xác nhận runtime riêng đạt.
+- Runtime: `blink_ready=1`, `blink_error=0`, uptime 62340 ms, 249 cạnh, cạnh cuối 62250 ms,
+  LED on và GPIOC ODR13=0. SysTick reload=7999, CRH13=2,
+  `blink_last_edge_ms == blink_edges * 250`.
+- Người dùng xác nhận LED nháy đều. GDB detach, chương trình tiếp tục chạy;
+  probe `gdb=IDLE`, `errors=0`, OLED ONLINE và SD MOUNTED.
+
+Đây là lần nạp STM32 đã được người dùng yêu cầu rõ ràng. Không thay option bytes,
+không dùng mass erase, không ghi flash/NVS ESP32 trong phép thử này.
+Log: `01_source/.cache/stm32-pc13-20261126/{backup,flash,verify}-gdb.log` và console tương ứng.
+Mã mẫu/ELF giúp tiếp tục debug source/biến; giao diện VS Code vẫn chưa được chạy để nghiệm thu.
+
 ## Tích hợp microSD — 15/11/2026
 
 Đã thêm `probe_sd` trên SPI2, GPIO CS/MOSI/SCK/MISO/DETECT = 38/39/40/41/42,

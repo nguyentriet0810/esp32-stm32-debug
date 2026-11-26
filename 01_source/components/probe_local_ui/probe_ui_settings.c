@@ -477,7 +477,7 @@ void probe_ui_settings_render(const probe_ui_settings_t *settings,
     }
 }
 
-/** @brief Return a live OLED-page preview or the saved-in-RAM brightness elsewhere. */
+/** @brief Return a live OLED-page preview or the committed level restored by the adapter. */
 uint8_t probe_ui_settings_oled_percent(const probe_ui_settings_t *settings)
 {
     const uint8_t choice =
@@ -485,6 +485,26 @@ uint8_t probe_ui_settings_oled_percent(const probe_ui_settings_t *settings)
             ? settings->choice
             : settings->values[3];
     return oled_percentages[choice];
+}
+
+/** @brief Read only the committed value so previews and cancellation cannot trigger saving. */
+uint8_t probe_ui_settings_oled_committed_percent(const probe_ui_settings_t *settings)
+{
+    return oled_percentages[settings->values[3]];
+}
+
+/** @brief Validate stored data against the same preset table used by the menu. */
+bool probe_ui_settings_oled_restore(probe_ui_settings_t *settings, uint8_t percent)
+{
+    for (uint8_t choice = 0U; choice < items[3].count; ++choice)
+    {
+        if (oled_percentages[choice] == percent)
+        {
+            settings->values[3] = choice;
+            return true;
+        }
+    }
+    return false;
 }
 
 /** @brief Translate committed SWD choices to nominal Hz, milliseconds and explicit pin flags. */

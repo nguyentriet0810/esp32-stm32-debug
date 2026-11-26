@@ -362,8 +362,15 @@ có thể chỉnh ở cả hai chế độ. Các mode hiện lưu RAM, chưa tha
 chưa chạy job nạp từ SD và không thay đổi quyền điều khiển của phiên GDB.
 
 Trang OLED chọn 10/25/50/75/100 %, xoay xem trước contrast thật trong task sở hữu panel;
-nhấn chốt vào RAM hoặc giữ hủy để khôi phục. Contrast quy đổi tuyến tính về 0..255
-(50 % thành 128), không đại diện cho phần trăm độ sáng đo được. Chưa lưu NVS.
+nhấn chốt và lưu NVS, hoặc giữ/Back hủy nháp để khôi phục mức đã chốt. Contrast quy đổi
+tuyến tính về 0..255 (50 % thành 128), không đại diện cho phần trăm độ sáng đo được.
+Mức đã lưu được khôi phục khi khởi động; 50 % chỉ dùng khi không có dữ liệu hợp lệ.
+
+`probe_ui_preferences` chỉ đọc/ghi u8 `probe_ui/oled_pct`, không đổi namespace Wi-Fi.
+Model cung cấp riêng giá trị đã chốt để xoay/preview không kích hoạt ghi. Task UI giữ
+quyền cấu hình debug khi lưu; bận thì thử lại mỗi giây, lỗi SDK thì cảnh báo và thử lại
+sau 5 giây. Ghi lại giá trị trùng được bỏ qua. Đọc lỗi hoặc giá trị ngoài preset không
+làm dừng UI và không xóa NVS; startup animation vẫn có chuỗi contrast riêng.
 
 Mọi màn menu có một hàng trống dưới header, gồm WiFi config.
 Mọi màn con đều có Back ở dòng cuối, trừ Settings chính. Trỏ Back rồi nhấn SW để về

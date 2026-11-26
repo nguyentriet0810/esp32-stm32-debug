@@ -16,6 +16,7 @@
 #include <string.h>
 #include "esp_log.h"
 #include "esp_timer.h"
+#include "nvs.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 #include "freertos/task.h"
@@ -24,6 +25,8 @@
 #include "probe_oled.h"
 #include "probe_state.h"
 #include "probe_ui_settings.h"
+#include "probe_ui_preferences.h"
+#include "probe_debug.h"
 #include "probe_network.h"
 #include "probe_wifi_setup.h"
 
@@ -135,11 +138,32 @@ static bool ui_wifi_refresh(probe_ui_settings_t *settings)
     return changed;
 }
 
+/** @brief Restore a valid NVS preset; missing/invalid data keeps the initialized 50% default. */
+static uint8_t ui_oled_restore(probe_ui_settings_t *settings)
+{
+    uint8_t percent = 0U;
+    const esp_err_t result = probe_ui_preferences_oled_load(&percent);
+    const bool restored = (result == ESP_OK) && probe_ui_settings_oled_restore(settings, percent);
+    if ((result != ESP_OK) && (result != ESP_ERR_NVS_NOT_FOUND))
+    {
+        ESP_LOGW("probe_ui", "OLED preference read failed: %s", esp_err_to_name(result));
+    }
+    else if ((result == ESP_OK) && !restored)
+    {
+        ESP_LOGW("probe_ui", "Ignoring unsupported OLED preference: %u", (unsigned int)percent);
+    }
+    const uint8_t committed = probe_ui_settings_oled_committed_percent(settings);
+    ESP_LOGI("probe_ui", "OLED level: %u%% (%s)", (unsigned int)committed,
+             restored ? "NVS" : "default");
+    return committed;
+}
+
 /**
  * @brief Own OLED rendering and consume queued menu events on core 0.
  * @param[in] context Unused FreeRTOS task argument.
  * @note Runs startup first, then draws changed settings at most once per 200 ms. Mode choices
- *       stay in RAM; OLED contrast previews apply immediately and cancel restores the old value.
+ *       stay in RAM; OLED previews apply immediately and cancel restores the committed value.
+ *       Changed OLED commits are saved to NVS only when debug is idle; failed saves retry later.
  *       While Wi-Fi is open, refresh snapshots every 500 ms and dispatch web-mode changes.
  *       An OLED error disables rendering for the remaining task lifetime.
  */
@@ -148,10 +172,12 @@ static void ui_task(void *context)
     (void)context;
     probe_ui_settings_t settings;
     probe_ui_settings_init(&settings);
+    uint8_t stored_oled_percent = ui_oled_restore(&settings);
     bool dirty = true;
     unsigned int applied_contrast = 128U;
     int64_t last_render_us = 0;
     int64_t last_wifi_refresh_us = 0;
+    int64_t next_oled_save_us = 0;
     bool oled_ok = (probe_oled_init() == ESP_OK);
     probe_state_oled(oled_ok);
 #if CONFIG_PROBE_ENCODER_ENABLE
@@ -183,6 +209,28 @@ static void ui_task(void *context)
             dirty = ui_settings_event(&settings, event) || dirty;
         }
         const int64_t now_us = esp_timer_get_time();
+        const uint8_t committed_oled = probe_ui_settings_oled_committed_percent(&settings);
+        if ((committed_oled != stored_oled_percent) && (now_us >= next_oled_save_us))
+        {
+            next_oled_save_us = now_us + INT64_C(1000000);
+            if (probe_debug_configuration_lock())
+            {
+                const esp_err_t saved = probe_ui_preferences_oled_save(committed_oled);
+                probe_debug_configuration_unlock();
+                if (saved == ESP_OK)
+                {
+                    stored_oled_percent = committed_oled;
+                    next_oled_save_us = 0;
+                    ESP_LOGI("probe_ui", "OLED level saved: %u%%", (unsigned int)committed_oled);
+                }
+                else
+                {
+                    next_oled_save_us = now_us + INT64_C(5000000);
+                    ESP_LOGW("probe_ui", "OLED save failed, will retry: %s",
+                             esp_err_to_name(saved));
+                }
+            }
+        }
         bool setup_enabled = false;
         if (probe_ui_settings_wifi_setup_take(&settings, &setup_enabled))
         {
